@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Calculate Coefficient of Variation in Python</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="../assets/page.css">
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="/" class="logo">BlogSpace</a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/categories">Categories</a>
+                <a href="/write">Write a Post</a>
+                <a href="/about">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-container">
+        <!-- Left Sidebar -->
+        <aside class="left-sidebar">
+            <div class="left-sidebar-content">
+                <div class="table-of-contents">
+                    <h3>Table of Contents</h3>
+                    <ul class="toc-list">
+                        <li class="active"><a href="#intro">Introduction</a></li>
+                        <li><a href="#what-is">What is the Coefficient of Variation?</a></li>
+                        <li><a href="#calculating">Calculating the Coefficient of Variation</a></li>
+                        <li><a href="#step1">Step 1: Collect Your Data</a></li>
+                        <li><a href="#step2">Step 2: Calculate the Mean</a></li>
+                        <li><a href="#step3">Step 3: Calculate Standard Deviation</a></li>
+                        <li><a href="#step4">Step 4: Calculate CV</a></li>
+                        <li><a href="#python">Calculate Using Python</a></li>
+                    </ul>
+                </div>
+                
+                <div class="ad-container">
+                    <p>Advertisement Space<br>(250 x 250)</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Left Ad Sidebar -->
+        <aside class="ad-sidebar">
+            <div class="ad-container">
+                <p>Advertisement Space<br>(160 x 600)</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="article-container">
+            <article class="article-content">
+            <header class="article-header">
+                <h1>How to Calculate Coefficient of Variation in Python</h1>
+                <p>In this tutorial, we will learn about the coefficient of variation, how to calculate it in Python, and its importance in artificial intelligence.</p>
+            </header>
+            <p class="c3"><span
+                style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 350.67px;"><img
+                    alt="" src="../images/post1.png"
+                    style="width: 624.00px; height: 350.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                    title=""></span></p>
+            <h2>What is the Coefficient of Variation?</h2>
+            <p>The coefficient of variation, often abbreviated as CV, is a dimensionless measure of relative variability. It expresses the standard deviation of a dataset as a percentage of the mean.</p>
+
+            <p>In simpler terms, it quantifies the dispersion of data points about their average. The coefficient of variation is commonly used in fields such as finance, biology, and quality control to compare the risk or variability of different datasets, especially when dealing with data with different units or scales.</p>
+
+            <h2>Calculating the Coefficient of Variation</h2>
+            <p>To calculate the coefficient of variation, follow these steps:</p>
+
+            <h3>Step 1: Collect Your Data</h3>
+            <p>Gather the dataset for which you want to calculate the CV. Ensure that the data is continuous and represents a single variable or population.</p>
+
+            <h3>Step 2: Calculate the Mean (µ)</h3>
+            <p>Find the arithmetic mean (average) of the dataset by summing all the values and dividing by the total number of observations:</p>
+            <p>µ = (Σx / n)</p>
+            <ul>
+                <li>µ = Mean</li>
+                <li>Σx = Sum of all data points</li>
+                <li>n = Total number of data points</li>
+            </ul>
+
+            <h3>Step 3: Calculate the Standard Deviation (σ)</h3>
+            <p>Next, compute the standard deviation of the dataset, which measures the spread or dispersion of data points around the mean.</p>
+
+            <ul>
+                <li>σ = Standard Deviation</li>
+                <li>Σ(x−µ)^2 = Sum of squared differences between each data point (x) and the mean (µ)</li>
+                <li>n = Total number of data points</li>
+            </ul>
+
+            <h3>Step 4: Calculate the Coefficient of Variation (CV)</h3>
+            <p>Now that you have the mean (µ) and standard deviation (σ), you can calculate the CV:</p>
+            <p>CV = (σ / µ) × 100%</p>
+            <ul>
+                <li>CV = Coefficient of Variation</li>
+                <li>σ = Standard Deviation</li>
+                <li>µ = Mean</li>
+            </ul>
+
+            <h2>Calculate Coefficient of Variation using Python</h2>
+
+            <h3>Step 1: Import the Necessary Libraries</h3>
+            <pre><code class="language-python">import numpy as np</code></pre>
+            <p>We will use Python's numpy library, which is useful for working with arrays and performing mathematical operations.</p>
+
+            <h3>Step 2: Create Your Dataset</h3>
+            <pre><code class="language-python">data = [7, 24, 85, 19, 66]</code></pre>
+            <p>We have created a simple dataset in Python as an array or list. You can replace this with your own dataset whenever needed.</p>
+
+            <h3>Step 3: Calculate the Mean and Standard Deviation</h3>
+            <pre><code class="language-python">mean = np.mean(data)
+std_dev = np.std(data)</code></pre>
+            <p>Use the numpy functions <code>mean()</code> and <code>std()</code> to calculate your dataset's mean and standard deviation.</p>
+
+            <h3>Step 4: Calculate the Coefficient of Variation</h3>
+            <pre><code class="language-python">cv = (std_dev / mean) * 100</code></pre>
+            <p>Now that you have the mean and standard deviation, calculate the Coefficient of Variation using the above formula.</p>
+
+            <h3>Step 5: Display the Result</h3>
+            <pre><code class="language-python">print(f"The Coefficient of Variation is: {cv:.2f}%")</code></pre>
+            <p>When you run the above code, it will calculate and display the Coefficient of Variation for a given dataset.</p>
+
+            <div class="author-section">
+                <img src="../images/author.jpg" alt="Author avatar" class="author-avatar">
+                <div class="author-info">
+                    <h4>Khushal Jethava</h4>
+                    <p>AI/ML & Python Developer</p>
+                </div>
+            </div>
+        </article>
+        </div>
+
+        <!-- Right Sidebar Ad -->
+        <aside class="ad-sidebar">
+            <div class="ad-container">
+                <p>Advertisement Space<br>(160 x 600)</p>
+            </div>
+        </aside>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+    <script src="../assets/page.js"></script>
+
+</body>
+</html>

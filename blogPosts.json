@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "title": "How to Calculate Coefficient of Variation in Python",
+        "category": "ai",
+        "excerpt": "In this tutorial, we will learn about the coefficient of variation",
+        "image": "./images/post1.png",
+        "date": "2024-03-15",
+        "readTime": "10 min read",
+        "url": "./posts/How-to-calculate-coefficient-of-variation-in-Python.html"
+    },
+    {
+        "id": 2,
+        "title": "Modern Web Development Practices",
+        "category": "web",
+        "excerpt": "Best practices and tools for modern web development in 2024.",
+        "image": "/api/placeholder/400/300",
+        "date": "2024-03-14",
+        "readTime": "7 min read",
+        "url": "/posts/page2.html"
+    },
+    {
+        "id": 3,
+        "title": "Cloud Computing Trends",
+        "category": "cloud",
+        "excerpt": "Latest trends and innovations in cloud computing and infrastructure.",
+        "image": "/api/placeholder/400/300",
+        "date": "2024-03-13",
+        "readTime": "6 min read",
+        "url": "/posts/page3.html"
+    },
+    {
+        "id": 4,
+        "title": "Mobile App Development Guide",
+        "category": "mobile",
+        "excerpt": "Complete guide to building modern mobile applications.",
+        "image": "/api/placeholder/400/300",
+        "date": "2024-03-12",
+        "readTime": "8 min read",
+        "url": "/posts/page4.html"
+    },
+    {
+        "id": 5,
+        "title": "Cybersecurity Best Practices",
+        "category": "cybersecurity",
+        "excerpt": "Essential security practices for modern applications.",
+        "image": "/api/placeholder/400/300",
+        "date": "2024-03-11",
+        "readTime": "5 min read",
+        "url": "/posts/page5.html"
+    },
+    {
+        "id": 6,
+        "title": "Machine Learning Applications",
+        "category": "ai",
+        "excerpt": "Real-world applications of machine learning in industry.",
+        "image": "/api/placeholder/400/300",
+        "date": "2024-03-10",
+        "readTime": "6 min read",
+        "url": "/posts/page6.html"
+    }
+]

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechInsights Blog</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css">
+
+</head>
+<body>
+    <script src="./assets/script.js"></script>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">TechInsights</a>
+            <div class="nav-links">
+                <a href="#"><i class="fas fa-home"></i> Home</a>
+                <a href="#"><i class="fas fa-th"></i> Categories</a>
+                <a href="#"><i class="fas fa-info-circle"></i> About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero">
+            <h1>Welcome to TechInsights</h1>
+            <p>Exploring the latest in technology, innovation, and digital transformation</p>
+        </section>
+
+        <section class="categories">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="ai">AI & ML</button>
+            <button class="category-btn" data-category="web">Web Dev</button>
+            <button class="category-btn" data-category="mobile">Mobile</button>
+            <button class="category-btn" data-category="cloud">Cloud</button>
+            <button class="category-btn" data-category="cybersecurity">Cybersecurity</button>
+        </section>
+
+        <section class="blog-grid">
+            <!-- Blog cards will be dynamically inserted here -->
+        </section>
+
+        <div class="pagination">
+            <button id="prevPage" disabled>Previous</button>
+            <span class="pagination-info">Page <span id="currentPage">1</span> of <span id="totalPages">1</span></span>
+            <button id="nextPage">Next</button>
+        </div>
+    </main>
+
+
+    
+</body>
+</html>
