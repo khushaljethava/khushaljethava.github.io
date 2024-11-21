@@ -18,5 +18,15 @@
         "date": "2024-11-18",
         "readTime": "10 min read",
         "url": "./posts/Beginners-Guide-to-LangChain.html"
+    },
+    {
+        "id": 3,
+        "title": " Simple Guide: How to Change Font Size in Python",
+        "category": "python",
+        "excerpt": "If you use Python to develop data visualisations and user interfaces, you probably know that you have the ability to change the font size of text elements in plots, charts, and other project components.",
+        "image": "./images/Beginner's Guide to LangChain in Python.jpg",
+        "date": "2024-11-21",
+        "readTime": "30 min read",
+        "url": "./posts/How-to-Change-Font-Size-in-Python.html"
     }
 ]
