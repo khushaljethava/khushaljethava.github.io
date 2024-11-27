@@ -2,16 +2,11 @@
 title: Beginner's Guide to LangChain in Python
 description: In this blog, we will learn about the LangChain framework, which is used to develop LLM applications that include ChatGPT with memory and long-term memory. These features will be explored in detail in future tutorials.
 
-author: khushal
 date: 2024-11-27 11:33:00 +0800
-categories: [Genai]
-tags: [typography]
-pin: true
-math: true
-mermaid: true
+categories: [GenAI]
+tags: [AI]
 image:
   path: /commons/Beginner Guide to LangChain in Python.jpg
-  lqip: data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA
   alt: Beginner's Guide to LangChain in Python
 ---
 

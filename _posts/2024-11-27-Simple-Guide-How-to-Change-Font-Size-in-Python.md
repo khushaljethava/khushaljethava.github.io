@@ -1,16 +1,12 @@
 ---
 title: Simple Guide How to Change Font Size in Python
 description: If you use Python to develop data visualisations and user interfaces, you probably know that you have the ability to change the font size of text elements in plots, charts, and other project components. However, you might be unfamiliar with some of the most common ways this is done, such as using Tkinter or Matplotlib. This tutorial aims to provide an introduction to how to change font size in python applications and help dispel any uncertainty around this topic.
-author: khushal
+
 date: 2024-11-27 11:33:00 +0800
 categories: [Python]
 tags: [python]
-pin: true
-math: true
-mermaid: true
 image:
   path: /commons/devices-mockup.png
-  lqip: data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA
   alt: Simple Guide How to Change Font Size in Python.
 ---
 

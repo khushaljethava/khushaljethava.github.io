@@ -2,16 +2,12 @@
 title: How to calculate coefficient of variation in Python
 description: In this tutorial, we will learn about the coefficient of variation, How to calculate coefficient of variation in python, and the importance of the coefficient of variation in artificial intelligence.
 
-author: khushal
 date: 2024-11-27 11:33:00 +0800
-categories: [Genai]
-tags: [typography]
-pin: true
-math: true
-mermaid: true
+categories: [GenAI]
+tags: [AI]
+
 image:
   path: /commons/How to calculate coefficient of variation in Python.png
-  lqip: 
   alt: How to calculate coefficient of variation in Python
 ---
 
