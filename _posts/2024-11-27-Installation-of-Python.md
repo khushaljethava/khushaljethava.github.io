@@ -33,7 +33,7 @@ Python 3.9.1
 
 How to install Python on Windows computers
 
-Step 1: To install python on windows, first, we have to download python from their official website: [www.python.org/downloads](http://www.python.org/downloads) and then click on Download Python. Maybe you will see a different python version, but you can download any newer version from 3.9.
+Step 1: To install python on windows, first, we have to download python from their official website: http://www.python.org/downloads and then click on Download Python. Maybe you will see a different python version, but you can download any newer version from 3.9.
 
 ![][image1]
 
