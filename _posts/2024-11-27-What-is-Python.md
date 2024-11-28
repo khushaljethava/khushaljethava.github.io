@@ -9,6 +9,9 @@ image:
   path: /commons/devices-mockup.png
   alt: What is Python?
 ---
+ 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4181667199679058"
+     crossorigin="anonymous"></script>
 
 
 **Python** is a general-purpose interpreted, interactive language that supports object-oriented programming. It is a high-level programming language. Python can also be used as a scripting language. It is a **general-purpose** language that can be used in many ways.
