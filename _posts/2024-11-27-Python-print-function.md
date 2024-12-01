@@ -1,5 +1,5 @@
 ---
-title: Python print function
+title: Python Print Function
 
 description: This tutorial will learn about python’s print function, which is used for print objects and variables and parameters of the print function.
 
@@ -7,7 +7,7 @@ date: 2024-11-27 11:33:00 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/devices-mockup.png
+  path: /commons/Python Print Function.png
   alt: Python print function
 ---
 

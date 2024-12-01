@@ -7,8 +7,8 @@ date: 2024-11-27 11:33:00 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/devices-mockup.png
-  alt: Installation of Python
+  path: /commons/Basic Syntax.png
+  alt: Basic Syntax
 ---
 
 ## Python Syntax

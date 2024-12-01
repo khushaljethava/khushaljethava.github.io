@@ -8,7 +8,7 @@ date: 2024-11-27 11:33:00 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/devices-mockup.png
+  path: /commons/Python Comments.png
   alt: Python Comments
 ---
 
@@ -24,54 +24,90 @@ It is tough to remember every variable’s names, functions names, and class nam
 
 A single-line comment is used by adding a hash sing (\#) at the beginning of a text or a string statement.
 
-| \# This is a single-line comment |
-| :---- |
+```python
+# This is a single-line comment
+```
 
 Example Code:
 
-| print("This is A String ")\# This is Comment |
-| :---- |
+```python
+print("This is A String ")
+# This is Comment
+```
 
 Output:
 
-| This is A String |
-| :---- |
+```python
+This is A String
+```
 
 As we can see only, the print function is executed, and the comment was not printed on the output. We can add comments in the code, but this is not the only method to add single-line comments. We can also add comments after our function or end of the code.
 
 Example Code:
 
-| \#Headingprint("String start from here") \#And Ends here\#Closeing comment |
-| :---- |
+```python
+#Heading
+
+print("String start from here") #And Ends here
+
+#Closeing comment
+```
 
 Output:
 
-| Staring start from here |
-| :---- |
+```python
+Staring start from here
+```
 
 ## Multi-line comment in python
 
 We can create a python multi-line comment by adding a delimiter  ("") on the starting and end of the statement.
 
-| """This is a multi-line comment.Using python, and it will not be printed. At the runtime""" |
-| :---- |
-
+```python
+"""
+This is a multi-line comment.
+Using python, and it will not be printed. 
+At the runtime
+"""
+```
 Example Code:
 
-| print("Hello World")"""This is a multi-line commentUsing python, and it will not be printed.""" |
-| :---- |
+```python
+print("Hello World")
+"""
+This is a multi-line comment
+Using python, and it will not be printed.
+"""
+```
 
 Output:
 
-| Hello World |
-| :---- |
+```python
+Hello World
+```
 
 ## Multiple Python Comments
 
 We can add multiple comments in a single program or code.
 
-| \# This is Header"""We are going to Print hello world"""print("Hello World") \# This is a print function"""Here we will print Other print function"""print("It is Python comment") \# Print function to print It is python comment \# This is Footler  |
-| :---- |
+```python
+# This is Header
+
+"""
+We are going to 
+Print hello world
+"""
+print("Hello World") # This is a print function
+
+"""
+Here we will print 
+Other print function
+"""
+
+print("It is Python comment") # Print function to print It is python comment 
+
+# This is Footler
+```
 
 ## Why Comments is used in Python.
 
@@ -90,20 +126,27 @@ Docstrings are accessible from the doc attribute (\_\_doc\_\_)   for any of the 
 
 Example of Code:
 
-| def addition(n):		''' This is a docstrings example we have added in addition function '''		return n+n print(addition.\_\_doc\_\_) |
-| :---- |
+```python
+def addition(n):
+		''' This is a docstrings example we have added in addition function '''
+		return n+n
+
+print(addition.__doc__)
+
+```
 
 To run this docstring code, we have to follow this step.
 
-| print(addition.\_\_doc\_\_) |
-| :---- |
-
+```python
+print(addition.__doc__)
+```
 Here the output of string literal.
 
 Output
 
-| 	This is a docstrings example we have added in the addition function.  |
-| :---- |
+```python
+	This is a docstrings example we have added in the addition function. 
+```
 
 Here, we have documented our addition function, and then we are accessing it with the \_\_doc\_\_ attribute.  
  We can learn more about python docstring from here. (Link to Python docstring page).
@@ -121,24 +164,63 @@ Here, we have documented our addition function, and then we are accessing it wit
 
 ## FAQs
 
-How to make Comment in python?
+**Question:**How to make Comment in python?
 
-In python we can use \# hashtag special characters to make comments in python in addition to that we can use triple single quotes or triple double quotes to make multiple line comments.
+**Answer:**In python we can use \# hashtag special characters to make comments in python in addition to that we can use triple single quotes or triple double quotes to make multiple line comments.
 
-How to print comments from a program in python?
+**Question:**How to print comments from a program in python?
 
-Unfortunately, comments are developed in such a way that all the programming languages will ignore them.
+**Answer:**Unfortunately, comments are developed in such a way that all the programming languages will ignore them.
 
 In Python, we can't print any comments using any program or comments.
 
-What is a python comments shortcut?
+**Question:**What is a python comments shortcut?
 
-In most IDE’s like Pycharm, VS code, Jupyter Notebook, etc we can use “Ctrl \+ / “ for inline comments or for multiple line comments
+**Answer:**In most IDE’s like Pycharm, VS code, Jupyter Notebook, etc we can use “Ctrl \+ / “ for inline comments or for multiple line comments
 
-What are the types of comments in python?
+**Question:**What are the types of comments in python?
 
-There are only two types of python comments.
+**Answer:**There are only two types of python comments.
 
 1. Single line or inline comments  
 2. Multiline comments
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "How to make Comment in python?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "In python we can use # hashtag special characters to make comments in python in addition to that we can use triple single quotes or triple double quotes to make multiple line comments."
+    }
+  },{
+    "@type": "Question",
+    "name": "How to print comments from a program in python?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Unfortunately, comments are developed in such a way that all the programming languages will ignore them.
+
+In Python, we can't print any comments using any program or comments."
+    }
+  },{
+    "@type": "Question",
+    "name": "What is a python comments shortcut?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "In most IDE’s like Pycharm, VS code, Jupyter Notebook, etc we can use “Ctrl + / “ for inline comments or for multiple line comments"
+    }
+  },{
+    "@type": "Question",
+    "name": "What are the types of comments in python?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "There are only two types of python comments.
+1- Single line or inline comments
+2- Multiline comments"
+    }
+  }]
+}
+</script>

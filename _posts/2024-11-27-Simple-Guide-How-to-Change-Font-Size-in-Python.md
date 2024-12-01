@@ -6,7 +6,7 @@ date: 2024-11-27 11:33:00 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/devices-mockup.png
+  path: /commons/Simple Guide How to Change Font Size in Python.png
   alt: Simple Guide How to Change Font Size in Python.
 ---
 

@@ -8,7 +8,7 @@ date: 2024-11-27 11:33:00 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/devices-mockup.png
+  path: /commons/Python Type Casting or Type Conversion.png
   alt: Python Data Types
 ---
 
@@ -33,15 +33,30 @@ When the python interpreter automatically changes the data type without programm
 
 Example:
 
-| X \= 2print("The type of X variable is :" , type(X))Y \= 3.5print("The type of Y variable is :" , type(Y))X \= X \+ Yprint(X)print("After addition the type of X variable is : ", type(X))  |
-| :---- |
+```python
+X = 2
+
+print("The type of X variable is :" , type(X))
+
+Y = 3.5
+
+print("The type of Y variable is :" , type(Y))
+
+X = X + Y
+print(X)
+print("After addition the type of X variable is : ", type(X)) 
+```
 
 When we execute the above program, we will get the following result.
 
 Output:
 
-| The type of X variable is : \<class 'int'\>The type of Y variable is : \<class 'float'\>5.5After addition the type of X variable is :  \<class 'float'\> |
-| :---- |
+```python 
+The type of X variable is : <class 'int'>
+The type of Y variable is : <class 'float'>
+5.5
+After addition the type of X variable is :  <class 'float'>
+```
 
 Here we are taking the X variable as Integer and the Y variable as a float. Then we are adding Y’s value, which is a float with Value of X, which is Integer when after the addition, we are getting output as 5.5 in a float. We can also see that after the addition, the data type of X is also changed to float from an integer automatically by the python interpreter; this is how Implicit type conversion works.
 
@@ -75,13 +90,35 @@ The int() function converts the base of any number or a string to an integer.
 
 Let us check an example of the int() function.
 
-| X \= int(2)print("The type of X variable is: ", type(X))Y \= 3.4Y \= int(Y)print(Y)print("The type of Y variable is: ", type(Y))Z \= "54"Z \= int(Z)print("The type of Z variable is: ", type(Z))print(int(True))print(int(False)) |
-| :---- |
+```python
+X = int(2)
+print("The type of X variable is: ", type(X))
+
+Y = 3.4
+Y = int(Y)
+print(Y)
+print("The type of Y variable is: ", type(Y))
+
+
+Z = "54"
+Z = int(Z)
+print("The type of Z variable is: ", type(Z))
+
+print(int(True))
+
+print(int(False))
+```
 
 The output will be as follows.
 
-| The type of X variable is:  \<class 'int'\>3The type of Y variable is:  \<class 'int'\>The type of Z variable is:  \<class 'int'\>10 |
-| :---- |
+```python
+The type of X variable is:  <class 'int'>
+3
+The type of Y variable is:  <class 'int'>
+The type of Z variable is:  <class 'int'>
+1
+0
+```
 
 In the above program,
 
@@ -103,15 +140,40 @@ This function is used to convert any data types of a float number.
 
 For Example 
 
-| X \= float(2.1)print("The type of X variable is: ", type(X))X1 \= float(1) print(X1)Y \= 31Y \= float(Y)print(Y)print("The type of Y variable is: ", type(Y))Z \= "3.7"Z \= float(Z)print("The type of Z variable is: ", type(Z))print(float(True))print(float(False)) |
-| :---- |
+```python
+X = float(2.1)
+print("The type of X variable is: ", type(X))
+
+X1 = float(1) 
+print(X1)
+
+Y = 31
+Y = float(Y)
+print(Y)
+print("The type of Y variable is: ", type(Y))
+
+
+Z = "3.7"
+Z = float(Z)
+print("The type of Z variable is: ", type(Z))
+
+print(float(True))
+
+print(float(False))
+```
 
 When we run the above code, we will get the following output:
 
 The type of X variable is:  \<class 'float'\>
 
-| 1.031.0The type of Y variable is:  \<class 'float'\>The type of Z variable is:  \<class 'float'\>1.00.0 |
-| :---- |
+```python
+1.0
+31.0
+The type of Y variable is:  <class 'float'>
+The type of Z variable is:  <class 'float'>
+1.0
+0.0
+```
 
 Note: 
 
@@ -122,13 +184,29 @@ Note:
 
 This function is used to convert data types like integer or float into a string.
 
-| X \= str(1)Y \= str(3.7)Z \= str(10+5j)bool1 \= str(True)bool2 \= str(False)print("The type of variable X is :", type(X))print("The type of variable Y is :", type(Y))print("The type of variable Z is :", type(Z))print("The type of variable bool1 is :", type(bool1))print("The type of variable bool2 is :", type(bool2)) |
-| :---- |
+```python
+X = str(1)
+Y = str(3.7)
+Z = str(10+5j)
+bool1 = str(True)
+bool2 = str(False)
+
+print("The type of variable X is :", type(X))
+print("The type of variable Y is :", type(Y))
+print("The type of variable Z is :", type(Z))
+print("The type of variable bool1 is :", type(bool1))
+print("The type of variable bool2 is :", type(bool2))
+```
 
 The output will be as follows.
 
-| The type of variable X is : \<class 'str'\>The type of variable Y is : \<class 'str'\>The type of variable Z is : \<class 'str'\>The type of variable bool1 is : \<class 'str'\>The type of variable bool2 is : \<class 'str'\> |
-| :---- |
+```python
+The type of variable X is : <class 'str'>
+The type of variable Y is : <class 'str'>
+The type of variable Z is : <class 'str'>
+The type of variable bool1 is : <class 'str'>
+The type of variable bool2 is : <class 'str'>
+```
 
 ## Python  bool()
 
@@ -136,13 +214,32 @@ This function is used to convert any data type to a boolean data type easily.
 
 Example:
 
-| X \= bool(0)Y \= bool(1)Z \= bool(3.7)A \= bool("Python")B \= bool("")C \= bool(-23)print(X)print(Y)print(Z)print(A)print(B)print(C) |
-| :---- |
+```python
+X = bool(0)
+Y = bool(1)
+Z = bool(3.7)
+A = bool("Python")
+B = bool("")
+C = bool(-23)
+
+print(X)
+print(Y)
+print(Z)
+print(A)
+print(B)
+print(C)
+```
 
 Output
 
-| FalseTrueTrueTrueFalseTrue |
-| :---- |
+```python
+False
+True
+True
+True
+False
+True
+```
 
 With the help of the bool function, we can convert any type of data type into a boolean. The output will be \- For all values, it will produce True except for an empty String.
 
@@ -152,13 +249,30 @@ This function is used to convert natural numbers to complex numbers. However, If
 
 Example:
 
-| X \= 2Y \= 5Z \= complex(X,Y)print(Z)print("The Type of Z variable is:", type(Z))A \= TrueB \= FalseC \= complex(A,B)print(C)print("The Type of C variable is:", type(C)) |
-| :---- |
+```python
+X = 2
+Y = 5
+
+Z = complex(X,Y)
+
+print(Z)
+print("The Type of Z variable is:", type(Z))
+
+A = True
+B = False
+C = complex(A,B)
+print(C)
+print("The Type of C variable is:", type(C))
+```
 
 The output will be as follows.
 
-| (2+5j)The Type of Z variable is: \<class 'complex'\>(1+0j)The Type of C variable is: \<class 'complex'\> |
-| :---- |
+```python
+(2+5j)
+The Type of Z variable is: <class 'complex'>
+(1+0j)
+The Type of C variable is: <class 'complex'>
+```
 
 ## Python list()
 
@@ -166,14 +280,36 @@ This function is used to convert any data type into a list type.
 
 Example:  
  
+```python
+my_tuple = (1,2,4,5)
+my_set  = {'P','Y','T','H','O','N'}
+my_string  = "HelloWorld"
 
-| my\_tuple \= (1,2,4,5)my\_set  \= {'P','Y','T','H','O','N'}my\_string  \= "HelloWorld"my\_tuple \= list(my\_tuple)print(my\_tuple)print("The type of my\_tuple is:", type(my\_tuple))my\_set \= list(my\_set)print(my\_set)print("The type of my\_set is:", type(my\_set))my\_string \= list(my\_string)print(my\_string)print("The type of my\_string is:", type(my\_string)) |
-| :---- |
+my_tuple = list(my_tuple)
+print(my_tuple)
+print("The type of my_tuple is:", type(my_tuple))
+
+
+my_set = list(my_set)
+print(my_set)
+print("The type of my_set is:", type(my_set))
+
+
+my_string = list(my_string)
+print(my_string)
+print("The type of my_string is:", type(my_string))
+```
 
 Output:
 
-| \[1, 2, 4, 5\]The type of my\_tuple is: \<class 'list'\>\['T', 'O', 'H', 'P', 'Y', 'N'\]The type of my\_set is: \<class 'list'\>\['H', 'e', 'l', 'l', 'o', 'W', 'o', 'r', 'l', 'd'\]The type of my\_string is: \<class 'list'\> |
-| :---- |
+```python
+[1, 2, 4, 5]
+The type of my_tuple is: <class 'list'>
+['T', 'O', 'H', 'P', 'Y', 'N']
+The type of my_set is: <class 'list'>
+['H', 'e', 'l', 'l', 'o', 'W', 'o', 'r', 'l', 'd']
+The type of my_string is: <class 'list'>
+```
 
 ## Python set()
 
@@ -181,13 +317,36 @@ This function is used to convert any datatypes to a set.
 
 Example:
 
-| my\_tuple \= (1,2,4,5)my\_list  \= \['P','Y','T','H','O','N'\]my\_string  \= "HelloWorld"my\_tuple \= set(my\_tuple)print(my\_tuple)print("The type of my\_tuple is:", type(my\_tuple))my\_list \= set(my\_list)print(my\_list)print("The type of my\_list is:", type(my\_list))my\_string \= set(my\_string)print(my\_string)print("The type of my\_string is:", type(my\_string)) |
-| :---- |
+```python
+my_tuple = (1,2,4,5)
+my_list  = ['P','Y','T','H','O','N']
+my_string  = "HelloWorld"
+
+my_tuple = set(my_tuple)
+print(my_tuple)
+print("The type of my_tuple is:", type(my_tuple))
+
+
+my_list = set(my_list)
+print(my_list)
+print("The type of my_list is:", type(my_list))
+
+
+my_string = set(my_string)
+print(my_string)
+print("The type of my_string is:", type(my_string))
+```
 
 The output will be as follows.
 
-| {1, 2, 4, 5}The type of my\_tuple is: \<class 'set'\>{'T', 'P', 'Y', 'N', 'O', 'H'}The type of my\_list is: \<class 'set'\>{'d', 'e', 'W', 'l', 'o', 'r', 'H'}The type of my\_string is: \<class 'set'\> |
-| :---- |
+```python
+{1, 2, 4, 5}
+The type of my_tuple is: <class 'set'>
+{'T', 'P', 'Y', 'N', 'O', 'H'}
+The type of my_list is: <class 'set'>
+{'d', 'e', 'W', 'l', 'o', 'r', 'H'}
+The type of my_string is: <class 'set'>
+```
 
 ## Python tuple()
 
@@ -195,49 +354,96 @@ This function is used to convert data types to a tuple.
 
 Example
 
-| my\_list \= \[1,2,4,5\]my\_set  \= {'P','Y','T','H','O','N'}my\_string  \= "HelloWorld"my\_list \= tuple(my\_list)print(my\_list)print("The type of my\_list is:", type(my\_list))my\_set \= tuple(my\_set)print(my\_set)print("The type of my\_set is:", type(my\_set))my\_string \= tuple(my\_string)print(my\_string)print("The type of my\_string is:", type(my\_string)) |
-| :---- |
+```python
+my_list = [1,2,4,5]
+my_set  = {'P','Y','T','H','O','N'}
+my_string  = "HelloWorld"
+
+my_list = tuple(my_list)
+print(my_list)
+print("The type of my_list is:", type(my_list))
+
+
+my_set = tuple(my_set)
+print(my_set)
+print("The type of my_set is:", type(my_set))
+
+
+my_string = tuple(my_string)
+print(my_string)
+print("The type of my_string is:", type(my_string))
+
+```
 
 The output will be as follows.
 
-| (1, 2, 4, 5\)The type of my\_list is: \<class 'tuple'\>('P', 'H', 'T', 'N', 'Y', 'O')The type of my\_set is: \<class 'tuple'\>('H', 'e', 'l', 'l', 'o', 'W', 'o', 'r', 'l', 'd')The type of my\_string is: \<class 'tuple'\> |
-| :---- |
+```python
+(1, 2, 4, 5)
+The type of my_list is: <class 'tuple'>
+('P', 'H', 'T', 'N', 'Y', 'O')
+The type of my_set is: <class 'tuple'>
+('H', 'e', 'l', 'l', 'o', 'W', 'o', 'r', 'l', 'd')
+The type of my_string is: <class 'tuple'>
+```
 
 ## Python dict()
 
 This function is used to convert a tuple with key and value of order into a dictionary.
 
-| my\_tup \= (('a',1),('b',2),('c',3))print(my\_tup)my\_tup \= dict(my\_tup)print(my\_tup)print("The type of my\_tup is :", type(my\_tup)) |
-| :---- |
+```python
+my_tup = (('a',1),('b',2),('c',3))
+print(my_tup)
+
+my_tup = dict(my_tup)
+
+print(my_tup)
+
+print("The type of my_tup is :", type(my_tup))
+```
 
 The output will be as follows.
 
-| (('a', 1), ('b', 2), ('c', 3)){'a': 1, 'b': 2, 'c': 3}The type of my\_tup is : \<class 'dict'\> |
-| :---- |
+```python
+(('a', 1), ('b', 2), ('c', 3))
+{'a': 1, 'b': 2, 'c': 3}
+The type of my_tup is : <class 'dict'>
 
 ## Python chr() 
 
 This function is used to convert numbers to their corresponding ASCII character.
 
-| X \= 65Y \= 97Z \= 33print(chr(X))print(chr(Y))print(chr(Z)) |
-| :---- |
+```python
+X = 65
+Y = 97
+Z = 33
+print(chr(X))
+print(chr(Y))
+print(chr(Z))
+```
 
 The output will be as follows.
 
-| Aa\! |
-| :---- |
+```python
+A
+a
+!
+```
 
 ## Python ord()
 
 This function is used to convert a character to an integer.
 
-| X \= 'P'print(ord(X)) |
-| :---- |
+```python
+X = 'P'
+
+print(ord(X))
+```
 
 Output:
 
-| 80 |
-| :---- |
+```python
+80
+```
 
 ## Python hex()
 
@@ -245,26 +451,34 @@ This function is used to convert integers to hexadecimal strings.
 
 Example:
 
-| X \= 80print(hex(X)) |
-| :---- |
+```python
+X = 80
+
+print(hex(X))
+```
 
 Output:
 
-| 0x50 |
-| :---- |
+```python
+0x50
+```
 
 ## Python oct()
 
 This function is used to convert integers to octal strings.  
 Example:
 
-| X \= 80print(oct(X)) |
-| :---- |
+```python
+X = 80
+
+print(oct(X))
+```
 
 Output:
 
-| 0o120 |
-| :---- |
+```python
+0o120
+```
 
 ## 
 
