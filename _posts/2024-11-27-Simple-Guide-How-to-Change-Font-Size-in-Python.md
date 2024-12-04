@@ -377,3 +377,8 @@ By following these best practices, you can ensure that your Python code and data
           }]
         }
         </script>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4181667199679058"
+     crossorigin="anonymous"></script>

@@ -115,3 +115,6 @@ Here, we have passed the my\_file file object to the file parameter. The string 
 
 Finally, the file is closed using the close() method.
 
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4181667199679058"
+     crossorigin="anonymous"></script>

@@ -377,3 +377,6 @@ False
 ### Tips for Beginners 
 
 * Always remember single \= and double \== are entirely different. Single \= is used to assign value, and double \== is used to find if two values are equal.
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4181667199679058"
+     crossorigin="anonymous"></script>

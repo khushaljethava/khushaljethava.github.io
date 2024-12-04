@@ -188,3 +188,6 @@ Floor Division of two number is: 2
 ```
 
 ## 
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4181667199679058"
+     crossorigin="anonymous"></script>
