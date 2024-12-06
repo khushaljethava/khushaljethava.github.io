@@ -11,7 +11,7 @@ image:
 ---
 
 
-# What is Python While Loop?
+## What is Python While Loop?
 
 The while loop in python is used to execute a set of statements until the given test expression or condition is true. 
 
