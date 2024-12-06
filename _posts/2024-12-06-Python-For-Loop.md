@@ -1,7 +1,7 @@
 ---
 title: Python For Loop
 description: In this tutorial, we will learn about the python loop. which is used to iterable or iterator to our python code.
-date: date: 2024-12-06 10:26:00 +0800
+date: 2024-12-06 10:26:00 +0800
 categories: [Python]
 tags: [python]
 image:
