@@ -12,7 +12,7 @@ image:
 ---
 
 
-# Python Keywords
+## Python Keywords
 
 Python keywords are the python reserved words reserved by python language secured to define the python syntax and structure of the python language. We cannot use these reserved keywords as variable names, function names, class names, or other identifiers. In python, all the keywords are case-sensitive. All the python keywords should contain lowercase letters only except True, False, and None must be written as they are.
 

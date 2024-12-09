@@ -13,7 +13,7 @@ image:
 
 As we learn Keywords and identifiers in previous tutorials now, we will learn about how to use them using variables.
 
-# Python Variable
+## Python Variable
 
 Variables are used to store values in reserved memory locations. Variables are created at the moment when they are first declared at runtime. It does not need any keywords or any particular data type to declare it.  Variables are declared based on identifiers.
 

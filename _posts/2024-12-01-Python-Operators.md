@@ -15,7 +15,7 @@ image:
 
 First, let's understand what exactly Operators are.
 
-# What are Python Operators?
+## What are Python Operators?
 
 Python Operators are special symbols used to perform mathematical and logical operations and computations on values or variables.  
 
