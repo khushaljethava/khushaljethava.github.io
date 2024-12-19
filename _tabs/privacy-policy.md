@@ -256,7 +256,7 @@ Specific information about how we use such technologies and how you can refuse c
 
   
 
-We may share your information with Google Analytics to track and analyse the use of the Services. The Google Analytics Advertising Features that we may use include: Google Display Network Impressions Reporting. To opt out of being tracked by Google Analytics across the Services, visit [https://tools.google.com/dlpage/gaoptout](https://tools.google.com/dlpage/gaoptout). You can opt out of Google Analytics Advertising Features through [Ads Settings](https://adssettings.google.com/) and Ad Settings for mobile apps. Other opt out means include [http://optout.networkadvertising.org/](http://optout.networkadvertising.org/) and [http://www.networkadvertising.org/mobile-choice](http://www.networkadvertising.org/mobile-choice). For more information on the privacy practices of Google, please visit the [Google Privacy & Terms page](https://policies.google.com/privacy).
+We may share your information with Google Analytics to track and analyse the use of the Services. The Google Analytics Advertising Features that we may use include: Google Display Network Impressions Reporting. To opt out of being tracked by Google Analytics across the Services, visit https://tools.google.com/dlpage/gaoptout. You can opt out of Google Analytics Advertising Features through https://adssettings.google.com/ and Ad Settings for mobile apps. Other opt out means include http://optout.networkadvertising.org/ and http://www.networkadvertising.org/mobile-choice. For more information on the privacy practices of Google, please visit the https://policies.google.com/privacy.
 
   
 
