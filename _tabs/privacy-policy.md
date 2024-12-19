@@ -69,33 +69,32 @@ Want to learn more about what we do with any information we collect? 
 
   
 
-[1\. WHAT INFORMATION DO WE COLLECT?](#infocollect)
+1\. WHAT INFORMATION DO WE COLLECT?
 
-[2\. HOW DO WE PROCESS YOUR INFORMATION?](#infouse)
+2\. HOW DO WE PROCESS YOUR INFORMATION?
 
-[3\. WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR PERSONAL INFORMATION?](#legalbases)
+3\. WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR PERSONAL INFORMATION?
 
-[4\. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?](#whoshare)
+4\. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?
 
-[5\. WHAT IS OUR STANCE ON THIRD-PARTY WEBSITES?](#3pwebsites)
+5\. WHAT IS OUR STANCE ON THIRD-PARTY WEBSITES?
 
-[6\. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?](#cookies)
+6\. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?
 
-[7\. HOW LONG DO WE KEEP YOUR INFORMATION?](#inforetain)
+7\. HOW LONG DO WE KEEP YOUR INFORMATION?
+8\. HOW DO WE KEEP YOUR INFORMATION SAFE?
 
-[8\. HOW DO WE KEEP YOUR INFORMATION SAFE?](#infosafe)
+9\. WHAT ARE YOUR PRIVACY RIGHTS?
 
-[9\. WHAT ARE YOUR PRIVACY RIGHTS?](#privacyrights)
+10\. CONTROLS FOR DO-NOT-TRACK FEATURES
 
-[10\. CONTROLS FOR DO-NOT-TRACK FEATURES](#DNT)
+11\. DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?
 
-[11\. DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?](#uslaws)
+12\. DO WE MAKE UPDATES TO THIS NOTICE?
 
-[12\. DO WE MAKE UPDATES TO THIS NOTICE?](#policyupdates)
+13\. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
 
-[13\. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?](#contact)
-
-[14\. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?](#request)
+14\. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?
 
   
 
@@ -496,7 +495,7 @@ We will use and retain the collected personal information as needed to provide t
 
   
 
-Learn more about the sources of personal information we collect in '[WHAT INFORMATION DO WE COLLECT?](#infocollect)'
+Learn more about the sources of personal information we collect in WHAT INFORMATION DO WE COLLECT?
 
   
 
@@ -504,7 +503,7 @@ Learn more about the sources of personal information we collect in '[WHAT INFORM
 
   
 
-Learn more about how we use your personal information in the section, '[HOW DO WE PROCESS YOUR INFORMATION?](#infouse)'
+Learn more about how we use your personal information in the section, HOW DO WE PROCESS YOUR INFORMATION?
 
   
 
@@ -512,7 +511,7 @@ Learn more about how we use your personal information in the section, '[HOW DO W
 
   
 
-We may disclose your personal information with our service providers pursuant to a written contract between us and each service provider. Learn more about how we disclose personal information to in the section, '[WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?](#whoshare)'
+We may disclose your personal information with our service providers pursuant to a written contract between us and each service provider. Learn more about how we disclose personal information to in the section, 'WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?'
 
   
 
