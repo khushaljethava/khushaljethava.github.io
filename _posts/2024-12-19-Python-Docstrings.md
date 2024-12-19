@@ -1,7 +1,7 @@
 ---
 title: Python Docstring
 description: In this tutorial, we will learn about python docstring, where and why python docstrings are used.
-date: 2024-12-19 24:35:00 +0800
+date: 2024-12-19 23:35:00 +0800
 categories: [Python]
 tags: [python]
 image:
