@@ -24,7 +24,7 @@ This Privacy Notice for khushaljethava ('**we**', '**us**', or '**our**'), descr
 **SUMMARY OF KEY POINTS**
 
 
-**_This summary provides key points from our Privacy Notice, but you can find out more details about any of these topics by clicking the link following each key point or by using our_** [**_table of contents_**](#toc) **_below to find the section you are looking for._**
+**_This summary provides key points from our Privacy Notice, but you can find out more details about any of these topics by clicking the link following each key point or by using our_** [**_table of contents_**] **_below to find the section you are looking for._**
 
   
 
@@ -317,7 +317,7 @@ However, please note that this will not affect the lawfulness of the processing 
 
   
 
-**Cookies and similar technologies:** Most Web browsers are set to accept cookies by default. If you prefer, you can usually choose to set your browser to remove cookies and to reject cookies. If you choose to remove cookies or reject cookies, this could affect certain features or services of our Services. You may also [opt out of interest-based advertising by advertisers](http://www.aboutads.info/choices/) on our Services.
+**Cookies and similar technologies:** Most Web browsers are set to accept cookies by default. If you prefer, you can usually choose to set your browser to remove cookies and to reject cookies. If you choose to remove cookies or reject cookies, this could affect certain features or services of our Services. You may also opt out of interest-based advertising by advertisers http://www.aboutads.info/choices/ on our Services.
 
   
 
@@ -597,7 +597,7 @@ Under certain US state data protection laws, if we decline to take action regard
 
   
 
-California Civil Code Section 1798.83, also known as the 'Shine The Light' law, permits our users who are California residents to request and obtain from us, once a year and free of charge, information about categories of personal information (if any) we disclosed to third parties for direct marketing purposes and the names and addresses of all third parties with which we shared personal information in the immediately preceding calendar year. If you are a California resident and would like to make such a request, please submit your request in writing to us by using the contact details provided in the section '[HOW CAN YOU CONTACT US ABOUT THIS NOTICE?](#contact)'
+California Civil Code Section 1798.83, also known as the 'Shine The Light' law, permits our users who are California residents to request and obtain from us, once a year and free of charge, information about categories of personal information (if any) we disclosed to third parties for direct marketing purposes and the names and addresses of all third parties with which we shared personal information in the immediately preceding calendar year. If you are a California resident and would like to make such a request, please submit your request in writing to us by using the contact details provided in the section HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
 
   
 
