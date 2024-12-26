@@ -62,6 +62,7 @@ jobs:
           path: "_site${{ steps.pages.outputs.base_path }}"
           
       - name: generate-sitemap
+        id: sitemap
         uses: cicirello/generate-sitemap@v1.10.1
         with:
           base-url-path: https://khushaljethava.github.io/
