@@ -5,7 +5,7 @@ date: 2024-12-26 22:02:00 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
-  path: /commons/Python bytes() Method .png
+  path: /commons/Python bytes() Method.png
   alt: Python bytes() Method 
 
 ---
