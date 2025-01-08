@@ -27,8 +27,6 @@ url: "https://khushaljethava.github.io"
 
 plugins:
   - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-admin
   
 github:
   username: Khushaljethava # change to your GitHub username
