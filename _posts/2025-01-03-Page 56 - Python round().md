@@ -2,8 +2,8 @@
 title: Python round()
 description: The round() function returns the floating-point number that will be rounded to the given decimal number.
 date: 2025-01-03 22:42:23 +0800
-categories: [Python]
-tags: [python]
+categories: [Built in reference]
+tags: [Built in reference]
 image:
  path: /commons/Python round().png
  alt: Python round()

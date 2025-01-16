@@ -2,8 +2,8 @@
 title: Python oct() Method
 description: The python oct() is a built-in function of python that returns the octal string of a given integer. Octal strings start with 0o prefix when converted.
 date: 2025-01-03 22:42:23 +0800
-categories: [Python]
-tags: [python]
+categories: [Built in reference]
+tags: [Built in reference]
 image:
  path: /commons/Python oct() Method.png
  alt: Python oct() Method

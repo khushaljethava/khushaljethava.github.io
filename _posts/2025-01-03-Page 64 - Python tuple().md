@@ -2,8 +2,8 @@
 title: Python tuple()
 description: The tuple() is a built-in function of python that is used to create a tuple in python.
 date: 2025-01-03 22:42:23 +0800
-categories: [Python]
-tags: [python]
+categories: [Built in reference]
+tags: [Built in reference]
 image:
  path: /commons/Python tuple().png
  alt: Python tuple()

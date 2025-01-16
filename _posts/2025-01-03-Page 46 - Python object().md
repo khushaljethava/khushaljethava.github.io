@@ -2,8 +2,8 @@
 title: Python object() Method
 description: The object() is a built-in method of python that returns an empty object that is the base for all the classes.
 date: 2025-01-03 22:42:23 +0800
-categories: [Python]
-tags: [python]
+categories: [Built in reference]
+tags: [Built in reference]
 image:
  path: /commons/Python object() Method.png
  alt: Python object() Method

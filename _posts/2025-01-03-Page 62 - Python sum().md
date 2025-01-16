@@ -2,8 +2,8 @@
 title: Python sum()
 description: The sum() is a built-in python function which sums all the items of a given iterable.
 date: 2025-01-03 22:42:23 +0800
-categories: [Python]
-tags: [python]
+categories: [Built in reference]
+tags: [Built in reference]
 image:
  path: /commons/Python sum().png
  alt: Python sum()

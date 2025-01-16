@@ -2,8 +2,8 @@
 title: Python __import__()
 description: The __import__() is a built-in python function that is used to call the import statement.
 date: 2025-01-03 22:42:23 +0800
-categories: [Python]
-tags: [python]
+categories: [Built in reference]
+tags: [Built in reference]
 image:
     path: /commons/Python __import__().png
     alt: Python __import__()

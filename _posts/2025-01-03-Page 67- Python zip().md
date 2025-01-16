@@ -2,8 +2,8 @@
 title: Python zip()
 description: The zip() is a built-in python function that returns a zip object.It will take two or more iterable and add each item in a tuple.
 date: 2025-01-03 22:42:23 +0800
-categories: [Python]
-tags: [python]
+categories: [Built in reference]
+tags: [Built in reference]
 image:
  path: /commons/Python zip().png
  alt: Python zip()

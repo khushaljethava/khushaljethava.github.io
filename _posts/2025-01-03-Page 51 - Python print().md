@@ -2,8 +2,8 @@
 title: Python print()
 description: The print() function prints the given message to the screen of the output device, which can be a python interpreter, Terminal, or an IDE (integrated development environment), and the message can be a string or any other object like a list, tuple, set and dictionary.
 date: 2025-01-03 22:42:23 +0800
-categories: [Python]
-tags: [python]
+categories: [Built in reference]
+tags: [Built in reference]
 image:
  path: /commons/Python print().png
  alt: Python print()

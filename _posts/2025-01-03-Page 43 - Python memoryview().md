@@ -2,8 +2,8 @@
 title: Python memoryview() Method
 description: The memoryview() is a built-in python method that returns a memory allocated by the specified object .
 date: 2025-01-03 22:42:23 +0800
-categories: [Python]
-tags: [python]
+categories: [Built in reference]
+tags: [Built in reference]
 image:
  path: /commons/Python memoryview() Method.png
  alt: Python memoryview() Method

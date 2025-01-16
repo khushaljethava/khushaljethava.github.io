@@ -2,8 +2,8 @@
 title: Python int()
 description: The int() is the built-in method of python, which converts any number or string objects into an integer object; it is also used for typecasting the integer number.
 date: 2025-01-03 22:42:23 +0800
-categories: [Python]
-tags: [python]
+categories: [Built in reference]
+tags: [Built in reference]
 image:
  path: /commons/Python int().png
  alt: Python int()

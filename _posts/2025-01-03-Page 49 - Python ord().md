@@ -2,8 +2,8 @@
 title: Python ord()
 description: The ord() is a built-in python function that returns an integer representation of the specified Unicode character.
 date: 2025-01-03 22:42:23 +0800
-categories: [Python]
-tags: [python]
+categories: [Built in reference]
+tags: [Built in reference]
 image:
  path: /commons/Python ord().png
  alt: Python ord()

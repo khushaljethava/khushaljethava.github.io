@@ -2,8 +2,8 @@
 title: Python vars()
 description: The vars() is a built-in python function that returns the \_\_dict\_\_ attribute of an object.
 date: 2025-01-03 22:42:23 +0800
-categories: [Python]
-tags: [python]
+categories: [Built in reference]
+tags: [Built in reference]
 image:
  path: /commons/Python vars().png
  alt: Python vars()

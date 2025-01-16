@@ -2,8 +2,8 @@
 title: Python setattr()
 description: The python setattr() functions set the specific value of the specified attribute of the object.
 date: 2025-01-03 22:42:23 +0800
-categories: [Python]
-tags: [python]
+categories: [Built in reference]
+tags: [Built in reference]
 image:
  path: /commons/Python setattr().png
  alt: Python setattr()

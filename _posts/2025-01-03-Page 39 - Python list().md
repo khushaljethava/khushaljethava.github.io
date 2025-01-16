@@ -2,8 +2,8 @@
 title: Python list() Method
 description: In this tutorial we will learn about the python list() method and its uses with examples.
 date: 2025-01-03 22:42:23 +0800
-categories: [Python]
-tags: [python]
+categories: [Built in reference]
+tags: [Built in reference]
 image:
  path: /commons/Python list() Method.png
  alt: Python list() Method

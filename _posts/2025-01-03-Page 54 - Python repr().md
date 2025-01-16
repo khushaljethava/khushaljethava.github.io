@@ -2,8 +2,8 @@
 title: Python repr()
 description: The repr() function will return the printable representation of all information regarding the given object.
 date: 2025-01-03 22:42:23 +0800
-categories: [Python]
-tags: [python]
+categories: [Built in reference]
+tags: [Built in reference]
 image:
  path: /commons/Python repr().png
  alt: Python repr()

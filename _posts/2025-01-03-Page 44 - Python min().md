@@ -2,8 +2,8 @@
 title: Python min() Method
 description: The min() method returns the item with the smallest value or the item with the smallest value in an iterable.
 date: 2025-01-03 22:42:23 +0800
-categories: [Python]
-tags: [python]
+categories: [Built in reference]
+tags: [Built in reference]
 image:
  path: /commons/Python min() Method.png
  alt: Python min() Method

@@ -2,8 +2,8 @@
 title: Python isinstance() method
 description: The python isinstance() method returns True if the specified object is an instance or subclass; otherwise, it will return False.
 date: 2025-01-03 22:42:23 +0800
-categories: [Python]
-tags: [python]
+categories: [Built in reference]
+tags: [Built in reference]
 image:
  path: /commons/Python isinstance() method.png
  alt: Python isinstance() method

@@ -2,8 +2,8 @@
 title: Python set()
 description: The set() function in python helps to create a python set object.
 date: 2025-01-03 22:42:23 +0800
-categories: [Python]
-tags: [python]
+categories: [Built in reference]
+tags: [Built in reference]
 image:
  path: /commons/Python set().png
  alt: Python set()
