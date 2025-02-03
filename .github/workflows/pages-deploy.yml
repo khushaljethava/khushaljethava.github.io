@@ -58,6 +58,7 @@ jobs:
       - name: Copy Ads.txt to index folder
         run: |
           cp assets/Ads.txt _site/
+          cp assets/sitemap_4476228.xml _site/
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
