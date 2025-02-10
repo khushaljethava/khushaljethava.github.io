@@ -6,30 +6,10 @@ categories: [Built in reference]
 tags: [Built in reference]
 image:
  path: /commons/Python hasattr() Method.png
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
  alt: Python hasattr() Method
 ---
 
 ## What is Python hasattr() method? 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 The Python hasattr() method returns true if the given attribute is present in the objects, and if it doesn't present, it will return false.
 
@@ -83,16 +63,6 @@ print('str has __len__: ', hasattr(str, '__len__'))
 print('str has isupper method: ', hasattr(str, 'isupper'))
 print('str has isstring method: ', hasattr(str, 'isstring'))
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 
 The output will be as follow:

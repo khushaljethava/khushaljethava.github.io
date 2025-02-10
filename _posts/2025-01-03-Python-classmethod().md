@@ -1,31 +1,11 @@
 ---
 title: Python classmethod() Method 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 description: In this tutorial we will learn about the python classmethod() method and its uses.
 date: 2025-01-03 23:24:00 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
   path: /commons/Python classmethod() Method.png
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
   alt: Python classmethod() Method 
 
 ---
@@ -94,16 +74,6 @@ cls method accepts the class Dog as a parameter rather than Dog’s object/insta
 
 Now we pass the method Dog.printColor as an argument to the function classmethod. This will convert the function to a class method to accept the first parameter as a class(i.e., Dog).
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 In the last line, we call printColor without creating a Dog object as we do for static methods. This prints the class variable color.
 
 ## Rules of classmethod()

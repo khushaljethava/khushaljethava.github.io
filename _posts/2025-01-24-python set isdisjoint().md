@@ -1,13 +1,3 @@
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ---
 title: Python Set isdisjoint() Method 
 description: In this tutorial, we will understand about the python set isdisjoint() method and its uses.
@@ -16,30 +6,10 @@ categories: [Python Set Reference]
 tags: [Python Set Reference]
 image:
   path: /commons/Python Set isdisjoint() Method.png
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
   alt: Python Set isdisjoint() Method 
 
 ---
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The Python set isdisjoint() method returns True if two sets have no elements in common, and False otherwise. Two sets are considered disjoint when their intersection is empty.
 
 The syntax of the isdisjoint() method is:

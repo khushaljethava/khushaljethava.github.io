@@ -2,16 +2,6 @@
 title: Python divmod() Method
 description: In this tutorial we will learn about the python divmod() method and how to use it.
 date: 2025-01-03 22:15:55 +0800
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 categories: [Built in reference]
 tags: [Built in reference]
 image:
@@ -32,28 +22,8 @@ divmod(x,y)
 
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## divmod() Parameters 
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 divmod() takes two parameters:  
 x \- a non-complex number that can be referred to as a numerator.  
 y \- a non-complex number that can be referred to as denominator

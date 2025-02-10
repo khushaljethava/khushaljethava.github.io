@@ -61,38 +61,8 @@ The output is as follows:
 ```python
 The Magnitude of 10 - 7j is: 12.206555615733702
 ```
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Rules of abs()
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 * If the integer value is passed it will return an integer value only.  
 * If the floating value is passed it will return an absolute floating value.  
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * If the complex number is passed it will return a magnitude of the given number.

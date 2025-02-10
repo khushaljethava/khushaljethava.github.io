@@ -1,16 +1,6 @@
 ---
 title: Python Dictionary copy()
 description: The copy() method returns a copy of the given dictionary.
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 date: 2025-01-18 21:38:03 +0800
 categories: [Python Dictionary Reference]
 tags: [Python Dictionary Reference]
@@ -19,16 +9,6 @@ image:
  alt: Python Dictionary copy()
 ---
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The syntax of copy() is:
 
 ```python
@@ -87,16 +67,6 @@ First Dictionary is: {}
 Second Dictionary is: {}
 
 ```
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Here, when the new\_cars dictionary is cleared, the cars dictionary is also cleared.
 
 ## Rules of copy()

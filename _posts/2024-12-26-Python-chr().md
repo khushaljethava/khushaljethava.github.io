@@ -2,16 +2,6 @@
 title: Python chr() Method
 description: In this tutorial, we will learn all about python chr() method.
 date: 2024-12-26 23:24:00 +0800
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 categories: [Built in reference]
 tags: [Built in reference]
 image:
@@ -27,16 +17,6 @@ The syntax of chr() is:
 chr(num)
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## chr() Parameters
 
 chr() method takes a single parameter, which is an integer num.  
@@ -60,16 +40,6 @@ b
 ǣ
 Ӻ
 ```
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 ### Example 2:  Using Negative number with chr() method.
 

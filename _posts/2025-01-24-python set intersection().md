@@ -1,15 +1,5 @@
 ---
 title: Python Set intersection() Method 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 description: In this tutorial, we will understand about the python set intersection() method and its uses.
 date: 2025-01-24 22:02:00 +0800
 categories: [Python Set Reference]
@@ -33,16 +23,6 @@ set1 & set2
 ## Python set intersection() Parameters
 
 The intersection() method takes one parameter:
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 * **set2:** Another set, or any iterable whose common elements will be found.
 
@@ -69,14 +49,4 @@ result = set1.intersection(set2, set3)
 print(result)  # Output: {3, 4}
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The intersection() method is useful when you need to find common elements between sets.

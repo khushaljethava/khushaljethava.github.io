@@ -181,16 +181,6 @@ False
 
 Python Assignment Operators are used to assign values to variables:
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 | Operator | Example | Same AS |
 | :---- | :---- | :---- |
 | \= | X \= 5 | X \= 5 |
@@ -249,16 +239,6 @@ For Example, 2 is 10 in binary form, and 111 is for 7\.
 | | | Bitwise OR Operator: Return True when one of the statement is true | X \< 5 | X \< 5 |
 | \~ | Bitwise NOT Operator: Return False if the result is not true | \~X |
 | ^ | Bitwise XOR operators: work with binary values and return one if one of the bits is 0 and the other bit is one, and if both the bits are 0 or 1, then it returns 0\. | X ^ Y |
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 | \<\< | Bitwise  Left Shift: Shift left by pushing zeros in from the right and let the leftmost bits fall off. | X \<\< Y |
 | \>\> | Bitwise Right Shift: Shift right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off | X \>\> Y |
 
@@ -398,15 +378,5 @@ False
 
 * Always remember single \= and double \== are entirely different. Single \= is used to assign value, and double \== is used to find if two values are equal.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4181667199679058"
      crossorigin="anonymous"></script>

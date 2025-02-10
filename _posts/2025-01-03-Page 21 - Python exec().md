@@ -1,14 +1,4 @@
 ---
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 title: Python exec() Method
 description: In this tutorial we will learn about python exec() method and its uses with examples.
 date: 2025-01-03 22:15:55 +0800
@@ -16,16 +6,6 @@ categories: [Built in reference]
 tags: [Built in reference]
 image:
  path: /commons/Python exec() Method.png
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
  alt: Python exec() Method
 ---
 
@@ -37,16 +17,6 @@ Python exec() syntax :
 exec(object, globals, locals)
 
 ```
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 ## exec() Parameters
 

@@ -1,14 +1,4 @@
 ---
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 title: Python Break and Continue 
 description: This tutorial will learn about python break and continue statements and use them in loops and conditional statements.
 date: 2024-12-10 10:27:00 +0800
@@ -55,16 +45,6 @@ The output of the break statement program.
 6
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ### Python break statement in if else conditional statements 
 
 We can also use the python break function in if else, conditional statement, which will break the conditions’ flow. 
@@ -173,16 +153,6 @@ Here are some examples of break continue and pass statements on pythonscholar.co
     "@type": "Question",
     "name": "Why do we need break and continue in Python?",
     "acceptedAnswer": {
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
       "@type": "Answer",
       "text": "Break and continue statements are very important parts of python programming language and these are used with conditional statements, for example, it will break the execution when a certain condition gets fulfilled or it will skip the blow execution when a certain condition is not fulfilled."
     }

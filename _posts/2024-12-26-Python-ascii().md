@@ -1,14 +1,4 @@
 ---
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 title: Python ascii() Method
 description: In this tutorial we will learn about the python ascii() method and its uses.
 date: 2024-12-26 21:11:00 +0800
@@ -45,16 +35,6 @@ my_list = ['Pythön','¥',2,'ASCII']
 print(ascii(my_list))
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Output:
 
 ```python
@@ -81,16 +61,6 @@ As you can see, all the non-ascii values are replaced by escape characters.
 
 ## Rules of ascii() method
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * It will return a readable string representation of an object.  
 * It will not return anything when we use an integer as an object.
 

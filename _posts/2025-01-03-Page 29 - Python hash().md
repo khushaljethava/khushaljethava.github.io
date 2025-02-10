@@ -55,16 +55,6 @@ Hash for Python is: 1403919086943600213
 
 We can only use the hash() method to return hashed values only for immutable objects. We cannot use a mutable object like a list and dictionary, but we can use a tuple as an immutable object in python.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ### Example 2: How to use a hash() method with python tuple?
 
 ```python
@@ -111,16 +101,6 @@ We can see that it has raised an error “unhashable type” because we cannot h
 
 ## Rules of hash() method
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * The hash() method will only return the hash value of an object if it has one.  
 * The hash() method will only work on immutable objects(integer, string float, tuple)
 
@@ -148,16 +128,6 @@ The hash() method will encode the given object and return the hashed format of t
 
 **How to use hash in python?**
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 It is very easy to use the python hash() method, we just need to call the hash() method with an object as the parameter.
 
 **what is hash function in python?**

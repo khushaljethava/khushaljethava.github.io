@@ -1,13 +1,3 @@
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ---
 title: Python map() Method
 description: In this tutorial, we will learn about the python map() method and its uses with examples.
@@ -24,16 +14,6 @@ image:
 The map() method will return a map object of each item in an iterable. For example, (list, tuple, etc.)
 
 These items are sent to the map method as a parameter.
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 The syntax of map() method is:
 
@@ -72,16 +52,6 @@ The output will be as follows.
 Since map() expects a method to be passed in, lambda methods are commonly used while working with map() methods.
 
 A lambda method is a short method without a name. Visit this page to learn more about Python lambda methods.
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 ### Example 2: How to use the lambda method with map()?
 

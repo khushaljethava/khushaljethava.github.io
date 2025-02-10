@@ -1,28 +1,8 @@
 ---
 title: Python issubclass() Method
 description: In this tutorial, we will learn about the python issubclass() method and its use with examples.
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 date: 2025-01-03 22:42:23 +0800
 categories: [Built in reference]
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 tags: [Built in reference]
 image:
  path: /commons/Python issubclass() Method.png
@@ -43,16 +23,6 @@ issubclass(object, class)
 ## Python issubclass() Method Parameters
 
 issubclass() method takes two parameters as arguments:
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 * **object** \- Name of the object to be checked  
 * **class** \- Type of the class.

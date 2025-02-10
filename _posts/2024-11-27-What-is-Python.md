@@ -45,16 +45,6 @@ Guido Van Rossum is a big fan of ‘Monty Python’s Flying Circus,’ a famous 
 * Software Development  
 * Web Application  
 * Artificial Intelligence   
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * Scientific and Mathematical   
 * Robotics  
 * Embedded / Internet of Things Applications  
@@ -82,16 +72,6 @@ You can do things like building web applications, doing data analytics, making r
 ## Why is Python popular?
 
 There is no doubt that python is very popular among developers and tech giants.  
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 As you can see in the graph below, python’s popularity has grown very fast in the last five years.  
 ![Shows the growth of the python programming language.][image3]  
 Now let's discuss why developers love python and why it is so popular.
@@ -166,16 +146,6 @@ Python is straightforward to implement and easy to read compared to other progra
 |          | print("Hello, World!")                                                                             |
 |          |                                                                                                |
 | C++      |                                                                                             |
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 |          | #include <iostream>                                                                                |
 |          | using namespace std;                                                                               |
 |          |                                                                                                    |

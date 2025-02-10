@@ -6,16 +6,6 @@ categories: [Python List reference]
 tags: [Python List reference]
 image:
  path: /commons/Python List extend().png
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
  alt: Python List extend()
 ---
 
@@ -35,16 +25,6 @@ We can only take any iterable as argument in extend() method.
 
 Let see an example of python list’s extend() method.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 **Example 1: How to use extend() method in python list?**
 
 ```python
@@ -106,16 +86,6 @@ List after adding tuple: [1, 2, 3, 4, 5, 'six', 'seven', 'eight']
 Final list after adding set will be: [1, 2, 3, 4, 5, 'six', 'seven', 'eight', 9, 10, 11]
 
 ```
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 ## Rules of python list extend()
 

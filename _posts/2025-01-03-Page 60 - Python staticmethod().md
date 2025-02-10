@@ -6,16 +6,6 @@ categories: [Built in reference]
 tags: [Built in reference]
 image:
  path: /commons/Python staticmethod().png
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
  alt: Python staticmethod()
 ---
 
@@ -25,16 +15,6 @@ The syntax of staticmethod() is:
 staticmethod(function)
 
 ```
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 ## staticmethod() Parameters
 
@@ -57,16 +37,6 @@ Mathematics.addNumbers = staticmethod(Mathematics.addNumbers)
 
 print('The sum is:', Mathematics.addNumbers(5, 10))
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 
 Output:

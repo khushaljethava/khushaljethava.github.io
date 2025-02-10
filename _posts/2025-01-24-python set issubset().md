@@ -2,16 +2,6 @@
 title: Python Set issubset() Method 
 description: In this tutorial, we will understand about the python set issubset() method and its uses.
 date: 2025-01-24 22:02:00 +0800
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 categories: [Python Set Reference]
 tags: [Python Set Reference]
 image:
@@ -30,16 +20,6 @@ set.issubset(set2)
 set1 <= set2
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Python set issubset() Parameters
 
 The issubset() method takes one parameter:
@@ -67,15 +47,5 @@ set2 = {1, 2, 3}
 result = set1.issubset(set2)
 print(result)  # Output: True
 ```
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 The issubset() method is useful for checking if one set is contained within another.

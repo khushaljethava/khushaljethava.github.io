@@ -1,13 +1,3 @@
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ---
 title: Python globals() Method
 description: In this tutorial we will learn about python globals() method and its uses with examples.
@@ -15,16 +5,6 @@ date: 2025-01-03 22:15:55 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
  path: /commons/Python globals() Method.png
  alt: Python globals() Method
 ---
@@ -34,16 +14,6 @@ image:
 The python globals() method returns the dictionary of the current global symbol table.
 
 ## What is the symbol table in python?
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 A symbol table is a data structure that contains all the necessary information regarding the program that includes variable names, functions, methods, classes, etc.
 

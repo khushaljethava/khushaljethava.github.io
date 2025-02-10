@@ -23,29 +23,9 @@ bytearray([source, encoding, errors)
 
 bytearray() takes three optional parameters:
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * **source (Optional) \-** A source to Initialize the array of bytes.  
 * **encoding (Optional) \-** Encoding of the string when the source is a string.  
 * **errors (Optional) \-** if the source is a string, it will take a specific action when encoding fails.
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 Let's see some examples of the bytearray() method in python.
 
@@ -96,16 +76,6 @@ Output:
 ```python
 bytearray(b'\x01\x02\x03\x04\x05')
 ```
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 ## Rules of bytearray()
 

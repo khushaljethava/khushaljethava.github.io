@@ -36,16 +36,6 @@ Both getattr() and “object.name” will do the same thing.
 
 Let's check an example of the getattr() method.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ### Example 1: How to use the getattr() method on the python class?
 
 ```python
@@ -95,16 +85,6 @@ AttributeError: 'Dog' object has no attribute 'bread'
 ```
 
 As you can see we are accessing attributes that are not present in the object, and it throws an error as “object has no attribute” if in the above program we use default parameter, it will not raise any error.
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
  We can do the same thing by calling the class with the attribute name.
 
@@ -132,16 +112,6 @@ The color is: White
 ```
 
 ## Rules of getattr() method
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 * It will only return the value of the attribute if it is found.  
 * If the attribute is not present and the default value is not given AttributeError exception will occur.  

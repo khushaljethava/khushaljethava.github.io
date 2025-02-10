@@ -1,14 +1,4 @@
 ---
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 title: Python Function
 description: In this tutorial, we will learn about python functions and how to create custom functions in python.
 date: 2024-12-19 12:03:00 +0800
@@ -30,16 +20,6 @@ Also, functions make the program more readable, organized, and manageable. A fun
 ## How to define a function in python?
 
 A python function can be created using the python def keyword followed by the function name and closed by brackets with a colon: and a set of statements inside the function, which we only are executed when we call the function.
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 Syntax of a user-defined function.
 
@@ -77,16 +57,6 @@ The output will be as follow.
 ```python
 Hello Python
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 
 This way, we can create a function in python.

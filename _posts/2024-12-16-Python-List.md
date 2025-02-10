@@ -4,16 +4,6 @@ description: In this tutorial, we will learn about python list and how to use th
 date: 2024-12-16 12:56:00 +0800
 categories: [Python]
 tags: [python]
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 image:
   path: /commons/Python List.png
   alt: Python List
@@ -68,16 +58,6 @@ mylist = [1,'two', 3.5, 'four']
 print(type(mylist))
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Output:
 
 ```python
@@ -224,16 +204,6 @@ We can slice certain elements from a list.
 ### How to slice a list in python?
 
 We have learned about accessing an element in the previous tutorial now, in the same way using square brackets \[ \] we can slice a list by adding colon: between two indexes.
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 Let see how we can slice a list.
 

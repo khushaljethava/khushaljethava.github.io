@@ -102,16 +102,6 @@ Changing font size is an important aspect of creating readable and aesthetically
 
 ## Styling Seaborn: Adjusting Font Size in Data Visualizations
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Seaborn is a popular data visualization library that builds on top of Matplotlib and provides several high-level functions for creating beautiful and informative statistical graphics in Python. One important aspect of creating visualizations is the ability to adjust font size to improve readability and visual appeal. In this section, we will explore how to adjust font size in Seaborn using various techniques.
 
 ### How to change font size in python Seaborn
@@ -328,16 +318,6 @@ By following these best practices, you can ensure that your Python code and data
 **Question**: Can I change the font size of text printed in the console?
 **Answer**: Yes, you can change the font size of text printed in the console by adjusting the font size settings in your terminal emulator.
 **Question**: How do I change the font size in Matplotlib plots?
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 **Answer**: You can change the font size of text in Matplotlib plots by setting the font size parameter in the plot function, or by using the rcParams dictionary to set the font size globally.
 **Question**: How can I change the font size of text in Seaborn data visualizations?
 **Answer**: You can change the font size of text in Seaborn data visualizations by using the set() function to set the font scale, or by setting the font size parameter in individual plot functions.
@@ -353,16 +333,6 @@ By following these best practices, you can ensure that your Python code and data
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "mainEntity": [{
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
             "@type": "Question",
             "name": "Can I change the font size of text printed in the console?",
             "acceptedAnswer": {

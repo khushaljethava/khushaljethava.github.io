@@ -1,13 +1,3 @@
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ---
 title: Python format() Method
 description: In this tutorial , we will learn about python format() method and its uses.
@@ -21,16 +11,6 @@ image:
 
 ## What is python format() method?
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The format() is a built-in pythonmethod that returns a formatted representation of the specified value.
 
 The syntax of format() is:
@@ -101,16 +81,6 @@ format() method also supports different types for formatting specifiers that hel
 | :x | Hex format, lower case |
 | :X | Hex format, upper case |
 | :n | Number format |
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 | :% | Percentage format |
 
 ### Example 2: Using format specifiers with format() method.

@@ -1,14 +1,4 @@
 ---
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 title: Beginner's Guide to LangChain in Python
 description: In this blog, we will learn about the LangChain framework, which is used to develop LLM applications that include ChatGPT with memory and long-term memory. These features will be explored in detail in future tutorials.
 
@@ -76,16 +66,6 @@ LangChain provides memory classes to store and recall past interactions, enablin
 ### Agents
 
 Agents act as middleware to direct the chain and choose appropriate tools or sequences of actions for the LLM application.
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 Creating Your First LLM Application in Python
 ---------------------------------------------
@@ -181,16 +161,6 @@ FAQs
       "@type": "Answer",
       "text": "The reason behind the word langchain is that langchain uses the chain method to develop the LLM model, which is called the large language model; that's why it's called langchain."
     }
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
   },{
     "@type": "Question",
     "name": "What version of Python for LangChain?",

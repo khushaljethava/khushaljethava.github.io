@@ -9,16 +9,6 @@ image:
  alt: Python Dictionary fromkeys()
 ---
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The syntax of fromkeys() is:
 
 ```python
@@ -29,16 +19,6 @@ dictionary.fromkeys(key, value)
 ## fromkeys() Parameters 
 
 The fromkeys() method takes two parameters as arguments.
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 * key \- an iterable or collection of items which specify the keys of the new dictionary.   
 * value (Optional) \- The Values which are going to be assigned to all the elements of the dictionary. Default is None.
@@ -58,16 +38,6 @@ Output:
 {1: None, 2: None, 3: None, 4: None}
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ### Example 2: How to use fromkeys() method with values in python dictionary?
 
 ```python

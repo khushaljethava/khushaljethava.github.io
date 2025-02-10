@@ -5,16 +5,6 @@ date: 2025-01-24 22:02:00 +0800
 categories: [Python Set Reference]
 tags: [Python Set Reference]
 image:
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
   path: /commons/Python Set symmetric_difference_update() Method.png
   alt: Python Set symmetric_difference_update() Method 
 
@@ -29,29 +19,9 @@ set.symmetric_difference_update(set2)
 # or
 set1 ^= set2
 ```
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 ## Python set symmetric_difference_update() Parameters
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The symmetric_difference_update() method takes one parameter:
 
 * **set2:** Another set or iterable to update the symmetric difference with.

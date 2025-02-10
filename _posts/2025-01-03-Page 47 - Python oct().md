@@ -1,16 +1,6 @@
 ---
 title: Python oct() Method
 description: The python oct() is a built-in function of python that returns the octal string of a given integer. Octal strings start with 0o prefix when converted.
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 date: 2025-01-03 22:42:23 +0800
 categories: [Built in reference]
 tags: [Built in reference]
@@ -34,16 +24,6 @@ The oct() function takes only one parameter argument.
 
 
   
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Let check the example of oct() in python.
 
 ### Example 1: How to use oct() function in python?
@@ -85,16 +65,6 @@ person = Person()
 print('The oct is:', oct(person))
 
 ```
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 Output:
 

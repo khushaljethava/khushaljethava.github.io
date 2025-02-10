@@ -2,27 +2,7 @@
 title: Python Set remove() Method 
 description: In this tutorial, we will understand about the python set remove() method and its uses.
 date: 2025-01-24 22:02:00 +0800
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 categories: [Python Set Reference]
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 tags: [Python Set Reference]
 image:
   path: /commons/Python Set remove() Method.png
@@ -63,16 +43,6 @@ try:
     fruits.remove('orange')
 except KeyError:
     print("Element not found")  # Output: Element not found
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 
 The remove() method is useful when you need to ensure an element exists before removing it.

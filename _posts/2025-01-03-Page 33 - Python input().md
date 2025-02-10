@@ -2,16 +2,6 @@
 title: Python input() Method
 description: In this tutorial, we will learn about python input() method and its uses with  examples.
 date: 2025-01-03 22:42:23 +0800
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 categories: [Built in reference]
 tags: [Built in reference]
 image:
@@ -35,16 +25,6 @@ The input() method takes only one optional argument:
 * **prompt (Optional)** \- a setting that represents a message before the input. (By default, it will take input as a string.
 
 Let’s see the same example of the input() method in python.
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 ### Example 1: How to use the input() method in python?
 
@@ -80,16 +60,6 @@ The output will be as follow:
 ```python
 Enter anything: Python
 The inputted value is: Python
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 
 In the above program, we can see that when we run the program is returning a prompt, and in the same line, we can input the value, and after that, it is storing it in the user\_Input variable.
