@@ -7,6 +7,16 @@ tags: [Python Dictionary Reference]
 image:
  path: /commons/Python Dictionary setdefault().png
  alt: Python Dictionary setdefault()
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ---
 
 The syntax of setdefault() is:
@@ -39,6 +49,16 @@ Output:
 ```python
 Age of Dog is: 4
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 
 ### Example 2: How setdefault() works when a key is not in the dictionary?
@@ -71,5 +91,15 @@ age =  4
 
 ## Rules of setdefault() 
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * Only returns a result if the given key is present in the dictionary.  
 * Will return None when the key is not present in the dictionary and default value is not specified.

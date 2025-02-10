@@ -12,6 +12,16 @@ image:
 
 The bytearray() method will return a form of bytearray object, an array of given objects, or create an empty bytearray object of the specified size.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 bytearray() method returns a bytearray object which is  a sequence of mutable(which can be modified) integers in the range  0 \<= x \<256.
 
 The syntax of bytearray() method is:
@@ -19,6 +29,16 @@ The syntax of bytearray() method is:
 ```python
 bytearray([source, encoding, errors)
 ```
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Python bytearray() Parameters
 
 bytearray() takes three optional parameters:
@@ -78,6 +98,16 @@ bytearray(b'\x01\x02\x03\x04\x05')
 ```
 
 ## Rules of bytearray()
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 * It will return an array of bytes of the given size and initialization value.  
 * If it is an integer, it will create an empty bytearray object of the specified size.

@@ -14,11 +14,31 @@ The syntax of copy() is:
 ```python
 dictionary.copy()
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 
 ## copy() Parameters 
 
 The copy() method does not take any parameters as arguments.
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 ### Example 1: How to use copy() method in python dictionary?
 
@@ -39,6 +59,16 @@ Output:
 First Dictionary is: {1: 'TATA', 2: 'BMW', 3: 'TOYOTA'}
 Second Dictionary is: {1: 'TATA', 2: 'BMW', 3: 'TOYOTA'}
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 
 Note: The copy() method is entirely different from \= operator, as \= operator is used for creating a new reference to the original dictionary  and copy() method is used to create a new dictionary from the reference from the original dictionary that is filled with the same items as the original dictionary.

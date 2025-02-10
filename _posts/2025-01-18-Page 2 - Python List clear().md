@@ -7,6 +7,16 @@ tags: [Python List reference]
 image:
  path: /commons/Python List clear().png
  alt: Python List clear()
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ---
 
 The syntax of clear() method is:
@@ -18,6 +28,16 @@ list.clear()
 
 ## clear() parameters
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The clear method does not take any parameters as arguments.
 
 Let see an example of the python list clear() method.
@@ -46,6 +66,16 @@ List after clear method: []
 ```
 
 ## Rules of clear() 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 * The clear() method does not return any value.  
 * The clear() method only works with python 3.3 \+ versions, in python 2 and python 3.2 del method is used.

@@ -48,11 +48,31 @@ The open() takes multiple parameters as argument:
 
 More about the mode parameter is listed below.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 | Mode | Description |
 | :---- | :---- |
 | ‘r’ | Read \- Opening a file for reading. It will be the Default mode.  |
 | ‘w’ | Write \- Open a file to write, or it will create the new files if it does not exist. |
 | ‘x’ | Create \- Creating a new file, if file exists, it will return an error |
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 | ‘a’ | Append \- Opening a file to append the new content into it. If files do not exist, they will create new ones. |
 | ‘t’ | Text \- Open file in text mode. Default. |
 | ‘b’ | Binary \- Open file in binary mode. |
@@ -89,6 +109,16 @@ f = open("path_to_file", mode = 'a')
 
 ## Rules of open()
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * The open() function will be read as the default mode and the text file as the default file type.  
 * If the file is not found, it raises the FileNotFoundError exception.
 

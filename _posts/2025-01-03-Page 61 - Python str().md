@@ -68,8 +68,38 @@ Here, the character 'ö' cannot be decoded by ASCII. Hence, it should give an er
 
 There are total six types of errors:
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * strict \- It will raise a UnicodeDecodeError exception on failure. It will be the default error type.  
 * ignore \- it will ignore the unencodable Unicode from the result.  
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * replace \- replaces the unencodable Unicode to a question mark.  
 * xmlcharrefreplace \- It inserts XML character reference instead of the unencodable Unicode.  
 * backslashreplace \- inserts a \\uNNNN espace sequence instead of unencodable Unicode.  

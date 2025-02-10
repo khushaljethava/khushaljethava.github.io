@@ -31,6 +31,16 @@ Based on the syntax, we can see the range is a keyword to implement the range fu
 
 ## Python range() parameters
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * **start \-** is used to give an integer to start from which sequence of integer to be returned.  
 * **stop** \- is used to given an integer to stop the sequence with the last number from the number given in stop like stop \- 1\.  
 * **step** \- integer value which determines the increment between each integer in the sequence.
@@ -56,6 +66,16 @@ The output of the program.
 2
 3
 4
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 As we can see, based on the range function, it is printing the sequence, and as the python index starts from 0, it is only printing it till 4\.
 
@@ -88,6 +108,16 @@ The output of the following program.
 3
 4
 ```
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 We can notice we have given the start parameter 1 in the range() function, so we are getting 1 as an index.
 

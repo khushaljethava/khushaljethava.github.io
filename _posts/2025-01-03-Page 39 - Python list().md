@@ -15,6 +15,16 @@ The python list() method is used to create a list along with typecasting of the 
 
 A list is a python built-in data structure that is a collection of ordered and mutable objects. You can learn more about python lists from here(Link).
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The syntax of python list() is:
 
 ```python
@@ -95,6 +105,16 @@ print(type(lst))
 
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Output:
 
 ```python
@@ -106,5 +126,15 @@ Output:
 ## Rules of list() method
 
 * If the list() method is passed without a parameter it will return an empty list.  
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * Dictionary object will only return keys when passed in the list() method.  
 * Only sequences or collections of objects can be used with the list() method.

@@ -52,6 +52,16 @@ We are learning Python from Pythonscholar.com
 We are learning Python from Pythonscholar.com
 We are learning Python from Pythonscholar.com
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 
 ## Formatting Specifiers
@@ -65,6 +75,16 @@ format() method also supports different types for formatting specifiers that hel
 | := | Places the sign to the left most position |
 | :+ | Use a plus sign to indicate if the result is positive or negative |
 | :- | Use a minus sign for negative values only |
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 | : | Use a space to insert an extra space before positive numbers (and a minus sign before negative numbers) |
 | :, | Use a comma as a thousand separator |
 | :\_ | Use a underscore as a thousand separator |
@@ -74,6 +94,16 @@ format() method also supports different types for formatting specifiers that hel
 | :e | Scientific format, with a lowercase e |
 | :E | Scientific format, with an uppercase E |
 | :f | Fix point number format |
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 | :F | Fix point number format, in uppercase format (show inf and nan as INF and NAN) |
 | :g | General format |
 | :G | General format (using a upper case E for scientific notations) |

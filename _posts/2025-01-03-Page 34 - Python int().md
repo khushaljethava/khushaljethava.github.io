@@ -21,6 +21,16 @@ int(value, base)
 int() method takes two parameters as an argument:
 
 * **value** \- A number or string object which wants to convert into an integer number. By default, it takes zero as an argument.  
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * **base** \- A base number that represents the number format. The default value is 10\.
 
 
@@ -88,11 +98,31 @@ Traceback (most recent call last):
   File "", line 1, in <module>
     print(int("Python"))
 ValueError: invalid literal for int() with base 10: 'Python'
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 ```
 
 ## Rules of int() method
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * an integer object from the given number or string treats the default base as 10  
 * (No parameters) returns 0  
 * (If base given) treats the string in the given base (0, 2, 8, 10, 16\)

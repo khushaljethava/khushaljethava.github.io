@@ -13,6 +13,16 @@ image:
 
 The python bytes() method converts a given object and returns an immutable byte representation of a given object and data.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The syntax of bytes() method is
 
 ```python
@@ -25,6 +35,16 @@ If you like to use the mutable version you can try the bytearray() method.
 
 bytes() takes three optional parameters:
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * **given\_object:** The object that has to be converted.  
 * **Encoding:** String representation of the encoding method in case the given object is a string.  
 * **error:** Method to handle error in case conversion fails.
@@ -63,6 +83,16 @@ my_string = "Python Scholar"
 given_object = bytes(my_string, 'utf-8')
 
 print(given_object)
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 
 The output will be as follow.

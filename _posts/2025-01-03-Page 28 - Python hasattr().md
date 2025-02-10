@@ -13,6 +13,16 @@ image:
 
 The Python hasattr() method returns true if the given attribute is present in the objects, and if it doesn't present, it will return false.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The syntax of hasatter() method is
 
 ```python
@@ -40,6 +50,16 @@ dog = Dog()
 
 print("Does a dog have age?", hasattr(dog,'age'))
 print("Does a dog have bread?", hasattr(dog, 'bread'))
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 ```
 
@@ -74,6 +94,16 @@ str has isupper method:  True
 str has isstring method:  False
 
 ```
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 Here the hasattr() method is checking whether the given string is present in the object.
 

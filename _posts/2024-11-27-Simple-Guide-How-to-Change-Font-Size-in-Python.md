@@ -149,6 +149,16 @@ ax.set_ylabel("Tip Amount", fontsize=14)
 
 # Show plot
 plt.show()
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 
 
@@ -308,6 +318,16 @@ Changing the font size is an important aspect of customizing the appearance of y
 2. When working with data visualizations, make sure that the font size is large enough to be legible, but not so large that it detracts from the data itself.  
 3. When working with text-based interfaces like the Python interpreter and IDEs, adjust the font size to a level that is comfortable for you to read and work with.  
 4. Take advantage of the customization options provided by libraries like Matplotlib, Seaborn, and Tkinter to adjust font size in data visualizations and GUIs.  
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 5. Consider the readability of your code when adjusting font size. Avoid using font sizes that are too small or too large, as this can make your code harder to read and understand.  
 
 
@@ -323,6 +343,16 @@ By following these best practices, you can ensure that your Python code and data
 **Answer**: You can change the font size of text in Seaborn data visualizations by using the set() function to set the font scale, or by setting the font size parameter in individual plot functions.
 **Question**: How do I change the font size in Tkinter GUIs?
 **Answer**wer: You can change the font size in Tkinter GUIs by setting the font parameter for individual widgets, or by using the configure() method to set the font globally for all widgets.
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 **Question**: Can I change the font size in Python IDEs like PyCharm and Visual Studio Code?
 **Answer**: Yes, you can change the font size in Python IDEs like PyCharm and Visual Studio Code by adjusting the font size settings in the preferences or settings menu.
 **Question**: Is it important to consider font size when writing Python code?

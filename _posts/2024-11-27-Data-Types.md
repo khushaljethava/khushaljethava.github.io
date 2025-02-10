@@ -38,6 +38,16 @@ Output
 This is a String Data Type.
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Let take another example by using the type() function along with the string data type.
 
 Example:
@@ -116,6 +126,16 @@ Output:
 
 As the name suggests, a complex number with a real and an imaginary part like  1+A3 and 7+34i. Unlike other programming languages such as Java or C++, Python can identify these complex numbers with values. Suppose we take an example as  2 \+ 4j where 2 is a real part and j is the imaginary part. 
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Here are some examples.
 
 ```python
@@ -337,6 +357,16 @@ X = True
 
 Y = False
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 print(X)
 print(Y)
 ```

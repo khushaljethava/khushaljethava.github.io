@@ -21,11 +21,31 @@ Syntax 2
 ```python
 range(start, stop, step)
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 
 Based on the syntax, we can see the range is a keyword to implement the range function, and then in between two brackets () we have parameters like start, stop and steps let learn them in detail.
 
 ## Python range() parameters
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 * **start \-** is used to give an integer to start from which sequence of integer to be returned.  
 * **stop** \- is used to given an integer to stop the sequence with the last number from the number given in stop like stop \- 1\.  
@@ -42,6 +62,16 @@ x = range(5)	# Adding returned value of range function using stop parameters its
 
 for i in x: 	# implementing for loop to print the sequence of the range function.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
     print(i)	# printing the i variable from the loop
 
 ```

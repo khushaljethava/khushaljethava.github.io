@@ -22,6 +22,16 @@ tuple.index(value[, start[, end]])
 The index() method takes up to three parameters:
 
 * value - the element to search for in the tuple
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * start (Optional) - search start position. Default is 0
 * end (Optional) - search end position. Default is the end of tuple
 
@@ -43,6 +53,16 @@ print(index)
 index = numbers.index(2, 2, 5)
 print(index)
 ```
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 Output:
 ```python
@@ -54,6 +74,16 @@ Output:
 ## Rules of index()
 
 * Raises ValueError if the value is not found
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * Returns the index of first occurrence only
 * Search range can be specified using start and end parameters
 * The end index is not included in the search

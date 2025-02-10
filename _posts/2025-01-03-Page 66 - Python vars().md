@@ -16,6 +16,16 @@ vars(object)
 
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## vars() parameters
 
 vars() function takes only one parameter as argument:
@@ -41,11 +51,31 @@ Output:
 {'a': 4, 'b': 8}
 
 ```
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 The \_\_dict\_\_ attribute is a dictionary containing the specific object’s changeable attributes.
 
 ## Rules of vars()
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * If called without any parameters, it will return a dictionary containing the local symbol table.  
 * vars() will return the \_\_dict\_\_ attributes of the given object.  
 * If the object passed to vars() doesn't have the \_\_dict\_\_ attribute, it raises a TypeError exception.

@@ -13,6 +13,16 @@ image:
 
 The hex()  is the built-in python method used to convert an integer number into their corresponding lowercase hexadecimal string prefixed with “0x”.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The syntax of hex() method is:
 
 ```python
@@ -59,7 +69,27 @@ Return type from hex() is <class 'str'>
 ```
 
 We are returning a hexadecimal value on an integer, a zero, and a negative integer in the above program. Based on the integer value, you can see the hexadecimal string as shown in the output. Also, you can see that we are using the type method to check the data type of the hex() method output, which is a string.
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Rules of hex() method
 
 Hex () method converts an integer to the corresponding hexadecimal number in string form and returns it.

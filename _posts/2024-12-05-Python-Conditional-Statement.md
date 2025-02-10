@@ -106,6 +106,16 @@ In this example, we have num \> 0 as the test expression. So when the if conditi
 
 When the variable num is equal to 3, the test expression is True, and statements inside the body are executed.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 If the variable num is equal to \-1, the test expression is false, and statements inside the body are skipped, and the print() statement will fall outside of the if block. Hence, it is executed regardless of test expression.
 
 ## Python else if Statement
@@ -154,6 +164,16 @@ if <condition>:
 	<statement of if>
 elif: <condition>:
 	<condition of elif>
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 ### Example of elif statement:
 
@@ -260,6 +280,16 @@ As we can see here, we are using **and** keyword and/**or** keyword, a logical o
 ## Python Nested if statements
 
 In nested if statements, we can implement if statements within if statements.
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 Syntax
 

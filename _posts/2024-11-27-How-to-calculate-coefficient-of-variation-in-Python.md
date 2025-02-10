@@ -28,6 +28,16 @@ To calculate the coefficient of variation, follow these steps:
 
 **Step 2:** Calculate the Mean (µ)
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Find the arithmetic mean (average) of the dataset by summing all the values and dividing by the total number of observations:
 
 µ \= (Σx / n)
@@ -56,6 +66,16 @@ Now that you have the mean (µ) and standard deviation (σ), you can calculate t
 
 CV= (µ / σ) × 100%
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Where:
 
 * CV \= Coefficient of Variation  
@@ -102,6 +122,16 @@ Now that you have the mean and standard deviation, calculate the Coefficient of 
 
 Finally, we will display the results of the calculated Coefficient of Variation.
 ```python 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 print(f"The Coefficient of Variation is: {cv:.2f}%")
 ```
 

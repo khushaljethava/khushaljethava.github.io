@@ -27,6 +27,16 @@ id() method only takes only one parameter as an argument.
 
 * **object** \- object name whose id to be returned.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Let's check some examples of python id() methods.
 
 ### Example 1: How to use the id() method in python?
@@ -49,6 +59,16 @@ id of single string python is: 140008382164528
 
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 An id will automatically assign to a variable whenever it's declared.
 
 ### Example 2: How to use id() method with python variable?
@@ -105,6 +125,16 @@ Output:
 ```python
 The id of Dog class is: 139715062134816
 This if of User_Func function is: 9480720
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 
 ## Rules of id() method 

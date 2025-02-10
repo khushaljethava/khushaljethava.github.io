@@ -33,6 +33,16 @@ A class method is a function that is bound to a class rather than its objects, w
 
 The main difference between a staticmethod and a classmethod is:
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * Static method knows nothing about the class and just deals with the parameters.  
     
 * The class method works with the class since its parameters are always the class itself.
@@ -40,6 +50,16 @@ The main difference between a staticmethod and a classmethod is:
 ## classmethod() Parameters
 
 classmethod() method only takes a single parameter:
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 function - function name that needs to be converted into a class method.
 
@@ -75,6 +95,16 @@ cls method accepts the class Dog as a parameter rather than Dog’s object/insta
 Now we pass the method Dog.printColor as an argument to the function classmethod. This will convert the function to a class method to accept the first parameter as a class(i.e., Dog).
 
 In the last line, we call printColor without creating a Dog object as we do for static methods. This prints the class variable color.
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 ## Rules of classmethod()
 

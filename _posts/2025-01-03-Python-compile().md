@@ -22,6 +22,16 @@ compile(source, filename, mode, flags=0, dont_inherit=False, optimize=-1)
 * source \- A simple string, a byte string, or an AST object.  
 * filename \- The name of the file from the code comes from. If the code does not come from a file you can write anything you like.  
 * mode \- Legal values can be eval, or exec, or single.  
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
   * eval \- Accepts only a single expression.  
   * exec \- It can take a code block with a python statement, class, and methods, etc.  
   * single \- if it consists of a single interactive statement.  
@@ -41,6 +51,16 @@ CodeObject = compile(codeWithString,'substring','exec')
 exec(CodeObject)
 print(type(CodeObject))
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 
 Output will be as follow:
@@ -68,6 +88,16 @@ CodeObject = eval(CodeEx)
 print(CodeObject)
 
 CodeEx = compile('X  + 10','','eval')
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 CodeObject = eval(CodeEx)
 print(CodeObject)
 ```

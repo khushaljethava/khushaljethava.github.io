@@ -68,6 +68,16 @@ LangChain provides memory classes to store and recall past interactions, enablin
 Agents act as middleware to direct the chain and choose appropriate tools or sequences of actions for the LLM application.
 
 Creating Your First LLM Application in Python
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ---------------------------------------------
 ```python
 
@@ -110,6 +120,16 @@ print(llm_chain.run("Who was the 5th president of the United States?"))
 
 Where to Go from Here?
 ----------------------
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 Now that you have a foundational understanding of LangChain, explore additional resources:
 
@@ -118,6 +138,16 @@ Now that you have a foundational understanding of LangChain, explore additional 
 *   Community discussions on GitHub and Reddit
 
 FAQs
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ----
 
 **Question:** is LangChain used for?

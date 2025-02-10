@@ -13,8 +13,28 @@ image:
 ---
 
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 First, let's understand what exactly Operators are.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## What are Python Operators?
 
 Python Operators are special symbols used to perform mathematical and logical operations and computations on values or variables.  
@@ -243,6 +263,16 @@ For Example, 2 is 10 in binary form, and 111 is for 7\.
 | \>\> | Bitwise Right Shift: Shift right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off | X \>\> Y |
 
 Bitwise operators will return Boolean if we use Bitwise operator with other operators, and it will return numeric values if we only use a single bitwise operator. Let take an example of each.
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 Example 1:
 

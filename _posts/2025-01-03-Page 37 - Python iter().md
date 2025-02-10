@@ -9,6 +9,16 @@ image:
  alt: Python iter() Method
 ---
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## What is Python iter() Method?
 
 The iter() is a Python built-in method that returns an iterator for the given object.
@@ -53,6 +63,16 @@ Output:
 <class 'list_iterator'>
 BMW
 AUDI
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 FORD
 ```
 We can use the next() method to print the elements of iteration, and the iteration will remember the next count via the internal count variable. Once the iteration is complete, it raises a StopIteration exception, and the iteration count cannot be reassigned to 0\.
@@ -106,6 +126,16 @@ print(next(print_num_iter))  # 3
 
 # raises StopIteration
 print(next(print_num_iter))
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 ```
 

@@ -19,6 +19,16 @@ next(iterator, default)
 ## next() Parameters
 
 * **iterator** \- the name of the iterator to retrieve the next item.  
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * **default** (optional) \- The default value that will return when the iterator has no next item.
 
 ## How the Python next() Function Works?
@@ -110,6 +120,16 @@ while True:
     except StopIteration:
         break
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 
 In this example, we create an iterator object my\_iter from the list my\_list. We then use a while loop to iterate over my\_iter and print each element in the list. We catch the StopIteration exception using a try and except block, and exit the loop when the exception is raised.
@@ -129,6 +149,16 @@ A: The next() function is used to retrieve the next item from an iterator. It al
 
 ### Q: How does the next() function work in Python?
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 A: The next() function works by calling the \_\_next\_\_() method on an iterator object. An iterator is an object that returns its elements one at a time. When next() is called on an iterator, it returns the next element in the sequence. If there are no more elements, it raises a StopIteration exception.
 
 ### Q: What are some common use cases for the next() function in Python?

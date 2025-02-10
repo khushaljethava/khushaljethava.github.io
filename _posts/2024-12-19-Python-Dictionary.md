@@ -13,6 +13,16 @@ image:
 
 Python Dictionary is a built-in data structure, and it is also used to store sequential data but in an unordered collection of key and value pairs. Dictionary store values within the curly braces { } and separate with a comma (,).
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Syntax of Python Dictionary
 
 ```python
@@ -452,6 +462,16 @@ model
 year
 
 ```
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 The above program will only print the keys because dictionaries in python are different from other sequence data types.
 
@@ -487,6 +507,16 @@ cars = {  "brand": "Ford",  "model": "Mustang",  "year": 1964}
 for car in cars.items():
     print(car)
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 
 The output will be:

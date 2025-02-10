@@ -45,6 +45,16 @@ output :
 Hello World! We are using Python3.
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Python print() Parameters 
 
 * **Object**: will print any object.  
@@ -80,6 +90,16 @@ String1#String2#String3
 As we can see, we are using different symbols in a sep parameter, and it is replacing space with that specific symbol we used in the sep parameter.
 
 ## Python print() function with end parameter.
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 This parameter is used to specify the end of the printing object.
 
@@ -100,6 +120,16 @@ Python3 is Awesome;
 ## Python print() function with file parameter.
 
 In python, we can print the content inside a file.
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 For better understanding, read Python File I/O (link here)
 

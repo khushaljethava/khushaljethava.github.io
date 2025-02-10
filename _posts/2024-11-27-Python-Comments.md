@@ -149,6 +149,16 @@ Output
 ```
 
 Here, we have documented our addition function, and then we are accessing it with the \_\_doc\_\_ attribute.  
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
  We can learn more about python docstring from here. (Link to Python docstring page).
 
 ## Tips:
@@ -189,6 +199,16 @@ In Python, we can't print any comments using any program or comments.
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
   "mainEntity": [{
     "@type": "Question",
     "name": "How to make Comment in python?",
@@ -217,6 +237,16 @@ In Python, we can't print any comments using any program or comments."
     "name": "What are the types of comments in python?",
     "acceptedAnswer": {
       "@type": "Answer",
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
       "text": "There are only two types of python comments.
 1- Single line or inline comments
 2- Multiline comments"

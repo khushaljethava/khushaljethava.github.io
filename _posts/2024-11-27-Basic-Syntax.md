@@ -51,6 +51,16 @@ Now we will do some necessary mathematical calculations in python using the pyth
 ```python 
 >>> 5 - 3
 2
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 
 **Multiplication**
@@ -114,6 +124,16 @@ Here is a list of the Python keywords.  Enter any keyword to get more help.
 
 We can check other commands like a module, topic, symbols, and type in help\> interpreter. 
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 To close the help\> method, we can use the Ctrl \+ C key to exit it, and when we exit the help\> method, we will get the following result.
 
 You are now leaving help and returning to the Python interpreter. If you want to ask for help on a particular object directly from the interpreter, you can type "help(object)".  Executing "help('string')" has the same effect as typing a particular string at the help\> prompt.
@@ -132,6 +152,16 @@ Just like help, many built-in functions can be used in python interpreters, whic
 | `bytearray()`  | `filter()`     | `issubclass()`  | `pow()`         | `super()`        |
 | `bytes()`      | `float()`      | `iter()`        | `print()`       | `tuple()`        |
 | `callable()`   | `format()`     | `len()`         | `property()`    | `type()`         |
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 | `chr()`        | `frozenset()`  | `list()`        | `range()`       | `vars()`         |
 | `classmethod()`| `getattr()`    | `locals()`      | `repr()`        | `zip()`          |
 | `compile()`    | `globals()`    | `map()`         | `reversed()`    | `__import__()`   |
