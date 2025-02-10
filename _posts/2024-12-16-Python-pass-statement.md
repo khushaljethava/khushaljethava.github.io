@@ -16,6 +16,16 @@ Pass in python is used as a placeholder for future statements and code. Python p
 
 The pass statement is useful when you are dealing with very large code when you have to work on multiple conditional statements, loops, or in-class and custom functions.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Syntax
 
 The syntax of the pass statement is:
@@ -64,6 +74,16 @@ Good bye!
 
 As we can see we are printing letters using for loop and we have given the condition that if letter equal to h statement inside the if conditional should be executed and when the conditional get true we are calling pass statement and a print statement and as we can see python is skipping the pass statement and just print the given string inside the if condition.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Pass statement with the while loop
 
 As we know there are two loops in python, so just like for loop we can also use the same with while loop as follows.
@@ -80,6 +100,16 @@ As we can see it not returning any output because we have use pass statement wit
 
 We can use pass statements in custom functions also, you can learn more about functions in upcoming tutorials.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Example:
 
 ```python

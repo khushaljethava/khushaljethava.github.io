@@ -9,6 +9,16 @@ image:
     alt: Python __import__()
 ---
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The syntax of the __import__() function is:
 
 ```python
@@ -24,6 +34,16 @@ The __import__() function takes multiple parameters as argument:
 * fromlist - Objects or submodules to be imported
 * level - specifies whether to use absolute or relative imports
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ### Example 1: How to use __import__() function in python?
 
 ```python
@@ -33,5 +53,15 @@ print(mathematics.fabs(-2.5))
 
 Output:
 ```
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 2.5
 ```

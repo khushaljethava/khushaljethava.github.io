@@ -18,10 +18,30 @@ The syntax of the pop() method is:
 set.pop()
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Python set pop() Parameters
 
 The pop() method doesn't take any parameters. It simply removes and returns a random element from the set.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Here are examples demonstrating the pop() method:
 
 ```python
@@ -45,4 +65,14 @@ except KeyError:
     print("Set is empty")  # Output: Set is empty
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The pop() method is useful when you need to remove elements from a set one by one.

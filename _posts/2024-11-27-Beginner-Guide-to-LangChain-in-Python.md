@@ -111,10 +111,30 @@ print(llm_chain.run("Who was the 5th president of the United States?"))
 Where to Go from Here?
 ----------------------
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Now that you have a foundational understanding of LangChain, explore additional resources:
 
 *   Official documentation
 *   Tutorials on YouTube and the LangChain website
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 *   Community discussions on GitHub and Reddit
 
 FAQs
@@ -138,6 +158,16 @@ FAQs
 
 <script type="application/ld+json">
 {
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [{

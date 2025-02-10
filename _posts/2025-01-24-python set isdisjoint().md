@@ -12,14 +12,44 @@ image:
 
 The Python set isdisjoint() method returns True if two sets have no elements in common, and False otherwise. Two sets are considered disjoint when their intersection is empty.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The syntax of the isdisjoint() method is:
 
 ```python
 set.isdisjoint(set2)
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Python set isdisjoint() Parameters
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The isdisjoint() method takes one parameter:
 
 * **set2:** Another set or iterable to check for common elements.

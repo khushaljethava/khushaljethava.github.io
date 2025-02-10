@@ -67,6 +67,16 @@ print("String1", 'String2', 'String3', sep='0')
 print("String1", 'String2', 'String3', sep='#')
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 When we run the above program, we will get the following output.
 
 ```python
@@ -109,6 +119,16 @@ print('Hello World!', file = my_file)
 my_file.close()
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 This program tries to open the python.txt in writing mode. If this file doesn't exist, the python.txt file is created and opened in writing mode.
 
 Here, we have passed the my\_file file object to the file parameter. The string object 'Pretty cool, huh\!' is printed to the python.txt file (check it in your system).
@@ -116,5 +136,15 @@ Here, we have passed the my\_file file object to the file parameter. The string 
 Finally, the file is closed using the close() method.
 
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4181667199679058"
      crossorigin="anonymous"></script>

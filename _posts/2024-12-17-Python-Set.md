@@ -15,6 +15,16 @@ Python set is one of 4 built-in data types in python used to store multiple item
 
 The set is immutable, so we cannot change an element in the set.so Once a set is created, you cannot change its items, but you can add new items.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ### How to make a set in python? 
 
 Sets are written with curly brackets { }  and elements are separated by comma ( , ) Or we can create a set using built-in function set(). Like Python list and tuple, we cannot add all the data types in a set. We can only add integer, float, tuple, and string in it as an element we cannot add   
@@ -96,6 +106,16 @@ As we can see, the program is printing elements one by one. Every time we run th
 
 ## Membership test in Python Set
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 A membership test is used to find whether the specified element is present in a python set function or not.
 
 We can do a membership test using whether a conditional statement and in keyword to find specific elements present in the set.
@@ -149,6 +169,16 @@ False
 
 We have learned that a set is unchangeable, we cannot change any element’s value, but we can add new elements in the python set using add() method. 
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 How to Add an element to the set?
 
 Here we will use add() method to add a new element to a set. Add() method can only add one element at a time. We cannot add multiple elements together using add() method.  

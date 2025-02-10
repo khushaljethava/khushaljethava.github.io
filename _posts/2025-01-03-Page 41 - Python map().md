@@ -22,11 +22,31 @@ map(function, iterable)
 
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## map() parameters
 
 The map() method takes two parameters as an argument.
 
 * **function** \- each item of the iterable will be passed to this function.  
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * **iterable** \- A sequence or iterable object which is to be mapped.
 
 Let's see some examples of the map() method in python.
@@ -49,6 +69,16 @@ The output will be as follows.
 
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Since map() expects a method to be passed in, lambda methods are commonly used while working with map() methods.
 
 A lambda method is a short method without a name. Visit this page to learn more about Python lambda methods.

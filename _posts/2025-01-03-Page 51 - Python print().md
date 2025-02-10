@@ -20,6 +20,16 @@ print(object(s), sep=separator, end=end, file=file, flush=flush)
 
 The python print() functions take the following parameters as argument:
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * **object**: will print any object.  
 * **sep:** will separate objects in more than one way. (Optional)  
 * **end**: will specify what to print at the end. (Optional)  
@@ -102,6 +112,16 @@ Python3 is Awesome;
 
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Python print() function with file parameter.
 
 In python, we can print the content inside a file.
@@ -115,6 +135,16 @@ my_file.close()
 
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 This program tries to open the python.txt in writing mode. If this file doesn't exist, the python.txt file is created and opened in writing mode.
 
 Here, we have passed the my\_file file object to the file parameter. Then, the string object 'Pretty cool, huh\!' is printed to the python.txt file (check it in your system).

@@ -9,6 +9,16 @@ image:
  alt: Python List extend()
 ---
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 In this tutorial, you will learn about the python list’s extend() method using some examples.
 
 In exetend() method  you can add elements from other iterables to the end of the current list.
@@ -21,6 +31,16 @@ list.extend(iterable)
 ```
 ## Python List extend()
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 We can only take any iterable as argument in extend() method.
 
 Let see an example of python list’s extend() method.
@@ -42,6 +62,16 @@ print(first_list)
 
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The output will be as follow.
 
 ```python

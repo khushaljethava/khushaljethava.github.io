@@ -90,6 +90,16 @@ Python is a general-purpose interpreted,
 
         
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 As we can see, we have printed multiline the same as inside the code with the same format.
 
 ## Accessing the string as Arrays
@@ -104,6 +114,16 @@ We can work on arrays using one of the most popular python libraries called Nump
 
 How to access characters in Python String?
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The characters or an element can be accessed by square brackets \[ \] in python because a single character is a string with a length of 1\.
 
 Syntax
@@ -173,6 +193,16 @@ print(String[-10:-1]) # Index start from negative 2 to negative 7
 print(String[2:10:2]) # Here Index is starting at 2 and end at 10 and taking 2 steps in string
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Output 
 
 ```python

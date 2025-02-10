@@ -11,6 +11,16 @@ image:
 ---
 
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The syntax of the bin() method is:
 
 ```python
@@ -37,8 +47,28 @@ The binary equivalent of 4 is: 0b100
 
 We can see that the bin() method is returning the binary equivalent of the given number, and the **0b** is the prefix representation of the binary string, which will remain the same with all the integer numbers.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 If the given value is not an integer, the bin() method has to implement \_\_index\_\_() method to return an integer.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Example 2: Convert an object to binary using \_\_index\_\_() method with bin() method.
 
 ```python

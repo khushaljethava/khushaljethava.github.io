@@ -13,6 +13,16 @@ image:
 
 The iter() is a Python built-in method that returns an iterator for the given object.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The syntax of the iter() method is:
 
 ```python
@@ -27,6 +37,16 @@ The iter() methods take two parameters as an argument:
 * object \- the name of the object whose iterator has to be returned.  
 * sentinel (optional) \-  A numeric value that is used to represent the end of the sequence.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Let's check some examples of the python iter() method.
 
 ### Example 1: How to use the iter() method in python?
@@ -57,6 +77,16 @@ FORD
 ```
 We can use the next() method to print the elements of iteration, and the iteration will remember the next count via the internal count variable. Once the iteration is complete, it raises a StopIteration exception, and the iteration count cannot be reassigned to 0\.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 We can also use \_\_next\_\_() method with ithe ter() method to print the iterator.
 
 ### Example 2: Using \_\_next\_\_() method in python iter() method.

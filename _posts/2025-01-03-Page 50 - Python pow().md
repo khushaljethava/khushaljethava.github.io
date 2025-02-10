@@ -22,6 +22,16 @@ The pow() function takes three parameters as argument:
 
 * x \- a base number.  
 * y \- an exponent number.  
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * z (optional) \- a number that can be used as modulus.
 
 
@@ -29,6 +39,16 @@ pow() function indicates the calculation of the power of a given number that is 
 
 Let see some examples of pow() functions in python.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ### Example 1: How to use the pow() function in python?
 
 ```python
@@ -74,4 +94,14 @@ Output:
 
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Here we are calculating (x\*\*y) % z, and that 7 powered by 2 equals 49\. So then, 49 modulus 5 equals 4 in ablow program.

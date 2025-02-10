@@ -122,6 +122,16 @@ The type of Z variable is:  <class 'int'>
 
 In the above program,
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 We are declaring variable X using the int() function.
 
 We are declaring variable Y with a float. Then we convert it using the int() method from float to integer.
@@ -162,6 +172,16 @@ print(float(True))
 print(float(False))
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 When we run the above code, we will get the following output:
 
 The type of X variable is:  \<class 'float'\>
@@ -348,6 +368,16 @@ The type of my_list is: <class 'set'>
 The type of my_string is: <class 'set'>
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Python tuple()
 
 This function is used to convert data types to a tuple.

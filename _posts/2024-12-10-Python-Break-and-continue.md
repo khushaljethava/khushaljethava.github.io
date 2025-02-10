@@ -135,12 +135,32 @@ Here are some examples of break continue and pass statements on pythonscholar.co
       "@type": "Answer",
       "text": "There is a huge difference between the break and continue statement because break is used to terminate the iterator of the program but on the hand continue will just skip the current loop or iterator."
     }
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
   },{
     "@type": "Question",
     "name": "What is the difference between break and continue in while loop in Python?",
     "acceptedAnswer": {
       "@type": "Answer",
       "text": "In Python, the while loop break statement will break the while loop execution and the continue statement will just skip the current execution."
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
     }
   },{
     "@type": "Question",
@@ -158,4 +178,14 @@ Here are some examples of break continue and pass statements on pythonscholar.co
     }
   }]
 }
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 </script>

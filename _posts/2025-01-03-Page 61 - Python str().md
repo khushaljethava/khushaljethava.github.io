@@ -64,11 +64,31 @@ pythn
 
 Here, the character 'ö' cannot be decoded by ASCII. Hence, it should give an error. However, we have set the errors \='ignore'. Hence, Python ignores the character which cannot be decoded by str().
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Types of errors in str() 
 
 There are total six types of errors:
 
 * strict \- It will raise a UnicodeDecodeError exception on failure. It will be the default error type.  
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * ignore \- it will ignore the unencodable Unicode from the result.  
 * replace \- replaces the unencodable Unicode to a question mark.  
 * xmlcharrefreplace \- It inserts XML character reference instead of the unencodable Unicode.  
@@ -78,4 +98,14 @@ There are total six types of errors:
 ## Rules of str()
 
 * Empty string can be created using str() with no parameters.  
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * str() function will return a simple printable representation of the given object.

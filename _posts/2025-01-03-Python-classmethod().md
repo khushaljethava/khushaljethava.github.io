@@ -20,6 +20,16 @@ classmethod(function)
 
 The classmethod() is considered un-pythonic in newer python versions to use the @classmethod decorator for the classmethod definition.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The syntax of the classmethod decorator is:
 
 ```python
@@ -33,6 +43,16 @@ A class method is a function that is bound to a class rather than its objects, w
 
 The main difference between a staticmethod and a classmethod is:
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * Static method knows nothing about the class and just deals with the parameters.  
     
 * The class method works with the class since its parameters are always the class itself.
@@ -78,4 +98,14 @@ In the last line, we call printColor without creating a Dog object as we do for 
 
 ## Rules of classmethod()
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 classmethod() function will return a class method for a given function.

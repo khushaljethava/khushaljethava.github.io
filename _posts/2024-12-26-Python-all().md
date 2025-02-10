@@ -24,6 +24,16 @@ all(iterable)
 
 The all() method will take a single argument as an iterable, including list, tuple, set, dictionary, string, and loop in python.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Let's see an example of all() method.
 
 Example 1: How to use all() in lists?
@@ -74,6 +84,16 @@ True
 True
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Example 3: How to use all() on dictionaries?
 
 ```python
@@ -103,4 +123,14 @@ False
 True
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 In dictionaries, it is all the keys, not the values are true, or the dictionary is empty, then all() will return True otherwise, it will return false for all other cases.  

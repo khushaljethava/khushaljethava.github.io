@@ -26,6 +26,16 @@ Python  created by **Guido van Rossum** during 1982-1990. At Centrum Wiskunde & 
 	( Guido van Rossum)	
 
  ![Where python was created.][image2]  
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 					(CWI)
 
 ## Why Named Python?
@@ -148,8 +158,28 @@ Python is straightforward to implement and easy to read compared to other progra
 | C++      |                                                                                             |
 |          | #include <iostream>                                                                                |
 |          | using namespace std;                                                                               |
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 |          |                                                                                                    |
 |          | int main() {                                                                                       |
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 |          |     cout << "Hello World!";                                                                        |
 |          |     return 0;                                                                                      |
 |          | }                                                                                                  |

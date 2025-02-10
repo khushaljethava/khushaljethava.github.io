@@ -141,6 +141,16 @@ Sequential data types are a few of the built-in data structures. Sequential data
 
 ## Python List
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The list is used to store an ordered sequence of values in a single variable, or we can say the list is the collection of the items of different data types. It is a very flexible data type in Python. The list is like an array from the other programming language. 
 
 The list is mutable so that we can change the value in the list at any time.
@@ -252,6 +262,16 @@ Output:
 {'X': 2, 'Y': 3, 'Z': 4}
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Values in a dictionary can be of any data type and can be duplicated. Still, the keys can't be repeated, and we also cannot change the key as python is case sensitive, so dictionaries with the same keys as X and x will be treated distinctly.
 
 Let us take another example of a python dictionary.
@@ -264,6 +284,16 @@ print(House)
 print(type(House))
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Output:
 
 ```python

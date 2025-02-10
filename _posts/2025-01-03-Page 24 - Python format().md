@@ -32,6 +32,16 @@ The placeholders can be identified using names indexes {value}, numbered indexes
 
 Let's check a simple example of the format()method.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ### Example 1: Simple formatting using format() method.
 
 ```python
@@ -56,6 +66,16 @@ We are learning Python from Pythonscholar.com
 
 ## Formatting Specifiers
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 format() method also supports different types for formatting specifiers that helps to manipulate the results.
 
 | :\< | Result will be aligned left |
@@ -80,6 +100,16 @@ format() method also supports different types for formatting specifiers that hel
 | :o | Octal format |
 | :x | Hex format, lower case |
 | :X | Hex format, upper case |
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 | :n | Number format |
 | :% | Percentage format |
 

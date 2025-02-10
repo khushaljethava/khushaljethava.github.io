@@ -18,10 +18,30 @@ The syntax of the copy() method is:
 set.copy()
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Python set copy() Parameters
 
 The copy() method doesn't take any parameters. It simply creates and returns a new set containing the same elements as the original set.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Understanding shallow copy is important when working with sets containing mutable objects. Let's see some examples:
 
 ```python
@@ -46,4 +66,14 @@ print(nested)      # Output: {1, 2, (3, [6, 5])}
 print(nested_copy) # Output: {1, 2, (3, [6, 5])}
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 For deep copying of sets containing nested objects, use the copy.deepcopy() function from Python's copy module.

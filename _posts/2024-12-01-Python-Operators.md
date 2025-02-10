@@ -32,6 +32,16 @@ Python programming language supports seven types of operators.
 * Logical Operators  
 * Bitwise Operators  
 * Membership Operators  
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * Identity Operators
 
 
@@ -133,6 +143,16 @@ As we can see in the above example how we can use Arithmetic Operators on multip
 Python Comparison or Relational operators are used to compare the value or variable. It will return True Or False as output based on the condition.
 
 | Operator | Description | Example  |
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 | :---- | :---- | :---- |
 | \> | Greater Then: operator will return True when the left operand is greater than the right. | X \> Y  2 \> 3   |
 | \< | Less Then: operator return True when left operand is less than the right. | X \< Y  3 \< 2  |
@@ -319,6 +339,16 @@ For example, if a value is present in a list, set, and other objects.
 | Operator | Description | Example |
 | :---- | :---- | :---- |
 | in | Returns True if a specified value is present in the sequential object | X in Y |
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 | not in  | Return True if a specified value is not present in the sequential object. | X not in Y |
 
 Let see an example of a Python membership operator.

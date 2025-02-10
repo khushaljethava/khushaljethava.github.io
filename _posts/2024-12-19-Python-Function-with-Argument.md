@@ -91,6 +91,16 @@ def function_name(argument1, argument2 = value)
 
 Let's check an example of the default argument in the python function.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Example:
 
 ```python
@@ -110,6 +120,16 @@ HelloPython
 
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 As we can see, we have used the default value in the msg argument. When we call the function, we are only using one parameter. The second argument is called automatically, as we already declared. 
 
 ## Python Arbitrary Arguments, \*args
@@ -156,6 +176,16 @@ This way, the function will receive a *dictionary* of arguments and access the i
 
 Let see an example of kwargs arguments.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Example:
 
 ```python

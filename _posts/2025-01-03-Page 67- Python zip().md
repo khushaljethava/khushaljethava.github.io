@@ -21,8 +21,28 @@ zip(iterable1, iterable2, iterable3 ... )
 
 The zip() function will take only single parameters as argument:
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * iterables \- any iterable like list, string, set ,etc.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ### Example 1: How to use zip() function in python?
 
 ```python
@@ -56,4 +76,14 @@ Output:
 
 * If we do not pass any parameter, zip() returns an empty iterator  
 * If a single iterable is passed, zip() returns an iterator of tuples with each tuple having only one element.  
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * If multiple iterables are passed, zip() returns an iterator of tuples with each tuple having elements from all the iterables.

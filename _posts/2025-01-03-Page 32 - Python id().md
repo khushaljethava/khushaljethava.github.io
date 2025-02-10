@@ -13,6 +13,16 @@ image:
 
 The id() method in python returns the unique identity number of an object. All the objects in python have a unique integer number.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 These identity numbers are assigned to the object when created and remain constant for this object until the program's execution is ended. 
 
 The syntax of id() is:
@@ -51,6 +61,16 @@ id of single string python is: 140008382164528
 
 An id will automatically assign to a variable whenever it's declared.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ### Example 2: How to use id() method with python variable?
 
 ```python
@@ -109,5 +129,15 @@ This if of User_Func function is: 9480720
 
 ## Rules of id() method 
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 800,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * id() method will always return a unique integer number of given objects.  
 * Unique numbers will remain constant during its lifetime, once assing.
