@@ -100,7 +100,7 @@ Let's check an example of the default argument in the python function.
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Example:
 
 ```python
@@ -129,7 +129,7 @@ HelloPython
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 As we can see, we have used the default value in the msg argument. When we call the function, we are only using one parameter. The second argument is called automatically, as we already declared. 
 
 ## Python Arbitrary Arguments, \*args
@@ -185,7 +185,7 @@ Let see an example of kwargs arguments.
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Example:
 
 ```python

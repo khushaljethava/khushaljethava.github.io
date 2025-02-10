@@ -33,7 +33,7 @@ lambda arguments: statements
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Lambda functions can have any number of arguments but only one expression. The expression is evaluated and returned. Lambda functions can be used wherever function objects are required.
 
 Let us see an example of the lambda function.
@@ -68,7 +68,7 @@ Here we are defining the lambda function inside lambda\_fun to illustrate the cu
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ### Why use the lambda in python?
 
 <script type="text/javascript">
@@ -80,7 +80,7 @@ Here we are defining the lambda function inside lambda\_fun to illustrate the cu
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The Lambda function is a potent function in python that can be declared inside the conditional statement, loops, and even lambda function inside the normal function.
 
 Let's see the type of lambda.

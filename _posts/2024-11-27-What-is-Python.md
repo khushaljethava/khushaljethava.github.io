@@ -35,7 +35,7 @@ Python  created by **Guido van Rossum** during 1982-1990. At Centrum Wiskunde & 
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 					(CWI)
 
 ## Why Named Python?
@@ -167,7 +167,7 @@ Python is straightforward to implement and easy to read compared to other progra
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 |          |                                                                                                    |
 |          | int main() {                                                                                       |
 <script type="text/javascript">
@@ -179,7 +179,7 @@ Python is straightforward to implement and easy to read compared to other progra
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 |          |     cout << "Hello World!";                                                                        |
 |          |     return 0;                                                                                      |
 |          | }                                                                                                  |

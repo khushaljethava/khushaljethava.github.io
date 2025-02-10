@@ -99,7 +99,7 @@ Python is a general-purpose interpreted,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 As we can see, we have printed multiline the same as inside the code with the same format.
 
 ## Accessing the string as Arrays
@@ -123,7 +123,7 @@ How to access characters in Python String?
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The characters or an element can be accessed by square brackets \[ \] in python because a single character is a string with a length of 1\.
 
 Syntax
@@ -202,7 +202,7 @@ print(String[2:10:2]) # Here Index is starting at 2 and end at 10 and taking 2 s
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Output 
 
 ```python

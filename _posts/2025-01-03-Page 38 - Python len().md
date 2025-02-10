@@ -33,7 +33,7 @@ The len() method takes only one parameter as an argument.
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * **object** \- the name of the object that can be a sequence or a collection.
 
 len() method can be used with almost all the objects like string, integer, tuple, list, range, dictionary, set, list, etc.
@@ -94,7 +94,7 @@ The length of range method is 99
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ### Example 3: How to use the len() method with dictionaries and sets?
 
 ```python
@@ -120,7 +120,7 @@ print("The length of the my_dict is",len(my_dict))
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Output:
 
 ```python

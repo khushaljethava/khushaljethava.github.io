@@ -55,7 +55,7 @@ Where:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * σ \= Standard Deviation  
 * Σ(x−µ)2  \= Sum of squared differences between each data point (x) and the mean (µ)  
 * n \= Total number of data points
@@ -69,7 +69,7 @@ Where:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 **Step 4:** Calculate the Coefficient of Variation (CV)
 
 Now that you have the mean (µ) and standard deviation (σ), you can calculate the CV:
@@ -89,7 +89,7 @@ Where:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * µ \= Mean
 
 As we have learned how to calculate standard deviation and coefficient of variation, it is time to see how we can calculate the coefficient of variation using Python.

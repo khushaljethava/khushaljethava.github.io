@@ -22,7 +22,7 @@ The id() method in python returns the unique identity number of an object. All t
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 These identity numbers are assigned to the object when created and remain constant for this object until the program's execution is ended. 
 
 The syntax of id() is:
@@ -70,7 +70,7 @@ An id will automatically assign to a variable whenever it's declared.
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ### Example 2: How to use id() method with python variable?
 
 ```python
@@ -138,6 +138,6 @@ This if of User_Func function is: 9480720
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * id() method will always return a unique integer number of given objects.  
 * Unique numbers will remain constant during its lifetime, once assing.

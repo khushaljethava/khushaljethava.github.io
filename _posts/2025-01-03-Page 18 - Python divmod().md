@@ -22,7 +22,7 @@ image:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The divmod() method takes two numbers and returns a pair of numbers inside a tuple consisting of their quotient and remainder.
 
 The syntax of divmod() is:
@@ -43,7 +43,7 @@ divmod(x,y)
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 divmod() takes two parameters:  
 x \- a non-complex number that can be referred to as a numerator.  
 y \- a non-complex number that can be referred to as denominator
@@ -85,7 +85,7 @@ divmod(2.6, 0.5) =  (5.0, 0.10000000000000009)
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Rules of divmod()
 
 (q, r) \- a pair of numbers will be a tuple consisting of quotient q and a remainder r.

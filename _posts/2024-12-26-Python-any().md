@@ -21,7 +21,7 @@ image:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The any() is a built-in method available in python, which will return True if any element is present in an iterable like list, tuple, set, dictionary, or loop in python.
 
 <script type="text/javascript">
@@ -33,7 +33,7 @@ The any() is a built-in method available in python, which will return True if an
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 If the iterable is empty or any elements are not present, the any() method will return False.
 
 Syntax of any() method.
@@ -70,7 +70,7 @@ print(any(my_list_3))
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The Output will be as follows.
 
 ```python

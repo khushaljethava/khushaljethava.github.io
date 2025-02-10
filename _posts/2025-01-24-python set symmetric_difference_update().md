@@ -29,7 +29,7 @@ set1 ^= set2
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Python set symmetric_difference_update() Parameters
 
 <script type="text/javascript">
@@ -41,7 +41,7 @@ set1 ^= set2
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The symmetric_difference_update() method takes one parameter:
 
 <script type="text/javascript">
@@ -53,7 +53,7 @@ The symmetric_difference_update() method takes one parameter:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * **set2:** Another set or iterable to update the symmetric difference with.
 
 Here are examples demonstrating the symmetric_difference_update() method:

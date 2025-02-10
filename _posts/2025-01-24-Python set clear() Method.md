@@ -21,7 +21,7 @@ The Python set clear() method removes all elements from a set, making it empty. 
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The syntax of the clear() method is:
 
 ```python
@@ -37,7 +37,7 @@ set.clear()
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Python set clear() Parameters
 
 The clear() method doesn't take any parameters. It simply removes all elements from the set, regardless of their type or value.
@@ -51,7 +51,7 @@ The clear() method doesn't take any parameters. It simply removes all elements f
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Since sets are mutable, the clear() method modifies the original set rather than creating a new empty set. This is memory efficient when you need to empty a large set.
 
 Let's explore some examples to understand how the clear() method works:

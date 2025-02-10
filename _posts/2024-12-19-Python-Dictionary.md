@@ -427,7 +427,7 @@ if "model" in cars.keys():
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The output will be as follows.
 
 ```python
@@ -540,7 +540,7 @@ Output will be as follow
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Dictionary Methods
 
 Python has a set of built-in methods that can be used in python dictionaries.
@@ -558,7 +558,7 @@ Python has a set of built-in methods that can be used in python dictionaries.
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 | fromkeys() | Returns a dictionary with the specified keys and value |
 | get() | Returns the value of the specified key |
 | items() | Returns a list containing a tuple for each key-value pair |

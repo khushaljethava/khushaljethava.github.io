@@ -33,7 +33,7 @@ The open() takes multiple parameters as argument:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * **mode \-** mode represents the attributes of a file while opening it. More details of mode parameters are explained in the table below.  
 * **buffering** (Optional) \- used to set up the buffering policy. Defaults id \-1.  
 * **encoding** (Optional) \- The encoding format to encode or decode the file.  
@@ -68,7 +68,7 @@ More about the mode parameter is listed below.
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 | :---- | :---- |
 | ‘r’ | Read \- Opening a file for reading. It will be the Default mode.  |
 | ‘w’ | Write \- Open a file to write, or it will create the new files if it does not exist. |
@@ -121,5 +121,5 @@ f = open("path_to_file", mode = 'a')
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 We recommended reading Python File Input/Output for better understanding.

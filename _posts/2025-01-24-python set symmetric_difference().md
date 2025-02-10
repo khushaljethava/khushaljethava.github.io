@@ -21,7 +21,7 @@ The Python set symmetric_difference() method returns a new set containing elemen
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The syntax of the symmetric_difference() method is:
 
 ```python
@@ -39,7 +39,7 @@ set1 ^ set2
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Python set symmetric_difference() Parameters
 
 The symmetric_difference() method takes one parameter:
@@ -77,5 +77,5 @@ print(result)  # Output: {1, 2, 3}
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The symmetric_difference() method is useful for finding elements unique to each set.

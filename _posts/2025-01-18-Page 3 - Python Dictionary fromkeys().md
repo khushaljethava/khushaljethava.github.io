@@ -29,7 +29,7 @@ The fromkeys() method takes two parameters as arguments.
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * key \- an iterable or collection of items which specify the keys of the new dictionary.   
 * value (Optional) \- The Values which are going to be assigned to all the elements of the dictionary. Default is None.
 
@@ -42,7 +42,7 @@ The fromkeys() method takes two parameters as arguments.
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ### Example 1 : How to use fromkeys() method in a python dictionary?
 
 ```python
@@ -78,7 +78,7 @@ print(results)
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Output:
 
 ```python

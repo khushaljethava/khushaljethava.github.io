@@ -65,7 +65,7 @@ print("The new Dictionary is :",cars)
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Output
 
 ```python
@@ -85,7 +85,7 @@ KeyError: 'AUDI'
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Rules of pop()
 
 <script type="text/javascript">
@@ -97,7 +97,7 @@ KeyError: 'AUDI'
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * If key is found \- removed/popped element from the dictionary  
 * If key is not found \- value specified as the second argument (default)  
 * If key is not found and default argument is not specified \- KeyError exception is raised

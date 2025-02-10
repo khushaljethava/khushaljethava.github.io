@@ -29,7 +29,7 @@ The python setdefault() method takes two parameters as arguments:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * **default\_value** \- The value to be returned in case the key is not found. If not provided, the defalut\_value will be None.
 
 Let see some examples of python dictionaries setdefault() method.
@@ -78,7 +78,7 @@ print('age = ',age)
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Output:
 
 ```python
@@ -100,6 +100,6 @@ age =  4
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * Only returns a result if the given key is present in the dictionary.  
 * Will return None when the key is not present in the dictionary and default value is not specified.

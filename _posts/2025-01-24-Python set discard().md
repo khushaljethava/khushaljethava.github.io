@@ -27,7 +27,7 @@ set.discard(element)
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Python set discard() Parameters
 
 The discard() method takes one parameter:
@@ -41,7 +41,7 @@ The discard() method takes one parameter:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * **element:** The item to be removed from the set. Can be of any type that's hashable.
 
 Here are examples demonstrating the discard() method:
@@ -72,5 +72,5 @@ print(mixed_set)  # Output: {1, 'hello'}
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The discard() method is particularly useful in situations where you want to remove elements without checking their existence first.

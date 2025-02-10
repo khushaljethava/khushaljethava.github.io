@@ -73,7 +73,7 @@ Here, the character 'ö' cannot be decoded by ASCII. Hence, it should give an er
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Types of errors in str() 
 
 There are total six types of errors:
@@ -88,7 +88,7 @@ There are total six types of errors:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * ignore \- it will ignore the unencodable Unicode from the result.  
 * replace \- replaces the unencodable Unicode to a question mark.  
 * xmlcharrefreplace \- It inserts XML character reference instead of the unencodable Unicode.  
@@ -107,5 +107,5 @@ There are total six types of errors:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * str() function will return a simple printable representation of the given object.

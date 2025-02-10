@@ -26,7 +26,7 @@ abs(number)
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Python abs() Parameters
 
 We can only give a single argument in the abs() function.
@@ -80,7 +80,7 @@ The Magnitude of 10 - 7j is: 12.206555615733702
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Rules of abs()
 
 <script type="text/javascript">
@@ -92,7 +92,7 @@ The Magnitude of 10 - 7j is: 12.206555615733702
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * If the integer value is passed it will return an integer value only.  
 * If the floating value is passed it will return an absolute floating value.  
 * If the complex number is passed it will return a magnitude of the given number.

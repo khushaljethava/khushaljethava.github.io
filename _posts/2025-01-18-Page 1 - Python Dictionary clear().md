@@ -29,7 +29,7 @@ The clear() method does not take any parameter as argument.
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Let's see an example of the dictionary clear() method.
 
 ### Example 1: How to use the clear() method in python dictionaries?
@@ -64,7 +64,7 @@ Here we can see that the clear() method has completely removed all the items  fr
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Rules of clear() 
 
 <script type="text/javascript">
@@ -76,5 +76,5 @@ Here we can see that the clear() method has completely removed all the items  fr
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 There are no such rules to use clear() method.

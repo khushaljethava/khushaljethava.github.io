@@ -22,7 +22,7 @@ The ascii() method will return a readable version of a string containing a print
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The ascii() method will replace non-ASCII like å with escape characters like \\x and \\u.
 
 The syntax of ascii() is as follows.
@@ -78,7 +78,7 @@ As you can see, all the non-ascii values are replaced by escape characters.
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Rules of ascii() method
 
 * It will return a readable string representation of an object.  
@@ -91,6 +91,6 @@ As you can see, all the non-ascii values are replaced by escape characters.
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * It will not return anything when we use an integer as an object.
 

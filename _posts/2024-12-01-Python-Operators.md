@@ -41,7 +41,7 @@ Python programming language supports seven types of operators.
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * Identity Operators
 
 
@@ -152,7 +152,7 @@ Python Comparison or Relational operators are used to compare the value or varia
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 | :---- | :---- | :---- |
 | \> | Greater Then: operator will return True when the left operand is greater than the right. | X \> Y  2 \> 3   |
 | \< | Less Then: operator return True when left operand is less than the right. | X \< Y  3 \< 2  |
@@ -348,7 +348,7 @@ For example, if a value is present in a list, set, and other objects.
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 | not in  | Return True if a specified value is not present in the sequential object. | X not in Y |
 
 Let see an example of a Python membership operator.

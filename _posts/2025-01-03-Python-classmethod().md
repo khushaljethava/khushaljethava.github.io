@@ -29,7 +29,7 @@ The classmethod() is considered un-pythonic in newer python versions to use the 
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The syntax of the classmethod decorator is:
 
 ```python
@@ -52,7 +52,7 @@ The main difference between a staticmethod and a classmethod is:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * Static method knows nothing about the class and just deals with the parameters.  
     
 * The class method works with the class since its parameters are always the class itself.
@@ -107,5 +107,5 @@ In the last line, we call printColor without creating a Dog object as we do for 
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 classmethod() function will return a class method for a given function.

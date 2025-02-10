@@ -35,7 +35,7 @@ As shown in the above syntax:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * If the condition is evaluated as False, the statement under if statement will not execute.
 
 We can use operators to evaluate a condition or use other objects to assess the condition.
@@ -306,7 +306,7 @@ Enter a number: 25
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Positive number
 
 In about example, we input a number to check if the number is positive or negative or zero. Then we print an appropriate message using a nested if statement.
@@ -320,7 +320,7 @@ In about example, we input a number to check if the number is positive or negati
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## One-Line if Statements
 
 In one line or shorthand if statements, we can implement conditional statements in one line only.  

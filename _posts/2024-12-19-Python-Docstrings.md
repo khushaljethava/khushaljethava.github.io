@@ -23,7 +23,7 @@ As like multiline comment, docstring is also declared using three (‘’’) or
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 **‘’’ triple single quotes ‘’’** or **“”” triple double quotes ”””**
 
 Docstrings are accessible from the doc attribute (\_\_doc\_\_)   for any of the Python objects and built-in functions. Docstrings are great for understanding the functionality of the more extensive code of the project.
@@ -66,7 +66,7 @@ Here, we have documented our addition function, and then we are accessing it wit
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Now let's use docstring for the built-in python function and let it have a print function, for example.
 
 ```python
@@ -101,7 +101,7 @@ As we can see, we got the documentation output of the print() function defined b
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Docstring in Python Module
 
 ```python

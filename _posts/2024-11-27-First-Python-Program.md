@@ -38,7 +38,7 @@ print("Hello Python")
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## How to run a python program?
 
  Let's execute our first program by opening the Run menu from the top bar and click on “Run Module” or just the F5 key. 
@@ -56,7 +56,7 @@ Output:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ![][image2]
 
 ### How to run a python program in windows?
@@ -102,7 +102,7 @@ Like Windows, we can type python commands in the Linux terminal to check whether
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 To run a python program on Linux, you can simply use the python command followed by the program name, as shown below.
 
 ![][image8]
