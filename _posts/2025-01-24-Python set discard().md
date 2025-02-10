@@ -4,6 +4,16 @@ description: In this tutorial, we will understand about the python set discard()
 date: 2025-01-24 22:02:00 +0800
 categories: [Python Set Reference]
 tags: [Python Set Reference]
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 image:
   path: /commons/Python Set discard() Method.png
   alt: Python Set discard() Method 
@@ -11,6 +21,16 @@ image:
 ---
 
 The Python set discard() method removes a specified element from a set if it exists. Unlike remove(), discard() doesn't raise a KeyError if the element is not found in the set. This makes it safer when you're not sure if an element exists.
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 The syntax of the discard() method is:
 
@@ -22,6 +42,16 @@ set.discard(element)
 
 The discard() method takes one parameter:
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * **element:** The item to be removed from the set. Can be of any type that's hashable.
 
 Here are examples demonstrating the discard() method:

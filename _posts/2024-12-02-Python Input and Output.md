@@ -3,6 +3,16 @@ title: Python Input and Output
 description: In this tutorial, we will learn about the input function.
 date: 2024-12-3 07:25:00 +0800
 categories: [Python]
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 tags: [python]
 image:
   path: /commons/Python Input and Output.png
@@ -17,6 +27,16 @@ The Input function can be defined with the input() function.
 
 Syntax of input  
    
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Name = input(message)
 
 As we can see in the above syntax, first, we declare a variable, then assign the input function to that variable, and in between brackets, we add a string as a message which will be print when we run the program. By default, I will store all the given values in a String. If we want to take value in integer, we need to use int() function and float, and we need to use float() function.
@@ -78,6 +98,16 @@ Output:
 ```python
 Enter a number:2.5
 2.5
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 
 Here we are storing a value into a float.

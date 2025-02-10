@@ -1,3 +1,13 @@
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ---
 title: Python Set intersection_update() Method 
 description: In this tutorial, we will understand about the python set intersection_update() method and its uses.
@@ -7,6 +17,16 @@ tags: [Python Set Reference]
 image:
   path: /commons/Python Set intersection_update() Method.png
   alt: Python Set intersection_update() Method 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 ---
 
@@ -24,6 +44,16 @@ set1 &= set2
 
 The intersection_update() method takes one parameter:
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * **set2:** Another set or iterable whose common elements will be retained in the original set.
 
 Let's explore some examples:

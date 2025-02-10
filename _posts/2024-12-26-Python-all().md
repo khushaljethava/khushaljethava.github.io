@@ -5,6 +5,16 @@ date: 2024-12-26 21:06:00 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
   path: /commons/Python all() Method.png
   alt: Python all() Method
 
@@ -20,6 +30,16 @@ The syntax of all() function is :
 all(iterable)
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Python all() Parameters
 
 The all() method will take a single argument as an iterable, including list, tuple, set, dictionary, string, and loop in python.
@@ -102,5 +122,15 @@ False
 False
 True
 ```
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 In dictionaries, it is all the keys, not the values are true, or the dictionary is empty, then all() will return True otherwise, it will return false for all other cases.  

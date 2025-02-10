@@ -11,6 +11,16 @@ image:
   alt: Basic Syntax
 ---
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Python Syntax
 
 Let's get started with python basics by learning basic python and how to use Python interpreter or Python CLI. First, let us understand what a Python interpreter is.
@@ -22,6 +32,16 @@ A Python interpreter reads and executes code instantly on the terminal, but it s
 ![][image1]
 
 ## **print()** 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 Let’s make our hands dirty by executing the first python function, the **Print** function.  
 As its name suggests, the print function is used to print text using python.
@@ -74,6 +94,16 @@ Now we will do some necessary mathematical calculations in python using the pyth
 17
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Python help() Function
 
 The help() function in function is used to see the documentation of all the python syntax. Every function and method in python comes with documentation. 

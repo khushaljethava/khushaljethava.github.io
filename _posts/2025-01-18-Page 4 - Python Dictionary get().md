@@ -1,4 +1,14 @@
 ---
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 title: Python Dictionary get()
 description: The get() method returns the specified value of the given key if it's present in the dictionary.
 date: 2025-01-18 21:38:03 +0800
@@ -21,6 +31,16 @@ dictionary.get(key, value)
 The get() method takes two parameters as argument :
 
 * key  \- Name of the key you want to return the value from dictionary.  
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * value (Optional) \- The value to be returned if the given key is not found in the dictionary .The default value if None.
 
 Lets see some examples of get() method  in python dictionaries?
@@ -41,6 +61,16 @@ print('Bread: ', person.get('bread', 0.0))
 
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Output:
 
 ```python

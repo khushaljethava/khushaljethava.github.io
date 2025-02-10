@@ -2,12 +2,32 @@
 title: Python vars()
 description: The vars() is a built-in python function that returns the \_\_dict\_\_ attribute of an object.
 date: 2025-01-03 22:42:23 +0800
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 categories: [Built in reference]
 tags: [Built in reference]
 image:
  path: /commons/Python vars().png
  alt: Python vars()
 ---
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 The syntax of the vars() function is :
 
@@ -41,6 +61,16 @@ Output:
 {'a': 4, 'b': 8}
 
 ```
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 The \_\_dict\_\_ attribute is a dictionary containing the specific object’s changeable attributes.
 

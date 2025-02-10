@@ -12,6 +12,16 @@ image:
 
 
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## What is a string in Python?
 
 A String is a simple sequence of characters, like a simple text you see here. However, python doesn’t have data type characters like other programming languages.
@@ -48,6 +58,16 @@ The output of the above program is:
 ```python
 Python
 Google
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 Let see an example of the Type conversion of string.
 
@@ -378,6 +398,16 @@ Python Comes with a different set of built-in methods and functions that can be 
 | endswith() | Returns true if the string ends with the specified value |
 | expandtabs() | Sets the tab size of the string |
 | find() | Searches the string for a specified value and returns the position of where it was found |
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 | format() | Formats specified values in a string |
 | format\_map() | Formats specified values in a string |
 | index() | Searches the string for a specified value and returns the position of where it was found |

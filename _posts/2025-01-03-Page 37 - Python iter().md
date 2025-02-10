@@ -1,4 +1,14 @@
 ---
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 title: Python iter() Method
 description: In this tutorial we will learn about the python iter() method and its uses with examples.
 date: 2025-01-03 22:42:23 +0800
@@ -57,6 +67,16 @@ FORD
 ```
 We can use the next() method to print the elements of iteration, and the iteration will remember the next count via the internal count variable. Once the iteration is complete, it raises a StopIteration exception, and the iteration count cannot be reassigned to 0\.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 We can also use \_\_next\_\_() method with ithe ter() method to print the iterator.
 
 ### Example 2: Using \_\_next\_\_() method in python iter() method.
@@ -79,6 +99,16 @@ AUDI
 FORD
 
 ```
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 ### Example 3: Using iter() with custom objects.
 

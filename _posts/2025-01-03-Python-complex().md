@@ -2,6 +2,16 @@
 title: Python complex() Method
 description: In this tutorial we will learn about the python complex() method and its uses.
 date: 2025-01-03 23:24:00 +0800
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 categories: [Built in reference]
 tags: [Built in reference]
 image:
@@ -12,6 +22,16 @@ image:
 
 The complex() method returns a complex number when real and imaginary parts are given and converts a string to a complex number.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The syntax of complex() is:
 
 ```python
@@ -21,6 +41,16 @@ complex([real[, img]])
 ## Python complex() Method  Parameters
 
 The complex() method takes two parameters:
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 **real** \- if real is omitted, it will take default as 0\. real part.  
 **img** \- if img is omitted, it will take default as 0\. Imaginary part.

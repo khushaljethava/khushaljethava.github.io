@@ -1,5 +1,15 @@
 ---
 title: How to calculate coefficient of variation in Python
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 description: In this tutorial, we will learn about the coefficient of variation, How to calculate coefficient of variation in python, and the importance of the coefficient of variation in artificial intelligence.
 
 date: 2024-11-27 11:33:00 +0800
@@ -46,6 +56,16 @@ Where:
 
 Where:
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * σ \= Standard Deviation  
 * Σ(x−µ)2  \= Sum of squared differences between each data point (x) and the mean (µ)  
 * n \= Total number of data points
@@ -98,6 +118,16 @@ cv = (std dev / mean) * 100
 
 Now that you have the mean and standard deviation, calculate the Coefficient of Variation using the above formula.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 **Step 5:** Display the result.
 
 Finally, we will display the results of the calculated Coefficient of Variation.

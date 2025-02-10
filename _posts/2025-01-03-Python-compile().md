@@ -6,6 +6,16 @@ categories: [Built in reference]
 tags: [Built in reference]
 image:
   path: /commons/Python compile() Method.png
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
   alt: Python compile() Method
 
 ---
@@ -33,6 +43,16 @@ The compile() method is used if the python code is in simple string form or is a
 
 Let us see an example of the usage of compile() method.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ### Example 1: How to use compile() method?
 
 ```python
@@ -51,6 +71,16 @@ sum = 19
 ```
 
 Here we are taking a simple string as a source. And the filename is sumstring. After that, we are taking exec mode that allows us the usage of exec() method.
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 As we can see, it showing class code when we are checking its type.
 

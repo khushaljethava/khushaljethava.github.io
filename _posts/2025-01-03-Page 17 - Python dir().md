@@ -4,6 +4,16 @@ description: In this tutorial we will learn about the python dir() method and it
 date: 2025-01-03 22:15:55 +0800
 categories: [Built in reference]
 tags: [Built in reference]
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 image:
  path: /commons/Python dir() Method.png
  alt: Python dir() Method
@@ -20,6 +30,16 @@ dir([object])
 ## Python dir() Method Parameters
 
 dir() takes only a single parameter.
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 object \- the dir() function attempts to return all attributes of a specific object. It is optional.
 
@@ -65,6 +85,16 @@ The output will be as follows.
 
 dir() function tries to return a list of valid attributes of the object.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 If the object has \_\_dir\_\_() method, the method will be called and must return the list of attributes.
 
 If the object doesn't have \_\_dir\_\_() method, this method tries to find information from the \_\_dict\_\_ attribute (if defined) and type object. In this case, the list returned from dir() may not be complete.

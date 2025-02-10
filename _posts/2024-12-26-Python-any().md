@@ -51,6 +51,16 @@ False
 
 As we can see, the first list is not empty. That’s why any() method is returning True because its contents elements and the second list are empty, hence returning False.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Note that any() method will consider 0 and False as a Null value, hence returning False in the third list.
 
 The any() method works similarly for tuples and sets like lists.
@@ -65,6 +75,16 @@ my_string_2 = "
 print(any(my_string_2))
 ```
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Output:
 
 ```python
@@ -106,6 +126,16 @@ False
 
 In the case of dictionaries, if all keys (not values) are false or the dictionary is empty, any() returns False. If at least one key is true, any() returns True.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Rules of any() method
 
 * The any() method will return a boolean as a value.  

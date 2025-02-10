@@ -51,6 +51,16 @@ Hello World! We are using Python3.
 * **sep:** will separate objects in more than one way. (Optional)  
 * **end**: will specify what to print at the end. (Optional)  
 * **file:** will print an object with a write method. (Optional)  
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * **flush:** A Boolean specifying if the output is flushed (True) or buffered (False). (Optional)
 
 ## Python print() function with sep parameter.
@@ -112,9 +122,29 @@ my_file.close()
 This program tries to open the python.txt in writing mode. If this file doesn't exist, the python.txt file is created and opened in writing mode.
 
 Here, we have passed the my\_file file object to the file parameter. The string object 'Pretty cool, huh\!' is printed to the python.txt file (check it in your system).
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 Finally, the file is closed using the close() method.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4181667199679058"
      crossorigin="anonymous"></script>

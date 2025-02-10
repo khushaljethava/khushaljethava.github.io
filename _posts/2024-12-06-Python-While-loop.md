@@ -1,6 +1,16 @@
 ---
 title: Python While Loop
 description: In this tutorial, we are going to understand the while loop in python.
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 date: 2024-12-06 11:12:00 +0800
 categories: [Python]
 tags: [python]
@@ -27,6 +37,16 @@ As we can see in the above syntax, we are first using the while keyword to imple
 The loop will test the condition, and it will run statements in the body only if the giving condition is true, just like for loop while in python again checking the condition. Once the condition gets false it will exit from the loop.
 
 ![][image1]  
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Example of Python while loop
 
 ```python
@@ -103,6 +123,16 @@ while i<=3 :
         print(j,"Inner loop")
         j+=1
     i+=1
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 
 When we execute this program, we will get the following result.

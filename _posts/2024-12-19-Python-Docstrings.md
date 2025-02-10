@@ -13,6 +13,16 @@ image:
 
 Python docstring or Documentation strings is a string literally used in the class, module, function, or method definition. 
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 As like multiline comment, docstring is also declared using three (‘’’) or four (“””). For example   
 **‘’’ triple single quotes ‘’’** or **“”” triple double quotes ”””**
 
@@ -45,6 +55,26 @@ Output
 
 Here, we have documented our addition function, and then we are accessing it with \_\_doc\_\_ attribute.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Docstring in built-in functions
 
 Now let's use docstring for the built-in python function and let it have a print function, for example.

@@ -59,6 +59,16 @@ The length of my_tuple is: 3
 
 We can also use the len() method and the range() method to check the length of the range.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ### Example 2: How to use len() with range() method?
 
 ```python
@@ -67,6 +77,16 @@ We can also use the len() method and the range() method to check the length of t
 print("The length of range method is",len(range(1,100)))
 
 ```
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 Output:
 
@@ -100,5 +120,15 @@ The length of the my_dict is 3
 ```
 
 ## Rules of len() method
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 * If a non-sequence object is passed, it will raise a TypeError exception because the len() method cannot deal with non-sequence objects.

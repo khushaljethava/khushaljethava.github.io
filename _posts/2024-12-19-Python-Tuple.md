@@ -11,6 +11,16 @@ image:
 
 ## What is a tuple in python?
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 A tuple in python is similar to the list in many ways. Like lists, tuples also contain the collection of the items of different data types, and values are separated with a comma (,) but enclosed within parentheses ().
 
 A tuple is immutable, so it is a read-only data structure, and we can't modify the size and value of the items of a tuple.
@@ -183,6 +193,16 @@ Output:
 
 Concatenation to python tuples means to merge or combine two or more tuples into one. We can use the \+ operator to combine two tuples.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 We can also multiple the elements in a tuple to itself for a given number of times using the \* operator.
 
 Let's check an example of the python concatenation of tuples.
@@ -248,6 +268,16 @@ Traceback (most recent call last):
   File .. .. .., line 6, in <module>
     print(my_tuple)
 NameError: name 'my_tuple' is not defined
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 
 ## Membership Test in Python Tuple

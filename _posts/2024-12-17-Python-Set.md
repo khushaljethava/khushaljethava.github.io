@@ -7,11 +7,31 @@ tags: [python]
 image:
   path: /commons/Python Set.png
   alt: Python Set
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ---
 
 ## What is Python Set?
 
 Python set is one of 4 built-in data types in python used to store multiple items in a single variable. A set is a collection of unordered, unchangeable, and unindexed elements. Every element in a python set operations must be unique. We cannot add duplicate elements.
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 The set is immutable, so we cannot change an element in the set.so Once a set is created, you cannot change its items, but you can add new items.
 
@@ -314,6 +334,16 @@ frozenset({3, 4, 5, 6})
 | pop() | Removes an element from the set |
 | remove() | Removes the specified element |
 | symmetric\_difference() | Returns a set with the symmetric differences of two sets |
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 | symmetric\_difference\_update() | inserts the symmetric differences from this set and another |
 | union() | Return a set containing the union of sets |
 | update() | Update the set with the union of this set and others  |

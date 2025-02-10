@@ -5,8 +5,28 @@ date: 2025-01-03 22:42:23 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
  path: /commons/Python slice().png
  alt: Python slice()
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ---
 
 The syntax of slice() is:
@@ -22,6 +42,16 @@ The slice() functions takes three parameters as argument:
 
 * start (optional) \- An integer number specifying at which position to start the slicing. Default is 0  
 * stop \- An integer number specifying at which position to end the slicing  
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * step (optional) \- Optional. An integer number specifying the step of the slicing. Default is 1\.
 
 Lets see an example of python slice() function.

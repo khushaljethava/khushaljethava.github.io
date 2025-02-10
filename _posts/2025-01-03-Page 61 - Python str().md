@@ -20,6 +20,16 @@ str(object, encoding, errors)
 
 The str() function takes three parameters as argument:
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * object \- Name of the object whose string representation has to be returned. If no object is passed, it will return the empty string.   
 * encoding \- The encoding type of the given object. Default is UTF-8.  
 * errors \- Specifies what to do if the decoding fails.
@@ -66,8 +76,28 @@ Here, the character 'ö' cannot be decoded by ASCII. Hence, it should give an er
 
 ## Types of errors in str() 
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 There are total six types of errors:
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * strict \- It will raise a UnicodeDecodeError exception on failure. It will be the default error type.  
 * ignore \- it will ignore the unencodable Unicode from the result.  
 * replace \- replaces the unencodable Unicode to a question mark.  

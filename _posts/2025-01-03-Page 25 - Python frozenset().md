@@ -7,6 +7,16 @@ tags: [Built in reference]
 image:
  path: /commons/Python frozenset() Method.png
  alt: Python frozenset() Method
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ---
 
 ## What is python frozenset() Method?
@@ -138,6 +148,16 @@ print(C.issubset(B))  # Output: True
 print(B.issuperset(C))  # Output: True
 
 ```
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Output:
 
 ```python
@@ -150,5 +170,15 @@ True
 ## Rules of frozenset() 
 
 * frozenset() only takes iterable as an argument.  
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * frozenset() method returns an immutable frozenset which the iterable elements will initialize.  
 * Empty frozenset can be declared bypassing the empty frozenset() method.

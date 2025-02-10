@@ -4,6 +4,16 @@ description: In the tutorial, we will learn about how to use arguments in user-d
 date: 2024-12-19 12:24:00 +0800
 categories: [Python]
 tags: [python]
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 image:
   path: /commons/Python Function with Argument .png
   alt: Python Function with Argument 
@@ -15,6 +25,16 @@ We can add user-defined parameters in functions as Arguments.
 
 Python arguments are specified after the function name inside the parentheses. You can add as many arguments as you want; just separate them with a comma.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 We can add an argument in between the brackets after the function. Python parameters can be defined in two ways.
 
 Syntax of function with argument.
@@ -81,6 +101,16 @@ Here we are giving two string arguments as the first name as Elon and last name 
 We can add the default value in the function argument.
 
 We can provide a default value as an argument by using the assignment operator (=).
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 Syntax of default argument.
 

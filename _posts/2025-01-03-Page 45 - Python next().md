@@ -1,5 +1,15 @@
 ---
 title: Python next() method
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 description: The next() is a Python built-in method that returns the next item in an iterator.
 date: 2025-01-03 22:42:23 +0800
 categories: [Built in reference]
@@ -21,12 +31,32 @@ next(iterator, default)
 * **iterator** \- the name of the iterator to retrieve the next item.  
 * **default** (optional) \- The default value that will return when the iterator has no next item.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## How the Python next() Function Works?
 
 The next() function works by calling the \_\_next\_\_() method on an iterator object. An iterator is an object that returns its elements one at a time. You can create an iterator object by using the iter() function on any iterable object such as lists, tuples, sets, or dictionaries.
 
 When next() is called on an iterator, it returns the next element in the sequence. If there are no more elements, it raises a StopIteration exception.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Here's an example that demonstrates how the next() function works:
 
 ### Example 1: How the Python next() Function Works

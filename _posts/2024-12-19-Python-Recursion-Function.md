@@ -6,6 +6,16 @@ categories: [Python]
 tags: [python]
 image:
   path: /commons/Python Recursion Function.png
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
   alt: Python Recursion Function
 ---
 
@@ -13,6 +23,16 @@ image:
 
 **Recursion** in python is a process by which a function calls *itself* directly or indirectly.
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Recursion is a common mathematical and programming concept. It means that a function calls itself. This has the benefit of meaning that you can loop through data to reach a result. The Python recursion function is also known as python recursive function
 
 Syntax of recursion function.
@@ -66,6 +86,16 @@ Recursion makes our program:
 2\. Readable – Code is easier to read and understand.
 
 3\. Reduce the code – It takes fewer lines of code to solve a problem using recursion.
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 ## Disadvantages of recursion Function:
 

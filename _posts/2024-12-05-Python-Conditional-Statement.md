@@ -145,6 +145,16 @@ This Statement will always run.
 
 Python elif statement used to add multiple expressions just like else if statement. 
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 In simple English language, we can quote, "if the previous conditions were not true, then try this condition.”
 
 Syntax of elif python.
@@ -315,6 +325,16 @@ if a > b: print("a is greater than b")
 
 Output:
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Example of if...else one-line statements
 
 ```python
@@ -325,6 +345,16 @@ print("A") if a > b else print("B")
 
 Output:
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 As we can see in the above example in the if...else statement, we are not using a semicolon :
 
 Let us see an example of a nested one-line statement.

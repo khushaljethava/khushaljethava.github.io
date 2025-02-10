@@ -3,6 +3,16 @@ title: Python Keywords and Identifiers
 description: This tutorial will teach about keywords and identifiers, which will include reserved words in python.
 
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 date: 2024-11-27 11:33:00 +0800
 categories: [Python]
 tags: [python]
@@ -31,6 +41,16 @@ The following list shows the keywords in python.
 | break | This keyword is used to break the loop. |
 | class | This keyword is used to define a class. |
 | continue | This keyword is used to take the control back to the loop. |
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 | def | This keyword is used to define a function. |
 | del | This keyword is used to delete objects like variables, lists, or any other kind of object. |
 | Elif | This keyword is used for a conditional statement along with an if statement. |
@@ -96,6 +116,16 @@ Below is the examples of invalid identifiers in python.
 *  for
 
 FAQ
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 **Question:** Are python variable case sensitive?  
 **Answers:** Yes, the Python variable is case sensitive; both “Python” and “python” are different in a python programming language.

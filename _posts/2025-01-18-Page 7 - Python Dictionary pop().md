@@ -1,4 +1,14 @@
 ---
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 title: Python Dictionary pop()
 description: In the python dictionary, the pop() method removes a specific item from the dictionary and returns the value of the given item.
 date: 2025-01-18 21:38:03 +0800
@@ -15,6 +25,16 @@ The syntax of pop() is:
 dictionary.pop(key, default)
 
 ```
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 ## pop() Parameters 
 
@@ -67,6 +87,16 @@ KeyError: 'AUDI'
 ```
 
 ## Rules of pop()
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'f934c5057f4cfe34762901514605d248',
+		'format' : 'iframe',
+		'height' : 180,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 * If key is found \- removed/popped element from the dictionary  
 * If key is not found \- value specified as the second argument (default)  
