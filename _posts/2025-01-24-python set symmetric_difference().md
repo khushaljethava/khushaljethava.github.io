@@ -12,31 +12,11 @@ image:
 
 The Python set symmetric_difference() method returns a new set containing elements that are in either set but not in both. It can also be written using the ^ operator.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The syntax of the symmetric_difference() method is:
 
 ```python
 set.symmetric_difference(set2)
 # or
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 set1 ^ set2
 ```
 
@@ -66,16 +46,6 @@ set1 = {1, 2, 3}
 set2 = set()
 result = set1.symmetric_difference(set2)
 print(result)  # Output: {1, 2, 3}
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 
 The symmetric_difference() method is useful for finding elements unique to each set.

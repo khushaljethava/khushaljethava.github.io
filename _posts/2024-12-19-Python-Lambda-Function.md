@@ -7,16 +7,6 @@ tags: [python]
 image:
   path: /commons/Python Lambda Function.png
   alt: Python Lambda Function
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ---
 
 ## What is Python Lambda Function?
@@ -80,16 +70,6 @@ print("When we use lambda without argument:", lambda_fun)
 
 When we run the above program, we will get the following result.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Output:
 
 ```python
@@ -131,16 +111,6 @@ The output will be as follows.
 ```
 
 As we can see in the above program, both calcu() and lambda\_calcu() functions behave the same and as intended.
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 * **Without using Lambda:** Here, both of them return the cube of a given number. But, while using def, we needed to define a function with a name cube and required to pass a value to it. After execution, we were also required to return the result from where the function was called using the *return* keyword.  
 * **Using Lambda:** Lambda’s definition does not include a “return” statement. It always contains an expression that is returned. We can also put a lambda definition anywhere a function is expected, and we don’t have to assign it to a variable at all. This is the simplicity of lambda functions.

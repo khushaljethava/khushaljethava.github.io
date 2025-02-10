@@ -31,16 +31,6 @@ Let's check them one by one
 
 ## max() function with objects
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 It helps us to find the highest value object between two or more objects. As we can see this syntax:
 
 ```python
@@ -56,16 +46,6 @@ max(n1,n2,n3,*n,key)
 * **\*n (optional)** \- any number of objects.  
 * **key (optional)** \-  key function where each argument is passed, and comparison is performed based on its return value
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Let's check some examples of max() functions with objects.
 
 ### Example 1:How to find maximum value among, given numbers?
@@ -118,16 +98,6 @@ max(iterable, *iterable, key,default)
 * **iterable** \- an iterable that can be list, tuple, set, dictionary, etc.  
 * **\*iterable** \- any number of iterables: can be more than one.  
 * **key (optional)** \- key function where the iterables are passed and comparison is performed based on its return value  
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * **default (optional)** \- a default value if the given iterable is empty.
 
 ### Example 3: Find largest item from a list.

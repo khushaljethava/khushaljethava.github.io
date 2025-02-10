@@ -61,16 +61,6 @@ python --version
 
 The easiest way to run python:
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The easiest and secure way to run python code is by using python IDLE.  
 Python IDLE is the official text editor provided by python. It is available along with python on windows platforms, but we need to install it separately on Linux.
 
@@ -134,16 +124,6 @@ sudo apt install jupyter
 
 To open Jupyter notebook, we have to type jupyter notebook on the Linux terminal.  
 ![][image11]
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 ### Install Jupyter Notebook on Windows 
 
@@ -198,16 +178,6 @@ Step 5: Now go to its bin folder inside the pycharm folder.
 	
 
 ```bash 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 cd bin
 ```
 

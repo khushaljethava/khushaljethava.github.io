@@ -12,16 +12,6 @@ image:
 
 The Python set intersection_update() method modifies the original set by keeping only elements found in both sets. Unlike intersection(), this method updates the set in place and returns None. It can also be written using the &= operator.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The syntax of the intersection_update() method is:
 
 ```python
@@ -36,16 +26,6 @@ The intersection_update() method takes one parameter:
 
 * **set2:** Another set or iterable whose common elements will be retained in the original set.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Let's explore some examples:
 
 ```python
@@ -65,16 +45,6 @@ print(numbers1)  # Output: {3, 4}
 set1 = {1, 2, 3, 4}
 set2 = {2, 3, 4, 5}
 set3 = {3, 4, 5, 6}
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 set1.intersection_update(set2, set3)
 print(set1)  # Output: {3, 4}
 ```

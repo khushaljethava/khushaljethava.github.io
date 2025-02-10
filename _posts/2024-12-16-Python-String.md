@@ -94,16 +94,6 @@ As we can see, we have printed multiline the same as inside the code with the sa
 
 ## Accessing the string as Arrays
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 As we learn string is nothing but the sequences of characters, we can access individual characters in the string just like we do in arrays in other programming languages. 
 
 ### What is an array?
@@ -125,16 +115,6 @@ String[Index]
 
 ![][image1]
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Let see an example of how to access a string by index.
 
 Example
@@ -216,16 +196,6 @@ Output:
 gnimmargorP nohtyP evoL I
 
 ```
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 We can learn about the slice function here.(Link to slice())
 

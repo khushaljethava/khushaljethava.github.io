@@ -7,16 +7,6 @@ tags: [Built in reference]
 image:
  path: /commons/Python eval() Method.png
  alt: Python eval() Method
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ---
 
 ## What is Python eval() Method? 
@@ -58,16 +48,6 @@ The output will be as follow
 ```
 
 In the above example, the eval() method evaluates the expression num1 \+ num2 then we are using the print method to print the result.
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 ### Example 2: Using eval() method with user-defined method 
 
@@ -120,16 +100,6 @@ print(eval("x + 10",{"x":x}))
 y = 5
 print(eval("x + y",{"x":x}))
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 
 Output:

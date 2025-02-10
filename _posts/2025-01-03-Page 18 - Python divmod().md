@@ -13,16 +13,6 @@ image:
 
 ## What is Python divmod() Method?
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The divmod() method takes two numbers and returns a pair of numbers inside a tuple consisting of their quotient and remainder.
 
 The syntax of divmod() is:
@@ -30,32 +20,12 @@ The syntax of divmod() is:
 ```python
 divmod(x,y)
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 
 ## divmod() Parameters 
 
 divmod() takes two parameters:  
 x \- a non-complex number that can be referred to as a numerator.  
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 y \- a non-complex number that can be referred to as denominator
 
 Let see an example of divmod() method.

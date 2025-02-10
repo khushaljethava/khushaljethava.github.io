@@ -26,16 +26,6 @@ The help() method only takes a single parameter.
 
 * **object\_name (optional)** \- Name of the object which documentation you want to display.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## How to use the help() method in python?
 
 The python help() method can be used with the python interpreter for interactive use. 
@@ -105,16 +95,6 @@ help> for
 
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 To quit the help method in the python interpreter and return to the python shell, you just need to type quit and press enter or just press CTRL \+ Q key together.
 
 ```python
@@ -145,15 +125,5 @@ Try these on a python interpreter.
 >>>help('Python Scholar')
 ```
 ## Rules of Python help()
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 There are no such rules to use the python help() method. It is just for displaying python documentation.

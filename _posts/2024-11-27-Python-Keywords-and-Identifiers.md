@@ -23,16 +23,6 @@ The following list shows the keywords in python.
 | True | This keyword represents the Boolean Value ‘true.’ |
 | False | This keyword represents the Boolean Value ‘false.’ |
 | None | This keyword represents the Null Value |
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 | and | This is a logical operator |
 | as | This keyword used for creating an alias |
 | assert | The assert keyword is used to insert debugging assertions in the program. |
@@ -109,16 +99,6 @@ FAQ
 
 **Question:** Are python variable case sensitive?  
 **Answers:** Yes, the Python variable is case sensitive; both “Python” and “python” are different in a python programming language.
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 **Question:**Is python case sensitive when dealing with identifiers?  
 **Answers:**Yes, Python is case-sensitive when we are dealing with identifiers.
@@ -139,16 +119,6 @@ FAQ
     "name": "Is python case sensitive when dealing with identifiers?",
     "acceptedAnswer": {
       "@type": "Answer",
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
       "text": "Yes, Python is case-sensitive when we are dealing with identifiers."
     }
   }]

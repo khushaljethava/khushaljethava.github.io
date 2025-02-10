@@ -24,16 +24,6 @@ The syntax of the pass statement is:
 pass
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Let see an example of a pass statement with if..else conditional statement.
 
 ```python
@@ -71,29 +61,9 @@ Current Letter : o
 Current Letter : n
 Good bye!
 ```
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 As we can see we are printing letters using for loop and we have given the condition that if letter equal to h statement inside the if conditional should be executed and when the conditional get true we are calling pass statement and a print statement and as we can see python is skipping the pass statement and just print the given string inside the if condition.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Pass statement with the while loop
 
 As we know there are two loops in python, so just like for loop we can also use the same with while loop as follows.

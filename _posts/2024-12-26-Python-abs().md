@@ -11,16 +11,6 @@ image:
 ---
 
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
  The syntax of abs() method:
 
 ```python
@@ -34,16 +24,6 @@ We can only give a single argument in the abs() function.
 **number** \- A number can be an integer, floating number, or complex number whose absolute value of python will return. 
 
 Let see an example of the abs() function.
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 Example 1:
 
@@ -79,16 +59,6 @@ print("The Magnitude of 10 - 7j is:", abs(complex))
 The output is as follows:
 
 ```python
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The Magnitude of 10 - 7j is: 12.206555615733702
 ```
 ## Rules of abs()

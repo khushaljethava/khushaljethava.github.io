@@ -11,16 +11,6 @@ image:
 
 ## What is Python filter() Method?
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The filter() method returns an iterator where the items are filtered through a method to test if the item is true or not.
 
 The syntax of filter() method is:
@@ -35,31 +25,11 @@ filter(method, iterable)
 filter() method takes two parameters:
 
 * method \- it will take a method that tests if elements of an iterable return true or false.  
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 * iterable \- iterable which will be filtered, can be sets, lists, tuples, or containers of any iterators
 
 
 Let us see some examples of filter() method.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ### Example 1: How filter() method works for the iterable list?
 
 ```python

@@ -49,30 +49,10 @@ You can type python command to check whether Python is installed or not, and if 
 
 When you type python and press enter, you see the python interpreter, as shown below.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ![][image4]
 
 You can type the below code to execute the python program.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 print(“Hello World”)
 
 All python programs are stored in a ‘.py’ file, so when we develop any python program, it will be saved in ‘.py’ format. 
@@ -80,16 +60,6 @@ All python programs are stored in a ‘.py’ file, so when we develop any pytho
 To run a python program, you can use the python command followed by the file name with the python extension. 
 
 python program.py
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 The output will be as below.  
 ![][image5]

@@ -20,16 +20,6 @@ Typecasting is changing the data type of a variable, which can help day-to-day c
 
 In python, there are two types of Type conversion:
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 1) Implicit Type Conversion  
 2) Explicit Type Conversion
 
@@ -393,16 +383,6 @@ The type of my_list is: <class 'tuple'>
 ('P', 'H', 'T', 'N', 'Y', 'O')
 The type of my_set is: <class 'tuple'>
 ('H', 'e', 'l', 'l', 'o', 'W', 'o', 'r', 'l', 'd')
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 The type of my_string is: <class 'tuple'>
 ```
 
@@ -501,16 +481,6 @@ Output:
 ```
 
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4181667199679058"
      crossorigin="anonymous"></script>

@@ -28,16 +28,6 @@ Example 1: Declaring a single variable.
 ```python
 software = "Python"
 print(Software)
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 
 Output
@@ -200,16 +190,6 @@ File "<string>", line 1
     1x = 2
      ^
 SyntaxError: invalid syntax
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 
 Rule 2: When we assign a string in a variable, it should be Single to Double quotes; they both are the same.
@@ -285,16 +265,6 @@ Output
 ```python
 <class 'int'>
 ```
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 
 As we can see in the above example, we assign an integer value to a variable, and then we print that variable inside the type function. We are getting the output of that particular variable as data types.
 

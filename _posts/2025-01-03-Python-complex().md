@@ -18,31 +18,11 @@ The syntax of complex() is:
 complex([real[, img]])
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Python complex() Method  Parameters
 
 The complex() method takes two parameters:
 
 **real** \- if real is omitted, it will take default as 0\. real part.  
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 **img** \- if img is omitted, it will take default as 0\. Imaginary part.
 
 If the first parameter is passed as a string to this method, it will be interpreted as a complex number. In this case, it should not pass the second parameter.
@@ -65,16 +45,6 @@ print(X)
 
 X = complex('4-7j')
 print(X)
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ```
 
  The output will be as follow:

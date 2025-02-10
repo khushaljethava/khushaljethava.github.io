@@ -45,16 +45,6 @@ Output:
 
 Note: As Set is unordered, whenever we run this program, we will get an unordered result.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 Example of set() functions
 
 ```python
@@ -260,16 +250,6 @@ Output:
 
 We can see in the output that first, we are deleting an element with value Fish, then again we are deleting an element with a value Snake, which is not present in the set, but it is not returning any result or any error because when we use discard() method, it will not return any errors if the element is not present in the set.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 ## Concatenation of Python Set
 
 Concatenation to python sets means to merge or combine two or more sets into one.
@@ -331,16 +311,6 @@ frozenset({3, 4, 5, 6})
 | isdisjoint() | Returns whether two sets have an intersection or not |
 | issubset() | Returns whether another set contains this set or not |
 | issuperset() | Returns whether this set contains another set or not |
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
-		'format' : 'iframe',
-		'height' : 180,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
 | pop() | Removes an element from the set |
 | remove() | Removes the specified element |
 | symmetric\_difference() | Returns a set with the symmetric differences of two sets |
