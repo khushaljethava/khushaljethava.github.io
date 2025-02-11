@@ -32,7 +32,7 @@ The index() method takes up to three parameters:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 * end (Optional) - search end position. Default is the end of tuple
 
 ### Example 1: How to use index() method in python?
@@ -73,7 +73,7 @@ Output:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 * Returns the index of first occurrence only
 * Search range can be specified using start and end parameters
 <script type="text/javascript">
@@ -85,5 +85,5 @@ Output:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 * The end index is not included in the search

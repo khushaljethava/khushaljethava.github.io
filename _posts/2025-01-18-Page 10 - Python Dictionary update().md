@@ -18,7 +18,7 @@ image:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 The syntax of update() is:
 
 ```python
@@ -43,7 +43,7 @@ Let’s see an example of the update() method in the dictionary.
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 ### 
 
 <script type="text/javascript">
@@ -55,7 +55,7 @@ Let’s see an example of the update() method in the dictionary.
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 ### Example 1: How to use the update() method on python dictionary?
 
 ```python

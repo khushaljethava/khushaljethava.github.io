@@ -41,7 +41,7 @@ Let's check a simple example of the format()method.
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 ### Example 1: Simple formatting using format() method.
 
 ```python
@@ -75,7 +75,7 @@ We are learning Python from Pythonscholar.com
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 format() method also supports different types for formatting specifiers that helps to manipulate the results.
 
 | :\< | Result will be aligned left |
@@ -109,7 +109,7 @@ format() method also supports different types for formatting specifiers that hel
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 | :n | Number format |
 | :% | Percentage format |
 

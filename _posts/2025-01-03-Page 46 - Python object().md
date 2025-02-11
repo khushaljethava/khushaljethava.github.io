@@ -18,7 +18,7 @@ image:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 The syntax of object() method is:
 
 ```python
@@ -86,7 +86,7 @@ Size of my_list in bytes: 104 bytes
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 To convert an object to a string in python we can use python str() method.This function attempts to return a string representation of the object.
 
 ```python
@@ -105,7 +105,7 @@ print(my_string)
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 The output will be as follow:
 
 ```python

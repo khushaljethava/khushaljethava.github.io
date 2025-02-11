@@ -120,7 +120,7 @@ Where to Go from Here?
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 Now that you have a foundational understanding of LangChain, explore additional resources:
 
 *   Official documentation
@@ -134,7 +134,7 @@ Now that you have a foundational understanding of LangChain, explore additional 
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 *   Community discussions on GitHub and Reddit
 
 FAQs
@@ -167,7 +167,7 @@ FAQs
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [{

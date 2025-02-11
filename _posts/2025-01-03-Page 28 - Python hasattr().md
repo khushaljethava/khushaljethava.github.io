@@ -34,7 +34,7 @@ The hasattr() method takes two parameters:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 * **name** \- The name of the attribute to be checked if it exists.
 
 Let’s check some examples of hasattr() in python.
@@ -74,7 +74,7 @@ We can also check if the specified string attribute is present or not in the giv
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 ### Example 2: How to use hasattr() with a string in python?
 
 ```python
@@ -104,7 +104,7 @@ str has isstring method:  False
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 Here the hasattr() method is checking whether the given string is present in the object.
 
 ## Rules of hasattr()

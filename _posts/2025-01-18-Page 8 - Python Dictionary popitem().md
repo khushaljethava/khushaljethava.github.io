@@ -18,7 +18,7 @@ image:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 The syntax of popitem() is:
 
 ```python
@@ -94,7 +94,7 @@ KeyError: 'popitem(): dictionary is empty
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 As you can see it throws a KeyError exception when there is no item present in the dictionary.
 
 <script type="text/javascript">
@@ -106,7 +106,7 @@ As you can see it throws a KeyError exception when there is no item present in t
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 ## Rules of popitem()
 
 * The popitem() method works on LIFO order (Last in, First out).  

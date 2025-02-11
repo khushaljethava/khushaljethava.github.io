@@ -52,7 +52,7 @@ max(n1,n2,n3,*n,key)
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 * **\*n (optional)** \- any number of objects.  
 * **key (optional)** \-  key function where each argument is passed, and comparison is performed based on its return value
 
@@ -82,7 +82,7 @@ The largest number is: 72
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 ### Example 2: How to find maximum value among given variables?
 
 ```python
@@ -113,7 +113,7 @@ The largest number is: 92
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 ## max() function with iterable
 
 It helps us to find the highest value from an iterable. As we can see this syntax:

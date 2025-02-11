@@ -50,7 +50,7 @@ This is A String
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 As we can see only, the print function is executed, and the comment was not printed on the output. We can add comments in the code, but this is not the only method to add single-line comments. We can also add comments after our function or end of the code.
 
 Example Code:
@@ -210,7 +210,7 @@ In Python, we can't print any comments using any program or comments.
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
     "name": "How to make Comment in python?",
     "acceptedAnswer": {
       "@type": "Answer",
@@ -250,7 +250,7 @@ In Python, we can't print any comments using any program or comments."
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
   }]
 }
 </script>

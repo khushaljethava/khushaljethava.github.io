@@ -31,7 +31,7 @@ The slice() functions takes three parameters as argument:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 * step (optional) \- Optional. An integer number specifying the step of the slicing. Default is 1\.
 
 <script type="text/javascript">
@@ -43,7 +43,7 @@ The slice() functions takes three parameters as argument:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 Lets see an example of python slice() function.
 
 <script type="text/javascript">
@@ -55,7 +55,7 @@ Lets see an example of python slice() function.
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 ### Example 1: How to use slice() in python?
 
 ```python

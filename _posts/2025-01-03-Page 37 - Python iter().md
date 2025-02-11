@@ -22,7 +22,7 @@ The iter() is a Python built-in method that returns an iterator for the given ob
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 The syntax of the iter() method is:
 
 ```python
@@ -46,7 +46,7 @@ The iter() methods take two parameters as an argument:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 Let's check some examples of the python iter() method.
 
 ### Example 1: How to use the iter() method in python?
@@ -86,7 +86,7 @@ We can use the next() method to print the elements of iteration, and the iterati
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 We can also use \_\_next\_\_() method with ithe ter() method to print the iterator.
 
 ### Example 2: Using \_\_next\_\_() method in python iter() method.

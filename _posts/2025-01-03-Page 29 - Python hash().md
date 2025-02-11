@@ -35,7 +35,7 @@ hash() method takes only one parameter:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 * **object** \- The object whose hash value has to be returned. 
 
 Let's check some examples of the hash() method in python.
@@ -116,7 +116,7 @@ TypeError: unhashable type: 'list'
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 We can see that it has raised an error “unhashable type” because we cannot hash mutable objects. 
 
 ## Rules of hash() method
@@ -159,7 +159,7 @@ It is very easy to use the python hash() method, we just need to call the hash()
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 **what is hash function in python?**
 
 The hash function is a built-in python function that is used to encode the object in a hashed format.

@@ -25,7 +25,7 @@ list.insert(index, element)
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 ## insert() Parameters:
 
 The inser() methods takes two parameters as arguments.
@@ -67,7 +67,7 @@ List after insert() method:  [5, 2, 4, 6, 1, 10, 9]
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 * In insert() method it is compersuly to give index of the list to add the element.  
 * insert() method will not return anything.  
 <script type="text/javascript">
@@ -79,5 +79,5 @@ List after insert() method:  [5, 2, 4, 6, 1, 10, 9]
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 * Python list index starts from 0 so insert() method will work accordingly.

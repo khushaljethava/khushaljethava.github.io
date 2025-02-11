@@ -19,7 +19,7 @@ image:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 The Python set add() method is used to add a single element to an existing set. Since sets only store unique elements, if the element already exists in the set, the add() method has no effect. The add() method modifies the set in place and doesn't return any value.
 
 The syntax of the add() method is:
@@ -39,7 +39,7 @@ set.add(element)
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 The add() method takes a single required parameter:
 
 <script type="text/javascript">
@@ -51,7 +51,7 @@ The add() method takes a single required parameter:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 * **element:** The item to be added to the set. This can be any immutable type such as numbers, strings, or tuples. Lists and dictionaries cannot be added to sets as they are mutable.
 
 Sets in Python are unordered collections, which means the position of the new element in the set is not guaranteed or predictable.

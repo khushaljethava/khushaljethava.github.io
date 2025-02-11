@@ -19,7 +19,7 @@ image:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 The Python set difference_update() method removes all elements of another set from this set. Unlike difference(), this method modifies the original set in place rather than returning a new set. The method returns None.
 
 The syntax of the difference_update() method is:
@@ -45,7 +45,7 @@ The difference_update() method takes one parameter:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 Let's see some examples of how difference_update() works:
 
 ```python
@@ -78,5 +78,5 @@ print(set1)  # Output: {1, 5}
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 This method is memory-efficient when you need to remove elements from a large set.

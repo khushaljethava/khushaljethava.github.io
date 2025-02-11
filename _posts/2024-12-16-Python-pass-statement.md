@@ -25,7 +25,7 @@ The pass statement is useful when you are dealing with very large code when you 
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 Syntax
 
 The syntax of the pass statement is:
@@ -83,7 +83,7 @@ As we can see we are printing letters using for loop and we have given the condi
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 ## Pass statement with the while loop
 
 As we know there are two loops in python, so just like for loop we can also use the same with while loop as follows.
@@ -109,7 +109,7 @@ We can use pass statements in custom functions also, you can learn more about fu
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 Example:
 
 ```python

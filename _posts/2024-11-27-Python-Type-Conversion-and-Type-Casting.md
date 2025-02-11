@@ -131,7 +131,7 @@ In the above program,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 We are declaring variable X using the int() function.
 
 We are declaring variable Y with a float. Then we convert it using the int() method from float to integer.
@@ -181,7 +181,7 @@ print(float(False))
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 When we run the above code, we will get the following output:
 
 The type of X variable is:  \<class 'float'\>
@@ -377,7 +377,7 @@ The type of my_string is: <class 'set'>
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 ## Python tuple()
 
 This function is used to convert data types to a tuple.

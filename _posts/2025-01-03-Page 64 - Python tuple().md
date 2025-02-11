@@ -29,7 +29,7 @@ tuple(iterable)
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 The tuple() function takes only one parameter as argument.
 
 * iterable (Optional) \- an iterable or collection of items like list, set, dictionary , etc.
@@ -45,7 +45,7 @@ The tuple() function takes only one parameter as argument.
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 Lets an example of tuple() function in python:
 
 ### Example 1: How to use tuple() function in python?
@@ -87,7 +87,7 @@ Output:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 ## Rules of tuple()
 
 * It will only return when only an iterable is passed.  

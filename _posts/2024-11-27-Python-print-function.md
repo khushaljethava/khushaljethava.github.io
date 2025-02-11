@@ -76,7 +76,7 @@ print("String1", 'String2', 'String3', sep='#')
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 When we run the above program, we will get the following output.
 
 ```python
@@ -128,7 +128,7 @@ my_file.close()
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 This program tries to open the python.txt in writing mode. If this file doesn't exist, the python.txt file is created and opened in writing mode.
 
 Here, we have passed the my\_file file object to the file parameter. The string object 'Pretty cool, huh\!' is printed to the python.txt file (check it in your system).
@@ -145,6 +145,6 @@ Finally, the file is closed using the close() method.
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4181667199679058"
      crossorigin="anonymous"></script>

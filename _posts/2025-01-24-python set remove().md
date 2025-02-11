@@ -19,7 +19,7 @@ image:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 The Python set remove() method removes a specified element from a set. Unlike discard(), remove() raises a KeyError if the element is not found in the set.
 
 The syntax of the remove() method is:
@@ -37,7 +37,7 @@ set.remove(element)
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 ## Python set remove() Parameters
 
 <script type="text/javascript">
@@ -49,7 +49,7 @@ set.remove(element)
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 The remove() method takes one parameter:
 
 * **element:** The item to be removed from the set. Must be a member of the set.

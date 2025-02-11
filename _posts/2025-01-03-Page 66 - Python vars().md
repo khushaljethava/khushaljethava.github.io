@@ -29,7 +29,7 @@ vars() function takes only one parameter as argument:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 * object \- Any object having the \_\_dict\_\_ attribute or module,class ,instance.
 
 <script type="text/javascript">
@@ -41,7 +41,7 @@ vars() function takes only one parameter as argument:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 ### Example 1: How to use vars() function on python?
 
 ```python
@@ -76,6 +76,6 @@ The \_\_dict\_\_ attribute is a dictionary containing the specific object’s ch
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 * vars() will return the \_\_dict\_\_ attributes of the given object.  
 * If the object passed to vars() doesn't have the \_\_dict\_\_ attribute, it raises a TypeError exception.

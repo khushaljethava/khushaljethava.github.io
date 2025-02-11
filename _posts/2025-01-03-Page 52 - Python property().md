@@ -25,7 +25,7 @@ property(fget=None, fset=None, fdel=None, doc=None)
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 ## property() Parameters 
 
 The property() takes multiple optional parameters:
@@ -42,7 +42,7 @@ The property() takes multiple optional parameters:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 * doc (optional) \- A string representation that contains the documentation for the attribute. For example a docstring )
 
 ### Example 1: How to use property() function in python?
@@ -101,7 +101,7 @@ Deleting value
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 ## Rules of property()
 
 * If no arguments are given, property() returns a base property attribute that doesn't contain any getter, setter or deleter.  

@@ -28,7 +28,7 @@ The setattr() functions take three parameters as argument:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 * **object** \- the name of the object whose attribute has to set.   
 * **name** \- The name of the attribute  
 <script type="text/javascript">
@@ -40,7 +40,7 @@ The setattr() functions take three parameters as argument:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 * **value** \- value to be assigned to the attribute.
 
 ### Example 1: How to use setattr() function in python?
@@ -78,5 +78,5 @@ After modification: Rick
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 If you want to get the value of the specific attribute, we recommend getatt() function.

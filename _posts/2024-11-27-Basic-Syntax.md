@@ -40,7 +40,7 @@ print("Hello World!")
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 ![][image2]
 
 As we have seen in the above image, the print function is used in the python interpreter, but later in our tutorial, we will use the print function in the python program or python script.
@@ -56,7 +56,7 @@ As we have seen in the above image, the print function is used in the python int
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 Now we will do some necessary mathematical calculations in python using the python interpreter. We can add. Substation, multiplication, division, and many more.
 
 **Addition**
@@ -105,7 +105,7 @@ Now we will do some necessary mathematical calculations in python using the pyth
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 The help() function in function is used to see the documentation of all the python syntax. Every function and method in python comes with documentation. 
 
 We can use the help() function by calling it in the python interpreter.

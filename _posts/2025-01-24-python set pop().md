@@ -27,7 +27,7 @@ set.pop()
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 ## Python set pop() Parameters
 
 The pop() method doesn't take any parameters. It simply removes and returns a random element from the set.
@@ -41,7 +41,7 @@ The pop() method doesn't take any parameters. It simply removes and returns a ra
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 Here are examples demonstrating the pop() method:
 
 ```python
@@ -74,5 +74,5 @@ except KeyError:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 The pop() method is useful when you need to remove elements from a set one by one.

@@ -27,7 +27,7 @@ input(prompt)
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 ## Python input() Method Parameters
 
 The input() method takes only one optional argument:
@@ -43,7 +43,7 @@ The input() method takes only one optional argument:
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 Let’s see the same example of the input() method in python.
 
 ### Example 1: How to use the input() method in python?
@@ -128,7 +128,7 @@ This is how you can take input from users into different data types.
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 * The input() method reads a line from the input (usually from the user), converts the line into a string by removing the trailing newline, and returns it.  
     
 * If EOF is read, it raises an EOFError exception.
