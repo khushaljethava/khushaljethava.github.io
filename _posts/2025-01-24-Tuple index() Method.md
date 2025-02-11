@@ -25,14 +25,14 @@ The index() method takes up to three parameters:
 * start (Optional) - search start position. Default is 0
 <script type="text/javascript">
 	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
+		'key' : '98858c4e91885e00ea9926beee01c03e',
 		'format' : 'iframe',
-		'height' : 180,
-		'width' : 800,
+		'height' : 90,
+		'width' : 728,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 * end (Optional) - search end position. Default is the end of tuple
 
 ### Example 1: How to use index() method in python?
@@ -66,24 +66,24 @@ Output:
 * Raises ValueError if the value is not found
 <script type="text/javascript">
 	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
+		'key' : '98858c4e91885e00ea9926beee01c03e',
 		'format' : 'iframe',
-		'height' : 180,
-		'width' : 800,
+		'height' : 90,
+		'width' : 728,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 * Returns the index of first occurrence only
 * Search range can be specified using start and end parameters
 <script type="text/javascript">
 	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
+		'key' : '98858c4e91885e00ea9926beee01c03e',
 		'format' : 'iframe',
-		'height' : 180,
-		'width' : 800,
+		'height' : 90,
+		'width' : 728,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 * The end index is not included in the search

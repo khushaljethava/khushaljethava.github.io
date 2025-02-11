@@ -11,14 +11,14 @@ image:
 
 <script type="text/javascript">
 	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
+		'key' : '98858c4e91885e00ea9926beee01c03e',
 		'format' : 'iframe',
-		'height' : 180,
-		'width' : 800,
+		'height' : 90,
+		'width' : 728,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 The syntax of repr() is:
 
 ```python
@@ -36,14 +36,14 @@ Let's check some examples of the python repr() function.
 
 <script type="text/javascript">
 	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
+		'key' : '98858c4e91885e00ea9926beee01c03e',
 		'format' : 'iframe',
-		'height' : 180,
-		'width' : 800,
+		'height' : 90,
+		'width' : 728,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 ### Example 1: How to use the repr() function in python?
 
 ```python
@@ -64,14 +64,14 @@ In the above program, we assign a value “Python” to the object\_name variabl
 
 <script type="text/javascript">
 	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
+		'key' : '98858c4e91885e00ea9926beee01c03e',
 		'format' : 'iframe',
-		'height' : 180,
-		'width' : 800,
+		'height' : 90,
+		'width' : 728,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 ## Rules of repr()
 
 * repr() will return a string representing a given object; if the integer is given, it will return it as a string.

@@ -11,14 +11,14 @@ image:
 
 <script type="text/javascript">
 	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
+		'key' : '98858c4e91885e00ea9926beee01c03e',
 		'format' : 'iframe',
-		'height' : 180,
-		'width' : 800,
+		'height' : 90,
+		'width' : 728,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 The syntax of isinstance() is:
 
 ```python
@@ -37,14 +37,14 @@ Let us see some examples of the python isinstance() method.
 
 <script type="text/javascript">
 	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
+		'key' : '98858c4e91885e00ea9926beee01c03e',
 		'format' : 'iframe',
-		'height' : 180,
-		'width' : 800,
+		'height' : 90,
+		'width' : 728,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 ### Example 1: How to use the isinstance() method in python?
 
 ```python
@@ -73,12 +73,12 @@ True
 * True if the object is an instance or subclass of a class or any element of the tuple, False otherwise.  
 <script type="text/javascript">
 	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
+		'key' : '98858c4e91885e00ea9926beee01c03e',
 		'format' : 'iframe',
-		'height' : 180,
-		'width' : 800,
+		'height' : 90,
+		'width' : 728,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 * If classinfo is not a type or tuple of types, a TypeError exception is raised.

@@ -11,14 +11,14 @@ image:
 
 <script type="text/javascript">
 	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
+		'key' : '98858c4e91885e00ea9926beee01c03e',
 		'format' : 'iframe',
-		'height' : 180,
-		'width' : 800,
+		'height' : 90,
+		'width' : 728,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 The syntax of ord() is:
 
 ```python
@@ -56,26 +56,26 @@ Output:
 
 <script type="text/javascript">
 	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
+		'key' : '98858c4e91885e00ea9926beee01c03e',
 		'format' : 'iframe',
-		'height' : 180,
-		'width' : 800,
+		'height' : 90,
+		'width' : 728,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 ## Rules of ord()
 
 * The ord() function will only return an integer when a single string is passed.
 
 <script type="text/javascript">
 	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
+		'key' : '98858c4e91885e00ea9926beee01c03e',
 		'format' : 'iframe',
-		'height' : 180,
-		'width' : 800,
+		'height' : 90,
+		'width' : 728,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 You can also check the Python chr() function that does the total inverse from the Python ord() function.

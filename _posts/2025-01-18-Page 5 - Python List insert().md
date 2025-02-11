@@ -18,14 +18,14 @@ list.insert(index, element)
 
 <script type="text/javascript">
 	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
+		'key' : '98858c4e91885e00ea9926beee01c03e',
 		'format' : 'iframe',
-		'height' : 180,
-		'width' : 800,
+		'height' : 90,
+		'width' : 728,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 ## insert() Parameters:
 
 The inser() methods takes two parameters as arguments.
@@ -60,24 +60,24 @@ List after insert() method:  [5, 2, 4, 6, 1, 10, 9]
 
 <script type="text/javascript">
 	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
+		'key' : '98858c4e91885e00ea9926beee01c03e',
 		'format' : 'iframe',
-		'height' : 180,
-		'width' : 800,
+		'height' : 90,
+		'width' : 728,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 * In insert() method it is compersuly to give index of the list to add the element.  
 * insert() method will not return anything.  
 <script type="text/javascript">
 	atOptions = {
-		'key' : 'f934c5057f4cfe34762901514605d248',
+		'key' : '98858c4e91885e00ea9926beee01c03e',
 		'format' : 'iframe',
-		'height' : 180,
-		'width' : 800,
+		'height' : 90,
+		'width' : 728,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/f934c5057f4cfe34762901514605d248/invoke.js"></script>
+<script type="text/javascript" src="//www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 * Python list index starts from 0 so insert() method will work accordingly.
