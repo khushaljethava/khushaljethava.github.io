@@ -92,7 +92,7 @@ In this method, we will send a text SMS to the mobile number person, as we did i
 
 Here we will use almost the same code but change only one function. Instead of stmp, we will use win10toast and request a library for integrating the API.
 
-We will use [Fast2sms](http://www.fast2sms.com) API services to send the SMS. Also, we need to create the account in order to access the API and get API credentials.
+We will use [Fast2sms](https://www.fast2sms.com) API services to send the SMS. Also, we need to create the account in order to access the API and get API credentials.
 
 So let's first install the wintoast in our virtual movement. Also, we will not install the request because it already comes built-in.
 
