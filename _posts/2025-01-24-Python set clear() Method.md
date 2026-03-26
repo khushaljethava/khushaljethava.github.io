@@ -12,46 +12,19 @@ image:
 
 The Python set clear() method removes all elements from a set, making it empty. This method modifies the set in place and doesn't return any value. Once cleared, the set still exists but contains no elements.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 The syntax of the clear() method is:
 
 ```python
 set.clear()
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 ## Python set clear() Parameters
 
 The clear() method doesn't take any parameters. It simply removes all elements from the set, regardless of their type or value.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 Since sets are mutable, the clear() method modifies the original set rather than creating a new empty set. This is memory efficient when you need to empty a large set.
 
 Let's explore some examples to understand how the clear() method works:

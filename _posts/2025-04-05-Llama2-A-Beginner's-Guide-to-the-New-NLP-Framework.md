@@ -1,12 +1,12 @@
 ---
-title: Llama2: A Beginner's Guide to the New NLP Framework
+title: "Llama2: A Beginner's Guide to the New NLP Framework"
 description: In this amazing article, we will learn about a very powerful python llm model called Llama2 and we will also see how we can use it with python. So stay tuned with this large language model tutorial.
 date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
- path: /commons/Llama2: A Beginner's Guide to the New NLP Framework.png
- alt: Llama2: A Beginner's Guide to the New NLP Framework
+ path: "/commons/Llama2: A Beginner's Guide to the New NLP Framework.png"
+ alt: "Llama2: A Beginner's Guide to the New NLP Framework"
 ---
 
 ## What is the Llama 2 model? 

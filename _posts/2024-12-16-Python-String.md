@@ -11,7 +11,6 @@ image:
 ---
 
 
-
 ## What is a string in Python?
 
 A String is a simple sequence of characters, like a simple text you see here. However, python doesn’t have data type characters like other programming languages.
@@ -90,16 +89,7 @@ Python is a general-purpose interpreted,
 
         
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 As we can see, we have printed multiline the same as inside the code with the same format.
 
 ## Accessing the string as Arrays
@@ -114,16 +104,7 @@ We can work on arrays using one of the most popular python libraries called Nump
 
 How to access characters in Python String?
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 The characters or an element can be accessed by square brackets \[ \] in python because a single character is a string with a length of 1\.
 
 Syntax
@@ -193,16 +174,7 @@ print(String[-10:-1]) # Index start from negative 2 to negative 7
 print(String[2:10:2]) # Here Index is starting at 2 and end at 10 and taking 2 steps in string
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 Output 
 
 ```python

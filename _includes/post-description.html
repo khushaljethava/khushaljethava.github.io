@@ -1,0 +1,1 @@
+{% assign post_description = post.description | default: post.content | markdownify | strip_html | truncate: include.max_length %}{{ post_description }}

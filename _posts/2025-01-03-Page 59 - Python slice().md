@@ -22,40 +22,13 @@ The slice() functions takes three parameters as argument:
 
 * start (optional) \- An integer number specifying at which position to start the slicing. Default is 0  
 * stop \- An integer number specifying at which position to end the slicing  
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 * step (optional) \- Optional. An integer number specifying the step of the slicing. Default is 1\.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 Lets see an example of python slice() function.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 ### Example 1: How to use slice() in python?
 
 ```python

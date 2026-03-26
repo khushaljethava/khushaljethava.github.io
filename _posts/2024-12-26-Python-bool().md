@@ -21,16 +21,7 @@ bool(value)
 
 The bool()  has no specified parameter; it is not mandatory to pass a value to the bool() method. 
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 Let see an example of the bool() method.
 
 Example 1: Using bool() method.
@@ -66,16 +57,7 @@ True is True
 Easy string is True
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 The following values are always considered false in Python:
 
 * None will return False as it is a Null value.  
@@ -85,16 +67,7 @@ The following values are always considered false in Python:
 
 All other values except these values are considered true.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 ## Rules of bool() method.
 
 * If the value is not empty and has any true value, it will return True.  

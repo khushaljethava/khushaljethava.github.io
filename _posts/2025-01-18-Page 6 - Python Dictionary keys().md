@@ -16,16 +16,7 @@ dictionary.keys()
 
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 ## keys() Parameters
 
 The keys() method does not take any parameters as arguments.
@@ -40,7 +31,6 @@ print(cars.keys())
 ```
 
 
-
 Output:
 
 ```python
@@ -50,26 +40,8 @@ dict_keys(['BMW', 'TOYOTA', 'TATA'])
 
 The keys() method will return an empty list when an empty dictionary is passed and when any changes are done in the dictionary, the view object will also reflect these changes when passed.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 ## Rules of keys()
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 There are no such rules for keys() method.

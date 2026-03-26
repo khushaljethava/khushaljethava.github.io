@@ -9,16 +9,7 @@ image:
  alt: Python isinstance() method
 ---
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 The syntax of isinstance() is:
 
 ```python
@@ -35,16 +26,7 @@ isinstance() method takes two parameters as arguments:
 
 Let us see some examples of the python isinstance() method.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 ### Example 1: How to use the isinstance() method in python?
 
 ```python
@@ -71,14 +53,5 @@ True
 ## Rules of isinstance()
 
 * True if the object is an instance or subclass of a class or any element of the tuple, False otherwise.  
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 * If classinfo is not a type or tuple of types, a TypeError exception is raised.

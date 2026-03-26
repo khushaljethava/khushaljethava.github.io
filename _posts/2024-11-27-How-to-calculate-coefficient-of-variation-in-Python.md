@@ -46,30 +46,12 @@ Where:
 
 Where:
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 * σ \= Standard Deviation  
 * Σ(x−µ)2  \= Sum of squared differences between each data point (x) and the mean (µ)  
 * n \= Total number of data points
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 **Step 4:** Calculate the Coefficient of Variation (CV)
 
 Now that you have the mean (µ) and standard deviation (σ), you can calculate the CV:
@@ -80,16 +62,7 @@ Where:
 
 * CV \= Coefficient of Variation  
 * σ \= Standard Deviation  
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 * µ \= Mean
 
 As we have learned how to calculate standard deviation and coefficient of variation, it is time to see how we can calculate the coefficient of variation using Python.
@@ -138,7 +111,6 @@ print(f"The Coefficient of Variation is: {cv:.2f}%")
 When we will run the above code, it will calculate and display the Coefficient of Variation for a given dataset.
 
 [image2]: <data:image/png;base64,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>
-
 
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4181667199679058"

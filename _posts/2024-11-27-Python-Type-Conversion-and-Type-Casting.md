@@ -3,7 +3,6 @@ title: Python Type Casting or Type Conversion
 description: In this tutorial, we will learn about Python Type Casting by using python type conversion.
 
 
-
 date: 2024-11-27 11:33:00 +0800
 categories: [Python]
 tags: [python]
@@ -122,16 +121,7 @@ The type of Z variable is:  <class 'int'>
 
 In the above program,
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 We are declaring variable X using the int() function.
 
 We are declaring variable Y with a float. Then we convert it using the int() method from float to integer.
@@ -172,16 +162,7 @@ print(float(True))
 print(float(False))
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 When we run the above code, we will get the following output:
 
 The type of X variable is:  \<class 'float'\>
@@ -368,16 +349,7 @@ The type of my_list is: <class 'set'>
 The type of my_string is: <class 'set'>
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 ## Python tuple()
 
 This function is used to convert data types to a tuple.
@@ -509,7 +481,6 @@ Output:
 ```python
 0o120
 ```
-
 
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4181667199679058"

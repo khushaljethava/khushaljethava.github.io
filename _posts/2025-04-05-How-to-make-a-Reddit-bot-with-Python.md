@@ -1,7 +1,6 @@
 ---
 title: How to make a Reddit bot with Python
 description: In this blog, we will learn about developing a Reddit bot with Python that is useful for many tasks and that can be very much useful in many ways.  
-![][image1]
 date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]

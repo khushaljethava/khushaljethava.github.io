@@ -12,7 +12,6 @@ image:
 ---
 
 
-
 ## Python print function
 
 The print() function prints the given message to the screen of the output device, which can be a python interpreter, Terminal, or an IDE (integrated development environment), and the message can be a string or any other object like a list, tuple, set and dictionary.
@@ -67,16 +66,7 @@ print("String1", 'String2', 'String3', sep='0')
 print("String1", 'String2', 'String3', sep='#')
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 When we run the above program, we will get the following output.
 
 ```python
@@ -119,16 +109,7 @@ print('Hello World!', file = my_file)
 my_file.close()
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 This program tries to open the python.txt in writing mode. If this file doesn't exist, the python.txt file is created and opened in writing mode.
 
 Here, we have passed the my\_file file object to the file parameter. The string object 'Pretty cool, huh\!' is printed to the python.txt file (check it in your system).
@@ -136,15 +117,5 @@ Here, we have passed the my\_file file object to the file parameter. The string 
 Finally, the file is closed using the close() method.
 
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4181667199679058"
      crossorigin="anonymous"></script>

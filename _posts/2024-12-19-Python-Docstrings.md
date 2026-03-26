@@ -14,16 +14,7 @@ image:
 Python docstring or Documentation strings is a string literally used in the class, module, function, or method definition. 
 
 As like multiline comment, docstring is also declared using three (‘’’) or four (“””). For example   
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 **‘’’ triple single quotes ‘’’** or **“”” triple double quotes ”””**
 
 Docstrings are accessible from the doc attribute (\_\_doc\_\_)   for any of the Python objects and built-in functions. Docstrings are great for understanding the functionality of the more extensive code of the project.
@@ -57,16 +48,7 @@ Here, we have documented our addition function, and then we are accessing it wit
 
 ## Docstring in built-in functions
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 Now let's use docstring for the built-in python function and let it have a print function, for example.
 
 ```python
@@ -92,16 +74,7 @@ As we can see, we got the documentation output of the print() function defined b
 
  
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 ## Docstring in Python Module
 
 ```python

@@ -21,16 +21,7 @@ bytearray([source, encoding, errors)
 ```
 ## Python bytearray() Parameters
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 bytearray() takes three optional parameters:
 
 * **source (Optional) \-** A source to Initialize the array of bytes.  
@@ -39,16 +30,7 @@ bytearray() takes three optional parameters:
 
 Let's see some examples of the bytearray() method in python.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 Example 1: Using bytearray() with an integer.
 
 ```python
@@ -91,16 +73,7 @@ my_list = [1,2,3,4,5]
 print(bytearray(my_list))
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 Output:
 
 ```python

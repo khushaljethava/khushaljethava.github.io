@@ -1,12 +1,12 @@
 ---
-title: ChatGPT in Python: A Beginner's Guide
+title: "ChatGPT in Python: A Beginner's Guide"
 description: In the blog, we will have a complete view of openai chatgpt, the most well know multilingual AI in the market. We will also learn about its use cases and how to chatgpt in python.  
 date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
- path: /commons/ChatGPT in Python: A Beginner's Guide.png
- alt: ChatGPT in Python: A Beginner's Guide
+ path: "/commons/ChatGPT in Python: A Beginner's Guide.png"
+ alt: "ChatGPT in Python: A Beginner's Guide"
 ---
 
 ## Introduction to ChatGPT

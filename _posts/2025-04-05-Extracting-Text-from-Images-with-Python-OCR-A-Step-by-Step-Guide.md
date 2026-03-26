@@ -1,12 +1,12 @@
 ---
-title: Extracting Text from Images with Python OCR: A Step-by-Step Guide
+title: "Extracting Text from Images with Python OCR: A Step-by-Step Guide"
 description: In the article, we will learn about a fantastic technology used to extract raw text from images using python programming. Python OCR comes with many libraries to extract the texts from different types of images and documents. In this python ocr tutorial, we will see a step-by-step guide to using them.
 date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
- path: /commons/Extracting Text from Images with Python OCR: A Step-by-Step Guide.png
- alt: Extracting Text from Images with Python OCR: A Step-by-Step Guide
+ path: "/commons/Extracting Text from Images with Python OCR: A Step-by-Step Guide.png"
+ alt: "Extracting Text from Images with Python OCR: A Step-by-Step Guide"
 ---
 
 Keyword: Python OCR  

@@ -43,16 +43,7 @@ max(n1,n2,n3,*n,key)
 * **n1** \- an object; can be a number, string, etc.  
 * **n2** \- an object; can be a number, string, etc.  
 * **n3**  \- an object; can be a number, string, etc.  
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 * **\*n (optional)** \- any number of objects.  
 * **key (optional)** \-  key function where each argument is passed, and comparison is performed based on its return value
 
@@ -73,16 +64,7 @@ The largest number is: 72
 
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 ### Example 2: How to find maximum value among given variables?
 
 ```python
@@ -104,16 +86,7 @@ The largest number is: 92
 
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 ## max() function with iterable
 
 It helps us to find the highest value from an iterable. As we can see this syntax:

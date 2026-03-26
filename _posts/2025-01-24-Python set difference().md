@@ -10,16 +10,7 @@ image:
 
 ---
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 The Python set difference() method returns a new set containing elements that exist in the first set but not in the second set. It can also be written using the minus operator (-). The original sets remain unchanged.
 
 The syntax of the difference() method is:
@@ -34,16 +25,7 @@ set1 - set2
 
 The difference() method takes one parameter:
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 * **set2:** Another set, or any iterable (list, tuple, etc.) whose elements will be removed from the first set.
 
 Here are examples demonstrating the difference() method:
@@ -69,14 +51,5 @@ result = set1.difference(set2, set3)
 print(result)  # Output: {1}
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 The difference() method is particularly useful when you need to find elements that are unique to one set.

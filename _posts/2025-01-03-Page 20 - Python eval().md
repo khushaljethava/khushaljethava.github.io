@@ -9,16 +9,7 @@ image:
  alt: Python eval() Method
 ---
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 ## What is Python eval() Method? 
 
 The python eval() method helps execute the specified expression; it can execute the legal python statement. 
@@ -57,16 +48,7 @@ The output will be as follow
 
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 In the above example, the eval() method evaluates the expression num1 \+ num2 then we are using the print method to print the result.
 
 ### Example 2: Using eval() method with user-defined method 
@@ -135,16 +117,7 @@ NameError: name 'Y' is not defined
 ```
 
 In the eval() method, we are passing a custom dictionary to a globals parameter as an argument. The eval() method will take only those variables which are declared as globals only.   
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 In the above program, we declare x in the dictionary. That’s why it gives us the output, but when we are taking y, it is throwing us an error because we have not declared y in the dictionary.
 
 ## Rules of eval() method.

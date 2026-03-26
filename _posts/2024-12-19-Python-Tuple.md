@@ -145,16 +145,7 @@ Output:
 
 As we can see, it is returning the values of index third, fourth and fifth because the tuple indexes start from 0\. That’s why it starts from index2 and ends at index 5, but it does not include 5 because the index has started from 0\.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 Let us see some more examples of the slicing of tuples.
 
 Example:
@@ -189,16 +180,7 @@ Output:
 ('orange', 'kiwi', 'melon')
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 ## Concatenation of Python Tuple
 
 Concatenation to python tuples means to merge or combine two or more tuples into one. We can use the \+ operator to combine two tuples.
@@ -230,16 +212,7 @@ Using * Operator
 
 ## Deleting a Tuple elements 
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 As we learn that a tuple is immutable, we cannot change elements in a tuple, so also, we cannot delete the elements in a tuple, or we can delete an entire tuple together. 
 
 Let we an example 

@@ -21,16 +21,7 @@ In this blog post, we will explore different ways to change font size in Python 
 
 Let's see some examples of how to change the font size in python 
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 ## Using Matplotlib: Changing Font Size in Plots and Charts
 
 Matplotlib is a popular data visualization library that provides various tools for creating high-quality plots and charts in Python. One essential aspect of data visualization is the ability to customize font size to improve readability and visual appeal. In this section, we will explore how to change font size in Matplotlib using various techniques.
@@ -213,16 +204,7 @@ root.mainloop()
 
 In this example, we create a text widget with a font size of 14 points and the Arial font family. You can change the font size to any value that suits your needs.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 #### Changing Font Style
 
 To change the font style of text in Tkinter, you can use the font parameter with additional arguments to specify the font style, such as bold or italic. Here's an example:
@@ -333,16 +315,7 @@ Changing the font size is an important aspect of customizing the appearance of y
 
 By following these best practices, you can ensure that your Python code and data visualizations are not only functional but also visually appealing and easy to work with. Remember, a well-designed and readable codebase can make all the difference when it comes to collaborating with others and maintaining your code over time.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 ## FAQS on How to Change Font Size in Python
 
 **Question**: Can I change the font size of text printed in the console?
@@ -407,7 +380,6 @@ By following these best practices, you can ensure that your Python code and data
           }]
         }
         </script>
-
 
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4181667199679058"

@@ -26,16 +26,7 @@ Python  created by **Guido van Rossum** during 1982-1990. At Centrum Wiskunde & 
 	( Guido van Rossum)	
 
  ![Where python was created.][image2]  
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 					(CWI)
 
 ## Why Named Python?
@@ -158,33 +149,14 @@ Python is straightforward to implement and easy to read compared to other progra
 | C++      |                                                                                             |
 |          | #include <iostream>                                                                                |
 |          | using namespace std;                                                                               |
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 |          |                                                                                                    |
 |          | int main() {                                                                                       |
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 |          |     cout << "Hello World!";                                                                        |
 |          |     return 0;                                                                                      |
 |          | }                                                                                                  |
 |          |                                                                                                |
-
 
 
 ## How python is different from other languages

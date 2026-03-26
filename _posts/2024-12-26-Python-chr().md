@@ -11,16 +11,7 @@ image:
 
  The chr() method in python returns a string character from an integer. It will represent unicode code which is pointed to the specific character.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 The syntax of chr() is:
 
 ```python
@@ -31,16 +22,7 @@ chr(num)
 
 chr() method takes a single parameter, which is an integer num.  
    
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 The chr() method can only take a valid range of the integer from 0 to 1,114,111.
 
 Let us see some examples of the chr() method.
@@ -53,16 +35,7 @@ print(chr(483))
 print(chr(1274))
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 When we execute the above program, we will get the following results.
 
 ```python

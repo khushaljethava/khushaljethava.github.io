@@ -9,16 +9,7 @@ image:
  alt: Python object() Method
 ---
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 The syntax of object() method is:
 
 ```python
@@ -65,7 +56,6 @@ size = sys.getsizeof(my_list)
 print(f"Size of my_list in bytes: {size} bytes")
 
 
-
 ```
 
 Output:
@@ -77,16 +67,7 @@ Size of my_list in bytes: 104 bytes
 
 ### Example 3: python convert object to string
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 To convert an object to a string in python we can use python str() method.This function attempts to return a string representation of the object.
 
 ```python
@@ -96,16 +77,7 @@ print(my_string)
 
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 The output will be as follow:
 
 ```python

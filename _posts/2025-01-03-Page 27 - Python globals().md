@@ -13,16 +13,7 @@ image:
 
 The python globals() method returns the dictionary of the current global symbol table.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 ## What is the symbol table in python?
 
 A symbol table is a data structure that contains all the necessary information regarding the program that includes variable names, functions, methods, classes, etc.
@@ -38,16 +29,7 @@ globals()
 
 The globals() method does not take any parameter.
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 Let us check some examples of globals() method.
 
 If we use the globals() method in the python interpreter, it will show as all the global variables and other default symbols declared by python. 
@@ -124,16 +106,7 @@ from pprint import pprint
 pprint(globals())
 
 ```
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 The output will be as follow:
 
 ```python

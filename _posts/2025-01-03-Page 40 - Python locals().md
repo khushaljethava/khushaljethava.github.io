@@ -17,16 +17,7 @@ The python locals() method returns the dictionary of the current local symbol ta
 
 ## What is the symbol table in python?
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 A symbol table is a data structure containing all the necessary information regarding the program, including variable names, methods, methods, classes, etc.
 
 The syntax of locals() method is:
@@ -39,16 +30,7 @@ globals()
 
 locals() parameters
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 ## locals() parameters
 
 The locals() method does not take any parameter.
@@ -64,16 +46,7 @@ Using the locals() method in the python interpreter will show all the local vari
 
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 When you run the above program, it will display the following output on the python interpreter.
 
 Output:

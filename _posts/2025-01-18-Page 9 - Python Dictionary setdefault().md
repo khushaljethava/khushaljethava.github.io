@@ -20,16 +20,7 @@ dictionary.setdefault(key, default_value)
 The python setdefault() method takes two parameters as arguments:
 
 * **key** \- Key to being searched in the dictionary.  
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 * **default\_value** \- The value to be returned in case the key is not found. If not provided, the defalut\_value will be None.
 
 Let see some examples of python dictionaries setdefault() method.
@@ -69,16 +60,7 @@ print('age = ',age)
 
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 Output:
 
 ```python
@@ -91,15 +73,6 @@ age =  4
 
 ## Rules of setdefault() 
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 * Only returns a result if the given key is present in the dictionary.  
 * Will return None when the key is not present in the dictionary and default value is not specified.

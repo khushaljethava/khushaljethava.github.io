@@ -11,7 +11,6 @@ image:
 ---
 
 
-
 ## Introduction to LangChain
 Let’s understand what LangChain is, its features, and its uses.
 
@@ -111,30 +110,12 @@ print(llm_chain.run("Who was the 5th president of the United States?"))
 Where to Go from Here?
 ----------------------
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 Now that you have a foundational understanding of LangChain, explore additional resources:
 
 *   Official documentation
 *   Tutorials on YouTube and the LangChain website
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 *   Community discussions on GitHub and Reddit
 
 FAQs
@@ -158,16 +139,7 @@ FAQs
 
 <script type="application/ld+json">
 {
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [{
@@ -201,7 +173,6 @@ FAQs
   }]
 }
 </script>
-
 
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4181667199679058"

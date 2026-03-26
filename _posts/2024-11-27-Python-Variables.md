@@ -145,16 +145,7 @@ Output
 Python
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 As you change, see in the example first we are assigning the int value to the variable X, and then after that, we are reassigning variable X with a String, and this is how we can reuse the same variable multiple times.
 
 ### Casting of Variables
@@ -221,16 +212,7 @@ Khus
 Khus
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 Rule 3: Python is a Case-Sensitive Programming language that means   
 	X \= 3 and x \= "Python" is completely different.
 
@@ -244,16 +226,7 @@ print(X)
 print(x)
 ```
 
-<script type="text/javascript">
-	atOptions = {
-		'key' : '98858c4e91885e00ea9926beee01c03e',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/98858c4e91885e00ea9926beee01c03e/invoke.js"></script>
+
 ## del Function in Python
 
 The Python del keyword is used to del objects like variables and functions m classes. We will see the del keyword in future tutorials as it is going to be used in all other python tutorials. In  
@@ -344,7 +317,6 @@ Output
 6) Do not start a variable name with a digit.  
 7) Only use the del function if necessary.   
 8) Try to practice type functions in all other python functions you learn in the future.
-
 
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4181667199679058"
