@@ -4,7 +4,7 @@ description: In this tutorial, we will learn about the coefficient of variation,
 
 date: 2024-11-27 11:33:00 +0800
 categories: [GenAI]
-tags: [AI]
+tags: [ai]
 
 image:
   path: /commons/How to calculate coefficient of variation in Python.png

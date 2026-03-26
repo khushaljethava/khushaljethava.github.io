@@ -4,7 +4,7 @@ description: In this blog, we will learn about the LangChain framework, which is
 
 date: 2024-11-27 11:33:00 +0800
 categories: [GenAI]
-tags: [AI]
+tags: [ai]
 image:
   path: /commons/Beginner Guide to LangChain in Python.jpg
   alt: Beginner's Guide to LangChain in Python
