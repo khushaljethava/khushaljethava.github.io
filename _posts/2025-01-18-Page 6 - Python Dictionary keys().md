@@ -5,8 +5,8 @@ date: 2025-01-18 21:38:03 +0800
 categories: [Python Dictionary Reference]
 tags: [Python Dictionary Reference]
 image:
- path: /commons/Python Dictionary keys().png
- alt: Python Dictionary keys()
+  path: /commons/Python Dictionary keys().png
+  alt: Python Dictionary keys()
 ---
 
 The syntax of keys() is:

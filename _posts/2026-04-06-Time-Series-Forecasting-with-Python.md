@@ -5,8 +5,8 @@ date: 2026-04-06 12:00:00 +0800
 categories: [Python]
 tags: [python, machine-learning, time-series]
 image:
- path: "/commons/Time Series Forecasting with Python A Practical Guide.png"
- alt: "Time Series Forecasting with Python: A Practical Guide"
+  path: "/commons/Time Series Forecasting with Python A Practical Guide.png"
+  alt: "Time Series Forecasting with Python: A Practical Guide"
 ---
 
 ## What Is Time Series Forecasting?

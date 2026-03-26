@@ -5,8 +5,8 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
- path: /commons/how to extract images from pdf in Python.png
- alt: how to extract images from pdf in Python
+  path: /commons/how to extract images from pdf in Python.png
+  alt: how to extract images from pdf in Python
 ---
 
 Here first, we will learn about how to read pdf files in python, then extract them, and at last, we will save them.

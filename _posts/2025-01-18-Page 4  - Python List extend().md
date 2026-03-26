@@ -5,8 +5,8 @@ date: 2025-01-18 23:28:25 +0800
 categories: [Python List reference]
 tags: [Python List reference]
 image:
- path: /commons/Python List extend().png
- alt: Python List extend()
+  path: /commons/Python List extend().png
+  alt: Python List extend()
 ---
 
 

@@ -17,7 +17,7 @@ Python has the following built-in data types by default.
 
 As we can see in the above diagram, there are nine default python data types in python. All nine data types have different purposes.
 
-1) ## Python Text or String Data types
+## 1. Python text or String data types
 
 A text or a string data type which can store a value like letters from a-z in the capital as well as in small, Integer values like 0-9 or a float value like 1.5, 3.7, 200.453, etc. and we can also use all the specials characters like @,$,%,&, \*. Generally, strings are represented by either single or double quotes.
 
@@ -59,7 +59,7 @@ This is an example of a Type function.
 
 Learn advanced topics like string slicing, manipulation, and much more from here(Link).
 
-2) ## Python Numeric Data Type
+## 2. Python numeric data type
 
 Python Numeric data types are used to store numeric values like 0-9, 10000, or like 500.34, 2.4, 0.5, etc.
 

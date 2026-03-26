@@ -5,8 +5,8 @@ date: 2025-01-03 22:42:23 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
- path: /commons/Python pow().png
- alt: Python pow()
+  path: /commons/Python pow().png
+  alt: Python pow()
 ---
 
 The syntax of pow() is:

@@ -5,8 +5,8 @@ date: 2026-04-05 12:00:00 +0800
 categories: [Python]
 tags: [python, machine-learning, recommendation-systems]
 image:
- path: "/commons/Building Recommendation Systems with Python from Scratch.png"
- alt: "Building Recommendation Systems with Python from Scratch"
+  path: "/commons/Building Recommendation Systems with Python from Scratch.png"
+  alt: "Building Recommendation Systems with Python from Scratch"
 ---
 
 ## What Are Recommendation Systems?

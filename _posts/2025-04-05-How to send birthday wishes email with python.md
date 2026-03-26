@@ -5,8 +5,8 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
- path: /commons/How to send birthday wishes email with python.png
- alt: How to send birthday wishes email with python
+  path: /commons/How to send birthday wishes email with python.png
+  alt: How to send birthday wishes email with python
 ---
 
 If you want to know about automating boring keyword and mouse talk, I strongly suggest checking this article on [Mouse and Keyboard automation using Python](https://pythonscholar.com/blog/mouse-and-keyboard-automation-using-python/).

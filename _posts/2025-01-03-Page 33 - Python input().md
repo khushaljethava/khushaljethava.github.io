@@ -5,8 +5,8 @@ date: 2025-01-03 22:42:23 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
- path: /commons/Python input() Method.png
- alt: Python input() Method
+  path: /commons/Python input() Method.png
+  alt: Python input() Method
 ---
 
 The python input() method allows users to take input and store the imputed value in a variable as a string.

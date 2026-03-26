@@ -5,8 +5,8 @@ date: 2026-04-09 12:00:00 +0800
 categories: [Python]
 tags: [python, machine-learning, fraud-detection]
 image:
- path: "/commons/Fraud Detection with Machine Learning in Python.png"
- alt: "Fraud Detection with Machine Learning in Python"
+  path: "/commons/Fraud Detection with Machine Learning in Python.png"
+  alt: "Fraud Detection with Machine Learning in Python"
 ---
 
 ## The Fraud Detection Problem

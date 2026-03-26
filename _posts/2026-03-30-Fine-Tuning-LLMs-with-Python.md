@@ -5,8 +5,8 @@ date: 2026-03-30 12:00:00 +0800
 categories: [Python]
 tags: [python, ai, llm, fine-tuning]
 image:
- path: "/commons/Fine-Tuning Large Language Models with Python A Practical Guide.png"
- alt: "Fine-Tuning Large Language Models with Python: A Practical Guide"
+  path: "/commons/Fine-Tuning Large Language Models with Python A Practical Guide.png"
+  alt: "Fine-Tuning Large Language Models with Python: A Practical Guide"
 ---
 
 ## Why Fine-Tune an LLM?

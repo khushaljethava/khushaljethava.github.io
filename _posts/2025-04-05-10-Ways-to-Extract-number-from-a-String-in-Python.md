@@ -5,8 +5,8 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
- path: /commons/5 Ways to Extract Numbers from a String in Python.png
- alt: 5 Ways to Extract Numbers from a String in Python
+  path: /commons/5 Ways to Extract Numbers from a String in Python.png
+  alt: 5 Ways to Extract Numbers from a String in Python
 ---
 
 Let's experiment with each method and see how to extract number from string in Python.

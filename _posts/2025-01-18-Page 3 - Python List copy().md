@@ -5,8 +5,8 @@ date: 2025-01-18 23:28:25 +0800
 categories: [Python List reference]
 tags: [Python List reference]
 image:
- path: /commons/Python List copy().png
- alt: Python List copy()
+  path: /commons/Python List copy().png
+  alt: Python List copy()
 ---
 
 The syntax of the copy() method is:

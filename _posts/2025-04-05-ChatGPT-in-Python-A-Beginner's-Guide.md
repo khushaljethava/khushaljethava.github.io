@@ -5,8 +5,8 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
- path: "/commons/ChatGPT in Python A Beginner's Guide.png"
- alt: "ChatGPT in Python: A Beginner's Guide"
+  path: "/commons/ChatGPT in Python A Beginner's Guide.png"
+  alt: "ChatGPT in Python: A Beginner's Guide"
 ---
 
 ## Introduction to ChatGPT

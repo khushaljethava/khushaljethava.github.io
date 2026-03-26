@@ -5,8 +5,8 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
- path: /commons/Bank Management System Project in Python.png
- alt: Bank Management System Project in Python
+  path: /commons/Bank Management System Project in Python.png
+  alt: Bank Management System Project in Python
 ---
 
 This project is developed using Python, a popular programming language known for its simplicity and ease of use. With the Bank Management System project in Python, you can manage customer accounts, process transactions, generate reports, and much more.

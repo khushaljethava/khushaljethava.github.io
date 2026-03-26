@@ -5,8 +5,8 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
- path: /commons/How to make an Email Slicer in python.png
- alt: How to make an Email Slicer in python
+  path: /commons/How to make an Email Slicer in python.png
+  alt: How to make an Email Slicer in python
 ---
 
 ## What is Email Slicer in Python?

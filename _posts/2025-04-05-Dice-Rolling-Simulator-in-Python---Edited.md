@@ -5,8 +5,8 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
- path: /commons/Dice Rolling Simulator in Python.png
- alt: Dice Rolling Simulator in Python
+  path: /commons/Dice Rolling Simulator in Python.png
+  alt: Dice Rolling Simulator in Python
 ---
 
 ## What is a Dice Rolling Simulator in Python?

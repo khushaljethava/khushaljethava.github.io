@@ -5,8 +5,8 @@ date: 2025-01-03 22:15:55 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
- path: /commons/Python dict() Method.png
- alt: Python dict() Method
+  path: /commons/Python dict() Method.png
+  alt: Python dict() Method
 ---
 
 

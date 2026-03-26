@@ -77,26 +77,24 @@ As you can see in the graph below, python’s popularity has grown very fast in 
 ![Shows the growth of the python programming language.][image3]  
 Now let's discuss why developers love python and why it is so popular.
 
-1) ### Python is Easy to Learn and Implement.
+### 1. Python is easy to learn and implement
 
    Python language is straightforward to use and learn for new beginners and newcomers. The python language is one of the most accessible programming languages available because it has simplified syntax and is not complicated, emphasizing natural language. Due to its ease of learning and usage, python codes can be easily written and executed much faster than other programming languages.
 
-2) ### Hugh Python Community and Supportive Members.
+### 2. Huge Python community and supportive members
 
    Python is almost 30 years old, which gives a lot of time to mature their community and experience developers. Since python adapted Machine learning, python learners had very massive growth. 
 
-3) ### Python Has Some Big Corporate Sponsors
+### 3. Python has big corporate sponsors
 
    It helps big time when a programming language has a corporate sponsor. C\# has Microsoft, Java had Sun, and PHP is used by Facebook. Google adopted Python heavily back in 2006, and they’ve used it for many platforms and applications since.  
    
 
-4) ### Python Has a large variety of Libraries.
+### 4. Python has a large variety of libraries
 
    As Python has a large community and great corporate sponsors, they have various libraries regarding their fields, such as Django and Flask. For GUI development, it has Tkinter. For game development, it has Pygame, and for Data Analytics and machine learning, it has NumPy, pandas and scikit-learn, and much more. Libraries can help you save time and cut down on the initial development cycle.
 
-   ### 
-
-5) ### Python has Big Data.
+### 5. Python and big data
 
    Big data and cloud computing solutions in the enterprise world have been boosted after the success of the python language in teams of data collection which makes python one of the most popular languages used in data science.  
      

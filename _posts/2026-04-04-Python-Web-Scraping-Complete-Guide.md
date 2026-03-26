@@ -5,8 +5,8 @@ date: 2026-04-04 12:00:00 +0800
 categories: [Python]
 tags: [python, web-scraping]
 image:
- path: "/commons/Python Web Scraping The Complete Guide for 2026.png"
- alt: "Python Web Scraping: The Complete Guide for 2026"
+  path: "/commons/Python Web Scraping The Complete Guide for 2026.png"
+  alt: "Python Web Scraping: The Complete Guide for 2026"
 ---
 
 ## Why Web Scraping?

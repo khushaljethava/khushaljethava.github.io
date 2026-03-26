@@ -5,8 +5,8 @@ date: 2025-01-03 22:15:55 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
- path: /commons/Python dir() Method.png
- alt: Python dir() Method
+  path: /commons/Python dir() Method.png
+  alt: Python dir() Method
 ---
 
 The dir() function returns a list of valid attributes of the specific object.

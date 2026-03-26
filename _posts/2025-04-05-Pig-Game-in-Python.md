@@ -5,8 +5,8 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
- path: /commons/Pig Game in Python.png
- alt: Pig Game in Python
+  path: /commons/Pig Game in Python.png
+  alt: Pig Game in Python
 ---
 
 ## Project Prerequisites:

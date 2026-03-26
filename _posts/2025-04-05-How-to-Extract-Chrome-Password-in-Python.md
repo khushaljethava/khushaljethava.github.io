@@ -5,8 +5,8 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
- path: "/commons/How to Extract Chrome Password in Python.png"
- alt: # How to Extract Chrome Password in Python
+  path: "/commons/How to Extract Chrome Password in Python.png"
+  alt: # How to Extract Chrome Password in Python
 ---
 
 Keyword: How to Extract Chrome Password in Python  

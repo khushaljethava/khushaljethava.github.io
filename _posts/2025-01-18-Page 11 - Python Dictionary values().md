@@ -5,8 +5,8 @@ date: 2025-01-18 21:56:01 +0800
 categories: [Python Dictionary Reference]
 tags: [Python Dictionary Reference]
 image:
- path: /commons/Python Dictionary values().png
- alt: Python Dictionary values()
+  path: /commons/Python Dictionary values().png
+  alt: Python Dictionary values()
 ---
 
 The syntax of values() is:

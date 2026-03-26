@@ -5,8 +5,8 @@ date: 2025-01-03 22:42:23 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
- path: /commons/Python staticmethod().png
- alt: Python staticmethod()
+  path: /commons/Python staticmethod().png
+  alt: Python staticmethod()
 ---
 
 

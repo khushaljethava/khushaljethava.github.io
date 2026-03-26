@@ -5,8 +5,8 @@ date: 2025-01-18 23:28:25 +0800
 categories: [Python List reference]
 tags: [Python List reference]
 image:
- path: /commons/Python List insert().png
- alt: Python List insert()
+  path: /commons/Python List insert().png
+  alt: Python List insert()
 ---
 
 Syntax of python list insert():

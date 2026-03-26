@@ -5,8 +5,8 @@ date: 2025-01-03 22:15:55 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
- path: /commons/Python format() Method.png
- alt: Python format() Method
+  path: /commons/Python format() Method.png
+  alt: Python format() Method
 ---
 
 ## What is python format() method?

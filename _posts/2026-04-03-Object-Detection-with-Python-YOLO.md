@@ -5,8 +5,8 @@ date: 2026-04-03 12:00:00 +0800
 categories: [Python]
 tags: [python, computer-vision, yolo]
 image:
- path: "/commons/Object Detection with Python and YOLO A Hands-On Guide.png"
- alt: "Object Detection with Python and YOLO: A Hands-On Guide"
+  path: "/commons/Object Detection with Python and YOLO A Hands-On Guide.png"
+  alt: "Object Detection with Python and YOLO: A Hands-On Guide"
 ---
 
 ## What Is Object Detection?

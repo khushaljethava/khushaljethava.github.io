@@ -5,8 +5,8 @@ date: 2025-01-03 22:42:23 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
- path: /commons/Python max().png
- alt: Python max()
+  path: /commons/Python max().png
+  alt: Python max()
 ---
 
 The syntax of max() function:

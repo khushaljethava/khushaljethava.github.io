@@ -5,8 +5,8 @@ date: 2026-04-08 12:00:00 +0800
 categories: [Python]
 tags: [python, data-visualization, matplotlib]
 image:
- path: "/commons/Python Data Visualization with Matplotlib and Seaborn Complete Guide.png"
- alt: "Python Data Visualization with Matplotlib and Seaborn: Complete Guide"
+  path: "/commons/Python Data Visualization with Matplotlib and Seaborn Complete Guide.png"
+  alt: "Python Data Visualization with Matplotlib and Seaborn: Complete Guide"
 ---
 
 ## Why Data Visualization Matters

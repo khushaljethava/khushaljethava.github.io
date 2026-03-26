@@ -5,8 +5,8 @@ date: 2026-04-10 12:00:00 +0800
 categories: [Python]
 tags: [python, ai, explainability, xai]
 image:
- path: "/commons/Explainable AI with Python Understanding Model Predictions with SHAP and LIME.png"
- alt: "Explainable AI with Python: Understanding Model Predictions with SHAP and LIME"
+  path: "/commons/Explainable AI with Python Understanding Model Predictions with SHAP and LIME.png"
+  alt: "Explainable AI with Python: Understanding Model Predictions with SHAP and LIME"
 ---
 
 ## Why Explainability Matters

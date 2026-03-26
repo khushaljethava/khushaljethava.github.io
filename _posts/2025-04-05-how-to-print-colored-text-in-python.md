@@ -5,8 +5,8 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
- path: /commons/How to print colored text in python.png
- alt: How to print colored text in python
+  path: /commons/How to print colored text in python.png
+  alt: How to print colored text in python
 ---
 
 The first question is why there are, by default, to print colored text in python because python is an interpreted language and can be run only using a terminal or command prompt in windows. So printing colored text without using other methods is difficult.

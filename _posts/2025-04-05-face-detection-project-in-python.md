@@ -5,8 +5,8 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
- path: /commons/Face Detection Project in Python.png
- alt: Face Detection Project in Python
+  path: /commons/Face Detection Project in Python.png
+  alt: Face Detection Project in Python
 ---
 
 ## Introduction to Face Detection Project with Python

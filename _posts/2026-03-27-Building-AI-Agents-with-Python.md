@@ -5,8 +5,8 @@ date: 2026-03-27 12:00:00 +0800
 categories: [Python]
 tags: [python, ai, agents]
 image:
- path: "/commons/Building AI Agents with Python A Complete Guide.png"
- alt: "Building AI Agents with Python: A Complete Guide"
+  path: "/commons/Building AI Agents with Python A Complete Guide.png"
+  alt: "Building AI Agents with Python: A Complete Guide"
 ---
 
 ## What Are AI Agents?

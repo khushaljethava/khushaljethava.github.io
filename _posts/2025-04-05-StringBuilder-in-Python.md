@@ -5,8 +5,8 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
- path: /commons/StringBuilder in Python.png
- alt: StringBuilder in Python
+  path: /commons/StringBuilder in Python.png
+  alt: StringBuilder in Python
 ---
 
 ## What is StringBuilder in Python or String Builder Equivalent in Python?

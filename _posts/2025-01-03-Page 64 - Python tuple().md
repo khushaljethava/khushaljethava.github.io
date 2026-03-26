@@ -5,8 +5,8 @@ date: 2025-01-03 22:42:23 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
- path: /commons/Python tuple().png
- alt: Python tuple()
+  path: /commons/Python tuple().png
+  alt: Python tuple()
 ---
 
 Tuples are immutable sequences  and you can learn more about tuples from here.

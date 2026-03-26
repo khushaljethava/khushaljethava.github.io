@@ -5,8 +5,8 @@ date: 2025-01-03 22:42:23 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
- path: /commons/Python list() Method.png
- alt: Python list() Method
+  path: /commons/Python list() Method.png
+  alt: Python list() Method
 ---
 
 ## What is the Python list() Method?

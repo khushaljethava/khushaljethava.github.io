@@ -5,8 +5,8 @@ date: 2025-01-03 22:42:23 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
- path: /commons/Python type().png
- alt: Python type()
+  path: /commons/Python type().png
+  alt: Python type()
 ---
 
 The type() function has two separate syntax to return different results  

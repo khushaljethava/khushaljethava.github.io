@@ -5,8 +5,8 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
- path: /commons/How to Build a Large Language Model from Scratch Using Python.png
- alt: How to Build a Large Language Model from Scratch Using Python
+  path: /commons/How to Build a Large Language Model from Scratch Using Python.png
+  alt: How to Build a Large Language Model from Scratch Using Python
 ---
 
 ![][image1]  

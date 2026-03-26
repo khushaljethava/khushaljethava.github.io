@@ -5,8 +5,8 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
- path: /commons/Mouse and keyboard automation using Python.png
- alt: Mouse and keyboard automation using Python
+  path: /commons/Mouse and keyboard automation using Python.png
+  alt: Mouse and keyboard automation using Python
 ---
 
 Before going into deep, let us know what python automation is.

@@ -5,8 +5,8 @@ date: 2026-04-07 12:00:00 +0800
 categories: [Python]
 tags: [python, ai, edge-ai, iot]
 image:
- path: "/commons/Edge AI with Python Running Machine Learning on Edge Devices.png"
- alt: "Edge AI with Python: Running Machine Learning on Edge Devices"
+  path: "/commons/Edge AI with Python Running Machine Learning on Edge Devices.png"
+  alt: "Edge AI with Python: Running Machine Learning on Edge Devices"
 ---
 
 ## What Is Edge AI?

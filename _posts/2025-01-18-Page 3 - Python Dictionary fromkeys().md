@@ -5,8 +5,8 @@ date: 2025-01-18 21:38:03 +0800
 categories: [Python Dictionary Reference]
 tags: [Python Dictionary Reference]
 image:
- path: /commons/Python Dictionary fromkeys().png
- alt: Python Dictionary fromkeys()
+  path: /commons/Python Dictionary fromkeys().png
+  alt: Python Dictionary fromkeys()
 ---
 
 The syntax of fromkeys() is:

@@ -5,8 +5,8 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
- path: /commons/How to Create Mad Libs game in Python.png
- alt: How to Create Mad Libs game in Python
+  path: /commons/How to Create Mad Libs game in Python.png
+  alt: How to Create Mad Libs game in Python
 ---
 
 ## Python Mad Libs Game 

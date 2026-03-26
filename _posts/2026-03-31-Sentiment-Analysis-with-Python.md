@@ -5,8 +5,8 @@ date: 2026-03-31 12:00:00 +0800
 categories: [Python]
 tags: [python, nlp, machine-learning]
 image:
- path: "/commons/Sentiment Analysis with Python From Basics to Production.png"
- alt: "Sentiment Analysis with Python: From Basics to Production"
+  path: "/commons/Sentiment Analysis with Python From Basics to Production.png"
+  alt: "Sentiment Analysis with Python: From Basics to Production"
 ---
 
 ## What Is Sentiment Analysis?

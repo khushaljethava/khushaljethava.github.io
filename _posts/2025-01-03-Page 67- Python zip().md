@@ -5,8 +5,8 @@ date: 2025-01-03 22:42:23 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
- path: /commons/Python zip().png
- alt: Python zip()
+  path: /commons/Python zip().png
+  alt: Python zip()
 ---
 
 A zip() function  will pair each item passed in the iterator and  If the passed iterators have different lengths, the iterator with the least items decides the length of the new iterator.

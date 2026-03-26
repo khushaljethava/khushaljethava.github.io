@@ -5,8 +5,8 @@ date: 2026-04-01 12:00:00 +0800
 categories: [Python]
 tags: [python, ai, multimodal]
 image:
- path: "/commons/Multimodal AI with Python Working with Text Images and Audio.png"
- alt: "Multimodal AI with Python: Working with Text, Images, and Audio"
+  path: "/commons/Multimodal AI with Python Working with Text Images and Audio.png"
+  alt: "Multimodal AI with Python: Working with Text, Images, and Audio"
 ---
 
 ## What Is Multimodal AI?

@@ -5,8 +5,8 @@ date: 2025-01-03 22:42:23 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
- path: /commons/Python sorted().png
- alt: Python sorted()
+  path: /commons/Python sorted().png
+  alt: Python sorted()
 ---
 
 The syntax of sorted() is:

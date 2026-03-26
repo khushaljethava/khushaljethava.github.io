@@ -5,8 +5,8 @@ date: 2025-01-03 22:15:55 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
- path: /commons/Python exec() Method.png
- alt: Python exec() Method
+  path: /commons/Python exec() Method.png
+  alt: Python exec() Method
 ---
 
 The exec() is a built-in python function that executes the specified python code dynamically. Can be a string or a code object.

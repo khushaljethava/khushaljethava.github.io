@@ -5,8 +5,8 @@ date: 2026-04-02 12:00:00 +0800
 categories: [Python]
 tags: [python, mlops, machine-learning]
 image:
- path: "/commons/MLOps with Python Building Production ML Pipelines.png"
- alt: "MLOps with Python: Building Production ML Pipelines"
+  path: "/commons/MLOps with Python Building Production ML Pipelines.png"
+  alt: "MLOps with Python: Building Production ML Pipelines"
 ---
 
 ## What Is MLOps?
