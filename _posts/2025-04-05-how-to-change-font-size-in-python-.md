@@ -5,7 +5,7 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
- path: "/commons/Simple Guide: How to Change Font Size in Python.png"
+ path: "/commons/Simple Guide How to Change Font Size in Python.png"
  alt: "Simple Guide: How to Change Font Size in Python"
 ---
 

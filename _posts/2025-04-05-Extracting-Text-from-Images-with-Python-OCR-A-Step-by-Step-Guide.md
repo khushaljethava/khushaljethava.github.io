@@ -5,7 +5,7 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
- path: "/commons/Extracting Text from Images with Python OCR: A Step-by-Step Guide.png"
+ path: "/commons/Extracting Text from Images with Python OCR A Step-by-Step Guide.png"
  alt: "Extracting Text from Images with Python OCR: A Step-by-Step Guide"
 ---
 

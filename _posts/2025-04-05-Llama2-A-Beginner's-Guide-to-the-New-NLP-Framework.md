@@ -5,7 +5,7 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
- path: "/commons/Llama2: A Beginner's Guide to the New NLP Framework.png"
+ path: "/commons/Llama2 A Beginner's Guide to the New NLP Framework.png"
  alt: "Llama2: A Beginner's Guide to the New NLP Framework"
 ---
 
