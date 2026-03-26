@@ -56,27 +56,12 @@ jobs:
             \-\-disable-external \
             \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
       - name: Copy Ads.txt to index folder
-        run: |
-          cp assets/Ads.txt _site/
-          cp assets/sitemap_4476228.xml _site/
+        run: cp assets/Ads.txt _site/
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: "_site${{ steps.pages.outputs.base_path }}"
-          
-      - name: generate-sitemap
-        id: sitemap
-        uses: cicirello/generate-sitemap@v1.10.1
-        with:
-          base-url-path: https://khushaljethava.github.io/
-
-      - name: Output stats
-        run: |
-          echo "sitemap-path = ${{ steps.sitemap.outputs.sitemap-path }}"
-          echo "url-count = ${{ steps.sitemap.outputs.url-count }}"
-          echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
-            
 
   deploy:
     environment:
