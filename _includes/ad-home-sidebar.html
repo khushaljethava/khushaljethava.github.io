@@ -1,0 +1,50 @@
+<!-- Home Sidebar Ad - Inserts between Recently Updated and Trending Tags -->
+<script>
+(function() {
+  function initAd() {
+    var panelWrapper = document.getElementById('panel-wrapper');
+    if (!panelWrapper) {
+      setTimeout(initAd, 500);
+      return;
+    }
+
+    var recentlyUpdatedSection = panelWrapper.querySelector('#access-lastmod') ||
+      panelWrapper.querySelector('section');
+
+    if (!recentlyUpdatedSection) {
+      setTimeout(initAd, 500);
+      return;
+    }
+
+    // Avoid duplicate injection
+    if (document.getElementById('container-c4d52ed48f18e55ed38b7bb2dceb5d68')) return;
+
+    var adWrapper = document.createElement('div');
+    adWrapper.className = 'ad-home-panel';
+
+    var innerDiv = document.createElement('div');
+    innerDiv.style.cssText = 'width:300px;margin:0 auto;text-align:center;';
+
+    // Container ID must match exactly what invoke.js expects
+    var containerDiv = document.createElement('div');
+    containerDiv.id = 'container-c4d52ed48f18e55ed38b7bb2dceb5d68';
+
+    var invokeScript = document.createElement('script');
+    invokeScript.async = true;
+    invokeScript.setAttribute('data-cfasync', 'false');
+    invokeScript.src = 'https://pl29017712.profitablecpmratenetwork.com/c4d52ed48f18e55ed38b7bb2dceb5d68/invoke.js';
+
+    innerDiv.appendChild(containerDiv);
+    innerDiv.appendChild(invokeScript);
+    adWrapper.appendChild(innerDiv);
+
+    recentlyUpdatedSection.insertAdjacentElement('afterend', adWrapper);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAd);
+  } else {
+    initAd();
+  }
+})();
+</script>

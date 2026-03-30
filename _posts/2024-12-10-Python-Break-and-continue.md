@@ -119,8 +119,7 @@ Here are some examples of break continue and pass statements on pythonscholar.co
 
 **Answer:** Break and continue statements are very important parts of python programming language and these are used with conditional statements, for example, it will break the execution when a certain condition gets fulfilled or it will skip the blow execution when a certain condition is not fulfilled.
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4181667199679058"
-     crossorigin="anonymous"></script>
+>
 
 <!-- FAQ Scheme -->
 

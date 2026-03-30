@@ -1,1 +1,1 @@
-{% assign post_description = post.description | default: post.content | markdownify | strip_html | truncate: include.max_length %}{{ post_description }}
+{% assign _max_length = include.max_length | default: 200 %}{% assign post_description = post.description | default: post.content | markdownify | strip_html | truncate: _max_length %}{{ post_description }}

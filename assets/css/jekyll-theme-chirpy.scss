@@ -8,3 +8,72 @@
 ';
 
 /* append your custom style below */
+
+/* Ad Panel Styles */
+.ad-panel {
+  margin-top: 1.5rem;
+  position: sticky;
+  top: calc(100vh - 270px);
+  z-index: 10;
+}
+
+.ad-panel .ad-container {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1199px) {
+  .ad-panel {
+    display: none;
+  }
+}
+
+/* Ad Banner Tail - 728x90 Leaderboard */
+.ad-banner-tail {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.ad-banner-tail .ad-container-tail {
+  width: 728px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Responsive: hide on mobile where 728px won't fit */
+@media (max-width: 768px) {
+  .ad-banner-tail {
+    display: none;
+  }
+}
+
+/* Tablet: scale down slightly */
+@media (max-width: 991px) and (min-width: 769px) {
+  .ad-banner-tail .ad-container-tail {
+    width: 100%;
+    max-width: 728px;
+  }
+}
+
+/* Home Sidebar Ad - Between Recently Updated and Trending Tags */
+.ad-home-panel {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Home Posts Ads - 728x90 between blog posts */
+.ad-posts-wrapper {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+/* Responsive: hide on mobile where 728px won't fit */
+@media (max-width: 768px) {
+  .ad-posts-wrapper {
+    display: none;
+  }
+}
+

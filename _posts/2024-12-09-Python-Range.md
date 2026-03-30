@@ -187,5 +187,4 @@ Output :
 As we can see, we are using the list keyword and adding a range function as a parameter, and it giving us a list with the is number sequence, and then we are checking the type of the same function.
 
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4181667199679058"
-     crossorigin="anonymous"></script>
+>
