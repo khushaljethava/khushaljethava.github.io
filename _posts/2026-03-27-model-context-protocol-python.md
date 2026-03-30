@@ -1,5 +1,5 @@
 ---
-title: Model Context Protocol Python Tutorial: Build Your First MCP Server
+title: "Model Context Protocol Python Tutorial: Build Your First MCP Server"
 description: Learn Model Context Protocol Python with a practical first-server tutorial, core MCP concepts, and the fastest path from custom scripts to reusable AI tooling.
 date: 2026-03-27 09:20:00 +0530
 categories: [Python]
