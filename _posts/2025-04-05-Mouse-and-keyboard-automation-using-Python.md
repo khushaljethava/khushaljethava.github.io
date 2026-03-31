@@ -50,8 +50,9 @@ As we have learned about python automation and how it works, the next question i
 
 Python can be done using the [pyautogui](https://pyautogui.readthedocs.io/en/latest/) package, which can be installed with the following steps.
 
-| pip install pyautogui |
-| :---- |
+```bash
+pip install pyautogui
+```
 
 Now we have installed the python pyautogui package, we can start automation by following the below examples.
 
@@ -59,25 +60,31 @@ Let's check screen resolution using the below examples
 
 **Example 1: Check Screen resolution using pyautogui?**
 
-| import pyautogui print(pyautogui.size()) |
-| :---- |
+```python
+import pyautogui
+print(pyautogui.size())
+```
 
 **Output:**
 
-| Size(width=1920, height=1080) |
-| :---- |
+```text
+Size(width=1920, height=1080)
+```
 
 The size() function of pyautogui will return the screen resolution as a tuple of two integer  as X-axis and Y-axis.
 
 **Example 2: Check the current mouse position using pyautogui?**
 
-| import pyautogui print(pyautogui.position()) |
-| :---- |
+```python
+import pyautogui
+print(pyautogui.position())
+```
 
 **Output:**
 
-| Point(x=750, y=449) |
-| :---- |
+```text
+Point(x=750, y=449)
+```
 
 ## Mouse Automation Using Python
 
@@ -85,32 +92,42 @@ Now lets check some mouse automation using python pyautogui.
 
 **moveTo()**: Use to move the mouse using the pyautogui module.
 
-| import pyautogui pyautogui.moveTo(100, 100, duration \= 1\) |
-| :---- |
+```python
+import pyautogui
+pyautogui.moveTo(100, 100, duration = 1\)
+```
 
 When you execute the above program, it will move your mouse pointer from its current coordinates to (100,100) coordinates by taking 1 second in the execution.
 
 **move():** Use this function to move the mouse cursor over a few pixels from its current position.
 
-| import pyautogui pyautogui.move(0, 50\) |
-| :---- |
+```python
+import pyautogui
+pyautogui.move(0, 50\)
+```
 
 **dragTo():** This function works similar to moveTo() with an additional parameter button which can be set to 'left', 'middle', and 'right' for which mouse button to hold down while dragging. 
 
-| import pyautogui pyautogui.dragTo(100, 200, button='left')   |
-| :---- |
+```python
+import pyautogui
+pyautogui.dragTo(100, 200, button='left')
+```
 
  
 
-| import pyautogui pyautogui.dragTo(100, 200, button='right')   |
-| :---- |
+```python
+import pyautogui
+pyautogui.dragTo(100, 200, button='right')
+```
 
  
 
 **drag():** This function works similar to dragTo() function.
 
-| import pyautogui pyautogui.drag(30, 0, 2, button='right') |
-| :---- |
+```python
+import pyautogui
+pyautogui.drag(30, 0, 2, button='right')
+```
 
 ### 
 
@@ -120,33 +137,43 @@ Mouse click function can be achieve using click() function in pyautogui.
 
 **click()** : Use this function to make mouse click.
 
-| import pyautogui pyautogui.click()  |
-| :---- |
+```python
+import pyautogui
+pyautogui.click()
+```
 
 To specify a different mouse button to click, pass 'left', 'middle', or 'right' for the button keyword argument:
 
 This example will perform an right-click on a mouse from it current position.
 
-| import pyautogui pyautogui.click(button='right')   |
-| :---- |
+```python
+import pyautogui
+pyautogui.click(button='right')
+```
 
 To perform the left-click on a mouse, you must try the below code.
 
-| import pyautogui pyautogui.click(button=left)   |
-| :---- |
+```python
+import pyautogui
+pyautogui.click(button=left)
+```
 
 Double left click can be perform using pyautogui doubleClick() function.
 
-| import pyautoguipyautogui.doubleClick() |
-| :---- |
+```python
+import pyautogui
+pyautogui.doubleClick()
+```
 
 ### Mouse Scrolling
 
 We can scroll our using pyautogui scroll() function.  
 It will take the argument as an integer for a number of pixels and scroll the screen up to the given integer of pixels.
 
-| import pyautogui pyautogui.scroll(200)  |
-| :---- |
+```python
+import pyautogui
+pyautogui.scroll(200)
+```
 
 ## Keyboard Automation Using Python
 
@@ -156,49 +183,90 @@ Now let us learn about keyboard automation using pyautogui.
 
 **write()**: This function is used to write the given string. It will type the given characters in the given window.
 
-| import pyautogui pyautogui.write('Hello Python\!') |
-| :---- |
+```python
+import pyautogui
+pyautogui.write('Hello Python!')
+```
 
 We can also use interval parameters to delay the automation function by passing int or float with the write() function.
 
-| import pyautogui pyautogui.write('Hello Python\!', interval=0.25) |
-| :---- |
+```python
+import pyautogui
+pyautogui.write('Hello Python!', interval=0.25)
+```
 
 You can only press single-character keys with write(), so you can't press the Shift or F1 keys, for example.
 
 **press():**  Use this function to press a key on the keyboard using the pyautogui module.
 
-| import pyautogui pyautogui.press('enter')  |
-| :---- |
+```python
+import pyautogui
+pyautogui.press('enter')
+```
 
 In the above example we are pressing the enter key.
 
 We can also use other keys with the below examples.
 
-| import pyautogui  pyautogui.press('f1')pyautogui.press('tab')pyautogui.press('f5') |
-| :---- |
+```python
+import pyautogui
+pyautogui.press('f1')
+
+pyautogui.press('tab')
+
+pyautogui.press('f5')
+```
 
 **keyDown() and keyUp()** 
 
 keyDown() and keyUp() function is use to simulate  pressing a key down and key up and then releasing it up.
 
-| import pyautogui pyautogui.keyDown('shift')  |
-| :---- |
+```python
+import pyautogui
+pyautogui.keyDown('shift')
+```
 
 **hold()** : Use this function to hold a key  convenient  and this function can be used as a context manager and passed a string 
 
-| import pyautogui with pyautogui.hold('shift'):        pyautogui.press(\['left', 'left', 'left'\]) |
-| :---- |
+```python
+import pyautogui
+with pyautogui.hold('shift'):
+    pyautogui.press(\['left', 'left', 'left'\])
+```
 
 **hotkey() :** this function is used to press an shortcut key on keyboard.
 
-| import pyautogui pyautogui.hotkey('ctrl', 'shift', 'esc') |
-| :---- |
+```python
+import pyautogui
+pyautogui.hotkey('ctrl', 'shift', 'esc')
+```
 
 Below is the list of keyboards key we can use with pyautogui.
 
-| \['\\t', '\\n', '\\r', ' ', '\!', '"', '\#', '$', '%', '&', "'", '(',')', '\*', '+', ',', '-', '.', '/', '0', '1', '2', '3', '4', '5', '6', '7','8', '9', ':', ';', '\<', '=', '\>', '?', '@', '\[', '\\\\', '\]', '^', '\_', '\`','a', 'b', 'c', 'd', 'e','f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o','p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '{', '|', '}', '\~','accept', 'add', 'alt', 'altleft', 'altright', 'apps', 'backspace','browserback', 'browserfavorites', 'browserforward', 'browserhome','browserrefresh', 'browsersearch', 'browserstop', 'capslock', 'clear','convert', 'ctrl', 'ctrlleft', 'ctrlright', 'decimal', 'del', 'delete','divide', 'down', 'end', 'enter', 'esc', 'escape', 'execute', 'f1', 'f10','f11', 'f12', 'f13', 'f14', 'f15', 'f16', 'f17', 'f18', 'f19', 'f2', 'f20','f21', 'f22', 'f23', 'f24', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9','final', 'fn', 'hanguel', 'hangul', 'hanja', 'help', 'home', 'insert', 'junja','kana', 'kanji', 'launchapp1', 'launchapp2', 'launchmail','launchmediaselect', 'left', 'modechange', 'multiply', 'nexttrack','nonconvert', 'num0', 'num1', 'num2', 'num3', 'num4', 'num5', 'num6','num7', 'num8', 'num9', 'numlock', 'pagedown', 'pageup', 'pause', 'pgdn','pgup', 'playpause', 'prevtrack', 'print', 'printscreen', 'prntscrn','prtsc', 'prtscr', 'return', 'right', 'scrolllock', 'select', 'separator','shift', 'shiftleft', 'shiftright', 'sleep', 'space', 'stop', 'subtract', 'tab','up', 'volumedown', 'volumemute', 'volumeup', 'win', 'winleft', 'winright', 'yen','command', 'option', 'optionleft', 'optionright'\] |
-| :---- |
+```python
+\['\\t', '\\n', '\\r', ' ', '!', '"', '\#', '$', '%', '&', "'", '(',
+')', '\*', '+', ',', '-', '.', '/', '0', '1', '2', '3', '4', '5', '6', '7',
+'8', '9', ':', ';', '\<', '=', '\>', '?', '@', '\[', '\\\\', '\]', '^', '_', '\`',
+'a', 'b', 'c', 'd', 'e','f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
+'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '{', '|', '}', '\~',
+'accept', 'add', 'alt', 'altleft', 'altright', 'apps', 'backspace',
+'browserback', 'browserfavorites', 'browserforward', 'browserhome',
+'browserrefresh', 'browsersearch', 'browserstop', 'capslock', 'clear',
+'convert', 'ctrl', 'ctrlleft', 'ctrlright', 'decimal', 'del', 'delete',
+'divide', 'down', 'end', 'enter', 'esc', 'escape', 'execute', 'f1', 'f10',
+'f11', 'f12', 'f13', 'f14', 'f15', 'f16', 'f17', 'f18', 'f19', 'f2', 'f20',
+'f21', 'f22', 'f23', 'f24', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9',
+'final', 'fn', 'hanguel', 'hangul', 'hanja', 'help', 'home', 'insert', 'junja',
+'kana', 'kanji', 'launchapp1', 'launchapp2', 'launchmail',
+'launchmediaselect', 'left', 'modechange', 'multiply', 'nexttrack',
+'nonconvert', 'num0', 'num1', 'num2', 'num3', 'num4', 'num5', 'num6',
+'num7', 'num8', 'num9', 'numlock', 'pagedown', 'pageup', 'pause', 'pgdn',
+'pgup', 'playpause', 'prevtrack', 'print', 'printscreen', 'prntscrn',
+'prtsc', 'prtscr', 'return', 'right', 'scrolllock', 'select', 'separator',
+'shift', 'shiftleft', 'shiftright', 'sleep', 'space', 'stop', 'subtract', 'tab',
+'up', 'volumedown', 'volumemute', 'volumeup', 'win', 'winleft', 'winright', 'yen',
+'command', 'option', 'optionleft', 'optionright'\]
+```
 
 Few more addition things like taking screenshot can also be done using pyautogui,
 
@@ -206,22 +274,51 @@ Few more addition things like taking screenshot can also be done using pyautogui
 
 **screenshot() :** Use this function to take the screenshot using pyautogui.
 
-| import pyautogui im1 \= pyautogui.screenshot() |
-| :---- |
+```python
+import pyautogui
+im1 = pyautogui.screenshot()
+```
 
  
 
 We can also specify the name of file by describing the name.
 
-| import pyautogui im2 \= pyautogui.screenshot('my\_screenshot.png') |
-| :---- |
+```python
+import pyautogui
+im2 = pyautogui.screenshot('my_screenshot.png')
+```
 
 Now let end this tutorial with simple whatsapp automation, in this example we will send a message to someone and delete after sending it to the user.
 
 Few things are necessary to make it example run successfully is you need to have whatsapp  web open in your web brower like google chrome or Firefox.
 
-| import pyautogui as pgimport time def delete\_for\_everyone():    pg.click(807, 979\)    pg.typewrite("hello")    pg.typewrite(\["enter"\])    time.sleep(2)    pg.click(1621, 896\)    pg.click(1621, 896\)         \# time.sleep(1)    pg.click(1693, 859\)         \# time.sleep(1)    pg.click(1014, 669\)         \# time.sleep(1)    pg.click(1111, 605\)     a=20time.sleep(10)while(a\!=0):    delete\_for\_everyone()    a=a-1 |
-| :---- |
+```python
+import pyautogui as pg
+import time
+
+def delete_for_everyone():
+    pg.click(807, 979\)
+pg.typewrite("hello")
+pg.typewrite(\["enter"\])
+time.sleep(2)
+pg.click(1621, 896\)
+pg.click(1621, 896\)
+
+\# time.sleep(1)
+pg.click(1693, 859\)
+
+\# time.sleep(1)
+pg.click(1014, 669\)
+
+\# time.sleep(1)
+pg.click(1111, 605\)
+
+a=20
+time.sleep(10)
+while(a!=0):
+    delete_for_everyone()
+a=a-1
+```
 
 We hope you guys have learned many things from this easy-to-learn python automation.
 

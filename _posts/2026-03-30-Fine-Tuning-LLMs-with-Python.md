@@ -36,7 +36,7 @@ Common reasons to fine-tune:
 
 **LoRA (Low-Rank Adaptation)** freezes the original weights and injects small trainable matrices into each layer. Instead of updating millions of parameters, you train thousands.
 
-```
+```text
 Original weight matrix W (4096 x 4096) = 16M parameters
 LoRA: W + A × B where A is (4096 x 16) and B is (16 x 4096) = 131K parameters
 That's 99.2% fewer trainable parameters.

@@ -47,8 +47,9 @@ Here we will use **pyinput** and **pyautogui** python packages. To install them 
 
 Step 3: install python packages.
 
-| pip install pyinput pyautogui |
-| :---- |
+```bash
+pip install pyinput pyautogui
+```
 
 So as our setup is ready, let's start coding and see how we can use these python packages and control our keyboard.
 
@@ -86,8 +87,15 @@ So let's review the examples we can use with pyautogui to control the keyboard.
 
 This example will simulate text input using the python pyautogui typewrite function.
 
-| import pyautogui\# Type a sentencepyautogui.typewrite("Hello, World\!")\# Type with a delay between each characterpyautogui.typewrite("Hello, World\!", interval=0.1) |
-| :---- |
+```python
+import pyautogui
+
+\# Type a sentence
+pyautogui.typewrite("Hello, World!")
+
+\# Type with a delay between each character
+pyautogui.typewrite("Hello, World!", interval=0.1)
+```
 
 The **typewrite** function allows you to simulate keyboard typing by providing the desired text as an argument. You can also control the typing speed by specifying an interval between each character.
 
@@ -95,8 +103,17 @@ The **typewrite** function allows you to simulate keyboard typing by providing t
 
 In this example, we will automatically trigger keyboard keys using the pyautogui’s press function.
 
-| import pyautogui\# Simulate pressing the Enter keypyautogui.press("enter")\# Simulate pressing multiple keys simultaneouslypyautogui.keyDown("ctrl")pyautogui.press("a")pyautogui.keyUp("ctrl") |
-| :---- |
+```python
+import pyautogui
+
+\# Simulate pressing the Enter key
+pyautogui.press("enter")
+
+\# Simulate pressing multiple keys simultaneously
+pyautogui.keyDown("ctrl")
+pyautogui.press("a")
+pyautogui.keyUp("ctrl")
+```
 
 Using the **press** function, you can emulate key presses. Simply pass the desired key as an argument, and PyAutoGUI will simulate the corresponding key press event. You can also combine multiple key presses using **keyDown** and **keyUp** functions.
 
@@ -104,8 +121,15 @@ Using the **press** function, you can emulate key presses. Simply pass the desir
 
 In this example, we will trigger multiple keys using the pyautogui hotkey function.
 
-| import pyautogui\# Simulate pressing Ctrl+C hotkey combinationpyautogui.hotkey("ctrl", "c")\# Simulate pressing Ctrl+Shift+Esc to open the Task Managerpyautogui.hotkey("ctrl", "shift", "esc") |
-| :---- |
+```python
+import pyautogui
+
+\# Simulate pressing Ctrl+C hotkey combination
+pyautogui.hotkey("ctrl", "c")
+
+\# Simulate pressing Ctrl+Shift+Esc to open the Task Manager
+pyautogui.hotkey("ctrl", "shift", "esc")
+```
 
 The **hotkey** function allows you to simulate pressing multiple keys simultaneously, commonly known as hotkey combinations. By passing the desired keys as arguments, PyAutoGUI emulates the specified combination.
 
@@ -113,8 +137,17 @@ The **hotkey** function allows you to simulate pressing multiple keys simultaneo
 
 In this example, we will control the windows tab. We will open Notepad from background to foreground and then change windows using the alt+tab button using pyautogui’s getWindowsWithTitle function.
 
-| import pyautogui\# Bring a specific window to the foregroundpyautogui.getWindowsWithTitle("Notepad")\[0\].activate()\# Switch between open windowspyautogui.keyDown("alt")pyautogui.press("tab")pyautogui.keyUp("alt") |
-| :---- |
+```python
+import pyautogui
+
+\# Bring a specific window to the foreground
+pyautogui.getWindowsWithTitle("Notepad")\[0\].activate()
+
+\# Switch between open windows
+pyautogui.keyDown("alt")
+pyautogui.press("tab")
+pyautogui.keyUp("alt")
+```
 
 PyAutoGUI provides the ability to control window focus. You can activate a specific window by using the **getWindowsWithTitle** function and the activate method. Additionally, we can switch between multiple open windows using key presses, such as Alt+Tab.
 

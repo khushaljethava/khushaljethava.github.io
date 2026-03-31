@@ -65,7 +65,7 @@ for text in texts:
 
 Output:
 
-```
+```text
 [Positive] (polarity=+0.75) The food was delicious and the service was excellent.
 [Negative] (polarity=-0.65) Terrible experience. The room was dirty and staff was rude.
 [ Neutral] (polarity=+0.05) The hotel was okay. Nothing special but not bad either.

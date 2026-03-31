@@ -31,8 +31,23 @@ Let's see some examples of how we can change font size in python matplotlib
 
 To change the font size of all text elements in a plot, you can use the rcParams dictionary. This dictionary contains various default settings for Matplotlib and can be used to set the font size for all text elements in a plot. Here's an example:
 
-| import matplotlib.pyplot as plt\# Set font size for all text elements in plotplt.rcParams.update({'font.size': 12})\# Create a plotplt.plot(\[1, 2, 3\], \[4, 5, 6\])\# Add labels and titleplt.xlabel('X-axis')plt.ylabel('Y-axis')plt.title('My Plot')\# Show plotplt.show() |
-| :---- |
+```python
+import matplotlib.pyplot as plt
+
+\# Set font size for all text elements in plot
+plt.rcParams.update({'font.size': 12})
+
+\# Create a plot
+plt.plot(\[1, 2, 3\], \[4, 5, 6\])
+
+\# Add labels and title
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.title('My Plot')
+
+\# Show plot
+plt.show()
+```
 
 In this example, we set the font size to 12 using the update method of the rcParams dictionary. This changes the font size of all text elements in the plot, including the axis labels and title.
 
@@ -44,8 +59,20 @@ Sometimes, you may want to change the font size for specific text elements in a 
 
 To change the font size for axis labels, you can use the set\_xlabel and set\_ylabel methods of the Axes object. Here's an example:
 
-| import matplotlib.pyplot as plt\# Create a plotfig, ax \= plt.subplots()ax.plot(\[1, 2, 3\], \[4, 5, 6\])\# Set font size for axis labelsax.set\_xlabel('X-axis', fontsize=14)ax.set\_ylabel('Y-axis', fontsize=14)\# Show plotplt.show() |
-| :---- |
+```python
+import matplotlib.pyplot as plt
+
+\# Create a plot
+fig, ax = plt.subplots()
+ax.plot(\[1, 2, 3\], \[4, 5, 6\])
+
+\# Set font size for axis labels
+ax.set_xlabel('X-axis', fontsize=14)
+ax.set_ylabel('Y-axis', fontsize=14)
+
+\# Show plot
+plt.show()
+```
 
 In this example, we set the font size for both axis labels to 14 using the fontsize argument of the set\_xlabel and set\_ylabel methods.
 
@@ -53,8 +80,18 @@ In this example, we set the font size for both axis labels to 14 using the fonts
 
 To change the font size for the legend in a plot, you can use the fontsize argument of the legend method. Here's an example:
 
-| import matplotlib.pyplot as plt\# Create a plot with legendfig, ax \= plt.subplots()ax.plot(\[1, 2, 3\], \[4, 5, 6\], label='Line 1')ax.plot(\[1, 2, 3\], \[7, 8, 9\], label='Line 2')ax.legend(fontsize=12)\# Show plotplt.show() |
-| :---- |
+```python
+import matplotlib.pyplot as plt
+
+\# Create a plot with legend
+fig, ax = plt.subplots()
+ax.plot(\[1, 2, 3\], \[4, 5, 6\], label='Line 1')
+ax.plot(\[1, 2, 3\], \[7, 8, 9\], label='Line 2')
+ax.legend(fontsize=12)
+
+\# Show plot
+plt.show()
+```
 
 In this example, we set the font size for the legend to 12 using the fontsize argument of the legend method.
 
@@ -72,8 +109,19 @@ Let's see some examples of how we can change font size in python seaborn
 
 To change the font size for all text elements in a Seaborn plot, you can use the set method of the rc object. This object provides a simple interface to customize various settings for Seaborn plots, including font size. Here's an example:
 
-| import seaborn as sns\# Set font size for all text elements in plotsns.set(font\_scale=1.2)\# Create a plottips \= sns.load\_dataset("tips")sns.scatterplot(x="total\_bill", y="tip", data=tips)\# Show plotsns.plt.show() |
-| :---- |
+```python
+import seaborn as sns
+
+\# Set font size for all text elements in plot
+sns.set(font_scale=1.2)
+
+\# Create a plot
+tips = sns.load_dataset("tips")
+sns.scatterplot(x="total_bill", y="tip", data=tips)
+
+\# Show plot
+sns.plt.show()
+```
 
 In this example, we set the font size for all text elements in the plot using the set method of the rc object. This changes the font size of all text elements in the plot, including the axis labels and legend.
 
@@ -85,8 +133,18 @@ Sometimes, you may want to change the font size for specific text elements in a 
 
 To change the font size for axis labels in a Seaborn plot, you can use the set\_xlabel and set\_ylabel methods of the Axes object. Here's an example:
 
-| import seaborn as sns\# Create a plot with axis labelstips \= sns.load\_dataset("tips")ax \= sns.scatterplot(x="total\_bill", y="tip", data=tips)ax.set\_xlabel("Total Bill", fontsize=14)ax.set\_ylabel("Tip Amount", fontsize=14)\# Show plotsns.plt.show() |
-| :---- |
+```python
+import seaborn as sns
+
+\# Create a plot with axis labels
+tips = sns.load_dataset("tips")
+ax = sns.scatterplot(x="total_bill", y="tip", data=tips)
+ax.set_xlabel("Total Bill", fontsize=14)
+ax.set_ylabel("Tip Amount", fontsize=14)
+
+\# Show plot
+sns.plt.show()
+```
 
 In this example, we set the font size for both axis labels to 14 using the fontsize argument of the set\_xlabel and set\_ylabel methods.
 
@@ -94,8 +152,17 @@ In this example, we set the font size for both axis labels to 14 using the fonts
 
 To change the font size for the legend in a Seaborn plot, you can use the fontsize argument of the legend method. Here's an example:
 
-| import seaborn as sns\# Create a plot with legendtips \= sns.load\_dataset("tips")ax \= sns.scatterplot(x="total\_bill", y="tip", hue="day", data=tips)ax.legend(fontsize=12)\# Show plotsns.plt.show() |
-| :---- |
+```python
+import seaborn as sns
+
+\# Create a plot with legend
+tips = sns.load_dataset("tips")
+ax = sns.scatterplot(x="total_bill", y="tip", hue="day", data=tips)
+ax.legend(fontsize=12)
+
+\# Show plot
+sns.plt.show()
+```
 
 In this example, we set the font size for the legend to 12 using the fontsize argument of the legend method.
 
@@ -113,8 +180,17 @@ Let's see some examples of how we can change font size in python tkinter
 
 To change the font size of text in Tkinter, you can use the font parameter when creating a text widget or label. The font parameter takes a tuple of two elements: the font family and font size. Here's an example:
 
-| import tkinter as tk\# Create a text widget with custom font sizeroot \= tk.Tk()text\_widget \= tk.Text(root, font=("Arial", 14))text\_widget.pack()\# Start GUIroot.mainloop() |
-| :---- |
+```python
+import tkinter as tk
+
+\# Create a text widget with custom font size
+root = tk.Tk()
+text_widget = tk.Text(root, font=("Arial", 14))
+text_widget.pack()
+
+\# Start GUI
+root.mainloop()
+```
 
 In this example, we create a text widget with a font size of 14 points and the Arial font family. You can change the font size to any value that suits your needs.
 
@@ -122,8 +198,17 @@ In this example, we create a text widget with a font size of 14 points and the A
 
 To change the font style of text in Tkinter, you can use the font parameter with additional arguments to specify the font style, such as bold or italic. Here's an example:
 
-| import tkinter as tk\# Create a label with custom font styleroot \= tk.Tk()label \= tk.Label(root, text="Hello, world\!", font=("Arial", 14, "bold"))label.pack()\# Start GUIroot.mainloop() |
-| :---- |
+```python
+import tkinter as tk
+
+\# Create a label with custom font style
+root = tk.Tk()
+label = tk.Label(root, text="Hello, world!", font=("Arial", 14, "bold"))
+label.pack()
+
+\# Start GUI
+root.mainloop()
+```
 
 In this example, we create a label with a font size of 14 points, the Arial font family, and the bold font style. You can also use other font styles such as italic or underline.
 
@@ -131,8 +216,24 @@ In this example, we create a label with a font size of 14 points, the Arial font
 
 To change the default font for all widgets in Tkinter, you can use the font parameter with the tkinter.font module. This module provides a way to create font objects with various properties such as font family, font size, and font style. Here's an example:
 
-| import tkinter as tkimport tkinter.font as tkfont\# Create a custom font objectcustom\_font \= tkfont.Font(family="Arial", size=14)\# Set the default font for all widgetsroot \= tk.Tk()root.option\_add("\*Font", custom\_font)\# Create a label with default fontlabel \= tk.Label(root, text="Hello, world\!")label.pack()\# Start GUIroot.mainloop() |
-| :---- |
+```python
+import tkinter as tk
+import tkinter.font as tkfont
+
+\# Create a custom font object
+custom_font = tkfont.Font(family="Arial", size=14)
+
+\# Set the default font for all widgets
+root = tk.Tk()
+root.option_add("\*Font", custom_font)
+
+\# Create a label with default font
+label = tk.Label(root, text="Hello, world!")
+label.pack()
+
+\# Start GUI
+root.mainloop()
+```
 
 In this example, we create a custom font object with the Arial font family and a font size of 14 points. We then set the default font for all widgets using the option\_add method of the root window. Finally, we create a label with the default font.
 

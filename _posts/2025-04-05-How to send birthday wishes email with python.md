@@ -71,18 +71,118 @@ Use the below steps to install pandas and smtplib package, as DateTime is alread
 
 pip install \-U pandas smtplib
 
-| def MainCode():        \#Read CSV file using pandas        dataframe \= pd.read\_csv(r"birthday\_list.csv")    print(dataframe)    \#check todays Time and date    today \= datetime.now().strftime("%d-%m")    \#check Year format    currentYear \= datetime.now().strftime("%Y")    \#index where we store which friends birthday are wished    friend= \[\]    for index,item in dataframe.iterrows():        msg \= "Happy Birthday To My Dear " \+ str(item\['name'\]+ "Wish you many many happy returns of the day")        \#getting the birthdate from the excel sheet        bday \= datetime.strptime(item\['birthday'\], "%Y-%d-%m")        bday \= bday.strftime("%d-%m")        \#check the conditions, if matching send the birthday message        if (today \== bday) and currentYear not in str(item\['year'\]):            \#call the functions            SendEmailFunc(item\['email'\], "Happy Birthday", msg)            friend.append(index)    for i in friend:                yr \= dataframe.loc\[i, 'year'\]        dataframe.loc\[i, 'year'\] \= str(yr) \+ ',' \+ str(currentYear) |
-| :---- |
+```python
+def MainCode():
+
+    \#Read CSV file using pandas
+
+dataframe = pd.read_csv(r"birthday_list.csv")
+print(dataframe)
+\#check todays Time and date
+today = datetime.now().strftime("%d-%m")
+
+\#check Year format
+
+currentYear = datetime.now().strftime("%Y")
+
+\#index where we store which friends birthday are wished
+friend= \[\]
+
+for index,item in dataframe.iterrows():
+    msg = "Happy Birthday To My Dear " + str(item\['name'\]+ "Wish you many many happy returns of the day")
+\#getting the birthdate from the excel sheet
+bday = datetime.strptime(item\['birthday'\], "%Y-%d-%m")
+
+bday = bday.strftime("%d-%m")
+
+\#check the conditions, if matching send the birthday message
+if (today == bday) and currentYear not in str(item\['year'\]):
+    \#call the functions
+SendEmailFunc(item\['email'\], "Happy Birthday", msg)
+friend.append(index)
+for i in friend:
+
+    yr = dataframe.loc\[i, 'year'\]
+dataframe.loc\[i, 'year'\] = str(yr) + ',' + str(currentYear)
+```
 
 **Step 5:**  We will end the code by running the MainCode() function.
 
-| if \_\_name\_\_ \== "\_\_main\_\_":    MainCode() |
-| :---- |
+```python
+if __name__ == "__main__":
+    MainCode()
+```
 
 And the whole program will be look like this.
 
-| import pandas as pdimport timefrom datetime import datetimeimport smtplibEMAIL \= "Your\_Email"PassWD \= "Your\_Email\_Password"def SendEmailFunc(send\_to,email\_subject,wish\_msg):    \#Setup gmail with SMTP     smtp\_email \= smtplib.SMTP("smtp.gmail.com",587)    \#initialize the smtp session    smtp\_email.starttls()    \#login with the credentials    smtp\_email.login(EMAIL,PassWD)    print(smtp\_email)    \#Setup Email template to sent email with arguments    smtp\_email.sendmail(EMAIL,send\_to, f"Subject: {email\_subject}\\n\\n{wish\_msg}")    \#Ending the session    smtp\_email.quit()    print("Birthday Email successfully sent to" \+ str(send\_to) \+ "\\n The subject is: " \+ str(email\_subject) \+ "\\nThe message is:" \+ str(wish\_msg))def MainCode():        \#Read CSV file using pandas        dataframe \= pd.read\_csv(r"birthday\_list.csv")    print(dataframe)    \#check todays Time and date    today \= datetime.now().strftime("%d-%m")    \#check Year format    currentYear \= datetime.now().strftime("%Y")    \#index where we store which friends birthday are wished    friend= \[\]    for index,item in dataframe.iterrows():        msg \= "Happy Birthday To My Dear " \+ str(item\['name'\]+ "Wish you many many happy returns of the day")        \#getting the birthdate from the excel sheet        bday \= datetime.strptime(item\['birthday'\], "%Y-%d-%m")        bday \= bday.strftime("%d-%m")        \#check the conditions, if matching send the birthday message        if (today \== bday) and currentYear not in str(item\['year'\]):            \#call the functions            SendEmailFunc(item\['email'\], "Happy Birthday", msg)            friend.append(index)    for i in friend:                yr \= dataframe.loc\[i, 'year'\]        dataframe.loc\[i, 'year'\] \= str(yr) \+ ',' \+ str(currentYear)if \_\_name\_\_ \== "\_\_main\_\_":    MainCode() |
-| :---- |
+```python
+import pandas as pd
+import time
+from datetime import datetime
+import smtplib
+
+EMAIL = "Your_Email"
+PassWD = "Your_Email_Password"
+
+
+def SendEmailFunc(send_to,email_subject,wish_msg):
+    \#Setup gmail with SMTP
+
+smtp_email = smtplib.SMTP("smtp.gmail.com",587)
+
+\#initialize the smtp session
+smtp_email.starttls()
+
+\#login with the credentials
+smtp_email.login(EMAIL,PassWD)
+print(smtp_email)
+\#Setup Email template to sent email with arguments
+smtp_email.sendmail(EMAIL,send_to, f"Subject: {email_subject}\\n\\n{wish_msg}")
+
+\#Ending the session
+smtp_email.quit()
+
+print("Birthday Email successfully sent to" + str(send_to) + "\\n The subject is: " + str(email_subject) + "\\nThe message is:" + str(wish_msg))
+
+
+def MainCode():
+
+    \#Read CSV file using pandas
+
+dataframe = pd.read_csv(r"birthday_list.csv")
+print(dataframe)
+\#check todays Time and date
+today = datetime.now().strftime("%d-%m")
+
+\#check Year format
+
+currentYear = datetime.now().strftime("%Y")
+
+\#index where we store which friends birthday are wished
+friend= \[\]
+
+for index,item in dataframe.iterrows():
+    msg = "Happy Birthday To My Dear " + str(item\['name'\]+ "Wish you many many happy returns of the day")
+\#getting the birthdate from the excel sheet
+bday = datetime.strptime(item\['birthday'\], "%Y-%d-%m")
+
+bday = bday.strftime("%d-%m")
+
+\#check the conditions, if matching send the birthday message
+if (today == bday) and currentYear not in str(item\['year'\]):
+    \#call the functions
+SendEmailFunc(item\['email'\], "Happy Birthday", msg)
+friend.append(index)
+for i in friend:
+
+    yr = dataframe.loc\[i, 'year'\]
+dataframe.loc\[i, 'year'\] = str(yr) + ',' + str(currentYear)
+
+
+
+if __name__ == "__main__":
+    MainCode()
+```
 
 Now you can add your Gmail account and check by giving a current date for testing purposes, and you check that our code is working like a charm.
 
@@ -98,40 +198,180 @@ So let's first install the wintoast in our virtual movement. Also, we will not i
 
 Follow the below command to install win10toast.
 
-| pip install win10toast |
-| :---- |
+```bash
+pip install win10toast
+```
 
 Now, let's get started by following the below steps.
 
 **Step 1:** We will import the libraries we need.
 
-| import pandas as pdimport timefrom datetime import datetimeimport requestsfrom win10toast import ToastNotifier |
-| :---- |
+```python
+import pandas as pd
+import time
+from datetime import datetime
+import requests
+from win10toast import ToastNotifier
+```
 
 **Step 2:** We will initialize ToastNotifier and create a toast object.
 
-| \#initialize the ToastNotifiertoast \= ToastNotifier() |
-| :---- |
+```python
+\#initialize the ToastNotifier
+toast = ToastNotifier()
+```
 
 **Step 3:** Now, we will create a function to take necessary arguments and apply them to our Fast2sms API.
 
-| def SendSMSFunc(send\_to,msg,name,subject):    url \= "https://www.fast2sms.com/dev/bulk"    payload \= f"sender\_id=FSTSMS\&message={msg}\&language=english\&route=p\&numbers={to}"         headers \= {        'authorization': "YOUR\_API\_KEY\_HERE",        'Content-Type': "application/x-www-form-urlencoded",        'Cache-Control': "no-cache",        }     SMS\_obj \= requests.request("POST", url,                                data \= payload,                                headers \= headers)    print(response\_obj.text)    print("SMS sent to " \+ str(to) \+ " with subject :" \+          str(sub) \+ " and message :" \+ str(msg))         toast.show\_toast("SMS Sent\!" ,                     f"{name} was sent message",                     threaded \= True,                     icon\_path \= None,                     duration \= 6\)     while toast.notification\_active():        time.sleep(0.1) |
-| :---- |
+```python
+def SendSMSFunc(send_to,msg,name,subject):
+    url = "https://www.fast2sms.com/dev/bulk"
+payload = f"sender_id=FSTSMS\&message={msg}\&language=english\&route=p\&numbers={to}"
+
+headers = {
+'authorization': "YOUR_API_KEY_HERE",
+'Content-Type': "application/x-www-form-urlencoded",
+'Cache-Control': "no-cache",
+}
+
+SMS_obj = requests.request("POST", url,
+data = payload,
+headers = headers)
+print(response_obj.text)
+print("SMS sent to " + str(to) + " with subject :" +
+str(sub) + " and message :" + str(msg))
+
+toast.show_toast("SMS Sent!" ,
+f"{name} was sent message",
+threaded = True,
+icon_path = None,
+duration = 6\)
+
+while toast.notification_active():
+    time.sleep(0.1)
+```
 
 **Step 4:** In this step we will create a function to take required infromation from the csv file and use them as an arguments inside a SendSMSFunc() function.
 
-| def MainCode():        \#Read CSV file using pandas        dataframe \= pd.read\_csv(r"birthday\_list.csv")    print(dataframe)    \#check todays Time and date    today \= datetime.now().strftime("%d-%m")    \#check Year format    currentYear \= datetime.now().strftime("%Y")    \#index where we store which friends birthday are wished    friend= \[\]    for index,item in dataframe.iterrows():        msg \= "Happy Birthday To My Dear " \+ str(item\['name'\]+ "Wish you many many happy returns of the day")        \#getting the birthdate from the excel sheet        bday \= datetime.strptime(item\['birthday'\], "%Y-%d-%m")        bday \= bday.strftime("%d-%m")        \#check the conditions, if matching send the birthday message        if (today \== bday) and currentYear not in str(item\['year'\]):            \#call the functions            SendSMSFunc(item\['contact'\], "Happy Birthday", msg)            friend.append(index)    for i in friend:                yr \= dataframe.loc\[i, 'year'\]        dataframe.loc\[i, 'year'\] \= str(yr) \+ ',' \+ str(currentYear)  \#  dataframe.to\_excel('birthday\_list.csv', index=False) |
-| :---- |
+```python
+def MainCode():
+
+    \#Read CSV file using pandas
+
+dataframe = pd.read_csv(r"birthday_list.csv")
+print(dataframe)
+\#check todays Time and date
+today = datetime.now().strftime("%d-%m")
+
+\#check Year format
+
+currentYear = datetime.now().strftime("%Y")
+
+\#index where we store which friends birthday are wished
+friend= \[\]
+
+for index,item in dataframe.iterrows():
+    msg = "Happy Birthday To My Dear " + str(item\['name'\]+ "Wish you many many happy returns of the day")
+\#getting the birthdate from the excel sheet
+bday = datetime.strptime(item\['birthday'\], "%Y-%d-%m")
+
+bday = bday.strftime("%d-%m")
+
+\#check the conditions, if matching send the birthday message
+if (today == bday) and currentYear not in str(item\['year'\]):
+    \#call the functions
+SendSMSFunc(item\['contact'\], "Happy Birthday", msg)
+friend.append(index)
+for i in friend:
+
+    yr = dataframe.loc\[i, 'year'\]
+dataframe.loc\[i, 'year'\] = str(yr) + ',' + str(currentYear)
+
+\#  dataframe.to_excel('birthday_list.csv', index=False)
+```
 
 **Step 5:** Now we will send our program by calling the MainCode() inside the init code.
 
-| if \_\_name\_\_ \== "\_\_main\_\_":    MainCode() |
-| :---- |
+```python
+if __name__ == "__main__":
+    MainCode()
+```
 
 So our program on how to send birthday wishes sms with python is ready and the whole code will be look like this.
 
-| import pandas as pdimport timefrom datetime import datetimeimport requestsfrom win10toast import ToastNotifier\#initialize the ToastNotifiertoast \= ToastNotifier()def SendSMSFunc(send\_to,msg,name,subject):    url \= "https://www.fast2sms.com/dev/bulk"    payload \= f"sender\_id=FSTSMS\&message={msg}\&language=english\&route=p\&numbers={to}"         headers \= {        'authorization': "YOUR\_API\_KEY\_HERE",        'Content-Type': "application/x-www-form-urlencoded",        'Cache-Control': "no-cache",        }     SMS\_obj \= requests.request("POST", url,                                data \= payload,                                headers \= headers)    print(response\_obj.text)    print("SMS sent to " \+ str(to) \+ " with subject :" \+          str(sub) \+ " and message :" \+ str(msg))         toast.show\_toast("SMS Sent\!" ,                     f"{name} was sent message",                     threaded \= True,                     icon\_path \= None,                     duration \= 6\)     while toast.notification\_active():        time.sleep(0.1)def MainCode():        \#Read CSV file using pandas        dataframe \= pd.read\_csv(r"birthday\_list.csv")    print(dataframe)    \#check todays Time and date    today \= datetime.now().strftime("%d-%m")    \#check Year format    currentYear \= datetime.now().strftime("%Y")    \#index where we store which friends birthday are wished    friend= \[\]    for index,item in dataframe.iterrows():        msg \= "Happy Birthday To My Dear " \+ str(item\['name'\]+ "Wish you many many happy returns of the day")        \#getting the birthdate from the excel sheet        bday \= datetime.strptime(item\['birthday'\], "%Y-%d-%m")        bday \= bday.strftime("%d-%m")        \#check the conditions, if matching send the birthday message        if (today \== bday) and currentYear not in str(item\['year'\]):            \#call the functions            SendSMSFunc(item\['contact'\], "Happy Birthday", msg)            friend.append(index)    for i in friend:                yr \= dataframe.loc\[i, 'year'\]        dataframe.loc\[i, 'year'\] \= str(yr) \+ ',' \+ str(currentYear)  \#  dataframe.to\_excel('birthday\_list.csv', index=False)if \_\_name\_\_ \== "\_\_main\_\_":    MainCode() |
-| :---- |
+```python
+import pandas as pd
+import time
+from datetime import datetime
+import requests
+from win10toast import ToastNotifier
+
+\#initialize the ToastNotifier
+toast = ToastNotifier()
+
+def SendSMSFunc(send_to,msg,name,subject):
+    url = "https://www.fast2sms.com/dev/bulk"
+payload = f"sender_id=FSTSMS\&message={msg}\&language=english\&route=p\&numbers={to}"
+
+headers = {
+'authorization': "YOUR_API_KEY_HERE",
+'Content-Type': "application/x-www-form-urlencoded",
+'Cache-Control': "no-cache",
+}
+
+SMS_obj = requests.request("POST", url,
+data = payload,
+headers = headers)
+print(response_obj.text)
+print("SMS sent to " + str(to) + " with subject :" +
+str(sub) + " and message :" + str(msg))
+
+toast.show_toast("SMS Sent!" ,
+f"{name} was sent message",
+threaded = True,
+icon_path = None,
+duration = 6\)
+
+while toast.notification_active():
+    time.sleep(0.1)
+
+def MainCode():
+
+    \#Read CSV file using pandas
+
+dataframe = pd.read_csv(r"birthday_list.csv")
+print(dataframe)
+\#check todays Time and date
+today = datetime.now().strftime("%d-%m")
+
+\#check Year format
+
+currentYear = datetime.now().strftime("%Y")
+
+\#index where we store which friends birthday are wished
+friend= \[\]
+
+for index,item in dataframe.iterrows():
+    msg = "Happy Birthday To My Dear " + str(item\['name'\]+ "Wish you many many happy returns of the day")
+\#getting the birthdate from the excel sheet
+bday = datetime.strptime(item\['birthday'\], "%Y-%d-%m")
+
+bday = bday.strftime("%d-%m")
+
+\#check the conditions, if matching send the birthday message
+if (today == bday) and currentYear not in str(item\['year'\]):
+    \#call the functions
+SendSMSFunc(item\['contact'\], "Happy Birthday", msg)
+friend.append(index)
+for i in friend:
+
+    yr = dataframe.loc\[i, 'year'\]
+dataframe.loc\[i, 'year'\] = str(yr) + ',' + str(currentYear)
+\#  dataframe.to_excel('birthday_list.csv', index=False)
+
+if __name__ == "__main__":
+    MainCode()
+```
 
 ## Conclusion
 

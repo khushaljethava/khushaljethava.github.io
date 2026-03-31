@@ -24,7 +24,7 @@ print(f"Fraudulent: {df['Class'].sum():,} ({df['Class'].mean():.2%})")
 print(f"Legitimate: {(df['Class'] == 0).sum():,}")
 ```
 
-```
+```text
 Total transactions: 284,807
 Fraudulent: 492 (0.17%)
 Legitimate: 284,315

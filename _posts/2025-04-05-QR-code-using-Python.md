@@ -35,18 +35,21 @@ The two most popular libraries for generating QR codes in Python are qrcode and 
 
 We can use pip, the Python package installer to install these libraries. First, open a terminal or command prompt and enter the following command to install the qrcode library:
 
-| pip install qrcode |
-| :---- |
+```bash
+pip install qrcode
+```
 
 Next, to install the PyQRCode library, enter the following command:
 
-| pip install pyqrcode |
-| :---- |
+```bash
+pip install pyqrcode
+```
 
 The ZBar library is a popular choice for reading QR codes in Python. ZBar is an open-source software suite for reading barcodes from various sources, including image files and video streams. To install the ZBar library, enter the following command:
 
-| pip install pyzbar |
-| :---- |
+```bash
+pip install pyzbar
+```
 
 Once the libraries are installed, we can generate and read QR codes using Python. The following section will explore how to generate QR codes using the qrcode and PyQRCode libraries.
 
@@ -60,8 +63,18 @@ Generating QR codes using Python is a straightforward process that requires only
 
 The qrcode library is a simple and easy-to-use library that can generate QR codes with customizable options. Here is an example of how to generate a basic QR code using qrcode:
 
-| import qrcode\# Generate QR codeqr \= qrcode.QRCode(version=1, box\_size=10, border=5)qr.add\_data("Hello, World\!")qr.make(fit=True)\# Save QR code as the image fileimg \= qr.make\_image(fill\_color="black", back\_color="white")img.save("hello\_world\_qrcode.png") |
-| :---- |
+```python
+import qrcode
+
+\# Generate QR code
+qr = qrcode.QRCode(version=1, box_size=10, border=5)
+qr.add_data("Hello, World!")
+qr.make(fit=True)
+
+\# Save QR code as the image file
+img = qr.make_image(fill_color="black", back_color="white")
+img.save("hello_world_qrcode.png")
+```
 
 In the code above, we first import the qrcode library. Next, we create a QR code object and specify the version, box size, and border. We then add the data we want to encode to the QR code object and call the make() method to generate the QR code. Finally, we save the QR code as an image file.
 
@@ -69,8 +82,15 @@ In the code above, we first import the qrcode library. Next, we create a QR code
 
 The PyQRCode library is a pure Python library that can generate QR codes without requiring external dependencies. Here is an example of how to generate a basic QR code using PyQRCode:
 
-| import pyqrcode\# Generate QR codeqr \= pyqrcode.create("Hello, World\!")\# Save the QR code as an image fileqr.png("hello\_world\_qrcode.png", scale=6) |
-| :---- |
+```python
+import pyqrcode
+
+\# Generate QR code
+qr = pyqrcode.create("Hello, World!")
+
+\# Save the QR code as an image file
+qr.png("hello_world_qrcode.png", scale=6)
+```
 
 In the code above, we first import the PyQRCode library. Next, we create a QR code object and specify the data we want to encode. We then call the png() method to generate the QR code and save it as an image file.
 
@@ -82,8 +102,24 @@ To further demonstrate how to generate QR codes using Python, let's walk through
 
 Suppose we generate a QR code for a website URL, including a logo in the center of the QR code. Here is an example of how to generate a QR code with these specifications:
 
-| import qrcode\# Generate QR code with logoqr \= qrcode.QRCode(version=1, error\_correction=qrcode.constants.ERROR\_CORRECT\_L, box\_size=10, border=4)qr.add\_data("https://www.example.com/")qr.make(fit=True)\# Add logo to QR codeicon \= qrcode.util.Octagon()icon.add\_data("Logo")icon.make(fit=True)qr\_icon \= qr.make\_image(fill\_color="black", back\_color="white").copy()qr\_icon.paste(icon.make\_image(fill\_color="black", back\_color="white").resize((40, 40)), (80, 80))\# Save the QR code as the image fileqr\_icon.save("website\_qrcode.png") |
-| :---- |
+```python
+import qrcode
+
+\# Generate QR code with logo
+qr = qrcode.QRCode(version=1, error_correction=qrcode.constants.ERROR_CORRECT_L, box_size=10, border=4)
+qr.add_data("https://www.example.com/")
+qr.make(fit=True)
+
+\# Add logo to QR code
+icon = qrcode.util.Octagon()
+icon.add_data("Logo")
+icon.make(fit=True)
+qr_icon = qr.make_image(fill_color="black", back_color="white").copy()
+qr_icon.paste(icon.make_image(fill_color="black", back_color="white").resize((40, 40)), (80, 80))
+
+\# Save the QR code as the image file
+qr_icon.save("website_qrcode.png")
+```
 
 In the code above, we first import the qrcode library. Next, we create a QR code object and specify the version, error correction level, box size, and border. We then add the website URL we want to encode to the QR code object and call the make() method to generate the QR code.
 
@@ -101,8 +137,19 @@ Reading QR codes using Python is just as easy as generating them. This section w
 
 The pyzbar library is a wrapper for the zbar library, which can read various barcodes, including QR codes. Here is an example of how to read a QR code using pyzbar:
 
-| import cv2from pyzbar.pyzbar import decode\# Load imageimg \= cv2.imread("qr\_code.png")\# Decode QR codedata \= decode(img)\[0\].data.decode("utf-8")\# Print decoded dataprint(data) |
-| :---- |
+```python
+import cv2
+from pyzbar.pyzbar import decode
+
+\# Load image
+img = cv2.imread("qr_code.png")
+
+\# Decode QR code
+data = decode(img)\[0\].data.decode("utf-8")
+
+\# Print decoded data
+print(data)
+```
 
 In the code above, we first import the cv2 and decode functions from the pyzbar.pyzbar library. We then load the image containing the QR code using the imread() function from cv2.
 
@@ -114,8 +161,19 @@ Finally, we print the decoded data to the console. Running this code will print 
 
 The zbarlight library is a simple and lightweight library that can read QR codes without requiring external dependencies. Here is an example of how to read a QR code using zbarlight:
 
-| import zbarlight\# Load imagewith open("qr\_code.png", "rb") as image\_file:    image \= image\_file.read()\# Decode QR codedata \= zbarlight.scan\_codes("qrcode", image)\[0\].decode("utf-8")\# Print decoded dataprint(data) |
-| :---- |
+```python
+import zbarlight
+
+\# Load image
+with open("qr_code.png", "rb") as image_file:
+    image = image_file.read()
+
+\# Decode QR code
+data = zbarlight.scan_codes("qrcode", image)\[0\].decode("utf-8")
+
+\# Print decoded data
+print(data)
+```
 
 In the code above, we first import the zbarlight library. We then load the image containing the QR code using the open() function and the rb (read binary) mode.
 
@@ -131,8 +189,9 @@ With Python and Tkinter, you can easily create your QR code generator to input d
 
 First, install the necessary libraries to create a GUI QR code generator.
 
-| pip install tk pillow |
-| :---- |
+```bash
+pip install tk pillow
+```
 
 Now that we have installed the necessary libraries, we can begin creating the user interface for our QR code generator using Tkinter.
 
@@ -140,33 +199,90 @@ First, we need to import the necessary libraries:
 
 i
 
-| import tkinter as tkimport qrcodefrom PIL import Image, ImageTk |
-| :---- |
+```python
+import tkinter as tk
+import qrcode
+from PIL import Image, ImageTk
+```
 
 Next, we need to create a main window for our application:
 
-| root \= tk.Tk()root.title("QR Code Generator") |
-| :---- |
+```python
+root = tk.Tk()
+root.title("QR Code Generator")
+```
 
 We can also set the size and position of the window:
 
-| width \= 400height \= 500screen\_width \= root.winfo\_screenwidth()screen\_height \= root.winfo\_screenheight()x \= (screen\_width / 2\) \- (width / 2\)y \= (screen\_height / 2\) \- (height / 2\)root.geometry("%dx%d+%d+%d" % (width, height, x, y)) |
-| :---- |
+```python
+width = 400
+height = 500
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
+
+x = (screen_width / 2\) \- (width / 2\)
+y = (screen_height / 2\) \- (height / 2\)
+
+root.geometry("%dx%d+%d+%d" % (width, height, x, y))
+```
 
 Next, we can create labels and input fields for the user to enter their data:
 
-| label \= tk.Label(root, text="Enter data to encode:")label.pack(pady=10)data\_entry \= tk.Entry(root, width=30)data\_entry.pack(pady=10)label2 \= tk.Label(root, text="Select the size of the QR code:")label2.pack(pady=10)size\_var \= tk.StringVar()size\_var.set("7")size\_options \= \["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"\]size\_dropdown \= tk.OptionMenu(root, size\_var, \*size\_options)size\_dropdown.pack(pady=10) |
-| :---- |
+```python
+label = tk.Label(root, text="Enter data to encode:")
+label.pack(pady=10)
+
+data_entry = tk.Entry(root, width=30)
+data_entry.pack(pady=10)
+
+label2 = tk.Label(root, text="Select the size of the QR code:")
+label2.pack(pady=10)
+
+size_var = tk.StringVar()
+size_var.set("7")
+
+size_options = \["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"\]
+size_dropdown = tk.OptionMenu(root, size_var, \*size_options)
+size_dropdown.pack(pady=10)
+```
 
 We can also add a button that the user can click to generate the QR code:
 
-| def generate\_qr():    data \= data\_entry.get()    size \= int(size\_var.get())    qr \= qrcode.QRCode(        version=1,        box\_size=size,        border=5    )    qr.add\_data(data)    qr.make(fit=True)    img \= qr.make\_image(fill="black", back\_color="white")    img.save("qrcode.png")    image \= Image.open("qrcode.png")    image \= image.resize((250, 250), Image.ANTIALIAS)    photo \= ImageTk.PhotoImage(image)    qr\_label.config(image=photo)    qr\_label.image \= photobutton \= tk.Button(root, text="Generate QR Code", command=generate\_qr)button.pack(pady=10) |
-| :---- |
+```python
+def generate_qr():
+    data = data_entry.get()
+size = int(size_var.get())
+
+qr = qrcode.QRCode(
+version=1,
+box_size=size,
+border=5
+)
+
+qr.add_data(data)
+qr.make(fit=True)
+
+img = qr.make_image(fill="black", back_color="white")
+img.save("qrcode.png")
+
+image = Image.open("qrcode.png")
+image = image.resize((250, 250), Image.ANTIALIAS)
+photo = ImageTk.PhotoImage(image)
+
+qr_label.config(image=photo)
+qr_label.image = photo
+
+button = tk.Button(root, text="Generate QR Code", command=generate_qr)
+button.pack(pady=10)
+```
 
 Finally, we can create a label to display the generated QR code:
 
-| qr\_label \= tk.Label(root)qr\_label.pack(pady=10)root.mainloop() |
-| :---- |
+```python
+qr_label = tk.Label(root)
+qr_label.pack(pady=10)
+root.mainloop()
+```
 
 This creates a simple user interface for our QR code generator, allowing users to input data, select the code size, and generate a QR code. The generated code is then displayed in the application window.
 
@@ -183,13 +299,57 @@ This tutorial will explore scanning and decoding QR codes using Python and the T
 
 Before building our QR code scanner, we need to install some necessary libraries. We will use the pyzbar and Pillow libraries to help with QR code decoding and image processing. We can install these libraries using pip. Open up your terminal or command prompt and enter the following commands:
 
-| pip install pyzbarpip install Pillow |
-| :---- |
+```bash
+pip install pyzbar
+pip install Pillow
+```
 
 Once we have installed the necessary libraries, we can create our user interface using Tkinter. We will need a label to display the QR code image and a button to initiate scanning. Here's the code:
 
-| import tkinter as tkfrom tkinter import filedialogfrom PIL import ImageTk, Imageimport pyzbar.pyzbar as pyzbarclass QRScanner:    def \_\_init\_\_(self, master):        self.master \= master        master.title("QR Code Scanner")        self.label \= tk.Label(master)        self.label.pack()        self.button \= tk.Button(master, text="Scan", command=self.scan)        self.button.pack()    def scan(self):        filename \= filedialog.askopenfilename()        img \= Image.open(filename)        decoded\_objects \= pyzbar.decode(img)        for obj in decoded\_objects:            print("Type:", obj.type)            print("Data:", obj.data.decode("utf-8"))        img \= ImageTk.PhotoImage(img)        self.label.configure(image=img)        self.label.image \= imgroot \= tk.Tk()width \= 400height \= 500screen\_width \= root.winfo\_screenwidth()screen\_height \= root.winfo\_screenheight()x \= (screen\_width / 2\) \- (width / 2\)y \= (screen\_height / 2\) \- (height / 2\)root.geometry("%dx%d+%d+%d" % (width, height, x, y))scanner \= QRScanner(root)root.mainloop() |
-| :---- |
+```python
+import tkinter as tk
+from tkinter import filedialog
+from PIL import ImageTk, Image
+import pyzbar.pyzbar as pyzbar
+
+class QRScanner:
+    def __init__(self, master):
+    self.master = master
+master.title("QR Code Scanner")
+
+self.label = tk.Label(master)
+self.label.pack()
+
+self.button = tk.Button(master, text="Scan", command=self.scan)
+self.button.pack()
+
+def scan(self):
+    filename = filedialog.askopenfilename()
+img = Image.open(filename)
+
+decoded_objects = pyzbar.decode(img)
+for obj in decoded_objects:
+    print("Type:", obj.type)
+print("Data:", obj.data.decode("utf-8"))
+
+img = ImageTk.PhotoImage(img)
+self.label.configure(image=img)
+self.label.image = img
+
+root = tk.Tk()
+width = 400
+height = 500
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
+
+x = (screen_width / 2\) \- (width / 2\)
+y = (screen_height / 2\) \- (height / 2\)
+
+root.geometry("%dx%d+%d+%d" % (width, height, x, y))
+
+scanner = QRScanner(root)
+root.mainloop()
+```
 
 First, we import the necessary libraries in the above code and define our QRScanner class. We create a window using Tkinter and add a label and button. When the button is clicked, the scan() method is called. This method opens a file dialog window to allow the user to select a QR code image. Once the image is selected, we use the pyzbar library to decode the QR code data. We then print out the type of data and the decoded data to the console. Finally, we display the QR code image in the label using the Pillow library.
 

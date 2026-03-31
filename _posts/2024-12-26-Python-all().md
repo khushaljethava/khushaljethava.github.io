@@ -97,7 +97,7 @@ print(all(my_dict))
 
 The Output will be as follows.
 
-```
+```text
 True
 False
 False

@@ -98,8 +98,9 @@ Tesseract OCR is an open-source OCR engine developed by Google. It is widely use
 
 To download Tesseract OCR in Python, you need to run the following command in your command prompt or terminal:
 
-| pip install pytesseract |
-| :---- |
+```bash
+pip install pytesseract
+```
 
 But before running the python code, we must install Tesseract on the respective operating system.
 
@@ -125,8 +126,14 @@ Here is an example of how to use the image\_to\_string function:
 
 **Example:** how to use tesseract ocr in python
 
-| import pytesseractfrom PIL import Imageimage \= Image.open('image.jpg')text \= pytesseract.image\_to\_string(image)print(text) |
-| :---- |
+```python
+import pytesseract
+from PIL import Image
+
+image = Image.open('image.jpg')
+text = pytesseract.image_to_string(image)
+print(text)
+```
 
 In this example, we have extract text from image python with tesseract by opening an image file called "image.jpg" using the PIL module, which is a Python Imaging Library. We then pass this image object to the “image\_to\_string” function of pytesseract, which returns the extracted text. Finally, we print the extracted text to the terminal.
 
@@ -136,13 +143,25 @@ Tesseract OCR in Python provides several advanced features that can improve the 
 
 Here is an example of how to use the image\_to\_osd function:
 
-| import pytesseractfrom PIL import Imageimage \= Image.open('image.jpg')osd \= pytesseract.image\_to\_osd(image)print(osd) |
-| :---- |
+```python
+import pytesseract
+from PIL import Image
+
+image = Image.open('image.jpg')
+osd = pytesseract.image_to_osd(image)
+print(osd)
+```
 
 The output will be as follow:
 
-| Page number: 0Orientation in degrees: 0Rotate: 0Orientation confidence: 1.05Script: CyrillicScript confidence: 6.67 |
-| :---- |
+```text
+Page number: 0
+Orientation in degrees: 0
+Rotate: 0
+Orientation confidence: 1.05
+Script: Cyrillic
+Script confidence: 6.67
+```
 
 We use the image\_to\_osd function in this example to extract the orientation and script detection information. We then print this information to the console.
 
@@ -162,8 +181,9 @@ EasyOCR is a Python library that uses deep learning and OCR technology to extrac
 
 To download EasyOCR in Python, you need to run the following command in your command prompt or terminal:
 
-| pip install easyocr |
-| :---- |
+```bash
+pip install easyocr
+```
 
 Also, if you encounter issues like ”modulenotfounderror no module named 'easyocr'”, you can follow the above steps to resolve it.
 
@@ -175,8 +195,15 @@ To extract text from an image using EasyOCR, you first need to import the easyoc
 
 Here is an example of how to use the readtext function:
 
-| import easyocrfrom PIL import Imageimage \= Image.open('image.jpg')reader \= easyocr.Reader(\['en'\])text \= reader.readtext(image)print(text) |
-| :---- |
+```text
+import easyocr
+from PIL import Image
+
+image = Image.open('image.jpg')
+reader = easyocr.Reader(\['en'\])
+text = reader.readtext(image)
+print(text)
+```
 
 In this example, we are opening an image file called "image.jpg" using the PIL module. We then pass this image object to the readtext function of EasyOCR, which returns the extracted text. Finally, we print the extracted text to the console.
 
@@ -190,15 +217,36 @@ To use a GPU with EasyOCR, you must install the CUDA toolkit and cuDNN library o
 
 Here is an example of how to use a GPU with EasyOCR:
 
-| import easyocrfrom PIL import Imageimage \= Image.open('image.jpg')reader \= easyocr.Reader(\['en'\], gpu=True)text \= reader.readtext(image)print(text) |
-| :---- |
+```python
+import easyocr
+from PIL import Image
+
+image = Image.open('image.jpg')
+reader = easyocr.Reader(\['en'\], gpu=True)
+text = reader.readtext(image)
+print(text)
+```
 
 In this example, we are setting the GPU parameter of the Reader class to True, which tells EasyOCR to use a GPU for processing. This can significantly improve the speed of OCR tasks.
 
 Easyocr also uses to perform handwriting ocr in python. Here is an example code for performing handwriting OCR using EasyOCR in Python:
 
-| import easyocr\# initialise the reader and specify the languages to be usedreader \= easyocr.Reader(\['en'\], gpu=False)\# load the image containing the handwriting textimg\_path \= 'handwriting.png'img \= Image.open(img\_path)\# perform OCR on the image and get the resultsresults \= reader.readtext(img, detail=0)\# print the resultsprint(results) |
-| :---- |
+```python
+import easyocr
+
+\# initialise the reader and specify the languages to be used
+reader = easyocr.Reader(\['en'\], gpu=False)
+
+\# load the image containing the handwriting text
+img_path = 'handwriting.png'
+img = Image.open(img_path)
+
+\# perform OCR on the image and get the results
+results = reader.readtext(img, detail=0)
+
+\# print the results
+print(results)
+```
 
 In this example, we initialize an instance of the EasyOCR reader and specify the languages to use. Then, we load the handwriting text image using the Pillow library's Image. Open function. Next, we call the readtext method of the reader instance, passing in the image and specifying that we want detailed results. Finally, we print the results.
 
@@ -231,13 +279,25 @@ Now that you have a basic understanding of PaddleOCR and how it compares to othe
 
 The first step is to install PaddleOCR. You can install PaddleOCR using pip by running the following command:
 
-| pip install paddleocr |
-| :---- |
+```bash
+pip install paddleocr
+```
 
 Once you have installed PaddleOCR, you can load a pre-trained OCR model and use it to extract text from an image. Here's an example:
 
-| import paddleocr\# Load the text detector and recognizerocr \= paddleocr.OCR()\# Read the image and extract textresult \= ocr.ocr('image.jpg')\# Print the extracted textfor line in result:    print(line\[1\]\[0\]) |
-| :---- |
+```python
+import paddleocr
+
+\# Load the text detector and recognizer
+ocr = paddleocr.OCR()
+
+\# Read the image and extract text
+result = ocr.ocr('image.jpg')
+
+\# Print the extracted text
+for line in result:
+    print(line\[1\]\[0\])
+```
 
 In this example, we first load the OCR model using the OCR() function provided by PaddleOCR. We then pass an image file to the ocr() function to extract text from the image. Finally, we print the extracted text.
 
@@ -268,13 +328,22 @@ Doctr is an open-source Python package for OCR developed by Mindee, a company sp
 
 To get started with Doctr, you first need to install it. You can install Doctr using pip, the Python package installer. Simply open your terminal or command prompt and enter the following command:
 
-| pip install python-doctr |
-| :---- |
+```bash
+pip install python-doctr
+```
 
 ### How to Use Doctr for OCR Document Processing
 
-| from doctr.io import DocumentFilefrom doctr.models import ocr\_predictormodel \= ocr\_predictor(pretrained=True)\# PDFdoc \= DocumentFile.from\_pdf("path/to/your/doc.pdf")\# Analyzeresult \= model(doc) print(result) |
-| :---- |
+```python
+from doctr.io import DocumentFile
+from doctr.models import ocr_predictor
+
+model = ocr_predictor(pretrained=True)
+\# PDF
+doc = DocumentFile.from_pdf("path/to/your/doc.pdf")
+\# Analyze
+result = model(doc) print(result)
+```
 
 In this example, we first create a DocumentFile object from a PDF file, then call the ocr\_predictor() method to extract the text from the document. The extracted text is then printed to the console.
 
@@ -311,20 +380,38 @@ Keras-OCR is a Python library that leverages Keras and TensorFlow to perform ima
 
 To install Keras-OCR, you need to have Python 3.6 or higher installed. Then, you can install Keras-OCR using pip, a popular Python package manager. Here's how to do it:
 
-| pip install keras-ocr |
-| :---- |
+```bash
+pip install keras-ocr
+```
 
 ### Using Keras-OCR
 
 Keras-OCR provides a simple API for performing OCR on images. The first step is to create an instance of the keras\_ocr.pipeline.Pipeline class, which is the core component of the library. Here's an example of how to do it:
 
-| import keras\_ocrpipeline \= keras\_ocr.pipeline.Pipeline() |
-| :---- |
+```python
+import keras_ocr
+
+pipeline = keras_ocr.pipeline.Pipeline()
+```
 
 The next step is to load an image and pass it through the pipeline. Here's an example:
 
-| import matplotlib.pyplot as pltimport keras\_ocr\# Load the imageimage \= keras\_ocr.tools.read(url='https://upload.wikimedia.org/wikipedia/commons/1/13/OCR\_sample2.png')\# Perform OCRpredictions \= pipeline.recognize(\[image\])\# Show the image and OCR outputfig, axs \= plt.subplots(nrows=len(predictions), figsize=(20, 20))for ax, prediction in zip(axs, predictions):    keras\_ocr.tools.drawAnnotations(image=image, predictions=prediction, ax=ax)plt.show() |
-| :---- |
+```python
+import matplotlib.pyplot as plt
+import keras_ocr
+
+\# Load the image
+image = keras_ocr.tools.read(url='https://upload.wikimedia.org/wikipedia/commons/1/13/OCR_sample2.png')
+
+\# Perform OCR
+predictions = pipeline.recognize(\[image\])
+
+\# Show the image and OCR output
+fig, axs = plt.subplots(nrows=len(predictions), figsize=(20, 20))
+for ax, prediction in zip(axs, predictions):
+    keras_ocr.tools.drawAnnotations(image=image, predictions=prediction, ax=ax)
+plt.show()
+```
 
 This code will load the image, pass it through the pipeline, and display it with the OCR output overlaid. Note that the read function loads the image and accepts various inputs, such as a local file path or a URL.
 

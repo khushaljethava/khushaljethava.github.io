@@ -68,29 +68,41 @@ One of the most useful features of a Python Reddit bot is the ability to post co
 **Step 1:** Import the Required Modules  
 To start, you'll need to import the required modules for your Python Reddit bot. You'll need the PRAW library to interact with the Reddit API and any other modules you need for your specific task. Here's an example of the modules you might import for posting comments:
 
-| import prawimport time |
-| :---- |
+```python
+import praw
+import time
+```
 
 **Step 2:** Authenticate Your Bot with the Reddit API  
 Before your Python Reddit bot can post comments on Reddit, you'll need to authenticate it with the Reddit API using your API credentials. Here's an example of how to do this:
 
-| reddit \= praw.Reddit(client\_id='your\_client\_id',                     client\_secret='your\_client\_secret',                     username='your\_username',                     password='your\_password',                     user\_agent='your\_user\_agent') |
-| :---- |
+```python
+reddit = praw.Reddit(client_id='your_client_id',
+client_secret='your_client_secret',
+username='your_username',
+password='your_password',
+user_agent='your_user_agent')
+```
 
 Make sure to replace 'your\_client\_id', 'your\_client\_secret', 'your\_username', 'your\_password', and 'your\_user\_agent' with your actual API credentials and user information.
 
 **Step 3:** Find a Reddit Thread to Comment On  
 Once your Python Reddit bot is authenticated with the Reddit API, you must find a Reddit thread to comment on. You can do this by searching for a specific subreddit or by looking for popular threads in the Reddit home page. Here's an example of how to find a Reddit thread to comment on:
 
-| subreddit \= reddit.subreddit('your\_subreddit\_name')for submission in subreddit.hot(limit=10):    print(submission.title) |
-| :---- |
+```python
+subreddit = reddit.subreddit('your_subreddit_name')
+for submission in subreddit.hot(limit=10):
+    print(submission.title)
+```
 
 This code will print the titles of the top 10 hot threads in the subreddit you specify.  
 **Step 4:** Post a Comment on the thread  
 Once you've found a Reddit thread to comment on, you can use your Python Reddit bot to post a comment on the thread. Here's an example of how to do this:
 
-| submission \= reddit.submission(id='your\_submission\_id')submission.reply('your\_comment\_text') |
-| :---- |
+```python
+submission = reddit.submission(id='your_submission_id')
+submission.reply('your_comment_text')
+```
 
 Make sure to replace 'your\_submission\_id' with the ID of the Reddit thread you want to comment on and 'your\_comment\_text' with the text of the comment you want to post.
 
@@ -98,8 +110,9 @@ Make sure to replace 'your\_submission\_id' with the ID of the Reddit thread you
 
 To avoid getting your Python Reddit bot flagged as spam, adding a delay between each comment you post is important. You can do this using the time module in Python. Here's an example of how to add a delay of 10 seconds:
 
-| time.sleep(10) |
-| :---- |
+```python
+time.sleep(10)
+```
 
 With these steps, you can now code your Python Reddit bot to post comments on Reddit threads. Just make sure to use your bot responsibly and follow Reddit's rules and guidelines.
 
@@ -110,38 +123,58 @@ In addition to posting comments and upvoting posts, you can also use Python to s
 **Step 1:** Import the Required Modules  
 To start, you'll need to import the required modules for your Python Reddit scraper. You'll need the PRAW library to interact with the Reddit API and any other modules you need for your specific task. Here's an example of the modules you might import for scraping Reddit data:
 
-| import prawimport pandas as pd |
-| :---- |
+```python
+import praw
+import pandas as pd
+```
 
 **Step 2:** Authenticate Your Bot with the Reddit API  
 Before your Python Reddit scraper can access Reddit data, you must authenticate it with the Reddit API using your API credentials. Here's an example of how to do this:
 
-| reddit \= praw.Reddit(client\_id='your\_client\_id',                     client\_secret='your\_client\_secret',                     username='your\_username',                     password='your\_password',                     user\_agent='your\_user\_agent') |
-| :---- |
+```python
+reddit = praw.Reddit(client_id='your_client_id',
+client_secret='your_client_secret',
+username='your_username',
+password='your_password',
+user_agent='your_user_agent')
+```
 
 Make sure to replace 'your\_client\_id', 'your\_client\_secret', 'your\_username', 'your\_password', and 'your\_user\_agent' with your actual API credentials and user information.
 
 **Step 3:** Retrieve Data from Reddit  
 Once your Python Reddit scraper is authenticated with the Reddit API, you can use it to retrieve data from Reddit. You can retrieve data in various formats, such as posts, comments, or subreddits. For example, to retrieve the top 10 hot posts in a subreddit, you can use the following code:
 
-| subreddit \= reddit.subreddit('your\_subreddit\_name')top\_posts \= subreddit.hot(limit=10)for post in top\_posts:    print(post.title) |
-| :---- |
+```python
+subreddit = reddit.subreddit('your_subreddit_name')
+top_posts = subreddit.hot(limit=10)
+for post in top_posts:
+    print(post.title)
+```
 
 This code will print the titles of the top 10 hot posts in the subreddit you specify.
 
 **Step 4:** Store Data in a Pandas DataFrame  
 To make the data easier to analyze, you can store it in a Pandas DataFrame. Here's an example of how to store the titles of the top 10 hot posts in a Pandas DataFrame:
 
-| subreddit \= reddit.subreddit('your\_subreddit\_name')top\_posts \= subreddit.hot(limit=10)post\_titles \= \[\]for post in top\_posts:    post\_titles.append(post.title)df \= pd.DataFrame({'Post Title': post\_titles})print(df) |
-| :---- |
+```python
+subreddit = reddit.subreddit('your_subreddit_name')
+top_posts = subreddit.hot(limit=10)
+post_titles = \[\]
+for post in top_posts:
+    post_titles.append(post.title)
+
+df = pd.DataFrame({'Post Title': post_titles})
+print(df)
+```
 
 This code will print a DataFrame containing the titles of the top 10 hot posts in the subreddit you specify.
 
 **Step 5:** Export Data to a CSV File  
 Finally, you can export the data to a CSV file for further analysis. Here's an example of how to export the DataFrame to a CSV file:
 
-| df.to\_csv('reddit\_data.csv', index=False) |
-| :---- |
+```python
+df.to_csv('reddit_data.csv', index=False)
+```
 
 This code will export the DataFrame to a CSV file called 'reddit\_data.csv' in the same directory as your Python script.
 

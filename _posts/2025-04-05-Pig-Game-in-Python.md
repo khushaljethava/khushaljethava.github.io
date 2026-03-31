@@ -45,25 +45,61 @@ Follow the below steps to build a pig game in python.
 
 **Step 1:** Firstly, we will import the necessary libraries and declare the required variables.
 
-| import randomUser\_Total \= 0Computer\_Total \= 0Total\_Turn \= 10Number\_Of\_Turns \= 0Computer\_Turns \= 0 |
-| :---- |
+```python
+import random
+
+User_Total = 0
+Computer_Total = 0
+Total_Turn = 10
+Number_Of_Turns = 0
+Computer_Turns = 0
+```
 
 **Step 2:** Now, we will declare two functions for randomly generated numbers from 1 to 10, one for the user and one for the computer.
 
-| def UserTurn():    roll \= random.randint(1,10)    return rolldef ComputerTurn():    roll \= random.randint(1,10)    return roll |
-| :---- |
+```python
+def UserTurn():
+    roll = random.randint(1,10)
+return roll
+
+def ComputerTurn():
+    roll = random.randint(1,10)
+return roll
+```
 
 **Step 3:** We implement a while loop that will execute ten times in this step. And inside the while loop, we will get users and computer roll scores.
 
-| while Number\_Of\_Turns \<= Total\_Turn:    UserScore \= UserTurn()    if UserScore \!= 1:        User\_Total \= User\_Total \+ UserScore        Number\_Of\_Turns \= Number\_Of\_Turns \+ 1    elif UserScore \== 1:        while(Computer\_Turns \<= Total\_Turn):            ComputerScore  \= ComputerTurn()            if ComputerScore \!= 1:                Computer\_Total \= Computer\_Total \+ ComputerScore                Computer\_Turns \= Computer\_Turns \+ 1            else:                break |
-| :---- |
+```python
+while Number_Of_Turns \<= Total_Turn:
+    UserScore = UserTurn()
+if UserScore != 1:
+    User_Total = User_Total + UserScore
+Number_Of_Turns = Number_Of_Turns + 1
+elif UserScore == 1:
+    while(Computer_Turns \<= Total_Turn):
+    ComputerScore  = ComputerTurn()
+if ComputerScore != 1:
+    Computer_Total = Computer_Total + ComputerScore
+Computer_Turns = Computer_Turns + 1
+else:
+    break
+```
 
 Inside the while loop, we have implemented a condition to check the roll number; the first user will get the chance to roll, and it will check if the user has rolled one, then the computer will get an opportunity to roll the dice.
 
 **Step 4:** This is the last step where we will check who is the winner of the game by using the if condition statement by checking who scores more than the other.
 
-| if User\_Total \> Computer\_Total:    print("User Has Won")    print("The User Score has {}, and the Computer has Score {}".format(User\_Total,Computer\_Total))elif Computer\_Total \> User\_Total:    print("Computer Has Won")    print("The User Score has {}, and the Computer has Score {}".format(User\_Total,Computer\_Total))else:    print("Match has Draw with User Score: {}, and the Computer Score: {}".format(User\_Total,Computer\_Total)) |
-| :---- |
+```python
+if User_Total \> Computer_Total:
+    print("User Has Won")
+print("The User Score has {}, and the Computer has Score {}".format(User_Total,Computer_Total))
+
+elif Computer_Total \> User_Total:
+    print("Computer Has Won")
+print("The User Score has {}, and the Computer has Score {}".format(User_Total,Computer_Total))
+else:
+    print("Match has Draw with User Score: {}, and the Computer Score: {}".format(User_Total,Computer_Total))
+```
 
 Now let run the game and see the outputs of the game.
 

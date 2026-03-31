@@ -409,6 +409,7 @@ The output will be as follows.
 (('a', 1), ('b', 2), ('c', 3))
 {'a': 1, 'b': 2, 'c': 3}
 The type of my_tup is : <class 'dict'>
+```
 
 ## Python chr() 
 

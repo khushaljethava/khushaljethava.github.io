@@ -26,7 +26,7 @@ This guide walks through each piece using Python tools: MLflow for experiment tr
 
 A well-organized ML project looks like this:
 
-```
+```text
 ml-project/
 ├── data/
 │   ├── raw/

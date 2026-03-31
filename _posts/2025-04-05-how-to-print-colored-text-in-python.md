@@ -65,8 +65,14 @@ Let's see some examples of the ANSI method.
 
 ### Example 1: Print colored text using the 16 ANSI method in python.
 
-| \#Print the colored text with the starting color codesprint('\\033\[1;34;42m' \+ 'Welcome to PythonScholar ')\#Print the colored text with the starting and ending color codesprint('\\033\[2;31;47m' \+ 'Some text here' \+ '\\033\[0;0m') |
-| :---- |
+```python
+\#Print the colored text with the starting color codes
+print('\\033\[1;34;42m' + 'Welcome to PythonScholar ')
+
+
+\#Print the colored text with the starting and ending color codes
+print('\\033\[2;31;47m' + 'Some text here' + '\\033\[0;0m')
+```
 
 Output:
 
@@ -74,16 +80,23 @@ Output:
 
 ### Example 2: Print Rainbow colored text in python.
 
-| print("\\x1b\[31mR\\x1b\[33mA\\x1b\[32mI\\x1b\[36mN\\x1b\[34mB\\x1b\[35mO\\x1b\[31mW\\x1b\[0m") |
-| :---- |
+```python
+print("\\x1b\[31mR\\x1b\[33mA\\x1b\[32mI\\x1b\[36mN\\x1b\[34mB\\x1b\[35mO\\x1b\[31mW\\x1b\[0m")
+```
 
 Output:  
 ![][image2]
 
 ### Example 3: Print blinking color text using python.
 
-| \#Print the colored text with the starting color codesprint('\\033\[5;34;45m' \+ 'Welcome to PythonScholar ')\#Print the colored text with the starting and ending color codesprint('\\033\[6;31;43m' \+ 'Some text here'\+ '\\033\[0;0m') |
-| :---- |
+```python
+\#Print the colored text with the starting color codes
+print('\\033\[5;34;45m' + 'Welcome to PythonScholar ')
+
+
+\#Print the colored text with the starting and ending color codes
+print('\\033\[6;31;43m' + 'Some text here'+ '\\033\[0;0m')
+```
 
 Output:  
 ![][image3]
@@ -98,13 +111,16 @@ The Colorama package is a Python module that allows you to add colored text and 
 
 To use Colorama, you first need to install it using pip:
 
-| pip install colorama |
-| :---- |
+```bash
+pip install colorama
+```
 
 Once installed, you can use the package in your Python code as follows:
 
-| from colorama import Fore, Back, Styleprint(Fore.RED \+ "This text is red\!" \+ Fore.RESET) |
-| :---- |
+```python
+from colorama import Fore, Back, Style
+print(Fore.RED + "This text is red!" + Fore.RESET)
+```
 
 In this example, we import the Fore, Back, and Style classes from colorama. These classes allow us to modify our output's foreground color, background color, and text style, respectively.
 
@@ -112,13 +128,15 @@ We then use the Fore.RED class to set the foreground color of our text to red, a
 
 Here are some more examples of how to use Colorama:
 
-| print(Back.YELLOW \+ Fore.BLACK \+ "Warning\!" \+ Style.RESET\_ALL) |
-| :---- |
+```text
+print(Back.YELLOW + Fore.BLACK + "Warning!" + Style.RESET_ALL)
+```
 
 The following code will display the text "Warning\!" in black text color with a yellow background.
 
-| print(Fore.BLUE \+ "This text is underlined\!" \+ Style.RESET\_ALL \+ Style.BRIGHT \+ Back.CYAN \+ "PythonScholar" \+ Style.RESET\_ALL) |
-| :---- |
+```python
+print(Fore.BLUE + "This text is underlined!" + Style.RESET_ALL + Style.BRIGHT + Back.CYAN + "PythonScholar" + Style.RESET_ALL)
+```
 
 This will print two separate strings with different formatting. The first string will be blue and underlined, and the second string will be bold with a cyan background.
 
@@ -130,25 +148,31 @@ The Python colored package is a third-party Python module that provides a simple
 
 To use color, you first need to install it using pip:
 
-| pip install colored |
-| :---- |
+```text
+pip install colored
+```
 
 Once installed, you can use the package in your Python code as follows:
 
-| from colored import fg, bg, attrprint(fg('red') \+ "This text is red\!" \+ attr('reset')) |
-| :---- |
+```python
+from colored import fg, bg, attr
+
+print(fg('red') + "This text is red!" + attr('reset'))
+```
 
 In this example, we use the fg function to set the foreground color of our text to red, and add the string "This text is red\!" to our output. We then use the attr function to reset the color to its default value.
 
 Here are some more examples of how to use colored:
 
-| print(bg('yellow') \+ fg('black') \+ "Warning\!" \+ attr('reset')) |
-| :---- |
+```text
+print(bg('yellow') + fg('black') + "Warning!" + attr('reset'))
+```
 
 This will print the word "Warning\!" with a yellow background and black text color.
 
-| print(fg('blue') \+ attr('underline') \+ "This text is underlined\!" \+ attr('reset') \+ attr('bold') \+ bg('cyan') \+ " PythonScholar" \+ attr('reset')) |
-| :---- |
+```python
+print(fg('blue') + attr('underline') + "This text is underlined!" + attr('reset') + attr('bold') + bg('cyan') + " PythonScholar" + attr('reset'))
+```
 
 This will print two separate strings with different formatting. The first string will be blue and underlined, and the second string will be bold with a cyan background.  
 Overall, colored provides a simple and convenient way to add color and style to your command-line interfaces in Python. However, note that it is a third-party package and may not be as widely used or supported as Colorama.
@@ -159,8 +183,9 @@ The prompt\_toolkit package is a Python module that provides a framework for bui
 
 To use prompt\_toolkit, you first need to install it using pip:
 
-| pip install prompt\_toolkit |
-| :---- |
+```bash
+pip install prompt_toolkit
+```
 
 Once installed, you can use the package to create a command-line interface with the following steps:
 
@@ -168,27 +193,40 @@ Once installed, you can use the package to create a command-line interface with 
 
 	
 
-| from prompt\_toolkit import prompt, print\_formatted\_textfrom prompt\_toolkit.styles import Stylefrom prompt\_toolkit.token import Token |
-| :---- |
+```python
+from prompt_toolkit import prompt, print_formatted_text
+from prompt_toolkit.styles import Style
+from prompt_toolkit.token import Token
+```
 
 **Step 2:** Define a style for your text using the Style class. You can use this to customize the colors and other formatting options for your output:
 
-| style \= Style.from\_dict({    Token.Hello: 'bold \#ff0066',    Token.World: 'italic \#00ff66',}) |
-| :---- |
+```text
+style = Style.from_dict({
+Token.Hello: 'bold \#ff0066',
+Token.World: 'italic \#00ff66',
+})
+```
 
 In this example, we define a style with two tokens: Hello and World. The Hello token is set to bold and a bright pink color, while the World token is set to italic and a bright green color.
 
 **Step 3:** Use the print\_formatted\_text function to print your text with the defined style:
 
-| text \= \[    (Token.Hello, 'Hello'),    (Token.World, 'world\!')\]print\_formatted\_text(text, style=style) |
-| :---- |
+```python
+text = \[
+(Token.Hello, 'Hello'),
+(Token.World, 'world!')
+\]
+print_formatted_text(text, style=style)
+```
 
 In this example, we define a list of tuples that represents our output text. Each tuple contains a token and a string that should be styled using that token. We then pass this list to the print\_formatted\_text function along with our defined style.
 
 **Step 4:** Use the prompt function to get input from the user with the desired prompt text and optional arguments for auto-completion, history, and other features:
 
-| user\_input \= prompt('Enter your name: ', completer=None, history=None) |
-| :---- |
+```text
+user_input = prompt('Enter your name: ', completer=None, history=None)
+```
 
 In this example, we use the prompt function to get input from the user with the prompt text "Enter your name: ". We also specify completer=None and history=None to disable auto-completion and history features, respectively.
 
@@ -200,25 +238,31 @@ The termcolor package is a third-party Python module that provides an easy-to-us
 
 To use termcolor, you first need to install it using pip:
 
-| pip install termcolor |
-| :---- |
+```text
+pip install termcolor
+```
 
 Once installed, you can use the package in your Python code as follows:
 
-| from termcolor import coloredprint(colored('Hello, world\!', 'red')) |
-| :---- |
+```python
+from termcolor import colored
+
+print(colored('Hello, world!', 'red'))
+```
 
 In this example, we use the colored function to print the string "Hello, world\!" with red color. The second argument to the colored function specifies the color of the text, which can be any of the following: **grey**, **red**, **green**, **yellow**, **blue**, **magenta**, **cyan**, or **white**.
 
 Here are some more examples of how to use termcolor:
 
-| print(colored('Warning\!', 'yellow', 'on\_red')) |
-| :---- |
+```python
+print(colored('Warning!', 'yellow', 'on_red'))
+```
 
 This will print the word "Warning\!" with a yellow foreground color and a red background color.
 
-| print(colored('Success\!', 'green', attrs=\['bold', 'underline'\])) |
-| :---- |
+```python
+print(colored('Success!', 'green', attrs=\['bold', 'underline'\]))
+```
 
 This will print the word "Success\!" with green color, bold and underline attributes.
 
@@ -230,25 +274,31 @@ Overall, termcolor provides a simple and convenient way to add color and style t
 
  You can install it using pip: 
 
-| pip install simple\_color |
-| :---- |
+```text
+pip install simple_color
+```
 
 Once installed, you can use the package in your Python code as follows:
 
-| from simple\_color import \*print(color("Hello, world\!", Colors.RED)) |
-| :---- |
+```python
+from simple_color import \*
+
+print(color("Hello, world!", Colors.RED))
+```
 
 In this example, we use the color function to print the string "Hello, world\!" with red color. The second argument to the color function specifies the color of the text, which can be any of the following: RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, or WHITE.
 
 Here are some more examples of how to use simple\_color:
 
-| print(color("Warning\!", Colors.YELLOW, bg=Colors.RED)) |
-| :---- |
+```python
+print(color("Warning!", Colors.YELLOW, bg=Colors.RED))
+```
 
 This will print the word "Warning\!" with a yellow foreground color and a red background color.
 
-| print(color("Success\!", Colors.GREEN, style=Styles.BOLD | Styles.UNDERLINE)) |
-| :---- |
+```python
+print(color("Success!", Colors.GREEN, style=Styles.BOLD | Styles.UNDERLINE))
+```
 
 This will print the word "Success\!" with green color, bold and underline attributes.  
 Overall, simple\_color provides a simple and convenient way to add color and style to your command-line interfaces in Python.

@@ -186,7 +186,7 @@ Pretrained YOLO models detect 80 common object categories from the COCO dataset.
 
 YOLO expects data in a specific format. Each image has a corresponding text file with one line per object:
 
-```
+```text
 # Format: class_id center_x center_y width height (all normalized 0-1)
 0 0.45 0.32 0.12 0.08
 1 0.72 0.65 0.15 0.20
@@ -194,7 +194,7 @@ YOLO expects data in a specific format. Each image has a corresponding text file
 
 Organize your dataset like this:
 
-```
+```text
 dataset/
 ├── train/
 │   ├── images/

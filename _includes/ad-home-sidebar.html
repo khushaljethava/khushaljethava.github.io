@@ -1,50 +1,93 @@
-<!-- Home Sidebar Ad - Inserts between Recently Updated and Trending Tags -->
+<div id="solopreneur-ad"></div>
 <script>
-(function() {
-  function initAd() {
-    var panelWrapper = document.getElementById('panel-wrapper');
-    if (!panelWrapper) {
-      setTimeout(initAd, 500);
-      return;
+(function () {
+  const css = `
+    @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap');
+    #solopreneur-ad {
+      position: sticky;
+      top: 1rem;
+      z-index: 10;
+      align-self: flex-start;
+      display: flex;
+      justify-content: center;
     }
-
-    var recentlyUpdatedSection = panelWrapper.querySelector('#access-lastmod') ||
-      panelWrapper.querySelector('section');
-
-    if (!recentlyUpdatedSection) {
-      setTimeout(initAd, 500);
-      return;
+    #solopreneur-ad * { box-sizing: border-box; }
+    #sp-card {
+      width: 336px; height: 280px; border-radius: 20px; overflow: hidden;
+      font-family: 'DM Sans', sans-serif; background: #0d1117; color: #f0f4ff;
+      position: relative; cursor: pointer;
+      border: 1px solid rgba(99,102,241,0.25);
+      transition: transform 0.35s cubic-bezier(.22,.68,0,1.2), border-color 0.3s;
     }
+    #sp-card:hover { transform: translateY(-4px) scale(1.015); border-color: rgba(99,102,241,0.55); }
+    #sp-card:hover #sp-cta { background: linear-gradient(135deg,#4338ca,#4f46e5); box-shadow: 0 6px 18px rgba(99,102,241,0.5); }
+    #sp-card:hover #sp-arrow { transform: translateX(3px); }
+    #sp-bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 80% 0%,rgba(99,102,241,0.22) 0%,transparent 60%),
+                  radial-gradient(ellipse at 20% 100%,rgba(16,185,129,0.14) 0%,transparent 55%);
+    }
+    #sp-grid {
+      position: absolute; inset: 0; opacity: 0.07;
+      background-image: linear-gradient(rgba(255,255,255,0.4) 1px,transparent 1px),
+                        linear-gradient(90deg,rgba(255,255,255,0.4) 1px,transparent 1px);
+      background-size: 28px 28px;
+    }
+    #sp-badge {
+      position: absolute; top: 14px; right: 14px;
+      background: rgba(16,185,129,0.15); color: #34d399;
+      border: 1px solid rgba(52,211,153,0.35);
+      font-size: 10px; font-weight: 500; padding: 4px 10px;
+      border-radius: 100px; letter-spacing: 0.08em; text-transform: uppercase;
+      animation: sp-pulse 2.5s ease-in-out infinite;
+    }
+    @keyframes sp-pulse {
+      0%,100% { box-shadow: 0 0 0 0 rgba(52,211,153,0); }
+      50% { box-shadow: 0 0 0 4px rgba(52,211,153,0.1); }
+    }
+    #sp-content { position: relative; padding: 18px 20px 0; }
+    #sp-eyebrow { font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(99,102,241,0.9); font-weight: 500; margin-bottom: 7px; }
+    #sp-headline { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; line-height: 1.18; color: #f8faff; margin: 0 0 8px; letter-spacing: -0.02em; }
+    #sp-headline span { color: #818cf8; }
+    #sp-sub { font-size: 12px; color: rgba(200,210,240,0.7); margin: 0 0 12px; }
+    #sp-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+    .sp-pill { font-size: 11px; padding: 4px 10px; border-radius: 100px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: rgba(220,230,255,0.8); }
+    #sp-footer { display: flex; align-items: center; justify-content: space-between; padding: 0 20px; position: absolute; bottom: 16px; left: 0; right: 0; }
+    #sp-cta { display: inline-flex; align-items: center; gap: 6px; background: linear-gradient(135deg,#4f46e5,#6366f1); padding: 9px 16px; border-radius: 10px; font-size: 12.5px; font-weight: 500; color: #fff; box-shadow: 0 4px 14px rgba(99,102,241,0.35); transition: background 0.25s, box-shadow 0.25s; }
+    #sp-arrow { transition: transform 0.25s; }
+    #sp-price { text-align: right; }
+    #sp-price-was { font-size: 10.5px; color: rgba(200,210,240,0.4); text-decoration: line-through; margin-bottom: 1px; }
+    #sp-price-now { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: #fbbf24; line-height: 1; }
+    #sp-price-label { font-size: 9.5px; color: rgba(200,210,240,0.45); margin-top: 1px; }
+  `;
 
-    // Avoid duplicate injection
-    if (document.getElementById('container-c4d52ed48f18e55ed38b7bb2dceb5d68')) return;
+  const html = `
+    <style>${css}</style>
+    <div id="sp-card" onclick="window.open('https://www.solopreneurshub.com/','_blank')">
+      <div id="sp-bg"></div>
+      <div id="sp-grid"></div>
+      <div id="sp-badge">Limited Offer</div>
+      <div id="sp-content">
+        <div id="sp-eyebrow">Solopreneurs Hub</div>
+        <h2 id="sp-headline">Build &amp; Sell<br><span>Digital Products</span></h2>
+        <p id="sp-sub">5M+ assets &middot; AI tools &middot; 100% resell rights</p>
+        <div id="sp-pills">
+          <span class="sp-pill">Games &amp; source code</span>
+          <span class="sp-pill">Viral reels</span>
+          <span class="sp-pill">PLR ebooks</span>
+        </div>
+      </div>
+      <div id="sp-footer">
+        <div id="sp-cta">Get Lifetime Access <span id="sp-arrow">→</span></div>
+        <div id="sp-price">
+          <div id="sp-price-was">$197</div>
+          <div id="sp-price-now">$47</div>
+          <div id="sp-price-label">one-time</div>
+        </div>
+      </div>
+    </div>
+  `;
 
-    var adWrapper = document.createElement('div');
-    adWrapper.className = 'ad-home-panel';
-
-    var innerDiv = document.createElement('div');
-    innerDiv.style.cssText = 'width:300px;margin:0 auto;text-align:center;';
-
-    // Container ID must match exactly what invoke.js expects
-    var containerDiv = document.createElement('div');
-    containerDiv.id = 'container-c4d52ed48f18e55ed38b7bb2dceb5d68';
-
-    var invokeScript = document.createElement('script');
-    invokeScript.async = true;
-    invokeScript.setAttribute('data-cfasync', 'false');
-    invokeScript.src = 'https://pl29017712.profitablecpmratenetwork.com/c4d52ed48f18e55ed38b7bb2dceb5d68/invoke.js';
-
-    innerDiv.appendChild(containerDiv);
-    innerDiv.appendChild(invokeScript);
-    adWrapper.appendChild(innerDiv);
-
-    recentlyUpdatedSection.insertAdjacentElement('afterend', adWrapper);
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initAd);
-  } else {
-    initAd();
-  }
+  document.getElementById("solopreneur-ad").innerHTML = html;
 })();
 </script>

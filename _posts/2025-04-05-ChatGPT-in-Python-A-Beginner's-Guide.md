@@ -35,15 +35,17 @@ To begin using OpenAI in Python and accessing the powerful ChatGPT model, you mu
 
 **Step 4:** Once you have Python installed, you can install the OpenAI Python library using pip, the package manager for Python. Run the following command:
 
-| pip install openai |
-| :---- |
+```bash
+pip install openai
+```
 
 This command will download and install the OpenAI Python library and its dependencies.
 
 **Step 5:** After the installation is complete, verify that the OpenAI library is installed correctly by running the following command:
 
-| python \-c "import openai; print(openai.\_\_version\_\_)" |
-| :---- |
+```python
+python \-c "import openai; print(openai.__version__)"
+```
 
 If the installation was successful, you should see the version number of the OpenAI Python library printed on the console.
 
@@ -63,13 +65,15 @@ To leverage the power of OpenAI's ChatGPT model in your Python projects, you nee
 
 **Step 2:** Import the OpenAI module in your Python script:
 
-| import openai |
-| :---- |
+```python
+import openai
+```
 
 **Step 3:** After import openai in python we will Set up the OpenAI API credentials:
 
-|  openai.api\_key \= 'YOUR\_API\_KEY' |
-| :---- |
+```python
+openai.api_key = 'YOUR_API_KEY'
+```
 
 Replace 'YOUR\_API\_KEY' with the API key you obtained from the OpenAI website.
 
@@ -78,8 +82,15 @@ Replace 'YOUR\_API\_KEY' with the API key you obtained from the OpenAI website.
 * The OpenAI Python library provides a client that allows you to make API calls easily. You can use the ‘**openai.Completion.create()**’ method to interact with the ChatGPT model. Here's an example:
 
 
-| response \= openai.Completion.create(    engine='gpt-3.5-turbo',  \# Specify the ChatGPT engine    prompt='Hello, how are you?',  \# Provide a prompt or user input    max\_tokens=50  \# Set the maximum number of tokens for the response)print(response.choices\[0\].text.strip())  \# Print the generated response |
-| :---- |
+```python
+response = openai.Completion.create(
+engine='gpt-3.5-turbo',  \# Specify the ChatGPT engine
+prompt='Hello, how are you?',  \# Provide a prompt or user input
+max_tokens=50  \# Set the maximum number of tokens for the response
+)
+
+print(response.choices\[0\].text.strip())  \# Print the generated response
+```
 
 **Step 5:** Customize the **engine**, **prompt**, and **max\_tokens** parameters based on your requirements.
 
@@ -101,8 +112,10 @@ ChatGPT, powered by OpenAI, opens up exciting possibilities for building chat ap
 **Step 1:** Importing the necessary libraries:  
 Start by importing the required libraries in your Python script:
 
-| import openaiimport time |
-| :---- |
+```python
+import openai
+import time
+```
 
 **Step 2:** Setting up the OpenAI API:  
 Ensure you have set up the OpenAI API credentials as discussed in the above section.
@@ -110,8 +123,28 @@ Ensure you have set up the OpenAI API credentials as discussed in the above sect
 **Step 3:** Implementing the chat loop:  
 Create a loop that allows for an ongoing conversation with the user. Here's an example to get you started:
 
-| \# Set up initial user inputuser\_input \= 'Hello, how can I assist you?'while True:    \# Generate response from ChatGPT    response \= openai.Completion.create(        engine='gpt-3.5-turbo',        prompt=user\_input,        max\_tokens=50    )    \# Extract the generated reply from the API response    reply \= response.choices\[0\].text.strip()    \# Print the reply and ask for user input    print(reply)    user\_input \= input()    \# Add some delay between API calls to avoid rate limiting    time.sleep(1) |
-| :---- |
+```python
+\# Set up initial user input
+user_input = 'Hello, how can I assist you?'
+
+while True:
+    \# Generate response from ChatGPT
+response = openai.Completion.create(
+engine='gpt-3.5-turbo',
+prompt=user_input,
+max_tokens=50
+)
+
+\# Extract the generated reply from the API response
+reply = response.choices\[0\].text.strip()
+
+\# Print the reply and ask for user input
+print(reply)
+user_input = input()
+
+\# Add some delay between API calls to avoid rate limiting
+time.sleep(1)
+```
 
 Customize the prompt, engine, and max\_tokens parameters based on your specific requirements.
 

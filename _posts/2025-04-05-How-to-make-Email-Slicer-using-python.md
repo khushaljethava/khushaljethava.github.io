@@ -26,21 +26,24 @@ Email Slicer is a simple Python program that extracts the username and domain na
 **Step 1:** Getting Started  
 To begin, we need to import the required libraries. In this case, we only need the re library, which is used for regular expressions. Here is the code to import the library:
 
-| import re |
-| :---- |
+```python
+import re
+```
 
 **Step 2:** User Input  
 The next step is to ask the user to enter their email address. We will use the input() function to get the user input. Here is the code for the user input:
 
-| email \= input("Enter your email address: ") |
-| :---- |
+```python
+email = input("Enter your email address: ")
+```
 
 **Step 3:** Regular Expression Matching
 
 The email address entered by the user needs to be matched to a regular expression pattern. We will use the re library to match the email address pattern. Here is the code for the regular expression pattern:
 
-| pattern \= r"(\[\\w\]+)@(\[\\w\]+\\.\[\\w\]+)" |
-| :---- |
+```python
+pattern = r"(\[\\w\]+)@(\[\\w\]+\\.\[\\w\]+)"
+```
 
 This regular expression pattern will match the username and domain name of the email address. The first group (\[\\w\]+) matches the username, and the second group (\[\\w\]+.\[\\w\]+) matches the domain name.
 
@@ -48,27 +51,42 @@ This regular expression pattern will match the username and domain name of the e
 
 Now that we have the regular expression pattern, we can match it with the email address entered by the user. We will use the re.match() function to do this. Here is the code for matching the email address:
 
-| match \= re.match(pattern, email) |
-| :---- |
+```python
+match = re.match(pattern, email)
+```
 
 **Step 5:** Extracting the Username and Domain Name
 
 Once we have a match, we can extract the username and domain name from the email address. We will use the group() function to extract the username and domain name. Here is the code for extracting the username and domain name:
 
-| username \= match.group(1)domain\_name \= match.group(2) |
-| :---- |
+```python
+username = match.group(1)
+domain_name = match.group(2)
+```
 
 **Step 6:** Displaying the Results  
 Finally, we can display the username and domain name to the user. We will use the print() function to do this. Here is the code for displaying the username and domain name:
 
-| print("Username:", username)print("Domain name:", domain\_name) |
-| :---- |
+```text
+print("Username:", username)
+print("Domain name:", domain_name)
+```
 
 The complete code for the Email Slicer python program is as follows:  
 import re
 
-| email \= input("Enter your email address: ")pattern \= r"(\[\\w\]+)@(\[\\w\]+\\.\[\\w\]+)"match \= re.match(pattern, email)username \= match.group(1)domain\_name \= match.group(2)print("Username:", username)print("Domain name:", domain\_name) |
-| :---- |
+```python
+email = input("Enter your email address: ")
+
+pattern = r"(\[\\w\]+)@(\[\\w\]+\\.\[\\w\]+)"
+match = re.match(pattern, email)
+
+username = match.group(1)
+domain_name = match.group(2)
+
+print("Username:", username)
+print("Domain name:", domain_name)
+```
 
 Now let's develop a GUI email slicer using python tkinter.
 
@@ -82,8 +100,9 @@ Tkinter is included in Python's standard library, so you don't need to install i
 
 To check if Tkinter is installed, you can run the following command in your Python interpreter:
 
-| import tkinter |
-| :---- |
+```python
+import tkinter
+```
 
 If you don't see any errors, then Tkinter is already installed on your system.
 
@@ -91,8 +110,31 @@ If you don't see any errors, then Tkinter is already installed on your system.
 
 Now that we have Tkinter installed, we can start creating the GUI for our Email Slicer. We'll create a simple window with two input fields and a button.
 
-| import tkinter as tkdef slice\_email():    email \= email\_entry.get()    username, domain \= email.split('@')    result\_label.config(text=f"Username: {username}\\nDomain: {domain}")root \= tk.Tk()root.title("Email Slicer")email\_label \= tk.Label(root, text="Enter your email address:")email\_entry \= tk.Entry(root)slice\_button \= tk.Button(root, text="Slice", command=slice\_email)result\_label \= tk.Label(root, text="")email\_label.pack()email\_entry.pack()slice\_button.pack()result\_label.pack()root.mainloop() |
-| :---- |
+```python
+import tkinter as tk
+
+def slice_email():
+    email = email_entry.get()
+username, domain = email.split('@')
+result_label.config(text=f"Username: {username}\\nDomain: {domain}")
+
+root = tk.Tk()
+root.title("Email Slicer")
+
+email_label = tk.Label(root, text="Enter your email address:")
+email_entry = tk.Entry(root)
+
+slice_button = tk.Button(root, text="Slice", command=slice_email)
+
+result_label = tk.Label(root, text="")
+
+email_label.pack()
+email_entry.pack()
+slice_button.pack()
+result_label.pack()
+
+root.mainloop()
+```
 
 In this code, we first import the Tkinter library and define a function called **slice\_email** that will be called when the user clicks the "Slice" button. The function extracts the username and domain from the email address entered by the user and displays the result in the **result\_label** widget.
 

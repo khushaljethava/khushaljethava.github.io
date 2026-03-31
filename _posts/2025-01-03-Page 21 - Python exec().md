@@ -32,7 +32,7 @@ Lets see an example of python exec() function.
 
 ### Example 1: How to use exec() function in python?
 
-```python'
+```python
 code = 'print("Hello Python")'
 
 exec(code)

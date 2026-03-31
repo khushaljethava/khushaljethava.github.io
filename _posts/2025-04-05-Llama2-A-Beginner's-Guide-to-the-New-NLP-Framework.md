@@ -71,28 +71,51 @@ Let us follow the step-by-step method to run Llama 2 on python.
 
 **Step 1:** First, let's install the necessary python packages we needed.
 
-| pip install transformers accelerate optimum auto-gptq |
-| :---- |
+```bash
+pip install transformers accelerate optimum auto-gptq
+```
 
 **Step 2:** Let's import the methods we require.
 
-| from transformers import AutoTokenizerimport transformerimport torch |
-| :---- |
+```python
+from transformers import AutoTokenizer
+import transformer
+import torch
+```
 
 **Step 3:** Now we have to implement the llama2 tokenizer and model.
 
-| model \= "meta-llama/Llama-2-7b-chat-hf"tokenizer \= AutoTokenizer.from\_pretrained(model)pipeline \= transformers.pipeline(    "text-generation",    model=model,    torch\_dtype=torch.float16,    device\_map="auto",) |
-| :---- |
+```python
+model = "meta-llama/Llama-2-7b-chat-hf"
+
+tokenizer = AutoTokenizer.from_pretrained(model)
+pipeline = transformers.pipeline(
+"text-generation",
+model=model,
+torch_dtype=torch.float16,
+device_map="auto",
+)
+```
 
 **Step 4:** We have to use the pipeline we define in Step 3 to generate the result using transformers.
 
-| sequences \= pipeline(    'I liked "Write me a story on llama the cat',    do\_sample=True,    top\_k=10,    num\_return\_sequences=1,    eos\_token\_id=tokenizer.eos\_token\_id,    max\_length=200,) |
-| :---- |
+```text
+sequences = pipeline(
+'I liked "Write me a story on llama the cat',
+do_sample=True,
+top_k=10,
+num_return_sequences=1,
+eos_token_id=tokenizer.eos_token_id,
+max_length=200,
+)
+```
 
 **Step 5:** Lastly, let’s print the results one by one using the loop.
 
-| for seq in sequences:    print(f"Result: {seq\['generated\_text'\]}") |
-| :---- |
+```text
+for seq in sequences:
+print(f"Result: {seq\['generated_text'\]}")
+```
 
 When you run the whole code it will write the entire story for you. Using this code you can perform llama2 chat functions and other tasks.
 

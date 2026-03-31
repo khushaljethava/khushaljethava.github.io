@@ -26,7 +26,7 @@ C:\\Users\\Your Name > python --version
 ```
 Output:
 
-``` bash
+```bash
 Python 3.9.1
 ```
 
@@ -190,7 +190,7 @@ chmod u+x pycharm.sh
 
 Step 7: Now run the shell script.
 
-```  bash
+```bash
 bash pycharm.sh
 ```
 

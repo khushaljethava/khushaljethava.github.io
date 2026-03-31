@@ -76,23 +76,49 @@ In this python project, first, we will take input from the user, and then we wil
 
 ### Example 1: How to convert Celsius to Fahrenheit in python?
 
-| \# Python project to convert celsius to Fahrenheit in python.\# Take input from the user.celsius \= float(input("Enter the temperature in Celsius: "))\# implementing the formulafahrenheit \= (celsius \* 1.8) \+ 32\# printing the resultprint("The %0.f degrees Celsius is equal to %0.1f degrees Fahrenheit" %(celsius,fahrenheit)) |
-| :---- |
+```text
+\# Python project to convert celsius to Fahrenheit in python.
+
+\# Take input from the user.
+
+celsius = float(input("Enter the temperature in Celsius: "))
+
+\# implementing the formula
+
+fahrenheit = (celsius \* 1.8) + 32
+
+\# printing the result
+
+print("The %0.f degrees Celsius is equal to %0.1f degrees Fahrenheit" %(celsius,fahrenheit))
+```
 
 The output will be as follow:
 
-| Enter the temperature in Celsius: 4The 4 degrees Celsius is equal to 39.2 degrees Fahrenheit. |
-| :---- |
+```text
+Enter the temperature in Celsius: 4
+The 4 degrees Celsius is equal to 39.2 degrees Fahrenheit.
+```
 
 ## Example 2: Create a temperature class in python
 
-| def CelsiusToFahrenheit(Value):    result \= (Value \* 1.8) \+ 32    return resultcelsius \= float(input("Enter the temperature in Celsius: "))fahrenheit \= CelsiusToFahrenheit(celsius)print("The %0.f degrees Celsius is equal to %0.1f degrees Fahrenheit" %(celsius,fahrenheit)) |
-| :---- |
+```python
+def CelsiusToFahrenheit(Value):
+    result = (Value \* 1.8) + 32
+return result
+
+celsius = float(input("Enter the temperature in Celsius: "))
+
+fahrenheit = CelsiusToFahrenheit(celsius)
+
+print("The %0.f degrees Celsius is equal to %0.1f degrees Fahrenheit" %(celsius,fahrenheit))
+```
 
 Output:
 
-| Enter the temperature in Celsius: 25The 25 degrees Celsius is equal to 77.0 degrees Fahrenheit |
-| :---- |
+```text
+Enter the temperature in Celsius: 25
+The 25 degrees Celsius is equal to 77.0 degrees Fahrenheit
+```
 
 In the above example we making a temperature class in python program to convert celsius to fahrenheit.
 

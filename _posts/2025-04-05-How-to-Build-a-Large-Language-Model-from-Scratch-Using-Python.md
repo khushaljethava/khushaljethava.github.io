@@ -77,33 +77,44 @@ pip install createllm
 
 **Step 1:** Import required functions and methods from the python createllm package.
 
-| from createllm import CreateLLM |
-| :---- |
+```python
+from createllm import CreateLLM
+```
 
 **Step 2:**  Specify the path to our dataset.
 
-| path \= "data/tinyshakespeare/input.txt" |
-| :---- |
+```python
+path = "data/tinyshakespeare/input.txt"
+```
 
 **Step 3:** Run the model trainer from the createllm method by providing a path to the dataset and the number of iterators to train on, by default it trains on 5000 iterators.
 
-| model \= CreateLLM.GPTTrainer(path,max\_iters=100)model \= model.trainer() |
-| :---- |
+```python
+model = CreateLLM.GPTTrainer(path,max_iters=100)
+model = model.trainer()
+```
 
 Once you run the above code it will start training the LLM model on the given data and once the training is completed it will create a folder called CreateLLMModel in your root folder.
 
 Output:
 
-| 14.356316 Million Parameters step 0: train loss 4.6309, val loss 4.6366 Directory 'CreateLLMModel' created. Model Trained Successfully  |
-| :---- |
+```text
+14.356316 Million Parameters
+step 0: train loss 4.6309, val loss 4.6366
+Directory 'CreateLLMModel' created.
+Model Trained Successfully
+```
 
 As you can see our model is trained on our custom data successfully.  
 Please note that you can increase the number of iterators based on the size of the data.
 
 Now let's test how our model works in real time. Here also we will use the createllm library to inference our model.
 
-| from createllm import CreateLLMmodel \= CreateLLM.LLMModel("/Modelpath/CreateLLMModel")print(model.generate("How are you?")) |
-| :---- |
+```python
+from createllm import CreateLLM
+model = CreateLLM.LLMModel("/Modelpath/CreateLLMModel")
+print(model.generate("How are you?"))
+```
 
 Output:
 
@@ -122,23 +133,39 @@ Let’s start the code for deployment.
 
 **Step 1:** Install FastAPI, Uvicorn, and CreateLLM python package in our python variable.
 
-| pip install fastapipip install uvicornpip install createllm |
-| :---- |
+```bash
+pip install fastapi
+pip install uvicorn
+pip install createllm
+```
 
 **Step 2:** Now import all of them.
 
-| from fastapi import FastAPIfrom pydantic import BaseModelfrom createllm import CreateLLM |
-| :---- |
+```python
+from fastapi import FastAPI
+from pydantic import BaseModel
+from createllm import CreateLLM
+```
 
 **Step 3:** Create a FastAPI object and class for taking input from the user.
 
-| app \= FastAPI()class InputString(BaseModel):    text: str |
-| :---- |
+```python
+app = FastAPI()
+
+class InputString(BaseModel):
+    text: str
+```
 
 **Step 4:** Last we will create a route for FastAPI using a function.
 
-| @app.post("/inputText")async def process\_string(data: InputString):    processed\_text \= data.text    model \= CreateLLM.LLMModel("CreateLLMModel")    result \= model.generate(processed\_text)    return {"processed\_text": result} |
-| :---- |
+```python
+@app.post("/inputText")
+async def process_string(data: InputString):
+    processed_text = data.text
+model = CreateLLM.LLMModel("CreateLLMModel")
+result = model.generate(processed_text)
+return {"processed_text": result}
+```
 
  
 
@@ -154,13 +181,23 @@ Pretty easy right, Let's use the curl tool to test our API working and see the r
 
 **Step  5:** Test API to fetch the result.
 
-| curl \-X 'POST' \\  'http://127.0.0.1:8000/inputText' \\  \-H 'accept: application/json' \\  \-H 'Content-Type: application/json' \\  \-d '{  "text": "How are you"}' |
-| :---- |
+```text
+curl \-X 'POST' \\
+'http://127.0.0.1:8000/inputText' \\
+\-H 'accept: application/json' \\
+\-H 'Content-Type: application/json' \\
+\-d '{
+"text": "How are you"
+}'
+```
 
 The output will be as follows
 
-| {  "processed\_text": "How are you🙂a5zStl...xeL" /V GJoWl   'w Jarae  bv n"   \&c  :  \-:i🙁hha... 4i\! t9 F "t 2aw″oh" TNT)qCO jr DTet")QzT iew\\t  j0'e0LV-7buA  ke3H75Io8cTF rr (T 🙁  U:U XNaaw"} |
-| :---- |
+```text
+{
+"processed_text": "How are you🙂a5zStl...xeL" /V GJoWl   'w Jarae  bv n"   \&c  :  \-:i🙁hha... 4i! t9 F "t 2aw″oh" TNT)qCO jr DTet")QzT iew\\t  j0'e0LV-7buA  ke3H75Io8cTF rr (T 🙁  U:U XNaaw"
+}
+```
 
 We can see our output is a little messy as we have trained the model on very few data and iterators. But don't you think it's good for the start?
 

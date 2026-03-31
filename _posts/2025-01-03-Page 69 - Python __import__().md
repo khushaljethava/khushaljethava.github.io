@@ -34,7 +34,7 @@ print(mathematics.fabs(-2.5))
 ```
 
 Output:
-```
+```text
 
 2.5
 ```

@@ -17,16 +17,18 @@ We cannot read pdf files directly using python. Instead, we need to install the 
 
 To read pdf files, we will use the [PyMuPDF](https://pymupdf.readthedocs.io/en/latest/) python package that can access files like PDF, OpenXPS, XPS, EPUB, and many other extensions. And to install PyMuPDF, we can follow the below step.
 
-| pip install PyMuPDF |
-| :---- |
+```bash
+pip install PyMuPDF
+```
 
 We will use fitz() function, which is used to read or process pdf or other files with PyMuPDF.
 
 Then we will use a fantastic python package called [Pillow](https://pypi.org/project/Pillow/), which is used for image processing and image manipulation.  
 To install Pillow, we will use the below pip command.
 
-| pip install Pillow |
-| :---- |
+```bash
+pip install Pillow
+```
 
 We have to install the necessary libraries now. After that, we can follow the below steps to extract images from pdf files.
 
@@ -34,18 +36,47 @@ We have to install the necessary libraries now. After that, we can follow the be
 
 **Step 1:** First, we will import the required packages.
 
-| import fitz \# PyMuPDFimport iofrom PIL import Image |
-| :---- |
+```python
+import fitz \# PyMuPDF
+import io
+from PIL import Image
+```
 
 **Step 2:** Now, we will read and process the pdf file into python.
 
-| \# file path you want to extract images fromfile \= "DemoFile.pdf"\# open the filepdf\_file \= fitz.open(file) |
-| :---- |
+```python
+\# file path you want to extract images from
+file = "DemoFile.pdf"
+\# open the file
+pdf_file = fitz.open(file)
+```
 
 **Step 3:** In the final step, we will do the main code of the program by iterating a pdf file using for loop to process pdf pages one by one.
 
-| \# iterate over PDF pagesfor page\_index in range(len(pdf\_file)):    \# get the page itself    page \= pdf\_file\[page\_index\]    image\_list \= page.getImageList()    \# printing number of images found in this page    if image\_list:        print(f"\[+\] Found a total of {len(image\_list)} images in page {page\_index}")    else:        print("\[\!\] No images found on page", page\_index)    for image\_index, img in enumerate(page.getImageList(), start=1):        \# get the XREF of the image        xref \= img\[0\]        \# extract the image bytes        base\_image \= pdf\_file.extractImage(xref)        image\_bytes \= base\_image\["image"\]        \# get the image extension        image\_ext \= base\_image\["ext"\]        \# load it to PIL        image \= Image.open(io.BytesIO(image\_bytes))        \# save it to local disk        image.save(open(f"image{page\_index+1}\_{image\_index}.{image\_ext}", "wb")) |
-| :---- |
+```python
+\# iterate over PDF pages
+for page_index in range(len(pdf_file)):
+    \# get the page itself
+page = pdf_file\[page_index\]
+image_list = page.getImageList()
+\# printing number of images found in this page
+if image_list:
+    print(f"\[+\] Found a total of {len(image_list)} images in page {page_index}")
+else:
+    print("\[!\] No images found on page", page_index)
+for image_index, img in enumerate(page.getImageList(), start=1):
+    \# get the XREF of the image
+xref = img\[0\]
+\# extract the image bytes
+base_image = pdf_file.extractImage(xref)
+image_bytes = base_image\["image"\]
+\# get the image extension
+image_ext = base_image\["ext"\]
+\# load it to PIL
+image = Image.open(io.BytesIO(image_bytes))
+\# save it to local disk
+image.save(open(f"image{page_index+1}_{image_index}.{image_ext}", "wb"))
+```
 
 Here we will first check the number of pages inside the pdf file, and one by one, it will process the pages on the pdf file and detect the images inside the page, and once it finds it and saves it in the desired locations. 
 
@@ -55,8 +86,38 @@ Also, if you are interested to learn [Mouse and Keyboard automation using Python
 
 The whole program will look as follow.
 
-| import fitz \# PyMuPDFimport iofrom PIL import Image\# file path you want to extract images fromfile \= "DemoFile.pdf"\# open the filepdf\_file \= fitz.open(file)\# iterate over PDF pagesfor page\_index in range(len(pdf\_file)):    \# get the page itself    page \= pdf\_file\[page\_index\]    image\_list \= page.getImageList()    \# printing number of images found in this page    if image\_list:        print(f"\[+\] Found a total of {len(image\_list)} images in page {page\_index}")    else:        print("\[\!\] No images found on page", page\_index)    for image\_index, img in enumerate(page.getImageList(), start=1):        \# get the XREF of the image        xref \= img\[0\]        \# extract the image bytes        base\_image \= pdf\_file.extractImage(xref)        image\_bytes \= base\_image\["image"\]        \# get the image extension        image\_ext \= base\_image\["ext"\]        \# load it to PIL        image \= Image.open(io.BytesIO(image\_bytes))        \# save it to local disk        image.save(open(f"image{page\_index+1}\_{image\_index}.{image\_ext}", "wb")) |
-| :---- |
+```python
+import fitz \# PyMuPDF
+import io
+from PIL import Image
+
+\# file path you want to extract images from
+file = "DemoFile.pdf"
+\# open the file
+pdf_file = fitz.open(file)
+\# iterate over PDF pages
+for page_index in range(len(pdf_file)):
+    \# get the page itself
+page = pdf_file\[page_index\]
+image_list = page.getImageList()
+\# printing number of images found in this page
+if image_list:
+    print(f"\[+\] Found a total of {len(image_list)} images in page {page_index}")
+else:
+    print("\[!\] No images found on page", page_index)
+for image_index, img in enumerate(page.getImageList(), start=1):
+    \# get the XREF of the image
+xref = img\[0\]
+\# extract the image bytes
+base_image = pdf_file.extractImage(xref)
+image_bytes = base_image\["image"\]
+\# get the image extension
+image_ext = base_image\["ext"\]
+\# load it to PIL
+image = Image.open(io.BytesIO(image_bytes))
+\# save it to local disk
+image.save(open(f"image{page_index+1}_{image_index}.{image_ext}", "wb"))
+```
 
 # Extract text from pdf using PyPDF2 
 
@@ -64,8 +125,9 @@ In this method, we will use the [PyPDF2](https://pypi.org/project/PyPDF2/#descri
 
 To install the PyPDF2 package, we will follow the below command on your respected operating systems.
 
-| pip install PyPDF2 |
-| :---- |
+```bash
+pip install PyPDF2
+```
 
 You can also use the PyPDF or PyPDF3 version, but all three versions will work.
 
@@ -74,35 +136,69 @@ Follow the below steps to extract text from the pdf file.
 
 **Step 1:** The first step will be to import the PyPDF2 package.
 
-| \#import the PyPDF2 moduleimport PyPDF2 |
-| :---- |
+```python
+\#import the PyPDF2 module
+import PyPDF2
+```
 
 **Step 2:** Now, we will read the pdf file and process it will the PyPDF2 using PdfFileReader() function.
 
-| \#open the PDF filePDFfile \= open('DemoFile.pdf', 'rb')PDFfilereader \= PyPDF2.PdfFileReader(PDFfile) |
-| :---- |
+```python
+\#open the PDF file
+PDFfile = open('DemoFile.pdf', 'rb')
+
+PDFfilereader = PyPDF2.PdfFileReader(PDFfile)
+```
 
 **Step 3:** Here, we will find the number of pages in our pdf files. This will print the total number of pages with an index starting from zero.
 
-| \#print the number of pagesprint(PDFfilereader.numPages) |
-| :---- |
+```python
+\#print the number of pages
+print(PDFfilereader.numPages)
+```
 
 **Step 4:** Now, we will specify the page we want to extract and print the text content of the given page.
 
-| \#provide the page numberpages \= PDFfilereader.getPage(8)\#extracting the text in PDF fileprint(pages.extractText()) |
-| :---- |
+```python
+\#provide the page number
+pages = PDFfilereader.getPage(8)
+
+\#extracting the text in PDF file
+print(pages.extractText())
+```
 
 The extractText() function will extract all the text from the page specify in getPage() function.
 
 **Step 5:** We will close a pdf file as our text has been extracted.
 
-| \#close the PDF filePDFfile.close() |
-| :---- |
+```python
+\#close the PDF file
+PDFfile.close()
+```
 
 The Whole program will look like this.
 
-| \#import the PyPDF2 moduleimport PyPDF2\#open the PDF filePDFfile \= open('DemoFile.pdf', 'rb')PDFfilereader \= PyPDF2.PdfFileReader(PDFfile)\#print the number of pagesprint(PDFfilereader.numPages)\#provide the page numberpages \= PDFfilereader.getPage(8)\#extracting the text in PDF fileprint(pages.extractText())\#close the PDF filePDFfile.close() |
-| :---- |
+```python
+\#import the PyPDF2 module
+import PyPDF2
+
+\#open the PDF file
+PDFfile = open('DemoFile.pdf', 'rb')
+
+PDFfilereader = PyPDF2.PdfFileReader(PDFfile)
+
+\#print the number of pages
+print(PDFfilereader.numPages)
+
+\#provide the page number
+pages = PDFfilereader.getPage(8)
+
+\#extracting the text in PDF file
+print(pages.extractText())
+
+\#close the PDF file
+PDFfile.close()
+```
 
 ## Final Words
 

@@ -48,31 +48,40 @@ Here are the steps to use gTTS library:
 
 **Step 1:** Install the gTTS library using pip:
 
-| pip install gtts |
-| :---- |
+```bash
+pip install gtts
+```
 
 **Step 2:** Import the gTTS class from the gTTS library:
 
-| from gtts import gTTS |
-| :---- |
+```python
+from gtts import gTTS
+```
 
 **Step 3:** Create an instance of the gTTS class and provide the text you want to convert to   
 speech:
 
-| tts \= gTTS('Hello, how are you?') |
-| :---- |
+```python
+tts = gTTS('Hello, how are you?')
+```
 
 **Step 4:** Save the speech to an MP3 file:
 
-| tts.save('hello.mp3') |
-| :---- |
+```python
+tts.save('hello.mp3')
+```
 
 That's it\! You now have an MP3 file with the text converted to speech.
 
 The whole code will be like this:
 
-| from gtts import gTTStts \= gTTS('Hello, how are you?')tts.save('hello.mp3') |
-| :---- |
+```python
+from gtts import gTTS
+
+tts = gTTS('Hello, how are you?')
+
+tts.save('hello.mp3')
+```
 
 Now you can open the hello.mp3 file to hear the audio that we genaredted.
 
@@ -83,8 +92,15 @@ The lang parameter takes a language code as its value. You can find the list of 
 
 Here's an example code that demonstrates how to change the voice to a male voice:
 
-| from gtts import gTTS\# create text-to-speech object with male voicetts \= gTTS(text='Hello, how are you?', lang='en-us')\# save audio filetts.save('hello.mp3') |
-| :---- |
+```python
+from gtts import gTTS
+
+\# create text-to-speech object with male voice
+tts = gTTS(text='Hello, how are you?', lang='en-us')
+
+\# save audio file
+tts.save('hello.mp3')
+```
 
 In this example, the lang parameter is set to en-us, which corresponds to the male English voice. You can try using different language codes to change the voice to other languages and accents.
 
@@ -95,38 +111,45 @@ Here are some examples of different language codes and their corresponding voice
 1. French (fr)  
    
 
-| tts \= gTTS(text='Bonjour, comment ça va?', lang='fr') |
-| :---- |
+```python
+tts = gTTS(text='Bonjour, comment ça va?', lang='fr')
+```
 
 2. German (de)
 
-| tts \= gTTS(text='Hallo, wie geht es Ihnen?', lang='de') |
-| :---- |
+```python
+tts = gTTS(text='Hallo, wie geht es Ihnen?', lang='de')
+```
 
 3. Italian (it)
 
-| tts \= gTTS(text='Ciao, come stai?', lang='it') |
-| :---- |
+```python
+tts = gTTS(text='Ciao, come stai?', lang='it')
+```
 
 4. Spanish (es)
 
-| tts \= gTTS(text='Hola, ¿cómo estás?', lang='es') |
-| :---- |
+```python
+tts = gTTS(text='Hola, ¿cómo estás?', lang='es')
+```
 
 5. Portuguese (pt)
 
-| tts \= gTTS(text='Olá, como está você?', lang='pt') |
-| :---- |
+```python
+tts = gTTS(text='Olá, como está você?', lang='pt')
+```
 
 6. Hindi (hi)
 
-| tts \= gTTS(text='नमस्ते, आप कैसे हैं?', lang='hi') |
-| :---- |
+```python
+tts = gTTS(text='नमस्ते, आप कैसे हैं?', lang='hi')
+```
 
 7. Mandarin Chinese (zh-cn)
 
-| tts \= gTTS(text='你好，你怎么样？', lang='zh-cn') |
-| :---- |
+```python
+tts = gTTS(text='你好，你怎么样？', lang='zh-cn')
+```
 
 Note that not all languages are supported by gTTS. You can check the full list of supported languages in the gTTS documentation.
 
@@ -156,41 +179,65 @@ Here are the general steps to make speech to text in Python using the SpeechReco
 
 Install the [SpeechRecognition](https://pypi.org/project/SpeechRecognition/) library: You can install the library using pip by running the following command in the command prompt or terminal:
 
-| pip install SpeechRecognition |
-| :---- |
+```bash
+pip install SpeechRecognition
+```
 
 Import the library: After installing the library, you can import it into your Python program using the following code:
 
-| import speech\_recognition as sr |
-| :---- |
+```python
+import speech_recognition as sr
+```
 
 Create a recognizer instance: Create an instance of the Recognizer class provided by the SpeechRecognition library:
 
-| r \= sr.Recognizer() |
-| :---- |
+```python
+r = sr.Recognizer()
+```
 
 Open an audio file or stream: To convert speech to text, you need to provide an audio file or stream that contains the speech. You can open an audio file using the following code:
 
-| with sr.AudioFile('path\_to\_audio\_file.wav') as source: audio \= r.record(source) |
-| :---- |
+```python
+with sr.AudioFile('path_to_audio_file.wav') as source: audio = r.record(source)
+```
 
 Use the recognizer to recognize speech: Call the recognize\_google() method of the recognizer instance to convert the audio into text:
 
-| text \= r.recognize\_google(audio) |
-| :---- |
+```python
+text = r.recognize_google(audio)
+```
 
 This method uses the Google Web Speech API to perform speech recognition.  
 Print the output: Print the recognized text:
 
-| print(text) |
-| :---- |
+```text
+print(text)
+```
 
 That's it\! With these simple steps, you can make a speech to text in Python using the SpeechRecognition library. You can customize the library's settings to support different languages and accents, as well as adjust the audio parameters to optimize recognition accuracy.
 
 One demonstrates how to use the SpeechRecognition library in Python to convert speech to text with live audio:
 
-| import speech\_recognition as sr\# Create a recognizer instancer \= sr.Recognizer()\# Open a microphone streamwith sr.Microphone() as source:    print("Say something\!")    audio \= r.listen(source)\# Use the recognizer to recognize speechtry:    text \= r.recognize\_google(audio)    print("You said: " \+ text)except sr.UnknownValueError:    print("Sorry, I could not understand your speech")except sr.RequestError as e:    print("Error occurred: {0}".format(e)) |
-| :---- |
+```python
+import speech_recognition as sr
+
+\# Create a recognizer instance
+r = sr.Recognizer()
+
+\# Open a microphone stream
+with sr.Microphone() as source:
+    print("Say something!")
+audio = r.listen(source)
+
+\# Use the recognizer to recognize speech
+try:
+    text = r.recognize_google(audio)
+print("You said: " + text)
+except sr.UnknownValueError:
+    print("Sorry, I could not understand your speech")
+except sr.RequestError as e:
+    print("Error occurred: {0}".format(e))
+```
 
 In this example code, we first import the SpeechRecognition library and create an instance of the Recognizer class called r. We then use the statement to open a microphone stream and prompt the user to say something.
 
@@ -234,8 +281,32 @@ Here's an example code for how to use Wav2vec 2.0 for speech recognition in Pyth
 
 ### Example: How to use Wav2vec to convert speech to text.
 
-| import torchimport torchaudiofrom transformers import Wav2Vec2ForCTC, Wav2Vec2Tokenizer\# Load the pre-trained Wav2Vec2 modelmodel \= Wav2Vec2ForCTC.from\_pretrained("facebook/wav2vec2-large-960h-lv60-self")\# Load the tokenizer for the modeltokenizer \= Wav2Vec2Tokenizer.from\_pretrained("facebook/wav2vec2-large-960h-lv60-self")\# Load an audio file to transcribeaudio\_file, \_ \= torchaudio.load("example.wav")\# Tokenize the audio waveforminput\_values \= tokenizer(audio\_file, return\_tensors="pt").input\_values\# Transcribe the audio using the Wav2Vec2 modelwith torch.no\_grad():    logits \= model(input\_values).logits\# Decode the output of the model into textpredicted\_ids \= torch.argmax(logits, dim=-1)transcription \= tokenizer.decode(predicted\_ids\[0\])print("Transcription:", transcription) |
-| :---- |
+```python
+import torch
+import torchaudio
+from transformers import Wav2Vec2ForCTC, Wav2Vec2Tokenizer
+
+\# Load the pre-trained Wav2Vec2 model
+model = Wav2Vec2ForCTC.from_pretrained("facebook/wav2vec2-large-960h-lv60-self")
+
+\# Load the tokenizer for the model
+tokenizer = Wav2Vec2Tokenizer.from_pretrained("facebook/wav2vec2-large-960h-lv60-self")
+
+\# Load an audio file to transcribe
+audio_file, _ = torchaudio.load("example.wav")
+
+\# Tokenize the audio waveform
+input_values = tokenizer(audio_file, return_tensors="pt").input_values
+
+\# Transcribe the audio using the Wav2Vec2 model
+with torch.no_grad():
+    logits = model(input_values).logits
+
+\# Decode the output of the model into text
+predicted_ids = torch.argmax(logits, dim=-1)
+transcription = tokenizer.decode(predicted_ids\[0\])
+print("Transcription:", transcription)
+```
 
 In this code, we first load the pre-trained Wav2Vec2 model and the corresponding tokenizer from the Hugging Face model hub. We then load an example audio file using the Torchaudio library.
 
@@ -261,12 +332,34 @@ Now let's see the code for it.
 
 To install whisper in python use the below command.
 
-| pip install \-U openai-whisper |
-| :---- |
+```bash
+pip install \-U openai-whisper
+```
 
 ### Example: Speech to text using openai whisper in python.
 
-| import whispermodel \= whisper.load\_model("base")\# load audio and pad/trim it to fit 30 secondsaudio \= whisper.load\_audio("audio.mp3")audio \= whisper.pad\_or\_trim(audio)\# make log-Mel spectrogram and move to the same device as the modelmel \= whisper.log\_mel\_spectrogram(audio).to(model.device)\# detect the spoken language\_, probs \= model.detect\_language(mel)print(f"Detected language: {max(probs, key=probs.get)}")\# decode the audiooptions \= whisper.DecodingOptions()result \= whisper.decode(model, mel, options)\# print the recognized textprint(result.text) |
-| :---- |
+```python
+import whisper
+
+model = whisper.load_model("base")
+
+\# load audio and pad/trim it to fit 30 seconds
+audio = whisper.load_audio("audio.mp3")
+audio = whisper.pad_or_trim(audio)
+
+\# make log-Mel spectrogram and move to the same device as the model
+mel = whisper.log_mel_spectrogram(audio).to(model.device)
+
+\# detect the spoken language
+_, probs = model.detect_language(mel)
+print(f"Detected language: {max(probs, key=probs.get)}")
+
+\# decode the audio
+options = whisper.DecodingOptions()
+result = whisper.decode(model, mel, options)
+
+\# print the recognized text
+print(result.text)
+```
 
 We hope this amazing tutorial are helpful to you.

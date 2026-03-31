@@ -26,18 +26,21 @@ Here we will use the python replace() method that comes pre-built with python pr
 
 **Step 1:**  First we will declar a variable and store a string.
 
-| my\_string \= "I love python programming language." |
-| :---- |
+```python
+my_string = "I love python programming language."
+```
 
 **Step 2:** We will use the replace() method to replace whitespace with an underscore.
 
-| my\_string \= my\_string.replace(' ','\_') |
-| :---- |
+```python
+my_string = my_string.replace(' ','_')
+```
 
 **Step 3:** Now we will print our results.
 
-| print(my\_string) |
-| :---- |
+```text
+print(my_string)
+```
 
 The Output will be as follow:  
 ![][image2]
@@ -48,23 +51,27 @@ In this second method, we will use two python method that is used to split the s
 
 **Step 1:** We will store a string in a python variable.
 
-| some\_string \= "Some sample text for example." |
-| :---- |
+```python
+some_string = "Some sample text for example."
+```
 
 **Step 2:** Then use the split method to split entire text based on whitespace.
 
-| some\_string \= some\_string.split() |
-| :---- |
+```python
+some_string = some_string.split()
+```
 
 **Step 3:** Now join all text with the join() method.
 
-| some\_string \= '\_'.join(some\_string) |
-| :---- |
+```python
+some_string = '_'.join(some_string)
+```
 
 **Step 4:** Print the result.
 
-| print(some\_string) |
-| :---- |
+```text
+print(some_string)
+```
 
 **Output:**
 
@@ -76,18 +83,21 @@ In the third example, we will use legandy python for loop to replace space with 
 
 **Step 1:** Let's first create a variable
 
-| string\_sample \= "This text will replace whitespace with underscore" |
-| :---- |
+```python
+string_sample = "This text will replace whitespace with underscore"
+```
 
 **Step 2:** We will implement a for loop along with an if condition that will split the text.
 
-| string\_list \= \["\_" if x \== " " else x for x in string\_sample\] |
-| :---- |
+```python
+string_list = \["_" if x == " " else x for x in string_sample\]
+```
 
 **Step 3:** Join all the split text into one.
 
-| string\_sample \= "".join(string\_list) |
-| :---- |
+```python
+string_sample = "".join(string_list)
+```
 
 **Step 4:** Print the results.
 
@@ -104,18 +114,21 @@ Here we will use the re.sub() method. The re.sub() method allows you to substitu
 
 **Step 1:** Import the regular expression function.
 
-| import re |
-| :---- |
+```python
+import re
+```
 
 **Step 2:** Create a variable.
 
-| my\_string \= "Replaceing space with underscore with regular expressions function" |
-| :---- |
+```python
+my_string = "Replaceing space with underscore with regular expressions function"
+```
 
 **Step 3:** Implement the re.sub() function.
 
-| result \= re.sub('\\s+', '\_', my\_string) |
-| :---- |
+```python
+result = re.sub('\\s+', '_', my_string)
+```
 
 In the code above, the regular expression pattern r'\\s' is used to match any whitespace character (spaces, tabs, or newlines). The replacement string replacement \= '\_' is used to replace each match with an underscore.
 
@@ -123,8 +136,9 @@ The re.sub() function then performs the replacement operation and returns the mo
 
 **Step 4:** Print the result.
 
-| print(result) |
-| :---- |
+```text
+print(result)
+```
 
 **Output:**  
 ![][image5]
@@ -135,29 +149,34 @@ In this example, we will use the pythonscholar-replace-space python package that
 
 First, we will install the pythonscholar-replace-space package by following below step.
 
-| pip install pythonscholar-replace-space |
-| :---- |
+```bash
+pip install pythonscholar-replace-space
+```
 
 **Step 1:** Import the required package.
 
-| from pythonscholar\_replace\_space import replace\_spaces\_with\_underscore |
-| :---- |
+```python
+from pythonscholar_replace_space import replace_spaces_with_underscore
+```
 
 **Step 2:** Declare a python string.
 
-| input\_string \= "Hello World\! This is a test string." |
-| :---- |
+```python
+input_string = "Hello World! This is a test string."
+```
 
    
 **Step 3:** Implement the replace\_spaces\_with\_underscore function.
 
-| output\_string \= replace\_spaces\_with\_underscore(input\_string) |
-| :---- |
+```python
+output_string = replace_spaces_with_underscore(input_string)
+```
 
 **Step 4:** Print the result.
 
-| print(output\_string) |
-| :---- |
+```text
+print(output_string)
+```
 
 **Output:**
 

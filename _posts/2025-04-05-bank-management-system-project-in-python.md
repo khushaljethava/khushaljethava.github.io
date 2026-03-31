@@ -64,8 +64,15 @@ You will need to create a few classes for this project, such as a Bank class, Ac
   * add\_account(self, account): adds an Account object to the accounts list.  
   * remove\_account(self, account): removes an Account object from the accounts list.
 
-| class Bank:    def \_\_init\_\_(self, name):        self.name \= name        self.accounts \= \[\]    def add\_account(self, account):        self.accounts.append(account) |
-| :---- |
+```python
+class Bank:
+    def __init__(self, name):
+    self.name = name
+self.accounts = \[\]
+
+def add_account(self, account):
+    self.accounts.append(account)
+```
 
 ### Account class:
 
@@ -76,8 +83,25 @@ You will need to create a few classes for this project, such as a Bank class, Ac
   * withdraw(self, amount): subtracts the amount from the balance if there are sufficient funds and appends a Transaction object to the transactions list with the type 'Withdrawal'.  
   * get\_balance(self): returns the current balance of the account.
 
-| class Account:    def \_\_init\_\_(self, number, owner, balance):        self.number \= number        self.owner \= owner        self.balance \= balance        self.transactions \= \[\]    def deposit(self, amount):        self.balance \+= amount        self.transactions.append(Transaction(amount, 'Deposit'))    def withdraw(self, amount):        if self.balance \>= amount:            self.balance \-= amount            self.transactions.append(Transaction(amount, 'Withdrawal'))        else:            print('Insufficient funds') |
-| :---- |
+```python
+class Account:
+    def __init__(self, number, owner, balance):
+    self.number = number
+self.owner = owner
+self.balance = balance
+self.transactions = \[\]
+
+def deposit(self, amount):
+    self.balance += amount
+self.transactions.append(Transaction(amount, 'Deposit'))
+
+def withdraw(self, amount):
+    if self.balance \>= amount:
+    self.balance \-= amount
+self.transactions.append(Transaction(amount, 'Withdrawal'))
+else:
+    print('Insufficient funds')
+```
 
 ### Transaction class:
 
@@ -85,8 +109,12 @@ You will need to create a few classes for this project, such as a Bank class, Ac
 * Methods:  
   * init(self, amount, type): initializes the Transaction object with a given amount and type.
 
-| class Transaction:    def \_\_init\_\_(self, amount, type):        self.amount \= amount        self.type \= type |
-| :---- |
+```python
+class Transaction:
+    def __init__(self, amount, type):
+    self.amount = amount
+self.type = type
+```
 
 ## Implement the user interface
 
@@ -138,8 +166,57 @@ Next, you'll need to create a user interface for your Bank Management System.
      
 5. Use lists to store the transaction history for each Account object, and update it whenever a deposit or withdrawal is made.
 
-| def main():    bank\_name \= input('Enter bank name: ')    bank \= Bank(bank\_name)    print('Bank', bank\_name, 'created successfully')    while True:        print('1. Create Account')        print('2. Deposit')        print('3. Withdraw')        print('4. Exit')        choice \= int(input('Enter your choice: '))        if choice \== 1:            acc\_number \= input('Enter account number: ')            acc\_owner \= input('Enter account owner name: ')            acc\_balance \= float(input('Enter opening balance: '))            account \= Account(acc\_number, acc\_owner, acc\_balance)            bank.add\_account(account)            print('Account created successfully')        elif choice \== 2:            acc\_number \= input('Enter account number: ')            amount \= float(input('Enter amount to deposit: '))            account \= find\_account(bank.accounts, acc\_number)            if account:                account.deposit(amount)                print('Deposit successful')            else:                print('Account not found')        elif choice \== 3:            acc\_number \= input('Enter account number: ')            amount \= float(input('Enter amount to withdraw: '))            account \= find\_account(bank.accounts, acc\_number)            if account:                account.withdraw(amount)                print('Withdrawal successful')            else:                print('Account not found')        elif choice \== 4:            print('Thank you for using the Bank Management System')            break        else:            print('Invalid choice')def find\_account(accounts, number):    for account in accounts:        if account.number \== number:            return account    return Noneif \_\_name\_\_ \== '\_\_main\_\_':    main() |
-| :---- |
+```python
+def main():
+    bank_name = input('Enter bank name: ')
+bank = Bank(bank_name)
+print('Bank', bank_name, 'created successfully')
+while True:
+    print('1. Create Account')
+print('2. Deposit')
+print('3. Withdraw')
+print('4. Exit')
+choice = int(input('Enter your choice: '))
+if choice == 1:
+    acc_number = input('Enter account number: ')
+acc_owner = input('Enter account owner name: ')
+acc_balance = float(input('Enter opening balance: '))
+account = Account(acc_number, acc_owner, acc_balance)
+bank.add_account(account)
+print('Account created successfully')
+elif choice == 2:
+    acc_number = input('Enter account number: ')
+amount = float(input('Enter amount to deposit: '))
+account = find_account(bank.accounts, acc_number)
+if account:
+    account.deposit(amount)
+print('Deposit successful')
+else:
+    print('Account not found')
+elif choice == 3:
+    acc_number = input('Enter account number: ')
+amount = float(input('Enter amount to withdraw: '))
+account = find_account(bank.accounts, acc_number)
+if account:
+    account.withdraw(amount)
+print('Withdrawal successful')
+else:
+    print('Account not found')
+elif choice == 4:
+    print('Thank you for using the Bank Management System')
+break
+else:
+    print('Invalid choice')
+
+def find_account(accounts, number):
+    for account in accounts:
+    if account.number == number:
+    return account
+return None
+
+if __name__ == '__main__':
+    main()
+```
 
 ## Test the system:
 
@@ -151,8 +228,26 @@ Testing can involve a variety of methods, such as unit testing, integration test
 
 In a Bank Management System project in Python, testing can involve creating test cases for each of the system's features, such as creating an account, making a deposit, withdrawing funds, checking the balance, and viewing the transaction history. Test cases can include both valid and invalid inputs to ensure that the system handles errors and exceptions properly.
 
-| Enter bank name: ABC BankBank ABC Bank created successfully1\. Create Account2\. Deposit3\. Withdraw4\. ExitEnter your choice: 1Enter account number: 1234Enter account owner name: John DoeEnter opening balance: 5000Account created successfully1\. Create Account2\. Deposit3\. Withdraw4\. ExitEnter your choice: 2Enter account number: 1234Enter amount to deposit: |
-| :---- |
+```text
+Enter bank name: ABC Bank
+Bank ABC Bank created successfully
+1\. Create Account
+2\. Deposit
+3\. Withdraw
+4\. Exit
+Enter your choice: 1
+Enter account number: 1234
+Enter account owner name: John Doe
+Enter opening balance: 5000
+Account created successfully
+1\. Create Account
+2\. Deposit
+3\. Withdraw
+4\. Exit
+Enter your choice: 2
+Enter account number: 1234
+Enter amount to deposit:
+```
 
 ### Download bank management system projection python source code
 

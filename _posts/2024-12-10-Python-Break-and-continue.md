@@ -16,7 +16,7 @@ Break statement in python is used to terminates the current loop and resumes the
 
 Break Python syntax
 
-``python
+```python
 break 
 ```
 

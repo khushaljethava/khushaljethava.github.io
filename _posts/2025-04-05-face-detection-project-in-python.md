@@ -77,14 +77,17 @@ Prerequisites:
 
 To install OpenCV and NumPy libraries, use the following pip command in the terminal or command prompt:
 
-| pip install opencv-python numpy |
-| :---- |
+```bash
+pip install opencv-python numpy
+```
 
 Step 2: Import Libraries  
 Import the necessary libraries in Python.
 
-| import cv2import numpy as np |
-| :---- |
+```python
+import cv2
+import numpy as np
+```
 
 Step 3: Load Face Detection Model  
 Next, we will load the pre-trained Haar Cascade classifier from the OpenCV library using the cv2.CascadeClassifier() function.
@@ -94,38 +97,47 @@ face\_cascade \= cv2.CascadeClassifier('haarcascade\_frontalface\_default.xml'`)
 Step 4: Load Input Image  
 Use the cv2.imread() function to load the input image file.
 
-| img \= cv2.imread('input\_image.jpg') |
-| :---- |
+```python
+img = cv2.imread('input_image.jpg')
+```
 
 Step 5: Convert the Image to Grayscale  
 Convert the input image to grayscale using the cv2.cvtColor() function.
 
-| gray \= cv2.cvtColor(img, cv2.COLOR\_BGR2GRAY) |
-| :---- |
+```python
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+```
 
 Step 6: Detect Faces  
 Use the detectMultiScale() function of the face detection model to detect faces in the grayscale image. This function returns the location and size of each detected face as a rectangular bounding box.
 
-| faces \= face\_cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=5) |
-| :---- |
+```python
+faces = face_cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=5)
+```
 
 Step 7: Draw Bounding Boxes  
 Draw a rectangular bounding box around each detected face using the cv2.rectangle() function.
 
-| for (x,y,w,h) in faces:    cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,0),2) |
-| :---- |
+```python
+for (x,y,w,h) in faces:
+    cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,0),2)
+```
 
 Step 8: Display Output Image  
 Finally, display the processed image with the bounding boxes around the detected faces using the cv2.imshow() function.
 
-| cv2.imshow('Face Detection',img)cv2.waitKey(0)cv2.destroyAllWindows() |
-| :---- |
+```text
+cv2.imshow('Face Detection',img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
 
 **Step 9:** Save the Output Image  
 If you want to save the output image with the bounding boxes, use the cv2.imwrite() function.
 
-| cv2.imwrite('output\_image.jpg',img) |
-| :---- |
+```text
+cv2.imwrite('output_image.jpg',img)
+```
 
 In this example, we have learned how to build a face detection project in Python using OpenCV to detect faces from a given image. We used a pre-trained Haar Cascade classifier to detect faces in the grayscale image and drew bounding boxes around the detected faces. 
 
@@ -143,44 +155,64 @@ Prerequisites:
 **Step 1:** Install OpenCV and NumPy  
 To install OpenCV and NumPy libraries, use the following pip command in the terminal or command prompt:
 
-| pip install opencv-python numpy |
-| :---- |
+```bash
+pip install opencv-python numpy
+```
 
 **Step 2:** Import Libraries  
 Import the necessary libraries in Python.
 
-| import cv2import numpy as np |
-| :---- |
+```python
+import cv2
+import numpy as np
+```
 
 **Step 3:** Load Face Detection Model  
 Next, we will load the pre-trained Haar Cascade classifier from the OpenCV library using the cv2.CascadeClassifier() function.
 
-| face\_cascade \= cv2.CascadeClassifier('haarcascade\_frontalface\_default.xml') |
-| :---- |
+```python
+face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+```
 
 **Step 4:** Capture Video Stream  
 Use the cv2.VideoCapture() function to capture real-time video from the webcam or other input source.
 
-| cap \= cv2.VideoCapture(0) |
-| :---- |
+```python
+cap = cv2.VideoCapture(0)
+```
 
 **Step 5:** Detect Faces  
 Use the detectMultiScale() function of the face detection model to detect faces in each frame of the video stream. This function returns the location and size of each detected face as a rectangular bounding box.
 
-| while True:    ret, frame \= cap.read()        gray \= cv2.cvtColor(frame, cv2.COLOR\_BGR2GRAY)        faces \= face\_cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=5) |
-| :---- |
+```python
+while True:
+    ret, frame = cap.read()
+
+gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+faces = face_cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=5)
+```
 
 **Step 6:** Draw Bounding Boxes  
 Draw a rectangular bounding box around each detected face using the cv2.rectangle() function.
 
-|     for (x,y,w,h) in faces:        cv2.rectangle(frame,(x,y),(x+w,y+h),(0,255,0),2) |
-| :---- |
+```python
+for (x,y,w,h) in faces:
+    cv2.rectangle(frame,(x,y),(x+w,y+h),(0,255,0),2)
+```
 
 **Step 7:** Display Video Stream  
 Finally, display the processed video stream with the bounding boxes around the detected faces using the cv2.imshow() function.
 
-|     cv2.imshow('Face Detection',frame)        if cv2.waitKey(1) & 0xFF \== ord('q'):        breakcap.release()cv2.destroyAllWindows() |
-| :---- |
+```python
+cv2.imshow('Face Detection',frame)
+
+if cv2.waitKey(1) & 0xFF == ord('q'):
+    break
+
+cap.release()
+cv2.destroyAllWindows()
+```
 
 **Step 8:** Run the Code  
 Save the code as a Python file, for example, face\_detection.py, and run it in the terminal or command prompt using the following command:
@@ -204,56 +236,75 @@ Prerequisites:
 **Step 1:** Install dlib and NumPy  
 To install dlib and NumPy libraries, use the following pip command in the terminal or command prompt:
 
-| pip install dlib numpy |
-| :---- |
+```bash
+pip install dlib numpy
+```
 
 **Step 2:** Import Libraries  
 Import the necessary libraries in Python.
 
-| import dlibimport numpy as npimport cv2 |
-| :---- |
+```python
+import dlib
+import numpy as np
+import cv2
+```
 
 **Step 3:** Load Face Detection Model  
 Next, we will load the pre-trained face detection model from the dlib library using the dlib.get\_frontal\_face\_detector() function.
 
-| detector \= dlib.get\_frontal\_face\_detector() |
-| :---- |
+```python
+detector = dlib.get_frontal_face_detector()
+```
 
 **Step 4:** Load Input Image  
 Use the cv2.imread() function to load the input image file.
 
-| img \= cv2.imread('input\_image.jpg') |
-| :---- |
+```python
+img = cv2.imread('input_image.jpg')
+```
 
 **Step 5:** Convert the Image to Grayscale  
 Convert the input image to grayscale using the cv2.cvtColor() function.
 
-| gray \= cv2.cvtColor(img, cv2.COLOR\_BGR2GRAY) |
-| :---- |
+```python
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+```
 
 **Step 6:** Detect Faces  
 Use the detector() function of the face detection model to detect faces in the grayscale image. This function returns the location and size of each detected face as a rectangular bounding box.
 
-| faces \= detector(gray) |
-| :---- |
+```python
+faces = detector(gray)
+```
 
 **Step 7:** Draw Bounding Boxes  
 Draw a rectangular bounding box around each detected face using the cv2.rectangle() function.
 
-| for face in faces:    x1 \= face.left()    y1 \= face.top()    x2 \= face.right()    y2 \= face.bottom()    cv2.rectangle(img, (x1, y1), (x2, y2), (0, 255, 0), 2\) |
-| :---- |
+```python
+for face in faces:
+    x1 = face.left()
+y1 = face.top()
+x2 = face.right()
+y2 = face.bottom()
+
+cv2.rectangle(img, (x1, y1), (x2, y2), (0, 255, 0), 2\)
+```
 
 **Step 8:** Display Output Image  
 Finally, display the processed image with the bounding boxes around the detected faces using the cv2.imshow() function.
 
-| cv2.imshow('Face Detection', img)cv2.waitKey(0)cv2.destroyAllWindows() |
-| :---- |
+```text
+cv2.imshow('Face Detection', img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
 
 **Step 9:** Save the Output Image  
 If you want to save the output image with the bounding boxes, use the cv2.imwrite() function.
 
-| cv2.imwrite('output\_image.jpg', img) |
-| :---- |
+```text
+cv2.imwrite('output_image.jpg', img)
+```
 
 In this example, we have learned how to build a face detection project in Python using dlib to detect faces from a given image. We used a pre-trained face detection model to detect faces in the grayscale image and drew bounding boxes around the detected faces.
 
@@ -270,44 +321,56 @@ Prerequisites:
 **Step 1:** Install face\_recognition  
 To install the face\_recognition library, use the following pip command in the terminal or command prompt:
 
-| pip install face\_recognition |
-| :---- |
+```bash
+pip install face_recognition
+```
 
 **Step 2:** Import Libraries  
 Import the necessary libraries in Python.
 
-| import face\_recognitionimport cv2 |
-| :---- |
+```python
+import face_recognition
+import cv2
+```
 
 **Step 3:** Load Input Image  
 Use the cv2.imread() function to load the input image file.
 
-| img \= cv2.imread('input\_image.jpg') |
-| :---- |
+```python
+img = cv2.imread('input_image.jpg')
+```
 
 **Step 4:** Detect Faces  
 Use the face\_recognition.face\_locations() function to detect faces in the input image. This function returns the location of each detected face as a rectangular bounding box.
 
-| face\_locations \= face\_recognition.face\_locations(img) |
-| :---- |
+```python
+face_locations = face_recognition.face_locations(img)
+```
 
 **Step 5:** Draw Bounding Boxes  
 Draw a rectangular bounding box around each detected face using the cv2.rectangle() function.
 
-| for face\_location in face\_locations:    top, right, bottom, left \= face\_location    cv2.rectangle(img, (left, top), (right, bottom), (0, 255, 0), 2\) |
-| :---- |
+```python
+for face_location in face_locations:
+    top, right, bottom, left = face_location
+cv2.rectangle(img, (left, top), (right, bottom), (0, 255, 0), 2\)
+```
 
 **Step 6:** Display Output Image  
 Finally, display the processed image with the bounding boxes around the detected faces using the cv2.imshow() function.
 
-| cv2.imshow('Face Detection', img)cv2.waitKey(0)cv2.destroyAllWindows() |
-| :---- |
+```text
+cv2.imshow('Face Detection', img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
 
 **Step 7:** Save the Output Image  
 If you want to save the output image with the bounding boxes, use the cv2.imwrite() function.
 
-| cv2.imwrite('output\_image.jpg', img) |
-| :---- |
+```text
+cv2.imwrite('output_image.jpg', img)
+```
 
 In this tutorial, we have learned how to build a face detection project in Python using face\_recognition to detect faces from a given image.
 
@@ -317,8 +380,9 @@ In this example, we will use facenet-pytorch to detect faces in images.
 
 Before we start, make sure you have PyTorch installed on your system. To install it, please use the following command if it is not already installed.
 
-| pip install torch |
-| :---- |
+```bash
+pip install torch
+```
 
 Prerequisites:  
 Before we begin, make sure you have installed the following libraries:
@@ -330,26 +394,31 @@ Before we begin, make sure you have installed the following libraries:
 **Step 1:** Importing the Libraries  
 Let's start by importing the required libraries.
 
-| import cv2from facenet\_pytorch import MTCNN |
-| :---- |
+```python
+import cv2
+from facenet_pytorch import MTCNN
+```
 
 **Step 2:** Loading the Image  
 Now, we need to load the image we want to detect faces. We can use the cv2.imread() function to load the image.
 
-| img \= cv2.imread("input\_image.jpg") |
-| :---- |
+```python
+img = cv2.imread("input_image.jpg")
+```
 
 **Step 3:** Creating the MTCNN Object  
 Next, we need to create an instance of the MTCNN class from the facenet-pytorch library. We will use this object to detect faces in the image.
 
-| mtcnn \= MTCNN() |
-| :---- |
+```python
+mtcnn = MTCNN()
+```
 
 **Step 4:** Detecting Faces in the Image  
 Now, we can use the MTCNN object to detect faces in the image. We can do this by calling the detect() function of the MTCNN object.
 
-| boxes, \_ \= mtcnn.detect(img) |
-| :---- |
+```python
+boxes, _ = mtcnn.detect(img)
+```
 
 The detect() function returns a list of bounding boxes around the faces in the image. In this scenario, the second parameter is disregarded.
 
@@ -357,8 +426,11 @@ The detect() function returns a list of bounding boxes around the faces in the i
 
 Finally, we can draw the bounding boxes around the detected faces in the image. We can do this using the cv2.rectangle() function.
 
-| for box in boxes:    x, y, w, h \= box    cv2.rectangle(img, (x, y), (x+w, y+h), (0, 255, 0), 2\) |
-| :---- |
+```python
+for box in boxes:
+    x, y, w, h = box
+cv2.rectangle(img, (x, y), (x+w, y+h), (0, 255, 0), 2\)
+```
 
 The cv2.rectangle() function takes in the following parameters:
 
@@ -371,8 +443,10 @@ The cv2.rectangle() function takes in the following parameters:
 **Step 6:** Displaying the Output  
 Finally, we can display the output image with the bounding boxes around the detected faces. We can use the cv2.imshow() function for this.
 
-| cv2.imshow("Output", img)cv2.waitKey(0) |
-| :---- |
+```text
+cv2.imshow("Output", img)
+cv2.waitKey(0)
+```
 
 The cv2.imshow() function takes in the following parameters:
 
@@ -390,20 +464,26 @@ Without further ado, let's get started with building our face detection project 
 
 First, we need to install TensorFlow 2\. You can install TensorFlow 2 by running the following command in your terminal:
 
-| pip install tensorflow |
-| :---- |
+```bash
+pip install tensorflow
+```
 
 **Step 2:** Import Required Libraries
 
 Once we have installed TensorFlow 2, we must import the required libraries for our face detection project. We will be using NumPy for array manipulation and OpenCV for image processing. You can install these libraries by running the following commands in your terminal:
 
-| pip install numpypip install opencv-python-headless |
-| :---- |
+```bash
+pip install numpy
+pip install opencv-python-headless
+```
 
 After installing the required libraries, we can import them into our Python script as follows:
 
-| import cv2import numpy as npimport tensorflow as tf |
-| :---- |
+```python
+import cv2
+import numpy as np
+import tensorflow as tf
+```
 
 **Step 3:** Load the MTCNN Model
 
@@ -412,27 +492,33 @@ Now, we need to load the MTCNN model into our Python script. We will be using th
 
 You can download and install the pre-trained weights by running the following command in your terminal:
 
-| pip install mtcnn-2.0.0-py3-none-any.whl |
-| :---- |
+```bash
+pip install mtcnn-2.0.0-py3-none-any.whl
+```
 
 After installing the pre-trained weights, we can load the MTCNN model into our Python script as follows:
 
-| from mtcnn import MTCNNdetector \= MTCNN() |
-| :---- |
+```python
+from mtcnn import MTCNN
+
+detector = MTCNN()
+```
 
 **Step 4:** Load the Image
 
 Next, we need to load the image we want to detect faces. We can use the OpenCV library to load the image. Here's an example:
 
-| image \= cv2.imread("image.jpg") |
-| :---- |
+```python
+image = cv2.imread("image.jpg")
+```
 
 **Step 5:** Detect Faces
 
 We can now use the MTCNN model to detect faces in the loaded image. We can do this by calling the detect\_faces function of the MTCNN object, which takes the image as input and returns a list of face detection results.
 
-| results \= detector.detect\_faces(image) |
-| :---- |
+```text
+results = detector.detect_faces(image)
+```
 
 The results variable will contain a list of face detection results, where each result is a dictionary that contains the following keys:
 
@@ -444,8 +530,11 @@ The results variable will contain a list of face detection results, where each r
 
 Finally, we can draw boxes around the detected faces in the image using the OpenCV library To draw boxes around the detected faces; we can loop through the list of face detection results and draw a rectangle around each detected face using the cv2.rectangle function of OpenCV. Here's an example:
 
-| for result in results:    x, y, w, h \= result\['box'\]    cv2.rectangle(image, (x, y), (x+w, y+h), (0, 255, 0), 2\) |
-| :---- |
+```text
+for result in results:
+x, y, w, h = result\['box'\]
+cv2.rectangle(image, (x, y), (x+w, y+h), (0, 255, 0), 2\)
+```
 
 In the above code, we retrieve the bounding box coordinates of each detected face from the result dictionary and draw a green rectangle around it using the cv2.rectangle function. The (0, 255, 0\) argument specifies the color of the rectangle (green), and the two arguments specifies the thickness of the rectangle (2 pixels).
 
@@ -453,8 +542,11 @@ In the above code, we retrieve the bounding box coordinates of each detected fac
 
 Finally, we can display the results of our face detection project by showing the image with the detected faces using the cv2.imshow function of OpenCV. Here's an example:
 
-| cv2.imshow("Face Detection Results", image)cv2.waitKey(0)cv2.destroyAllWindows() |
-| :---- |
+```text
+cv2.imshow("Face Detection Results", image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
 
 In the above code, we display the image with the detected faces using the cv2.imshow function. The first argument specifies the window's title, and the second argument specifies the image to be displayed. The cv2.waitKey(0) function waits for a key event (e.g. a keyboard key press), and the cv2.destroyAllWindows() function closes all the OpenCV windows.
 
