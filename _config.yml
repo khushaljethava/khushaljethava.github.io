@@ -12,7 +12,7 @@ lang: en
 timezone: Asia/Kolkata
 
 # Publish posts with future dates
-future: true
+future: false
 
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
