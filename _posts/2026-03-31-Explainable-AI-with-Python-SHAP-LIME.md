@@ -1,7 +1,7 @@
 ---
 title: "Explainable AI with Python: Understanding Model Predictions with SHAP and LIME"
 description: Learn how to make machine learning models interpretable with Python using SHAP and LIME. This guide covers feature importance, local explanations, visualizations, and practical examples with gradient boosting classifiers.
-date: 2026-04-01:00:00 +0800
+date: 2026-04-01 12:00:00 +0800
 categories: [Python]
 tags: [python, ai, explainability, xai]
 image:
