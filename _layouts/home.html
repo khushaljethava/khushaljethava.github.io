@@ -132,11 +132,11 @@ panel_includes:
       </a>
     </article>
 
-    <!-- Ad banner after post 3, 6, 9 - responsive with CLS prevention -->
-    {% if forloop.index == 3 or forloop.index == 6 or forloop.index == 9 %}
-    <div class="ad-posts-wrapper" style="min-height:90px;max-width:100%;margin:0 auto;overflow:hidden;">
+    <!-- Ad banner after post 3, 6, 9 - staggered loads to avoid atOptions collision -->
+    {% if forloop.index == 3 %}
+    <div id="ad-home-1" class="ad-posts-wrapper" style="min-height:90px;max-width:100%;margin:0 auto;overflow:hidden;">
       <script>
-        atOptions = {
+        var atOptions = {
           'key': '99e0c2c2535b318f3e9c4b63462c5832',
           'format': 'iframe',
           'height': 90,
@@ -144,7 +144,41 @@ panel_includes:
           'params': {}
         };
       </script>
-      <script async src="https://www.highperformanceformat.com/99e0c2c2535b318f3e9c4b63462c5832/invoke.js"></script>
+      <script src="https://www.highperformanceformat.com/99e0c2c2535b318f3e9c4b63462c5832/invoke.js"></script>
+    </div>
+    {% elsif forloop.index == 6 %}
+    <div id="ad-home-2" class="ad-posts-wrapper" style="min-height:90px;max-width:100%;margin:0 auto;overflow:hidden;">
+      <script>
+        setTimeout(function() {
+          atOptions = {
+            'key': '99e0c2c2535b318f3e9c4b63462c5832',
+            'format': 'iframe',
+            'height': 90,
+            'width': 728,
+            'params': {}
+          };
+          var s = document.createElement('script');
+          s.src = 'https://www.highperformanceformat.com/99e0c2c2535b318f3e9c4b63462c5832/invoke.js';
+          document.getElementById('ad-home-2').appendChild(s);
+        }, 1000);
+      </script>
+    </div>
+    {% elsif forloop.index == 9 %}
+    <div id="ad-home-3" class="ad-posts-wrapper" style="min-height:90px;max-width:100%;margin:0 auto;overflow:hidden;">
+      <script>
+        setTimeout(function() {
+          atOptions = {
+            'key': '99e0c2c2535b318f3e9c4b63462c5832',
+            'format': 'iframe',
+            'height': 90,
+            'width': 728,
+            'params': {}
+          };
+          var s = document.createElement('script');
+          s.src = 'https://www.highperformanceformat.com/99e0c2c2535b318f3e9c4b63462c5832/invoke.js';
+          document.getElementById('ad-home-3').appendChild(s);
+        }, 2000);
+      </script>
     </div>
     {% endif %}
 
