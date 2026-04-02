@@ -6,7 +6,7 @@ date: 2024-11-27 11:33:00 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/Python Variable.png
+  path: /commons/Python Variable.webp
   alt: Python Variable
 ---
 

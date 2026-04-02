@@ -5,7 +5,7 @@ date: 2024-12-19 02:57:00 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/Python Lambda Function.png
+  path: /commons/Python Lambda Function.webp
   alt: Python Lambda Function
 ---
 

@@ -5,7 +5,7 @@ date: 2025-04-05 12:26:03 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/A Beginner's Guide to Generating QR Code using Python.png
+  path: /commons/A Beginner's Guide to Generating QR Code using Python.webp
   alt: A Beginner's Guide to Generating QR Code using Python
 ---
 

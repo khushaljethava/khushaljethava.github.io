@@ -5,7 +5,7 @@ date: 2024-12-26 23:24:00 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
-  path: /commons/Python chr() Method.png
+  path: /commons/Python chr() Method.webp
   alt: Python chr() Method
 ---
 

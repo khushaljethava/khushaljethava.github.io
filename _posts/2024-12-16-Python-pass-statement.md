@@ -5,7 +5,7 @@ date: 2024-12-16 12:13:00 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/Python pass function.png
+  path: /commons/Python pass function.webp
   alt: Python pass function 
 
 ---

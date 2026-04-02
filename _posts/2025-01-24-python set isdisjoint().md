@@ -5,7 +5,7 @@ date: 2025-01-24 22:02:00 +0800
 categories: [Python Set Reference]
 tags: [Python Set Reference]
 image:
-  path: /commons/Python Set isdisjoint() Method.png
+  path: /commons/Python Set isdisjoint() Method.webp
   alt: Python Set isdisjoint() Method 
 
 ---

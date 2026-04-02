@@ -5,7 +5,7 @@ date: 2024-12-19 12:03:00 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/Python Function.png
+  path: /commons/Python Function.webp
   alt: Python Function
 ---
 

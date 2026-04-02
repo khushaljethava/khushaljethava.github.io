@@ -5,7 +5,7 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/how to extract images from pdf in Python.png
+  path: /commons/how to extract images from pdf in Python.webp
   alt: how to extract images from pdf in Python
 ---
 

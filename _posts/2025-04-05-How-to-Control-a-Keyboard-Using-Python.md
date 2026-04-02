@@ -5,7 +5,7 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/How to Control a Keyboard Using Python.png
+  path: /commons/How to Control a Keyboard Using Python.webp
   alt: How to Control a Keyboard Using Python
 ---
 

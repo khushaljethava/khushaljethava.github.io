@@ -5,7 +5,7 @@ date: 2025-01-18 23:28:25 +0800
 categories: [Python List reference]
 tags: [Python List reference]
 image:
-  path: /commons/Python List insert().png
+  path: /commons/Python List insert().webp
   alt: Python List insert()
 ---
 

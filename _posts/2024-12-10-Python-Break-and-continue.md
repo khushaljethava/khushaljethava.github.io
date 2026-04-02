@@ -5,7 +5,7 @@ date: 2024-12-10 10:27:00 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/Python Break and Continue .png
+  path: /commons/Python Break and Continue .webp
   alt: Python Break and Continue 
 
 ---

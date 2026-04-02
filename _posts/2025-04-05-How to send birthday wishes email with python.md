@@ -5,7 +5,7 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/How to send birthday wishes email with python.png
+  path: /commons/How to send birthday wishes email with python.webp
   alt: How to send birthday wishes email with python
 ---
 

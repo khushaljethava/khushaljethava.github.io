@@ -5,10 +5,19 @@ date: 2025-01-03 22:42:23 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
-  path: /commons/Python reversed().png
+  path: /commons/Python reversed().webp
   alt: Python reversed()
 ---
 
+The Python `reversed()` built-in function returns a reverse iterator over a sequence. It accepts a single parameter, a sequence object such as a list, tuple, string, or range, or any object that implements the `__reversed__()` method or supports the sequence protocol (`__len__()` and `__getitem__()`). The function returns a `reversed` iterator object that yields elements from the sequence in reverse order without modifying the original sequence or creating a copy of it in memory. This makes `reversed()` memory-efficient for iterating over large sequences backward. Common real-world use cases include processing log entries from newest to oldest, implementing undo functionality by traversing action history in reverse, reversing user input for palindrome checking, iterating through sorted results in descending order, and displaying stack traces or breadcrumb trails from most recent to earliest.
+
+## What does reversed() return?
+
+The `reversed()` function returns a `reversed` iterator object that yields elements of the given sequence from last to first, without modifying or copying the original data.
+
+## When should you use reversed()?
+
+Use `reversed()` when you need to iterate through a sequence in reverse order without creating a reversed copy, which is more memory-efficient than slicing with `[::-1]` for large sequences.
 
 The syntax of reversed() is:
 
@@ -83,6 +92,16 @@ Output:
 
 ```
 
+## Common Use Cases
+
+Processing data in reverse chronological order is a common application of `reversed()`. When working with log files, transaction histories, or event streams stored in chronological order, iterating with `reversed()` lets you process the most recent entries first without reversing the entire dataset in memory.
+
+Implementing algorithms that require backward traversal benefits from `reversed()`. For example, checking whether a string is a palindrome can be done by comparing the original string with `''.join(reversed(string))`. Similarly, certain dynamic programming algorithms process sequences from right to left, and `reversed()` provides an elegant way to express this iteration.
+
+Building user interfaces that display items in reverse order, such as chat message feeds showing the newest messages at the bottom or breadcrumb navigations showing the most specific page first, frequently use `reversed()` to transform the data before rendering.
+
+For sorting sequences in a specific order, see the [Python sorted()](/posts/Page-60-Python-sorted/) function, which can produce descending results using its `reverse` parameter. To convert a reversed iterator into a list, the [Python list()](/posts/Page-39-Python-list/) function is commonly used.
+
 ## Rules of reversed()
 
-* The reversed() function can only take squeal objects like list, set, string, tuple, etc.
+* The reversed() function can only take sequence objects like list, string, tuple, etc.

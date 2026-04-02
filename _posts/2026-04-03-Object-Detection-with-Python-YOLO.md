@@ -5,7 +5,7 @@ date: 2026-04-03 12:00:00 +0800
 categories: [Python]
 tags: [python, computer-vision, yolo]
 image:
-  path: "/commons/Object Detection with Python and YOLO A Hands-On Guide.png"
+  path: "/commons/Object Detection with Python and YOLO A Hands-On Guide.webp"
   alt: "Object detection pipeline using YOLOv8 with Python showing bounding box predictions on images and video frames"
 ---
 
@@ -13,7 +13,7 @@ image:
 
 Object detection identifies and locates objects within images or video frames. Unlike image classification, which assigns a single label to an entire image, object detection draws bounding boxes around each object and classifies them individually. A single frame might contain three cars, two pedestrians, and a traffic light — object detection finds all of them.
 
-YOLO (You Only Look Once) is the most widely used object detection architecture. It processes the entire image in a single forward pass through the neural network, making it fast enough for real-time applications. YOLOv8, developed by Ultralytics, is the latest iteration with improved accuracy and a clean Python API.
+YOLO (You Only Look Once) is the most widely used object detection architecture. It processes the entire image in a single forward pass through the neural network, making it fast enough for real-time applications. Object detection is a core task in [multimodal AI systems](/posts/Multimodal-AI-with-Python/) that combine vision with other modalities. YOLOv8, developed by Ultralytics, is the latest iteration with improved accuracy and a clean Python API.
 
 ## Installing Ultralytics
 
@@ -388,7 +388,7 @@ visualize_predictions("test_image.jpg", model)
 
 ## Exporting for Deployment
 
-Export models to optimized formats for production:
+Export models to optimized formats for production. If you plan to deploy on resource-constrained hardware, see our guide on [running ML on edge devices](/posts/Edge-AI-with-Python-Running-ML-on-Edge-Devices/) for TFLite and ONNX conversion best practices.
 
 ```python
 from ultralytics import YOLO
@@ -513,9 +513,15 @@ YOLOv8 with the Ultralytics library makes object detection accessible in just a 
 
 1. Start with a pretrained model for quick results on common objects
 2. Prepare a labeled dataset in YOLO format for custom detection tasks
-3. Fine-tune using transfer learning from a pretrained checkpoint
+3. [Fine-tune](/posts/Fine-Tuning-LLMs-with-Python/) using transfer learning from a pretrained checkpoint
 4. Evaluate with mAP, precision, and recall metrics
 5. Export to ONNX, TensorRT, or TFLite for production deployment
 6. Serve behind an API for integration with other systems
 
 The pretrained COCO models handle 80 object categories out of the box. For anything else, you need a few hundred labeled images and a few hours of training time to get a working custom detector.
+
+## Related Posts
+
+- [Multimodal AI with Python](/posts/Multimodal-AI-with-Python/) -- Combine vision, text, and audio models in unified AI pipelines.
+- [Edge AI with Python: Running ML on Edge Devices](/posts/Edge-AI-with-Python-Running-ML-on-Edge-Devices/) -- Deploy optimized detection models on Raspberry Pi and IoT hardware.
+- [Fine-Tuning LLMs with Python](/posts/Fine-Tuning-LLMs-with-Python/) -- Apply transfer learning techniques to customize large models for your domain.

@@ -5,7 +5,7 @@ date: 2026-04-06 12:00:00 +0800
 categories: [Python]
 tags: [python, machine-learning, time-series]
 image:
-  path: "/commons/Time Series Forecasting with Python A Practical Guide.png"
+  path: "/commons/Time Series Forecasting with Python A Practical Guide.webp"
   alt: "Time series forecasting comparison using ARIMA, Prophet, and LSTM neural networks for stock price prediction in Python"
 ---
 
@@ -30,7 +30,7 @@ ts = pd.Series(values, index=dates, name="sales")
 print(ts.head())
 ```
 
-A time series typically has three components: **trend** (long-term direction), **seasonality** (repeating patterns), and **noise** (random variation). Your forecasting model needs to capture the first two and ignore the third.
+A time series typically has three components: **trend** (long-term direction), **seasonality** (repeating patterns), and **noise** (random variation). Your forecasting model needs to capture the first two and ignore the third. [Visualizing these components](/posts/Python-Data-Visualization-Matplotlib-Seaborn/) is an essential first step before building any model.
 
 ## Installation
 
@@ -302,7 +302,7 @@ print(f"\nBest model by MAE: {comparison['MAE'].idxmin()}")
 
 **Prophet:** Business metrics with strong seasonality and holidays, missing data, multiple time series.
 
-**LSTM:** Complex non-linear patterns, large datasets, when accuracy matters more than interpretability.
+**LSTM:** Complex non-linear patterns, large datasets, when accuracy matters more than interpretability. If you want to automate the model selection process, [AutoML tools](/posts/AutoML-with-Python-Automated-Machine-Learning/) can help benchmark multiple approaches quickly.
 
 ## Key Takeaways
 
@@ -313,3 +313,10 @@ print(f"\nBest model by MAE: {comparison['MAE'].idxmin()}")
 - Feature engineering (lags, rolling stats, calendar features) improves all models
 - Evaluate with MAE and RMSE on a held-out test set — never on training data
 - Start with Prophet, add complexity only if the accuracy isn't sufficient
+- When deploying forecasting models to production, follow [MLOps best practices](/posts/MLOps-with-Python-Production-ML-Pipelines/) for monitoring and retraining
+
+## Related Posts
+
+- [MLOps with Python: Production ML Pipelines](/posts/MLOps-with-Python-Production-ML-Pipelines/) -- Deploy and monitor your forecasting models in production with automated retraining.
+- [Python Data Visualization with Matplotlib and Seaborn](/posts/Python-Data-Visualization-Matplotlib-Seaborn/) -- Create compelling charts to communicate your time series insights.
+- [AutoML with Python: Automated Machine Learning](/posts/AutoML-with-Python-Automated-Machine-Learning/) -- Automate model selection and hyperparameter tuning for time series tasks.

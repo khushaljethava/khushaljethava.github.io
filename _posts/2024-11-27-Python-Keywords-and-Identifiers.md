@@ -7,7 +7,7 @@ date: 2024-11-27 11:33:00 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/Python Keywords and Identifiers.png
+  path: /commons/Python Keywords and Identifiers.webp
   alt: Python Keywords and Identifiers
 ---
 

@@ -5,7 +5,7 @@ date: 2024-12-19 10:19:00 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/Python Tuple.png
+  path: /commons/Python Tuple.webp
   alt: Python Tuple
 ---
 

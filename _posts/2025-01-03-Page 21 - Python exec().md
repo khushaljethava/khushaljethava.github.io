@@ -5,9 +5,23 @@ date: 2025-01-03 22:15:55 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
-  path: /commons/Python exec() Method.png
+  path: /commons/Python exec() Method.webp
   alt: Python exec() Method
 ---
+
+The Python `exec()` function is a built-in that dynamically executes Python code provided as a string or compiled code object. It takes three parameters: an object (required), which is the string or code object to execute; a globals dictionary (optional) that defines the global namespace; and a locals dictionary (optional) that defines the local namespace. Unlike `eval()`, which only evaluates expressions, `exec()` can execute any valid Python statements including imports, class definitions, function definitions, loops, and conditionals. The function always returns `None`, since its purpose is to execute code for its side effects rather than to produce a value. A common real-world use case is implementing plugin systems where user-provided scripts are loaded and executed at runtime, or building interactive coding environments where code submitted by users needs to be run dynamically.
+
+## What does exec() return?
+
+The `exec()` function always returns `None`, because it executes statements for their side effects rather than evaluating an expression to produce a result.
+
+## When should you use exec()?
+
+Use `exec()` when you need to execute dynamically generated Python statements, such as running user scripts in a plugin system or applying code patches at runtime, and always restrict the namespace with globals and locals dictionaries for security.
+
+## Common Use Cases
+
+One common use of `exec()` is in educational platforms and online coding judges where student-submitted code needs to be executed in a controlled environment. Another practical scenario is implementing configuration files written in Python syntax, where `exec()` runs the config file and populates a namespace dictionary with the defined variables. It is also used in code generation pipelines where templates produce Python source code that is then executed. Related functions include the [Python eval() method](/posts/Python-eval()-Method/) for evaluating single expressions and the [Python globals() method](/posts/Python-globals()-Method/) for inspecting the global namespace that `exec()` modifies.
 
 The exec() is a built-in python function that executes the specified python code dynamically. Can be a string or a code object.
 

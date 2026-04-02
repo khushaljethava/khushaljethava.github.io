@@ -5,7 +5,7 @@ date: 2024-12-19 23:01:00 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/Python Recursion Function.png
+  path: /commons/Python Recursion Function.webp
   alt: Python Recursion Function
 ---
 

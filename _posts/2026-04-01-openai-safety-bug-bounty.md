@@ -5,7 +5,7 @@ date: 2026-04-01 19:05:00 +0530
 categories: [GenAI]
 tags: [openai, ai-security, mcp, prompt-injection, bug-bounty, promptfoo]
 image:
-  path: /commons/openai-safety-bug-bounty-hero.png
+  path: /commons/openai-safety-bug-bounty-hero.webp
   alt: "OpenAI safety bug bounty hero image about MCP prompt injection"
 ---
 

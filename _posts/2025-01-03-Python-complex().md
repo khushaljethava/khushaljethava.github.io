@@ -5,13 +5,22 @@ date: 2025-01-03 23:24:00 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
-  path: /commons/Python complex() Method.png
+  path: /commons/Python complex() Method.webp
   alt: Python complex() Method
 
 ---
 
-The complex() method returns a complex number when real and imaginary parts are given and converts a string to a complex number.
+The Python `complex()` function is a built-in constructor that creates a complex number from a real part and an optional imaginary part, or by parsing a string representation. It accepts two optional parameters: `real` (the real component, defaulting to 0) and `img` (the imaginary component, defaulting to 0). When a string is passed as the first argument, it must represent a valid complex number (like `"3+4j"`) and the second argument must not be provided. The function returns a `complex` object with `.real` and `.imag` attributes. Complex numbers are essential in scientific computing, signal processing, electrical engineering, and quantum computing applications. A real-world use case is performing impedance calculations in circuit analysis where voltages and currents are represented as complex numbers. The `complex()` function complements other numeric constructors like [int()](/posts/Page-34-Python-int()/) and [float()](/posts/Page-23-Python-float()/) for building different numeric types.
 
+## What does complex() return?
+
+The `complex()` function returns a complex number object. For example, `complex(3, 4)` returns `(3+4j)`, and `complex()` with no arguments returns `0j`.
+
+## When should you use complex()?
+
+Use `complex()` when you need to perform mathematical operations involving imaginary numbers, such as signal processing, electrical engineering calculations, or any domain where two-dimensional numeric representation is required.
+
+The complex() method returns a complex number when real and imaginary parts are given and converts a string to a complex number.
 
 The syntax of complex() is:
 
@@ -58,6 +67,10 @@ print(X)
 0j
 (4-7j)
 ```
+## Common Use Cases
+
+A common use case for `complex()` is performing impedance calculations in electrical engineering, where circuit components like resistors, capacitors, and inductors are modeled as complex numbers. Another practical scenario is implementing the Discrete Fourier Transform (DFT) in signal processing where frequency components are represented as complex numbers with magnitude and phase. It is also used in mathematical applications that require operations on the complex plane, such as fractal generation (Mandelbrot sets) or solving polynomial equations with complex roots.
+
 ## Rules of complex()
 
 As the name suggests by the name, the complex() method returns a complex number.

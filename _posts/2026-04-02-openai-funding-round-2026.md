@@ -5,7 +5,7 @@ date: 2026-04-02 08:21:01 +0530
 categories: [Industry]
 tags: [openai, funding, ai-superapp, codex, ai-infrastructure, genai]
 image:
-  path: /commons/openai-funding-round-2026-hero.png
+  path: /commons/openai-funding-round-2026-hero.webp
   alt: "OpenAI 2026 funding round analysis covering $122 billion raise, compute strategy, Codex growth, and AI superapp implications"
 ---
 

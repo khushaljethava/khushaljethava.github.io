@@ -5,13 +5,13 @@ date: 2026-04-05 12:00:00 +0800
 categories: [Python]
 tags: [python, machine-learning, recommendation-systems]
 image:
-  path: "/commons/Building Recommendation Systems with Python from Scratch.png"
+  path: "/commons/Building Recommendation Systems with Python from Scratch.webp"
   alt: "Recommendation system architecture showing collaborative filtering, content-based filtering, and hybrid approaches in Python"
 ---
 
 ## What Are Recommendation Systems?
 
-Recommendation systems predict what a user might like based on past behavior, item attributes, or what similar users have liked. Netflix suggests movies. Amazon suggests products. Spotify suggests playlists. Behind all of these are recommendation algorithms.
+Recommendation systems predict what a user might like based on past behavior, item attributes, or what similar users have liked. They often work alongside [sentiment analysis](/posts/Sentiment-Analysis-with-Python/) to incorporate user opinion signals into recommendations. Netflix suggests movies. Amazon suggests products. Spotify suggests playlists. Behind all of these are recommendation algorithms.
 
 There are three main approaches:
 
@@ -203,7 +203,7 @@ Item-based CF is generally preferred over user-based in practice. Item similarit
 
 ## Content-Based Filtering
 
-Content-based filtering uses item features to recommend similar items to those a user already likes:
+Content-based filtering uses item features to recommend similar items to those a user already likes. If you need to collect item data from the web first, check out our [Python web scraping guide](/posts/Python-Web-Scraping-Complete-Guide/) for practical techniques.
 
 ```python
 from sklearn.metrics.pairwise import cosine_similarity
@@ -568,7 +568,7 @@ for item_id, hybrid_score, cf_score, cb_score in recs:
 
 ## Evaluating Recommendation Systems
 
-Evaluation goes beyond RMSE. Use ranking metrics to measure how good the recommendations actually are:
+Evaluation goes beyond RMSE. Similar evaluation challenges arise in [fraud detection](/posts/Fraud-Detection-with-Machine-Learning-Python/), where class imbalance makes standard accuracy misleading. Use ranking metrics to measure how good the recommendations actually are:
 
 ```python
 from sklearn.model_selection import train_test_split
@@ -662,3 +662,9 @@ Recommendation systems follow a clear progression of complexity:
 5. **Hybrid** — Combines multiple approaches. Best overall performance.
 
 Start with SVD from the Surprise library for a strong baseline. Add content-based features if you have good item metadata. Use popularity as a fallback for cold-start users. Evaluate with ranking metrics like precision@k and recall@k rather than just RMSE, because real recommendation quality is about whether users like the top few suggestions, not average prediction error across all items.
+
+## Related Posts
+
+- [Sentiment Analysis with Python](/posts/Sentiment-Analysis-with-Python/) -- Incorporate user opinion signals to improve recommendation quality.
+- [Python Web Scraping: The Complete Guide](/posts/Python-Web-Scraping-Complete-Guide/) -- Collect product and content data from the web to feed your recommendation engine.
+- [Fraud Detection with Machine Learning in Python](/posts/Fraud-Detection-with-Machine-Learning-Python/) -- Handle imbalanced datasets and evaluation challenges similar to recommendation systems.

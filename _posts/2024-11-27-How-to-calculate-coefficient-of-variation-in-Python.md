@@ -7,7 +7,7 @@ categories: [GenAI]
 tags: [ai]
 
 image:
-  path: /commons/How to calculate coefficient of variation in Python.png
+  path: /commons/How to calculate coefficient of variation in Python.webp
   alt: How to calculate coefficient of variation in Python
 ---
 

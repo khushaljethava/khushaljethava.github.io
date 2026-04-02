@@ -5,11 +5,23 @@ date: 2025-01-03 22:15:55 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
-  path: /commons/Python divmod() Method.png
+  path: /commons/Python divmod() Method.webp
   alt: Python divmod() Method
 ---
 
-## 
+The Python `divmod()` function is a built-in that performs both integer division and modulo in a single operation. It takes two non-complex numeric parameters: a dividend (numerator) and a divisor (denominator). The function returns a tuple containing two values: the quotient from floor division and the remainder from the modulo operation, equivalent to `(a // b, a % b)`. Both integer and floating-point arguments are supported. When both arguments are integers, the result tuple contains integers; when either argument is a float, the result contains floats. A common real-world use case is converting units where division and remainder are both needed, such as converting total seconds into minutes and remaining seconds, or converting total inches into feet and leftover inches.
+
+## What does divmod() return?
+
+The `divmod()` function returns a tuple of two numbers: the floor division quotient and the modulo remainder of dividing the first argument by the second.
+
+## When should you use divmod()?
+
+Use `divmod()` when you need both the quotient and remainder of a division simultaneously, which is more efficient and readable than computing `//` and `%` separately.
+
+## Common Use Cases
+
+A frequent use of `divmod()` is time conversion, such as `divmod(3661, 60)` to split total seconds into 61 minutes and 1 second, then applying `divmod()` again on the minutes to get hours and remaining minutes. Another practical scenario is pagination logic, where `divmod(total_items, items_per_page)` tells you the number of full pages and whether a partial final page is needed. You can also use it in base-conversion algorithms where you repeatedly divide by the target base and collect remainders. Related functions include the [Python float() method](/posts/Python-float()-Method/) for working with decimal results and the [Python int() method](/posts/Python-int()-Method/) for truncating division results.
 
 ## What is Python divmod() Method?
 

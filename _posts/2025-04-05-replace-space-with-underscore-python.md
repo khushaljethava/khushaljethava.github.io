@@ -5,7 +5,7 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/Replace space with underscore in Python.png
+  path: /commons/Replace space with underscore in Python.webp
   alt: Replace space with underscore in Python
 ---
 

@@ -5,9 +5,19 @@ date: 2025-01-03 22:42:23 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
-  path: /commons/Python iter() Method.png
+  path: /commons/Python iter() Method.webp
   alt: Python iter() Method
 ---
+
+The Python `iter()` function is a built-in that returns an iterator object from an iterable. It accepts two parameters: the required `object` parameter, which must be a collection or an object implementing the `__iter__()` method, and an optional `sentinel` value that defines a termination condition when calling the object as a callable. When used with a single argument, `iter()` calls the object's `__iter__()` method and returns the resulting iterator. When used with a sentinel, the first argument must be a callable, and the iterator will keep calling it until the sentinel value is returned. The function is fundamental to Python's iteration protocol, which powers `for` loops, list comprehensions, and generator expressions. A common real-world use case is reading lines from a file or socket until a specific termination marker is encountered, using the two-argument sentinel form like `iter(socket.recv, b'')`.
+
+## What does iter() return?
+
+The `iter()` function returns an iterator object that produces successive items from the given iterable when passed to `next()`.
+
+## When should you use iter()?
+
+Use `iter()` when you need explicit control over iteration, such as manually stepping through items with `next()`, or when using the sentinel form to read data until a stop condition is met.
 
 ## What is Python iter() Method?
 
@@ -126,6 +136,12 @@ Traceback (most recent call last):
 StopIteration
 
 ```
+
+## Common Use Cases
+
+A common use of `iter()` is implementing custom iteration in classes by defining `__iter__()` and `__next__()` methods, then using `iter()` to obtain the iterator for use in loops. Another practical scenario is the sentinel pattern for reading blocks of data from a file: `iter(lambda: file.read(4096), b'')` reads 4KB chunks until the file is exhausted, which is memory-efficient for processing large files. Developers also use `iter()` when they need to manually control iteration stepping, such as consuming items from an iterator at different rates in interleaved processing pipelines.
+
+To advance an iterator by one step and retrieve the next value, use the [Python next() method](/posts/Page-45-Python-next()/). If you need to create a list from an iterable instead of an iterator, see the [Python list() method](/posts/Page-39-Python-list()/).
 
 ## Rules of iter() 
 

@@ -5,9 +5,23 @@ date: 2025-01-03 22:15:55 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
-  path: /commons/Python getattr() Method.png
+  path: /commons/Python getattr() Method.webp
   alt: Python getattr() Method
 ---
+
+The Python `getattr()` function is a built-in that retrieves the value of a named attribute from an object. It takes three parameters: the object to inspect (required), the attribute name as a string (required), and a default value (optional) to return if the attribute does not exist. If the attribute is found, its value is returned. If the attribute is not found and no default is provided, an `AttributeError` is raised. The function is equivalent to using dot notation (`object.attribute`) but allows the attribute name to be a variable, enabling dynamic attribute access. A common real-world use case is building flexible configuration systems or plugin architectures where attribute names are determined at runtime, such as dispatching to handler methods based on user input or reading settings from objects where some fields may be optional.
+
+## What does getattr() return?
+
+The `getattr()` function returns the value of the named attribute on the given object, or the default value if the attribute does not exist and a default was provided.
+
+## When should you use getattr()?
+
+Use `getattr()` when you need to access object attributes dynamically using variable names, especially in plugin systems, serializers, or configuration handlers where attribute names are not known at write time.
+
+## Common Use Cases
+
+A frequent use of `getattr()` is implementing command dispatchers where a string command name is mapped to a method on a handler object, such as `getattr(handler, command_name, default_handler)`. Another practical scenario is building serializers that convert objects to dictionaries by iterating over a list of field names and calling `getattr()` for each one, with sensible defaults for optional fields. It is also commonly used in test frameworks and mock libraries to dynamically inspect and verify object state. Related functions include the [Python dir() method](/posts/Python-dir()-Method/) for discovering available attribute names and the [Python hasattr() method](/posts/Python-hasattr()-Method/) for checking attribute existence before access.
 
 ## What is python getattr() method?
 

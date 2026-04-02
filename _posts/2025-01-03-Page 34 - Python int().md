@@ -5,9 +5,19 @@ date: 2025-01-03 22:42:23 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
-  path: /commons/Python int().png
+  path: /commons/Python int().webp
   alt: Python int()
 ---
+
+The Python `int()` function is a built-in that converts a number or string into an integer object. It accepts two optional parameters: `value`, which is the number or string to convert (defaulting to `0` if omitted), and `base`, which specifies the numeral system of the input string (defaulting to `10`). When given a float, `int()` truncates toward zero, discarding the decimal portion. When given a string, it parses the digits according to the specified base, supporting binary (base 2), octal (base 8), decimal (base 10), and hexadecimal (base 16) representations. A `ValueError` is raised if the string contains characters invalid for the given base. A common real-world use case is processing user input or file data that arrives as strings but needs to be used in arithmetic operations. For instance, reading a port number from a configuration file requires converting the string `"8080"` to the integer `8080`. The `int()` function is also essential for base conversion tasks in data encoding and low-level systems programming.
+
+## What does int() return?
+
+The `int()` function returns an integer object created from the given number or string, or `0` if no arguments are provided.
+
+## When should you use int()?
+
+Use `int()` when you need to convert strings, floats, or values in other numeral systems into Python integers for arithmetic, indexing, or comparison operations.
 
 The syntax of int() is:
 
@@ -92,6 +102,12 @@ Traceback (most recent call last):
 ValueError: invalid literal for int() with base 10: 'Python'
 
 ```
+
+## Common Use Cases
+
+A frequent use of `int()` is converting user input from `input()`, which always returns a string, into a numeric type for calculations such as age verification, quantity counting, or mathematical operations. Another common scenario is parsing hexadecimal or binary strings from hardware registers, network protocols, or configuration files using `int('0xff', 16)` or `int('1010', 2)`. Developers also use `int()` to truncate floating-point numbers when they need the integer portion without rounding, such as calculating page numbers from a total item count and page size.
+
+To convert an integer to its hexadecimal representation, see the [Python hex() method](/posts/Page-31-Python-hex()/). For converting to a floating-point number instead, use the [Python float() function](/posts/Page-23-Python-float()/).
 
 ## Rules of int() method
 

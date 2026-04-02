@@ -5,7 +5,7 @@ date: 2026-04-02 12:00:00 +0530
 categories: [Industry]
 tags: [openai, ai-funding, ai-infrastructure, developer-platforms, chatgpt, codex]
 image:
-  path: /commons/openai-122-billion-funding-ai-developers-hero.png
+  path: /commons/openai-122-billion-funding-ai-developers-hero.webp
   alt: "OpenAI $122 billion funding round analysis covering compute strategy, developer platform growth, and enterprise AI market implications"
 ---
 

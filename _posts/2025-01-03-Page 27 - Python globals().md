@@ -5,9 +5,19 @@ date: 2025-01-03 22:15:55 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
-  path: /commons/Python globals() Method.png
+  path: /commons/Python globals() Method.webp
   alt: Python globals() Method
 ---
+
+The Python `globals()` function is a built-in that returns a dictionary representing the current global symbol table. It takes no parameters and always returns a `dict` object containing every variable, function, class, and imported module available at the module level. The keys in this dictionary are the names of global symbols as strings, and the values are the corresponding objects. Because the returned dictionary is mutable, you can both read and modify global variables through it, making `globals()` a powerful tool for dynamic programming. A common real-world use case is in template engines and configuration systems where you need to look up or inject variables by name at runtime. For example, a plugin system might use `globals()` to register new functions dynamically without hardcoding their names. It is also useful for debugging, as calling `globals()` inside the Python interpreter instantly reveals all currently defined global names and their values.
+
+## What does globals() return?
+
+The `globals()` function returns a dictionary of the current module's global symbol table, including all global variables, functions, classes, and imports currently in scope.
+
+## When should you use globals()?
+
+Use `globals()` when you need to dynamically access or modify global variables by name at runtime, such as in metaprogramming, debugging, or building plugin architectures.
 
 ## What is Python globals() Method?
 
@@ -124,6 +134,12 @@ The output will be as follow:
 ```
 
 As you can see, it returns all the global variables and default symbols of imported python libraries. 
+
+## Common Use Cases
+
+One practical use of `globals()` is in configuration management, where settings loaded from a file or environment are injected into the global namespace so that other parts of the program can access them without passing configuration objects around. Another common scenario is dynamic dispatch: if you have a set of handler functions named `handle_event_a`, `handle_event_b`, and so on, you can use `globals()` to look up and call the right handler based on a string constructed at runtime. Developers also use `globals()` during interactive debugging sessions to quickly inspect all variables defined at the module level and confirm that imports and assignments have taken effect.
+
+If you want to inspect variables within a function's local scope instead, see the [Python locals() method](/posts/Page-40-Python-locals()/). You may also find the [Python dir() method](/posts/Page-17-Python-dir()/) helpful for listing the names in the current scope without their values.
 
 ## Rules of Python globals()
 

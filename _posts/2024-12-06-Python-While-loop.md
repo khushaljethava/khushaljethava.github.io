@@ -5,7 +5,7 @@ date: 2024-12-06 11:12:00 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/Python While Loop.png
+  path: /commons/Python While Loop.webp
   alt: Python While Loop
 
 ---

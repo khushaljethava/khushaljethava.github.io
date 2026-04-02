@@ -5,7 +5,7 @@ date: 2024-12-26 21:08:00 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
-  path: /commons/Python any() Method.png
+  path: /commons/Python any() Method.webp
   alt: Python any() Method
 
 ---

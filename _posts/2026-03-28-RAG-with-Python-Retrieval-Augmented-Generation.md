@@ -5,7 +5,7 @@ date: 2026-03-28 12:00:00 +0800
 categories: [Python]
 tags: [python, ai, rag, llm]
 image:
-  path: "/commons/RAG with Python Build a Retrieval-Augmented Generation System.png"
+  path: "/commons/RAG with Python Build a Retrieval-Augmented Generation System.webp"
   alt: "RAG with Python: Build a Retrieval-Augmented Generation System"
 ---
 

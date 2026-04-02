@@ -5,7 +5,7 @@ date: 2024-12-19 23:35:00 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/Python Docstring.png
+  path: /commons/Python Docstring.webp
   alt: Python Docstring
 ---
 

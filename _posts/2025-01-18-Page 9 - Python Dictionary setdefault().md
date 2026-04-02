@@ -5,7 +5,7 @@ date: 2025-01-18 21:38:03 +0800
 categories: [Python Dictionary Reference]
 tags: [Python Dictionary Reference]
 image:
-  path: /commons/Python Dictionary setdefault().png
+  path: /commons/Python Dictionary setdefault().webp
   alt: Python Dictionary setdefault()
 ---
 

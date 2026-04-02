@@ -5,7 +5,7 @@ date: 2025-01-24 22:02:00 +0800
 categories: [Python Tuple Reference]
 tags: [Python Tuple Reference]
 image:
-  path: /commons/Python Tuple index() Method.png
+  path: /commons/Python Tuple index() Method.webp
   alt: Python Tuple index()
 ---
 

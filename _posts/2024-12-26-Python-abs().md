@@ -5,7 +5,7 @@ date: 2024-12-26 21:01:00 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
-  path: /commons/Python abs() Function.png
+  path: /commons/Python abs() Function.webp
   alt: Python abs() Function
 
 ---

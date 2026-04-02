@@ -5,7 +5,7 @@ date: 2024-12-05 10:42:00 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/Python Conditional Statement.png
+  path: /commons/Python Conditional Statement.webp
   alt: Python Conditional Statement
 
 ---

@@ -5,7 +5,7 @@ date: 2024-12-16 12:56:00 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/Python List.png
+  path: /commons/Python List.webp
   alt: Python List
 
 ---

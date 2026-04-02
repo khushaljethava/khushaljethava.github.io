@@ -5,7 +5,7 @@ date: 2024-12-16 12:18:00 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/Python String.png
+  path: /commons/Python String.webp
   alt: Python String
 
 ---

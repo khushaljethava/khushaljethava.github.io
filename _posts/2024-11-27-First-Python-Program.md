@@ -7,7 +7,7 @@ date: 2024-11-27 11:33:00 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/First Python Program.png
+  path: /commons/First Python Program.webp
   alt: First Python Program
 ---
 

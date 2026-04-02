@@ -5,7 +5,7 @@ date: 2024-12-17 09:01:00 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/Python Set.png
+  path: /commons/Python Set.webp
   alt: Python Set
 ---
 

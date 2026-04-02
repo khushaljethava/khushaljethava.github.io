@@ -5,7 +5,7 @@ date: 2024-12-26 21:06:00 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
-  path: /commons/Python all() Method.png
+  path: /commons/Python all() Method.webp
   alt: Python all() Method
 
 ---

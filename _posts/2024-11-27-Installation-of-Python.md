@@ -7,7 +7,7 @@ date: 2024-11-27 11:33:00 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/Installation of Python.png
+  path: /commons/Installation of Python.webp
   alt: Installation of Python
 ---
 

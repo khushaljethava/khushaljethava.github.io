@@ -5,13 +5,13 @@ date: 2026-04-09 12:00:00 +0800
 categories: [Python]
 tags: [python, machine-learning, fraud-detection]
 image:
-  path: "/commons/Fraud Detection with Machine Learning in Python.png"
+  path: "/commons/Fraud Detection with Machine Learning in Python.webp"
   alt: "Credit card fraud detection pipeline using Random Forest, XGBoost, and SMOTE for imbalanced dataset handling in Python"
 ---
 
 ## The Fraud Detection Problem
 
-Credit card fraud accounts for billions in losses annually. The challenge: fraudulent transactions are rare — typically less than 1% of all transactions. A model that predicts "not fraud" for everything gets 99% accuracy but catches zero fraud.
+Credit card fraud accounts for billions in losses annually. The challenge: fraudulent transactions are rare — typically less than 1% of all transactions. The same class imbalance problem appears in [recommendation systems](/posts/Building-Recommendation-Systems-with-Python/) where relevant items are a tiny fraction of the catalog. A model that predicts "not fraud" for everything gets 99% accuracy but catches zero fraud.
 
 ```python
 import pandas as pd
@@ -273,6 +273,8 @@ print(classification_report(y_test, final_preds, target_names=["Legitimate", "Fr
 
 ## Feature Importance
 
+To understand why a model flags certain transactions, [Explainable AI techniques like SHAP and LIME](/posts/Explainable-AI-with-Python-SHAP-LIME/) can provide per-prediction explanations.
+
 ```python
 import matplotlib.pyplot as plt
 
@@ -334,3 +336,10 @@ def predict_fraud(transaction_features):
 - Tune the classification threshold for your business needs (catch more fraud vs. fewer false alerts)
 - Feature importance analysis reveals which transaction attributes matter most
 - In production, monitor for concept drift — fraud patterns evolve constantly
+- Use [MLOps pipelines](/posts/MLOps-with-Python-Production-ML-Pipelines/) to automate retraining when model performance degrades
+
+## Related Posts
+
+- [Building Recommendation Systems with Python](/posts/Building-Recommendation-Systems-with-Python/) -- Tackle similar class imbalance and evaluation challenges in a different ML domain.
+- [Explainable AI with Python: SHAP and LIME](/posts/Explainable-AI-with-Python-SHAP-LIME/) -- Add interpretability to your fraud models so stakeholders understand why transactions are flagged.
+- [MLOps with Python: Production ML Pipelines](/posts/MLOps-with-Python-Production-ML-Pipelines/) -- Deploy fraud detection models with automated monitoring, retraining, and drift detection.

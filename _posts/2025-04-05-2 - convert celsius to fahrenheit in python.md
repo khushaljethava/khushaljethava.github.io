@@ -5,7 +5,7 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/Convert Celsius to Fahrenheit in Python.png
+  path: /commons/Convert Celsius to Fahrenheit in Python.webp
   alt: Convert Celsius to Fahrenheit in Python
 ---
 

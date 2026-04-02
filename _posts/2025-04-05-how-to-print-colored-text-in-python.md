@@ -5,7 +5,7 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/How to print colored text in python.png
+  path: /commons/How to print colored text in python.webp
   alt: How to print colored text in python
 ---
 

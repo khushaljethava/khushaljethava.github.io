@@ -5,7 +5,7 @@ date: 2026-03-26 23:45:00 +0530
 categories: [Python]
 tags: [python, ai, agents, openai, llm]
 image:
-  path: /commons/openai-agents-sdk-python-hero.png
+  path: /commons/openai-agents-sdk-python-hero.webp
   alt: OpenAI Agents SDK Python tutorial hero image
 ---
 

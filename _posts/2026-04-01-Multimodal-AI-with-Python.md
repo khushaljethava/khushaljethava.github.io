@@ -5,7 +5,7 @@ date: 2026-04-01 12:00:00 +0800
 categories: [Python]
 tags: [python, ai, multimodal]
 image:
-  path: "/commons/Multimodal AI with Python Working with Text Images and Audio.png"
+  path: "/commons/Multimodal AI with Python Working with Text Images and Audio.webp"
   alt: "Multimodal AI architecture combining text, image, and audio processing using GPT-4 Vision, transformers, and Whisper in Python"
 ---
 

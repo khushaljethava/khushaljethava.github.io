@@ -5,7 +5,7 @@ date: 2024-12-26 21:19:00 +0800
 categories: [Built in reference]
 tags: [Built in reference]
 image:
-  path: /commons/Python bool() Method.png
+  path: /commons/Python bool() Method.webp
   alt: Python bool() Method
 
 ---

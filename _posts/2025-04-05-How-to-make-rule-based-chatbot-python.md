@@ -5,7 +5,7 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/How to make a rule-based chatbot in python using flask.png
+  path: /commons/How to make a rule-based chatbot in python using flask.webp
   alt: How to make a rule-based chatbot in python using flask
 ---
 

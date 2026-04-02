@@ -5,7 +5,7 @@ date: 2024-12-19 12:24:00 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/Python Function with Argument .png
+  path: /commons/Python Function with Argument .webp
   alt: Python Function with Argument 
 ---
 

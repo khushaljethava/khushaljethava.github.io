@@ -5,7 +5,7 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/How to convert text to speech in python and speech to Text in Python.png
+  path: /commons/How to convert text to speech in python and speech to Text in Python.webp
   alt: How to convert text to speech in python and speech to Text in Python
 ---
 

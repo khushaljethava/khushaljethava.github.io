@@ -5,7 +5,7 @@ date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/StringBuilder in Python.png
+  path: /commons/StringBuilder in Python.webp
   alt: StringBuilder in Python
 ---
 

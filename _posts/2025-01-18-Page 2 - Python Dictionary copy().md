@@ -5,7 +5,7 @@ date: 2025-01-18 21:38:03 +0800
 categories: [Python Dictionary Reference]
 tags: [Python Dictionary Reference]
 image:
-  path: /commons/Python Dictionary copy().png
+  path: /commons/Python Dictionary copy().webp
   alt: Python Dictionary copy()
 ---
 

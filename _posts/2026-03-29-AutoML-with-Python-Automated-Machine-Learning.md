@@ -5,7 +5,7 @@ date: 2026-03-29 12:00:00 +0800
 categories: [Python]
 tags: [python, machine-learning, automl]
 image:
-  path: "/commons/AutoML with Python Automate Your Machine Learning Pipeline.png"
+  path: "/commons/AutoML with Python Automate Your Machine Learning Pipeline.webp"
   alt: "AutoML with Python: Automate Your Machine Learning Pipeline"
 ---
 

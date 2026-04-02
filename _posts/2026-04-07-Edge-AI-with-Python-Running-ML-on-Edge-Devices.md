@@ -5,7 +5,7 @@ date: 2026-04-07 12:00:00 +0800
 categories: [Python]
 tags: [python, ai, edge-ai, iot]
 image:
-  path: "/commons/Edge AI with Python Running Machine Learning on Edge Devices.png"
+  path: "/commons/Edge AI with Python Running Machine Learning on Edge Devices.webp"
   alt: "Edge AI deployment pipeline showing TensorFlow Lite and ONNX Runtime model optimization for Raspberry Pi and IoT devices"
 ---
 
@@ -21,7 +21,7 @@ response = requests.post("https://api.example.com/predict", json=data)
 prediction = local_model.predict(data)
 ```
 
-The tradeoff is model size. A 7B parameter model won't fit on a Raspberry Pi. Edge AI is about making smaller models that run fast on limited hardware.
+The tradeoff is model size. A 7B parameter model won't fit on a Raspberry Pi. Edge AI is about making smaller models that run fast on limited hardware. For example, running [object detection with YOLO](/posts/Object-Detection-with-Python-YOLO/) in real time requires careful model optimization for edge deployment.
 
 ## Installation
 
@@ -146,7 +146,7 @@ for name, size in sizes.items():
     print(f"{name}: {size / 1024:.1f} KB")
 ```
 
-Typical reduction: float32 → int8 gives a 4x size reduction and 2-3x speedup with minimal accuracy loss (usually < 1%).
+Typical reduction: float32 → int8 gives a 4x size reduction and 2-3x speedup with minimal accuracy loss (usually < 1%). These quantization techniques are also relevant when [fine-tuning LLMs](/posts/Fine-Tuning-LLMs-with-Python/) for deployment on consumer hardware.
 
 ## ONNX Runtime
 
@@ -344,3 +344,10 @@ print(f"P99: {results['p99_ms']:.1f}ms")
 - ONNX is framework-agnostic: convert from PyTorch, TensorFlow, or scikit-learn
 - Start with dynamic range quantization, move to full int8 if you need more speed
 - Real-time camera inference at 10-30 FPS is achievable on Raspberry Pi 4 with quantized models
+- For production edge deployments, set up [MLOps pipelines](/posts/MLOps-with-Python-Production-ML-Pipelines/) to manage model versioning and over-the-air updates
+
+## Related Posts
+
+- [Object Detection with Python and YOLO](/posts/Object-Detection-with-Python-YOLO/) -- Train and deploy real-time object detection models optimized for edge hardware.
+- [Fine-Tuning LLMs with Python](/posts/Fine-Tuning-LLMs-with-Python/) -- Apply quantization and distillation techniques to shrink models for edge deployment.
+- [MLOps with Python: Production ML Pipelines](/posts/MLOps-with-Python-Production-ML-Pipelines/) -- Manage model lifecycle, versioning, and monitoring for edge AI systems.

@@ -5,7 +5,7 @@ date: 2024-12-09 09:01:00 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/Python range() function.png
+  path: /commons/Python range() function.webp
   alt: Python range() function
 
 ---

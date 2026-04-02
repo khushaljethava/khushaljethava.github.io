@@ -5,7 +5,7 @@ date: 2024-12-06 10:26:00 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/Python For Loop.png
+  path: /commons/Python For Loop.webp
   alt: Python For Loop
 
 ---

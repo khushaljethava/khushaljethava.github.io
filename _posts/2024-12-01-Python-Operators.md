@@ -7,7 +7,7 @@ date: 2024-12-02 2:55:00 +0800
 categories: [Python]
 tags: [python]
 image:
-  path: /commons/Python Operators.png
+  path: /commons/Python Operators.webp
   alt: Python Operators
 
 ---
