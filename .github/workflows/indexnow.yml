@@ -15,34 +15,45 @@ jobs:
         with:
           fetch-depth: 2
 
-      - name: Get changed URLs
-        id: changed
+      - name: Build and ping IndexNow
         run: |
-          # Find changed/added post files
-          URLS=""
+          # Collect changed post/tab URLs into a JSON file
+          echo '{"host":"khushaljethava.work","key":"4851a52678074ce6a07a9c6e2591062c","urlList":[' > /tmp/indexnow.json
+
+          first=true
           for file in $(git diff --name-only HEAD~1 HEAD -- '_posts/' '_tabs/'); do
             if [[ "$file" == _posts/*.md ]]; then
-              # Extract slug from filename: YYYY-MM-DD-slug.md -> slug
               slug=$(basename "$file" .md | sed 's/^[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-//')
-              URLS="${URLS}\"https://khushaljethava.work/posts/${slug}/\","
+              url="https://khushaljethava.work/posts/${slug}/"
             elif [[ "$file" == _tabs/*.md ]]; then
               slug=$(basename "$file" .md)
-              URLS="${URLS}\"https://khushaljethava.work/${slug}/\","
+              url="https://khushaljethava.work/${slug}/"
+            else
+              continue
             fi
-          done
-          # Remove trailing comma
-          URLS="${URLS%,}"
-          echo "urls=[$URLS]" >> $GITHUB_OUTPUT
-          echo "Found URLs: [$URLS]"
 
-      - name: Ping IndexNow
-        if: steps.changed.outputs.urls != '[]'
-        run: |
-          curl -s -X POST "https://api.indexnow.org/indexnow" \
-            -H "Content-Type: application/json" \
-            -d '{
-              "host": "khushaljethava.work",
-              "key": "4851a52678074ce6a07a9c6e2591062c",
-              "urlList": ${{ steps.changed.outputs.urls }}
-            }'
-          echo "IndexNow pinged for: ${{ steps.changed.outputs.urls }}"
+            if [ "$first" = true ]; then
+              first=false
+            else
+              echo ',' >> /tmp/indexnow.json
+            fi
+            # Use jq to safely JSON-encode the URL
+            printf '%s' "$url" | jq -Rs '.' >> /tmp/indexnow.json
+          done
+
+          echo ']}' >> /tmp/indexnow.json
+
+          URL_COUNT=$(grep -c 'khushaljethava.work' /tmp/indexnow.json || true)
+          echo "Found $URL_COUNT changed URLs"
+
+          if [ "$URL_COUNT" -gt 0 ]; then
+            echo "Payload:"
+            cat /tmp/indexnow.json
+            curl -s -X POST "https://api.indexnow.org/indexnow" \
+              -H "Content-Type: application/json" \
+              -d @/tmp/indexnow.json
+            echo ""
+            echo "IndexNow ping sent successfully"
+          else
+            echo "No post/tab changes detected, skipping IndexNow ping"
+          fi

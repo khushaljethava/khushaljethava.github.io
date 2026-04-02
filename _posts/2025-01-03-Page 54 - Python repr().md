@@ -62,7 +62,7 @@ Implementing `__repr__()` in custom classes is a best practice that `repr()` sup
 
 Generating test assertions and data snapshots is another practical use. When writing tests, you can use `repr()` to capture the exact state of an object and compare it against expected values, ensuring that subtle differences in type or formatting are caught.
 
-For user-facing string output, see the [Python str()](/posts/Page-62-Python-str/) function, which produces a more readable representation. To format strings with more control over layout and precision, the [Python format()](/posts/Page-24-Python-format/) function is a useful complement.
+For user-facing string output, see the [Python str()](/posts/Page-62-Python-str()/) function, which produces a more readable representation. To format strings with more control over layout and precision, the [Python format()](/posts/Page-24-Python-format()/) function is a useful complement.
 
 ## Rules of repr()
 

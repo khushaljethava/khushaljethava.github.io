@@ -22,7 +22,7 @@ Use `ascii()` when you need a safe, printable representation of text that may co
 
 ## Common Use Cases
 
-When working with multilingual applications, `ascii()` helps developers inspect string contents without worrying about terminal or editor encoding issues. For example, if a user submits a form with characters like umlauts or accented letters, calling `ascii()` on the input lets you see the exact escape codes in your debug logs. Another practical use is when generating Python source code or configuration files programmatically where non-ASCII characters need to be escaped. You can also combine `ascii()` with the [Python chr() method](/posts/Python-chr()-Method/) to convert between character representations, or use it alongside the [Python bin() method](/posts/Python-bin()-Method/) when examining different representations of data.
+When working with multilingual applications, `ascii()` helps developers inspect string contents without worrying about terminal or editor encoding issues. For example, if a user submits a form with characters like umlauts or accented letters, calling `ascii()` on the input lets you see the exact escape codes in your debug logs. Another practical use is when generating Python source code or configuration files programmatically where non-ASCII characters need to be escaped. You can also combine `ascii()` with the [Python chr() method](/posts/Python-chr()/) to convert between character representations, or use it alongside the [Python bin() method](/posts/Python-bin()/) when examining different representations of data.
 
 The ascii() method will return a readable version of a string containing a printable representation of an object.
 

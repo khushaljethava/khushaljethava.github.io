@@ -21,7 +21,7 @@ Use `enumerate()` whenever you need both the index and value during iteration, r
 
 ## Common Use Cases
 
-One of the most common uses of `enumerate()` is replacing manual counter tracking in loops, making code more Pythonic and less error-prone. For example, when printing a numbered list of search results, `enumerate(results, start=1)` provides clean 1-based indexing. Another practical scenario is processing log file lines where you need to report the line number alongside any detected errors. You can also pair `enumerate()` with the [Python filter() method](/posts/Python-filter()-Method/) to track original positions of filtered elements, or use it alongside the [Python list() method](/posts/Python-list()-Method/) to materialize the enumerated pairs into a concrete list.
+One of the most common uses of `enumerate()` is replacing manual counter tracking in loops, making code more Pythonic and less error-prone. For example, when printing a numbered list of search results, `enumerate(results, start=1)` provides clean 1-based indexing. Another practical scenario is processing log file lines where you need to report the line number alongside any detected errors. You can also pair `enumerate()` with the [Python filter() method](/posts/Page-22-Python-filter()/) to track original positions of filtered elements, or use it alongside the [Python list() method](/posts/Page-39-Python-list()/) to materialize the enumerated pairs into a concrete list.
 
 The enumerate() method adds a counter to an iterable and returns its enumerated object.
 

@@ -142,4 +142,4 @@ Generating formatted console output for command-line applications is another cor
 
 Writing structured output to files using the `file` parameter allows `print()` to serve as a simple report generator. By passing a file object opened in write mode, you can direct formatted output to log files, CSV exports, or text reports without switching to more complex file-writing patterns.
 
-For reading user input from the console, see the [Python input()](/posts/Page-33-Python-input/) function. To open files for writing with the `file` parameter, the [Python open()](/posts/Page-48-Python-open/) function provides the necessary file object.
+For reading user input from the console, see the [Python input()](/posts/Page-33-Python-input()/) function. To open files for writing with the `file` parameter, the [Python open()](/posts/Page-48-Python-open()/) function provides the necessary file object.

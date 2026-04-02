@@ -21,7 +21,7 @@ Use `format()` when you need to construct strings with dynamic values and specif
 
 ## Common Use Cases
 
-A frequent use of `format()` is generating user-facing output with consistent number formatting, such as displaying prices with exactly two decimal places using `"{:.2f}".format(price)`. Another practical scenario is creating aligned table output in command-line tools, where fixed-width format specifiers ensure columns line up properly. It is also commonly used in logging and debugging to construct descriptive messages with variable data. Related functions include the [Python float() method](/posts/Python-float()-Method/) for converting values before formatting and the [Python eval() method](/posts/Python-eval()-Method/) for dynamic expression evaluation, though `format()` is always the safer choice for string interpolation.
+A frequent use of `format()` is generating user-facing output with consistent number formatting, such as displaying prices with exactly two decimal places using `"{:.2f}".format(price)`. Another practical scenario is creating aligned table output in command-line tools, where fixed-width format specifiers ensure columns line up properly. It is also commonly used in logging and debugging to construct descriptive messages with variable data. Related functions include the [Python float() method](/posts/Page-23-Python-float()/) for converting values before formatting and the [Python eval() method](/posts/Page-20-Python-eval()/) for dynamic expression evaluation, though `format()` is always the safer choice for string interpolation.
 
 ## What is python format() method?
 

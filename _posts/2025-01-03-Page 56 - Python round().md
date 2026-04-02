@@ -82,7 +82,7 @@ Cleaning up floating-point arithmetic artifacts is another practical application
 
 Preparing data for summary reports and dashboards frequently involves rounding. When presenting averages, percentages, or statistics to non-technical audiences, rounding to one or two decimal places improves readability without sacrificing meaningful precision.
 
-For computing powers before rounding, see the [Python pow()](/posts/Page-50-Python-pow/) function. To get the absolute value of a number before or after rounding, the [Python abs()](/posts/Python-abs/) function is a useful companion.
+For computing powers before rounding, see the [Python pow()](/posts/Page-50-Python-pow()/) function. To get the absolute value of a number before or after rounding, the [Python abs()](/posts/Python-abs()/) function is a useful companion.
 
 ## Rules of round() function
 

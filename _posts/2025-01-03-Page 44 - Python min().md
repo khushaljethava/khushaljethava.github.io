@@ -135,7 +135,7 @@ Date and time comparisons are another practical use case. If you have a list of 
 
 String comparison with `min()` is also valuable. When applied to a list of strings, `min()` returns the string that comes first in lexicographic (alphabetical) order. This can be useful for sorting operations, finding the first entry alphabetically, or selecting the shortest string with `min(strings, key=len)`.
 
-For the inverse operation of finding the largest value, see the [Python max()](/posts/Page-42-Python-max/) function. You may also find the [Python sorted()](/posts/Page-60-Python-sorted/) function helpful when you need a fully ordered result rather than just the minimum.
+For the inverse operation of finding the largest value, see the [Python max()](/posts/Page-42-Python-max()/) function. You may also find the [Python sorted()](/posts/Page-60-Python-sorted()/) function helpful when you need a fully ordered result rather than just the minimum.
 
 ## Rules of min() method
 

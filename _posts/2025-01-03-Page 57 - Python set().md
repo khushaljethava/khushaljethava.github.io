@@ -96,7 +96,7 @@ Performing set operations to compare datasets is another powerful application. U
 
 Efficient membership testing is a key performance advantage of sets. When you need to check whether an element exists in a large collection, converting it to a set first and using the `in` operator provides constant-time lookups, which is dramatically faster than searching through a list for large datasets.
 
-For creating immutable sets that can be used as dictionary keys or set elements, see the [Python frozenset()](/posts/Page-25-Python-frozenset/) function. To convert a set back to an ordered sequence, the [Python sorted()](/posts/Page-60-Python-sorted/) function returns a sorted list from any iterable.
+For creating immutable sets that can be used as dictionary keys or set elements, see the [Python frozenset()](/posts/Page-25-Python-frozenset()/) function. To convert a set back to an ordered sequence, the [Python sorted()](/posts/Page-60-Python-sorted()/) function returns a sorted list from any iterable.
 
 ## Rules of the set()
 

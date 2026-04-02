@@ -100,7 +100,7 @@ Implementing algorithms that require backward traversal benefits from `reversed(
 
 Building user interfaces that display items in reverse order, such as chat message feeds showing the newest messages at the bottom or breadcrumb navigations showing the most specific page first, frequently use `reversed()` to transform the data before rendering.
 
-For sorting sequences in a specific order, see the [Python sorted()](/posts/Page-60-Python-sorted/) function, which can produce descending results using its `reverse` parameter. To convert a reversed iterator into a list, the [Python list()](/posts/Page-39-Python-list/) function is commonly used.
+For sorting sequences in a specific order, see the [Python sorted()](/posts/Page-60-Python-sorted()/) function, which can produce descending results using its `reverse` parameter. To convert a reversed iterator into a list, the [Python list()](/posts/Page-39-Python-list()/) function is commonly used.
 
 ## Rules of reversed()
 

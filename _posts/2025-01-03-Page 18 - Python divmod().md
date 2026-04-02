@@ -21,7 +21,7 @@ Use `divmod()` when you need both the quotient and remainder of a division simul
 
 ## Common Use Cases
 
-A frequent use of `divmod()` is time conversion, such as `divmod(3661, 60)` to split total seconds into 61 minutes and 1 second, then applying `divmod()` again on the minutes to get hours and remaining minutes. Another practical scenario is pagination logic, where `divmod(total_items, items_per_page)` tells you the number of full pages and whether a partial final page is needed. You can also use it in base-conversion algorithms where you repeatedly divide by the target base and collect remainders. Related functions include the [Python float() method](/posts/Python-float()-Method/) for working with decimal results and the [Python int() method](/posts/Python-int()-Method/) for truncating division results.
+A frequent use of `divmod()` is time conversion, such as `divmod(3661, 60)` to split total seconds into 61 minutes and 1 second, then applying `divmod()` again on the minutes to get hours and remaining minutes. Another practical scenario is pagination logic, where `divmod(total_items, items_per_page)` tells you the number of full pages and whether a partial final page is needed. You can also use it in base-conversion algorithms where you repeatedly divide by the target base and collect remainders. Related functions include the [Python float() method](/posts/Page-23-Python-float()/) for working with decimal results and the [Python int() method](/posts/Page-34-Python-int()/) for truncating division results.
 
 ## What is Python divmod() Method?
 

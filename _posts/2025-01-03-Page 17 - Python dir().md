@@ -21,7 +21,7 @@ Use `dir()` when you need to explore the interface of an object at runtime, such
 
 ## Common Use Cases
 
-One common use of `dir()` is during interactive Python sessions where you want to quickly see what methods a string, list, or custom object supports without opening documentation. Another practical scenario is building auto-completion features in custom REPLs or IDEs, where `dir()` provides the candidate list for tab completion. It is also useful for writing generic utility functions that inspect objects at runtime, such as serializers that need to discover all public attributes. Related built-in functions include the [Python getattr() method](/posts/Python-getattr()-Method/) for accessing discovered attributes by name and the [Python hasattr() method](/posts/Python-hasattr()-Method/) for checking if a specific attribute exists.
+One common use of `dir()` is during interactive Python sessions where you want to quickly see what methods a string, list, or custom object supports without opening documentation. Another practical scenario is building auto-completion features in custom REPLs or IDEs, where `dir()` provides the candidate list for tab completion. It is also useful for writing generic utility functions that inspect objects at runtime, such as serializers that need to discover all public attributes. Related built-in functions include the [Python getattr() method](/posts/Page-26-Python-getattr()/) for accessing discovered attributes by name and the [Python hasattr() method](/posts/Page-28-Python-hasattr()/) for checking if a specific attribute exists.
 
 The dir() function returns a list of valid attributes of the specific object.
 

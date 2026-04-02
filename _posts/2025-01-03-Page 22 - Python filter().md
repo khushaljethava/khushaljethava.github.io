@@ -21,7 +21,7 @@ Use `filter()` when you need to select elements from a sequence based on a condi
 
 ## Common Use Cases
 
-A frequent use of `filter()` is data validation, such as filtering a list of email addresses to keep only those matching a valid format, or removing incomplete records from imported CSV data. Another practical scenario is access control, where you filter a list of users to find only those with specific permissions or roles. You can also chain `filter()` with the [Python enumerate() method](/posts/Python-enumerate()-Method/) to track positions of filtered elements, or combine it with the [Python map() method](/posts/Python-map()-Method/) to transform only the elements that pass a condition.
+A frequent use of `filter()` is data validation, such as filtering a list of email addresses to keep only those matching a valid format, or removing incomplete records from imported CSV data. Another practical scenario is access control, where you filter a list of users to find only those with specific permissions or roles. You can also chain `filter()` with the [Python enumerate() method](/posts/Page-19-Python-enumerate()/) to track positions of filtered elements, or combine it with the [Python map() method](/posts/Page-41-Python-map()/) to transform only the elements that pass a condition.
 
 ## What is Python filter() Method?
 

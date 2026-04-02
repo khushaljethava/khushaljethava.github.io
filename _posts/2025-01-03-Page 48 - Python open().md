@@ -107,7 +107,7 @@ Writing logs and output files is another everyday application. Using write mode 
 
 Working with binary files such as images, audio, or serialized data requires opening files in binary mode (`'rb'` or `'wb'`). This is necessary when the file content is not text-based and must be read or written as raw bytes, such as when downloading files from the internet or processing media files.
 
-For displaying output to the console instead of files, see the [Python print()](/posts/Page-51-Python-print/) function. If you need to work with file input from the user, the [Python input()](/posts/Page-33-Python-input/) function handles reading from standard input.
+For displaying output to the console instead of files, see the [Python print()](/posts/Page-51-Python-print()/) function. If you need to work with file input from the user, the [Python input()](/posts/Page-33-Python-input()/) function handles reading from standard input.
 
 ## Rules of open()
 

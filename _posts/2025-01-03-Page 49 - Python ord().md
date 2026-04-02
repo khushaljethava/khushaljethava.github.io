@@ -63,7 +63,7 @@ Validating input characters is another practical application. You can check whet
 
 Character frequency analysis in text processing benefits from `ord()` as well. When building frequency tables or histograms of characters in a document, converting characters to their integer codes provides a consistent, language-independent way to index and compare characters across different alphabets and writing systems.
 
-The inverse of `ord()` is the [Python chr()](/posts/Python-chr/) function, which converts an integer code point back to its character representation. For converting objects to their string form, see the [Python str()](/posts/Page-62-Python-str/) function.
+The inverse of `ord()` is the [Python chr()](/posts/Python-chr()/) function, which converts an integer code point back to its character representation. For converting objects to their string form, see the [Python str()](/posts/Page-62-Python-str()/) function.
 
 ## Rules of ord()
 

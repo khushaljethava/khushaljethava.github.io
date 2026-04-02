@@ -95,7 +95,7 @@ Converting between number bases for educational or debugging purposes is another
 
 Encoding data in legacy systems that use octal notation is a more specialized application. Some older protocols, serial communication formats, and mainframe systems use octal encoding, and `oct()` provides a straightforward way to produce the required format from standard Python integers.
 
-For related base conversion functions, see the [Python hex()](/posts/Page-31-Python-hex/) function for hexadecimal conversion and the [Python bin()](/posts/Python-bin/) function for binary conversion.
+For related base conversion functions, see the [Python hex()](/posts/Page-31-Python-hex()/) function for hexadecimal conversion and the [Python bin()](/posts/Python-bin()/) function for binary conversion.
 
 ## Rules of oct()
 

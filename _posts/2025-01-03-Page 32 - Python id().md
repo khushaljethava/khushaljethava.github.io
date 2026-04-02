@@ -123,7 +123,7 @@ This if of User_Func function is: 9480720
 
 A frequent use of `id()` is verifying object identity during debugging. For example, when a list is passed to multiple functions, calling `id()` on the list before and after each function call confirms whether the original list was modified in place or replaced with a new one. Another practical scenario is understanding Python's integer interning: small integers (typically -5 to 256) are cached, so `id(5) == id(5)` is always `True`, which can be demonstrated with `id()` to teach how Python optimizes memory for frequently used values. Developers also use `id()` when building custom caching or memoization systems where object identity matters more than equality.
 
-To check the type of an object rather than its identity, see the [Python type() function](/posts/Page-66-Python-type()/). If you need to test whether two variables point to the same object, the `is` operator is the idiomatic approach, but [Python isinstance()](/posts/Page-35-Python-isinstance()-method/) is better for type checking.
+To check the type of an object rather than its identity, see the [Python type() function](/posts/Page-66-Python-type()/). If you need to test whether two variables point to the same object, the `is` operator is the idiomatic approach, but [Python isinstance()](/posts/Page-35-Python-isinstance()/) is better for type checking.
 
 ## Rules of id() method 
 

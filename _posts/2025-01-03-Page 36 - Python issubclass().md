@@ -75,7 +75,7 @@ True
 
 A frequent use of `issubclass()` is in factory patterns where a registry of handler classes is maintained, and each registered class must be verified as a subclass of a particular abstract base class before being accepted. Another practical scenario is in testing frameworks that automatically discover test classes by scanning modules and checking `issubclass(cls, TestCase)` to identify which classes should be collected and run. It is also useful in serialization systems that need to determine whether a given class inherits from a serializable base in order to decide which encoding strategy to apply.
 
-To check whether a specific object (not a class) is an instance of a class, use [Python isinstance()](/posts/Page-35-Python-isinstance()-method/). If you need to inspect the attributes of a class rather than its inheritance tree, the [Python dir() method](/posts/Page-17-Python-dir()/) is a helpful tool.
+To check whether a specific object (not a class) is an instance of a class, use [Python isinstance()](/posts/Page-35-Python-isinstance()/). If you need to inspect the attributes of a class rather than its inheritance tree, the [Python dir() method](/posts/Page-17-Python-dir()/) is a helpful tool.
 
 ## Rules of issubclass()
 

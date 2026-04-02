@@ -134,7 +134,7 @@ Implementing search logic with generators is another practical application. You 
 
 Building custom iterators for state machines or parsers is a more advanced use case. By calling `next()` to advance through tokens or input characters, you gain fine-grained control over the iteration process, including the ability to pause, resume, and branch based on the current element.
 
-To create the iterator objects that `next()` operates on, see the [Python iter()](/posts/Page-37-Python-iter/) function. For converting an iterator's remaining items into a list, the [Python list()](/posts/Page-39-Python-list/) function is a convenient companion.
+To create the iterator objects that `next()` operates on, see the [Python iter()](/posts/Page-37-Python-iter()/) function. For converting an iterator's remaining items into a list, the [Python list()](/posts/Page-39-Python-list()/) function is a convenient companion.
 
 ## Rules of next() method
 

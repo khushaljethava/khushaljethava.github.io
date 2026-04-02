@@ -94,7 +94,7 @@ Here the hasattr() method is checking whether the given string is present in the
 
 A frequent use of `hasattr()` is in API design where your code needs to handle multiple object types gracefully. For example, a logging framework might check `hasattr(record, 'extra_context')` before attempting to include additional context in the log output. Another practical scenario is feature detection in third-party libraries, where you verify that a module or class exposes a certain method before calling it, which helps maintain backward compatibility across library versions. It is also useful when writing generic utility functions that operate on diverse objects, such as a deep-copy helper that checks for a custom `__copy__` method before falling back to the default copy behavior.
 
-For retrieving the actual attribute value rather than just checking its existence, see the [Python getattr() method](/posts/Page-26-Python-getattr()/). If you need to check whether an object is an instance of a specific class, consider using [Python isinstance()](/posts/Page-35-Python-isinstance()-method/).
+For retrieving the actual attribute value rather than just checking its existence, see the [Python getattr() method](/posts/Page-26-Python-getattr()/). If you need to check whether an object is an instance of a specific class, consider using [Python isinstance()](/posts/Page-35-Python-isinstance()/).
 
 ## Rules of hasattr()
 

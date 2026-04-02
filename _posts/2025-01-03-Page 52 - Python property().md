@@ -93,7 +93,7 @@ Computing derived attributes on the fly is another common pattern. For example, 
 
 Maintaining backward compatibility during refactoring is a more subtle but powerful use case. When a public attribute needs to be replaced with computed logic, such as adding logging when a value is read or converting units on the fly, wrapping it in a `property()` preserves the existing `obj.attribute` interface while adding the new behavior behind the scenes.
 
-For getting and setting attributes dynamically by name, see the [Python getattr()](/posts/Page-26-Python-getattr/) and [Python setattr()](/posts/Page-58-Python-setattr/) functions, which complement `property()` for reflective programming patterns.
+For getting and setting attributes dynamically by name, see the [Python getattr()](/posts/Page-26-Python-getattr()/) and [Python setattr()](/posts/Page-58-Python-setattr()/) functions, which complement `property()` for reflective programming patterns.
 
 ## Rules of property()
 

@@ -21,7 +21,7 @@ Use `exec()` when you need to execute dynamically generated Python statements, s
 
 ## Common Use Cases
 
-One common use of `exec()` is in educational platforms and online coding judges where student-submitted code needs to be executed in a controlled environment. Another practical scenario is implementing configuration files written in Python syntax, where `exec()` runs the config file and populates a namespace dictionary with the defined variables. It is also used in code generation pipelines where templates produce Python source code that is then executed. Related functions include the [Python eval() method](/posts/Python-eval()-Method/) for evaluating single expressions and the [Python globals() method](/posts/Python-globals()-Method/) for inspecting the global namespace that `exec()` modifies.
+One common use of `exec()` is in educational platforms and online coding judges where student-submitted code needs to be executed in a controlled environment. Another practical scenario is implementing configuration files written in Python syntax, where `exec()` runs the config file and populates a namespace dictionary with the defined variables. It is also used in code generation pipelines where templates produce Python source code that is then executed. Related functions include the [Python eval() method](/posts/Page-20-Python-eval()/) for evaluating single expressions and the [Python globals() method](/posts/Page-27-Python-globals()/) for inspecting the global namespace that `exec()` modifies.
 
 The exec() is a built-in python function that executes the specified python code dynamically. Can be a string or a code object.
 

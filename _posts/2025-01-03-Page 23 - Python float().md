@@ -21,7 +21,7 @@ Use `float()` when you need to convert string or integer data to decimal numbers
 
 ## Common Use Cases
 
-A common use of `float()` is parsing numeric input from command-line arguments or web forms, where all input arrives as strings and must be converted before calculations. Another practical scenario is normalizing data types when reading CSV files, where columns may contain a mix of integer and decimal values that should all become floats for consistent mathematical operations. It is also used for type checking and coercion in data pipelines where incoming JSON values might be integers that need to be floats for division or percentage calculations. Related functions include the [Python int() method](/posts/Python-int()-Method/) for converting to integers and the [Python format() method](/posts/Python-format()-Method/) for controlling how float values are displayed.
+A common use of `float()` is parsing numeric input from command-line arguments or web forms, where all input arrives as strings and must be converted before calculations. Another practical scenario is normalizing data types when reading CSV files, where columns may contain a mix of integer and decimal values that should all become floats for consistent mathematical operations. It is also used for type checking and coercion in data pipelines where incoming JSON values might be integers that need to be floats for division or percentage calculations. Related functions include the [Python int() method](/posts/Page-34-Python-int()/) for converting to integers and the [Python format() method](/posts/Page-24-Python-format()/) for controlling how float values are displayed.
 
 ## What is python float() method?
 

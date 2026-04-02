@@ -22,7 +22,7 @@ Use `bytearray()` when you need a mutable byte sequence, such as when building b
 
 ## Common Use Cases
 
-One common use of `bytearray()` is reading a binary file into memory and patching specific bytes before writing it back, since the mutable nature avoids creating new copies for each change. Another scenario is implementing serial communication protocols where you build command frames byte by byte and need to update checksum fields after assembling the rest of the packet. You can also use `bytearray()` alongside the [Python bytes() method](/posts/Python-bytes()-Method/) when you need both mutable and immutable byte representations, or combine it with the [Python int() method](/posts/Python-int()-Method/) to convert individual bytes to integer values for arithmetic.
+One common use of `bytearray()` is reading a binary file into memory and patching specific bytes before writing it back, since the mutable nature avoids creating new copies for each change. Another scenario is implementing serial communication protocols where you build command frames byte by byte and need to update checksum fields after assembling the rest of the packet. You can also use `bytearray()` alongside the [Python bytes() method](/posts/Python-bytes()/) when you need both mutable and immutable byte representations, or combine it with the [Python int() method](/posts/Page-34-Python-int()/) to convert individual bytes to integer values for arithmetic.
 
 The bytearray() method will return a form of bytearray object, an array of given objects, or create an empty bytearray object of the specified size.
 

@@ -21,7 +21,7 @@ Use `frozenset()` when you need a set that must remain unchanged after creation,
 
 ## Common Use Cases
 
-A frequent use of `frozenset()` is defining constant lookup sets for validation, such as a frozenset of valid HTTP status codes or allowed user roles that should never be accidentally modified during program execution. Another practical scenario is using frozensets as dictionary keys to create mappings from combinations of attributes, since regular sets are unhashable and cannot serve as keys. You can also use frozensets in caching and memoization where function arguments include sets that need to be hashable for the cache key. Related functions include the [Python dict() method](/posts/Python-dict()-Method/) where frozensets can serve as keys, and the [Python filter() method](/posts/Python-filter()-Method/) for selecting elements before freezing them into an immutable set.
+A frequent use of `frozenset()` is defining constant lookup sets for validation, such as a frozenset of valid HTTP status codes or allowed user roles that should never be accidentally modified during program execution. Another practical scenario is using frozensets as dictionary keys to create mappings from combinations of attributes, since regular sets are unhashable and cannot serve as keys. You can also use frozensets in caching and memoization where function arguments include sets that need to be hashable for the cache key. Related functions include the [Python dict() method](/posts/Page-16-Python-dict()/) where frozensets can serve as keys, and the [Python filter() method](/posts/Page-22-Python-filter()/) for selecting elements before freezing them into an immutable set.
 
 ## What is python frozenset() Method?
 

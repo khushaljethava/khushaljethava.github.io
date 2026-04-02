@@ -21,7 +21,7 @@ Use `getattr()` when you need to access object attributes dynamically using vari
 
 ## Common Use Cases
 
-A frequent use of `getattr()` is implementing command dispatchers where a string command name is mapped to a method on a handler object, such as `getattr(handler, command_name, default_handler)`. Another practical scenario is building serializers that convert objects to dictionaries by iterating over a list of field names and calling `getattr()` for each one, with sensible defaults for optional fields. It is also commonly used in test frameworks and mock libraries to dynamically inspect and verify object state. Related functions include the [Python dir() method](/posts/Python-dir()-Method/) for discovering available attribute names and the [Python hasattr() method](/posts/Python-hasattr()-Method/) for checking attribute existence before access.
+A frequent use of `getattr()` is implementing command dispatchers where a string command name is mapped to a method on a handler object, such as `getattr(handler, command_name, default_handler)`. Another practical scenario is building serializers that convert objects to dictionaries by iterating over a list of field names and calling `getattr()` for each one, with sensible defaults for optional fields. It is also commonly used in test frameworks and mock libraries to dynamically inspect and verify object state. Related functions include the [Python dir() method](/posts/Page-17-Python-dir()/) for discovering available attribute names and the [Python hasattr() method](/posts/Page-28-Python-hasattr()/) for checking attribute existence before access.
 
 ## What is python getattr() method?
 

@@ -97,4 +97,4 @@ Scientific and engineering calculations frequently use `pow()` for exponentiatio
 
 Competitive programming and number theory problems often require modular arithmetic. Computing Fibonacci numbers modulo a prime, solving modular inverse problems, or checking divisibility patterns all benefit from the three-argument form of `pow()`, which avoids overflow issues and runs in logarithmic time relative to the exponent.
 
-For related mathematical operations, see the [Python round()](/posts/Page-56-Python-round/) function for rounding results, and the [Python divmod()](/posts/Page-18-Python-divmod/) function for combined division and modulus operations.
+For related mathematical operations, see the [Python round()](/posts/Page-56-Python-round()/) function for rounding results, and the [Python divmod()](/posts/Page-18-Python-divmod()/) function for combined division and modulus operations.

@@ -131,7 +131,7 @@ Exploring the Python class hierarchy is another educational use case. By calling
 
 Testing and mocking in unit tests sometimes benefits from `object()` as well. When you need a placeholder object that has no behavior and no attributes, `object()` provides the simplest possible stand-in, ensuring your test isolates the specific behavior you are verifying.
 
-For inspecting object types, see the [Python type()](/posts/Page-66-Python-type/) function. To list all attributes of an object, the [Python dir()](/posts/Page-17-Python-dir/) function is a useful companion.
+For inspecting object types, see the [Python type()](/posts/Page-66-Python-type()/) function. To list all attributes of an object, the [Python dir()](/posts/Page-17-Python-dir()/) function is a useful companion.
 
 ## Rules of the object()
 

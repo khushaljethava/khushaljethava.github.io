@@ -22,7 +22,7 @@ Use `bin()` when you need to visualize or work with the binary representation of
 
 ## Common Use Cases
 
-A frequent use of `bin()` is inspecting bit flags and permissions in systems programming, where you need to verify which bits are set in a configuration value. Another practical scenario is debugging network protocols where data fields are defined at the bit level, and converting packet values to binary helps identify specific flags. You might also use `bin()` together with the [Python hex() method](/posts/Python-hex()-Method/) and the [Python oct() method](/posts/Python-oct()-Method/) to display numbers in multiple base representations side by side.
+A frequent use of `bin()` is inspecting bit flags and permissions in systems programming, where you need to verify which bits are set in a configuration value. Another practical scenario is debugging network protocols where data fields are defined at the bit level, and converting packet values to binary helps identify specific flags. You might also use `bin()` together with the [Python hex() method](/posts/Page-31-Python-hex()/) and the [Python oct() method](/posts/Page-47-Python-oct()/) to display numbers in multiple base representations side by side.
 
 The syntax of the bin() method is:
 

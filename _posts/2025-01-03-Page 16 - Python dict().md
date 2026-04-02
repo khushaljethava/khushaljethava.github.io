@@ -21,7 +21,7 @@ Use `dict()` when you need to create dictionaries programmatically from iterable
 
 ## Common Use Cases
 
-A frequent use of `dict()` is combining two parallel lists into a dictionary using `dict(zip(keys, values))`, which is cleaner than manual iteration. Another practical scenario is merging configuration defaults with user overrides by passing a base mapping along with keyword arguments. You might also use `dict()` to create copies of existing dictionaries or to convert lists of two-element tuples returned by APIs into dictionaries for easier access. Related functions include the [Python dir() method](/posts/Python-dir()-Method/) for inspecting dictionary attributes and the [Python frozenset() method](/posts/Python-frozenset()-Method/) when you need immutable keys derived from sets.
+A frequent use of `dict()` is combining two parallel lists into a dictionary using `dict(zip(keys, values))`, which is cleaner than manual iteration. Another practical scenario is merging configuration defaults with user overrides by passing a base mapping along with keyword arguments. You might also use `dict()` to create copies of existing dictionaries or to convert lists of two-element tuples returned by APIs into dictionaries for easier access. Related functions include the [Python dir() method](/posts/Page-17-Python-dir()/) for inspecting dictionary attributes and the [Python frozenset() method](/posts/Page-25-Python-frozenset()/) when you need immutable keys derived from sets.
 
 The dict() method helps to create a Python dictionary.
 

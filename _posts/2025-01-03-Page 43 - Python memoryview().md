@@ -69,7 +69,7 @@ Network programming also benefits from `memoryview()`. When sending or receiving
 
 Another practical use case is modifying parts of a `bytearray` in place. Since `memoryview` on a `bytearray` supports item assignment, you can update specific bytes or slices of a buffer without rebuilding the entire array, which is essential in protocols that require patching fields in binary messages.
 
-If you are working with byte-level data, you may also find the [Python bytes()](/posts/Python-bytes/) and [Python bytearray()](/posts/Python-bytearray/) functions useful for creating the buffer objects that `memoryview()` operates on.
+If you are working with byte-level data, you may also find the [Python bytes()](/posts/Python-bytes()/) and [Python bytearray()](/posts/Python-bytearray()/) functions useful for creating the buffer objects that `memoryview()` operates on.
 
 ## Rules of memoryview() 
 
