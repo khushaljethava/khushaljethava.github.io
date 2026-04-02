@@ -578,7 +578,7 @@ The key patterns to remember:
 - Resize images before API calls to control costs
 - Use async requests for batch processing
 
-These building blocks combine into applications like video summarizers, multimodal chatbots, document analyzers that handle mixed media, and accessibility tools that describe visual content. For real-time visual processing, see our guide on [Object Detection with YOLO](/posts/Object-Detection-with-Python-YOLO/). Start with the chatbot example above and extend it to fit your specific use case.
+These building blocks combine into applications like video summarizers, multimodal chatbots, document analyzers that handle mixed media, and accessibility tools that describe visual content. For a deeper dive into fine-tuning vision models, see our guide on [Fine-Tuning LLMs with Python](/posts/Fine-Tuning-LLMs-with-Python/). Start with the chatbot example above and extend it to fit your specific use case.
 
 ---
 
@@ -586,4 +586,4 @@ These building blocks combine into applications like video summarizers, multimod
 
 - [Fine-Tuning Large Language Models with Python](/posts/Fine-Tuning-LLMs-with-Python/) - Fine-tune models for domain-specific multimodal tasks
 - [RAG with Python: Retrieval-Augmented Generation](/posts/RAG-with-Python-Retrieval-Augmented-Generation/) - Combine image captions and transcripts with retrieval-augmented generation
-- [Object Detection with Python: YOLO](/posts/Object-Detection-with-Python-YOLO/) - Add real-time object detection to your multimodal pipeline
+- [Explainable AI with Python](/posts/Explainable-AI-with-Python-SHAP-LIME/) - Interpret and explain your multimodal model predictions
