@@ -1,29 +1,120 @@
 <meta name="msvalidate.01" content="820A985B0C50C9563C5719E6D8121F1E" />
 
+<!-- Fix viewport: remove user-scalable=no (WCAG violation), ensure correct comma separation -->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+
+<!-- Security meta tags (GitHub Pages cannot set response headers) -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<!-- Pagination pages: noindex to prevent thin duplicate content -->
+{% if paginator and paginator.page > 1 %}
+<meta name="robots" content="noindex, follow">
+{% endif %}
+
 {% include schema-breadcrumb.html %}
 
 {% if page.url == '/about/' %}
   {% include schema-person.html %}
 {% endif %}
 
+<!-- Homepage: WebSite schema with SearchAction (replaces duplicate block) -->
 {% if page.url == '/' %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Khushal Jethava",
+  "name": "{{ site.title }}",
   "url": "{{ site.url }}/",
   "description": "{{ site.description }}",
   "publisher": {
     "@type": "Person",
-    "name": "Khushal Jethava",
+    "name": "{{ site.social.name }}",
     "url": "{{ site.url }}/about/"
   },
   "sameAs": [
     "https://twitter.com/d3evil4",
     "https://github.com/khushaljethava",
     "https://www.linkedin.com/in/khushaljethava"
-  ]
+  ],
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "{{ site.url }}/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+{% endif %}
+
+<!-- Categories page: override wrong BlogPosting type from jekyll-seo-tag -->
+{% if page.url == '/categories/' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Categories - {{ site.title }}",
+  "url": "{{ site.url }}/categories/",
+  "description": "Browse all article categories on {{ site.title }}"
+}
+</script>
+{% endif %}
+
+<!-- Tags page: override type -->
+{% if page.url == '/tags/' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Tags - {{ site.title }}",
+  "url": "{{ site.url }}/tags/",
+  "description": "Browse all article tags on {{ site.title }}"
+}
+</script>
+{% endif %}
+
+<!-- Post pages: enhanced BlogPosting with correct ImageObject casing, wordCount, speakable -->
+{% if page.layout == 'post' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | default: page.excerpt | strip_html | truncate: 200 | jsonify }},
+  "url": "{{ site.url }}{{ page.url }}",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  {% if page.last_modified_at %}"dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",{% endif %}
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url }}"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Khushal Jethava",
+    "url": "{{ site.url }}/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/commons/avatar.png"
+    }
+  },
+  {% if page.image %}"image": {
+    "@type": "ImageObject",
+    "url": "{{ site.url }}{{ page.image.path | default: page.image }}"
+  },{% endif %}
+  "articleSection": {{ page.categories | first | default: "Blog" | jsonify }},
+  "keywords": {{ page.tags | jsonify }},
+  "wordCount": "{{ content | strip_html | number_of_words }}",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["article h1", "article .post-desc", "article .content p:first-of-type"]
+  }
 }
 </script>
 {% endif %}

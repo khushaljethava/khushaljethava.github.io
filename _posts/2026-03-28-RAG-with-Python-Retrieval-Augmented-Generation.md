@@ -35,7 +35,7 @@ This solves three major problems with vanilla LLMs:
 
 - **Stale knowledge** -- LLMs have a training cutoff date. RAG lets them access current information.
 - **Hallucination** -- By grounding responses in actual documents, the model is less likely to fabricate facts.
-- **Domain specificity** -- You can point RAG at your internal docs, codebases, or databases.
+- **Domain specificity** -- You can point RAG at your internal docs, codebases, or databases. When retrieval is not enough and you need the model itself to learn your domain, consider [fine-tuning the LLM](/posts/Fine-Tuning-LLMs-with-Python/) instead.
 
 ## Setting Up the Environment
 
@@ -54,7 +54,7 @@ os.environ["OPENAI_API_KEY"] = "your-api-key-here"
 
 ## Step 1: Loading Documents
 
-The first step is loading your source documents. LangChain provides loaders for many file types.
+The first step is loading your source documents. LangChain provides loaders for many file types. If you are new to LangChain, our [Beginner Guide to LangChain in Python](/posts/Beginner-Guide-to-LangChain-in-Python/) covers the fundamentals.
 
 ```python
 from langchain_community.document_loaders import (
@@ -469,8 +469,16 @@ evaluate_retrieval(test_cases, retriever=vectorstore.as_retriever(search_kwargs=
 
 **Ignoring the "I don't know" case.** Your prompt must instruct the LLM to say when it cannot answer from the provided context. Otherwise, it will hallucinate.
 
-**Not updating the index.** If your source documents change, you need to re-ingest them. Build an update pipeline that detects changes and refreshes affected chunks.
+**Not updating the index.** If your source documents change, you need to re-ingest them. Build an update pipeline that detects changes and refreshes affected chunks. You can also expose your RAG system as a reusable tool for AI agents using the [Model Context Protocol](/posts/model-context-protocol-python/).
 
 ## Summary
 
 RAG gives LLMs access to your specific data without fine-tuning. The pipeline is: load documents, chunk them, embed them into a vector store, retrieve relevant chunks at query time, and pass them to an LLM for generation. ChromaDB works well for prototypes and small-to-medium datasets. FAISS is better for large-scale deployments. Hybrid search and reranking improve retrieval quality. Always evaluate both retrieval accuracy and generation quality to ensure your system works reliably.
+
+---
+
+## Related Posts
+
+- [Beginner Guide to LangChain in Python](/posts/Beginner-Guide-to-LangChain-in-Python/) - Master the LangChain framework used throughout this RAG tutorial
+- [Fine-Tuning Large Language Models with Python](/posts/Fine-Tuning-LLMs-with-Python/) - When RAG is not enough, fine-tune the model itself on your domain data
+- [Model Context Protocol Python Tutorial](/posts/model-context-protocol-python/) - Expose your RAG system as a reusable tool for any AI client using MCP

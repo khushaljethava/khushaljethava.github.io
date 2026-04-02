@@ -6,7 +6,7 @@ categories: [Python]
 tags: [python, web-scraping]
 image:
   path: "/commons/Python Web Scraping The Complete Guide for 2026.png"
-  alt: "Python Web Scraping: The Complete Guide for 2026"
+  alt: "Python web scraping workflow using BeautifulSoup, Selenium, and Playwright for extracting structured data from websites"
 ---
 
 ## Why Web Scraping?

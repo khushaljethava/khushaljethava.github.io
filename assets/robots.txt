@@ -23,6 +23,9 @@ User-agent: Googlebot
 Allow: /
 
 # Block AI training-only crawlers
+User-agent: Google-Extended
+Disallow: /
+
 User-agent: CCBot
 Disallow: /
 

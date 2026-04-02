@@ -1,10 +1,11 @@
 # Khushal Jethava - AI & Python Blog
 
 > Personal technical blog by Khushal Jethava, a Machine Learning Engineer based in Ahmedabad, India.
+> For a full index of all 180+ posts, see [llms-full.txt](https://khushaljethava.work/llms-full.txt).
 
 ## About
 
-This blog covers practical AI and Python tutorials, industry analysis, and technical guides. The author has professional experience building AI solutions including image segmentation (ControlNet), Document AI (fine-tuned transformers), barcode detection (YOLO), and generative chatbots (LSTM/BART).
+This blog covers practical AI tutorials, Python guides, and ML engineering insights -- including LLMs, RAG, MLOps, and computer vision. The author has professional experience building production AI solutions including image segmentation (ControlNet), Document AI (fine-tuned transformers), barcode detection (YOLO), generative chatbots (LSTM/BART), and AI agent frameworks.
 
 ## Author
 

@@ -26,7 +26,7 @@ prompt = "Classify this support ticket: 'My order arrived damaged'"
 Common reasons to fine-tune:
 
 - **Consistent output format** — The model learns your exact expected response structure.
-- **Domain knowledge** — Medical, legal, or financial terminology and reasoning patterns.
+- **Domain knowledge** — Medical, legal, or financial terminology and reasoning patterns. For retrieval-based approaches instead, see [RAG with Python](/posts/RAG-with-Python-Retrieval-Augmented-Generation/).
 - **Tone and style** — Match your brand voice or documentation style.
 - **Cost reduction** — A fine-tuned smaller model can outperform a larger general model on your specific task, at lower inference cost.
 
@@ -351,7 +351,7 @@ evaluate_on_test_set(dataset["test"])
 
 ## Merging LoRA Weights for Deployment
 
-For production deployment, merge the LoRA adapter into the base model to eliminate the adapter overhead:
+For production deployment, merge the LoRA adapter into the base model to eliminate the adapter overhead. If you are building a full production pipeline, check out [MLOps with Python: Building Production ML Pipelines](/posts/MLOps-with-Python-Production-ML-Pipelines/) for experiment tracking, model serving, and CI/CD.
 
 ```python
 from peft import PeftModel
@@ -407,6 +407,8 @@ for output in outputs:
     print("---")
 ```
 
+You can also integrate your fine-tuned model into agent workflows using the [OpenAI Agents SDK](/posts/openai-agents-sdk-python/) for tool-using, multi-agent systems.
+
 Or serve it as an API:
 
 ```bash
@@ -446,3 +448,11 @@ print(response.choices[0].message.content)
 ## Summary
 
 Fine-tuning adapts a pretrained LLM to your specific task, format, and domain. QLoRA makes this accessible on consumer GPUs by quantizing the base model to 4-bit and training small LoRA adapters. The workflow is: prepare your dataset, load the quantized model, configure LoRA, train with SFTTrainer, evaluate, and deploy. Focus on data quality, use proper evaluation, and merge the adapter for production deployment.
+
+---
+
+## Related Posts
+
+- [MLOps with Python: Building Production ML Pipelines](/posts/MLOps-with-Python-Production-ML-Pipelines/) - Deploy and monitor your fine-tuned models in production with experiment tracking, CI/CD, and model serving
+- [RAG with Python: Retrieval-Augmented Generation](/posts/RAG-with-Python-Retrieval-Augmented-Generation/) - An alternative to fine-tuning that gives LLMs access to external knowledge at query time
+- [OpenAI Agents SDK Python Tutorial](/posts/openai-agents-sdk-python/) - Build tool-using, multi-agent workflows powered by your fine-tuned models

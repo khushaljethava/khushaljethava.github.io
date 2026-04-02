@@ -6,7 +6,7 @@ categories: [Python]
 tags: [python, ai, edge-ai, iot]
 image:
   path: "/commons/Edge AI with Python Running Machine Learning on Edge Devices.png"
-  alt: "Edge AI with Python: Running Machine Learning on Edge Devices"
+  alt: "Edge AI deployment pipeline showing TensorFlow Lite and ONNX Runtime model optimization for Raspberry Pi and IoT devices"
 ---
 
 ## What Is Edge AI?

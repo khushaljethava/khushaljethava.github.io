@@ -6,7 +6,7 @@ categories: [Python]
 tags: [python, data-visualization, matplotlib]
 image:
   path: "/commons/Python Data Visualization with Matplotlib and Seaborn Complete Guide.png"
-  alt: "Python Data Visualization with Matplotlib and Seaborn: Complete Guide"
+  alt: "Python data visualization examples showing bar charts, heatmaps, and interactive plots using Matplotlib, Seaborn, and Plotly"
 ---
 
 ## Why Data Visualization Matters

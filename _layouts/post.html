@@ -48,7 +48,7 @@ script_includes:
         {% endif %}
 
         <div class="mt-3 mb-3">
-          <img {{ src }} {{ class }} {{ alt }} w="1200" h="630" {{ lqip }}>
+          <img {{ src }} {{ class }} {{ alt }} width="1200" height="630" {{ lqip }}>
           {%- if page.image.alt -%}
             <figcaption class="text-center pt-2 pb-2">{{ page.image.alt }}</figcaption>
           {%- endif -%}
@@ -124,8 +124,8 @@ script_includes:
     </dialog>
   {% endif %}
 
-  <!-- Ad 1: Before content -->
-  <div class="text-center my-3" style="min-height:90px;">
+  <!-- Ad 1: Before content - responsive with CLS prevention -->
+  <div class="text-center my-3" style="min-height:90px;max-width:100%;overflow:hidden;">
     <script>
       atOptions = {
         'key' : '99e0c2c2535b318f3e9c4b63462c5832',
@@ -142,8 +142,17 @@ script_includes:
     {{ content }}
   </div>
 
-  <!-- Ad 2: After content -->
-  <div class="text-center my-3" style="min-height:90px;">
+  <!-- Author byline card -->
+  <div class="author-card d-flex align-items-center p-3 mb-4 border rounded" style="background:var(--card-bg);">
+    <img src="/commons/avatar.png" alt="Khushal Jethava" width="56" height="56" class="rounded-circle me-3" loading="lazy">
+    <div>
+      <strong><a href="{{ site.url }}/about/" class="text-decoration-none">Khushal Jethava</a></strong>
+      <p class="mb-0 small text-muted">Machine Learning Engineer at Codiste, specializing in Generative AI, NLP, and Computer Vision. Building production AI systems with Python.</p>
+    </div>
+  </div>
+
+  <!-- Ad 2: After content - responsive with CLS prevention -->
+  <div class="text-center my-3" style="min-height:90px;max-width:100%;overflow:hidden;">
     <script>
       atOptions = {
         'key' : '99e0c2c2535b318f3e9c4b63462c5832',
@@ -207,8 +216,8 @@ script_includes:
   </div>
   <!-- div.post-tail-wrapper -->
 
-  <!-- Ad 3: Bottom of post -->
-  <div class="text-center my-3" style="min-height:90px;">
+  <!-- Ad 3: Bottom of post - responsive with CLS prevention -->
+  <div class="text-center my-3" style="min-height:90px;max-width:100%;overflow:hidden;">
     <script>
       atOptions = {
         'key' : '99e0c2c2535b318f3e9c4b63462c5832',

@@ -6,7 +6,7 @@ categories: [Python]
 tags: [python, machine-learning, time-series]
 image:
   path: "/commons/Time Series Forecasting with Python A Practical Guide.png"
-  alt: "Time Series Forecasting with Python: A Practical Guide"
+  alt: "Time series forecasting comparison using ARIMA, Prophet, and LSTM neural networks for stock price prediction in Python"
 ---
 
 ## What Is Time Series Forecasting?

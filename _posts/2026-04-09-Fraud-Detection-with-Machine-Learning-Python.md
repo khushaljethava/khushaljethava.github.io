@@ -6,7 +6,7 @@ categories: [Python]
 tags: [python, machine-learning, fraud-detection]
 image:
   path: "/commons/Fraud Detection with Machine Learning in Python.png"
-  alt: "Fraud Detection with Machine Learning in Python"
+  alt: "Credit card fraud detection pipeline using Random Forest, XGBoost, and SMOTE for imbalanced dataset handling in Python"
 ---
 
 ## The Fraud Detection Problem

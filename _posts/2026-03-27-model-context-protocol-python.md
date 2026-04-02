@@ -11,7 +11,7 @@ image:
 
 Most MCP content stops at the big idea: a standard way to connect AI tools to external systems. That is useful, but it does not help much when you are sitting in a Python project wondering what to build first. This guide takes the practical route. If you want to understand **Model Context Protocol Python** well enough to ship something, the best starting point is a small server that exposes one tool, one resource, and one clear use case.
 
-That angle has strong search intent right now because developers are moving past generic "AI agents" experiments and asking a narrower question: how do I connect models to real files, APIs, and business logic without inventing a custom glue layer every time?
+That angle has strong search intent right now because developers are moving past generic "AI agents" experiments and asking a narrower question: how do I connect models to real files, APIs, and business logic without inventing a custom glue layer every time? If you are still building your first agent, start with our guide on [Building AI Agents with Python](/posts/Building-AI-Agents-with-Python/).
 
 ## Why This Topic Is Trending Now
 
@@ -114,7 +114,7 @@ Avoid overengineering when:
 - the logic is tightly coupled to a single app and will not be reused
 - you do not yet know whether the capability deserves a formal interface
 
-The key insight is that MCP is not just about model access. It is about packaging context and actions in a way other clients can understand. That is a stronger long-term story than writing one-off function calling wrappers over and over.
+The key insight is that MCP is not just about model access. It is about packaging context and actions in a way other clients can understand. That is a stronger long-term story than writing one-off function calling wrappers over and over. For example, you could expose a [RAG system](/posts/RAG-with-Python-Retrieval-Augmented-Generation/) as an MCP resource so any agent can query your knowledge base.
 
 ## Best Practices for a Production-Friendly Start
 
@@ -134,7 +134,7 @@ The Python SDK supports context injection for tools, including progress reportin
 
 ### Start with one transport and one client
 
-The SDK supports transports such as stdio, SSE, and Streamable HTTP. Pick one path, prove the workflow, then expand.
+The SDK supports transports such as stdio, SSE, and Streamable HTTP. Pick one path, prove the workflow, then expand. The [OpenAI Agents SDK](/posts/openai-agents-sdk-python/) is one client that works well with MCP servers.
 
 ### Test with inspector-style tooling
 
@@ -149,6 +149,14 @@ If that is your goal, do not start with a full agent platform. Start with one us
 That workflow teaches the protocol faster than abstract reading ever will. Once it works, you can grow from a single local server into a reusable interface for internal tools, documentation systems, support workflows, or developer automation.
 
 If you want a concrete next step this week, build a tiny MCP server around one task you already repeat manually. That is usually the shortest path from curiosity to something genuinely useful.
+
+---
+
+## Related Posts
+
+- [OpenAI Agents SDK Python Tutorial](/posts/openai-agents-sdk-python/) - Build multi-agent workflows that consume MCP tools and resources
+- [Building AI Agents with Python](/posts/Building-AI-Agents-with-Python/) - Understand the agent loop, tool use, and memory patterns that MCP standardizes
+- [RAG with Python: Retrieval-Augmented Generation](/posts/RAG-with-Python-Retrieval-Augmented-Generation/) - Build a knowledge retrieval system you can expose as an MCP resource
 
 ## Sources
 

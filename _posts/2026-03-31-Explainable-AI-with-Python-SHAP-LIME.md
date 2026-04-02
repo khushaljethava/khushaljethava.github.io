@@ -32,7 +32,7 @@ pip install shap lime xgboost scikit-learn matplotlib pandas
 
 ## Setting Up a Model to Explain
 
-We'll train a gradient boosting classifier on a real dataset and then explain its decisions.
+We'll train a gradient boosting classifier on a real dataset and then explain its decisions. You can apply these same techniques to any classifier, including [sentiment analysis models](/posts/Sentiment-Analysis-with-Python/).
 
 ```python
 import pandas as pd
@@ -319,7 +319,7 @@ async def predict_explain(request: PredictionRequest):
 
 **Watch for correlated features.** Both SHAP and LIME can distribute importance across correlated features in unintuitive ways. If income and spending are highly correlated, each might show moderate importance instead of one showing high importance.
 
-**Cache explanations.** For production APIs, pre-compute SHAP values for common prediction patterns and cache them. Only compute on-the-fly for unusual inputs.
+**Cache explanations.** For production APIs, pre-compute SHAP values for common prediction patterns and cache them. Only compute on-the-fly for unusual inputs. If you used [AutoML](/posts/AutoML-with-Python-Automated-Machine-Learning/) to select your model, explainability is especially important since you may not have chosen the model type yourself.
 
 ## Key Takeaways
 
@@ -331,3 +331,13 @@ async def predict_explain(request: PredictionRequest):
 - Both tools are model-agnostic — they work with any classifier or regressor
 - In regulated industries (finance, healthcare), explainability is often required by law
 - Start with SHAP for thorough analysis, add LIME when you need speed
+
+To deploy your explainable model with proper monitoring and CI/CD, see [MLOps with Python](/posts/MLOps-with-Python-Production-ML-Pipelines/).
+
+---
+
+## Related Posts
+
+- [Sentiment Analysis with Python](/posts/Sentiment-Analysis-with-Python/) - Apply SHAP and LIME to explain NLP classification models
+- [AutoML with Python: Automated Machine Learning](/posts/AutoML-with-Python-Automated-Machine-Learning/) - Understand and explain models selected by automated pipelines
+- [MLOps with Python: Building Production ML Pipelines](/posts/MLOps-with-Python-Production-ML-Pipelines/) - Deploy explainable models with monitoring and drift detection

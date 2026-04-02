@@ -325,7 +325,7 @@ print(df["transformer_label"].value_counts())
 
 ### Fine-Tuning a Transformer for Your Data
 
-When the pretrained model does not match your domain, fine-tune it:
+When the pretrained model does not match your domain, fine-tune it. For a more comprehensive guide on fine-tuning techniques including LoRA and QLoRA, see [Fine-Tuning LLMs with Python](/posts/Fine-Tuning-LLMs-with-Python/).
 
 ```python
 from transformers import (
@@ -461,6 +461,8 @@ print(f"  Time: {time.time() - start:.3f}s")
 
 ## Building a Sentiment Analysis API
 
+You can also integrate sentiment analysis into LLM-powered applications using [LangChain](/posts/Beginner-Guide-to-LangChain-in-Python/) for chaining NLP tasks together.
+
 Wrap your model in a REST API using FastAPI:
 
 ```bash
@@ -563,10 +565,18 @@ def cached_sentiment(text: str) -> tuple:
 
 **Input validation.** Truncate very long texts, handle empty strings, and sanitize input to prevent unexpected behavior.
 
-**Monitoring.** Log predictions along with input texts so you can audit the model's performance over time. Track the distribution of predicted labels — a sudden shift might indicate a data quality issue.
+**Monitoring.** Log predictions along with input texts so you can audit the model's performance over time. Track the distribution of predicted labels -- a sudden shift might indicate a data quality issue. To understand why your model makes specific predictions, add [Explainable AI techniques like SHAP and LIME](/posts/Explainable-AI-with-Python-SHAP-LIME/).
 
 **Model updates.** Periodically evaluate your model on fresh labeled data. Sentiment patterns change over time (new slang, evolving language), and your model may need retraining.
 
 ## Summary
 
 Sentiment analysis ranges from simple lexicon-based methods (TextBlob, VADER) to trained machine learning models (scikit-learn) to transformer-based approaches (Hugging Face). TextBlob and VADER require no training data and work instantly but lack accuracy on domain-specific text. Scikit-learn models offer a good balance when you have labeled data. Transformers provide the highest accuracy and work well out of the box for general sentiment, with the option to fine-tune for your domain. For production, wrap your model in a FastAPI service with caching, input validation, and monitoring.
+
+---
+
+## Related Posts
+
+- [Explainable AI with Python: SHAP and LIME](/posts/Explainable-AI-with-Python-SHAP-LIME/) - Understand why your sentiment model classifies text the way it does
+- [Fine-Tuning Large Language Models with Python](/posts/Fine-Tuning-LLMs-with-Python/) - Fine-tune transformer models for domain-specific sentiment analysis
+- [Beginner Guide to LangChain in Python](/posts/Beginner-Guide-to-LangChain-in-Python/) - Chain sentiment analysis with other NLP tasks using LangChain

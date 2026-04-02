@@ -49,6 +49,18 @@ panel_includes:
   {% endfor %}
 {% endif %}
 
+<!-- Homepage intro for SEO (only on page 1) -->
+{% if paginator.page == 1 %}
+<section class="home-intro mb-4 px-xl-1">
+  <h2 class="h4 mb-2">AI & Python Tutorials by Khushal Jethava</h2>
+  <p class="text-muted">
+    Practical guides on LLMs, RAG, MLOps, computer vision, and Python programming
+    from a Machine Learning Engineer working with Generative AI. Covering fine-tuning,
+    AI agents, explainable AI, and production ML pipelines with hands-on code examples.
+  </p>
+</section>
+{% endif %}
+
 <div id="post-list" class="flex-grow-1 px-xl-1">
   {% for post in posts %}
     <article class="card-wrapper card">
@@ -120,9 +132,9 @@ panel_includes:
       </a>
     </article>
 
-    <!-- Ad banner after post 3, 6, 9 -->
+    <!-- Ad banner after post 3, 6, 9 - responsive with CLS prevention -->
     {% if forloop.index == 3 or forloop.index == 6 or forloop.index == 9 %}
-    <div class="ad-posts-wrapper" style="min-height:90px;max-width:728px;margin:0 auto;">
+    <div class="ad-posts-wrapper" style="min-height:90px;max-width:100%;margin:0 auto;overflow:hidden;">
       <script>
         atOptions = {
           'key': '99e0c2c2535b318f3e9c4b63462c5832',

@@ -11,7 +11,7 @@ image:
 
 AI agent tutorials are everywhere, but most skip the part that matters in production: how to structure tools, route work between specialists, and inspect what actually happened during a run. That is why **OpenAI Agents SDK Python** is a strong topic right now. Search intent is clear, the keyword maps to a real implementation problem, and the official docs already give developers a path from simple prompts to routed workflows with tracing.
 
-If you want to move beyond one-off chatbot scripts, this guide shows what the SDK does well, how to get started, and where it fits in a practical Python stack.
+If you want to move beyond one-off chatbot scripts, this guide shows what the SDK does well, how to get started, and where it fits in a practical Python stack. For a broader look at agent architectures, see our guide on [Building AI Agents with Python](/posts/Building-AI-Agents-with-Python/).
 
 ## Why This Topic Matters Right Now
 
@@ -122,7 +122,7 @@ if __name__ == "__main__":
 
 This pattern scales better than stuffing every answer into a prompt. Instead of hoping the model remembers your business rules, you can move stable logic into Python functions and let the agent call them when appropriate.
 
-For blog readers building real apps, this is the unique angle worth emphasizing: the SDK is not just a wrapper around a model call. It is a workflow layer for Python teams that want clearer boundaries between reasoning, routing, and execution.
+For blog readers building real apps, this is the unique angle worth emphasizing: the SDK is not just a wrapper around a model call. It is a workflow layer for Python teams that want clearer boundaries between reasoning, routing, and execution. For a standardized way to expose tools and context to agents, see how the [Model Context Protocol](/posts/model-context-protocol-python/) complements this approach.
 
 ## Multi-Agent Routing Without a Mess
 
@@ -158,7 +158,15 @@ If your site covers Python, AI, or developer tooling, this is the kind of topic 
 
 The right next step is not to overbuild. Start with a single agent, add one function tool, run a few real prompts, and review the traces. Once that works, split responsibilities only where routing genuinely helps.
 
-If you want to build your first production-friendly agent workflow this week, **OpenAI Agents SDK Python** is one of the clearest places to start. Try the quickstart, adapt the examples to your domain, and turn one useful workflow into a reusable agent service.
+If you want to build your first production-friendly agent workflow this week, **OpenAI Agents SDK Python** is one of the clearest places to start. Try the quickstart, adapt the examples to your domain, and turn one useful workflow into a reusable agent service. If your agents need domain-specific reasoning, you can [fine-tune an LLM](/posts/Fine-Tuning-LLMs-with-Python/) to power them.
+
+---
+
+## Related Posts
+
+- [Building AI Agents with Python: A Complete Guide](/posts/Building-AI-Agents-with-Python/) - Learn the fundamentals of AI agent architecture, tool use, and memory from scratch
+- [Model Context Protocol Python Tutorial](/posts/model-context-protocol-python/) - Standardize how your agents connect to tools and external data with MCP
+- [Fine-Tuning Large Language Models with Python](/posts/Fine-Tuning-LLMs-with-Python/) - Train domain-specific models to power your agent workflows
 
 ## Sources
 

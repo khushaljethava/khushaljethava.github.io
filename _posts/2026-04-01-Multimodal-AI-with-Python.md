@@ -6,7 +6,7 @@ categories: [Python]
 tags: [python, ai, multimodal]
 image:
   path: "/commons/Multimodal AI with Python Working with Text Images and Audio.png"
-  alt: "Multimodal AI with Python: Working with Text, Images, and Audio"
+  alt: "Multimodal AI architecture combining text, image, and audio processing using GPT-4 Vision, transformers, and Whisper in Python"
 ---
 
 ## What Is Multimodal AI?
@@ -15,7 +15,7 @@ Multimodal AI refers to systems that can process and reason across multiple type
 
 The practical value is straightforward: real-world data rarely comes in a single format. Customer support tickets include screenshots. Medical records combine text notes with imaging scans. Social media posts mix text, photos, and video. Building AI systems that handle all of these together produces better results than chaining separate single-modality tools.
 
-In this guide, you will build multimodal applications using Python. We will cover image understanding with GPT-4 Vision, image captioning with Hugging Face transformers, audio transcription with Whisper, and finally tie everything together into a working multimodal chatbot.
+In this guide, you will build multimodal applications using Python. We will cover image understanding with GPT-4 Vision, image captioning with Hugging Face transformers, audio transcription with Whisper, and finally tie everything together into a working multimodal chatbot. If you want to fine-tune models for specific multimodal tasks, see our guide on [Fine-Tuning LLMs with Python](/posts/Fine-Tuning-LLMs-with-Python/).
 
 ## Setting Up Your Environment
 
@@ -187,7 +187,7 @@ def conditional_caption(image_source: str, prompt: str) -> str:
 print(conditional_caption(url, "a photo of"))
 ```
 
-BLIP runs locally, so it works well for batch processing large image datasets without API costs.
+BLIP runs locally, so it works well for batch processing large image datasets without API costs. You can combine image captioning with a [RAG system](/posts/RAG-with-Python-Retrieval-Augmented-Generation/) to build searchable image databases using generated captions as text embeddings.
 
 ## Audio Transcription with Whisper
 
@@ -578,4 +578,12 @@ The key patterns to remember:
 - Resize images before API calls to control costs
 - Use async requests for batch processing
 
-These building blocks combine into applications like video summarizers, multimodal chatbots, document analyzers that handle mixed media, and accessibility tools that describe visual content. Start with the chatbot example above and extend it to fit your specific use case.
+These building blocks combine into applications like video summarizers, multimodal chatbots, document analyzers that handle mixed media, and accessibility tools that describe visual content. For real-time visual processing, see our guide on [Object Detection with YOLO](/posts/Object-Detection-with-Python-YOLO/). Start with the chatbot example above and extend it to fit your specific use case.
+
+---
+
+## Related Posts
+
+- [Fine-Tuning Large Language Models with Python](/posts/Fine-Tuning-LLMs-with-Python/) - Fine-tune models for domain-specific multimodal tasks
+- [RAG with Python: Retrieval-Augmented Generation](/posts/RAG-with-Python-Retrieval-Augmented-Generation/) - Combine image captions and transcripts with retrieval-augmented generation
+- [Object Detection with Python: YOLO](/posts/Object-Detection-with-Python-YOLO/) - Add real-time object detection to your multimodal pipeline

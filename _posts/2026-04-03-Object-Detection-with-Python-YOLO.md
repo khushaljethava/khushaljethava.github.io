@@ -6,7 +6,7 @@ categories: [Python]
 tags: [python, computer-vision, yolo]
 image:
   path: "/commons/Object Detection with Python and YOLO A Hands-On Guide.png"
-  alt: "Object Detection with Python and YOLO: A Hands-On Guide"
+  alt: "Object detection pipeline using YOLOv8 with Python showing bounding box predictions on images and video frames"
 ---
 
 ## What Is Object Detection?

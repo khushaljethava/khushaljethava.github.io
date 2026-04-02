@@ -20,7 +20,7 @@ The core problems MLOps solves:
 - **Monitoring** — Do you know when your model's performance drops?
 - **Automation** — Can you retrain and redeploy without manual intervention?
 
-This guide walks through each piece using Python tools: MLflow for experiment tracking, DVC for data versioning, FastAPI for model serving, and GitHub Actions for CI/CD.
+This guide walks through each piece using Python tools: MLflow for experiment tracking, DVC for data versioning, FastAPI for model serving, and GitHub Actions for CI/CD. If you are training deep learning models, see our guide on [fine-tuning LLMs with Python](/posts/Fine-Tuning-LLMs-with-Python/) for the model development side of the pipeline.
 
 ## Project Structure
 
@@ -134,6 +134,8 @@ Start the MLflow tracking server:
 ```bash
 mlflow server --host 0.0.0.0 --port 5000
 ```
+
+For automated model selection and hyperparameter tuning, you can also use [AutoML frameworks](/posts/AutoML-with-Python-Automated-Machine-Learning/) to find the best model before deploying it through your MLOps pipeline.
 
 Run hyperparameter sweeps and compare results:
 
@@ -617,7 +619,7 @@ monitor = ModelMonitor()
 
 ## Writing Tests for ML Code
 
-Test your data processing, model training, and API:
+Test your data processing, model training, and API. For an end-to-end NLP example you can deploy through this pipeline, see [Sentiment Analysis with Python](/posts/Sentiment-Analysis-with-Python/).
 
 ```python
 # tests/test_model.py
@@ -696,3 +698,11 @@ A production ML system needs more than a trained model. Here is what each tool p
 - **Monitoring** — Drift detection and performance tracking. Know when your model needs retraining.
 
 Start with experiment tracking. Once you have reproducible training, add data versioning. Then build the API, containerize it, and set up CI/CD. Add monitoring last — it matters most after the model is serving real traffic. Each piece builds on the previous one, and you can adopt them incrementally.
+
+---
+
+## Related Posts
+
+- [Fine-Tuning Large Language Models with Python](/posts/Fine-Tuning-LLMs-with-Python/) - Train and fine-tune LLMs that feed into your MLOps pipeline
+- [Sentiment Analysis with Python](/posts/Sentiment-Analysis-with-Python/) - A practical NLP project you can deploy using these MLOps practices
+- [AutoML with Python: Automated Machine Learning](/posts/AutoML-with-Python-Automated-Machine-Learning/) - Automate model selection and hyperparameter tuning before deploying to production

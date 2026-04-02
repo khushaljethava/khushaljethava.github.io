@@ -6,7 +6,7 @@ categories: [Python]
 tags: [python, machine-learning, recommendation-systems]
 image:
   path: "/commons/Building Recommendation Systems with Python from Scratch.png"
-  alt: "Building Recommendation Systems with Python from Scratch"
+  alt: "Recommendation system architecture showing collaborative filtering, content-based filtering, and hybrid approaches in Python"
 ---
 
 ## What Are Recommendation Systems?

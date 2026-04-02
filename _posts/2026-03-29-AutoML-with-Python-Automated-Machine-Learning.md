@@ -40,7 +40,7 @@ AutoML is useful when:
 - You have limited ML expertise but need a production-quality model.
 - You want to validate that your hand-tuned model is not significantly worse than what automated search finds.
 
-AutoML is not a replacement for understanding your data. You still need to clean your data, handle missing values thoughtfully, and validate that the model makes sense for your problem domain.
+AutoML is not a replacement for understanding your data. You still need to clean your data, handle missing values thoughtfully, and validate that the model makes sense for your problem domain. For deploying your AutoML-selected model to production, see our guide on [MLOps with Python](/posts/MLOps-with-Python-Production-ML-Pipelines/).
 
 ## Setting Up a Dataset
 
@@ -307,6 +307,8 @@ print(performance.confusion_matrix())
 
 ### Model Explainability
 
+Once you have selected a model, understanding its predictions is critical. For a deep dive into interpretation techniques, see [Explainable AI with Python: SHAP and LIME](/posts/Explainable-AI-with-Python-SHAP-LIME/).
+
 ```python
 importance = best_model.varimp(use_pandas=True)
 print(importance.head(10))
@@ -409,7 +411,7 @@ aml_reg.train(x=features, y=target, training_frame=train_reg)
 | Need an interpretable model | Manual (choose the model type deliberately) |
 | Kaggle competition | AutoML for baseline, then manual refinement |
 
-A practical approach: run AutoML first to establish a baseline score. If the score is good enough, deploy the AutoML model. If not, use the AutoML results to understand which algorithm families work best, then manually tune within that family.
+A practical approach: run AutoML first to establish a baseline score. If the score is good enough, deploy the AutoML model. If not, use the AutoML results to understand which algorithm families work best, then manually tune within that family. For LLM-based tasks, you may want to [fine-tune a large language model](/posts/Fine-Tuning-LLMs-with-Python/) instead of using traditional AutoML.
 
 ## Tips for Getting the Best Results
 
@@ -439,3 +441,11 @@ plt.show()
 ## Summary
 
 AutoML automates model selection, hyperparameter tuning, and pipeline construction. Auto-sklearn is best for scikit-learn users who want a drop-in replacement for manual tuning. TPOT is unique in its genetic programming approach and its ability to export standalone pipelines. H2O AutoML scales to large datasets and provides built-in explainability tools. Start with AutoML for baselines, then refine manually when you need more control over the model architecture or deployment constraints.
+
+---
+
+## Related Posts
+
+- [MLOps with Python: Building Production ML Pipelines](/posts/MLOps-with-Python-Production-ML-Pipelines/) - Deploy your AutoML-selected models with experiment tracking, CI/CD, and monitoring
+- [Fine-Tuning Large Language Models with Python](/posts/Fine-Tuning-LLMs-with-Python/) - When your task needs a large language model rather than traditional ML
+- [Explainable AI with Python: SHAP and LIME](/posts/Explainable-AI-with-Python-SHAP-LIME/) - Understand why your AutoML model makes specific predictions
