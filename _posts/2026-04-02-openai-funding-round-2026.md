@@ -82,7 +82,7 @@ The announcement reinforces that agent products are becoming operational systems
 
 The market signal is that frontier AI is capital-intensive again. The next defensible companies may be the ones that either plug into these giant platforms effectively or avoid direct competition with them altogether.
 
-<!-- TODO: link to related post -->
+If you are exploring how to build agents today, see our guide on [OpenAI Agents SDK Python Tutorial](/posts/openai-agents-sdk-python/) and learn about the [Model Context Protocol (MCP) with Python](/posts/model-context-protocol-python/).
 
 ## So, is this a finance story or a product story?
 

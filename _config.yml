@@ -26,7 +26,7 @@ description: >- # used by seo meta and the atom feed
   Personal blog for AI and Python 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://khushaljethava.github.io"
+url: "https://khushaljethava.work"
 
 plugins:
   - jekyll-sitemap
@@ -40,19 +40,23 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: khushal jethava
-  email: khushaljethva14@outlook.com # change to your email address
+  name: Khushal Jethava
+  email: khushaljethava14@outlook.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/d3evil4 # change to your Twitter homepage
-    - https://github.com/khushaljethva # change to your GitHub homepage
-    # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://github.com/khushaljethava # change to your GitHub homepage
+    - https://www.linkedin.com/in/khushaljethava
+
+author:
+  name: Khushal Jethava
+  url: https://khushaljethava.work/about/
+
+logo: /commons/avatar.png
 # Site Verification Settings
 webmaster_verifications:
   google: googleb19aeb83100e0258 # fill in your Google verification code
-  bing: # fill in your Bing verification code
+  bing: 820A985B0C50C9563C5719E6D8121F1E
   alexa: # fill in your Alexa verification code
   yandex: # fill in your Yandex verification code
   baidu: # fill in your Baidu verification code
@@ -107,7 +111,7 @@ avatar: "/commons/avatar.png"
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
-social_preview_image: # string, local or CORS resources
+social_preview_image: /commons/avatar.png
 
 # boolean type, the global switch for TOC in posts.
 toc: true

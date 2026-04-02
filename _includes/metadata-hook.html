@@ -1,1 +1,29 @@
 <meta name="msvalidate.01" content="820A985B0C50C9563C5719E6D8121F1E" />
+
+{% include schema-breadcrumb.html %}
+
+{% if page.url == '/about/' %}
+  {% include schema-person.html %}
+{% endif %}
+
+{% if page.url == '/' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Khushal Jethava",
+  "url": "{{ site.url }}/",
+  "description": "{{ site.description }}",
+  "publisher": {
+    "@type": "Person",
+    "name": "Khushal Jethava",
+    "url": "{{ site.url }}/about/"
+  },
+  "sameAs": [
+    "https://twitter.com/d3evil4",
+    "https://github.com/khushaljethava",
+    "https://www.linkedin.com/in/khushaljethava"
+  ]
+}
+</script>
+{% endif %}

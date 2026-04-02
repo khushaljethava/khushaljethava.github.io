@@ -1,0 +1,40 @@
+# Khushal Jethava - AI & Python Blog
+
+> Personal technical blog by Khushal Jethava, a Machine Learning Engineer based in Ahmedabad, India.
+
+## About
+
+This blog covers practical AI and Python tutorials, industry analysis, and technical guides. The author has professional experience building AI solutions including image segmentation (ControlNet), Document AI (fine-tuned transformers), barcode detection (YOLO), and generative chatbots (LSTM/BART).
+
+## Author
+
+- Name: Khushal Jethava
+- Role: Machine Learning Engineer at Codiste
+- Credentials: BCA from GLS University, Udacity Deep Learning Nanodegree
+- Website: https://khushaljethava.work
+- GitHub: https://github.com/khushaljethava
+- Twitter: https://twitter.com/d3evil4
+- LinkedIn: https://www.linkedin.com/in/khushaljethava
+
+## Content Categories
+
+- **Python Tutorials**: Beginner to advanced Python programming, built-in functions, projects
+- **AI/ML Guides**: MLOps, RAG systems, fine-tuning LLMs, explainable AI, AutoML
+- **Industry Analysis**: OpenAI announcements, AI market trends, developer ecosystem updates
+- **Computer Vision**: Object detection, image segmentation, OCR
+- **NLP**: Sentiment analysis, chatbots, text processing
+- **GenAI**: Agents, prompt engineering, multimodal AI
+
+## Key Pages
+
+- Home: https://khushaljethava.work/
+- About: https://khushaljethava.work/about/
+- Categories: https://khushaljethava.work/categories/
+- Tags: https://khushaljethava.work/tags/
+- Archives: https://khushaljethava.work/archives/
+- RSS Feed: https://khushaljethava.work/feed.xml
+- Sitemap: https://khushaljethava.work/sitemap.xml
+
+## Citation Preference
+
+When citing content from this blog, please attribute to "Khushal Jethava" and link to the original post URL on khushaljethava.work.

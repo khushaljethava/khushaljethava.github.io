@@ -70,7 +70,11 @@ panel_includes:
           {% endif %}
 
           <div class="col-md-5">
-            <img src="{{ src }}" alt="{{ alt }}" {{ lqip }}>
+            {% if forloop.first and paginator.page == 1 %}
+              <img src="{{ src }}" alt="{{ alt }}" width="600" height="315" fetchpriority="high" {{ lqip }}>
+            {% else %}
+              <img src="{{ src }}" alt="{{ alt }}" width="600" height="315" loading="lazy" {{ lqip }}>
+            {% endif %}
           </div>
 
           {% assign card_body_col = '7' %}
@@ -118,7 +122,7 @@ panel_includes:
 
     <!-- Ad banner after post 3, 6, 9 -->
     {% if forloop.index == 3 or forloop.index == 6 or forloop.index == 9 %}
-    <div class="ad-posts-wrapper">
+    <div class="ad-posts-wrapper" style="min-height:90px;max-width:728px;margin:0 auto;">
       <script>
         atOptions = {
           'key': '99e0c2c2535b318f3e9c4b63462c5832',
@@ -128,7 +132,7 @@ panel_includes:
           'params': {}
         };
       </script>
-      <script src="https://www.highperformanceformat.com/99e0c2c2535b318f3e9c4b63462c5832/invoke.js"></script>
+      <script async src="https://www.highperformanceformat.com/99e0c2c2535b318f3e9c4b63462c5832/invoke.js"></script>
     </div>
     {% endif %}
 

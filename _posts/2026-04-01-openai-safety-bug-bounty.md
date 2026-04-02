@@ -76,7 +76,7 @@ If you build with agents, browsers, or tool orchestration, the immediate checkli
 - Log tool calls and context boundaries for incident review
 - Run repeatable adversarial tests before shipping major workflow changes
 
-<!-- TODO: link to related post -->
+For a hands-on look at building secure agent workflows, see our [OpenAI Agents SDK Python Tutorial](/posts/openai-agents-sdk-python/) and our deep dive on [Building AI Agents with Python](/posts/Building-AI-Agents-with-Python/).
 
 ## What this means for developers and researchers
 

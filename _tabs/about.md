@@ -2,6 +2,7 @@
 # the default layout is 'page'
 icon: fas fa-info-circle
 order: 4
+description: "Khushal Jethava is a Machine Learning Engineer specializing in Generative AI, NLP, and Computer Vision based in Ahmedabad, India."
 ---
 
 # Khushal Jethava  
@@ -11,7 +12,7 @@ Ahmedabad, Gujarat, India
 ---
 
 ## **Contact**  
-- **Phone**: 9662737937  
+- **Phone**: +91 96627 37937  
 - **Email**: [khushaljethava14@outlook.com](mailto:khushaljethava14@outlook.com)  
 - **LinkedIn**: [linkedin.com/in/khushaljethava](https://www.linkedin.com/in/khushaljethava)  
 
@@ -47,7 +48,7 @@ Looking forward, I aim to pioneer innovative generative AI solutions to solve co
 
 ### **Codiste**  
 **Artificial Intelligence Engineer**  
-*April 2024 – Present (9 months)*  
+*April 2024 – Present*  
 Ahmedabad, Gujarat, India  
 
 ### **Maknon Private Ltd.**  
