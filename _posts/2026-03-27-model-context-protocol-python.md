@@ -47,6 +47,8 @@ Prompts let you package reusable instructions or interaction patterns so clients
 
 This separation is the real value. Before MCP, many teams pushed everything into one oversized tool schema or into prompt engineering alone. With this protocol, the architecture becomes easier to reason about and easier to reuse across clients.
 
+In my experience deploying tool-calling patterns at Codiste, this distinction between tools and resources would have saved us significant refactoring time. When I built a Document AI system using fine-tuned transformers, we initially exposed document parsing as both an action and a data source through the same interface, which created confusion about when the model should call it versus when context should be preloaded. A protocol-level separation like MCP enforces would have prevented that entirely.
+
 ## Build a Small MCP Server First
 
 The official Python SDK quickstart uses `FastMCP`, which is the right place to begin. It keeps protocol details out of the way so you can focus on the actual capability you want to expose.
@@ -122,7 +124,7 @@ The official SDK README and server concepts docs point toward a few habits that 
 
 ### Keep tools narrow
 
-Do not create one tool called `do_everything`. Smaller tools are easier for models to choose correctly and easier for you to test.
+Do not create one tool called `do_everything`. Smaller tools are easier for models to choose correctly and easier for you to test. When I built AI agent workflows for image segmentation using ControlNet, I learned this the hard way -- a broad "process_image" tool caused constant misrouting, while splitting it into "segment_image," "apply_controlnet," and "postprocess_output" gave the model clear decision boundaries.
 
 ### Put read-only data in resources
 

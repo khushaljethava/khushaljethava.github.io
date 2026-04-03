@@ -1,7 +1,7 @@
 ---
 title: Python Print Function
 
-description: This tutorial will learn about python’s print function, which is used for print objects and variables and parameters of the print function.
+description: Learn how to use Python’s print() function to display output, including syntax, parameters, and formatting examples.
 
 date: 2024-11-27 11:33:00 +0800
 categories: [Python]
@@ -116,5 +116,13 @@ Here, we have passed the my\_file file object to the file parameter. The string 
 
 Finally, the file is closed using the close() method.
 
+
+---
+
+## Continue Learning
+
+- [First Python Program](/posts/First-Python-Program/) - Write and run your first Python program step by step.
+- [Python Variables](/posts/Python-Variables/) - Learn how to store and manage data using variables.
+- [Python Comments](/posts/Python-Comments/) - Discover how to document your Python code with comments.
 
 >

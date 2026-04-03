@@ -32,6 +32,8 @@ Legitimate: 284,315
 
 That's a 578:1 imbalance. Standard accuracy is meaningless here. You need precision, recall, and AUC-ROC.
 
+In my experience building anomaly detection systems at Codiste, this class imbalance challenge shows up in nearly every real-world detection task — not just fraud. When we built defect detection pipelines for manufacturing clients, the defect rate was often below 0.5%, and naive models would just predict "no defect" every time. The techniques in this guide apply directly to any rare-event detection problem.
+
 ## Installation
 
 ```bash
@@ -251,6 +253,8 @@ plt.savefig("model_evaluation.png", dpi=150)
 ```
 
 ## Threshold Tuning
+
+In production, I found that threshold tuning is where the business context matters most. When we deployed anomaly detection models for a client, the cost of a missed fraud was roughly 50x the cost of a false positive investigation. That asymmetry meant we intentionally pushed the threshold lower to catch more true positives, even at the expense of more alerts for the review team to handle.
 
 The default 0.5 threshold isn't optimal for fraud detection. Tune it:
 

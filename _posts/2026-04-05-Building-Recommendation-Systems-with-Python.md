@@ -21,6 +21,8 @@ There are three main approaches:
 
 This guide implements each approach from scratch in Python, then shows how to use libraries like Surprise and scikit-learn to build production-quality systems.
 
+When I built AI agent frameworks at Codiste that incorporated recommendation logic, I learned that the choice between collaborative and content-based filtering often comes down to what data you actually have available at cold start. In production, we almost always ended up with a hybrid approach because neither method alone handled the full range of user scenarios.
+
 ## Setting Up
 
 ```python
@@ -200,6 +202,8 @@ for item_id, score in recommendations:
 ```
 
 Item-based CF is generally preferred over user-based in practice. Item similarities are more stable than user similarities since items do not change, but user preferences do.
+
+A lesson I learned working with recommendation at scale is that precomputing item similarities offline and serving them from a cache dramatically reduces latency. In one project, moving similarity computation from request-time to a nightly batch job dropped our p95 response time from 800ms to under 50ms, which made the difference between a usable feature and an abandoned one.
 
 ## Content-Based Filtering
 

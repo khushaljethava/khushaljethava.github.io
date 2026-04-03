@@ -25,6 +25,8 @@ plt.savefig("sine.png")
 
 Three lines to go from data to chart. Let's build on this.
 
+In my experience at Codiste, the visualization layer is what ultimately sells an ML project to stakeholders. When we delivered our car damage detection system built with Detectron2, the model metrics alone did not convince the client — but a dashboard showing detection confidence distributions, damage severity heatmaps, and processing throughput over time made the value immediately clear.
+
 ## Installation
 
 ```bash
@@ -275,6 +277,8 @@ plt.savefig("seaborn_themes.png", dpi=150)
 ## Dashboard-Style Visualization
 
 Combine multiple charts into a cohesive dashboard. This technique is especially useful for presenting [fraud detection model evaluations](/posts/Fraud-Detection-with-Machine-Learning-Python/) where ROC curves, confusion matrices, and feature importance plots need to appear together.
+
+When I built monitoring dashboards for production ML systems at Codiste, I learned to always include a "data freshness" indicator alongside model metrics. Stakeholders would sometimes panic over a dip in a chart that was actually caused by stale data rather than a real performance issue. A simple timestamp showing when data was last updated saved us countless false alarm meetings.
 
 ```python
 import matplotlib.pyplot as plt

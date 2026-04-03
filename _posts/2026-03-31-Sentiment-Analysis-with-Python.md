@@ -93,6 +93,8 @@ print(f"\nAverage polarity: {df['polarity'].mean():.3f}")
 
 **Limitations of TextBlob:** It relies on word-level polarity scores and misses context, sarcasm, and negation patterns. "Not bad" gets a negative score because "bad" is negative, even though the phrase is mildly positive.
 
+In my work at Codiste building generative chatbots with LSTM and BART, I ran into these lexicon-based limitations constantly. User messages like "I can't believe how good this is" or "This is not what I expected, but in a good way" were consistently misclassified by rule-based approaches. That experience is what pushed us toward transformer-based sentiment models for anything beyond quick prototyping.
+
 ## Approach 2: VADER for Social Media Text
 
 VADER (Valence Aware Dictionary and sEntiment Reasoner) is designed specifically for social media text. It handles emojis, slang, capitalization, and punctuation.
@@ -568,6 +570,8 @@ def cached_sentiment(text: str) -> tuple:
 **Monitoring.** Log predictions along with input texts so you can audit the model's performance over time. Track the distribution of predicted labels -- a sudden shift might indicate a data quality issue. To understand why your model makes specific predictions, add [Explainable AI techniques like SHAP and LIME](/posts/Explainable-AI-with-Python-SHAP-LIME/).
 
 **Model updates.** Periodically evaluate your model on fresh labeled data. Sentiment patterns change over time (new slang, evolving language), and your model may need retraining.
+
+A lesson I learned deploying NLP models in production at Codiste is that sentiment drift is real and faster than most teams expect. On one project, our fine-tuned sentiment model's accuracy dropped noticeably within three months because the product domain introduced new terminology and user phrasing patterns that the training data did not cover. Building a lightweight evaluation pipeline that flags accuracy degradation early saved us from silently serving bad predictions.
 
 ## Summary
 

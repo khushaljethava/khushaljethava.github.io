@@ -23,6 +23,8 @@ prediction = local_model.predict(data)
 
 The tradeoff is model size. A 7B parameter model won't fit on a Raspberry Pi. Edge AI is about making smaller models that run fast on limited hardware. For example, running [object detection with YOLO](/posts/Object-Detection-with-Python-YOLO/) in real time requires careful model optimization for edge deployment.
 
+When I deployed a YOLO-based barcode detection model to warehouse scanning devices at Codiste, edge inference was the only viable option — the devices had intermittent network connectivity and needed sub-100ms response times. Converting from a full YOLOv8s to a quantized TFLite model reduced our model size from 22MB to under 6MB while keeping detection accuracy above 95%.
+
 ## Installation
 
 ```bash
@@ -147,6 +149,8 @@ for name, size in sizes.items():
 ```
 
 Typical reduction: float32 → int8 gives a 4x size reduction and 2-3x speedup with minimal accuracy loss (usually < 1%). These quantization techniques are also relevant when [fine-tuning LLMs](/posts/Fine-Tuning-LLMs-with-Python/) for deployment on consumer hardware.
+
+A lesson I learned from deploying quantized models in production is to always validate accuracy on your specific dataset after quantization, not just on a generic benchmark. We once shipped an int8 model for image segmentation that performed great on standard test images but failed on low-contrast inputs that were common in our client's environment. Adding those edge cases to the representative calibration dataset fixed the issue entirely.
 
 ## ONNX Runtime
 

@@ -52,6 +52,8 @@ Handoffs let one agent route work to another specialist. This is useful when you
 
 That pattern is often easier to maintain than one giant agent with too many instructions.
 
+In my experience building AI agent frameworks at Codiste, the handoff pattern is what separates demo agents from production-ready ones. When I built a generative chatbot system using LSTM and BART, I initially tried cramming all capabilities into a single agent and quickly hit a wall with prompt conflicts and unpredictable routing. Splitting into specialist agents with clear handoff rules made the system dramatically more reliable.
+
 ### 4. Tracing
 
 Tracing is one of the biggest practical wins. When an agent chooses the wrong tool or routes a request poorly, you need visibility. The SDK's docs explicitly point developers to the Trace viewer so runs can be inspected instead of guessed at.
@@ -147,6 +149,8 @@ If you are moving from demo to production, keep these rules in mind:
 - inspect traces before changing prompts blindly
 - start with one agent and one tool, then add handoffs only when needed
 - move deterministic business logic into Python, not into long instructions
+
+A lesson I learned working with agent frameworks in production is that tracing is non-negotiable. Early on, I spent hours debugging an agent that was silently calling the wrong tool on edge-case inputs. Once I added structured trace logging, those issues became trivial to diagnose.
 
 One more practical point: not every workflow needs multiple agents. Sometimes a single agent with two well-designed tools is the cleaner solution. The SDK supports both patterns, and the docs explicitly distinguish handoffs from an orchestrator-style setup where agents can be used as tools.
 

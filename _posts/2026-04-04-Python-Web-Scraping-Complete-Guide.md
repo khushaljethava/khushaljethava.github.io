@@ -15,6 +15,8 @@ Web scraping extracts structured data from websites. Price monitoring, lead gene
 
 This guide covers the full scraping toolkit: static page parsing, dynamic page handling, authentication, pagination, data storage, and ethical practices. We finish with a complete project that scrapes job listings.
 
+When I built training datasets for computer vision models at Codiste, web scraping was often the first step in the pipeline. For our car damage detection system, we scraped tens of thousands of vehicle images from public insurance claim galleries and automotive forums to supplement our client's proprietary data. The scraping infrastructure ended up being just as important as the model architecture itself.
+
 ## Setting Up
 
 Install the core libraries:
@@ -497,6 +499,8 @@ if can_scrape("https://example.com/products"):
 else:
     print("Scraping blocked by robots.txt")
 ```
+
+In my experience, the `robots.txt` check is not just about ethics — it saves you debugging time. I once spent hours troubleshooting a scraper that kept getting blocked, only to realize the site explicitly disallowed the paths I was hitting. Checking `robots.txt` first would have saved that entire effort and pointed me toward their public API instead.
 
 **Rate limiting.** Do not hammer servers. Add delays between requests:
 

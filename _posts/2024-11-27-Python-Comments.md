@@ -1,7 +1,7 @@
 ---
 title: Python Comments
 
-description: This tutorial will learn about documenting and commenting on the python code using python comments and python docstring.
+description: Learn how to document and comment Python code using Python comments and docstrings, with examples and best practices.
 
 
 date: 2024-11-27 11:33:00 +0800
@@ -185,6 +185,14 @@ In Python, we can't print any comments using any program or comments.
 
 1. Single line or inline comments  
 2. Multiline comments
+
+---
+
+## Continue Learning
+
+- [First Python Program](/posts/First-Python-Program/) - Write and execute your first Python program.
+- [Basic Syntax](/posts/Basic-Syntax/) - Learn the fundamental syntax rules and Python interpreter.
+- [Python Keywords and Identifiers](/posts/Python-Keywords-and-Identifiers/) - Understand reserved words and naming conventions.
 
 <script type="application/ld+json">
 {

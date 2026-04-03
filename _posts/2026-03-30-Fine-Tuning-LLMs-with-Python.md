@@ -30,6 +30,8 @@ Common reasons to fine-tune:
 - **Tone and style** — Match your brand voice or documentation style.
 - **Cost reduction** — A fine-tuned smaller model can outperform a larger general model on your specific task, at lower inference cost.
 
+When I built a Document AI pipeline at Codiste, fine-tuning a transformer on domain-specific documents was the turning point that took our extraction accuracy from mediocre to production-ready. The base model understood language well enough, but it could not reliably extract structured fields from invoices and contracts until we trained it on a few hundred annotated examples in our exact output format.
+
 ## Full Fine-Tuning vs. LoRA vs. QLoRA
 
 **Full fine-tuning** updates every parameter in the model. This requires enormous GPU memory (a 7B parameter model needs 28+ GB just for the weights in fp32) and risks catastrophic forgetting.
@@ -435,7 +437,7 @@ print(response.choices[0].message.content)
 
 ## Tips for Better Fine-Tuning
 
-**Data quality matters more than data quantity.** 500 high-quality, diverse examples often beat 5000 noisy ones. Review your training data manually.
+**Data quality matters more than data quantity.** 500 high-quality, diverse examples often beat 5000 noisy ones. Review your training data manually. In my experience fine-tuning transformers at Codiste, I found that spending two days cleaning and deduplicating 400 training examples produced a better model than rushing through 2000 noisy ones. Every mislabeled example in a small dataset has an outsized negative impact on the final model.
 
 **Start with a small learning rate.** For LoRA, 1e-4 to 2e-4 works well. For full fine-tuning, use 1e-5 to 5e-5. Too high a learning rate destroys the pretrained knowledge.
 

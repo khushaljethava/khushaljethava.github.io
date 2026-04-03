@@ -319,4 +319,12 @@ Output
 8) Try to practice type functions in all other python functions you learn in the future.
 
 
+---
+
+## Continue Learning
+
+- [Python Data Types](/posts/Data-Types/) - Explore all the built-in data types available in Python.
+- [Basic Syntax](/posts/Basic-Syntax/) - Review Python syntax fundamentals and the interpreter.
+- [Python Keywords and Identifiers](/posts/Python-Keywords-and-Identifiers/) - Understand reserved words and naming conventions.
+
 >

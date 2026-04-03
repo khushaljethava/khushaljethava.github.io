@@ -28,12 +28,16 @@
   "url": "{{ site.url }}/",
   "description": "{{ site.description }}",
   "publisher": {
-    "@type": "Person",
-    "name": "{{ site.social.name }}",
-    "url": "{{ site.url }}/about/"
+    "@type": "Organization",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/commons/avatar.webp"
+    }
   },
   "sameAs": [
-    "https://twitter.com/d3evil4",
+    "https://x.com/d3evil4",
     "https://github.com/khushaljethava",
     "https://www.linkedin.com/in/khushaljethava"
   ],
@@ -44,6 +48,30 @@
       "urlTemplate": "{{ site.url }}/?q={search_term_string}"
     },
     "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ site.title }}",
+  "url": "{{ site.url }}/",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "{{ site.url }}/commons/avatar.webp",
+    "width": 512,
+    "height": 512
+  },
+  "sameAs": [
+    "https://x.com/d3evil4",
+    "https://github.com/khushaljethava",
+    "https://www.linkedin.com/in/khushaljethava"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "{{ site.social.name }}",
+    "url": "{{ site.url }}/about/"
   }
 }
 </script>
@@ -106,7 +134,9 @@
   },
   {% if page.image %}"image": {
     "@type": "ImageObject",
-    "url": "{{ site.url }}{{ page.image.path | default: page.image }}"
+    "url": "{{ site.url }}{{ page.image.path | default: page.image }}",
+    "width": 1200,
+    "height": 630
   },{% endif %}
   "articleSection": {{ page.categories | first | default: "Blog" | jsonify }},
   "keywords": {{ page.tags | jsonify }},

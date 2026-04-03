@@ -1,4 +1,5 @@
 # Khushal Jethava - AI & Python Blog
+License: RSL-1.0; search=yes, ai-train=no
 
 > Personal technical blog by Khushal Jethava, a Machine Learning Engineer based in Ahmedabad, India.
 > For a full index of all 180+ posts, see [llms-full.txt](https://khushaljethava.work/llms-full.txt).

@@ -32,6 +32,8 @@ print(ts.head())
 
 A time series typically has three components: **trend** (long-term direction), **seasonality** (repeating patterns), and **noise** (random variation). Your forecasting model needs to capture the first two and ignore the third. [Visualizing these components](/posts/Python-Data-Visualization-Matplotlib-Seaborn/) is an essential first step before building any model.
 
+In production, I found that the hardest part of time series forecasting is not the model — it is the data quality. When we deployed forecasting models for production ML systems at Codiste, missing timestamps and irregular collection intervals caused more prediction errors than model choice ever did. We spent more time building robust data imputation pipelines than tuning hyperparameters.
+
 ## Installation
 
 ```bash
@@ -303,6 +305,8 @@ print(f"\nBest model by MAE: {comparison['MAE'].idxmin()}")
 **Prophet:** Business metrics with strong seasonality and holidays, missing data, multiple time series.
 
 **LSTM:** Complex non-linear patterns, large datasets, when accuracy matters more than interpretability. If you want to automate the model selection process, [AutoML tools](/posts/AutoML-with-Python-Automated-Machine-Learning/) can help benchmark multiple approaches quickly.
+
+In my experience building generative chatbots with LSTM and BART architectures, I noticed that LSTMs are excellent at capturing sequential dependencies but require significantly more training data than statistical methods to outperform them. For most business forecasting tasks with less than two years of daily data, Prophet consistently gave us better results with a fraction of the effort.
 
 ## Key Takeaways
 

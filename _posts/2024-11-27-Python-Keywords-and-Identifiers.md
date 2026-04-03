@@ -1,6 +1,6 @@
 ---
 title: Python Keywords and Identifiers
-description: This tutorial will teach about keywords and identifiers, which will include reserved words in python.
+description: Learn about Python keywords and identifiers, including reserved words, naming rules, and best practices for beginners.
 
 
 date: 2024-11-27 11:33:00 +0800
@@ -105,6 +105,14 @@ FAQ
 
 **Question:**Is python case sensitive when dealing with identifiers?  
 **Answers:**Yes, Python is case-sensitive when we are dealing with identifiers.
+
+---
+
+## Continue Learning
+
+- [Python Variables](/posts/Python-Variables/) - Learn how to declare, assign, and manage variables in Python.
+- [Python Data Types](/posts/Data-Types/) - Explore all the built-in data types available in Python.
+- [Basic Syntax](/posts/Basic-Syntax/) - Review Python syntax fundamentals and the interpreter.
 
 <script type="application/ld+json">
 {

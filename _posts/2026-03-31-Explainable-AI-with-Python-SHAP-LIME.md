@@ -13,6 +13,8 @@ image:
 
 A model says "loan denied." The customer asks why. If you can't answer, you have a compliance problem, a trust problem, and possibly a legal problem.
 
+When I deployed a car damage detection model using Detectron2 at Codiste, stakeholders and insurance partners needed to understand why the model classified certain damage as severe versus minor. Showing them SHAP-style feature attribution on the image regions driving the prediction was what turned skepticism into trust and ultimately got the model approved for production use.
+
 ```python
 import shap
 
@@ -311,7 +313,7 @@ async def predict_explain(request: PredictionRequest):
 
 ## Practical Tips
 
-**Start with global explanations.** Before diving into individual predictions, understand which features matter overall. A summary plot or bar plot gives you the big picture.
+**Start with global explanations.** Before diving into individual predictions, understand which features matter overall. A summary plot or bar plot gives you the big picture. In my experience, I have found that presenting global SHAP summary plots first in stakeholder meetings sets the right context. When I explained YOLO-based barcode detection results to non-technical clients at Codiste, starting with "here are the top factors the model uses overall" before drilling into individual cases made the conversation far more productive.
 
 **Use SHAP for consistency.** If you need reliable, reproducible explanations (regulatory, audit), SHAP's mathematical foundation is stronger than LIME's.
 

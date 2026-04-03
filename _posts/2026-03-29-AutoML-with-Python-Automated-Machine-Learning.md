@@ -40,7 +40,9 @@ AutoML is useful when:
 - You have limited ML expertise but need a production-quality model.
 - You want to validate that your hand-tuned model is not significantly worse than what automated search finds.
 
-AutoML is not a replacement for understanding your data. You still need to clean your data, handle missing values thoughtfully, and validate that the model makes sense for your problem domain. For deploying your AutoML-selected model to production, see our guide on [MLOps with Python](/posts/MLOps-with-Python-Production-ML-Pipelines/).
+AutoML is not a replacement for understanding your data. You still need to clean your data, handle missing values thoughtfully, and validate that the model makes sense for your problem domain.
+
+In my experience at Codiste, AutoML has been most valuable during the model selection phase of computer vision projects. When I was building a car damage detection system with Detectron2, I first used AutoML to benchmark traditional ML approaches on extracted features before committing to a deep learning architecture. That comparison gave stakeholders confidence that the more complex model was genuinely necessary for the accuracy requirements. For deploying your AutoML-selected model to production, see our guide on [MLOps with Python](/posts/MLOps-with-Python-Production-ML-Pipelines/).
 
 ## Setting Up a Dataset
 
@@ -411,7 +413,7 @@ aml_reg.train(x=features, y=target, training_frame=train_reg)
 | Need an interpretable model | Manual (choose the model type deliberately) |
 | Kaggle competition | AutoML for baseline, then manual refinement |
 
-A practical approach: run AutoML first to establish a baseline score. If the score is good enough, deploy the AutoML model. If not, use the AutoML results to understand which algorithm families work best, then manually tune within that family. For LLM-based tasks, you may want to [fine-tune a large language model](/posts/Fine-Tuning-LLMs-with-Python/) instead of using traditional AutoML.
+A practical approach: run AutoML first to establish a baseline score. If the score is good enough, deploy the AutoML model. If not, use the AutoML results to understand which algorithm families work best, then manually tune within that family. A lesson I learned working with YOLO-based barcode detection is that AutoML baselines are also useful for identifying when your problem genuinely needs a specialized architecture versus when a well-tuned gradient boosting model would suffice. For LLM-based tasks, you may want to [fine-tune a large language model](/posts/Fine-Tuning-LLMs-with-Python/) instead of using traditional AutoML.
 
 ## Tips for Getting the Best Results
 

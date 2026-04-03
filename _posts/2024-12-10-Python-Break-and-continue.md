@@ -1,6 +1,6 @@
 ---
 title: Python Break and Continue 
-description: This tutorial will learn about python break and continue statements and use them in loops and conditional statements.
+description: Learn how to use Python break and continue statements to control loop execution with practical examples.
 date: 2024-12-10 10:27:00 +0800
 categories: [Python]
 tags: [python]

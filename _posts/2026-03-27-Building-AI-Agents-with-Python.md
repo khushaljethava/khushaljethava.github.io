@@ -27,6 +27,8 @@ while not task_complete:
 
 This observe-think-act pattern is the foundation of every AI agent, regardless of framework or complexity.
 
+When I built agent systems at Codiste for tasks like car damage detection with Detectron2 and barcode detection with YOLO, I found that the agent loop concept applies even outside of LLM-based systems. The pattern of observing an input, reasoning about it, and deciding on an action is universal -- the LLM just makes the reasoning step far more flexible.
+
 ## The Agent Loop: Observe, Think, Act
 
 Every AI agent follows a cyclic pattern:
@@ -459,6 +461,8 @@ def extract_emails(text: str) -> str:
 **Set iteration limits.** Always cap how many times the agent loop can run. Without limits, a confused agent can loop indefinitely and burn through API credits.
 
 **Log everything.** In production, log every LLM call, every tool execution, and every result. When an agent produces incorrect output, these logs are essential for debugging.
+
+In production, I found that the biggest challenge is not building the agent loop itself but handling the unpredictable ways users interact with it. When I deployed a generative chatbot using BART at Codiste, edge cases in user inputs caused tool selection failures that only showed up under real traffic. Comprehensive logging was the only thing that made those issues diagnosable.
 
 **Test with diverse inputs.** Agents are non-deterministic. The same input can produce different tool call sequences. Test with many variations to find failure modes.
 

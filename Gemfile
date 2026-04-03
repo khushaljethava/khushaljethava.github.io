@@ -3,6 +3,7 @@
 source "https://rubygems.org"
 
 gem "jekyll-theme-chirpy", "~> 7.5", ">= 7.5.0"
+gem "jekyll-sitemap", "~> 1.4"
 gem 'jekyll-admin', group: :jekyll_plugins
 gem "html-proofer", "~> 5.0", group: :test
 

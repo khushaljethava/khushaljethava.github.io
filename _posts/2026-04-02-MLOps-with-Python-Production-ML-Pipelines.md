@@ -22,6 +22,8 @@ The core problems MLOps solves:
 
 This guide walks through each piece using Python tools: MLflow for experiment tracking, DVC for data versioning, FastAPI for model serving, and GitHub Actions for CI/CD. If you are training deep learning models, see our guide on [fine-tuning LLMs with Python](/posts/Fine-Tuning-LLMs-with-Python/) for the model development side of the pipeline.
 
+A lesson I learned deploying ML models at Codiste is that the model itself is often the easy part. We had a car damage detection system built with Detectron2 that worked perfectly in notebooks but took three months to stabilize in production because we underestimated data pipeline reliability, model versioning, and monitoring. Every team I have worked with hits this same wall, which is exactly why MLOps matters.
+
 ## Project Structure
 
 A well-organized ML project looks like this:
@@ -529,6 +531,8 @@ jobs:
 ```
 
 ## Monitoring Model Performance
+
+In production, I found that the monitoring stage is where most ML projects fail silently. When we deployed our Detectron2-based damage detection model, prediction quality degraded over two weeks because the incoming images shifted from professional photos to blurry smartphone captures. Without drift detection, we would not have caught it until customers complained.
 
 Track prediction quality over time by logging predictions and running periodic checks:
 
