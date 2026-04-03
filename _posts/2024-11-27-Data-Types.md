@@ -377,7 +377,7 @@ Output:
 ## Continue Learning
 
 - [Python Variables](/posts/Python-Variables/) - Learn how to declare, assign, and manage variables in Python.
-- [Python Print Function](/posts/Python-Print-Function/) - Master the print function for displaying output.
+- [Python Print Function](/posts/Python-print-function/) - Master the print function for displaying output.
 - [Python Keywords and Identifiers](/posts/Python-Keywords-and-Identifiers/) - Understand reserved words and naming rules.
 
 >

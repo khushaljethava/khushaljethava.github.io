@@ -103,6 +103,6 @@ To run a python program on Linux, you can simply use the python command followed
 
 - [Installation of Python](/posts/Installation-of-Python/) - Make sure Python is properly set up on your machine.
 - [Basic Syntax](/posts/Basic-Syntax/) - Explore Python syntax fundamentals and the interpreter.
-- [Python Print Function](/posts/Python-Print-Function/) - Dive deeper into the print function and its parameters.
+- [Python Print Function](/posts/Python-print-function/) - Dive deeper into the print function and its parameters.
 
 >
