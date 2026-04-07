@@ -41,4 +41,4 @@ Disallow: /
 User-agent: FacebookBot
 Disallow: /
 
-Sitemap: {{ '/sitemap.xml' | absolute_url }}
+Sitemap: https://khushaljethava.work/sitemap.xml

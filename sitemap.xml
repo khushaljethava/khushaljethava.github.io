@@ -1,0 +1,58 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Homepage -->
+  <url>
+    <loc>{{ site.url }}/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Blog posts (newest first, excludes sitemap: false) -->
+  {% assign posts = site.posts | where_exp: "post", "post.sitemap != false" %}
+  {% for post in posts %}
+  <url>
+    <loc>{{ site.url }}{{ post.url }}</loc>
+    <lastmod>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  {% endfor %}
+
+  <!-- Static tab pages (About, Contact, Archives, etc.) -->
+  {% for tab in site.tabs %}
+  {% unless tab.sitemap == false %}
+  <url>
+    <loc>{{ site.url }}{{ tab.url }}</loc>
+    {% if tab.last_modified_at %}<lastmod>{{ tab.last_modified_at | date_to_xmlschema }}</lastmod>{% endif %}
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  {% endunless %}
+  {% endfor %}
+
+  <!-- Category archive pages -->
+  {% for category in site.categories %}
+  <url>
+    <loc>{{ site.url }}/categories/{{ category[0] | slugify }}/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  {% endfor %}
+
+  <!-- Tag archive pages -->
+  {% for tag in site.tags %}
+  <url>
+    <loc>{{ site.url }}/tags/{{ tag[0] | slugify }}/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  {% endfor %}
+
+</urlset>
