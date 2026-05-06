@@ -1,4 +1,6 @@
 ---
+title: Terms and Conditions
+description: "Terms and Conditions for using Khushal Jethava, including service rules, links, liability, and contact details."
 # the default layout is 'page'
 icon: fas fa-info-circle
 order: 7
