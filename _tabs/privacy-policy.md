@@ -1,4 +1,6 @@
 ---
+title: Privacy Policy
+description: "Privacy Policy for Khushal Jethava, explaining what personal information is collected, processed, shared, and protected."
 # the default layout is 'page'
 icon: fas fa-info-circle
 order: 6

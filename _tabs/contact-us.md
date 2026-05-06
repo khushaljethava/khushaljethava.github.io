@@ -1,10 +1,11 @@
 ---
+title: Contact Us
+description: "Contact Khushal Jethava for AI, Python, machine learning, computer vision, and software engineering questions or collaborations."
 # the default layout is 'page'
 icon: fas fa-info-circle
 order: 8
 ---
 
-<title>Contact Us</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/emailjs-com/3.2.0/email.min.js"></script>
   <style>
       * {
