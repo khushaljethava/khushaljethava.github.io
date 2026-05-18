@@ -4,12 +4,41 @@
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 
-<!-- Pagination pages: noindex to prevent thin duplicate content -->
-{% if paginator and paginator.page > 1 %}
+<!-- Pagination pages: noindex + rel prev/next to consolidate link equity -->
+{% if paginator %}
+  {% if paginator.page > 1 %}
 <meta name="robots" content="noindex, follow">
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.previous_page == 1 %}
+<link rel="prev" href="{{ site.url }}{{ site.baseurl }}/">
+    {% else %}
+<link rel="prev" href="{{ site.url }}{{ site.baseurl }}/page/{{ paginator.previous_page }}/">
+    {% endif %}
+  {% endif %}
+  {% if paginator.next_page %}
+<link rel="next" href="{{ site.url }}{{ site.baseurl }}/page/{{ paginator.next_page }}/">
+  {% endif %}
+{% endif %}
+
+<!-- Preload hero image for LCP improvement -->
+{% if page.layout == 'post' and page.image %}
+  {% assign hero_src = page.image.path | default: page.image %}
+  {% unless hero_src contains '://' %}
+    {% assign hero_src = site.url | append: hero_src %}
+  {% endunless %}
+<link rel="preload" as="image" href="{{ hero_src }}" fetchpriority="high">
+{% endif %}
+
+<!-- Open Graph article:tag for better social sharing categorization -->
+{% if page.layout == 'post' and page.tags %}
+  {% for tag in page.tags %}
+<meta property="article:tag" content="{{ tag | xml_escape }}">
+  {% endfor %}
 {% endif %}
 
 {% include schema-breadcrumb.html %}
+{% include schema-howto.html %}
 
 {% if page.url == '/about/' %}
   {% include schema-person.html %}
