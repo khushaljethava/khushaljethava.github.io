@@ -10,6 +10,7 @@ layout: null
   <!-- Homepage -->
   <url>
     <loc>{{ site.url }}/</loc>
+    {% if site.posts.first %}<lastmod>{{ site.posts.first.last_modified_at | default: site.posts.first.date | date_to_xmlschema }}</lastmod>{% endif %}
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
