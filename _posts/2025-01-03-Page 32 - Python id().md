@@ -243,7 +243,7 @@ print(list1 is list2)          # False — not the same object
 
 The `is` operator is internally equivalent to `id(x) == id(y)`, but is more idiomatic and readable. The `id()` function gives you the raw integer, which is useful for logging, debugging output, or custom caching implementations.
 
-To check the type of an object rather than its identity, see the [Python type() function](/posts/Page-66-Python-type/). If you need to test whether two variables point to the same object, the `is` operator is the idiomatic approach, but [Python isinstance()](/posts/Page-35-Python-isinstance/) is better for type checking.
+To check the type of an object rather than its identity, see the [Python type() function](/posts/Page-66-Python-type()/). If you need to test whether two variables point to the same object, the `is` operator is the idiomatic approach, but [Python isinstance()](/posts/Page-35-Python-isinstance()/) is better for type checking.
 
 ## Rules of id() Method
 
