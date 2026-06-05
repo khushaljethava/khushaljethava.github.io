@@ -50,13 +50,27 @@
 
   {{ seo_tags }}
 
+  {% unless page.image %}
+    {%- assign _fallback_img = site.social_preview_image | default: site.logo -%}
+    {%- if _fallback_img -%}
+      {%- unless _fallback_img contains '://' -%}
+        {%- assign _fallback_img = site.url | append: _fallback_img -%}
+      {%- endunless -%}
+  <meta property="og:image" content="{{ _fallback_img }}" />
+  <meta name="twitter:image" content="{{ _fallback_img }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+    {%- endif -%}
+  {% endunless %}
+
   {%- if site.social.fediverse_handle %}
     <!-- Fediverse handle/creator -->
     <meta name="fediverse:creator" content="{{ site.social.fediverse_handle }}">
   {% endif %}
 
   <title>
-    {%- unless page.layout == 'home' -%}
+    {%- if page.layout == 'home' -%}
+      {{- site.title -}}{{- ' | ' -}}{{- site.tagline -}}
+    {%- else -%}
       {%- capture title -%}
         {%- if page.collection == 'tabs' -%}
           {%- assign tab_key = page.title | downcase -%}
@@ -66,9 +80,8 @@
           {{- page.title -}}
         {%- endif -%}
       {%- endcapture -%}
-      {{- title | append: ' | ' -}}
-    {%- endunless -%}
-    {{- site.title -}}
+      {{- title | append: ' | ' -}}{{- site.title -}}
+    {%- endif -%}
   </title>
 
   {% include_cached favicons.html %}

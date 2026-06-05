@@ -63,3 +63,59 @@ The sum is: 15
 A common use case for `staticmethod()` is defining validation or conversion helpers inside a class, such as a `User.is_valid_email(email)` method that checks email format without needing any user instance data. Another practical scenario is grouping related mathematical or string utility functions under a class namespace for better code organization. It is also useful in factory patterns where a static method serves as an alternative constructor that does not need class-level configuration, distinguishing it from a [classmethod()](/posts/Python-classmethod()/) which would receive the class itself.
 
 ## What is a static method?
+---
+
+## More Examples
+
+### Defining a static method
+
+```python
+class MathUtils:
+    @staticmethod
+    def add(a, b):
+        return a + b
+
+print(MathUtils.add(3, 4))   # 7 — no instance needed
+```
+
+A static method belongs to the class namespace but does not receive `self` or `cls`. It behaves like a plain function grouped logically inside a class.
+
+### staticmethod vs classmethod vs instance method
+
+```python
+class Demo:
+    def instance_method(self):     # receives the instance
+        return self
+    @classmethod
+    def class_method(cls):         # receives the class
+        return cls
+    @staticmethod
+    def static_method():           # receives nothing
+        return "independent"
+```
+
+Use a static method when the logic is related to the class conceptually but does not need access to instance or class state.
+
+## Real-World Use Cases
+
+- **Utility/helper functions** — validators or formatters grouped under a relevant class.
+- **Factory helpers** — small computations used by constructors.
+- **Namespacing** — keeping related functions together without polluting the module namespace.
+
+## Common Mistakes
+
+- **Adding `self` by habit** — a static method takes no implicit first argument.
+- **Using a static method when you need class data** — use `@classmethod` instead so you receive `cls`.
+- **Forgetting the decorator** — without `@staticmethod`, calling `Class.method()` on an instance passes `self` unexpectedly.
+
+## FAQ
+
+**Q: When should I use a static method instead of a module-level function?**
+When the function is logically tied to a class and you want to call it as `Class.method()`, improving discoverability and organisation.
+
+**Q: Can a static method access class attributes?**
+Not implicitly — it has no `cls`. You would have to reference the class by name, which usually means a `@classmethod` is the better choice.
+
+## Conclusion
+
+`staticmethod()` (used via the `@staticmethod` decorator) defines a method that lives inside a class but receives neither the instance nor the class. It is the right tool for utility logic that belongs conceptually with a class yet does not depend on its state. Choosing correctly between static methods, class methods, and instance methods makes your object-oriented code clearer and more maintainable.

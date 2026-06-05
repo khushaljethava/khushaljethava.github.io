@@ -74,3 +74,62 @@ Output:
 ## Common Use Cases
 
 A common use case for `sorted()` is sorting a list of dictionaries by a specific key, such as ordering a list of products by price using `sorted(products, key=lambda x: x['price'])`. Another practical scenario is sorting user-generated content alphabetically for display, such as sorting names in a contact list or tags on a blog. It is also frequently used to sort the results of [filter()](/posts/Page-22-Python-filter()/) or [map()](/posts/Page-41-Python-map()/) operations in data processing pipelines where the output needs to be presented in a deterministic order.
+---
+
+## More Examples
+
+### Sorting with a key function
+
+```python
+words = ["banana", "kiwi", "apple", "fig"]
+print(sorted(words, key=len))        # ['fig', 'kiwi', 'apple', 'banana']
+print(sorted(words, key=len, reverse=True))
+```
+
+The `key` parameter lets you sort by any derived value — length, a dictionary field, or a computed score.
+
+### Sorting a list of dictionaries
+
+```python
+people = [
+    {"name": "Alice", "age": 30},
+    {"name": "Bob", "age": 25},
+    {"name": "Carol", "age": 35},
+]
+by_age = sorted(people, key=lambda p: p["age"])
+print([p["name"] for p in by_age])   # ['Bob', 'Alice', 'Carol']
+```
+
+## sorted() vs list.sort()
+
+| Feature | `sorted()` | `list.sort()` |
+|---------|-----------|---------------|
+| Returns | A new list | `None` |
+| Works on | Any iterable | Lists only |
+| Original | Unchanged | Modified in place |
+
+Use `sorted()` when you need a new sorted sequence and want to keep the original; use `list.sort()` to sort a list in place.
+
+## Real-World Use Cases
+
+- **Ranking** — ordering scores, prices, or timestamps.
+- **Display** — alphabetising names or sorting search results.
+- **Pre-processing** — sorting before binary search or grouping.
+
+## Common Mistakes
+
+- **Expecting in-place sorting** — `sorted()` returns a new list; the original is untouched.
+- **Comparing incompatible types** — sorting a mix of strings and numbers raises `TypeError`.
+- **Overusing `reverse` with a key** — you can often invert the key instead for clarity.
+
+## FAQ
+
+**Q: Is `sorted()` stable?**
+Yes — equal elements keep their original relative order, which is useful for multi-key sorting.
+
+**Q: Can I sort in descending order?**
+Yes — pass `reverse=True`, or negate a numeric key.
+
+## Conclusion
+
+`sorted()` returns a new sorted list from any iterable, leaving the source unchanged. With its `key` and `reverse` parameters it can express almost any ordering you need, from simple alphabetical sorts to complex multi-field rankings. Because it is stable and works on any iterable, `sorted()` is one of the most versatile built-ins in Python.

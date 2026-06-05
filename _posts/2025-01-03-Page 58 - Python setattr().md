@@ -66,3 +66,62 @@ A common use case for `setattr()` is populating object attributes from a diction
 ## Rules of setattr()
 
 If you want to get the value of the specific attribute, we recommend [getattr()](/posts/Page-26-Python-getattr()/) function. You can also use [hasattr()](/posts/Page-28-Python-hasattr()/) to check whether an attribute exists before setting it.
+---
+
+## More Examples
+
+### Setting an attribute dynamically
+
+```python
+class Person:
+    pass
+
+p = Person()
+setattr(p, "name", "Alice")
+setattr(p, "age", 30)
+print(p.name, p.age)   # Alice 30
+```
+
+`setattr(obj, "name", value)` is equivalent to `obj.name = value`, but the attribute name is supplied as a string — perfect when the name is computed at runtime.
+
+### Setting attributes from a dictionary
+
+```python
+class Config:
+    pass
+
+data = {"host": "localhost", "port": 8080, "debug": True}
+cfg = Config()
+for key, value in data.items():
+    setattr(cfg, key, value)
+
+print(cfg.host, cfg.port, cfg.debug)
+```
+
+## setattr() and getattr()
+
+`setattr()` writes attributes; its companion `getattr()` reads them. Together they enable fully dynamic attribute access, which is the basis of many serialization and ORM libraries.
+
+## Real-World Use Cases
+
+- **Deserialization** — turning JSON or form data into object attributes.
+- **Configuration objects** — populating settings from a file.
+- **Frameworks/ORMs** — mapping database columns to model fields.
+
+## Common Mistakes
+
+- **Using invalid identifiers** — `setattr(obj, "2bad", 1)` works but the attribute can only be reached via `getattr`, not normal dot syntax.
+- **Overwriting methods accidentally** — setting an attribute that shadows an existing method.
+- **Using it when static attributes suffice** — only reach for `setattr()` when the name is genuinely dynamic.
+
+## FAQ
+
+**Q: Is `setattr(obj, "x", 1)` the same as `obj.x = 1`?**
+Yes — but `setattr()` accepts the name as a string, enabling dynamic assignment.
+
+**Q: Can `setattr()` create new attributes?**
+Yes — it adds the attribute if it does not already exist (unless the class restricts attributes via `__slots__`).
+
+## Conclusion
+
+`setattr()` assigns a value to an object attribute named by a string, mirroring `getattr()` for reads. It shines whenever attribute names are decided at runtime — deserializing data, building configuration objects, or writing generic frameworks. For fixed attribute names, ordinary dot assignment is clearer, so reserve `setattr()` for genuinely dynamic cases.

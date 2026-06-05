@@ -77,3 +77,64 @@ Enter a Number: 25
 25
 
 ```
+
+---
+
+## More Examples
+
+### Executing dynamically built code
+
+```python
+code = """
+for i in range(3):
+    print("Line", i)
+"""
+exec(code)
+```
+
+`exec()` runs a string (or compiled code object) containing arbitrary Python statements — unlike `eval()`, which only evaluates a single expression.
+
+### Using a custom namespace
+
+```python
+namespace = {}
+exec("result = 6 * 7", namespace)
+print(namespace["result"])   # 42
+```
+
+Passing a dictionary lets you capture variables created by the executed code without polluting your real globals.
+
+## exec() vs eval()
+
+| Function | Accepts | Returns |
+|----------|---------|---------|
+| `eval()` | A single expression | The expression's value |
+| `exec()` | Any statements | Always `None` |
+
+## Real-World Use Cases
+
+- **Code generation tools** and templating engines.
+- **Interactive shells / REPLs** that run user input.
+- **Configuration as code** in tightly controlled environments.
+
+## Security Warning
+
+`exec()` runs arbitrary code and is a serious security risk if given untrusted input. Never `exec()` data from users, files, or the network without strict validation — it can delete files, leak data, or take over the process. In most cases there is a safer alternative such as `json.loads()`, `ast.literal_eval()`, or a dedicated parser.
+
+## Common Mistakes
+
+- **Using it on untrusted input** — a major vulnerability.
+- **Expecting a return value** — `exec()` always returns `None`; read results from the namespace dict.
+- **Reaching for `exec()` too early** — most "dynamic" needs are better solved with dictionaries, functions, or `getattr()`.
+
+## FAQ
+
+**Q: What is the difference between `exec()` and `eval()`?**
+`eval()` evaluates one expression and returns its value; `exec()` executes full statements and returns `None`.
+
+**Q: How do I get values out of `exec()`?**
+Pass a dictionary as the globals/locals argument and read the variables it creates afterward.
+
+## Conclusion
+
+`exec()` executes dynamically generated Python statements from a string or code object. It is powerful but dangerous: only use it with fully trusted code, prefer a custom namespace to capture results, and always look for a safer, more specific alternative first. Used judiciously, it enables code generation and interactive tooling; used carelessly, it opens severe security holes.

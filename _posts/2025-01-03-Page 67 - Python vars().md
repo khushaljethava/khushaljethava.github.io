@@ -66,3 +66,64 @@ A common use case for `vars()` is converting an object's attributes into a dicti
 
 * vars() will return the \_\_dict\_\_ attributes of the given object.  
 * If the object passed to vars() doesn't have the \_\_dict\_\_ attribute, it raises a TypeError exception.
+---
+
+## More Examples
+
+### Inspecting an object's attributes
+
+```python
+class Car:
+    def __init__(self):
+        self.make = "Toyota"
+        self.year = 2024
+
+c = Car()
+print(vars(c))   # {'make': 'Toyota', 'year': 2024}
+```
+
+`vars(obj)` returns the object's `__dict__` — a dictionary of its writable attributes.
+
+### vars() with no argument
+
+```python
+def demo():
+    x = 1
+    y = 2
+    print(vars())   # acts like locals() inside a function
+
+demo()
+```
+
+Called without arguments, `vars()` returns the local symbol table, behaving like `locals()`.
+
+## vars() vs dir()
+
+| Function | Returns |
+|----------|---------|
+| `vars(obj)` | A dict of the object's own attributes (`__dict__`) |
+| `dir(obj)` | A list of all names, including inherited methods |
+
+## Real-World Use Cases
+
+- **Debugging** — quickly dumping an object's state.
+- **Serialization** — converting a simple object to a dictionary.
+- **Introspection** — examining attributes generically.
+
+## Common Mistakes
+
+- **Calling `vars()` on objects without `__dict__`** — built-ins like `int` or classes using `__slots__` raise `TypeError`.
+- **Confusing it with `dir()`** — `vars()` shows only instance attributes, not methods.
+- **Mutating the returned dict carelessly** — for objects it is the live `__dict__`, so changes affect the object.
+
+## FAQ
+
+**Q: What does `vars()` return for a module?**
+The module's namespace dictionary, the same as `module.__dict__`.
+
+**Q: Why does `vars(5)` fail?**
+Integers have no `__dict__`, so `vars()` raises `TypeError`. This is normal for many built-in types.
+
+## Conclusion
+
+`vars()` returns the `__dict__` of an object, module, or class — or the local namespace when called with no argument. It is a handy introspection and debugging tool for examining and even modifying an object's attributes as a dictionary. Just remember that not every object has a `__dict__`, so guard against `TypeError` when working with built-in types or `__slots__`-based classes.
