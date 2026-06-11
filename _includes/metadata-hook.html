@@ -10,14 +10,10 @@
 <meta name="robots" content="noindex, follow">
   {% endif %}
   {% if paginator.previous_page %}
-    {% if paginator.previous_page == 1 %}
-<link rel="prev" href="{{ site.url }}{{ site.baseurl }}/">
-    {% else %}
-<link rel="prev" href="{{ site.url }}{{ site.baseurl }}/page/{{ paginator.previous_page }}/">
-    {% endif %}
+<link rel="prev" href="{{ site.url }}{{ paginator.previous_page_path }}">
   {% endif %}
   {% if paginator.next_page %}
-<link rel="next" href="{{ site.url }}{{ site.baseurl }}/page/{{ paginator.next_page }}/">
+<link rel="next" href="{{ site.url }}{{ paginator.next_page_path }}">
   {% endif %}
 {% endif %}
 
@@ -40,7 +36,7 @@
 {% include schema-breadcrumb.html %}
 {% include schema-howto.html %}
 
-{% if page.url == '/about/' %}
+{% if page.url == '/about/' or page.url == '/' %}
   {% include schema-person.html %}
 {% endif %}
 

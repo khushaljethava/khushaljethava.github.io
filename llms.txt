@@ -29,7 +29,8 @@ This blog covers practical AI tutorials, Python guides, and ML engineering insig
 
 ## Key Pages
 
-- Home: https://khushaljethava.work/
+- Home (portfolio): https://khushaljethava.work/
+- Blog: https://khushaljethava.work/blog/
 - About: https://khushaljethava.work/about/
 - Categories: https://khushaljethava.work/categories/
 - Tags: https://khushaljethava.work/tags/

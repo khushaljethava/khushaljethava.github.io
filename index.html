@@ -1,3 +1,702 @@
 ---
-layout: home
+layout: default
+refactor: true
+title: Machine Learning Engineer — Generative AI, NLP & Computer Vision
+description: >-
+  Portfolio of Khushal Jethava, a Machine Learning Engineer based in Ahmedabad, India,
+  building production Generative AI, LLM, NLP, and computer vision solutions.
 ---
+
+<style>
+  .portfolio {
+    --pf-accent-1: #7c3aed;
+    --pf-accent-2: #2563eb;
+    --pf-accent-3: #06b6d4;
+    --pf-border: var(--main-border-color, rgba(128, 128, 128, 0.2));
+  }
+  .portfolio section {
+    margin-bottom: 3rem;
+  }
+  .portfolio .section-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--pf-border);
+  }
+  .portfolio .section-title i {
+    background: linear-gradient(120deg, var(--pf-accent-1), var(--pf-accent-3));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 0.4rem;
+  }
+
+  /* ---------- Hero with neural-network canvas ---------- */
+  .portfolio .hero {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    border: 1px solid var(--pf-border);
+    padding: 2.75rem 2rem;
+    margin-bottom: 3rem;
+    background:
+      radial-gradient(ellipse 60% 80% at 85% 15%, rgba(124, 58, 237, 0.14), transparent 60%),
+      radial-gradient(ellipse 50% 70% at 10% 90%, rgba(6, 182, 212, 0.12), transparent 60%);
+  }
+  .portfolio .hero canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  .portfolio .hero-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+  }
+  .portfolio .hero-avatar {
+    perspective: 600px;
+  }
+  .portfolio .hero-avatar img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow:
+      0 0 0 3px var(--pf-border),
+      0 0 35px rgba(124, 58, 237, 0.35);
+    transition: transform 0.3s ease;
+    will-change: transform;
+  }
+  .portfolio .hero h1 {
+    font-size: 2.3rem;
+    font-weight: 800;
+    margin-bottom: 0.3rem;
+    background: linear-gradient(120deg, var(--pf-accent-1) 0%, var(--pf-accent-2) 50%, var(--pf-accent-3) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .portfolio .hero .role {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    min-height: 1.7rem;
+    margin-bottom: 0.3rem;
+  }
+  .portfolio .hero .role .typed-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1.1em;
+    margin-left: 2px;
+    vertical-align: text-bottom;
+    background: var(--pf-accent-3);
+    animation: pf-blink 0.9s step-end infinite;
+  }
+  @keyframes pf-blink {
+    50% { opacity: 0; }
+  }
+  .portfolio .hero .location {
+    color: var(--text-muted-color);
+    margin-bottom: 1rem;
+  }
+  .portfolio .btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .portfolio .btn-row a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.45rem 1.05rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid var(--pf-border);
+    color: var(--text-color);
+    transition: all 0.25s ease;
+  }
+  .portfolio .btn-row a:hover {
+    border-color: var(--pf-accent-2);
+    color: var(--pf-accent-2);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.25);
+  }
+  .portfolio .btn-row a.primary {
+    background: linear-gradient(120deg, var(--pf-accent-1), var(--pf-accent-2));
+    border: none;
+    color: #fff;
+  }
+  .portfolio .btn-row a.primary:hover {
+    color: #fff;
+    box-shadow: 0 6px 22px rgba(124, 58, 237, 0.45);
+  }
+
+  /* ---------- Stats strip ---------- */
+  .portfolio .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  .portfolio .stat-card {
+    text-align: center;
+    padding: 1.1rem 0.75rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--pf-border);
+    background: var(--card-bg, transparent);
+  }
+  .portfolio .stat-card .num {
+    font-size: 1.6rem;
+    font-weight: 800;
+    background: linear-gradient(120deg, var(--pf-accent-1), var(--pf-accent-3));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .portfolio .stat-card .lbl {
+    font-size: 0.82rem;
+    color: var(--text-muted-color);
+  }
+
+  /* ---------- Skills ---------- */
+  .portfolio .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .portfolio .skills span {
+    padding: 0.35rem 0.85rem;
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    background: var(--card-bg, rgba(128, 128, 128, 0.08));
+    border: 1px solid var(--pf-border);
+    color: var(--text-color);
+    transition: all 0.25s ease;
+  }
+  .portfolio .skills span:hover {
+    transform: translateY(-3px);
+    border-color: var(--pf-accent-3);
+    box-shadow: 0 5px 15px rgba(6, 182, 212, 0.25);
+  }
+  .portfolio .skills span i {
+    margin-right: 0.35rem;
+    color: var(--pf-accent-2);
+  }
+
+  /* ---------- Experience timeline ---------- */
+  .portfolio .xp-item {
+    position: relative;
+    padding-left: 1.5rem;
+    padding-bottom: 1.75rem;
+    border-left: 2px solid var(--pf-border);
+  }
+  .portfolio .xp-item:last-child {
+    padding-bottom: 0.25rem;
+  }
+  .portfolio .xp-item::before {
+    content: "";
+    position: absolute;
+    left: -7px;
+    top: 0.35rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: linear-gradient(120deg, var(--pf-accent-1), var(--pf-accent-3));
+    box-shadow: 0 0 10px rgba(124, 58, 237, 0.6);
+  }
+  .portfolio .xp-item h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0 0 0.1rem;
+    color: var(--heading-color);
+  }
+  .portfolio .xp-item .xp-meta {
+    font-size: 0.875rem;
+    color: var(--text-muted-color);
+    margin-bottom: 0.5rem;
+  }
+  .portfolio .xp-item ul {
+    margin-bottom: 0;
+    padding-left: 1.1rem;
+    font-size: 0.95rem;
+  }
+  .portfolio .xp-item ul li {
+    margin-bottom: 0.25rem;
+  }
+
+  /* ---------- 3D tilt project cards ---------- */
+  .portfolio .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    perspective: 1000px;
+  }
+  .portfolio .project-card {
+    padding: 1.2rem 1.25rem;
+    border-radius: 0.85rem;
+    background: var(--card-bg, rgba(128, 128, 128, 0.05));
+    border: 1px solid var(--pf-border);
+    transform-style: preserve-3d;
+    transition: transform 0.15s ease-out, box-shadow 0.25s ease, border-color 0.25s ease;
+    will-change: transform;
+  }
+  .portfolio .project-card:hover {
+    border-color: var(--pf-accent-1);
+    box-shadow: 0 18px 40px rgba(124, 58, 237, 0.22);
+  }
+  .portfolio .project-card .card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 0.65rem;
+    margin-bottom: 0.7rem;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.18), rgba(6, 182, 212, 0.18));
+    transform: translateZ(28px);
+  }
+  .portfolio .project-card .card-icon i {
+    font-size: 1.15rem;
+    background: linear-gradient(120deg, var(--pf-accent-1), var(--pf-accent-3));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .portfolio .project-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 0.35rem;
+    color: var(--heading-color);
+    transform: translateZ(20px);
+  }
+  .portfolio .project-card p {
+    font-size: 0.875rem;
+    color: var(--text-muted-color);
+    margin-bottom: 0;
+    transform: translateZ(12px);
+  }
+
+  /* ---------- Latest posts ---------- */
+  .portfolio .post-item {
+    display: block;
+    padding: 0.9rem 1.1rem;
+    margin-bottom: 0.75rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--pf-border);
+    text-decoration: none;
+    transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .portfolio .post-item:hover {
+    border-color: var(--pf-accent-3);
+    transform: translateX(6px);
+    box-shadow: 0 6px 18px rgba(6, 182, 212, 0.18);
+  }
+  .portfolio .post-item h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 0.25rem;
+    color: var(--heading-color);
+  }
+  .portfolio .post-item p {
+    font-size: 0.875rem;
+    color: var(--text-muted-color);
+    margin-bottom: 0.25rem;
+  }
+  .portfolio .post-item .post-date {
+    font-size: 0.8rem;
+    color: var(--text-muted-color);
+  }
+  .portfolio .view-all {
+    font-weight: 600;
+  }
+
+  /* ---------- Scroll reveal (only when JS enabled) ---------- */
+  .pf-js .portfolio .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .pf-js .portfolio .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .portfolio * {
+      animation: none !important;
+      transition: none !important;
+    }
+    .pf-js .portfolio .reveal {
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>
+
+<div class="portfolio px-xl-1">
+  <!-- Hero -->
+  <section class="hero">
+    <canvas id="neural-bg" aria-hidden="true"></canvas>
+    <div class="hero-inner">
+      <div class="hero-avatar" id="hero-avatar">
+        <img src="/commons/avatar.webp" alt="Khushal Jethava" width="140" height="140" fetchpriority="high">
+      </div>
+      <div>
+        <h1>Khushal Jethava</h1>
+        <div class="role"><span id="typed-role">Machine Learning Engineer</span><span class="typed-cursor"></span></div>
+        <div class="location"><i class="fas fa-location-dot me-1"></i>Ahmedabad, Gujarat, India</div>
+        <div class="btn-row">
+          <a class="primary" href="mailto:khushaljethava14@outlook.com"><i class="fas fa-envelope"></i>Hire Me</a>
+          <a href="https://www.linkedin.com/in/khushaljethava" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i>LinkedIn</a>
+          <a href="https://github.com/khushaljethava" target="_blank" rel="noopener"><i class="fab fa-github"></i>GitHub</a>
+          <a href="{{ '/blog/' | relative_url }}"><i class="fas fa-pen-nib"></i>Read My Blog</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="reveal">
+    <div class="stats">
+      <div class="stat-card">
+        <div class="num" data-count="4">4+</div>
+        <div class="lbl">Years in AI/ML</div>
+      </div>
+      <div class="stat-card">
+        <div class="num" data-count="6">6+</div>
+        <div class="lbl">Production AI Systems</div>
+      </div>
+      <div class="stat-card">
+        <div class="num" data-count="180">180+</div>
+        <div class="lbl">Technical Articles</div>
+      </div>
+      <div class="stat-card">
+        <div class="num" data-count="3">3</div>
+        <div class="lbl">AI Domains: CV · NLP · GenAI</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="reveal">
+    <h2 class="section-title"><i class="fas fa-user-astronaut"></i>About</h2>
+    <p>
+      I'm a Machine Learning Engineer with 4+ years of experience designing and shipping
+      production AI systems across document intelligence, computer vision, and generative AI.
+      I've built Document AI products with fine-tuned transformers, room-transformation
+      pipelines with ControlNet, car damage detection with Detectron2, and generative
+      chatbots powered by LSTM and BART.
+    </p>
+    <p class="mb-0">
+      My current focus is advanced GenAI work — LLM applications, RAG systems, AI agents,
+      and image-to-avatar transformation — and I write about it all on
+      <a href="{{ '/blog/' | relative_url }}">my blog</a>, where I share practical AI and
+      Python tutorials with hands-on code.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section class="reveal">
+    <h2 class="section-title"><i class="fas fa-microchip"></i>Skills &amp; Technologies</h2>
+    <div class="skills">
+      <span><i class="fab fa-python"></i>Python</span>
+      <span><i class="fas fa-wand-magic-sparkles"></i>Generative AI</span>
+      <span><i class="fas fa-brain"></i>LLMs &amp; Fine-tuning</span>
+      <span><i class="fas fa-diagram-project"></i>RAG Systems</span>
+      <span><i class="fas fa-link"></i>LangChain</span>
+      <span><i class="fas fa-language"></i>NLP</span>
+      <span><i class="fas fa-fire"></i>PyTorch</span>
+      <span><i class="fas fa-robot"></i>Transformers</span>
+      <span><i class="fas fa-eye"></i>Computer Vision</span>
+      <span><i class="fas fa-crosshairs"></i>YOLO &amp; OpenCV</span>
+      <span><i class="fas fa-layer-group"></i>Detectron2</span>
+      <span><i class="fas fa-palette"></i>Stable Diffusion &amp; ControlNet</span>
+      <span><i class="fas fa-bolt"></i>FastAPI</span>
+      <span><i class="fas fa-server"></i>Django</span>
+      <span><i class="fas fa-gears"></i>MLOps</span>
+      <span><i class="fas fa-user-gear"></i>AI Agents</span>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="reveal">
+    <h2 class="section-title"><i class="fas fa-briefcase"></i>Experience</h2>
+
+    <div class="xp-item">
+      <h3>Artificial Intelligence Engineer — Codiste</h3>
+      <div class="xp-meta">April 2024 – Present · Ahmedabad, India</div>
+      <ul>
+        <li>Building advanced GenAI solutions including deepfake technology and image-to-avatar transformation pipelines.</li>
+        <li>Developing LLM-powered applications, AI agents, and production RAG systems.</li>
+      </ul>
+    </div>
+
+    <div class="xp-item">
+      <h3>Machine Learning Engineer — Maknon Private Ltd.</h3>
+      <div class="xp-meta">October 2023 – April 2024 · Ahmedabad, India</div>
+      <ul>
+        <li>Performed image segmentation to identify and categorize floors, walls, and objects; fine-tuned models for accuracy.</li>
+        <li>Implemented room transformations with ControlNet and built backend APIs to serve AI functionality.</li>
+      </ul>
+    </div>
+
+    <div class="xp-item">
+      <h3>Artificial Intelligence Engineer — SoluSoft Corporation</h3>
+      <div class="xp-meta">October 2021 – October 2023 · Ahmedabad, India</div>
+      <ul>
+        <li>Developed a Document AI product for classification and information extraction using fine-tuned transformers with Django and FastAPI.</li>
+        <li>Built barcode detection (YOLO, OpenCV) and a car damage detection system (Detectron2, CNNs).</li>
+        <li>Prototyped generative chatbots with LSTM sentiment analysis and BART dialogue summarization; led the project team.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="reveal">
+    <h2 class="section-title"><i class="fas fa-cubes"></i>Highlighted Work</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <span class="card-icon"><i class="fas fa-file-lines"></i></span>
+        <h3>Document AI Platform</h3>
+        <p>Document classification and information extraction product built on fine-tuned transformers, served with Django and FastAPI.</p>
+      </div>
+      <div class="project-card">
+        <span class="card-icon"><i class="fas fa-couch"></i></span>
+        <h3>Room Transformation with ControlNet</h3>
+        <p>Image segmentation of interior spaces with high-quality generative room redesigns driven by ControlNet.</p>
+      </div>
+      <div class="project-card">
+        <span class="card-icon"><i class="fas fa-car-burst"></i></span>
+        <h3>Car Damage Detection</h3>
+        <p>Automated vehicle damage assessment framework using Detectron2 and convolutional neural networks.</p>
+      </div>
+      <div class="project-card">
+        <span class="card-icon"><i class="fas fa-barcode"></i></span>
+        <h3>Barcode Detection System</h3>
+        <p>High-throughput barcode detection in documents using YOLO and OpenCV for efficient processing.</p>
+      </div>
+      <div class="project-card">
+        <span class="card-icon"><i class="fas fa-comments"></i></span>
+        <h3>Generative Chatbots</h3>
+        <p>Conversational AI with LSTM-based sentiment analysis and BART-based dialogue summarization.</p>
+      </div>
+      <div class="project-card">
+        <span class="card-icon"><i class="fas fa-wand-magic-sparkles"></i></span>
+        <h3>Image-to-Avatar GenAI</h3>
+        <p>State-of-the-art generative pipelines for deepfake technology and image-to-avatar transformation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest posts -->
+  <section class="reveal">
+    <h2 class="section-title"><i class="fas fa-rss"></i>Latest from the Blog</h2>
+    {% for post in site.posts limit: 3 %}
+      <a class="post-item" href="{{ post.url | relative_url }}">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.description | default: post.excerpt | strip_html | truncate: 140 }}</p>
+        <span class="post-date"><i class="far fa-calendar fa-fw me-1"></i>{{ post.date | date: "%b %-d, %Y" }}</span>
+      </a>
+    {% endfor %}
+    <a class="view-all" href="{{ '/blog/' | relative_url }}">View all posts <i class="fas fa-arrow-right fa-sm"></i></a>
+  </section>
+
+  <!-- Contact -->
+  <section class="reveal">
+    <h2 class="section-title"><i class="fas fa-paper-plane"></i>Get in Touch</h2>
+    <p>
+      Open to collaborating on Generative AI, LLM, and computer vision projects.
+      The fastest way to reach me is by email or LinkedIn.
+    </p>
+    <div class="btn-row">
+      <a class="primary" href="mailto:khushaljethava14@outlook.com"><i class="fas fa-envelope"></i>khushaljethava14@outlook.com</a>
+      <a href="https://www.linkedin.com/in/khushaljethava" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i>LinkedIn</a>
+      <a href="https://github.com/khushaljethava" target="_blank" rel="noopener"><i class="fab fa-github"></i>GitHub</a>
+      <a href="https://x.com/d3evil4" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i>X / Twitter</a>
+    </div>
+  </section>
+</div>
+
+<script>
+  (function () {
+    'use strict';
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.documentElement.classList.add('pf-js');
+
+    /* ---------- Neural network particle canvas ---------- */
+    var canvas = document.getElementById('neural-bg');
+    if (canvas && !reduceMotion) {
+      var ctx = canvas.getContext('2d');
+      var nodes = [];
+      var NODE_COUNT = 45;
+      var LINK_DIST = 120;
+
+      function resize() {
+        var rect = canvas.parentElement.getBoundingClientRect();
+        canvas.width = rect.width;
+        canvas.height = rect.height;
+      }
+
+      function initNodes() {
+        nodes = [];
+        for (var i = 0; i < NODE_COUNT; i++) {
+          nodes.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: (Math.random() - 0.5) * 0.4,
+            r: Math.random() * 1.8 + 1
+          });
+        }
+      }
+
+      function tick() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        var i, j, a, b, dx, dy, d;
+        for (i = 0; i < nodes.length; i++) {
+          a = nodes[i];
+          a.x += a.vx;
+          a.y += a.vy;
+          if (a.x < 0 || a.x > canvas.width) a.vx *= -1;
+          if (a.y < 0 || a.y > canvas.height) a.vy *= -1;
+        }
+        for (i = 0; i < nodes.length; i++) {
+          for (j = i + 1; j < nodes.length; j++) {
+            a = nodes[i];
+            b = nodes[j];
+            dx = a.x - b.x;
+            dy = a.y - b.y;
+            d = Math.sqrt(dx * dx + dy * dy);
+            if (d < LINK_DIST) {
+              ctx.strokeStyle = 'rgba(124, 99, 237, ' + (0.22 * (1 - d / LINK_DIST)).toFixed(3) + ')';
+              ctx.lineWidth = 1;
+              ctx.beginPath();
+              ctx.moveTo(a.x, a.y);
+              ctx.lineTo(b.x, b.y);
+              ctx.stroke();
+            }
+          }
+        }
+        for (i = 0; i < nodes.length; i++) {
+          a = nodes[i];
+          ctx.fillStyle = 'rgba(99, 132, 241, 0.55)';
+          ctx.beginPath();
+          ctx.arc(a.x, a.y, a.r, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        requestAnimationFrame(tick);
+      }
+
+      resize();
+      initNodes();
+      window.addEventListener('resize', function () {
+        resize();
+        initNodes();
+      });
+      requestAnimationFrame(tick);
+    }
+
+    /* ---------- Typing effect for roles ---------- */
+    var roles = [
+      'Machine Learning Engineer',
+      'Generative AI Specialist',
+      'LLM & RAG Developer',
+      'Computer Vision Engineer',
+      'AI Agent Builder'
+    ];
+    var typedEl = document.getElementById('typed-role');
+    if (typedEl && !reduceMotion) {
+      var roleIdx = 0;
+      var charIdx = roles[0].length;
+      var deleting = true;
+
+      function typeLoop() {
+        var current = roles[roleIdx];
+        if (deleting) {
+          charIdx--;
+          typedEl.textContent = current.slice(0, charIdx);
+          if (charIdx === 0) {
+            deleting = false;
+            roleIdx = (roleIdx + 1) % roles.length;
+            setTimeout(typeLoop, 350);
+            return;
+          }
+          setTimeout(typeLoop, 35);
+        } else {
+          current = roles[roleIdx];
+          charIdx++;
+          typedEl.textContent = current.slice(0, charIdx);
+          if (charIdx === current.length) {
+            deleting = true;
+            setTimeout(typeLoop, 2200);
+            return;
+          }
+          setTimeout(typeLoop, 65);
+        }
+      }
+      setTimeout(typeLoop, 2200);
+    }
+
+    /* ---------- 3D tilt on project cards & avatar ---------- */
+    var hasFinePointer = window.matchMedia('(pointer: fine)').matches;
+    if (hasFinePointer && !reduceMotion) {
+      document.querySelectorAll('.portfolio .project-card').forEach(function (card) {
+        card.addEventListener('mousemove', function (e) {
+          var rect = card.getBoundingClientRect();
+          var px = (e.clientX - rect.left) / rect.width - 0.5;
+          var py = (e.clientY - rect.top) / rect.height - 0.5;
+          card.style.transform =
+            'rotateY(' + (px * 10).toFixed(2) + 'deg) rotateX(' + (-py * 10).toFixed(2) + 'deg) translateZ(6px)';
+        });
+        card.addEventListener('mouseleave', function () {
+          card.style.transform = '';
+        });
+      });
+
+      var avatar = document.querySelector('.portfolio .hero-avatar img');
+      var hero = document.querySelector('.portfolio .hero');
+      if (avatar && hero) {
+        hero.addEventListener('mousemove', function (e) {
+          var rect = hero.getBoundingClientRect();
+          var px = (e.clientX - rect.left) / rect.width - 0.5;
+          var py = (e.clientY - rect.top) / rect.height - 0.5;
+          avatar.style.transform =
+            'rotateY(' + (px * 14).toFixed(2) + 'deg) rotateX(' + (-py * 14).toFixed(2) + 'deg)';
+        });
+        hero.addEventListener('mouseleave', function () {
+          avatar.style.transform = '';
+        });
+      }
+    }
+
+    /* ---------- Scroll reveal ---------- */
+    if ('IntersectionObserver' in window && !reduceMotion) {
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+      document.querySelectorAll('.portfolio .reveal').forEach(function (el) {
+        observer.observe(el);
+      });
+    } else {
+      document.querySelectorAll('.portfolio .reveal').forEach(function (el) {
+        el.classList.add('visible');
+      });
+    }
+  })();
+</script>

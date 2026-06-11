@@ -15,6 +15,14 @@ layout: null
     <priority>1.0</priority>
   </url>
 
+  <!-- Blog index -->
+  <url>
+    <loc>{{ site.url }}/blog/</loc>
+    {% if site.posts.first %}<lastmod>{{ site.posts.first.last_modified_at | default: site.posts.first.date | date_to_xmlschema }}</lastmod>{% endif %}
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Blog posts (newest first, excludes sitemap: false) -->
   {% assign posts = site.posts | where_exp: "post", "post.sitemap != false" %}
   {% for post in posts %}
