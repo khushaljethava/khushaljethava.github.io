@@ -5,8 +5,8 @@ date: 2026-05-04 12:00:00 +0800
 categories: [AI, Data Engineering]
 tags: [conversational-analytics, bigquery-data-agent, gemini-analytics, natural-language-sql, data-agent]
 image:
-  path: "/commons/Python Data Visualization with Matplotlib and Seaborn Complete Guide.webp"
-  alt: "Conversational analytics and data visualization workflow illustration"
+  path: "/commons/Conversational Analytics Data Agent.webp"
+  alt: "Conversational analytics and BigQuery data agent workflow illustration"
 ---
 
 - Slug: /blog/conversational-analytics-bigquery-data-agent

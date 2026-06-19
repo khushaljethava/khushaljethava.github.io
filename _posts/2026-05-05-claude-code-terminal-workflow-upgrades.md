@@ -5,7 +5,7 @@ date: 2026-05-05 12:00:00 +0800
 categories: [AI, Tutorials]
 tags: [claude-code-terminal, ai-coding-agents, terminal-agents, developer-workflow, claude-code-hooks]
 image:
-  path: "/commons/Building AI Agents with Python A Complete Guide.webp"
+  path: "/commons/Claude Code Terminal Workflow Upgrades.webp"
   alt: "Claude Code terminal workflow and AI coding agents illustration"
 ---
 

@@ -5,7 +5,7 @@ date: 2026-04-24 12:30:00 +0530
 categories: [Research]
 tags: [openai, privacy-filter, pii-redaction, ai-safety, mlops, data-privacy]
 image:
-  path: /commons/openai-privacy-filter-local-pii-redaction-hero.png
+  path: "/commons/OpenAI Privacy Filter Local PII Redaction.webp"
   alt: "OpenAI Privacy Filter hero graphic for local PII redaction workflows"
 ---
 

@@ -5,8 +5,8 @@ date: 2026-05-04 12:00:00 +0800
 categories: [Machine Learning, Python]
 tags: [kernel-trick, svm-python, rbf-kernel, nonlinear-classification, support-vector-machines]
 image:
-  path: "/commons/Fraud Detection with Machine Learning in Python.webp"
-  alt: "Machine learning classification boundary illustration for Python"
+  path: "/commons/Kernel Trick and SVMs in Python.webp"
+  alt: "Kernel trick and SVM classification boundary illustration for Python"
 ---
 
 - Slug: /blog/kernel-trick-svm-python-guide

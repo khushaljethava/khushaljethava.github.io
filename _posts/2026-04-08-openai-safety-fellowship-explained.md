@@ -5,7 +5,7 @@ date: 2026-04-08 12:00:00 +0530
 categories: [Research]
 tags: [openai, ai-safety, alignment-research, fellowship, research-careers, agentic-oversight]
 image:
-  path: /commons/openai-safety-fellowship-explained-hero.png
+  path: "/commons/OpenAI Safety Fellowship Explained.webp"
   alt: "OpenAI Safety Fellowship hero graphic showing AI safety research timeline and application focus areas"
 ---
 

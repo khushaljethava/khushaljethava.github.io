@@ -5,7 +5,7 @@ date: 2026-04-20 12:30:00 +0530
 categories: [Research]
 tags: [openai, gpt-rosalind, drug-discovery, life-sciences, biotech, ai-research]
 image:
-  path: /commons/openai-gpt-rosalind-drug-discovery-hero.png
+  path: "/commons/OpenAI GPT-Rosalind Drug Discovery.webp"
   alt: "OpenAI GPT-Rosalind hero graphic showing a life sciences AI model and biotech workflow interface"
 ---
 

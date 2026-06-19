@@ -5,8 +5,8 @@ date: 2026-05-04 12:00:00 +0800
 categories: [Machine Learning, Python]
 tags: [contrastive-learning, pytorch-embeddings, simclr, moco, clip]
 image:
-  path: "/commons/AutoML with Python Automate Your Machine Learning Pipeline.webp"
-  alt: "Machine learning representation workflow in Python illustration"
+  path: "/commons/Contrastive Learning With PyTorch.webp"
+  alt: "Contrastive learning representation workflow in PyTorch illustration"
 ---
 
 - Slug: /blog/contrastive-learning-pytorch-guide

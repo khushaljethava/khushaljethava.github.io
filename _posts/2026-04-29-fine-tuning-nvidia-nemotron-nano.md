@@ -5,8 +5,8 @@ date: 2026-04-29 12:00:00 +0800
 categories: [AI, Fine-Tuning]
 tags: [nemotron-fine-tuning, lora, trl, hugging-face, instruction-tuning]
 image:
-  path: "/commons/Fine-Tuning Large Language Models with Python A Practical Guide.webp"
-  alt: "Fine-tuning large language models with Python hero illustration"
+  path: "/commons/Fine-Tuning NVIDIA Nemotron Nano.webp"
+  alt: "Fine-tuning NVIDIA Nemotron Nano hero illustration"
 ---
 
 - Slug: /blog/fine-tuning-nvidia-nemotron-nano

@@ -5,8 +5,8 @@ date: 2026-05-01 12:00:00 +0800
 categories: [AI, Developer Tools]
 tags: [cursor-sdk, coding-agents, typescript-agents, ai-pull-requests, agent-automation]
 image:
-  path: "/commons/Building AI Agents with Python A Complete Guide.webp"
-  alt: "Coding agents and AI developer workflow hero illustration"
+  path: "/commons/Cursor SDK Coding Agents Guide.webp"
+  alt: "Cursor SDK coding agents and AI developer workflow hero illustration"
 ---
 
 - Slug: /blog/cursor-sdk-coding-agents-guide

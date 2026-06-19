@@ -5,8 +5,8 @@ date: 2026-05-05 12:00:00 +0800
 categories: [AI, LLMs]
 tags: [deepseek-v4-flash-local, llama.cpp, gguf-models, local-llm-inference, gpu-offloading]
 image:
-  path: "/commons/How to Build a Large Language Model from Scratch Using Python.webp"
-  alt: "Local large language model inference with Python hero illustration"
+  path: "/commons/Run DeepSeek V4 Flash Locally.webp"
+  alt: "Run DeepSeek V4 Flash Locally hero illustration"
 ---
 
 - Slug: /blog/run-deepseek-v4-flash-locally

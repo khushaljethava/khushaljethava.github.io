@@ -5,8 +5,8 @@ date: 2026-05-04 12:00:00 +0800
 categories: [Python, Statistics]
 tags: [kruskal-wallis-test-python, nonparametric-statistics, scipy-stats, group-comparison, post-hoc-tests]
 image:
-  path: "/commons/How to calculate coefficient of variation in Python.webp"
-  alt: "Python statistics and group comparison analysis illustration"
+  path: "/commons/Kruskal-Wallis Test in Python.webp"
+  alt: "Kruskal-Wallis test Python statistics and group comparison illustration"
 ---
 
 - Slug: /blog/kruskal-wallis-test-python-guide

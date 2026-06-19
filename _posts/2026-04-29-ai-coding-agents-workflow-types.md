@@ -5,8 +5,8 @@ date: 2026-04-29 12:00:00 +0800
 categories: [AI, Python]
 tags: [ai-coding-agents, ide-agents, terminal-agents, pr-agents, cloud-agents]
 image:
-  path: "/commons/Building AI Agents with Python A Complete Guide.webp"
-  alt: "AI coding agents workflow illustration for Python developers"
+  path: "/commons/AI Coding Agent Workflow Types.webp"
+  alt: "AI coding agent workflow types illustration for Python developers"
 ---
 
 - Slug: /blog/ai-coding-agents-workflow-types

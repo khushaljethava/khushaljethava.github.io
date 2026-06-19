@@ -5,8 +5,8 @@ date: 2026-04-30 12:00:00 +0800
 categories: [AI, APIs]
 tags: [deepseek-v4-api, thinking-mode, streamlit-app, llm-evaluation, reasoning-models]
 image:
-  path: "/commons/How to Build a Large Language Model from Scratch Using Python.webp"
-  alt: "Large language model API evaluation and reasoning mode illustration"
+  path: "/commons/DeepSeek V4 API Thinking Mode Arena.webp"
+  alt: "DeepSeek V4 API thinking mode evaluation and reasoning arena illustration"
 ---
 
 - Slug: /blog/deepseek-v4-api-thinking-mode-arena
