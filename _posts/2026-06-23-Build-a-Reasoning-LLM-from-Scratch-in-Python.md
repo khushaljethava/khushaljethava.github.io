@@ -6,7 +6,7 @@ categories: [Python, AI]
 tags: [python, llm, transformers, deep-learning, pytorch, reasoning]
 mermaid: true
 image:
-  path: "/commons/Build a Reasoning LLM from Scratch in Python.webp"
+  path: "/commons/Build a Reasoning LLM from Scratch in Python.png"
   alt: "Reasoning LLM architecture: tokenizer, RoPE attention, SwiGLU transformer block, and chain-of-thought dual-loss training"
 ---
 
