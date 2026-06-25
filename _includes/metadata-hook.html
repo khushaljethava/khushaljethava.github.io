@@ -4,6 +4,21 @@
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 
+<!-- Polyglot duplicate-content guard: non-English pages serve English fallback -->
+<!-- content unless genuinely translated. noindex those fallbacks so only real -->
+<!-- translations (posts whose `translations` list includes the active language) -->
+<!-- get indexed. English stays fully indexable. -->
+{%- assign active_lang = site.active_lang | default: 'en' -%}
+{%- if active_lang != 'en' -%}
+  {%- assign keep_index = false -%}
+  {%- if page.layout == 'post' and page.translations contains active_lang -%}
+    {%- assign keep_index = true -%}
+  {%- endif -%}
+  {%- unless keep_index -%}
+<meta name="robots" content="noindex, follow">
+  {%- endunless -%}
+{%- endif -%}
+
 <!-- Pagination pages: noindex + rel prev/next to consolidate link equity -->
 {% if paginator %}
   {% if paginator.page > 1 %}
@@ -31,6 +46,21 @@
   {% for tag in page.tags %}
 <meta property="article:tag" content="{{ tag | xml_escape }}">
   {% endfor %}
+{% endif %}
+
+<!-- hreflang alternates: English stays at the root URL (x-default + en); -->
+<!-- translated versions live under /<lang>/. page.url is the un-prefixed URL in -->
+<!-- every polyglot language build, so this block is identical (reciprocal) across langs. -->
+{% if page.layout == 'post' %}
+  {%- assign avail_langs = page.translations | default: empty -%}
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ page.url }}">
+<link rel="alternate" hreflang="en" href="{{ site.url }}{{ page.url }}">
+  {%- for lang in avail_langs -%}
+    {%- unless lang == 'en' -%}
+      {%- if lang == 'zh' -%}{%- assign hl = 'zh-Hans' -%}{%- else -%}{%- assign hl = lang -%}{%- endif -%}
+<link rel="alternate" hreflang="{{ hl }}" href="{{ site.url }}/{{ lang }}{{ page.url }}">
+    {%- endunless -%}
+  {%- endfor -%}
 {% endif %}
 
 {% include schema-breadcrumb.html %}
@@ -133,6 +163,9 @@
   "@type": "BlogPosting",
   "headline": {{ page.title | jsonify }},
   "description": {{ page.description | default: page.excerpt | strip_html | truncate: 200 | jsonify }},
+  {%- assign il = site.active_lang | default: site.lang | default: 'en' -%}
+  {%- if il == 'zh' -%}{%- assign il = 'zh-Hans' -%}{%- endif -%}
+  "inLanguage": "{{ il }}",
   "url": "{{ site.url }}{{ page.url }}",
   "datePublished": "{{ page.date | date_to_xmlschema }}",
   {% if page.last_modified_at %}"dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",{% endif %}
