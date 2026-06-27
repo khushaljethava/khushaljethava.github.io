@@ -5,7 +5,7 @@ date: 2026-04-04 12:00:00 +0800
 categories: [Python]
 tags: [python, web-scraping]
 lang: pt
-translations: [hi, es, pt]
+translations: [hi, es, pt, fr, de]
 image:
   path: "/commons/Python Web Scraping The Complete Guide for 2026.webp"
   alt: "Fluxo de trabalho de web scraping com Python usando BeautifulSoup, Selenium e Playwright para extrair dados estruturados de sites"

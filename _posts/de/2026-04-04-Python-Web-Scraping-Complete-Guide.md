@@ -1,36 +1,36 @@
 ---
-title: "Web Scraping con Python: La guía completa para 2026"
-description: Una guía completa de web scraping con Python que cubre BeautifulSoup, Selenium, Playwright, el manejo de paginación y autenticación, prácticas éticas de scraping, almacenamiento de datos extraídos y un proyecto práctico que extrae ofertas de empleo.
+title: "Web Scraping mit Python: Der vollständige Leitfaden für 2026"
+description: Ein vollständiger Leitfaden zum Web Scraping mit Python, der BeautifulSoup, Selenium, Playwright, den Umgang mit Paginierung und Authentifizierung, ethische Scraping-Praktiken, das Speichern gescrapter Daten und ein praktisches Projekt zum Scrapen von Stellenanzeigen behandelt.
 date: 2026-04-04 12:00:00 +0800
 categories: [Python]
 tags: [python, web-scraping]
-lang: es
+lang: de
 translations: [hi, es, pt, fr, de]
 image:
   path: "/commons/Python Web Scraping The Complete Guide for 2026.webp"
-  alt: "Flujo de trabajo de web scraping con Python usando BeautifulSoup, Selenium y Playwright para extraer datos estructurados de sitios web"
+  alt: "Python-Web-Scraping-Workflow mit BeautifulSoup, Selenium und Playwright zur Extraktion strukturierter Daten aus Websites"
 ---
 
-## ¿Por qué hacer web scraping?
+## Warum Web Scraping?
 
-El web scraping extrae datos estructurados de los sitios web. El monitoreo de precios, la generación de leads, la recopilación de datos de investigación, el análisis de la competencia, la agregación de noticias: todo esto depende del scraping. Una vez que tengas los datos extraídos, puedes alimentarlos en un [análisis de sentimientos](/posts/Sentiment-Analysis-with-Python/) o en [sistemas de recomendación](/posts/Building-Recommendation-Systems-with-Python/) para obtener información más profunda. Python es el lenguaje más popular para ello gracias a bibliotecas maduras como BeautifulSoup, Selenium y Playwright.
+Web Scraping extrahiert strukturierte Daten aus Websites. Preisüberwachung, Lead-Generierung, Erhebung von Forschungsdaten, Wettbewerbsanalyse, Nachrichtenaggregation — all das beruht auf Scraping. Sobald Sie Daten gescrapt haben, können Sie diese für tiefere Erkenntnisse in die [Sentiment-Analyse](/posts/Sentiment-Analysis-with-Python/) oder in [Empfehlungssysteme](/posts/Building-Recommendation-Systems-with-Python/) einspeisen. Python ist dafür die beliebteste Sprache, da es ausgereifte Bibliotheken wie BeautifulSoup, Selenium und Playwright gibt.
 
-Esta guía cubre todo el conjunto de herramientas de scraping: análisis de páginas estáticas, manejo de páginas dinámicas, autenticación, paginación, almacenamiento de datos y prácticas éticas. Terminamos con un proyecto completo que extrae ofertas de empleo.
+Dieser Leitfaden behandelt das gesamte Scraping-Toolkit: Parsen statischer Seiten, Umgang mit dynamischen Seiten, Authentifizierung, Paginierung, Datenspeicherung und ethische Praktiken. Wir schließen mit einem vollständigen Projekt ab, das Stellenanzeigen scrapt.
 
-Cuando construí conjuntos de datos de entrenamiento para modelos de visión por computadora en Codiste, el web scraping era a menudo el primer paso del pipeline. Para nuestro sistema de detección de daños en vehículos, extrajimos decenas de miles de imágenes de vehículos de galerías públicas de reclamaciones de seguros y foros de automoción para complementar los datos propios de nuestro cliente. La infraestructura de scraping terminó siendo tan importante como la propia arquitectura del modelo.
+Als ich bei Codiste Trainingsdatensätze für Computer-Vision-Modelle erstellte, war Web Scraping oft der erste Schritt in der Pipeline. Für unser System zur Erkennung von Fahrzeugschäden haben wir Zehntausende von Fahrzeugbildern aus öffentlichen Galerien von Versicherungsfällen und aus Automobilforen gescrapt, um die proprietären Daten unseres Kunden zu ergänzen. Die Scraping-Infrastruktur erwies sich letztlich als genauso wichtig wie die Modellarchitektur selbst.
 
-## Configuración
+## Einrichtung
 
-Instala las bibliotecas principales:
+Installieren Sie die Kernbibliotheken:
 
 ```python
 pip install requests beautifulsoup4 lxml selenium playwright pandas
 playwright install chromium
 ```
 
-## BeautifulSoup para páginas estáticas
+## BeautifulSoup für statische Seiten
 
-BeautifulSoup analiza HTML y te permite navegar por el árbol del documento. Funciona con `requests` para obtener páginas y extraer datos.
+BeautifulSoup parst HTML und ermöglicht Ihnen, durch den Dokumentbaum zu navigieren. Es arbeitet mit `requests` zusammen, um Seiten abzurufen und Daten zu extrahieren.
 
 ```python
 import requests
@@ -46,9 +46,9 @@ for i, title in enumerate(titles[:10], 1):
     print(f"{i}. {title.text} - {title.get('href', 'N/A')}")
 ```
 
-### Selección de elementos
+### Elemente auswählen
 
-BeautifulSoup admite tanto selectores CSS como sus propios métodos de búsqueda:
+BeautifulSoup unterstützt sowohl CSS-Selektoren als auch eigene Find-Methoden:
 
 ```python
 # CSS selectors (recommended)
@@ -64,7 +64,7 @@ soup.find_all("a", class_="link")    # All matching elements
 soup.find("div", {"data-id": "123"}) # By attribute
 ```
 
-### Extracción de datos
+### Daten extrahieren
 
 ```python
 import requests
@@ -95,9 +95,9 @@ for q in data[:3]:
     print(f"  Tags: {', '.join(q['tags'])}")
 ```
 
-### Añadir cabeceras y gestión de sesiones
+### Header und Sitzungsverwaltung hinzufügen
 
-Los sitios web pueden bloquear solicitudes que parezcan automatizadas. Establece cabeceras adecuadas:
+Websites können Anfragen blockieren, die automatisiert aussehen. Setzen Sie geeignete Header:
 
 ```python
 import requests
@@ -115,9 +115,9 @@ response = session.get("https://example.com")
 soup = BeautifulSoup(response.text, "lxml")
 ```
 
-## Manejo de la paginación
+## Paginierung handhaben
 
-La mayoría de los objetivos de scraping abarcan varias páginas. Maneja esto con un bucle:
+Die meisten Scraping-Ziele erstrecken sich über mehrere Seiten. Behandeln Sie dies mit einer Schleife:
 
 ```python
 import requests
@@ -161,7 +161,7 @@ items = scrape_all_pages("https://example.com/listings")
 print(f"Total items scraped: {len(items)}")
 ```
 
-Para sitios con enlaces de "página siguiente" en lugar de números de página:
+Für Websites mit „nächste Seite"-Links anstelle von Seitenzahlen:
 
 ```python
 def scrape_with_next_link(start_url: str) -> list:
@@ -187,9 +187,9 @@ def scrape_with_next_link(start_url: str) -> list:
     return all_items
 ```
 
-## Páginas dinámicas con Selenium
+## Dynamische Seiten mit Selenium
 
-Muchos sitios web modernos cargan contenido con JavaScript. BeautifulSoup solo ve el HTML inicial. Selenium controla un navegador real para renderizar contenido JavaScript.
+Viele moderne Websites laden Inhalte mit JavaScript. BeautifulSoup sieht nur das anfängliche HTML. Selenium steuert einen echten Browser, um JavaScript-Inhalte zu rendern.
 
 ```python
 from selenium import webdriver
@@ -232,9 +232,9 @@ def scrape_dynamic_page(url: str) -> list:
 products = scrape_dynamic_page("https://example.com/products")
 ```
 
-### Manejo del desplazamiento infinito
+### Endloses Scrollen handhaben
 
-Algunas páginas cargan más contenido a medida que te desplazas hacia abajo:
+Manche Seiten laden mehr Inhalte, während Sie nach unten scrollen:
 
 ```python
 from selenium import webdriver
@@ -265,9 +265,9 @@ def scrape_infinite_scroll(url: str, scroll_count: int = 10) -> str:
     return page_source
 ```
 
-## Páginas dinámicas con Playwright
+## Dynamische Seiten mit Playwright
 
-Playwright es una alternativa más reciente a Selenium con mejor soporte asíncrono y espera automática:
+Playwright ist eine neuere Alternative zu Selenium mit besserer Async-Unterstützung und automatischem Warten:
 
 ```python
 from playwright.sync_api import sync_playwright
@@ -306,7 +306,7 @@ for p in products[:5]:
     print(f"{p['name']} - {p['price']}")
 ```
 
-### Playwright asíncrono para mayor velocidad
+### Async-Playwright für Geschwindigkeit
 
 ```python
 import asyncio
@@ -340,9 +340,9 @@ urls = [
 results = asyncio.run(scrape_multiple_pages(urls))
 ```
 
-## Manejo de la autenticación
+## Authentifizierung handhaben
 
-Algunos sitios requieren iniciar sesión antes de poder acceder a los datos:
+Manche Websites erfordern eine Anmeldung, bevor Sie auf Daten zugreifen können:
 
 ```python
 import requests
@@ -373,7 +373,7 @@ def scrape_with_login(login_url: str, target_url: str, username: str, password: 
     return target_response.text
 ```
 
-Para sitios que usan autenticación basada en cookies, también puedes establecer cookies directamente:
+Für Websites, die eine cookie-basierte Authentifizierung verwenden, können Sie auch Cookies direkt setzen:
 
 ```python
 session = requests.Session()
@@ -381,11 +381,11 @@ session.cookies.set("session_id", "your_session_cookie_value")
 response = session.get("https://example.com/dashboard")
 ```
 
-## Almacenamiento de datos extraídos
+## Gescrapte Daten speichern
 
-Una vez que tus datos están almacenados, puedes [visualizar tendencias y patrones](/posts/Python-Data-Visualization-Matplotlib-Seaborn/) para dar sentido a grandes conjuntos de datos extraídos.
+Sobald Ihre Daten gespeichert sind, können Sie [Trends und Muster visualisieren](/posts/Python-Data-Visualization-Matplotlib-Seaborn/), um große gescrapte Datensätze zu verstehen.
 
-### CSV con Pandas
+### CSV mit Pandas
 
 ```python
 import pandas as pd
@@ -404,7 +404,7 @@ scraped_data = [
 save_to_csv(scraped_data, "jobs.csv")
 ```
 
-### Base de datos SQLite
+### SQLite-Datenbank
 
 ```python
 import sqlite3
@@ -453,7 +453,7 @@ def save_jobs(jobs: list[dict]):
 setup_database()
 ```
 
-### JSON para datos anidados
+### JSON für verschachtelte Daten
 
 ```python
 import json
@@ -475,11 +475,11 @@ def append_to_json(new_data: list[dict], filename: str):
     save_to_json(existing, filename)
 ```
 
-## Prácticas éticas de scraping
+## Ethische Scraping-Praktiken
 
-El web scraping se encuentra en una zona gris. Sigue estas prácticas para mantenerte del lado correcto:
+Web Scraping befindet sich in einer Grauzone. Befolgen Sie diese Praktiken, um auf der richtigen Seite zu bleiben:
 
-**Respeta robots.txt.** Comprueba qué permite el sitio:
+**Respektieren Sie robots.txt.** Prüfen Sie, was die Website erlaubt:
 
 ```python
 from urllib.robotparser import RobotFileParser
@@ -502,9 +502,9 @@ else:
     print("Scraping blocked by robots.txt")
 ```
 
-En mi experiencia, la comprobación de `robots.txt` no es solo cuestión de ética: te ahorra tiempo de depuración. Una vez pasé horas solucionando un scraper que seguía siendo bloqueado, solo para darme cuenta de que el sitio prohibía explícitamente las rutas a las que accedía. Comprobar `robots.txt` primero me habría ahorrado todo ese esfuerzo y me habría señalado su API pública en su lugar.
+Meiner Erfahrung nach geht es bei der `robots.txt`-Prüfung nicht nur um Ethik — sie spart Ihnen Debugging-Zeit. Ich habe einmal Stunden damit verbracht, einen Scraper zu beheben, der immer wieder blockiert wurde, nur um festzustellen, dass die Website die Pfade, die ich ansteuerte, ausdrücklich verbot. Hätte ich `robots.txt` zuerst geprüft, hätte mir das diesen gesamten Aufwand erspart und mich stattdessen auf ihre öffentliche API verwiesen.
 
-**Limitación de tasa.** No martilles los servidores. Añade retrasos entre solicitudes:
+**Ratenbegrenzung.** Hämmern Sie nicht auf Server ein. Fügen Sie Verzögerungen zwischen Anfragen hinzu:
 
 ```python
 import time
@@ -516,18 +516,18 @@ def polite_request(session, url, min_delay=1.0, max_delay=3.0):
     return session.get(url)
 ```
 
-**Pautas adicionales:**
+**Zusätzliche Richtlinien:**
 
-- Revisa los Términos de Servicio del sitio
-- No extraigas datos personales o privados
-- Almacena en caché las respuestas para evitar solicitudes repetidas
-- Identifícate con un User-Agent personalizado que incluya información de contacto
-- Usa APIs oficiales cuando existan: el scraping es el último recurso
-- No sobrecargues sitios pequeños; ajusta tu tasa según la capacidad del servidor
+- Prüfen Sie die Nutzungsbedingungen der Website
+- Scrapen Sie keine personenbezogenen oder privaten Daten
+- Zwischenspeichern Sie Antworten, um wiederholte Anfragen zu vermeiden
+- Identifizieren Sie sich mit einem benutzerdefinierten User-Agent, der Kontaktinformationen enthält
+- Verwenden Sie offizielle APIs, wenn es sie gibt — Scraping ist ein letztes Mittel
+- Überlasten Sie kleine Websites nicht; passen Sie Ihre Rate an die Serverkapazität an
 
-## Proyecto completo: extracción de ofertas de empleo
+## Vollständiges Projekt: Stellenanzeigen scrapen
 
-Aquí tienes un scraper completo que recopila ofertas de empleo, maneja la paginación, almacena los resultados en SQLite y los exporta a CSV:
+Hier ist ein vollständiger Scraper, der Stellenanzeigen sammelt, Paginierung handhabt, Ergebnisse in SQLite speichert und nach CSV exportiert:
 
 ```python
 import requests
@@ -707,9 +707,9 @@ print(f"\nScraped {len(df)} jobs total")
 print(df[["title", "company", "location", "salary"]].head(10))
 ```
 
-## Manejo de errores y reintentos
+## Fehlerbehandlung und Wiederholungsversuche
 
-Los scrapers de producción necesitan lógica de reintentos:
+Produktions-Scraper benötigen eine Wiederholungslogik:
 
 ```python
 import requests
@@ -741,18 +741,18 @@ session = create_robust_session()
 response = session.get("https://example.com")  # Will retry on failure
 ```
 
-## Resumen
+## Zusammenfassung
 
-El web scraping con Python se reduce a elegir la herramienta adecuada según el tipo de página:
+Web Scraping mit Python läuft darauf hinaus, das richtige Werkzeug für den Seitentyp zu wählen:
 
-- **HTML estático** — Usa `requests` + BeautifulSoup. Rápido, sencillo, bajo uso de recursos.
-- **Páginas renderizadas con JavaScript** — Usa Playwright o Selenium. Más lento pero maneja contenido dinámico.
-- **Datos respaldados por API** — Revisa la pestaña Network en las DevTools del navegador. Muchos sitios "dinámicos" cargan datos desde APIs JSON que puedes llamar directamente, omitiendo el navegador por completo.
+- **Statisches HTML** — Verwenden Sie `requests` + BeautifulSoup. Schnell, einfach, geringe Ressourcennutzung.
+- **JavaScript-gerenderte Seiten** — Verwenden Sie Playwright oder Selenium. Langsamer, aber handhabt dynamische Inhalte.
+- **API-gestützte Daten** — Prüfen Sie den Network-Tab in den Browser-DevTools. Viele „dynamische" Websites laden Daten aus JSON-APIs, die Sie direkt aufrufen können, wodurch der Browser vollständig umgangen wird.
 
-Prácticas clave: respeta `robots.txt`, limita la tasa de tus solicitudes, maneja los errores con reintentos, almacena los datos de forma incremental para evitar perder el progreso y usa restricciones únicas para evitar duplicados. Empieza con el enfoque más simple y añade complejidad solo cuando sea necesario.
+Wichtige Praktiken: Respektieren Sie `robots.txt`, begrenzen Sie die Rate Ihrer Anfragen, behandeln Sie Fehler mit Wiederholungsversuchen, speichern Sie Daten inkrementell, um keinen Fortschritt zu verlieren, und verwenden Sie Eindeutigkeitsbeschränkungen, um Duplikate zu verhindern. Beginnen Sie mit dem einfachsten Ansatz und fügen Sie Komplexität nur hinzu, wenn es nötig ist.
 
-## Publicaciones relacionadas
+## Verwandte Beiträge
 
-- [Análisis de sentimientos con Python](/posts/Sentiment-Analysis-with-Python/) -- Analiza el tono y la opinión de los datos de texto extraídos a gran escala.
-- [Visualización de datos en Python con Matplotlib y Seaborn](/posts/Python-Data-Visualization-Matplotlib-Seaborn/) -- Convierte los conjuntos de datos extraídos en gráficos y paneles atractivos.
-- [Creación de sistemas de recomendación con Python](/posts/Building-Recommendation-Systems-with-Python/) -- Usa datos de productos o contenido extraídos para impulsar recomendaciones personalizadas.
+- [Sentiment-Analyse mit Python](/posts/Sentiment-Analysis-with-Python/) -- Analysieren Sie Ton und Meinung gescrapter Textdaten im großen Maßstab.
+- [Python-Datenvisualisierung mit Matplotlib und Seaborn](/posts/Python-Data-Visualization-Matplotlib-Seaborn/) -- Verwandeln Sie gescrapte Datensätze in überzeugende Diagramme und Dashboards.
+- [Empfehlungssysteme mit Python erstellen](/posts/Building-Recommendation-Systems-with-Python/) -- Verwenden Sie gescrapte Produkt- oder Inhaltsdaten, um personalisierte Empfehlungen zu betreiben.

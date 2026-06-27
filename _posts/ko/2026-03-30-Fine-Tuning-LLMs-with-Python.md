@@ -1,19 +1,19 @@
 ---
-title: "Fine-Tuning de Grandes Modelos de Linguagem com Python: Guia Prático"
-description: Aprenda a fazer fine-tuning de grandes modelos de linguagem com Python usando LoRA, QLoRA, Hugging Face Transformers e PEFT. Aborda preparação de dados, treinamento, avaliação e implantação.
+title: "Python으로 대규모 언어 모델 파인튜닝하기: 실용 가이드"
+description: LoRA, QLoRA, Hugging Face Transformers, PEFT를 사용하여 Python으로 대규모 언어 모델을 파인튜닝하는 방법을 배웁니다. 데이터셋 준비, 학습, 평가, 배포를 다룹니다.
 date: 2026-03-30 12:00:00 +0800
 categories: [Python]
 tags: [python, ai, llm, fine-tuning]
-lang: pt
+lang: ko
 translations: [hi, es, pt, fr, de, ja, ko]
 image:
   path: "/commons/Fine-Tuning Large Language Models with Python A Practical Guide.webp"
-  alt: "Fine-Tuning de Grandes Modelos de Linguagem com Python: Guia Prático"
+  alt: "Python으로 대규모 언어 모델 파인튜닝하기: 실용 가이드"
 ---
 
-## Por que fazer fine-tuning de um LLM?
+## 왜 LLM을 파인튜닝하는가?
 
-Um LLM pré-treinado sabe muito sobre linguagem, mas nada sobre o seu domínio, tom ou formato de tarefa específicos. O fine-tuning adapta um modelo de uso geral às suas necessidades, treinando-o com os seus próprios dados.
+사전 학습된 LLM은 언어에 대해 많은 것을 알고 있지만, 여러분의 특정 도메인, 톤, 작업 형식에 대해서는 아무것도 모릅니다. 파인튜닝은 범용 모델을 여러분 자신의 데이터로 학습시켜 여러분의 요구에 맞게 적응시킵니다.
 
 ```python
 # Before fine-tuning
@@ -25,20 +25,20 @@ prompt = "Classify this support ticket: 'My order arrived damaged'"
 # Model outputs: "Category: Shipping - Damaged Item, Priority: High"
 ```
 
-Motivos comuns para fazer fine-tuning:
+파인튜닝을 하는 일반적인 이유:
 
-- **Formato de saída consistente** — O modelo aprende a estrutura de resposta exata que você espera.
-- **Conhecimento de domínio** — Terminologia e padrões de raciocínio médicos, jurídicos ou financeiros. Para abordagens baseadas em recuperação, veja [RAG with Python](/posts/RAG-with-Python-Retrieval-Augmented-Generation/).
-- **Tom e estilo** — Combinar com a voz da sua marca ou com o estilo da sua documentação.
-- **Redução de custos** — Um modelo menor com fine-tuning pode superar um modelo geral maior na sua tarefa específica, com um custo de inferência menor.
+- **일관된 출력 형식** — 모델이 여러분이 정확히 기대하는 응답 구조를 학습합니다.
+- **도메인 지식** — 의료, 법률, 금융 용어 및 추론 패턴. 대신 검색 기반 접근 방식을 원한다면 [RAG with Python](/posts/RAG-with-Python-Retrieval-Augmented-Generation/)을 참조하세요.
+- **톤과 스타일** — 브랜드의 목소리나 문서 스타일에 맞춥니다.
+- **비용 절감** — 파인튜닝된 더 작은 모델이 여러분의 특정 작업에서 더 낮은 추론 비용으로 더 큰 범용 모델을 능가할 수 있습니다.
 
-Quando construí uma pipeline de Document AI na Codiste, fazer fine-tuning de um transformer com documentos específicos do domínio foi o ponto de virada que levou a nossa precisão de extração de medíocre a pronta para produção. O modelo base entendia a linguagem bem o suficiente, mas não conseguia extrair campos estruturados de faturas e contratos de forma confiável até que o treinamos com algumas centenas de exemplos anotados no nosso formato de saída exato.
+Codiste에서 Document AI 파이프라인을 구축했을 때, 도메인별 문서로 트랜스포머를 파인튜닝한 것이 우리의 추출 정확도를 평범한 수준에서 프로덕션 준비 수준으로 끌어올린 전환점이었습니다. 기본 모델은 언어를 충분히 잘 이해했지만, 우리의 정확한 출력 형식으로 수백 개의 주석이 달린 예제를 학습시키기 전까지는 송장과 계약서에서 구조화된 필드를 안정적으로 추출할 수 없었습니다.
 
-## Fine-tuning completo vs. LoRA vs. QLoRA
+## 전체 파인튜닝 vs. LoRA vs. QLoRA
 
-O **fine-tuning completo** atualiza todos os parâmetros do modelo. Isso exige uma enorme memória de GPU (um modelo de 7B parâmetros precisa de mais de 28 GB apenas para os pesos em fp32) e corre o risco de esquecimento catastrófico.
+**전체 파인튜닝**은 모델의 모든 파라미터를 업데이트합니다. 이는 막대한 GPU 메모리를 필요로 하며(70억 파라미터 모델은 fp32에서 가중치만으로 28GB 이상이 필요), 치명적 망각(catastrophic forgetting)의 위험이 있습니다.
 
-O **LoRA (Low-Rank Adaptation)** congela os pesos originais e injeta pequenas matrizes treináveis em cada camada. Em vez de atualizar milhões de parâmetros, você treina milhares.
+**LoRA(Low-Rank Adaptation)**는 원래 가중치를 고정하고 각 레이어에 작은 학습 가능한 행렬을 주입합니다. 수백만 개의 파라미터를 업데이트하는 대신 수천 개를 학습합니다.
 
 ```text
 Original weight matrix W (4096 x 4096) = 16M parameters
@@ -46,7 +46,7 @@ LoRA: W + A × B where A is (4096 x 16) and B is (16 x 4096) = 131K parameters
 That's 99.2% fewer trainable parameters.
 ```
 
-O **QLoRA** vai além ao carregar o modelo base em formato quantizado de 4 bits, reduzindo o uso de memória em 4 vezes enquanto mantém a qualidade. Um modelo de 7B que normalmente precisa de 14 GB em fp16 cabe em cerca de 4 GB com QLoRA.
+**QLoRA**는 한 걸음 더 나아가 기본 모델을 4비트 양자화 형식으로 로드하여, 품질을 유지하면서 메모리 사용량을 4배 줄입니다. 일반적으로 fp16에서 14GB가 필요한 70억 파라미터 모델은 QLoRA를 사용하면 약 4GB에 들어맞습니다.
 
 ```python
 # Memory comparison for a 7B parameter model
@@ -55,13 +55,13 @@ O **QLoRA** vai além ao carregar o modelo base em formato quantizado de 4 bits,
 # QLoRA (4-bit):     ~4 GB for weights + ~0.1 GB for LoRA adapters
 ```
 
-## Configurando o ambiente
+## 환경 설정
 
 ```bash
 pip install torch transformers datasets peft trl bitsandbytes accelerate
 ```
 
-Você precisa de uma GPU para o fine-tuning. Uma única GPU com 16 GB de VRAM (por exemplo, NVIDIA T4 ou RTX 4080) é suficiente para QLoRA em modelos de 7B.
+파인튜닝에는 GPU가 필요합니다. 16GB VRAM을 갖춘 단일 GPU(예: NVIDIA T4 또는 RTX 4080)는 70억 파라미터 모델에서 QLoRA를 수행하기에 충분합니다.
 
 ```python
 import torch
@@ -71,9 +71,9 @@ if torch.cuda.is_available():
     print(f"VRAM: {torch.cuda.get_device_properties(0).total_mem / 1e9:.1f} GB")
 ```
 
-## Preparando o seu conjunto de dados
+## 데이터셋 준비하기
 
-Os dados de fine-tuning devem ser formatados como pares de instrução-resposta. Veja como preparar um conjunto de dados para o ajuste por instruções:
+파인튜닝 데이터는 지시-응답 쌍으로 형식을 지정해야 합니다. 인스트럭션 튜닝을 위한 데이터셋을 준비하는 방법은 다음과 같습니다:
 
 ```python
 from datasets import Dataset
@@ -105,7 +105,7 @@ print(f"Train: {len(dataset['train'])} examples")
 print(f"Test: {len(dataset['test'])} examples")
 ```
 
-Formate os dados no template de prompt que o seu modelo espera:
+모델이 기대하는 프롬프트 템플릿으로 데이터의 형식을 지정합니다:
 
 ```python
 def format_prompt(example):
@@ -131,7 +131,7 @@ dataset = dataset.map(format_prompt)
 print(dataset["train"][0]["text"])
 ```
 
-## Carregando o modelo base com QLoRA
+## QLoRA로 기본 모델 로드하기
 
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
@@ -164,7 +164,7 @@ model.config.use_cache = False
 print(f"Model loaded. Memory: {model.get_memory_footprint() / 1e9:.2f} GB")
 ```
 
-## Configurando o LoRA
+## LoRA 구성하기
 
 ```python
 from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training, TaskType
@@ -199,11 +199,11 @@ print(f"Trainable: {trainable_params:,} ({100 * trainable_params / total_params:
 print(f"Total: {total_params:,}")
 ```
 
-O parâmetro `r` controla o rank das matrizes LoRA. Um rank maior significa mais capacidade, mas mais memória e computação. Valores de 8, 16 ou 32 funcionam bem na prática. O `lora_alpha` é geralmente definido como o dobro do rank.
+`r` 파라미터는 LoRA 행렬의 랭크를 제어합니다. 랭크가 높을수록 용량은 커지지만 메모리와 연산량도 많아집니다. 실제로는 8, 16, 32 값이 잘 작동합니다. `lora_alpha`는 일반적으로 랭크의 2배로 설정됩니다.
 
-## Treinamento com SFTTrainer
+## SFTTrainer로 학습하기
 
-O `SFTTrainer` da biblioteca `trl` simplifica o fine-tuning supervisionado:
+`trl` 라이브러리의 `SFTTrainer`는 지도 파인튜닝을 단순화합니다:
 
 ```python
 from trl import SFTTrainer
@@ -246,9 +246,9 @@ trainer.save_model("./final_adapter")
 tokenizer.save_pretrained("./final_adapter")
 ```
 
-### Monitorando o treinamento
+### 학습 모니터링
 
-Acompanhe a perda de treinamento (training loss) e a perda de avaliação (eval loss). Se a perda de treinamento diminuir, mas a de avaliação aumentar, o modelo está sofrendo overfitting.
+학습 손실과 평가 손실을 관찰하세요. 학습 손실은 감소하지만 평가 손실이 증가하면, 모델이 과적합되고 있는 것입니다.
 
 ```python
 # After training, plot the losses
@@ -273,7 +273,7 @@ plt.savefig("training_loss.png")
 plt.show()
 ```
 
-## Avaliando o modelo com fine-tuning
+## 파인튜닝된 모델 평가하기
 
 ```python
 from peft import PeftModel
@@ -325,7 +325,7 @@ for instruction, input_text in test_cases:
     print("---")
 ```
 
-### Avaliação quantitativa
+### 정량적 평가
 
 ```python
 from sklearn.metrics import accuracy_score
@@ -353,9 +353,9 @@ def evaluate_on_test_set(test_dataset):
 evaluate_on_test_set(dataset["test"])
 ```
 
-## Mesclando os pesos do LoRA para a implantação
+## 배포를 위한 LoRA 가중치 병합하기
 
-Para a implantação em produção, mescle o adaptador LoRA no modelo base para eliminar a sobrecarga do adaptador. Se você está construindo uma pipeline de produção completa, confira [MLOps with Python: Building Production ML Pipelines](/posts/MLOps-with-Python-Production-ML-Pipelines/) para rastreamento de experimentos, servir modelos e CI/CD.
+프로덕션 배포의 경우, 어댑터 오버헤드를 제거하기 위해 LoRA 어댑터를 기본 모델에 병합합니다. 완전한 프로덕션 파이프라인을 구축하고 있다면, 실험 추적, 모델 서빙, CI/CD에 대해 [MLOps with Python: Building Production ML Pipelines](/posts/MLOps-with-Python-Production-ML-Pipelines/)를 확인하세요.
 
 ```python
 from peft import PeftModel
@@ -379,9 +379,9 @@ tokenizer.save_pretrained("./merged_model")
 print("Merged model saved. It can now be loaded without PEFT.")
 ```
 
-## Implantando com vLLM
+## vLLM으로 배포하기
 
-O vLLM é um motor de inferência de alto throughput que torna prático servir modelos com fine-tuning:
+vLLM은 고처리량 추론 엔진으로, 파인튜닝된 모델을 서빙하는 것을 실용적으로 만듭니다:
 
 ```bash
 pip install vllm
@@ -411,9 +411,9 @@ for output in outputs:
     print("---")
 ```
 
-Você também pode integrar o seu modelo com fine-tuning em fluxos de trabalho de agentes usando o [OpenAI Agents SDK](/posts/openai-agents-sdk-python/) para sistemas multiagente que usam ferramentas.
+[OpenAI Agents SDK](/posts/openai-agents-sdk-python/)를 사용하여 도구를 사용하는 멀티 에이전트 시스템의 에이전트 워크플로에 파인튜닝된 모델을 통합할 수도 있습니다.
 
-Ou sirva-o como uma API:
+또는 API로 서빙합니다:
 
 ```bash
 python -m vllm.entrypoints.openai.api_server \
@@ -422,7 +422,7 @@ python -m vllm.entrypoints.openai.api_server \
     --port 8000
 ```
 
-Em seguida, chame-o como uma API da OpenAI:
+그런 다음 OpenAI API처럼 호출합니다:
 
 ```python
 import openai
@@ -437,26 +437,26 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 ```
 
-## Dicas para um melhor fine-tuning
+## 더 나은 파인튜닝을 위한 팁
 
-**A qualidade dos dados importa mais do que a quantidade.** 500 exemplos diversos e de alta qualidade muitas vezes superam 5000 ruidosos. Revise seus dados de treinamento manualmente. Na minha experiência fazendo fine-tuning de transformers na Codiste, descobri que gastar dois dias limpando e removendo duplicatas de 400 exemplos de treinamento produzia um modelo melhor do que apressar 2000 ruidosos. Cada exemplo mal rotulado em um conjunto de dados pequeno tem um impacto negativo desproporcional no modelo final.
+**데이터의 양보다 데이터의 품질이 더 중요합니다.** 500개의 고품질의 다양한 예제가 종종 5000개의 노이즈가 많은 예제를 능가합니다. 학습 데이터를 수동으로 검토하세요. Codiste에서 트랜스포머를 파인튜닝한 제 경험상, 400개의 학습 예제를 정리하고 중복을 제거하는 데 이틀을 쓰는 것이 2000개의 노이즈가 많은 예제를 서둘러 처리하는 것보다 더 나은 모델을 만들어냈습니다. 작은 데이터셋에서는 잘못 레이블이 지정된 각 예제가 최종 모델에 불균형하게 큰 부정적 영향을 미칩니다.
 
-**Comece com uma taxa de aprendizado pequena.** Para LoRA, de 1e-4 a 2e-4 funciona bem. Para o fine-tuning completo, use de 1e-5 a 5e-5. Uma taxa de aprendizado muito alta destrói o conhecimento pré-treinado.
+**작은 학습률로 시작하세요.** LoRA의 경우, 1e-4에서 2e-4가 잘 작동합니다. 전체 파인튜닝의 경우, 1e-5에서 5e-5를 사용하세요. 학습률이 너무 높으면 사전 학습된 지식이 파괴됩니다.
 
-**Use um conjunto de validação.** Sempre reserve de 10 a 20% dos seus dados para avaliação. Pare o treinamento quando a perda de validação parar de diminuir.
+**검증 세트를 사용하세요.** 평가를 위해 항상 데이터의 10~20%를 따로 보관하세요. 검증 손실이 더 이상 감소하지 않으면 학습을 중단하세요.
 
-**Escolha o modelo base certo.** Comece com um modelo ajustado por instruções (como Llama-2-chat ou Mistral-Instruct) se a sua tarefa envolver seguir instruções. Use um modelo base se precisar de mais flexibilidade.
+**올바른 기본 모델을 선택하세요.** 작업에 지시 따르기가 포함된다면 인스트럭션 튜닝된 모델(예: Llama-2-chat 또는 Mistral-Instruct)로 시작하세요. 더 많은 유연성이 필요하다면 기본 모델을 사용하세요.
 
-**Itere sobre os seus dados.** Após o fine-tuning inicial, analise os erros. Muitas vezes a solução são dados de treinamento melhores, não mais epochs ou um modelo maior.
+**데이터를 반복 개선하세요.** 초기 파인튜닝 후 오류를 분석하세요. 종종 해결책은 더 많은 에포크나 더 큰 모델이 아니라 더 나은 학습 데이터입니다.
 
-## Resumo
+## 요약
 
-O fine-tuning adapta um LLM pré-treinado à sua tarefa, formato e domínio específicos. O QLoRA torna isso acessível em GPUs de consumo ao quantizar o modelo base para 4 bits e treinar pequenos adaptadores LoRA. O fluxo de trabalho é: prepare o seu conjunto de dados, carregue o modelo quantizado, configure o LoRA, treine com o SFTTrainer, avalie e implante. Foque na qualidade dos dados, use uma avaliação adequada e mescle o adaptador para a implantação em produção.
+파인튜닝은 사전 학습된 LLM을 여러분의 특정 작업, 형식, 도메인에 맞게 적응시킵니다. QLoRA는 기본 모델을 4비트로 양자화하고 작은 LoRA 어댑터를 학습시킴으로써 이를 소비자용 GPU에서 접근 가능하게 만듭니다. 워크플로는 다음과 같습니다: 데이터셋을 준비하고, 양자화된 모델을 로드하고, LoRA를 구성하고, SFTTrainer로 학습하고, 평가하고, 배포합니다. 데이터 품질에 집중하고, 적절한 평가를 사용하며, 프로덕션 배포를 위해 어댑터를 병합하세요.
 
 ---
 
-## Publicações relacionadas
+## 관련 게시물
 
-- [MLOps with Python: Building Production ML Pipelines](/posts/MLOps-with-Python-Production-ML-Pipelines/) - Implante e monitore seus modelos com fine-tuning em produção com rastreamento de experimentos, CI/CD e serviço de modelos
-- [RAG with Python: Retrieval-Augmented Generation](/posts/RAG-with-Python-Retrieval-Augmented-Generation/) - Uma alternativa ao fine-tuning que dá aos LLMs acesso a conhecimento externo no momento da consulta
-- [OpenAI Agents SDK Python Tutorial](/posts/openai-agents-sdk-python/) - Construa fluxos de trabalho multiagente que usam ferramentas, impulsionados pelos seus modelos com fine-tuning
+- [MLOps with Python: Building Production ML Pipelines](/posts/MLOps-with-Python-Production-ML-Pipelines/) - 실험 추적, CI/CD, 모델 서빙으로 파인튜닝된 모델을 프로덕션에 배포하고 모니터링하세요
+- [RAG with Python: Retrieval-Augmented Generation](/posts/RAG-with-Python-Retrieval-Augmented-Generation/) - 쿼리 시점에 LLM에 외부 지식 접근을 제공하는 파인튜닝의 대안
+- [OpenAI Agents SDK Python Tutorial](/posts/openai-agents-sdk-python/) - 파인튜닝된 모델로 구동되는 도구 사용 멀티 에이전트 워크플로를 구축하세요

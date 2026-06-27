@@ -1,36 +1,36 @@
 ---
-title: "Web Scraping con Python: La guía completa para 2026"
-description: Una guía completa de web scraping con Python que cubre BeautifulSoup, Selenium, Playwright, el manejo de paginación y autenticación, prácticas éticas de scraping, almacenamiento de datos extraídos y un proyecto práctico que extrae ofertas de empleo.
+title: "Pythonによるウェブスクレイピング：2026年版完全ガイド"
+description: BeautifulSoup、Selenium、Playwright、ページネーションと認証の処理、倫理的なスクレイピングの実践、スクレイピングしたデータの保存、求人情報をスクレイピングする実践的なプロジェクトを網羅した、Pythonによるウェブスクレイピングの完全ガイド。
 date: 2026-04-04 12:00:00 +0800
 categories: [Python]
 tags: [python, web-scraping]
-lang: es
-translations: [hi, es, pt, fr, de]
+lang: ja
+translations: [hi, es, pt, fr, de, ja, ko, ar, zh]
 image:
   path: "/commons/Python Web Scraping The Complete Guide for 2026.webp"
-  alt: "Flujo de trabajo de web scraping con Python usando BeautifulSoup, Selenium y Playwright para extraer datos estructurados de sitios web"
+  alt: "ウェブサイトから構造化データを抽出するためにBeautifulSoup、Selenium、Playwrightを使用するPythonウェブスクレイピングのワークフロー"
 ---
 
-## ¿Por qué hacer web scraping?
+## なぜウェブスクレイピングなのか？
 
-El web scraping extrae datos estructurados de los sitios web. El monitoreo de precios, la generación de leads, la recopilación de datos de investigación, el análisis de la competencia, la agregación de noticias: todo esto depende del scraping. Una vez que tengas los datos extraídos, puedes alimentarlos en un [análisis de sentimientos](/posts/Sentiment-Analysis-with-Python/) o en [sistemas de recomendación](/posts/Building-Recommendation-Systems-with-Python/) para obtener información más profunda. Python es el lenguaje más popular para ello gracias a bibliotecas maduras como BeautifulSoup, Selenium y Playwright.
+ウェブスクレイピングはウェブサイトから構造化データを抽出します。価格監視、リード生成、研究データの収集、競合分析、ニュースの集約 — これらはすべてスクレイピングに依存しています。データをスクレイピングしたら、より深い洞察を得るために[感情分析](/posts/Sentiment-Analysis-with-Python/)や[レコメンデーションシステム](/posts/Building-Recommendation-Systems-with-Python/)に投入できます。Pythonは、BeautifulSoup、Selenium、Playwrightのような成熟したライブラリがあるため、これに最も人気のある言語です。
 
-Esta guía cubre todo el conjunto de herramientas de scraping: análisis de páginas estáticas, manejo de páginas dinámicas, autenticación, paginación, almacenamiento de datos y prácticas éticas. Terminamos con un proyecto completo que extrae ofertas de empleo.
+このガイドでは、スクレイピングのツールキット全体を網羅します。静的ページの解析、動的ページの処理、認証、ページネーション、データの保存、そして倫理的な実践です。最後に、求人情報をスクレイピングする完全なプロジェクトで締めくくります。
 
-Cuando construí conjuntos de datos de entrenamiento para modelos de visión por computadora en Codiste, el web scraping era a menudo el primer paso del pipeline. Para nuestro sistema de detección de daños en vehículos, extrajimos decenas de miles de imágenes de vehículos de galerías públicas de reclamaciones de seguros y foros de automoción para complementar los datos propios de nuestro cliente. La infraestructura de scraping terminó siendo tan importante como la propia arquitectura del modelo.
+Codisteでコンピュータビジョンモデルのトレーニングデータセットを構築したとき、ウェブスクレイピングはしばしばパイプラインの最初のステップでした。車両損傷検出システムでは、クライアントの独自データを補完するために、公開されている保険請求ギャラリーや自動車フォーラムから数万枚の車両画像をスクレイピングしました。スクレイピングのインフラは、最終的にはモデルアーキテクチャそのものと同じくらい重要であることがわかりました。
 
-## Configuración
+## セットアップ
 
-Instala las bibliotecas principales:
+コアライブラリをインストールします：
 
 ```python
 pip install requests beautifulsoup4 lxml selenium playwright pandas
 playwright install chromium
 ```
 
-## BeautifulSoup para páginas estáticas
+## 静的ページのためのBeautifulSoup
 
-BeautifulSoup analiza HTML y te permite navegar por el árbol del documento. Funciona con `requests` para obtener páginas y extraer datos.
+BeautifulSoupはHTMLを解析し、ドキュメントツリーをナビゲートできるようにします。ページを取得してデータを抽出するために`requests`と連携して動作します。
 
 ```python
 import requests
@@ -46,9 +46,9 @@ for i, title in enumerate(titles[:10], 1):
     print(f"{i}. {title.text} - {title.get('href', 'N/A')}")
 ```
 
-### Selección de elementos
+### 要素の選択
 
-BeautifulSoup admite tanto selectores CSS como sus propios métodos de búsqueda:
+BeautifulSoupはCSSセレクターと独自のfindメソッドの両方をサポートしています：
 
 ```python
 # CSS selectors (recommended)
@@ -64,7 +64,7 @@ soup.find_all("a", class_="link")    # All matching elements
 soup.find("div", {"data-id": "123"}) # By attribute
 ```
 
-### Extracción de datos
+### データの抽出
 
 ```python
 import requests
@@ -95,9 +95,9 @@ for q in data[:3]:
     print(f"  Tags: {', '.join(q['tags'])}")
 ```
 
-### Añadir cabeceras y gestión de sesiones
+### ヘッダーとセッション管理の追加
 
-Los sitios web pueden bloquear solicitudes que parezcan automatizadas. Establece cabeceras adecuadas:
+ウェブサイトは自動化されているように見えるリクエストをブロックすることがあります。適切なヘッダーを設定しましょう：
 
 ```python
 import requests
@@ -115,9 +115,9 @@ response = session.get("https://example.com")
 soup = BeautifulSoup(response.text, "lxml")
 ```
 
-## Manejo de la paginación
+## ページネーションの処理
 
-La mayoría de los objetivos de scraping abarcan varias páginas. Maneja esto con un bucle:
+ほとんどのスクレイピング対象は複数のページにまたがっています。これをループで処理します：
 
 ```python
 import requests
@@ -161,7 +161,7 @@ items = scrape_all_pages("https://example.com/listings")
 print(f"Total items scraped: {len(items)}")
 ```
 
-Para sitios con enlaces de "página siguiente" en lugar de números de página:
+ページ番号の代わりに「次のページ」リンクがあるサイトの場合：
 
 ```python
 def scrape_with_next_link(start_url: str) -> list:
@@ -187,9 +187,9 @@ def scrape_with_next_link(start_url: str) -> list:
     return all_items
 ```
 
-## Páginas dinámicas con Selenium
+## Seleniumによる動的ページ
 
-Muchos sitios web modernos cargan contenido con JavaScript. BeautifulSoup solo ve el HTML inicial. Selenium controla un navegador real para renderizar contenido JavaScript.
+多くの最新のウェブサイトはJavaScriptでコンテンツを読み込みます。BeautifulSoupは初期のHTMLしか見ることができません。Seleniumは実際のブラウザを制御してJavaScriptコンテンツをレンダリングします。
 
 ```python
 from selenium import webdriver
@@ -232,9 +232,9 @@ def scrape_dynamic_page(url: str) -> list:
 products = scrape_dynamic_page("https://example.com/products")
 ```
 
-### Manejo del desplazamiento infinito
+### 無限スクロールの処理
 
-Algunas páginas cargan más contenido a medida que te desplazas hacia abajo:
+一部のページは、下にスクロールするにつれてより多くのコンテンツを読み込みます：
 
 ```python
 from selenium import webdriver
@@ -265,9 +265,9 @@ def scrape_infinite_scroll(url: str, scroll_count: int = 10) -> str:
     return page_source
 ```
 
-## Páginas dinámicas con Playwright
+## Playwrightによる動的ページ
 
-Playwright es una alternativa más reciente a Selenium con mejor soporte asíncrono y espera automática:
+Playwrightは、より優れた非同期サポートと自動待機機能を備えたSeleniumの新しい代替手段です：
 
 ```python
 from playwright.sync_api import sync_playwright
@@ -306,7 +306,7 @@ for p in products[:5]:
     print(f"{p['name']} - {p['price']}")
 ```
 
-### Playwright asíncrono para mayor velocidad
+### 速度のための非同期Playwright
 
 ```python
 import asyncio
@@ -340,9 +340,9 @@ urls = [
 results = asyncio.run(scrape_multiple_pages(urls))
 ```
 
-## Manejo de la autenticación
+## 認証の処理
 
-Algunos sitios requieren iniciar sesión antes de poder acceder a los datos:
+一部のサイトでは、データにアクセスする前にログインが必要です：
 
 ```python
 import requests
@@ -373,7 +373,7 @@ def scrape_with_login(login_url: str, target_url: str, username: str, password: 
     return target_response.text
 ```
 
-Para sitios que usan autenticación basada en cookies, también puedes establecer cookies directamente:
+クッキーベースの認証を使用するサイトの場合、クッキーを直接設定することもできます：
 
 ```python
 session = requests.Session()
@@ -381,11 +381,11 @@ session.cookies.set("session_id", "your_session_cookie_value")
 response = session.get("https://example.com/dashboard")
 ```
 
-## Almacenamiento de datos extraídos
+## スクレイピングしたデータの保存
 
-Una vez que tus datos están almacenados, puedes [visualizar tendencias y patrones](/posts/Python-Data-Visualization-Matplotlib-Seaborn/) para dar sentido a grandes conjuntos de datos extraídos.
+データを保存したら、大規模なスクレイピング済みデータセットを理解するために[傾向やパターンを可視化](/posts/Python-Data-Visualization-Matplotlib-Seaborn/)できます。
 
-### CSV con Pandas
+### PandasによるCSV
 
 ```python
 import pandas as pd
@@ -404,7 +404,7 @@ scraped_data = [
 save_to_csv(scraped_data, "jobs.csv")
 ```
 
-### Base de datos SQLite
+### SQLiteデータベース
 
 ```python
 import sqlite3
@@ -453,7 +453,7 @@ def save_jobs(jobs: list[dict]):
 setup_database()
 ```
 
-### JSON para datos anidados
+### ネストされたデータのためのJSON
 
 ```python
 import json
@@ -475,11 +475,11 @@ def append_to_json(new_data: list[dict], filename: str):
     save_to_json(existing, filename)
 ```
 
-## Prácticas éticas de scraping
+## 倫理的なスクレイピングの実践
 
-El web scraping se encuentra en una zona gris. Sigue estas prácticas para mantenerte del lado correcto:
+ウェブスクレイピングはグレーゾーンに位置します。正しい側にとどまるために、これらの実践に従いましょう：
 
-**Respeta robots.txt.** Comprueba qué permite el sitio:
+**robots.txtを尊重する。** サイトが何を許可しているかを確認します：
 
 ```python
 from urllib.robotparser import RobotFileParser
@@ -502,9 +502,9 @@ else:
     print("Scraping blocked by robots.txt")
 ```
 
-En mi experiencia, la comprobación de `robots.txt` no es solo cuestión de ética: te ahorra tiempo de depuración. Una vez pasé horas solucionando un scraper que seguía siendo bloqueado, solo para darme cuenta de que el sitio prohibía explícitamente las rutas a las que accedía. Comprobar `robots.txt` primero me habría ahorrado todo ese esfuerzo y me habría señalado su API pública en su lugar.
+私の経験では、`robots.txt`のチェックは倫理だけの問題ではなく、デバッグ時間を節約してくれます。あるとき、何度もブロックされるスクレイパーのトラブルシューティングに何時間も費やしたあげく、そのサイトが私がアクセスしていたパスを明示的に拒否していたことに気づきました。最初に`robots.txt`を確認していれば、その労力すべてを節約でき、代わりに彼らの公開APIに導かれていたでしょう。
 
-**Limitación de tasa.** No martilles los servidores. Añade retrasos entre solicitudes:
+**レート制限。** サーバーを叩きすぎないようにします。リクエストの間に遅延を追加します：
 
 ```python
 import time
@@ -516,18 +516,18 @@ def polite_request(session, url, min_delay=1.0, max_delay=3.0):
     return session.get(url)
 ```
 
-**Pautas adicionales:**
+**追加のガイドライン：**
 
-- Revisa los Términos de Servicio del sitio
-- No extraigas datos personales o privados
-- Almacena en caché las respuestas para evitar solicitudes repetidas
-- Identifícate con un User-Agent personalizado que incluya información de contacto
-- Usa APIs oficiales cuando existan: el scraping es el último recurso
-- No sobrecargues sitios pequeños; ajusta tu tasa según la capacidad del servidor
+- サイトの利用規約を確認する
+- 個人データやプライベートなデータをスクレイピングしない
+- 繰り返しのリクエストを避けるためにレスポンスをキャッシュする
+- 連絡先情報を含むカスタムUser-Agentで自分自身を識別する
+- 公式APIが存在する場合はそれを使用する — スクレイピングは最後の手段
+- 小規模なサイトに過負荷をかけない。サーバーの容量に応じてレートを調整する
 
-## Proyecto completo: extracción de ofertas de empleo
+## 完全なプロジェクト：求人情報のスクレイピング
 
-Aquí tienes un scraper completo que recopila ofertas de empleo, maneja la paginación, almacena los resultados en SQLite y los exporta a CSV:
+ここでは、求人情報を収集し、ページネーションを処理し、結果をSQLiteに保存し、CSVにエクスポートする完全なスクレイパーを紹介します：
 
 ```python
 import requests
@@ -707,9 +707,9 @@ print(f"\nScraped {len(df)} jobs total")
 print(df[["title", "company", "location", "salary"]].head(10))
 ```
 
-## Manejo de errores y reintentos
+## エラー処理とリトライ
 
-Los scrapers de producción necesitan lógica de reintentos:
+本番環境のスクレイパーにはリトライロジックが必要です：
 
 ```python
 import requests
@@ -741,18 +741,18 @@ session = create_robust_session()
 response = session.get("https://example.com")  # Will retry on failure
 ```
 
-## Resumen
+## まとめ
 
-El web scraping con Python se reduce a elegir la herramienta adecuada según el tipo de página:
+Pythonによるウェブスクレイピングは、ページの種類に応じて適切なツールを選ぶことに尽きます：
 
-- **HTML estático** — Usa `requests` + BeautifulSoup. Rápido, sencillo, bajo uso de recursos.
-- **Páginas renderizadas con JavaScript** — Usa Playwright o Selenium. Más lento pero maneja contenido dinámico.
-- **Datos respaldados por API** — Revisa la pestaña Network en las DevTools del navegador. Muchos sitios "dinámicos" cargan datos desde APIs JSON que puedes llamar directamente, omitiendo el navegador por completo.
+- **静的HTML** — `requests` + BeautifulSoupを使用します。高速、シンプル、低リソース使用。
+- **JavaScriptでレンダリングされるページ** — PlaywrightまたはSeleniumを使用します。遅いですが、動的コンテンツを処理できます。
+- **API由来のデータ** — ブラウザのDevToolsでNetworkタブを確認します。多くの「動的」サイトは、直接呼び出せるJSON APIからデータを読み込んでおり、ブラウザを完全に省略できます。
 
-Prácticas clave: respeta `robots.txt`, limita la tasa de tus solicitudes, maneja los errores con reintentos, almacena los datos de forma incremental para evitar perder el progreso y usa restricciones únicas para evitar duplicados. Empieza con el enfoque más simple y añade complejidad solo cuando sea necesario.
+主要な実践：`robots.txt`を尊重し、リクエストのレートを制限し、リトライでエラーを処理し、進捗を失わないようにデータを段階的に保存し、重複を防ぐために一意制約を使用します。最もシンプルなアプローチから始め、必要なときだけ複雑さを追加しましょう。
 
-## Publicaciones relacionadas
+## 関連記事
 
-- [Análisis de sentimientos con Python](/posts/Sentiment-Analysis-with-Python/) -- Analiza el tono y la opinión de los datos de texto extraídos a gran escala.
-- [Visualización de datos en Python con Matplotlib y Seaborn](/posts/Python-Data-Visualization-Matplotlib-Seaborn/) -- Convierte los conjuntos de datos extraídos en gráficos y paneles atractivos.
-- [Creación de sistemas de recomendación con Python](/posts/Building-Recommendation-Systems-with-Python/) -- Usa datos de productos o contenido extraídos para impulsar recomendaciones personalizadas.
+- [Pythonによる感情分析](/posts/Sentiment-Analysis-with-Python/) -- スクレイピングしたテキストデータのトーンや意見を大規模に分析します。
+- [MatplotlibとSeabornによるPythonデータ可視化](/posts/Python-Data-Visualization-Matplotlib-Seaborn/) -- スクレイピングしたデータセットを魅力的なチャートやダッシュボードに変換します。
+- [Pythonによるレコメンデーションシステムの構築](/posts/Building-Recommendation-Systems-with-Python/) -- スクレイピングした製品やコンテンツのデータを使用して、パーソナライズされたレコメンデーションを実現します。

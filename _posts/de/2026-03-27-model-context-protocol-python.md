@@ -5,7 +5,7 @@ date: 2026-03-27 09:20:00 +0530
 categories: [Python]
 tags: [python, mcp, ai, agents, developer-tools]
 lang: de
-translations: [hi, es, pt, fr, de]
+translations: [hi, es, pt, fr, de, ja, ko, ar]
 image:
   path: /commons/model-context-protocol-python-hero.webp
   alt: Heldenbild des Model Context Protocol Python Tutorials
