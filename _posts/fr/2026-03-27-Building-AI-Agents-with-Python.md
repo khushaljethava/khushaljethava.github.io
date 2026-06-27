@@ -5,7 +5,7 @@ date: 2026-03-27 12:00:00 +0800
 categories: [Python]
 tags: [python, ai, agents]
 lang: fr
-translations: [hi, es, pt, fr, de]
+translations: [hi, es, pt, fr, de, ja, ko, ar]
 image:
   path: "/commons/Building AI Agents with Python A Complete Guide.webp"
   alt: "Créer des AI Agents avec Python : un guide complet"

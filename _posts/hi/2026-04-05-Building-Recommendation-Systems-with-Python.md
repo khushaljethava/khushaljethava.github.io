@@ -1,36 +1,37 @@
 ---
-title: "Building Recommendation Systems with Python from Scratch"
-description: Learn how to build recommendation systems with Python from scratch. This guide covers collaborative filtering, content-based filtering, matrix factorization, the surprise library, scikit-learn implementations, hybrid approaches, and a complete movie recommendation example.
+title: "Python में शुरुआत से रिकमेंडेशन सिस्टम बनाना"
+description: सीखें कि Python में शुरुआत से रिकमेंडेशन सिस्टम कैसे बनाएं। इस गाइड में कोलैबोरेटिव फ़िल्टरिंग, कंटेंट-आधारित फ़िल्टरिंग, मैट्रिक्स फ़ैक्टराइज़ेशन, Surprise लाइब्रेरी, scikit-learn इम्प्लीमेंटेशन, हाइब्रिड दृष्टिकोण और एक पूर्ण मूवी रिकमेंडेशन उदाहरण शामिल है।
 date: 2026-04-05 12:00:00 +0800
 categories: [Python]
 tags: [python, machine-learning, recommendation-systems]
 translations: [hi]
+lang: hi
 image:
   path: "/commons/Building Recommendation Systems with Python from Scratch.webp"
-  alt: "Recommendation system architecture showing collaborative filtering, content-based filtering, and hybrid approaches in Python"
+  alt: "Python में कोलैबोरेटिव फ़िल्टरिंग, कंटेंट-आधारित फ़िल्टरिंग और हाइब्रिड दृष्टिकोण दिखाने वाला रिकमेंडेशन सिस्टम आर्किटेक्चर"
 ---
 
-## What Are Recommendation Systems?
+## रिकमेंडेशन सिस्टम क्या हैं?
 
-Recommendation systems predict what a user might like based on past behavior, item attributes, or what similar users have liked. They often work alongside [sentiment analysis](/posts/Sentiment-Analysis-with-Python/) to incorporate user opinion signals into recommendations. Netflix suggests movies. Amazon suggests products. Spotify suggests playlists. Behind all of these are recommendation algorithms.
+रिकमेंडेशन सिस्टम पिछले व्यवहार, आइटम विशेषताओं, या समान उपयोगकर्ताओं ने जो पसंद किया है, उसके आधार पर यह अनुमान लगाते हैं कि कोई उपयोगकर्ता क्या पसंद कर सकता है। वे अक्सर [सेंटीमेंट विश्लेषण](/posts/Sentiment-Analysis-with-Python/) के साथ मिलकर काम करते हैं ताकि रिकमेंडेशन में उपयोगकर्ता की राय के संकेतों को शामिल किया जा सके। Netflix फ़िल्में सुझाता है। Amazon उत्पाद सुझाता है। Spotify प्लेलिस्ट सुझाता है। इन सबके पीछे रिकमेंडेशन एल्गोरिदम होते हैं।
 
-There are three main approaches:
+तीन मुख्य दृष्टिकोण हैं:
 
-- **Collaborative filtering** — Recommend items that similar users liked. Does not need to know anything about the items themselves.
-- **Content-based filtering** — Recommend items similar to what a user has liked before, based on item features.
-- **Hybrid approaches** — Combine both methods for better results.
+- **कोलैबोरेटिव फ़िल्टरिंग** — ऐसे आइटम सुझाएं जो समान उपयोगकर्ताओं ने पसंद किए। इसके लिए आइटम के बारे में कुछ भी जानने की आवश्यकता नहीं होती।
+- **कंटेंट-आधारित फ़िल्टरिंग** — आइटम विशेषताओं के आधार पर ऐसे आइटम सुझाएं जो उपयोगकर्ता ने पहले पसंद किए हैं उनके समान हों।
+- **हाइब्रिड दृष्टिकोण** — बेहतर परिणामों के लिए दोनों विधियों को संयोजित करें।
 
-This guide implements each approach from scratch in Python, then shows how to use libraries like Surprise and scikit-learn to build production-quality systems.
+यह गाइड प्रत्येक दृष्टिकोण को Python में शुरुआत से लागू करती है, फिर दिखाती है कि प्रोडक्शन-क्वालिटी सिस्टम बनाने के लिए Surprise और scikit-learn जैसी लाइब्रेरीज़ का उपयोग कैसे करें।
 
-When I built AI agent frameworks at Codiste that incorporated recommendation logic, I learned that the choice between collaborative and content-based filtering often comes down to what data you actually have available at cold start. In production, we almost always ended up with a hybrid approach because neither method alone handled the full range of user scenarios.
+जब मैंने Codiste में AI एजेंट फ्रेमवर्क बनाए जिनमें रिकमेंडेशन लॉजिक शामिल था, तो मैंने सीखा कि कोलैबोरेटिव और कंटेंट-आधारित फ़िल्टरिंग के बीच चुनाव अक्सर इस बात पर निर्भर करता है कि कोल्ड स्टार्ट पर आपके पास वास्तव में कौन-सा डेटा उपलब्ध है। प्रोडक्शन में, हम लगभग हमेशा हाइब्रिड दृष्टिकोण पर पहुंचते थे क्योंकि कोई भी विधि अकेले उपयोगकर्ता के सभी परिदृश्यों को संभाल नहीं पाती थी।
 
-## Setting Up
+## सेटअप करना
 
 ```python
 pip install numpy pandas scikit-learn scikit-surprise scipy
 ```
 
-We will use the MovieLens 100K dataset throughout this guide:
+हम इस पूरी गाइड में MovieLens 100K डेटासेट का उपयोग करेंगे:
 
 ```python
 import pandas as pd
@@ -61,13 +62,13 @@ print(f"Movies: {ratings['item_id'].nunique()}")
 print(f"Sparsity: {1 - len(ratings) / (ratings['user_id'].nunique() * ratings['item_id'].nunique()):.4f}")
 ```
 
-## Collaborative Filtering from Scratch
+## शुरुआत से कोलैबोरेटिव फ़िल्टरिंग
 
-Collaborative filtering works on the idea that users who agreed in the past will agree in the future.
+कोलैबोरेटिव फ़िल्टरिंग इस विचार पर काम करती है कि जिन उपयोगकर्ताओं ने अतीत में सहमति दिखाई, वे भविष्य में भी सहमत होंगे।
 
-### User-Based Collaborative Filtering
+### उपयोगकर्ता-आधारित कोलैबोरेटिव फ़िल्टरिंग
 
-Find users similar to the target user, then recommend what those similar users liked:
+लक्षित उपयोगकर्ता के समान उपयोगकर्ताओं को खोजें, फिर वह सुझाएं जो उन समान उपयोगकर्ताओं ने पसंद किया:
 
 ```python
 import numpy as np
@@ -139,9 +140,9 @@ for item_id, predicted_rating in recommendations:
     print(f"  {title}: predicted rating {predicted_rating:.2f}")
 ```
 
-### Item-Based Collaborative Filtering
+### आइटम-आधारित कोलैबोरेटिव फ़िल्टरिंग
 
-Instead of finding similar users, find similar items:
+समान उपयोगकर्ताओं को खोजने के बजाय, समान आइटम खोजें:
 
 ```python
 class ItemBasedCF:
@@ -202,13 +203,13 @@ for item_id, score in recommendations:
     print(f"  {title}: {score:.2f}")
 ```
 
-Item-based CF is generally preferred over user-based in practice. Item similarities are more stable than user similarities since items do not change, but user preferences do.
+आइटम-आधारित CF को व्यवहार में आमतौर पर उपयोगकर्ता-आधारित की तुलना में प्राथमिकता दी जाती है। आइटम समानताएं उपयोगकर्ता समानताओं की तुलना में अधिक स्थिर होती हैं क्योंकि आइटम बदलते नहीं हैं, लेकिन उपयोगकर्ता प्राथमिकताएं बदलती हैं।
 
-A lesson I learned working with recommendation at scale is that precomputing item similarities offline and serving them from a cache dramatically reduces latency. In one project, moving similarity computation from request-time to a nightly batch job dropped our p95 response time from 800ms to under 50ms, which made the difference between a usable feature and an abandoned one.
+बड़े पैमाने पर रिकमेंडेशन के साथ काम करते हुए मैंने एक सबक सीखा कि आइटम समानताओं को ऑफ़लाइन पूर्व-गणना करके और उन्हें कैश से सर्व करने से लेटेंसी नाटकीय रूप से कम हो जाती है। एक प्रोजेक्ट में, समानता गणना को रिक्वेस्ट-टाइम से रात्रिकालीन बैच जॉब में स्थानांतरित करने से हमारा p95 रिस्पॉन्स टाइम 800ms से घटकर 50ms से नीचे आ गया, जिसने एक उपयोगी फ़ीचर और एक त्यागे गए फ़ीचर के बीच का अंतर बना दिया।
 
-## Content-Based Filtering
+## कंटेंट-आधारित फ़िल्टरिंग
 
-Content-based filtering uses item features to recommend similar items to those a user already likes. If you need to collect item data from the web first, check out our [Python web scraping guide](/posts/Python-Web-Scraping-Complete-Guide/) for practical techniques.
+कंटेंट-आधारित फ़िल्टरिंग आइटम विशेषताओं का उपयोग करके उपयोगकर्ता को पहले से पसंद आए आइटम के समान आइटम सुझाती है। यदि आपको पहले वेब से आइटम डेटा एकत्र करना है, तो व्यावहारिक तकनीकों के लिए हमारी [Python वेब स्क्रैपिंग गाइड](/posts/Python-Web-Scraping-Complete-Guide/) देखें।
 
 ```python
 from sklearn.metrics.pairwise import cosine_similarity
@@ -302,9 +303,9 @@ for movie in similar:
     print(f"  {movie['title']} ({movie['similarity']:.3f}) - {', '.join(movie['genres'])}")
 ```
 
-## Matrix Factorization
+## मैट्रिक्स फ़ैक्टराइज़ेशन
 
-Matrix factorization decomposes the sparse user-item rating matrix into two lower-rank matrices. This captures latent factors — hidden features that explain rating patterns.
+मैट्रिक्स फ़ैक्टराइज़ेशन स्पार्स उपयोगकर्ता-आइटम रेटिंग मैट्रिक्स को दो निम्न-रैंक मैट्रिक्स में विघटित करता है। यह लेटेंट फ़ैक्टर्स को कैप्चर करता है — छिपी हुई विशेषताएं जो रेटिंग पैटर्न को समझाती हैं।
 
 ```python
 import numpy as np
@@ -405,9 +406,9 @@ for item_id, score in recs:
     print(f"  {title}: {score:.2f}")
 ```
 
-## Using the Surprise Library
+## Surprise लाइब्रेरी का उपयोग
 
-The Surprise library provides optimized implementations of common recommendation algorithms:
+Surprise लाइब्रेरी सामान्य रिकमेंडेशन एल्गोरिदम के ऑप्टिमाइज़्ड इम्प्लीमेंटेशन प्रदान करती है:
 
 ```python
 from surprise import Dataset, Reader, SVD, KNNBasic, NMF
@@ -432,7 +433,7 @@ for name, algo in algorithms.items():
     print(f"{name:20s} RMSE: {results['test_rmse'].mean():.4f}  MAE: {results['test_mae'].mean():.4f}")
 ```
 
-Train the best model and generate recommendations:
+सर्वश्रेष्ठ मॉडल को ट्रेन करें और रिकमेंडेशन जेनरेट करें:
 
 ```python
 from surprise import SVD, Dataset, Reader
@@ -479,9 +480,9 @@ for item_id, predicted_rating in top_n[1]:
     print(f"  {title}: {predicted_rating:.2f}")
 ```
 
-## Hybrid Recommendation System
+## हाइब्रिड रिकमेंडेशन सिस्टम
 
-Combine collaborative and content-based approaches for better results:
+बेहतर परिणामों के लिए कोलैबोरेटिव और कंटेंट-आधारित दृष्टिकोणों को संयोजित करें:
 
 ```python
 from sklearn.preprocessing import MinMaxScaler
@@ -571,9 +572,9 @@ for item_id, hybrid_score, cf_score, cb_score in recs:
     print(f"{title:<45} {hybrid_score:>7.2f} {cf_score:>7.2f} {cb_score:>7.2f}")
 ```
 
-## Evaluating Recommendation Systems
+## रिकमेंडेशन सिस्टम का मूल्यांकन
 
-Evaluation goes beyond RMSE. Similar evaluation challenges arise in [fraud detection](/posts/Fraud-Detection-with-Machine-Learning-Python/), where class imbalance makes standard accuracy misleading. Use ranking metrics to measure how good the recommendations actually are:
+मूल्यांकन RMSE से आगे जाता है। समान मूल्यांकन चुनौतियां [फ्रॉड डिटेक्शन](/posts/Fraud-Detection-with-Machine-Learning-Python/) में भी उत्पन्न होती हैं, जहां क्लास असंतुलन मानक एक्यूरेसी को भ्रामक बना देता है। रिकमेंडेशन वास्तव में कितने अच्छे हैं यह मापने के लिए रैंकिंग मेट्रिक्स का उपयोग करें:
 
 ```python
 from sklearn.model_selection import train_test_split
@@ -619,9 +620,9 @@ def evaluate_recommender(model, ratings_df, k=10):
     return avg_precision, avg_recall
 ```
 
-## Cold Start Solutions
+## कोल्ड स्टार्ट समाधान
 
-New users and new items have no interaction history. Here are practical approaches:
+नए उपयोगकर्ताओं और नए आइटम के पास कोई इंटरैक्शन इतिहास नहीं होता। यहां कुछ व्यावहारिक दृष्टिकोण दिए गए हैं:
 
 ```python
 def popularity_recommendations(ratings_df: pd.DataFrame, n: int = 10) -> list:
@@ -656,20 +657,20 @@ def demographic_recommendations(user_features: dict, user_db: pd.DataFrame,
     return popular_in_group.index.tolist()
 ```
 
-## Summary
+## सारांश
 
-Recommendation systems follow a clear progression of complexity:
+रिकमेंडेशन सिस्टम जटिलता की एक स्पष्ट प्रगति का अनुसरण करते हैं:
 
-1. **Popularity-based** — Simplest baseline. Recommend what is most popular. Works as a cold-start fallback.
-2. **Content-based filtering** — Uses item features. Good when you have rich metadata. Does not need other users' data.
-3. **Collaborative filtering** — Uses interaction patterns. Finds non-obvious recommendations. Needs sufficient user-item interactions.
-4. **Matrix factorization** — Learns latent factors from the rating matrix. Better generalization than raw collaborative filtering.
-5. **Hybrid** — Combines multiple approaches. Best overall performance.
+1. **लोकप्रियता-आधारित** — सबसे सरल बेसलाइन। जो सबसे लोकप्रिय है उसे सुझाएं। कोल्ड-स्टार्ट फ़ॉलबैक के रूप में काम करता है।
+2. **कंटेंट-आधारित फ़िल्टरिंग** — आइटम विशेषताओं का उपयोग करती है। तब अच्छी होती है जब आपके पास समृद्ध मेटाडेटा हो। अन्य उपयोगकर्ताओं के डेटा की आवश्यकता नहीं होती।
+3. **कोलैबोरेटिव फ़िल्टरिंग** — इंटरैक्शन पैटर्न का उपयोग करती है। गैर-स्पष्ट रिकमेंडेशन खोजती है। पर्याप्त उपयोगकर्ता-आइटम इंटरैक्शन की आवश्यकता होती है।
+4. **मैट्रिक्स फ़ैक्टराइज़ेशन** — रेटिंग मैट्रिक्स से लेटेंट फ़ैक्टर्स सीखता है। कच्ची कोलैबोरेटिव फ़िल्टरिंग की तुलना में बेहतर जनरलाइज़ेशन।
+5. **हाइब्रिड** — कई दृष्टिकोणों को संयोजित करता है। समग्र रूप से सर्वोत्तम प्रदर्शन।
 
-Start with SVD from the Surprise library for a strong baseline. Add content-based features if you have good item metadata. Use popularity as a fallback for cold-start users. Evaluate with ranking metrics like precision@k and recall@k rather than just RMSE, because real recommendation quality is about whether users like the top few suggestions, not average prediction error across all items.
+मज़बूत बेसलाइन के लिए Surprise लाइब्रेरी के SVD से शुरुआत करें। यदि आपके पास अच्छा आइटम मेटाडेटा है तो कंटेंट-आधारित विशेषताएं जोड़ें। कोल्ड-स्टार्ट उपयोगकर्ताओं के लिए लोकप्रियता को फ़ॉलबैक के रूप में उपयोग करें। केवल RMSE के बजाय precision@k और recall@k जैसी रैंकिंग मेट्रिक्स के साथ मूल्यांकन करें, क्योंकि वास्तविक रिकमेंडेशन गुणवत्ता इस बारे में है कि उपयोगकर्ता शीर्ष कुछ सुझावों को पसंद करते हैं या नहीं, न कि सभी आइटम में औसत भविष्यवाणी त्रुटि के बारे में।
 
-## Related Posts
+## संबंधित पोस्ट
 
-- [Sentiment Analysis with Python](/posts/Sentiment-Analysis-with-Python/) -- Incorporate user opinion signals to improve recommendation quality.
-- [Python Web Scraping: The Complete Guide](/posts/Python-Web-Scraping-Complete-Guide/) -- Collect product and content data from the web to feed your recommendation engine.
-- [Fraud Detection with Machine Learning in Python](/posts/Fraud-Detection-with-Machine-Learning-Python/) -- Handle imbalanced datasets and evaluation challenges similar to recommendation systems.
+- [Python के साथ सेंटीमेंट विश्लेषण](/posts/Sentiment-Analysis-with-Python/) -- रिकमेंडेशन गुणवत्ता बेहतर करने के लिए उपयोगकर्ता की राय के संकेतों को शामिल करें।
+- [Python वेब स्क्रैपिंग: संपूर्ण गाइड](/posts/Python-Web-Scraping-Complete-Guide/) -- अपने रिकमेंडेशन इंजन को फ़ीड करने के लिए वेब से उत्पाद और कंटेंट डेटा एकत्र करें।
+- [Python में मशीन लर्निंग के साथ फ्रॉड डिटेक्शन](/posts/Fraud-Detection-with-Machine-Learning-Python/) -- रिकमेंडेशन सिस्टम के समान असंतुलित डेटासेट और मूल्यांकन चुनौतियों को संभालें।
