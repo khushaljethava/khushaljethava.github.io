@@ -1,20 +1,21 @@
 ---
-title: "Building AI Agents with Python: A Complete Guide"
-description: Learn how to build autonomous AI agents with Python using OpenAI API and LangChain. This guide covers the agent loop, tool use, memory, and a practical research agent example.
+title: "KI-Agenten mit Python bauen: ein vollständiger Leitfaden"
+description: "Lerne, autonome AI Agents mit Python zu bauen – mit der OpenAI API und LangChain. Dieser Leitfaden behandelt den Agent Loop, Tool-Nutzung, Memory und ein praktisches Research-Agent-Beispiel."
 date: 2026-03-27 12:00:00 +0800
 categories: [Python]
 tags: [python, ai, agents]
+lang: de
 translations: [hi, es, pt, fr, de]
 image:
   path: "/commons/Building AI Agents with Python A Complete Guide.webp"
-  alt: "Building AI Agents with Python: A Complete Guide"
+  alt: "KI-Agenten mit Python bauen: ein vollständiger Leitfaden"
 ---
 
-## What Are AI Agents?
+## Was sind AI Agents?
 
-An AI agent is a program that uses a large language model (LLM) as its reasoning engine to decide what actions to take, execute those actions, observe the results, and repeat until a task is complete. Unlike a simple chatbot that responds to a single prompt, an agent operates in a loop and can call external tools like web searches, databases, or code interpreters.
+Ein AI agent ist ein Programm, das ein large language model (LLM) als Reasoning-Engine nutzt, um zu entscheiden, welche Aktionen auszuführen sind, diese Aktionen auszuführen, die Ergebnisse zu beobachten und dies zu wiederholen, bis eine Aufgabe abgeschlossen ist. Anders als ein einfacher Chatbot, der auf einen einzelnen Prompt antwortet, arbeitet ein Agent in einer Schleife und kann externe Tools wie Websuchen, Datenbanken oder Code-Interpreter aufrufen.
 
-The core difference between a chatbot and an agent is autonomy. A chatbot answers one question at a time. An agent breaks down a complex goal into steps and works through them independently.
+Der zentrale Unterschied zwischen einem Chatbot und einem Agent ist die Autonomie. Ein Chatbot beantwortet eine Frage nach der anderen. Ein Agent zerlegt ein komplexes Ziel in Schritte und arbeitet sie eigenständig ab.
 
 ```python
 # The simplest possible agent loop
@@ -26,17 +27,17 @@ while not task_complete:
     task_complete = check_if_done(result)
 ```
 
-This observe-think-act pattern is the foundation of every AI agent, regardless of framework or complexity.
+Dieses observe-think-act-Muster ist das Fundament jedes AI agents, unabhängig von Framework oder Komplexität.
 
-When I built agent systems at Codiste for tasks like car damage detection with Detectron2 and barcode detection with YOLO, I found that the agent loop concept applies even outside of LLM-based systems. The pattern of observing an input, reasoning about it, and deciding on an action is universal -- the LLM just makes the reasoning step far more flexible.
+Als ich bei Codiste Agentensysteme für Aufgaben wie die Erkennung von Autoschäden mit Detectron2 und die Barcode-Erkennung mit YOLO baute, stellte ich fest, dass das Konzept des Agent Loops sogar außerhalb von LLM-basierten Systemen gilt. Das Muster, eine Eingabe zu beobachten, darüber zu schlussfolgern und eine Aktion zu wählen, ist universell -- das LLM macht den Reasoning-Schritt nur weitaus flexibler.
 
-## The Agent Loop: Observe, Think, Act
+## Der Agent Loop: Beobachten, Denken, Handeln
 
-Every AI agent follows a cyclic pattern:
+Jeder AI agent folgt einem zyklischen Muster:
 
-1. **Observe** -- Collect information from the environment (user input, tool outputs, memory).
-2. **Think** -- Use the LLM to reason about what to do next.
-3. **Act** -- Execute a chosen action (call a tool, return a response, update state).
+1. **Beobachten** -- Informationen aus der Umgebung sammeln (Benutzereingabe, Tool-Ausgaben, Memory).
+2. **Denken** -- Das LLM nutzen, um über den nächsten Schritt zu schlussfolgern.
+3. **Handeln** -- Eine gewählte Aktion ausführen (ein Tool aufrufen, eine Antwort zurückgeben, den Zustand aktualisieren).
 
 ```python
 import openai
@@ -76,17 +77,17 @@ def agent_loop(user_task: str, tools: list, max_iterations: int = 10):
     return "Max iterations reached."
 ```
 
-The LLM decides when to call tools and when to stop. You do not hard-code the control flow -- the model figures it out based on the task and available tools. For a production-ready SDK that handles this loop for you, see the [OpenAI Agents SDK Python tutorial](/posts/openai-agents-sdk-python/).
+Das LLM entscheidet, wann Tools aufgerufen werden und wann gestoppt wird. Du codierst den Kontrollfluss nicht fest -- das Modell ermittelt ihn anhand der Aufgabe und der verfügbaren Tools. Für ein produktionsreifes SDK, das diese Schleife für dich übernimmt, siehe das [OpenAI Agents SDK Python Tutorial](/posts/openai-agents-sdk-python/).
 
-## Building a Simple Agent with the OpenAI API
+## Einen einfachen Agent mit der OpenAI API bauen
 
-Let us build a working agent that can perform web searches and calculations. First, install the required packages:
+Bauen wir einen funktionierenden Agent, der Websuchen und Berechnungen durchführen kann. Installiere zuerst die benötigten Pakete:
 
 ```bash
 pip install openai requests
 ```
 
-Define the tools your agent can use:
+Definiere die Tools, die dein Agent verwenden kann:
 
 ```python
 import json
@@ -134,7 +135,7 @@ def execute_tool(name: str, arguments: str):
     return f"Unknown tool: {name}"
 ```
 
-Now define the tool schemas that the OpenAI API expects:
+Definiere nun die Tool-Schemas, die die OpenAI API erwartet:
 
 ```python
 tools = [
@@ -175,7 +176,7 @@ tools = [
 ]
 ```
 
-Run the agent:
+Führe den Agent aus:
 
 ```python
 result = agent_loop(
@@ -186,16 +187,16 @@ result = agent_loop(
 print(result)
 ```
 
-The agent will first call `search_web` to find the population, then call `calculate` to compute 15% of it, and finally return a natural language answer combining both results.
+Der Agent ruft zuerst `search_web` auf, um die Bevölkerungszahl zu finden, dann `calculate`, um 15 % davon zu berechnen, und gibt schließlich eine natürlichsprachliche Antwort zurück, die beide Ergebnisse kombiniert.
 
-## Adding Memory to Your Agent
+## Memory zu deinem Agent hinzufügen
 
-Agents become more useful when they can remember previous interactions. There are two types of memory:
+Agents werden nützlicher, wenn sie sich an frühere Interaktionen erinnern können. Es gibt zwei Arten von Memory:
 
-- **Short-term memory** -- The conversation history within a single session (the `messages` list).
-- **Long-term memory** -- Persistent storage across sessions.
+- **Kurzzeit-Memory** -- Der Gesprächsverlauf innerhalb einer einzelnen Session (die `messages`-Liste).
+- **Langzeit-Memory** -- Persistente Speicherung über Sessions hinweg.
 
-Here is a simple long-term memory implementation using a JSON file:
+Hier ist eine einfache Langzeit-Memory-Implementierung mit einer JSON-Datei:
 
 ```python
 import json
@@ -232,7 +233,7 @@ class AgentMemory:
         return f"Known facts:\n{facts}\n\nRecent tasks:\n{tasks}"
 ```
 
-Integrate memory into the agent loop by prepending the memory context to the system message:
+Integriere Memory in den Agent Loop, indem du den Memory-Kontext der System-Nachricht voranstellst:
 
 ```python
 memory = AgentMemory()
@@ -248,15 +249,15 @@ def agent_with_memory(user_task: str, tools: list):
     return result
 ```
 
-## Using LangChain Agents
+## LangChain Agents verwenden
 
-LangChain provides a higher-level abstraction for building agents. It handles the loop, tool integration, and memory management for you. If you are new to LangChain, start with our [Beginner Guide to LangChain in Python](/posts/Beginner-Guide-to-LangChain-in-Python/).
+LangChain bietet eine höherstufige Abstraktion zum Bauen von Agents. Es übernimmt die Schleife, die Tool-Integration und das Memory-Management für dich. Wenn du neu bei LangChain bist, beginne mit unserem [Einsteigerleitfaden zu LangChain in Python](/posts/Beginner-Guide-to-LangChain-in-Python/).
 
 ```bash
 pip install langchain langchain-openai langchain-community
 ```
 
-Here is the same search-and-calculate agent built with LangChain:
+Hier ist derselbe Such- und Rechen-Agent, gebaut mit LangChain:
 
 ```python
 from langchain_openai import ChatOpenAI
@@ -298,11 +299,11 @@ result = executor.invoke({"input": "What is the GDP of Japan and what is 3.5% of
 print(result["output"])
 ```
 
-The `verbose=True` flag prints each step so you can see the agent's reasoning process.
+Das Flag `verbose=True` gibt jeden Schritt aus, sodass du den Reasoning-Prozess des Agents sehen kannst.
 
-## Building a Research Agent
+## Einen Research Agent bauen
 
-Let us build a more practical example: a research agent that takes a topic, searches for information, summarizes findings, and produces a structured report.
+Bauen wir ein praktischeres Beispiel: einen Research Agent, der ein Thema entgegennimmt, nach Informationen sucht, die Erkenntnisse zusammenfasst und einen strukturierten Bericht erstellt.
 
 ```python
 import json
@@ -370,11 +371,11 @@ result = executor.invoke({
 print(result["output"])
 ```
 
-This agent will make multiple search queries, collect information, and then write a structured markdown report to disk.
+Dieser Agent wird mehrere Suchanfragen stellen, Informationen sammeln und dann einen strukturierten Markdown-Bericht auf die Festplatte schreiben.
 
-## Error Handling and Reliability
+## Fehlerbehandlung und Zuverlässigkeit
 
-Production agents need robust error handling. Tools fail, APIs time out, and LLMs sometimes produce malformed output.
+Produktive Agents benötigen eine robuste Fehlerbehandlung. Tools schlagen fehl, APIs laufen in Timeouts, und LLMs erzeugen manchmal fehlerhafte Ausgaben.
 
 ```python
 import time
@@ -407,11 +408,11 @@ def execute_tool_safe(name: str, arguments: str, retries: int = 2):
             return f"Error: {e}"
 ```
 
-You should also set a maximum iteration count on the agent loop to prevent infinite loops, and validate that the LLM's tool calls reference tools that actually exist.
+Du solltest außerdem eine maximale Iterationszahl für den Agent Loop festlegen, um Endlosschleifen zu verhindern, und prüfen, dass die Tool-Aufrufe des LLM auf Tools verweisen, die tatsächlich existieren.
 
-## Structured Output from Agents
+## Strukturierte Ausgabe von Agents
 
-Often you want an agent to return data in a specific format, not free-form text. Use Pydantic models to enforce structure:
+Oft möchtest du, dass ein Agent Daten in einem bestimmten Format zurückgibt, nicht als Freitext. Verwende Pydantic-Modelle, um Struktur zu erzwingen:
 
 ```python
 from pydantic import BaseModel
@@ -439,11 +440,11 @@ def agent_with_structured_output(task: str, tools: list) -> ResearchReport:
     return response.choices[0].message.parsed
 ```
 
-## Best Practices for Building AI Agents
+## Best Practices zum Bauen von AI Agents
 
-**Keep tools simple and focused.** Each tool should do one thing well. A `search_web` tool should search, not search and summarize. Let the LLM handle combining results.
+**Halte Tools einfach und fokussiert.** Jedes Tool sollte eine Sache gut machen. Ein `search_web`-Tool sollte suchen, nicht suchen und zusammenfassen. Überlasse das Kombinieren der Ergebnisse dem LLM.
 
-**Write clear tool descriptions.** The LLM uses tool descriptions to decide when and how to call them. Vague descriptions lead to incorrect tool usage. For a standardized approach to defining and sharing tools across AI clients, explore the [Model Context Protocol](/posts/model-context-protocol-python/).
+**Schreibe klare Tool-Beschreibungen.** Das LLM nutzt Tool-Beschreibungen, um zu entscheiden, wann und wie es sie aufruft. Vage Beschreibungen führen zu falscher Tool-Nutzung. Für einen standardisierten Ansatz zum Definieren und Teilen von Tools über AI-Clients hinweg erkunde das [Model Context Protocol](/posts/model-context-protocol-python/).
 
 ```python
 # Bad description
@@ -459,38 +460,38 @@ def extract_emails(text: str) -> str:
     ...
 ```
 
-**Set iteration limits.** Always cap how many times the agent loop can run. Without limits, a confused agent can loop indefinitely and burn through API credits.
+**Setze Iterationslimits.** Begrenze immer, wie oft der Agent Loop laufen darf. Ohne Limits kann ein verwirrter Agent endlos schleifen und API-Credits aufbrauchen.
 
-**Log everything.** In production, log every LLM call, every tool execution, and every result. When an agent produces incorrect output, these logs are essential for debugging.
+**Logge alles.** In der Produktion logge jeden LLM-Aufruf, jede Tool-Ausführung und jedes Ergebnis. Wenn ein Agent eine falsche Ausgabe erzeugt, sind diese Logs für das Debugging unverzichtbar.
 
-In production, I found that the biggest challenge is not building the agent loop itself but handling the unpredictable ways users interact with it. When I deployed a generative chatbot using BART at Codiste, edge cases in user inputs caused tool selection failures that only showed up under real traffic. Comprehensive logging was the only thing that made those issues diagnosable.
+In der Produktion stellte ich fest, dass die größte Herausforderung nicht der Bau des Agent Loops selbst ist, sondern der Umgang mit den unvorhersehbaren Arten, wie Nutzer mit ihm interagieren. Als ich bei Codiste einen generativen Chatbot mit BART einsetzte, verursachten Edge Cases in Benutzereingaben Tool-Auswahlfehler, die nur unter echtem Traffic auftraten. Umfassendes Logging war das Einzige, das diese Probleme diagnostizierbar machte.
 
-**Test with diverse inputs.** Agents are non-deterministic. The same input can produce different tool call sequences. Test with many variations to find failure modes.
+**Teste mit vielfältigen Eingaben.** Agents sind nicht-deterministisch. Dieselbe Eingabe kann verschiedene Tool-Aufruf-Sequenzen erzeugen. Teste mit vielen Variationen, um Fehlerquellen zu finden.
 
-## When to Build an Agent vs. a Pipeline
+## Wann einen Agent vs. eine Pipeline bauen
 
-Not every task needs an agent. Use an agent when:
+Nicht jede Aufgabe braucht einen Agent. Verwende einen Agent, wenn:
 
-- The number of steps is unknown in advance.
-- The next step depends on the result of the previous step.
-- The task requires judgment about which tools to use.
+- Die Anzahl der Schritte im Voraus unbekannt ist.
+- Der nächste Schritt vom Ergebnis des vorherigen Schritts abhängt.
+- Die Aufgabe ein Urteil darüber erfordert, welche Tools zu verwenden sind.
 
-Use a fixed pipeline when:
+Verwende eine feste Pipeline, wenn:
 
-- The steps are always the same.
-- You need deterministic, reproducible behavior.
-- Latency and cost matter more than flexibility.
+- Die Schritte immer dieselben sind.
+- Du deterministisches, reproduzierbares Verhalten brauchst.
+- Latenz und Kosten wichtiger sind als Flexibilität.
 
-A pipeline that calls an LLM three times in a fixed order will always be faster, cheaper, and more predictable than an agent that figures out those three steps on its own. Use agents for tasks that genuinely require adaptive reasoning.
+Eine Pipeline, die ein LLM dreimal in fester Reihenfolge aufruft, ist immer schneller, günstiger und vorhersehbarer als ein Agent, der diese drei Schritte selbst ermittelt. Verwende Agents für Aufgaben, die wirklich adaptives Reasoning erfordern.
 
-## Summary
+## Zusammenfassung
 
-AI agents combine LLMs with tools and a reasoning loop to tackle complex tasks autonomously. The core pattern is straightforward: observe, think, act, repeat. You can build agents from scratch using the OpenAI API or use frameworks like LangChain for faster development. The key to reliable agents is good tool design, clear prompts, error handling, and iteration limits. Start simple, test thoroughly, and add complexity only when the task demands it.
+AI agents kombinieren LLMs mit Tools und einer Reasoning-Schleife, um komplexe Aufgaben autonom zu bewältigen. Das Kernmuster ist unkompliziert: beobachten, denken, handeln, wiederholen. Du kannst Agents von Grund auf mit der OpenAI API bauen oder Frameworks wie LangChain für eine schnellere Entwicklung nutzen. Der Schlüssel zu zuverlässigen Agents sind gutes Tool-Design, klare Prompts, Fehlerbehandlung und Iterationslimits. Beginne einfach, teste gründlich und füge Komplexität nur hinzu, wenn die Aufgabe es erfordert.
 
 ---
 
-## Related Posts
+## Verwandte Beiträge
 
-- [OpenAI Agents SDK Python Tutorial](/posts/openai-agents-sdk-python/) - Build production-ready agent workflows with tools, handoffs, and tracing using the official SDK
-- [Model Context Protocol Python Tutorial](/posts/model-context-protocol-python/) - Standardize how your agents expose and consume tools with MCP
-- [Beginner Guide to LangChain in Python](/posts/Beginner-Guide-to-LangChain-in-Python/) - Learn the LangChain framework for building agent chains and tool integrations
+- [OpenAI Agents SDK Python Tutorial](/posts/openai-agents-sdk-python/) - Baue produktionsreife Agent-Workflows mit Tools, Handoffs und Tracing mithilfe des offiziellen SDK
+- [Model Context Protocol Python Tutorial](/posts/model-context-protocol-python/) - Standardisiere mit MCP, wie deine Agents Tools bereitstellen und nutzen
+- [Beginner Guide to LangChain in Python](/posts/Beginner-Guide-to-LangChain-in-Python/) - Lerne das LangChain-Framework, um Agent-Ketten und Tool-Integrationen zu bauen
