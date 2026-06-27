@@ -1,20 +1,21 @@
 ---
-title: "Building AI Agents with Python: A Complete Guide"
-description: Learn how to build autonomous AI agents with Python using OpenAI API and LangChain. This guide covers the agent loop, tool use, memory, and a practical research agent example.
+title: "使用 Python 构建 AI Agents：完整指南"
+description: "学习如何使用 OpenAI API 和 LangChain 在 Python 中构建自主的 AI agents。本指南涵盖 agent loop、tool 的使用、memory 以及一个实用的 research agent 示例。"
 date: 2026-03-27 12:00:00 +0800
 categories: [Python]
 tags: [python, ai, agents]
+lang: zh
 translations: [hi, es, pt, fr, de, ja, ko, ar, zh]
 image:
   path: "/commons/Building AI Agents with Python A Complete Guide.webp"
-  alt: "Building AI Agents with Python: A Complete Guide"
+  alt: "使用 Python 构建 AI Agents：完整指南"
 ---
 
-## What Are AI Agents?
+## 什么是 AI Agents？
 
-An AI agent is a program that uses a large language model (LLM) as its reasoning engine to decide what actions to take, execute those actions, observe the results, and repeat until a task is complete. Unlike a simple chatbot that responds to a single prompt, an agent operates in a loop and can call external tools like web searches, databases, or code interpreters.
+AI agent 是一种使用 large language model（LLM）作为其推理引擎的程序，用于决定采取哪些 actions、执行这些 actions、观察结果，并不断重复直到任务完成。与只对单个 prompt 作出响应的简单 chatbot 不同，agent 在一个循环中运作，并且可以调用外部 tools，例如 web searches、databases 或 code interpreters。
 
-The core difference between a chatbot and an agent is autonomy. A chatbot answers one question at a time. An agent breaks down a complex goal into steps and works through them independently.
+chatbot 与 agent 之间的核心区别在于自主性。chatbot 一次回答一个问题。而 agent 会将一个复杂目标分解为多个步骤，并独立地逐步完成它们。
 
 ```python
 # The simplest possible agent loop
@@ -26,17 +27,17 @@ while not task_complete:
     task_complete = check_if_done(result)
 ```
 
-This observe-think-act pattern is the foundation of every AI agent, regardless of framework or complexity.
+这种 observe-think-act 模式是每一个 AI agent 的基础，无论使用何种 framework 或复杂程度如何。
 
-When I built agent systems at Codiste for tasks like car damage detection with Detectron2 and barcode detection with YOLO, I found that the agent loop concept applies even outside of LLM-based systems. The pattern of observing an input, reasoning about it, and deciding on an action is universal -- the LLM just makes the reasoning step far more flexible.
+当我在 Codiste 为诸如使用 Detectron2 进行车辆损伤检测以及使用 YOLO 进行条形码检测等任务构建 agent systems 时，我发现 agent loop 的概念即使在基于 LLM 的系统之外也同样适用。观察一个 input、对其进行推理、并决定采取某个 action 的模式是通用的——LLM 只是让推理这一步变得灵活得多。
 
-## The Agent Loop: Observe, Think, Act
+## Agent Loop：Observe、Think、Act
 
-Every AI agent follows a cyclic pattern:
+每一个 AI agent 都遵循一个循环模式：
 
-1. **Observe** -- Collect information from the environment (user input, tool outputs, memory).
-2. **Think** -- Use the LLM to reason about what to do next.
-3. **Act** -- Execute a chosen action (call a tool, return a response, update state).
+1. **Observe** —— 从环境中收集信息（user input、tool outputs、memory）。
+2. **Think** —— 使用 LLM 来推理下一步该做什么。
+3. **Act** —— 执行所选的 action（调用一个 tool、返回一个 response、更新 state）。
 
 ```python
 import openai
@@ -76,17 +77,17 @@ def agent_loop(user_task: str, tools: list, max_iterations: int = 10):
     return "Max iterations reached."
 ```
 
-The LLM decides when to call tools and when to stop. You do not hard-code the control flow -- the model figures it out based on the task and available tools. For a production-ready SDK that handles this loop for you, see the [OpenAI Agents SDK Python tutorial](/posts/openai-agents-sdk-python/).
+LLM 决定何时调用 tools 以及何时停止。你不需要硬编码控制流——model 会根据任务和可用的 tools 自行判断。如果想要一个能为你处理这个 loop 的 production-ready SDK，请参阅 [OpenAI Agents SDK Python 教程](/posts/openai-agents-sdk-python/)。
 
-## Building a Simple Agent with the OpenAI API
+## 使用 OpenAI API 构建一个简单的 Agent
 
-Let us build a working agent that can perform web searches and calculations. First, install the required packages:
+让我们构建一个可以执行 web searches 和计算的可运行 agent。首先，安装所需的 packages：
 
 ```bash
 pip install openai requests
 ```
 
-Define the tools your agent can use:
+定义你的 agent 可以使用的 tools：
 
 ```python
 import json
@@ -134,7 +135,7 @@ def execute_tool(name: str, arguments: str):
     return f"Unknown tool: {name}"
 ```
 
-Now define the tool schemas that the OpenAI API expects:
+现在定义 OpenAI API 所期望的 tool schemas：
 
 ```python
 tools = [
@@ -175,7 +176,7 @@ tools = [
 ]
 ```
 
-Run the agent:
+运行该 agent：
 
 ```python
 result = agent_loop(
@@ -186,16 +187,16 @@ result = agent_loop(
 print(result)
 ```
 
-The agent will first call `search_web` to find the population, then call `calculate` to compute 15% of it, and finally return a natural language answer combining both results.
+该 agent 会首先调用 `search_web` 来查找人口数量，然后调用 `calculate` 计算其中的 15%，最后返回一个结合两个结果的自然语言答案。
 
-## Adding Memory to Your Agent
+## 为你的 Agent 添加 Memory
 
-Agents become more useful when they can remember previous interactions. There are two types of memory:
+当 agents 能够记住之前的交互时，它们会变得更加有用。memory 有两种类型：
 
-- **Short-term memory** -- The conversation history within a single session (the `messages` list).
-- **Long-term memory** -- Persistent storage across sessions.
+- **Short-term memory** —— 单个 session 内的对话历史（即 `messages` 列表）。
+- **Long-term memory** —— 跨 sessions 的持久化存储。
 
-Here is a simple long-term memory implementation using a JSON file:
+下面是一个使用 JSON file 的简单 long-term memory 实现：
 
 ```python
 import json
@@ -232,7 +233,7 @@ class AgentMemory:
         return f"Known facts:\n{facts}\n\nRecent tasks:\n{tasks}"
 ```
 
-Integrate memory into the agent loop by prepending the memory context to the system message:
+通过将 memory context 添加到 system message 前面，将 memory 集成到 agent loop 中：
 
 ```python
 memory = AgentMemory()
@@ -248,15 +249,15 @@ def agent_with_memory(user_task: str, tools: list):
     return result
 ```
 
-## Using LangChain Agents
+## 使用 LangChain Agents
 
-LangChain provides a higher-level abstraction for building agents. It handles the loop, tool integration, and memory management for you. If you are new to LangChain, start with our [Beginner Guide to LangChain in Python](/posts/Beginner-Guide-to-LangChain-in-Python/).
+LangChain 提供了一个用于构建 agents 的更高级别抽象。它为你处理 loop、tool integration 和 memory management。如果你是 LangChain 的新手，请从我们的 [Python 中 LangChain 入门指南](/posts/Beginner-Guide-to-LangChain-in-Python/) 开始。
 
 ```bash
 pip install langchain langchain-openai langchain-community
 ```
 
-Here is the same search-and-calculate agent built with LangChain:
+下面是用 LangChain 构建的同一个 search-and-calculate agent：
 
 ```python
 from langchain_openai import ChatOpenAI
@@ -298,11 +299,11 @@ result = executor.invoke({"input": "What is the GDP of Japan and what is 3.5% of
 print(result["output"])
 ```
 
-The `verbose=True` flag prints each step so you can see the agent's reasoning process.
+`verbose=True` 标志会打印每一个步骤，使你可以看到 agent 的推理过程。
 
-## Building a Research Agent
+## 构建一个 Research Agent
 
-Let us build a more practical example: a research agent that takes a topic, searches for information, summarizes findings, and produces a structured report.
+让我们构建一个更实用的示例：一个 research agent，它接收一个主题、搜索信息、汇总发现，并生成一份结构化报告。
 
 ```python
 import json
@@ -370,11 +371,11 @@ result = executor.invoke({
 print(result["output"])
 ```
 
-This agent will make multiple search queries, collect information, and then write a structured markdown report to disk.
+这个 agent 会执行多个 search queries、收集信息，然后将一份结构化的 markdown 报告写入 disk。
 
-## Error Handling and Reliability
+## Error Handling 与可靠性
 
-Production agents need robust error handling. Tools fail, APIs time out, and LLMs sometimes produce malformed output.
+production agents 需要健壮的 error handling。tools 会失败、APIs 会 timeout，而 LLMs 有时会产生格式错误的 output。
 
 ```python
 import time
@@ -407,11 +408,11 @@ def execute_tool_safe(name: str, arguments: str, retries: int = 2):
             return f"Error: {e}"
 ```
 
-You should also set a maximum iteration count on the agent loop to prevent infinite loops, and validate that the LLM's tool calls reference tools that actually exist.
+你还应该为 agent loop 设置一个最大迭代次数以防止无限循环，并验证 LLM 的 tool calls 所引用的 tools 确实存在。
 
-## Structured Output from Agents
+## 来自 Agents 的结构化 Output
 
-Often you want an agent to return data in a specific format, not free-form text. Use Pydantic models to enforce structure:
+通常你希望 agent 以特定格式返回 data，而不是自由格式的 text。使用 Pydantic models 来强制结构：
 
 ```python
 from pydantic import BaseModel
@@ -439,11 +440,11 @@ def agent_with_structured_output(task: str, tools: list) -> ResearchReport:
     return response.choices[0].message.parsed
 ```
 
-## Best Practices for Building AI Agents
+## 构建 AI Agents 的最佳实践
 
-**Keep tools simple and focused.** Each tool should do one thing well. A `search_web` tool should search, not search and summarize. Let the LLM handle combining results.
+**保持 tools 简单且专注。** 每个 tool 都应该把一件事做好。一个 `search_web` tool 应该只负责搜索，而不是既搜索又汇总。让 LLM 来处理结果的合并。
 
-**Write clear tool descriptions.** The LLM uses tool descriptions to decide when and how to call them. Vague descriptions lead to incorrect tool usage. For a standardized approach to defining and sharing tools across AI clients, explore the [Model Context Protocol](/posts/model-context-protocol-python/).
+**编写清晰的 tool descriptions。** LLM 使用 tool descriptions 来决定何时以及如何调用它们。含糊的 descriptions 会导致错误的 tool 使用。要了解一种在不同 AI clients 之间定义和共享 tools 的标准化方法，请探索 [Model Context Protocol](/posts/model-context-protocol-python/)。
 
 ```python
 # Bad description
@@ -459,38 +460,38 @@ def extract_emails(text: str) -> str:
     ...
 ```
 
-**Set iteration limits.** Always cap how many times the agent loop can run. Without limits, a confused agent can loop indefinitely and burn through API credits.
+**设置迭代上限。** 始终限制 agent loop 可以运行的次数。没有限制，一个困惑的 agent 可能会无限循环并耗尽 API credits。
 
-**Log everything.** In production, log every LLM call, every tool execution, and every result. When an agent produces incorrect output, these logs are essential for debugging.
+**记录一切。** 在 production 中，记录每一次 LLM call、每一次 tool execution 以及每一个结果。当 agent 产生错误的 output 时，这些 logs 对调试至关重要。
 
-In production, I found that the biggest challenge is not building the agent loop itself but handling the unpredictable ways users interact with it. When I deployed a generative chatbot using BART at Codiste, edge cases in user inputs caused tool selection failures that only showed up under real traffic. Comprehensive logging was the only thing that made those issues diagnosable.
+在 production 中，我发现最大的挑战并不是构建 agent loop 本身，而是处理用户与之交互的各种不可预测的方式。当我在 Codiste 使用 BART 部署一个 generative chatbot 时，user inputs 中的边缘情况导致了 tool selection 失败，这些只在真实流量下才暴露出来。全面的 logging 是唯一能让那些问题可被诊断的方法。
 
-**Test with diverse inputs.** Agents are non-deterministic. The same input can produce different tool call sequences. Test with many variations to find failure modes.
+**使用多样化的 inputs 进行测试。** agents 是非确定性的。同一个 input 可能产生不同的 tool call 序列。使用多种变化进行测试以发现失败模式。
 
-## When to Build an Agent vs. a Pipeline
+## 何时构建 Agent，何时构建 Pipeline
 
-Not every task needs an agent. Use an agent when:
+并非每个任务都需要 agent。在以下情况下使用 agent：
 
-- The number of steps is unknown in advance.
-- The next step depends on the result of the previous step.
-- The task requires judgment about which tools to use.
+- 步骤数量事先未知。
+- 下一步取决于上一步的结果。
+- 任务需要判断使用哪些 tools。
 
-Use a fixed pipeline when:
+在以下情况下使用固定的 pipeline：
 
-- The steps are always the same.
-- You need deterministic, reproducible behavior.
-- Latency and cost matter more than flexibility.
+- 步骤始终相同。
+- 你需要确定性的、可重现的行为。
+- latency 和成本比灵活性更重要。
 
-A pipeline that calls an LLM three times in a fixed order will always be faster, cheaper, and more predictable than an agent that figures out those three steps on its own. Use agents for tasks that genuinely require adaptive reasoning.
+一个以固定顺序调用 LLM 三次的 pipeline 始终会比一个需要自行摸索那三个步骤的 agent 更快、更便宜、更可预测。对于那些真正需要自适应推理的任务，才使用 agents。
 
-## Summary
+## 总结
 
-AI agents combine LLMs with tools and a reasoning loop to tackle complex tasks autonomously. The core pattern is straightforward: observe, think, act, repeat. You can build agents from scratch using the OpenAI API or use frameworks like LangChain for faster development. The key to reliable agents is good tool design, clear prompts, error handling, and iteration limits. Start simple, test thoroughly, and add complexity only when the task demands it.
+AI agents 将 LLMs 与 tools 以及一个推理 loop 结合起来，以自主地处理复杂任务。其核心模式很简单：observe、think、act、repeat。你可以使用 OpenAI API 从零开始构建 agents，或者使用诸如 LangChain 之类的 frameworks 来加快开发速度。可靠 agents 的关键在于良好的 tool design、清晰的 prompts、error handling 以及迭代上限。从简单开始，彻底测试，仅在任务有需要时才增加复杂性。
 
 ---
 
-## Related Posts
+## 相关文章
 
-- [OpenAI Agents SDK Python Tutorial](/posts/openai-agents-sdk-python/) - Build production-ready agent workflows with tools, handoffs, and tracing using the official SDK
-- [Model Context Protocol Python Tutorial](/posts/model-context-protocol-python/) - Standardize how your agents expose and consume tools with MCP
-- [Beginner Guide to LangChain in Python](/posts/Beginner-Guide-to-LangChain-in-Python/) - Learn the LangChain framework for building agent chains and tool integrations
+- [OpenAI Agents SDK Python Tutorial](/posts/openai-agents-sdk-python/) - 使用官方 SDK，通过 tools、handoffs 和 tracing 构建 production-ready 的 agent workflows
+- [Model Context Protocol Python Tutorial](/posts/model-context-protocol-python/) - 使用 MCP 标准化你的 agents 暴露和使用 tools 的方式
+- [Beginner Guide to LangChain in Python](/posts/Beginner-Guide-to-LangChain-in-Python/) - 学习 LangChain framework 以构建 agent chains 和 tool integrations

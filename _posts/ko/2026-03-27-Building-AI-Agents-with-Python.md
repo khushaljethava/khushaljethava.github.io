@@ -1,20 +1,21 @@
 ---
-title: "Building AI Agents with Python: A Complete Guide"
-description: Learn how to build autonomous AI agents with Python using OpenAI API and LangChain. This guide covers the agent loop, tool use, memory, and a practical research agent example.
+title: "Python으로 AI Agents 구축하기: 완전 가이드"
+description: "OpenAI API와 LangChain을 사용하여 Python으로 자율 AI agents를 구축하는 방법을 배웁니다. 이 가이드는 agent loop, tool 사용, memory, 그리고 실용적인 research agent 예제를 다룹니다."
 date: 2026-03-27 12:00:00 +0800
 categories: [Python]
 tags: [python, ai, agents]
+lang: ko
 translations: [hi, es, pt, fr, de, ja, ko, ar, zh]
 image:
   path: "/commons/Building AI Agents with Python A Complete Guide.webp"
-  alt: "Building AI Agents with Python: A Complete Guide"
+  alt: "Python으로 AI Agents 구축하기: 완전 가이드"
 ---
 
-## What Are AI Agents?
+## AI Agents란 무엇인가?
 
-An AI agent is a program that uses a large language model (LLM) as its reasoning engine to decide what actions to take, execute those actions, observe the results, and repeat until a task is complete. Unlike a simple chatbot that responds to a single prompt, an agent operates in a loop and can call external tools like web searches, databases, or code interpreters.
+AI agent는 large language model (LLM)을 추론 엔진으로 사용하여 어떤 action을 취할지 결정하고, 그 action을 실행하며, 결과를 관찰하고, 작업이 완료될 때까지 이를 반복하는 프로그램입니다. 단일 prompt에 응답하는 단순한 chatbot과 달리, agent는 loop 안에서 작동하며 web searches, databases, code interpreters 같은 외부 tools를 호출할 수 있습니다.
 
-The core difference between a chatbot and an agent is autonomy. A chatbot answers one question at a time. An agent breaks down a complex goal into steps and works through them independently.
+chatbot과 agent의 핵심적인 차이는 자율성입니다. chatbot은 한 번에 하나의 질문에 답합니다. agent는 복잡한 목표를 단계로 분해하고 그것들을 독립적으로 처리합니다.
 
 ```python
 # The simplest possible agent loop
@@ -26,17 +27,17 @@ while not task_complete:
     task_complete = check_if_done(result)
 ```
 
-This observe-think-act pattern is the foundation of every AI agent, regardless of framework or complexity.
+이 observe-think-act 패턴은 framework나 복잡성에 관계없이 모든 AI agent의 기반입니다.
 
-When I built agent systems at Codiste for tasks like car damage detection with Detectron2 and barcode detection with YOLO, I found that the agent loop concept applies even outside of LLM-based systems. The pattern of observing an input, reasoning about it, and deciding on an action is universal -- the LLM just makes the reasoning step far more flexible.
+제가 Codiste에서 Detectron2를 사용한 car damage detection과 YOLO를 사용한 barcode detection 같은 작업을 위해 agent systems를 구축했을 때, agent loop 개념이 LLM 기반 시스템 밖에서도 적용된다는 것을 발견했습니다. input을 관찰하고, 그것에 대해 추론하며, action을 결정하는 패턴은 보편적입니다 -- LLM은 단지 그 추론 단계를 훨씬 더 유연하게 만들 뿐입니다.
 
-## The Agent Loop: Observe, Think, Act
+## Agent Loop: Observe, Think, Act
 
-Every AI agent follows a cyclic pattern:
+모든 AI agent는 순환적 패턴을 따릅니다.
 
-1. **Observe** -- Collect information from the environment (user input, tool outputs, memory).
-2. **Think** -- Use the LLM to reason about what to do next.
-3. **Act** -- Execute a chosen action (call a tool, return a response, update state).
+1. **Observe** -- environment에서 정보를 수집합니다 (user input, tool outputs, memory).
+2. **Think** -- 다음에 무엇을 할지 추론하기 위해 LLM을 사용합니다.
+3. **Act** -- 선택한 action을 실행합니다 (tool을 호출하고, response를 반환하고, state를 업데이트합니다).
 
 ```python
 import openai
@@ -76,17 +77,17 @@ def agent_loop(user_task: str, tools: list, max_iterations: int = 10):
     return "Max iterations reached."
 ```
 
-The LLM decides when to call tools and when to stop. You do not hard-code the control flow -- the model figures it out based on the task and available tools. For a production-ready SDK that handles this loop for you, see the [OpenAI Agents SDK Python tutorial](/posts/openai-agents-sdk-python/).
+LLM이 언제 tools를 호출하고 언제 멈출지 결정합니다. 당신은 control flow를 하드코딩하지 않습니다 -- model이 작업과 사용 가능한 tools를 바탕으로 스스로 알아냅니다. 이 loop를 대신 처리해주는 프로덕션 준비된 SDK에 대해서는 [OpenAI Agents SDK Python 튜토리얼](/posts/openai-agents-sdk-python/)을 참조하세요.
 
-## Building a Simple Agent with the OpenAI API
+## OpenAI API로 간단한 Agent 구축하기
 
-Let us build a working agent that can perform web searches and calculations. First, install the required packages:
+web searches와 계산을 수행할 수 있는 작동하는 agent를 구축해 봅시다. 먼저 필요한 packages를 설치합니다.
 
 ```bash
 pip install openai requests
 ```
 
-Define the tools your agent can use:
+agent가 사용할 수 있는 tools를 정의합니다.
 
 ```python
 import json
@@ -134,7 +135,7 @@ def execute_tool(name: str, arguments: str):
     return f"Unknown tool: {name}"
 ```
 
-Now define the tool schemas that the OpenAI API expects:
+이제 OpenAI API가 기대하는 tool schemas를 정의합니다.
 
 ```python
 tools = [
@@ -175,7 +176,7 @@ tools = [
 ]
 ```
 
-Run the agent:
+agent를 실행합니다.
 
 ```python
 result = agent_loop(
@@ -186,16 +187,16 @@ result = agent_loop(
 print(result)
 ```
 
-The agent will first call `search_web` to find the population, then call `calculate` to compute 15% of it, and finally return a natural language answer combining both results.
+agent는 먼저 인구를 찾기 위해 `search_web`를 호출하고, 그다음 그것의 15%를 계산하기 위해 `calculate`를 호출하며, 마지막으로 두 결과를 결합한 자연어 답변을 반환합니다.
 
-## Adding Memory to Your Agent
+## Agent에 Memory 추가하기
 
-Agents become more useful when they can remember previous interactions. There are two types of memory:
+agents는 이전 상호작용을 기억할 수 있을 때 더 유용해집니다. memory에는 두 가지 유형이 있습니다.
 
-- **Short-term memory** -- The conversation history within a single session (the `messages` list).
-- **Long-term memory** -- Persistent storage across sessions.
+- **Short-term memory** -- 단일 session 내의 대화 기록 (`messages` list).
+- **Long-term memory** -- session 간에 걸친 영구 저장소.
 
-Here is a simple long-term memory implementation using a JSON file:
+다음은 JSON file을 사용한 간단한 long-term memory 구현입니다.
 
 ```python
 import json
@@ -232,7 +233,7 @@ class AgentMemory:
         return f"Known facts:\n{facts}\n\nRecent tasks:\n{tasks}"
 ```
 
-Integrate memory into the agent loop by prepending the memory context to the system message:
+memory context를 system message 앞에 추가하여 memory를 agent loop에 통합합니다.
 
 ```python
 memory = AgentMemory()
@@ -248,15 +249,15 @@ def agent_with_memory(user_task: str, tools: list):
     return result
 ```
 
-## Using LangChain Agents
+## LangChain Agents 사용하기
 
-LangChain provides a higher-level abstraction for building agents. It handles the loop, tool integration, and memory management for you. If you are new to LangChain, start with our [Beginner Guide to LangChain in Python](/posts/Beginner-Guide-to-LangChain-in-Python/).
+LangChain은 agents를 구축하기 위한 더 높은 수준의 추상화를 제공합니다. loop, tool integration, memory management를 대신 처리해줍니다. LangChain이 처음이라면 [Python에서 LangChain 입문 가이드](/posts/Beginner-Guide-to-LangChain-in-Python/)로 시작하세요.
 
 ```bash
 pip install langchain langchain-openai langchain-community
 ```
 
-Here is the same search-and-calculate agent built with LangChain:
+다음은 LangChain으로 구축한 동일한 search-and-calculate agent입니다.
 
 ```python
 from langchain_openai import ChatOpenAI
@@ -298,11 +299,11 @@ result = executor.invoke({"input": "What is the GDP of Japan and what is 3.5% of
 print(result["output"])
 ```
 
-The `verbose=True` flag prints each step so you can see the agent's reasoning process.
+`verbose=True` flag는 각 단계를 print하므로 agent의 추론 과정을 볼 수 있습니다.
 
-## Building a Research Agent
+## Research Agent 구축하기
 
-Let us build a more practical example: a research agent that takes a topic, searches for information, summarizes findings, and produces a structured report.
+더 실용적인 예제를 구축해 봅시다. 주제를 받아 정보를 검색하고, 결과를 요약하며, 구조화된 보고서를 생성하는 research agent입니다.
 
 ```python
 import json
@@ -370,11 +371,11 @@ result = executor.invoke({
 print(result["output"])
 ```
 
-This agent will make multiple search queries, collect information, and then write a structured markdown report to disk.
+이 agent는 여러 search queries를 수행하고, 정보를 수집한 다음, 구조화된 markdown 보고서를 disk에 작성합니다.
 
-## Error Handling and Reliability
+## Error Handling 및 신뢰성
 
-Production agents need robust error handling. Tools fail, APIs time out, and LLMs sometimes produce malformed output.
+프로덕션 agents에는 견고한 error handling이 필요합니다. tools는 실패하고, APIs는 타임아웃되며, LLMs는 때때로 잘못된 형식의 output을 생성합니다.
 
 ```python
 import time
@@ -407,11 +408,11 @@ def execute_tool_safe(name: str, arguments: str, retries: int = 2):
             return f"Error: {e}"
 ```
 
-You should also set a maximum iteration count on the agent loop to prevent infinite loops, and validate that the LLM's tool calls reference tools that actually exist.
+또한 infinite loops를 방지하기 위해 agent loop에 최대 iteration count를 설정하고, LLM의 tool calls가 실제로 존재하는 tools를 참조하는지 검증해야 합니다.
 
-## Structured Output from Agents
+## Agents로부터의 구조화된 Output
 
-Often you want an agent to return data in a specific format, not free-form text. Use Pydantic models to enforce structure:
+종종 agent가 자유 형식의 텍스트가 아니라 특정 형식으로 data를 반환하기를 원할 것입니다. 구조를 강제하기 위해 Pydantic models를 사용하세요.
 
 ```python
 from pydantic import BaseModel
@@ -439,11 +440,11 @@ def agent_with_structured_output(task: str, tools: list) -> ResearchReport:
     return response.choices[0].message.parsed
 ```
 
-## Best Practices for Building AI Agents
+## AI Agents 구축을 위한 모범 사례
 
-**Keep tools simple and focused.** Each tool should do one thing well. A `search_web` tool should search, not search and summarize. Let the LLM handle combining results.
+**tools를 단순하고 집중되게 유지하세요.** 각 tool은 한 가지 일을 잘 수행해야 합니다. `search_web` tool은 검색해야 하며, 검색하고 요약해서는 안 됩니다. 결과를 결합하는 것은 LLM이 처리하도록 하세요.
 
-**Write clear tool descriptions.** The LLM uses tool descriptions to decide when and how to call them. Vague descriptions lead to incorrect tool usage. For a standardized approach to defining and sharing tools across AI clients, explore the [Model Context Protocol](/posts/model-context-protocol-python/).
+**명확한 tool descriptions를 작성하세요.** LLM은 tool descriptions를 사용하여 언제 어떻게 tools를 호출할지 결정합니다. 모호한 descriptions는 잘못된 tool 사용으로 이어집니다. AI clients 간에 tools를 정의하고 공유하는 표준화된 접근 방식에 대해서는 [Model Context Protocol](/posts/model-context-protocol-python/)을 탐색하세요.
 
 ```python
 # Bad description
@@ -459,38 +460,38 @@ def extract_emails(text: str) -> str:
     ...
 ```
 
-**Set iteration limits.** Always cap how many times the agent loop can run. Without limits, a confused agent can loop indefinitely and burn through API credits.
+**iteration limits를 설정하세요.** agent loop가 실행될 수 있는 횟수를 항상 제한하세요. 제한이 없으면 혼란스러운 agent가 무한히 loop하며 API credits를 소진할 수 있습니다.
 
-**Log everything.** In production, log every LLM call, every tool execution, and every result. When an agent produces incorrect output, these logs are essential for debugging.
+**모든 것을 log하세요.** 프로덕션에서는 모든 LLM call, 모든 tool execution, 모든 결과를 log하세요. agent가 잘못된 output을 생성할 때, 이러한 logs는 debugging에 필수적입니다.
 
-In production, I found that the biggest challenge is not building the agent loop itself but handling the unpredictable ways users interact with it. When I deployed a generative chatbot using BART at Codiste, edge cases in user inputs caused tool selection failures that only showed up under real traffic. Comprehensive logging was the only thing that made those issues diagnosable.
+프로덕션에서, 제가 발견한 가장 큰 도전은 agent loop 자체를 구축하는 것이 아니라 users가 그것과 상호작용하는 예측할 수 없는 방식을 처리하는 것이었습니다. 제가 Codiste에서 BART를 사용한 generative chatbot을 deploy했을 때, user inputs의 edge cases가 tool selection failures를 일으켰고, 그것은 실제 트래픽에서만 나타났습니다. 포괄적인 logging만이 그러한 문제를 진단 가능하게 만든 유일한 것이었습니다.
 
-**Test with diverse inputs.** Agents are non-deterministic. The same input can produce different tool call sequences. Test with many variations to find failure modes.
+**다양한 inputs로 테스트하세요.** agents는 비결정론적입니다. 동일한 input이 서로 다른 tool call sequences를 생성할 수 있습니다. failure modes를 찾기 위해 많은 변형으로 테스트하세요.
 
-## When to Build an Agent vs. a Pipeline
+## Agent를 구축할 때 vs Pipeline을 구축할 때
 
-Not every task needs an agent. Use an agent when:
+모든 작업에 agent가 필요한 것은 아닙니다. 다음과 같은 경우에 agent를 사용하세요.
 
-- The number of steps is unknown in advance.
-- The next step depends on the result of the previous step.
-- The task requires judgment about which tools to use.
+- 단계 수가 사전에 알려지지 않은 경우.
+- 다음 단계가 이전 단계의 결과에 의존하는 경우.
+- 작업이 어떤 tools를 사용할지에 대한 판단을 요구하는 경우.
 
-Use a fixed pipeline when:
+다음과 같은 경우에 고정된 pipeline을 사용하세요.
 
-- The steps are always the same.
-- You need deterministic, reproducible behavior.
-- Latency and cost matter more than flexibility.
+- 단계가 항상 동일한 경우.
+- 결정론적이고 재현 가능한 동작이 필요한 경우.
+- 유연성보다 latency와 비용이 더 중요한 경우.
 
-A pipeline that calls an LLM three times in a fixed order will always be faster, cheaper, and more predictable than an agent that figures out those three steps on its own. Use agents for tasks that genuinely require adaptive reasoning.
+LLM을 고정된 순서로 세 번 호출하는 pipeline은 그 세 단계를 스스로 알아내는 agent보다 항상 더 빠르고, 더 저렴하며, 더 예측 가능합니다. 진정으로 적응적 추론을 요구하는 작업에는 agents를 사용하세요.
 
-## Summary
+## 요약
 
-AI agents combine LLMs with tools and a reasoning loop to tackle complex tasks autonomously. The core pattern is straightforward: observe, think, act, repeat. You can build agents from scratch using the OpenAI API or use frameworks like LangChain for faster development. The key to reliable agents is good tool design, clear prompts, error handling, and iteration limits. Start simple, test thoroughly, and add complexity only when the task demands it.
+AI agents는 LLMs를 tools 및 추론 loop와 결합하여 복잡한 작업을 자율적으로 처리합니다. 핵심 패턴은 간단합니다. observe, think, act, repeat. OpenAI API를 사용하여 처음부터 agents를 구축하거나 더 빠른 개발을 위해 LangChain 같은 frameworks를 사용할 수 있습니다. 신뢰할 수 있는 agents의 핵심은 좋은 tool design, 명확한 prompts, error handling, 그리고 iteration limits입니다. 간단하게 시작하고, 철저히 테스트하며, 작업이 요구할 때만 복잡성을 추가하세요.
 
 ---
 
-## Related Posts
+## 관련 게시물
 
-- [OpenAI Agents SDK Python Tutorial](/posts/openai-agents-sdk-python/) - Build production-ready agent workflows with tools, handoffs, and tracing using the official SDK
-- [Model Context Protocol Python Tutorial](/posts/model-context-protocol-python/) - Standardize how your agents expose and consume tools with MCP
-- [Beginner Guide to LangChain in Python](/posts/Beginner-Guide-to-LangChain-in-Python/) - Learn the LangChain framework for building agent chains and tool integrations
+- [OpenAI Agents SDK Python Tutorial](/posts/openai-agents-sdk-python/) - 공식 SDK를 사용하여 tools, handoffs, tracing을 갖춘 프로덕션 준비된 agent workflows를 구축하기
+- [Model Context Protocol Python Tutorial](/posts/model-context-protocol-python/) - MCP로 agents가 tools를 노출하고 사용하는 방식을 표준화하기
+- [Beginner Guide to LangChain in Python](/posts/Beginner-Guide-to-LangChain-in-Python/) - agent chains와 tool integrations를 구축하기 위한 LangChain framework 배우기
