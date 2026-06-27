@@ -4,7 +4,7 @@ description: A complete guide to web scraping with Python covering BeautifulSoup
 date: 2026-04-04 12:00:00 +0800
 categories: [Python]
 tags: [python, web-scraping]
-translations: [hi, es, pt, fr, de]
+translations: [hi, es, pt, fr, de, ja]
 image:
   path: "/commons/Python Web Scraping The Complete Guide for 2026.webp"
   alt: "Python web scraping workflow using BeautifulSoup, Selenium, and Playwright for extracting structured data from websites"

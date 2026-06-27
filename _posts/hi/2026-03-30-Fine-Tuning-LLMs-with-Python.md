@@ -5,7 +5,7 @@ date: 2026-03-30 12:00:00 +0800
 categories: [Python]
 tags: [python, ai, llm, fine-tuning]
 lang: hi
-translations: [hi, es, pt, fr, de, ja, ko]
+translations: [hi, es, pt, fr, de, ja, ko, ar]
 image:
   path: "/commons/Fine-Tuning Large Language Models with Python A Practical Guide.webp"
   alt: "Python के साथ बड़े लैंग्वेज मॉडल फाइन-ट्यून करना: एक व्यावहारिक गाइड"

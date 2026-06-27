@@ -5,7 +5,7 @@ date: 2026-04-04 12:00:00 +0800
 categories: [Python]
 tags: [python, web-scraping]
 lang: ja
-translations: [hi, es, pt, fr, de, ja, ko, ar, zh]
+translations: [hi, es, pt, fr, de, ja]
 image:
   path: "/commons/Python Web Scraping The Complete Guide for 2026.webp"
   alt: "ウェブサイトから構造化データを抽出するためにBeautifulSoup、Selenium、Playwrightを使用するPythonウェブスクレイピングのワークフロー"

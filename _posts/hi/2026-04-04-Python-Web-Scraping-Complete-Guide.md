@@ -5,7 +5,7 @@ date: 2026-04-04 12:00:00 +0800
 categories: [Python]
 tags: [python, web-scraping]
 lang: hi
-translations: [hi, es, pt, fr, de]
+translations: [hi, es, pt, fr, de, ja]
 image:
   path: "/commons/Python Web Scraping The Complete Guide for 2026.webp"
   alt: "वेबसाइटों से संरचित डेटा निकालने के लिए BeautifulSoup, Selenium और Playwright का उपयोग करते हुए Python वेब स्क्रैपिंग वर्कफ़्लो"
