@@ -238,7 +238,7 @@ print(log_entry)
 
 ## Edge Cases and Gotchas
 
-- **Literal braces**: To include `{` or `}` in the output, double them: `{{` and `}}`.
+- **Literal braces**: To include `{` or `}` in the output, double them: {% raw %}`{{` and `}}`{% endraw %}.
 - **f-strings vs `.format()`**: F-strings are evaluated immediately where defined; `.format()` is better for reusable templates stored in variables or config files.
 - **Missing arguments**: Referencing `{0}` with only one argument raises `IndexError`.
 - **Type mismatch**: Passing a string to a numeric format spec like `{:d}` raises `ValueError`.
@@ -251,7 +251,7 @@ print(log_entry)
 2. **Use `:.2f` for currency** to always show exactly two decimal places.
 3. **Prefer f-strings for simple inline formatting** in Python 3.6+ — they are faster and cleaner.
 4. **Use `.format()` for templates in variables** since f-strings evaluate immediately at definition.
-5. **Escape braces with doubling** (`{{`, `}}`) when the output needs literal curly brace characters.
+5. **Escape braces with doubling** ({% raw %}`{{`, `}}`{% endraw %}) when the output needs literal curly brace characters.
 
 ---
 
@@ -271,7 +271,7 @@ Both use the same format specification mini-language. F-strings (`f"Hello {name}
 
 **Q2: How do I include a literal `{` or `}` in a formatted string?**
 
-Double the brace: `{{` produces `{` and `}}` produces `}`. For example, `"{{score: {}}}".format(42)` produces `"{score: 42}"`.
+Double the brace: {% raw %}`{{` produces `{` and `}}` produces `}`. For example, `"{{score: {}}}".format(42)`{% endraw %} produces `"{score: 42}"`.
 
 **Q3: Can I use `format()` to format dates and times?**
 
