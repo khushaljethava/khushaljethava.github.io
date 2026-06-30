@@ -83,7 +83,7 @@ client = OpenAI()
 
 def check_faithfulness(answer: str, context: str) -> dict:
     prompt = f"""Given the CONTEXT below, determine if the ANSWER is fully supported by it.
-Reply in JSON: {{"faithful": true/false, "unsupported_claims": ["..."]}}
+Reply in JSON: {% raw %}{{"faithful": true/false, "unsupported_claims": ["..."]}}{% endraw %}
 
 CONTEXT: {context}
 ANSWER: {answer}
