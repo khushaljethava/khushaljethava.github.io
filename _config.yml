@@ -30,6 +30,7 @@ url: "https://khushaljethava.work"
 
 plugins:
   - jekyll-sitemap
+  - jekyll-redirect-from
   
 github:
   username: Khushaljethava # change to your GitHub username
