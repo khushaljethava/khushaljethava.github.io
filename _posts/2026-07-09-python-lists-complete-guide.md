@@ -261,6 +261,6 @@ Lists are one piece of Python's core toolkit. To round it out:
 
 - If you're wrangling key-value data instead of ordered sequences, see the [Python Dictionaries: The Complete Guide](/posts/python-dictionaries-complete-guide/) for the dict equivalent of everything covered here.
 - Many list methods are paired with global functions like `sorted()`, `len()`, and `enumerate()` — the full rundown is in the [Python Built-in Functions Reference](/posts/python-built-in-functions-reference/).
-- If you're feeding lists into an AI pipeline (batching prompts, chunking documents), see how async iteration over sequences works in [Python Async Await for AI Pipelines](/posts/python-async-await-for-ai-pipelines-a-practical-guide/).
+- If you're feeding lists into an AI pipeline (batching prompts, chunking documents), see how async iteration over sequences works in [Python Async Await for AI Pipelines](/posts/Python-Async-Await-for-AI-Pipelines-A-Practical-Guide/).
 
 Once you're comfortable with these eleven methods, slicing, and the shallow-vs-deep copy distinction, you know essentially everything you need to use Python lists effectively in real code.
