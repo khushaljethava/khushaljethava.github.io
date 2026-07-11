@@ -30,6 +30,7 @@ url: "https://khushaljethava.work"
 
 plugins:
   - jekyll-sitemap
+  - jekyll-redirect-from
   - jekyll-polyglot
 
 # --- jekyll-polyglot (multilingual) settings ---
