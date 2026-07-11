@@ -1,18 +1,19 @@
 ---
-title: "Fine-Tuning Large Language Models with Python: A Practical Guide"
-description: Learn how to fine-tune large language models using Python with LoRA, QLoRA, Hugging Face Transformers, and PEFT. Covers dataset preparation, training, evaluation, and deployment.
+title: "Fine-Tuning de Grandes Modelos de Linguagem com Python: Guia Prático"
+description: Aprenda a fazer fine-tuning de grandes modelos de linguagem com Python usando LoRA, QLoRA, Hugging Face Transformers e PEFT. Aborda preparação de dados, treinamento, avaliação e implantação.
 date: 2026-03-30 12:00:00 +0800
 categories: [Python]
 tags: [python, ai, llm, fine-tuning]
+lang: pt
 translations: [hi, es, pt, fr, de, ja, ko, ar]
 image:
   path: "/commons/Fine-Tuning Large Language Models with Python A Practical Guide.webp"
-  alt: "Fine-Tuning Large Language Models with Python: A Practical Guide"
+  alt: "Fine-Tuning de Grandes Modelos de Linguagem com Python: Guia Prático"
 ---
 
-## Why Fine-Tune an LLM?
+## Por que fazer fine-tuning de um LLM?
 
-A pretrained LLM knows a lot about language but nothing about your specific domain, tone, or task format. Fine-tuning adapts a general-purpose model to your needs by training it on your own data.
+Um LLM pré-treinado sabe muito sobre linguagem, mas nada sobre o seu domínio, tom ou formato de tarefa específicos. O fine-tuning adapta um modelo de uso geral às suas necessidades, treinando-o com os seus próprios dados.
 
 ```python
 # Before fine-tuning
@@ -24,20 +25,20 @@ prompt = "Classify this support ticket: 'My order arrived damaged'"
 # Model outputs: "Category: Shipping - Damaged Item, Priority: High"
 ```
 
-Common reasons to fine-tune:
+Motivos comuns para fazer fine-tuning:
 
-- **Consistent output format** — The model learns your exact expected response structure.
-- **Domain knowledge** — Medical, legal, or financial terminology and reasoning patterns. For retrieval-based approaches instead, see [RAG with Python](/posts/RAG-with-Python-Retrieval-Augmented-Generation/).
-- **Tone and style** — Match your brand voice or documentation style.
-- **Cost reduction** — A fine-tuned smaller model can outperform a larger general model on your specific task, at lower inference cost.
+- **Formato de saída consistente** — O modelo aprende a estrutura de resposta exata que você espera.
+- **Conhecimento de domínio** — Terminologia e padrões de raciocínio médicos, jurídicos ou financeiros. Para abordagens baseadas em recuperação, veja [RAG with Python](/posts/RAG-with-Python-Retrieval-Augmented-Generation/).
+- **Tom e estilo** — Combinar com a voz da sua marca ou com o estilo da sua documentação.
+- **Redução de custos** — Um modelo menor com fine-tuning pode superar um modelo geral maior na sua tarefa específica, com um custo de inferência menor.
 
-When I built a Document AI pipeline at Codiste, fine-tuning a transformer on domain-specific documents was the turning point that took our extraction accuracy from mediocre to production-ready. The base model understood language well enough, but it could not reliably extract structured fields from invoices and contracts until we trained it on a few hundred annotated examples in our exact output format.
+Quando construí uma pipeline de Document AI na Codiste, fazer fine-tuning de um transformer com documentos específicos do domínio foi o ponto de virada que levou a nossa precisão de extração de medíocre a pronta para produção. O modelo base entendia a linguagem bem o suficiente, mas não conseguia extrair campos estruturados de faturas e contratos de forma confiável até que o treinamos com algumas centenas de exemplos anotados no nosso formato de saída exato.
 
-## Full Fine-Tuning vs. LoRA vs. QLoRA
+## Fine-tuning completo vs. LoRA vs. QLoRA
 
-**Full fine-tuning** updates every parameter in the model. This requires enormous GPU memory (a 7B parameter model needs 28+ GB just for the weights in fp32) and risks catastrophic forgetting.
+O **fine-tuning completo** atualiza todos os parâmetros do modelo. Isso exige uma enorme memória de GPU (um modelo de 7B parâmetros precisa de mais de 28 GB apenas para os pesos em fp32) e corre o risco de esquecimento catastrófico.
 
-**LoRA (Low-Rank Adaptation)** freezes the original weights and injects small trainable matrices into each layer. Instead of updating millions of parameters, you train thousands.
+O **LoRA (Low-Rank Adaptation)** congela os pesos originais e injeta pequenas matrizes treináveis em cada camada. Em vez de atualizar milhões de parâmetros, você treina milhares.
 
 ```text
 Original weight matrix W (4096 x 4096) = 16M parameters
@@ -45,7 +46,7 @@ LoRA: W + A × B where A is (4096 x 16) and B is (16 x 4096) = 131K parameters
 That's 99.2% fewer trainable parameters.
 ```
 
-**QLoRA** goes further by loading the base model in 4-bit quantized format, reducing memory usage by 4x while maintaining quality. A 7B model that normally needs 14 GB in fp16 fits in about 4 GB with QLoRA.
+O **QLoRA** vai além ao carregar o modelo base em formato quantizado de 4 bits, reduzindo o uso de memória em 4 vezes enquanto mantém a qualidade. Um modelo de 7B que normalmente precisa de 14 GB em fp16 cabe em cerca de 4 GB com QLoRA.
 
 ```python
 # Memory comparison for a 7B parameter model
@@ -54,13 +55,13 @@ That's 99.2% fewer trainable parameters.
 # QLoRA (4-bit):     ~4 GB for weights + ~0.1 GB for LoRA adapters
 ```
 
-## Setting Up the Environment
+## Configurando o ambiente
 
 ```bash
 pip install torch transformers datasets peft trl bitsandbytes accelerate
 ```
 
-You need a GPU for fine-tuning. A single GPU with 16 GB VRAM (e.g., NVIDIA T4 or RTX 4080) is sufficient for QLoRA on 7B models.
+Você precisa de uma GPU para o fine-tuning. Uma única GPU com 16 GB de VRAM (por exemplo, NVIDIA T4 ou RTX 4080) é suficiente para QLoRA em modelos de 7B.
 
 ```python
 import torch
@@ -70,9 +71,9 @@ if torch.cuda.is_available():
     print(f"VRAM: {torch.cuda.get_device_properties(0).total_mem / 1e9:.1f} GB")
 ```
 
-## Preparing Your Dataset
+## Preparando o seu conjunto de dados
 
-Fine-tuning data should be formatted as instruction-response pairs. Here is how to prepare a dataset for instruction tuning:
+Os dados de fine-tuning devem ser formatados como pares de instrução-resposta. Veja como preparar um conjunto de dados para o ajuste por instruções:
 
 ```python
 from datasets import Dataset
@@ -104,7 +105,7 @@ print(f"Train: {len(dataset['train'])} examples")
 print(f"Test: {len(dataset['test'])} examples")
 ```
 
-Format the data into the prompt template your model expects:
+Formate os dados no template de prompt que o seu modelo espera:
 
 ```python
 def format_prompt(example):
@@ -130,7 +131,7 @@ dataset = dataset.map(format_prompt)
 print(dataset["train"][0]["text"])
 ```
 
-## Loading the Base Model with QLoRA
+## Carregando o modelo base com QLoRA
 
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
@@ -163,7 +164,7 @@ model.config.use_cache = False
 print(f"Model loaded. Memory: {model.get_memory_footprint() / 1e9:.2f} GB")
 ```
 
-## Configuring LoRA
+## Configurando o LoRA
 
 ```python
 from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training, TaskType
@@ -198,11 +199,11 @@ print(f"Trainable: {trainable_params:,} ({100 * trainable_params / total_params:
 print(f"Total: {total_params:,}")
 ```
 
-The `r` parameter controls the rank of the LoRA matrices. Higher rank means more capacity but more memory and compute. Values of 8, 16, or 32 work well in practice. The `lora_alpha` is typically set to 2x the rank.
+O parâmetro `r` controla o rank das matrizes LoRA. Um rank maior significa mais capacidade, mas mais memória e computação. Valores de 8, 16 ou 32 funcionam bem na prática. O `lora_alpha` é geralmente definido como o dobro do rank.
 
-## Training with SFTTrainer
+## Treinamento com SFTTrainer
 
-The `SFTTrainer` from the `trl` library simplifies supervised fine-tuning:
+O `SFTTrainer` da biblioteca `trl` simplifica o fine-tuning supervisionado:
 
 ```python
 from trl import SFTTrainer
@@ -245,9 +246,9 @@ trainer.save_model("./final_adapter")
 tokenizer.save_pretrained("./final_adapter")
 ```
 
-### Monitoring Training
+### Monitorando o treinamento
 
-Watch the training loss and evaluation loss. If training loss decreases but eval loss increases, the model is overfitting.
+Acompanhe a perda de treinamento (training loss) e a perda de avaliação (eval loss). Se a perda de treinamento diminuir, mas a de avaliação aumentar, o modelo está sofrendo overfitting.
 
 ```python
 # After training, plot the losses
@@ -272,7 +273,7 @@ plt.savefig("training_loss.png")
 plt.show()
 ```
 
-## Evaluating the Fine-Tuned Model
+## Avaliando o modelo com fine-tuning
 
 ```python
 from peft import PeftModel
@@ -324,7 +325,7 @@ for instruction, input_text in test_cases:
     print("---")
 ```
 
-### Quantitative Evaluation
+### Avaliação quantitativa
 
 ```python
 from sklearn.metrics import accuracy_score
@@ -352,9 +353,9 @@ def evaluate_on_test_set(test_dataset):
 evaluate_on_test_set(dataset["test"])
 ```
 
-## Merging LoRA Weights for Deployment
+## Mesclando os pesos do LoRA para a implantação
 
-For production deployment, merge the LoRA adapter into the base model to eliminate the adapter overhead. If you are building a full production pipeline, check out [MLOps with Python: Building Production ML Pipelines](/posts/MLOps-with-Python-Production-ML-Pipelines/) for experiment tracking, model serving, and CI/CD.
+Para a implantação em produção, mescle o adaptador LoRA no modelo base para eliminar a sobrecarga do adaptador. Se você está construindo uma pipeline de produção completa, confira [MLOps with Python: Building Production ML Pipelines](/posts/MLOps-with-Python-Production-ML-Pipelines/) para rastreamento de experimentos, servir modelos e CI/CD.
 
 ```python
 from peft import PeftModel
@@ -378,9 +379,9 @@ tokenizer.save_pretrained("./merged_model")
 print("Merged model saved. It can now be loaded without PEFT.")
 ```
 
-## Deploying with vLLM
+## Implantando com vLLM
 
-vLLM is a high-throughput inference engine that makes serving fine-tuned models practical:
+O vLLM é um motor de inferência de alto throughput que torna prático servir modelos com fine-tuning:
 
 ```bash
 pip install vllm
@@ -410,9 +411,9 @@ for output in outputs:
     print("---")
 ```
 
-You can also integrate your fine-tuned model into agent workflows using the [OpenAI Agents SDK](/posts/openai-agents-sdk-python/) for tool-using, multi-agent systems.
+Você também pode integrar o seu modelo com fine-tuning em fluxos de trabalho de agentes usando o [OpenAI Agents SDK](/posts/openai-agents-sdk-python/) para sistemas multiagente que usam ferramentas.
 
-Or serve it as an API:
+Ou sirva-o como uma API:
 
 ```bash
 python -m vllm.entrypoints.openai.api_server \
@@ -421,7 +422,7 @@ python -m vllm.entrypoints.openai.api_server \
     --port 8000
 ```
 
-Then call it like an OpenAI API:
+Em seguida, chame-o como uma API da OpenAI:
 
 ```python
 import openai
@@ -436,26 +437,26 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 ```
 
-## Tips for Better Fine-Tuning
+## Dicas para um melhor fine-tuning
 
-**Data quality matters more than data quantity.** 500 high-quality, diverse examples often beat 5000 noisy ones. Review your training data manually. In my experience fine-tuning transformers at Codiste, I found that spending two days cleaning and deduplicating 400 training examples produced a better model than rushing through 2000 noisy ones. Every mislabeled example in a small dataset has an outsized negative impact on the final model.
+**A qualidade dos dados importa mais do que a quantidade.** 500 exemplos diversos e de alta qualidade muitas vezes superam 5000 ruidosos. Revise seus dados de treinamento manualmente. Na minha experiência fazendo fine-tuning de transformers na Codiste, descobri que gastar dois dias limpando e removendo duplicatas de 400 exemplos de treinamento produzia um modelo melhor do que apressar 2000 ruidosos. Cada exemplo mal rotulado em um conjunto de dados pequeno tem um impacto negativo desproporcional no modelo final.
 
-**Start with a small learning rate.** For LoRA, 1e-4 to 2e-4 works well. For full fine-tuning, use 1e-5 to 5e-5. Too high a learning rate destroys the pretrained knowledge.
+**Comece com uma taxa de aprendizado pequena.** Para LoRA, de 1e-4 a 2e-4 funciona bem. Para o fine-tuning completo, use de 1e-5 a 5e-5. Uma taxa de aprendizado muito alta destrói o conhecimento pré-treinado.
 
-**Use a validation set.** Always hold out 10-20% of your data for evaluation. Stop training when validation loss stops decreasing.
+**Use um conjunto de validação.** Sempre reserve de 10 a 20% dos seus dados para avaliação. Pare o treinamento quando a perda de validação parar de diminuir.
 
-**Choose the right base model.** Start with an instruction-tuned model (like Llama-2-chat or Mistral-Instruct) if your task involves following instructions. Use a base model if you need more flexibility.
+**Escolha o modelo base certo.** Comece com um modelo ajustado por instruções (como Llama-2-chat ou Mistral-Instruct) se a sua tarefa envolver seguir instruções. Use um modelo base se precisar de mais flexibilidade.
 
-**Iterate on your data.** After initial fine-tuning, analyze the errors. Often the fix is better training data, not more epochs or a larger model.
+**Itere sobre os seus dados.** Após o fine-tuning inicial, analise os erros. Muitas vezes a solução são dados de treinamento melhores, não mais epochs ou um modelo maior.
 
-## Summary
+## Resumo
 
-Fine-tuning adapts a pretrained LLM to your specific task, format, and domain. QLoRA makes this accessible on consumer GPUs by quantizing the base model to 4-bit and training small LoRA adapters. The workflow is: prepare your dataset, load the quantized model, configure LoRA, train with SFTTrainer, evaluate, and deploy. Focus on data quality, use proper evaluation, and merge the adapter for production deployment.
+O fine-tuning adapta um LLM pré-treinado à sua tarefa, formato e domínio específicos. O QLoRA torna isso acessível em GPUs de consumo ao quantizar o modelo base para 4 bits e treinar pequenos adaptadores LoRA. O fluxo de trabalho é: prepare o seu conjunto de dados, carregue o modelo quantizado, configure o LoRA, treine com o SFTTrainer, avalie e implante. Foque na qualidade dos dados, use uma avaliação adequada e mescle o adaptador para a implantação em produção.
 
 ---
 
-## Related Posts
+## Publicações relacionadas
 
-- [MLOps with Python: Building Production ML Pipelines](/posts/MLOps-with-Python-Production-ML-Pipelines/) - Deploy and monitor your fine-tuned models in production with experiment tracking, CI/CD, and model serving
-- [RAG with Python: Retrieval-Augmented Generation](/posts/RAG-with-Python-Retrieval-Augmented-Generation/) - An alternative to fine-tuning that gives LLMs access to external knowledge at query time
-- [OpenAI Agents SDK Python Tutorial](/posts/openai-agents-sdk-python/) - Build tool-using, multi-agent workflows powered by your fine-tuned models
+- [MLOps with Python: Building Production ML Pipelines](/posts/MLOps-with-Python-Production-ML-Pipelines/) - Implante e monitore seus modelos com fine-tuning em produção com rastreamento de experimentos, CI/CD e serviço de modelos
+- [RAG with Python: Retrieval-Augmented Generation](/posts/RAG-with-Python-Retrieval-Augmented-Generation/) - Uma alternativa ao fine-tuning que dá aos LLMs acesso a conhecimento externo no momento da consulta
+- [OpenAI Agents SDK Python Tutorial](/posts/openai-agents-sdk-python/) - Construa fluxos de trabalho multiagente que usam ferramentas, impulsionados pelos seus modelos com fine-tuning

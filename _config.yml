@@ -31,7 +31,17 @@ url: "https://khushaljethava.work"
 plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
-  
+  - jekyll-polyglot
+
+# --- jekyll-polyglot (multilingual) settings ---
+# English is the default language and stays at the site root (/posts/:title/),
+# preserving existing indexed URLs. Other languages are served under /<lang>/.
+languages: ["en", "hi", "es", "pt", "fr", "de", "ja", "ko", "ar", "zh"]
+default_lang: "en"
+exclude_from_localization: ["assets", "commons", "javascript", "images", "app.min.js", "sw.js", "manifest.json", "robots.txt", "sitemap.xml", "feed.xml", ".nojekyll", "CNAME", "favicon"]
+parallel_localization: false
+# --- end polyglot settings ---
+
 github:
   username: Khushaljethava # change to your GitHub username
 

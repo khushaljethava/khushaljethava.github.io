@@ -4,6 +4,7 @@ description: "Learn how to use OpenAI Agents SDK Python to build tool-using, mul
 date: 2026-03-26 23:45:00 +0530
 categories: [Python]
 tags: [python, ai, agents, openai, llm]
+translations: [hi, es, pt, fr, de, ja, ko, ar, zh]
 image:
   path: /commons/openai-agents-sdk-python-hero.webp
   alt: OpenAI Agents SDK Python tutorial hero image

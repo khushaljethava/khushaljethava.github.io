@@ -1,45 +1,46 @@
 ---
-title: "Multimodal AI with Python: Working with Text, Images, and Audio"
-description: Learn how to build multimodal AI applications with Python. This guide covers OpenAI GPT-4 Vision API, image captioning with transformers, audio transcription with Whisper, combining modalities, and building a practical multimodal chatbot.
+title: "IA multimodal con Python: trabajar con texto, imágenes y audio"
+description: Aprende a crear aplicaciones de IA multimodal con Python. Esta guía cubre la API de GPT-4 Vision de OpenAI, la generación de descripciones de imágenes con transformers, la transcripción de audio con Whisper, la combinación de modalidades y la creación de un chatbot multimodal práctico.
 date: 2026-04-01 12:00:00 +0800
 categories: [Python]
 tags: [python, ai, multimodal]
 translations: [hi, es, pt]
+lang: es
 image:
   path: "/commons/Multimodal AI with Python Working with Text Images and Audio.webp"
-  alt: "Multimodal AI architecture combining text, image, and audio processing using GPT-4 Vision, transformers, and Whisper in Python"
+  alt: "Arquitectura de IA multimodal que combina el procesamiento de texto, imágenes y audio mediante GPT-4 Vision, transformers y Whisper en Python"
 ---
 
-## What Is Multimodal AI?
+## ¿Qué es la IA multimodal?
 
-Multimodal AI refers to systems that can process and reason across multiple types of input — text, images, audio, and video — within a single model or pipeline. Instead of treating each data type in isolation, multimodal systems understand the relationships between them. A multimodal model can look at a photo and answer questions about it, transcribe speech and summarize its content, or generate images from text descriptions.
+La IA multimodal se refiere a sistemas que pueden procesar y razonar sobre múltiples tipos de entrada —texto, imágenes, audio y vídeo— dentro de un único modelo o pipeline. En lugar de tratar cada tipo de dato de forma aislada, los sistemas multimodales comprenden las relaciones entre ellos. Un modelo multimodal puede mirar una foto y responder preguntas sobre ella, transcribir voz y resumir su contenido, o generar imágenes a partir de descripciones de texto.
 
-The practical value is straightforward: real-world data rarely comes in a single format. Customer support tickets include screenshots. Medical records combine text notes with imaging scans. Social media posts mix text, photos, and video. Building AI systems that handle all of these together produces better results than chaining separate single-modality tools.
+El valor práctico es evidente: los datos del mundo real rara vez vienen en un único formato. Los tickets de soporte al cliente incluyen capturas de pantalla. Los historiales médicos combinan notas de texto con escáneres de imágenes. Las publicaciones en redes sociales mezclan texto, fotos y vídeo. Construir sistemas de IA que gestionen todo esto en conjunto produce mejores resultados que encadenar herramientas separadas de una sola modalidad.
 
-When I built a Document AI pipeline at Codiste using fine-tuned transformers, the biggest accuracy gains came from combining OCR text extraction with visual layout features from the document images. Treating each modality in isolation gave us decent results, but fusing them together pushed extraction accuracy from around 82% to over 94% on complex invoice formats.
+Cuando construí un pipeline de Document AI en Codiste utilizando transformers ajustados, las mayores mejoras de precisión provinieron de combinar la extracción de texto por OCR con las características visuales de diseño de las imágenes de los documentos. Tratar cada modalidad de forma aislada nos dio resultados decentes, pero fusionarlas elevó la precisión de extracción de alrededor del 82% a más del 94% en formatos de factura complejos.
 
-In this guide, you will build multimodal applications using Python. We will cover image understanding with GPT-4 Vision, image captioning with Hugging Face transformers, audio transcription with Whisper, and finally tie everything together into a working multimodal chatbot. If you want to fine-tune models for specific multimodal tasks, see our guide on [Fine-Tuning LLMs with Python](/posts/Fine-Tuning-LLMs-with-Python/).
+En esta guía, construirás aplicaciones multimodales con Python. Cubriremos la comprensión de imágenes con GPT-4 Vision, la generación de descripciones de imágenes con transformers de Hugging Face, la transcripción de audio con Whisper y, finalmente, lo uniremos todo en un chatbot multimodal funcional. Si quieres ajustar modelos para tareas multimodales específicas, consulta nuestra guía sobre [Ajuste de LLM con Python](/posts/Fine-Tuning-LLMs-with-Python/).
 
-## Setting Up Your Environment
+## Configurar tu entorno
 
-Start by installing the required packages:
+Comienza instalando los paquetes necesarios:
 
 ```python
 pip install openai transformers torch torchvision pillow openai-whisper soundfile
 ```
 
-Set up your OpenAI API key as an environment variable:
+Configura tu clave de API de OpenAI como una variable de entorno:
 
 ```python
 import os
 os.environ["OPENAI_API_KEY"] = "your-api-key-here"
 ```
 
-For production use, store this in a `.env` file and load it with `python-dotenv` instead of hardcoding it.
+Para uso en producción, almacénala en un archivo `.env` y cárgala con `python-dotenv` en lugar de codificarla directamente.
 
-## Image Understanding with GPT-4 Vision
+## Comprensión de imágenes con GPT-4 Vision
 
-GPT-4 Vision (GPT-4V) accepts images alongside text prompts. You can pass images as URLs or base64-encoded strings.
+GPT-4 Vision (GPT-4V) acepta imágenes junto con prompts de texto. Puedes pasar imágenes como URLs o como cadenas codificadas en base64.
 
 ```python
 import openai
@@ -75,7 +76,7 @@ result = analyze_image_from_url(
 print(result)
 ```
 
-For local images, encode them as base64:
+Para imágenes locales, codifícalas como base64:
 
 ```python
 def analyze_local_image(image_path: str, question: str) -> str:
@@ -112,7 +113,7 @@ result = analyze_local_image("./photo.jpg", "Describe what you see in this image
 print(result)
 ```
 
-You can also pass multiple images in a single request:
+También puedes pasar varias imágenes en una sola solicitud:
 
 ```python
 def compare_images(image_url_1: str, image_url_2: str, question: str) -> str:
@@ -141,11 +142,11 @@ result = compare_images(
 print(result)
 ```
 
-The `detail` parameter controls how the model processes the image. Use `"low"` for faster, cheaper analysis when fine detail is not needed, and `"high"` when you need the model to read small text or identify fine-grained features.
+El parámetro `detail` controla cómo procesa el modelo la imagen. Usa `"low"` para un análisis más rápido y económico cuando no se necesita detalle fino, y `"high"` cuando necesitas que el modelo lea texto pequeño o identifique características de grano fino.
 
-## Image Captioning with Hugging Face Transformers
+## Generación de descripciones de imágenes con transformers de Hugging Face
 
-For offline or self-hosted image captioning, use the BLIP-2 model from Hugging Face:
+Para la generación de descripciones de imágenes sin conexión o autoalojada, usa el modelo BLIP-2 de Hugging Face:
 
 ```python
 from transformers import BlipProcessor, BlipForConditionalGeneration
@@ -172,7 +173,7 @@ url = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparenc
 print(caption_image(url))
 ```
 
-You can also do conditional captioning by providing a text prompt:
+También puedes generar descripciones condicionadas proporcionando un prompt de texto:
 
 ```python
 def conditional_caption(image_source: str, prompt: str) -> str:
@@ -190,15 +191,15 @@ def conditional_caption(image_source: str, prompt: str) -> str:
 print(conditional_caption(url, "a photo of"))
 ```
 
-BLIP runs locally, so it works well for batch processing large image datasets without API costs. You can combine image captioning with a [RAG system](/posts/RAG-with-Python-Retrieval-Augmented-Generation/) to build searchable image databases using generated captions as text embeddings.
+BLIP se ejecuta localmente, por lo que funciona bien para el procesamiento por lotes de grandes conjuntos de datos de imágenes sin costes de API. Puedes combinar la generación de descripciones de imágenes con un [sistema RAG](/posts/RAG-with-Python-Retrieval-Augmented-Generation/) para crear bases de datos de imágenes consultables utilizando las descripciones generadas como embeddings de texto.
 
-In my experience working with ControlNet for image segmentation tasks, I found that local captioning models like BLIP are invaluable for generating training data annotations at scale. We used this approach at Codiste to auto-label thousands of images before human reviewers refined them, cutting our annotation time by roughly 60%.
+En mi experiencia trabajando con ControlNet para tareas de segmentación de imágenes, descubrí que los modelos de descripción locales como BLIP son invaluables para generar anotaciones de datos de entrenamiento a escala. Usamos este enfoque en Codiste para etiquetar automáticamente miles de imágenes antes de que los revisores humanos las refinaran, reduciendo nuestro tiempo de anotación en aproximadamente un 60%.
 
-## Audio Transcription with Whisper
+## Transcripción de audio con Whisper
 
-OpenAI's Whisper model transcribes audio to text. You can use it locally through the `openai-whisper` package or through the API.
+El modelo Whisper de OpenAI transcribe audio a texto. Puedes usarlo localmente a través del paquete `openai-whisper` o mediante la API.
 
-### Local Whisper
+### Whisper local
 
 ```python
 import whisper
@@ -228,7 +229,7 @@ for seg in transcript["segments"][:5]:
     print(f"[{seg['start']:.1f}s - {seg['end']:.1f}s] {seg['text']}")
 ```
 
-### Whisper via OpenAI API
+### Whisper a través de la API de OpenAI
 
 ```python
 from openai import OpenAI
@@ -249,7 +250,7 @@ text = transcribe_via_api("interview.mp3")
 print(text)
 ```
 
-For longer audio files, split them into chunks first:
+Para archivos de audio más largos, divídelos primero en fragmentos:
 
 ```python
 from pydub import AudioSegment
@@ -276,9 +277,9 @@ full_text = transcribe_long_audio("long_podcast.mp3")
 print(full_text)
 ```
 
-## Combining Modalities
+## Combinar modalidades
 
-The real power of multimodal AI comes from combining different data types. Here is a pipeline that processes a video by extracting frames and audio, then combines the analysis:
+El verdadero poder de la IA multimodal proviene de combinar diferentes tipos de datos. Aquí hay un pipeline que procesa un vídeo extrayendo fotogramas y audio, y luego combina el análisis:
 
 ```python
 import cv2
@@ -356,9 +357,9 @@ result = analyze_video("presentation.mp4")
 print(result["summary"])
 ```
 
-## Building a Multimodal Chatbot
+## Crear un chatbot multimodal
 
-Now let us combine everything into a chatbot that can handle text, images, and audio in a conversation:
+Ahora vamos a combinarlo todo en un chatbot que pueda gestionar texto, imágenes y audio en una conversación:
 
 ```python
 import openai
@@ -448,9 +449,9 @@ print(bot.send_audio("voice_note.mp3", "Can you summarize what I just said?"))
 bot.reset()
 ```
 
-## Adding Structured Output Parsing
+## Añadir análisis de salida estructurada
 
-When building applications on top of multimodal AI, you often need structured data rather than free-form text. Use Pydantic models with the API:
+Al crear aplicaciones sobre IA multimodal, a menudo necesitas datos estructurados en lugar de texto libre. Usa modelos de Pydantic con la API:
 
 ```python
 from pydantic import BaseModel
@@ -496,11 +497,11 @@ print(f"Text found: {analysis.text_in_image}")
 print(f"Sentiment: {analysis.sentiment}")
 ```
 
-## Performance and Cost Considerations
+## Consideraciones de rendimiento y coste
 
-A few practical notes for production multimodal applications:
+Algunas notas prácticas para aplicaciones multimodales en producción:
 
-**Image resolution matters.** The GPT-4 Vision API charges based on image size. Resize large images before sending them. For most tasks, 1024x1024 pixels is sufficient:
+**La resolución de la imagen importa.** La API de GPT-4 Vision cobra en función del tamaño de la imagen. Redimensiona las imágenes grandes antes de enviarlas. Para la mayoría de las tareas, 1024x1024 píxeles es suficiente:
 
 ```python
 from PIL import Image
@@ -514,7 +515,7 @@ def resize_for_api(image_path: str, max_size: int = 1024) -> str:
     return output_path
 ```
 
-**Cache transcriptions.** Audio transcription is slow. Cache results to avoid re-processing:
+**Almacena en caché las transcripciones.** La transcripción de audio es lenta. Almacena en caché los resultados para evitar volver a procesarlos:
 
 ```python
 import hashlib
@@ -535,7 +536,7 @@ def cached_transcribe(audio_path: str) -> str:
     return result["text"]
 ```
 
-**Batch processing.** When analyzing many images, use async requests to improve throughput:
+**Procesamiento por lotes.** Al analizar muchas imágenes, usa solicitudes asíncronas para mejorar el rendimiento:
 
 ```python
 import asyncio
@@ -570,25 +571,25 @@ for r in results:
     print(r)
 ```
 
-## Summary
+## Resumen
 
-Multimodal AI with Python boils down to three capabilities: understanding images, transcribing audio, and combining these with text-based reasoning. The OpenAI API handles the first and third through GPT-4 Vision. Whisper handles audio transcription either locally or via API. Hugging Face transformers provide local alternatives for image understanding.
+La IA multimodal con Python se reduce a tres capacidades: comprender imágenes, transcribir audio y combinar estos con el razonamiento basado en texto. La API de OpenAI gestiona la primera y la tercera a través de GPT-4 Vision. Whisper gestiona la transcripción de audio, ya sea localmente o mediante la API. Los transformers de Hugging Face proporcionan alternativas locales para la comprensión de imágenes.
 
-The key patterns to remember:
+Los patrones clave que debes recordar:
 
-- Encode local images as base64 before sending to APIs
-- Split long audio files into chunks for reliable transcription
-- Cache expensive operations like transcription and image analysis
-- Use structured output parsing when you need machine-readable results
-- Resize images before API calls to control costs
-- Use async requests for batch processing
+- Codifica las imágenes locales como base64 antes de enviarlas a las APIs
+- Divide los archivos de audio largos en fragmentos para una transcripción fiable
+- Almacena en caché las operaciones costosas como la transcripción y el análisis de imágenes
+- Usa el análisis de salida estructurada cuando necesites resultados legibles por máquina
+- Redimensiona las imágenes antes de las llamadas a la API para controlar los costes
+- Usa solicitudes asíncronas para el procesamiento por lotes
 
-These building blocks combine into applications like video summarizers, multimodal chatbots, document analyzers that handle mixed media, and accessibility tools that describe visual content. For a deeper dive into fine-tuning vision models, see our guide on [Fine-Tuning LLMs with Python](/posts/Fine-Tuning-LLMs-with-Python/). Start with the chatbot example above and extend it to fit your specific use case.
+Estos bloques de construcción se combinan en aplicaciones como resumidores de vídeo, chatbots multimodales, analizadores de documentos que gestionan medios mixtos y herramientas de accesibilidad que describen contenido visual. Para profundizar en el ajuste de modelos de visión, consulta nuestra guía sobre [Ajuste de LLM con Python](/posts/Fine-Tuning-LLMs-with-Python/). Comienza con el ejemplo del chatbot anterior y amplíalo para adaptarlo a tu caso de uso específico.
 
 ---
 
-## Related Posts
+## Publicaciones relacionadas
 
-- [Fine-Tuning Large Language Models with Python](/posts/Fine-Tuning-LLMs-with-Python/) - Fine-tune models for domain-specific multimodal tasks
-- [RAG with Python: Retrieval-Augmented Generation](/posts/RAG-with-Python-Retrieval-Augmented-Generation/) - Combine image captions and transcripts with retrieval-augmented generation
-- [Explainable AI with Python](/posts/Explainable-AI-with-Python-SHAP-LIME/) - Interpret and explain your multimodal model predictions
+- [Ajuste de grandes modelos de lenguaje con Python](/posts/Fine-Tuning-LLMs-with-Python/) - Ajusta modelos para tareas multimodales específicas de dominio
+- [RAG con Python: generación aumentada por recuperación](/posts/RAG-with-Python-Retrieval-Augmented-Generation/) - Combina descripciones de imágenes y transcripciones con la generación aumentada por recuperación
+- [IA explicable con Python](/posts/Explainable-AI-with-Python-SHAP-LIME/) - Interpreta y explica las predicciones de tu modelo multimodal

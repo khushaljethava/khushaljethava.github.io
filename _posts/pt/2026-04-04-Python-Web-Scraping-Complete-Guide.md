@@ -1,35 +1,36 @@
 ---
-title: "Python Web Scraping: The Complete Guide for 2026"
-description: A complete guide to web scraping with Python covering BeautifulSoup, Selenium, Playwright, handling pagination and authentication, ethical scraping practices, storing scraped data, and a practical project scraping job listings.
+title: "Web Scraping com Python: O Guia Completo para 2026"
+description: Um guia completo de web scraping com Python cobrindo BeautifulSoup, Selenium, Playwright, tratamento de paginação e autenticação, práticas éticas de scraping, armazenamento de dados extraídos e um projeto prático que extrai vagas de emprego.
 date: 2026-04-04 12:00:00 +0800
 categories: [Python]
 tags: [python, web-scraping]
+lang: pt
 translations: [hi, es, pt, fr, de, ja]
 image:
   path: "/commons/Python Web Scraping The Complete Guide for 2026.webp"
-  alt: "Python web scraping workflow using BeautifulSoup, Selenium, and Playwright for extracting structured data from websites"
+  alt: "Fluxo de trabalho de web scraping com Python usando BeautifulSoup, Selenium e Playwright para extrair dados estruturados de sites"
 ---
 
-## Why Web Scraping?
+## Por Que Web Scraping?
 
-Web scraping extracts structured data from websites. Price monitoring, lead generation, research data collection, competitor analysis, news aggregation — these all rely on scraping. Once you have scraped data, you can feed it into [sentiment analysis](/posts/Sentiment-Analysis-with-Python/) or [recommendation systems](/posts/Building-Recommendation-Systems-with-Python/) for deeper insights. Python is the most popular language for it because of mature libraries like BeautifulSoup, Selenium, and Playwright.
+O web scraping extrai dados estruturados de sites. Monitoramento de preços, geração de leads, coleta de dados de pesquisa, análise da concorrência, agregação de notícias — tudo isso depende de scraping. Depois de extrair os dados, você pode alimentá-los em [análise de sentimentos](/posts/Sentiment-Analysis-with-Python/) ou [sistemas de recomendação](/posts/Building-Recommendation-Systems-with-Python/) para obter insights mais profundos. Python é a linguagem mais popular para isso por causa de bibliotecas maduras como BeautifulSoup, Selenium e Playwright.
 
-This guide covers the full scraping toolkit: static page parsing, dynamic page handling, authentication, pagination, data storage, and ethical practices. We finish with a complete project that scrapes job listings.
+Este guia cobre o conjunto completo de ferramentas de scraping: análise de páginas estáticas, tratamento de páginas dinâmicas, autenticação, paginação, armazenamento de dados e práticas éticas. Terminamos com um projeto completo que extrai vagas de emprego.
 
-When I built training datasets for computer vision models at Codiste, web scraping was often the first step in the pipeline. For our car damage detection system, we scraped tens of thousands of vehicle images from public insurance claim galleries and automotive forums to supplement our client's proprietary data. The scraping infrastructure ended up being just as important as the model architecture itself.
+Quando construí conjuntos de dados de treinamento para modelos de visão computacional na Codiste, o web scraping era frequentemente o primeiro passo do pipeline. Para o nosso sistema de detecção de danos em veículos, extraímos dezenas de milhares de imagens de veículos de galerias públicas de sinistros de seguros e fóruns automotivos para complementar os dados proprietários do nosso cliente. A infraestrutura de scraping acabou sendo tão importante quanto a própria arquitetura do modelo.
 
-## Setting Up
+## Configuração
 
-Install the core libraries:
+Instale as bibliotecas principais:
 
 ```python
 pip install requests beautifulsoup4 lxml selenium playwright pandas
 playwright install chromium
 ```
 
-## BeautifulSoup for Static Pages
+## BeautifulSoup para Páginas Estáticas
 
-BeautifulSoup parses HTML and lets you navigate the document tree. It works with `requests` to fetch pages and extract data.
+O BeautifulSoup analisa HTML e permite navegar pela árvore do documento. Ele funciona com `requests` para buscar páginas e extrair dados.
 
 ```python
 import requests
@@ -45,9 +46,9 @@ for i, title in enumerate(titles[:10], 1):
     print(f"{i}. {title.text} - {title.get('href', 'N/A')}")
 ```
 
-### Selecting Elements
+### Selecionando Elementos
 
-BeautifulSoup supports both CSS selectors and its own find methods:
+O BeautifulSoup suporta tanto seletores CSS quanto seus próprios métodos de busca:
 
 ```python
 # CSS selectors (recommended)
@@ -63,7 +64,7 @@ soup.find_all("a", class_="link")    # All matching elements
 soup.find("div", {"data-id": "123"}) # By attribute
 ```
 
-### Extracting Data
+### Extraindo Dados
 
 ```python
 import requests
@@ -94,9 +95,9 @@ for q in data[:3]:
     print(f"  Tags: {', '.join(q['tags'])}")
 ```
 
-### Adding Headers and Session Management
+### Adicionando Cabeçalhos e Gerenciamento de Sessão
 
-Websites may block requests that look automated. Set proper headers:
+Os sites podem bloquear requisições que parecem automatizadas. Defina cabeçalhos apropriados:
 
 ```python
 import requests
@@ -114,9 +115,9 @@ response = session.get("https://example.com")
 soup = BeautifulSoup(response.text, "lxml")
 ```
 
-## Handling Pagination
+## Tratando a Paginação
 
-Most scraping targets span multiple pages. Handle this with a loop:
+A maioria dos alvos de scraping abrange várias páginas. Trate isso com um loop:
 
 ```python
 import requests
@@ -160,7 +161,7 @@ items = scrape_all_pages("https://example.com/listings")
 print(f"Total items scraped: {len(items)}")
 ```
 
-For sites with "next page" links instead of page numbers:
+Para sites com links de "próxima página" em vez de números de página:
 
 ```python
 def scrape_with_next_link(start_url: str) -> list:
@@ -186,9 +187,9 @@ def scrape_with_next_link(start_url: str) -> list:
     return all_items
 ```
 
-## Dynamic Pages with Selenium
+## Páginas Dinâmicas com Selenium
 
-Many modern websites load content with JavaScript. BeautifulSoup only sees the initial HTML. Selenium controls a real browser to render JavaScript content.
+Muitos sites modernos carregam conteúdo com JavaScript. O BeautifulSoup só enxerga o HTML inicial. O Selenium controla um navegador real para renderizar conteúdo JavaScript.
 
 ```python
 from selenium import webdriver
@@ -231,9 +232,9 @@ def scrape_dynamic_page(url: str) -> list:
 products = scrape_dynamic_page("https://example.com/products")
 ```
 
-### Handling Infinite Scroll
+### Tratando o Scroll Infinito
 
-Some pages load more content as you scroll down:
+Algumas páginas carregam mais conteúdo à medida que você rola para baixo:
 
 ```python
 from selenium import webdriver
@@ -264,9 +265,9 @@ def scrape_infinite_scroll(url: str, scroll_count: int = 10) -> str:
     return page_source
 ```
 
-## Dynamic Pages with Playwright
+## Páginas Dinâmicas com Playwright
 
-Playwright is a newer alternative to Selenium with better async support and auto-waiting:
+O Playwright é uma alternativa mais recente ao Selenium, com melhor suporte assíncrono e espera automática:
 
 ```python
 from playwright.sync_api import sync_playwright
@@ -305,7 +306,7 @@ for p in products[:5]:
     print(f"{p['name']} - {p['price']}")
 ```
 
-### Async Playwright for Speed
+### Playwright Assíncrono para Mais Velocidade
 
 ```python
 import asyncio
@@ -339,9 +340,9 @@ urls = [
 results = asyncio.run(scrape_multiple_pages(urls))
 ```
 
-## Handling Authentication
+## Tratando Autenticação
 
-Some sites require login before you can access data:
+Alguns sites exigem login antes de você poder acessar os dados:
 
 ```python
 import requests
@@ -372,7 +373,7 @@ def scrape_with_login(login_url: str, target_url: str, username: str, password: 
     return target_response.text
 ```
 
-For sites using cookie-based auth, you can also set cookies directly:
+Para sites que usam autenticação baseada em cookies, você também pode definir cookies diretamente:
 
 ```python
 session = requests.Session()
@@ -380,11 +381,11 @@ session.cookies.set("session_id", "your_session_cookie_value")
 response = session.get("https://example.com/dashboard")
 ```
 
-## Storing Scraped Data
+## Armazenando Dados Extraídos
 
-Once your data is stored, you can [visualize trends and patterns](/posts/Python-Data-Visualization-Matplotlib-Seaborn/) to make sense of large scraped datasets.
+Depois que seus dados estiverem armazenados, você pode [visualizar tendências e padrões](/posts/Python-Data-Visualization-Matplotlib-Seaborn/) para dar sentido a grandes conjuntos de dados extraídos.
 
-### CSV with Pandas
+### CSV com Pandas
 
 ```python
 import pandas as pd
@@ -403,7 +404,7 @@ scraped_data = [
 save_to_csv(scraped_data, "jobs.csv")
 ```
 
-### SQLite Database
+### Banco de Dados SQLite
 
 ```python
 import sqlite3
@@ -452,7 +453,7 @@ def save_jobs(jobs: list[dict]):
 setup_database()
 ```
 
-### JSON for Nested Data
+### JSON para Dados Aninhados
 
 ```python
 import json
@@ -474,11 +475,11 @@ def append_to_json(new_data: list[dict], filename: str):
     save_to_json(existing, filename)
 ```
 
-## Ethical Scraping Practices
+## Práticas Éticas de Scraping
 
-Web scraping sits in a gray area. Follow these practices to stay on the right side:
+O web scraping fica em uma área cinzenta. Siga estas práticas para permanecer do lado certo:
 
-**Respect robots.txt.** Check what the site allows:
+**Respeite o robots.txt.** Verifique o que o site permite:
 
 ```python
 from urllib.robotparser import RobotFileParser
@@ -501,9 +502,9 @@ else:
     print("Scraping blocked by robots.txt")
 ```
 
-In my experience, the `robots.txt` check is not just about ethics — it saves you debugging time. I once spent hours troubleshooting a scraper that kept getting blocked, only to realize the site explicitly disallowed the paths I was hitting. Checking `robots.txt` first would have saved that entire effort and pointed me toward their public API instead.
+Pela minha experiência, a verificação do `robots.txt` não é apenas uma questão de ética — ela economiza tempo de depuração. Uma vez passei horas resolvendo problemas em um scraper que continuava sendo bloqueado, só para perceber que o site explicitamente proibia os caminhos que eu estava acessando. Verificar o `robots.txt` primeiro teria poupado todo esse esforço e me apontado para a API pública deles.
 
-**Rate limiting.** Do not hammer servers. Add delays between requests:
+**Limitação de taxa.** Não sobrecarregue os servidores. Adicione atrasos entre as requisições:
 
 ```python
 import time
@@ -515,18 +516,18 @@ def polite_request(session, url, min_delay=1.0, max_delay=3.0):
     return session.get(url)
 ```
 
-**Additional guidelines:**
+**Diretrizes adicionais:**
 
-- Check the site's Terms of Service
-- Do not scrape personal or private data
-- Cache responses to avoid repeated requests
-- Identify yourself with a custom User-Agent that includes contact info
-- Use official APIs when they exist — scraping is a last resort
-- Do not overload small sites; adjust your rate based on the server's capacity
+- Verifique os Termos de Serviço do site
+- Não extraia dados pessoais ou privados
+- Armazene as respostas em cache para evitar requisições repetidas
+- Identifique-se com um User-Agent personalizado que inclua informações de contato
+- Use APIs oficiais quando existirem — o scraping é o último recurso
+- Não sobrecarregue sites pequenos; ajuste sua taxa de acordo com a capacidade do servidor
 
-## Complete Project: Scraping Job Listings
+## Projeto Completo: Extraindo Vagas de Emprego
 
-Here is a complete scraper that collects job listings, handles pagination, stores results in SQLite, and exports to CSV:
+Aqui está um scraper completo que coleta vagas de emprego, trata a paginação, armazena os resultados em SQLite e exporta para CSV:
 
 ```python
 import requests
@@ -706,9 +707,9 @@ print(f"\nScraped {len(df)} jobs total")
 print(df[["title", "company", "location", "salary"]].head(10))
 ```
 
-## Error Handling and Retries
+## Tratamento de Erros e Tentativas
 
-Production scrapers need retry logic:
+Scrapers de produção precisam de lógica de tentativas:
 
 ```python
 import requests
@@ -740,18 +741,18 @@ session = create_robust_session()
 response = session.get("https://example.com")  # Will retry on failure
 ```
 
-## Summary
+## Resumo
 
-Web scraping with Python comes down to choosing the right tool for the page type:
+O web scraping com Python se resume a escolher a ferramenta certa para o tipo de página:
 
-- **Static HTML** — Use `requests` + BeautifulSoup. Fast, simple, low resource usage.
-- **JavaScript-rendered pages** — Use Playwright or Selenium. Slower but handles dynamic content.
-- **API-backed data** — Check the Network tab in browser DevTools. Many "dynamic" sites load data from JSON APIs that you can call directly, skipping the browser entirely.
+- **HTML estático** — Use `requests` + BeautifulSoup. Rápido, simples, baixo uso de recursos.
+- **Páginas renderizadas com JavaScript** — Use Playwright ou Selenium. Mais lento, mas lida com conteúdo dinâmico.
+- **Dados servidos por API** — Verifique a aba Network nas DevTools do navegador. Muitos sites "dinâmicos" carregam dados de APIs JSON que você pode chamar diretamente, dispensando o navegador por completo.
 
-Key practices: respect `robots.txt`, rate-limit your requests, handle errors with retries, store data incrementally to avoid losing progress, and use unique constraints to prevent duplicates. Start with the simplest approach and add complexity only when needed.
+Práticas essenciais: respeite o `robots.txt`, limite a taxa das suas requisições, trate erros com tentativas, armazene os dados de forma incremental para não perder o progresso e use restrições de unicidade para evitar duplicatas. Comece com a abordagem mais simples e adicione complexidade apenas quando necessário.
 
-## Related Posts
+## Posts Relacionados
 
-- [Sentiment Analysis with Python](/posts/Sentiment-Analysis-with-Python/) -- Analyze the tone and opinion of scraped text data at scale.
-- [Python Data Visualization with Matplotlib and Seaborn](/posts/Python-Data-Visualization-Matplotlib-Seaborn/) -- Turn scraped datasets into compelling charts and dashboards.
-- [Building Recommendation Systems with Python](/posts/Building-Recommendation-Systems-with-Python/) -- Use scraped product or content data to power personalized recommendations.
+- [Análise de Sentimentos com Python](/posts/Sentiment-Analysis-with-Python/) -- Analise o tom e a opinião de dados de texto extraídos em escala.
+- [Visualização de Dados em Python com Matplotlib e Seaborn](/posts/Python-Data-Visualization-Matplotlib-Seaborn/) -- Transforme conjuntos de dados extraídos em gráficos e painéis envolventes.
+- [Construindo Sistemas de Recomendação com Python](/posts/Building-Recommendation-Systems-with-Python/) -- Use dados de produtos ou conteúdo extraídos para alimentar recomendações personalizadas.

@@ -1,35 +1,36 @@
 ---
-title: "Python Web Scraping: The Complete Guide for 2026"
-description: A complete guide to web scraping with Python covering BeautifulSoup, Selenium, Playwright, handling pagination and authentication, ethical scraping practices, storing scraped data, and a practical project scraping job listings.
+title: "Pythonによるウェブスクレイピング：2026年版完全ガイド"
+description: BeautifulSoup、Selenium、Playwright、ページネーションと認証の処理、倫理的なスクレイピングの実践、スクレイピングしたデータの保存、求人情報をスクレイピングする実践的なプロジェクトを網羅した、Pythonによるウェブスクレイピングの完全ガイド。
 date: 2026-04-04 12:00:00 +0800
 categories: [Python]
 tags: [python, web-scraping]
+lang: ja
 translations: [hi, es, pt, fr, de, ja]
 image:
   path: "/commons/Python Web Scraping The Complete Guide for 2026.webp"
-  alt: "Python web scraping workflow using BeautifulSoup, Selenium, and Playwright for extracting structured data from websites"
+  alt: "ウェブサイトから構造化データを抽出するためにBeautifulSoup、Selenium、Playwrightを使用するPythonウェブスクレイピングのワークフロー"
 ---
 
-## Why Web Scraping?
+## なぜウェブスクレイピングなのか？
 
-Web scraping extracts structured data from websites. Price monitoring, lead generation, research data collection, competitor analysis, news aggregation — these all rely on scraping. Once you have scraped data, you can feed it into [sentiment analysis](/posts/Sentiment-Analysis-with-Python/) or [recommendation systems](/posts/Building-Recommendation-Systems-with-Python/) for deeper insights. Python is the most popular language for it because of mature libraries like BeautifulSoup, Selenium, and Playwright.
+ウェブスクレイピングはウェブサイトから構造化データを抽出します。価格監視、リード生成、研究データの収集、競合分析、ニュースの集約 — これらはすべてスクレイピングに依存しています。データをスクレイピングしたら、より深い洞察を得るために[感情分析](/posts/Sentiment-Analysis-with-Python/)や[レコメンデーションシステム](/posts/Building-Recommendation-Systems-with-Python/)に投入できます。Pythonは、BeautifulSoup、Selenium、Playwrightのような成熟したライブラリがあるため、これに最も人気のある言語です。
 
-This guide covers the full scraping toolkit: static page parsing, dynamic page handling, authentication, pagination, data storage, and ethical practices. We finish with a complete project that scrapes job listings.
+このガイドでは、スクレイピングのツールキット全体を網羅します。静的ページの解析、動的ページの処理、認証、ページネーション、データの保存、そして倫理的な実践です。最後に、求人情報をスクレイピングする完全なプロジェクトで締めくくります。
 
-When I built training datasets for computer vision models at Codiste, web scraping was often the first step in the pipeline. For our car damage detection system, we scraped tens of thousands of vehicle images from public insurance claim galleries and automotive forums to supplement our client's proprietary data. The scraping infrastructure ended up being just as important as the model architecture itself.
+Codisteでコンピュータビジョンモデルのトレーニングデータセットを構築したとき、ウェブスクレイピングはしばしばパイプラインの最初のステップでした。車両損傷検出システムでは、クライアントの独自データを補完するために、公開されている保険請求ギャラリーや自動車フォーラムから数万枚の車両画像をスクレイピングしました。スクレイピングのインフラは、最終的にはモデルアーキテクチャそのものと同じくらい重要であることがわかりました。
 
-## Setting Up
+## セットアップ
 
-Install the core libraries:
+コアライブラリをインストールします：
 
 ```python
 pip install requests beautifulsoup4 lxml selenium playwright pandas
 playwright install chromium
 ```
 
-## BeautifulSoup for Static Pages
+## 静的ページのためのBeautifulSoup
 
-BeautifulSoup parses HTML and lets you navigate the document tree. It works with `requests` to fetch pages and extract data.
+BeautifulSoupはHTMLを解析し、ドキュメントツリーをナビゲートできるようにします。ページを取得してデータを抽出するために`requests`と連携して動作します。
 
 ```python
 import requests
@@ -45,9 +46,9 @@ for i, title in enumerate(titles[:10], 1):
     print(f"{i}. {title.text} - {title.get('href', 'N/A')}")
 ```
 
-### Selecting Elements
+### 要素の選択
 
-BeautifulSoup supports both CSS selectors and its own find methods:
+BeautifulSoupはCSSセレクターと独自のfindメソッドの両方をサポートしています：
 
 ```python
 # CSS selectors (recommended)
@@ -63,7 +64,7 @@ soup.find_all("a", class_="link")    # All matching elements
 soup.find("div", {"data-id": "123"}) # By attribute
 ```
 
-### Extracting Data
+### データの抽出
 
 ```python
 import requests
@@ -94,9 +95,9 @@ for q in data[:3]:
     print(f"  Tags: {', '.join(q['tags'])}")
 ```
 
-### Adding Headers and Session Management
+### ヘッダーとセッション管理の追加
 
-Websites may block requests that look automated. Set proper headers:
+ウェブサイトは自動化されているように見えるリクエストをブロックすることがあります。適切なヘッダーを設定しましょう：
 
 ```python
 import requests
@@ -114,9 +115,9 @@ response = session.get("https://example.com")
 soup = BeautifulSoup(response.text, "lxml")
 ```
 
-## Handling Pagination
+## ページネーションの処理
 
-Most scraping targets span multiple pages. Handle this with a loop:
+ほとんどのスクレイピング対象は複数のページにまたがっています。これをループで処理します：
 
 ```python
 import requests
@@ -160,7 +161,7 @@ items = scrape_all_pages("https://example.com/listings")
 print(f"Total items scraped: {len(items)}")
 ```
 
-For sites with "next page" links instead of page numbers:
+ページ番号の代わりに「次のページ」リンクがあるサイトの場合：
 
 ```python
 def scrape_with_next_link(start_url: str) -> list:
@@ -186,9 +187,9 @@ def scrape_with_next_link(start_url: str) -> list:
     return all_items
 ```
 
-## Dynamic Pages with Selenium
+## Seleniumによる動的ページ
 
-Many modern websites load content with JavaScript. BeautifulSoup only sees the initial HTML. Selenium controls a real browser to render JavaScript content.
+多くの最新のウェブサイトはJavaScriptでコンテンツを読み込みます。BeautifulSoupは初期のHTMLしか見ることができません。Seleniumは実際のブラウザを制御してJavaScriptコンテンツをレンダリングします。
 
 ```python
 from selenium import webdriver
@@ -231,9 +232,9 @@ def scrape_dynamic_page(url: str) -> list:
 products = scrape_dynamic_page("https://example.com/products")
 ```
 
-### Handling Infinite Scroll
+### 無限スクロールの処理
 
-Some pages load more content as you scroll down:
+一部のページは、下にスクロールするにつれてより多くのコンテンツを読み込みます：
 
 ```python
 from selenium import webdriver
@@ -264,9 +265,9 @@ def scrape_infinite_scroll(url: str, scroll_count: int = 10) -> str:
     return page_source
 ```
 
-## Dynamic Pages with Playwright
+## Playwrightによる動的ページ
 
-Playwright is a newer alternative to Selenium with better async support and auto-waiting:
+Playwrightは、より優れた非同期サポートと自動待機機能を備えたSeleniumの新しい代替手段です：
 
 ```python
 from playwright.sync_api import sync_playwright
@@ -305,7 +306,7 @@ for p in products[:5]:
     print(f"{p['name']} - {p['price']}")
 ```
 
-### Async Playwright for Speed
+### 速度のための非同期Playwright
 
 ```python
 import asyncio
@@ -339,9 +340,9 @@ urls = [
 results = asyncio.run(scrape_multiple_pages(urls))
 ```
 
-## Handling Authentication
+## 認証の処理
 
-Some sites require login before you can access data:
+一部のサイトでは、データにアクセスする前にログインが必要です：
 
 ```python
 import requests
@@ -372,7 +373,7 @@ def scrape_with_login(login_url: str, target_url: str, username: str, password: 
     return target_response.text
 ```
 
-For sites using cookie-based auth, you can also set cookies directly:
+クッキーベースの認証を使用するサイトの場合、クッキーを直接設定することもできます：
 
 ```python
 session = requests.Session()
@@ -380,11 +381,11 @@ session.cookies.set("session_id", "your_session_cookie_value")
 response = session.get("https://example.com/dashboard")
 ```
 
-## Storing Scraped Data
+## スクレイピングしたデータの保存
 
-Once your data is stored, you can [visualize trends and patterns](/posts/Python-Data-Visualization-Matplotlib-Seaborn/) to make sense of large scraped datasets.
+データを保存したら、大規模なスクレイピング済みデータセットを理解するために[傾向やパターンを可視化](/posts/Python-Data-Visualization-Matplotlib-Seaborn/)できます。
 
-### CSV with Pandas
+### PandasによるCSV
 
 ```python
 import pandas as pd
@@ -403,7 +404,7 @@ scraped_data = [
 save_to_csv(scraped_data, "jobs.csv")
 ```
 
-### SQLite Database
+### SQLiteデータベース
 
 ```python
 import sqlite3
@@ -452,7 +453,7 @@ def save_jobs(jobs: list[dict]):
 setup_database()
 ```
 
-### JSON for Nested Data
+### ネストされたデータのためのJSON
 
 ```python
 import json
@@ -474,11 +475,11 @@ def append_to_json(new_data: list[dict], filename: str):
     save_to_json(existing, filename)
 ```
 
-## Ethical Scraping Practices
+## 倫理的なスクレイピングの実践
 
-Web scraping sits in a gray area. Follow these practices to stay on the right side:
+ウェブスクレイピングはグレーゾーンに位置します。正しい側にとどまるために、これらの実践に従いましょう：
 
-**Respect robots.txt.** Check what the site allows:
+**robots.txtを尊重する。** サイトが何を許可しているかを確認します：
 
 ```python
 from urllib.robotparser import RobotFileParser
@@ -501,9 +502,9 @@ else:
     print("Scraping blocked by robots.txt")
 ```
 
-In my experience, the `robots.txt` check is not just about ethics — it saves you debugging time. I once spent hours troubleshooting a scraper that kept getting blocked, only to realize the site explicitly disallowed the paths I was hitting. Checking `robots.txt` first would have saved that entire effort and pointed me toward their public API instead.
+私の経験では、`robots.txt`のチェックは倫理だけの問題ではなく、デバッグ時間を節約してくれます。あるとき、何度もブロックされるスクレイパーのトラブルシューティングに何時間も費やしたあげく、そのサイトが私がアクセスしていたパスを明示的に拒否していたことに気づきました。最初に`robots.txt`を確認していれば、その労力すべてを節約でき、代わりに彼らの公開APIに導かれていたでしょう。
 
-**Rate limiting.** Do not hammer servers. Add delays between requests:
+**レート制限。** サーバーを叩きすぎないようにします。リクエストの間に遅延を追加します：
 
 ```python
 import time
@@ -515,18 +516,18 @@ def polite_request(session, url, min_delay=1.0, max_delay=3.0):
     return session.get(url)
 ```
 
-**Additional guidelines:**
+**追加のガイドライン：**
 
-- Check the site's Terms of Service
-- Do not scrape personal or private data
-- Cache responses to avoid repeated requests
-- Identify yourself with a custom User-Agent that includes contact info
-- Use official APIs when they exist — scraping is a last resort
-- Do not overload small sites; adjust your rate based on the server's capacity
+- サイトの利用規約を確認する
+- 個人データやプライベートなデータをスクレイピングしない
+- 繰り返しのリクエストを避けるためにレスポンスをキャッシュする
+- 連絡先情報を含むカスタムUser-Agentで自分自身を識別する
+- 公式APIが存在する場合はそれを使用する — スクレイピングは最後の手段
+- 小規模なサイトに過負荷をかけない。サーバーの容量に応じてレートを調整する
 
-## Complete Project: Scraping Job Listings
+## 完全なプロジェクト：求人情報のスクレイピング
 
-Here is a complete scraper that collects job listings, handles pagination, stores results in SQLite, and exports to CSV:
+ここでは、求人情報を収集し、ページネーションを処理し、結果をSQLiteに保存し、CSVにエクスポートする完全なスクレイパーを紹介します：
 
 ```python
 import requests
@@ -706,9 +707,9 @@ print(f"\nScraped {len(df)} jobs total")
 print(df[["title", "company", "location", "salary"]].head(10))
 ```
 
-## Error Handling and Retries
+## エラー処理とリトライ
 
-Production scrapers need retry logic:
+本番環境のスクレイパーにはリトライロジックが必要です：
 
 ```python
 import requests
@@ -740,18 +741,18 @@ session = create_robust_session()
 response = session.get("https://example.com")  # Will retry on failure
 ```
 
-## Summary
+## まとめ
 
-Web scraping with Python comes down to choosing the right tool for the page type:
+Pythonによるウェブスクレイピングは、ページの種類に応じて適切なツールを選ぶことに尽きます：
 
-- **Static HTML** — Use `requests` + BeautifulSoup. Fast, simple, low resource usage.
-- **JavaScript-rendered pages** — Use Playwright or Selenium. Slower but handles dynamic content.
-- **API-backed data** — Check the Network tab in browser DevTools. Many "dynamic" sites load data from JSON APIs that you can call directly, skipping the browser entirely.
+- **静的HTML** — `requests` + BeautifulSoupを使用します。高速、シンプル、低リソース使用。
+- **JavaScriptでレンダリングされるページ** — PlaywrightまたはSeleniumを使用します。遅いですが、動的コンテンツを処理できます。
+- **API由来のデータ** — ブラウザのDevToolsでNetworkタブを確認します。多くの「動的」サイトは、直接呼び出せるJSON APIからデータを読み込んでおり、ブラウザを完全に省略できます。
 
-Key practices: respect `robots.txt`, rate-limit your requests, handle errors with retries, store data incrementally to avoid losing progress, and use unique constraints to prevent duplicates. Start with the simplest approach and add complexity only when needed.
+主要な実践：`robots.txt`を尊重し、リクエストのレートを制限し、リトライでエラーを処理し、進捗を失わないようにデータを段階的に保存し、重複を防ぐために一意制約を使用します。最もシンプルなアプローチから始め、必要なときだけ複雑さを追加しましょう。
 
-## Related Posts
+## 関連記事
 
-- [Sentiment Analysis with Python](/posts/Sentiment-Analysis-with-Python/) -- Analyze the tone and opinion of scraped text data at scale.
-- [Python Data Visualization with Matplotlib and Seaborn](/posts/Python-Data-Visualization-Matplotlib-Seaborn/) -- Turn scraped datasets into compelling charts and dashboards.
-- [Building Recommendation Systems with Python](/posts/Building-Recommendation-Systems-with-Python/) -- Use scraped product or content data to power personalized recommendations.
+- [Pythonによる感情分析](/posts/Sentiment-Analysis-with-Python/) -- スクレイピングしたテキストデータのトーンや意見を大規模に分析します。
+- [MatplotlibとSeabornによるPythonデータ可視化](/posts/Python-Data-Visualization-Matplotlib-Seaborn/) -- スクレイピングしたデータセットを魅力的なチャートやダッシュボードに変換します。
+- [Pythonによるレコメンデーションシステムの構築](/posts/Building-Recommendation-Systems-with-Python/) -- スクレイピングした製品やコンテンツのデータを使用して、パーソナライズされたレコメンデーションを実現します。

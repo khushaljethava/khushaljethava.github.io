@@ -1,0 +1,39 @@
+{%- comment -%}
+  Language switcher for translated posts.
+  Renders only when the post declares a `translations:` list in its front matter.
+  English lives at the site root; other languages are served under /<lang>/.
+  The currently active language (site.active_lang) is shown as plain text, others as links.
+{%- endcomment -%}
+{%- if page.translations and page.translations != empty -%}
+  {%- assign current = site.active_lang | default: 'en' -%}
+  {%- assign all_langs = "en" | split: "" -%}
+  {%- assign all_langs = page.translations -%}
+  <nav class="post-langs d-flex flex-wrap align-items-center gap-2 mb-3" aria-label="Available languages">
+    <i class="fas fa-language fa-fw me-1" aria-hidden="true"></i>
+    {%- comment -%} English is always available {%- endcomment -%}
+    {%- assign langs_with_en = "en" -%}
+    {%- for l in page.translations -%}{%- unless l == "en" -%}{%- assign langs_with_en = langs_with_en | append: "," | append: l -%}{%- endunless -%}{%- endfor -%}
+    {%- assign langs_with_en = langs_with_en | split: "," -%}
+    {%- for lang in langs_with_en -%}
+      {%- case lang -%}
+        {%- when 'en' -%}{%- assign label = 'English' -%}
+        {%- when 'hi' -%}{%- assign label = 'हिन्दी' -%}
+        {%- when 'es' -%}{%- assign label = 'Español' -%}
+        {%- when 'pt' -%}{%- assign label = 'Português' -%}
+        {%- when 'fr' -%}{%- assign label = 'Français' -%}
+        {%- when 'de' -%}{%- assign label = 'Deutsch' -%}
+        {%- when 'ja' -%}{%- assign label = '日本語' -%}
+        {%- when 'ko' -%}{%- assign label = '한국어' -%}
+        {%- when 'ar' -%}{%- assign label = 'العربية' -%}
+        {%- when 'zh' -%}{%- assign label = '简体中文' -%}
+        {%- else -%}{%- assign label = lang -%}
+      {%- endcase -%}
+      {%- if lang == 'en' -%}{%- assign href = site.url | append: page.url -%}{%- else -%}{%- assign href = site.url | append: '/' | append: lang | append: page.url -%}{%- endif -%}
+      {%- if lang == current -%}
+        <span class="post-lang-current badge text-bg-secondary" lang="{{ lang }}"{% if lang == 'ar' %} dir="rtl"{% endif %}>{{ label }}</span>
+      {%- else -%}
+        <a class="post-lang-link" href="{{ href }}" hreflang="{{ lang }}" lang="{{ lang }}"{% if lang == 'ar' %} dir="rtl"{% endif %}>{{ label }}</a>
+      {%- endif -%}
+    {%- endfor -%}
+  </nav>
+{%- endif -%}
