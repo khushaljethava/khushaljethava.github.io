@@ -1,0 +1,39 @@
+<!-- SolopreneursHub 300x250 box. Scoped under .spx- to avoid collisions. -->
+<style>
+  .spx-banner{width:300px;max-width:100%;height:250px;position:relative;overflow:hidden;border-radius:16px;text-decoration:none;color:#fff;padding:18px;display:flex;flex-direction:column;background:radial-gradient(120% 120% at 0% 0%,#4338ca 0%,#1e1b4b 45%,#0b1020 100%);box-shadow:0 18px 50px rgba(79,70,229,.45);transition:transform .3s ease,box-shadow .3s ease;font-family:"Space Grotesk",system-ui,-apple-system,Arial,sans-serif;margin:0 auto}
+  .spx-banner:hover,.spx-banner:focus-visible{transform:translateY(-4px) scale(1.01);box-shadow:0 24px 60px rgba(99,102,241,.65)}
+  .spx-banner:focus-visible{outline:3px solid #fbbf24;outline-offset:3px}
+  .spx-blob{position:absolute;border-radius:50%;filter:blur(28px);opacity:.55;pointer-events:none}
+  .spx-blob.a{width:150px;height:150px;background:#22d3ee;top:-50px;right:-40px;animation:spx-float1 6s ease-in-out infinite}
+  .spx-blob.b{width:130px;height:130px;background:#ec4899;bottom:-50px;left:-40px;animation:spx-float2 7s ease-in-out infinite}
+  @keyframes spx-float1{0%,100%{transform:translate(0,0)}50%{transform:translate(-18px,16px)}}
+  @keyframes spx-float2{0%,100%{transform:translate(0,0)}50%{transform:translate(18px,-14px)}}
+  .spx-banner::after{content:"";position:absolute;top:0;left:-60%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.22),transparent);transform:skewX(-20deg);animation:spx-sweep 3.8s ease-in-out infinite;pointer-events:none}
+  @keyframes spx-sweep{0%{left:-60%}55%,100%{left:130%}}
+  .spx-content{position:relative;z-index:2;display:flex;flex-direction:column;height:100%}
+  .spx-badge{align-self:flex-start;display:flex;align-items:center;gap:5px;padding:5px 11px;border-radius:30px;background:rgba(251,191,36,.15);border:1px solid rgba(251,191,36,.55);color:#fcd34d;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+  .spx-live{width:6px;height:6px;border-radius:50%;background:#34d399;box-shadow:0 0 0 0 rgba(52,211,153,.7);animation:spx-blink 1.6s ease-out infinite}
+  @keyframes spx-blink{0%{box-shadow:0 0 0 0 rgba(52,211,153,.7)}70%{box-shadow:0 0 0 7px rgba(52,211,153,0)}100%{box-shadow:0 0 0 0 rgba(52,211,153,0)}}
+  .spx-h1{margin-top:12px;font-size:27px;line-height:1.08;font-weight:700;letter-spacing:-.6px;color:#fff}
+  .spx-grad{background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .spx-p{margin-top:9px;font-size:12px;line-height:1.45;color:#c7d2fe;font-weight:500}
+  .spx-cta{margin-top:auto;display:flex;justify-content:center;align-items:center;gap:7px;padding:13px;border-radius:11px;font-weight:700;font-size:15px;color:#1e1b4b;background:linear-gradient(90deg,#fcd34d,#fbbf24);box-shadow:0 6px 18px rgba(251,191,36,.45);animation:spx-cta 2.2s ease-in-out infinite}
+  @keyframes spx-cta{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
+  .spx-arrow{transition:transform .2s ease}
+  .spx-banner:hover .spx-cta{animation:none}
+  .spx-banner:hover .spx-cta .spx-arrow{transform:translateX(4px)}
+  .spx-footer{margin-top:8px;font-size:10px;text-align:center;color:#a5b4fc;letter-spacing:.3px}
+  @media (prefers-reduced-motion:reduce){.spx-blob,.spx-banner::after,.spx-live,.spx-cta{animation:none}.spx-banner:hover{transform:none}}
+</style>
+<a class="spx-banner" href="https://solopreneurshub.com/" target="_blank" rel="noopener"
+   aria-label="Submit your AI tool to the Solopreneurs Hub directory">
+  <span class="spx-blob a"></span>
+  <span class="spx-blob b"></span>
+  <span class="spx-content">
+    <span class="spx-badge"><span class="spx-live"></span>AI Directory</span>
+    <span class="spx-h1">Get your AI tool <span class="spx-grad">discovered</span></span>
+    <span class="spx-p">List it in front of thousands of founders, makers &amp; builders.</span>
+    <span class="spx-cta">Submit your tool <span class="spx-arrow">→</span></span>
+    <span class="spx-footer">solopreneurshub.com</span>
+  </span>
+</a>

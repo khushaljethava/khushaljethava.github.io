@@ -126,18 +126,9 @@ script_includes:
     </dialog>
   {% endif %}
 
-  <!-- Ad 1: Before content - loads first (synchronous) -->
-  <div id="ad-post-1" class="text-center my-3" style="min-height:90px;max-width:100%;overflow:hidden;">
-    <script>
-      var atOptions = {
-        'key' : '99e0c2c2535b318f3e9c4b63462c5832',
-        'format' : 'iframe',
-        'height' : 90,
-        'width' : 728,
-        'params' : {}
-      };
-    </script>
-    <script src="https://www.highperformanceformat.com/99e0c2c2535b318f3e9c4b63462c5832/invoke.js"></script>
+  <!-- Ad 1: Before content -->
+  <div id="ad-post-1" class="text-center my-3">
+    {% include ad-banner.html %}
   </div>
 
   <div class="content">
@@ -153,22 +144,9 @@ script_includes:
     </div>
   </div>
 
-  <!-- Ad 2: After content - staggered load to avoid atOptions collision -->
-  <div id="ad-post-2" class="text-center my-3" style="min-height:90px;max-width:100%;overflow:hidden;">
-    <script>
-      setTimeout(function() {
-        atOptions = {
-          'key' : '99e0c2c2535b318f3e9c4b63462c5832',
-          'format' : 'iframe',
-          'height' : 90,
-          'width' : 728,
-          'params' : {}
-        };
-        var s = document.createElement('script');
-        s.src = 'https://www.highperformanceformat.com/99e0c2c2535b318f3e9c4b63462c5832/invoke.js';
-        document.getElementById('ad-post-2').appendChild(s);
-      }, 1000);
-    </script>
+  <!-- Ad 2: After content -->
+  <div id="ad-post-2" class="text-center my-3">
+    {% include ad-banner.html %}
   </div>
 
   <div class="post-tail-wrapper text-muted">
@@ -222,21 +200,8 @@ script_includes:
   </div>
   <!-- div.post-tail-wrapper -->
 
-  <!-- Ad 3: Bottom of post - staggered load to avoid atOptions collision -->
-  <div id="ad-post-3" class="text-center my-3" style="min-height:90px;max-width:100%;overflow:hidden;">
-    <script>
-      setTimeout(function() {
-        atOptions = {
-          'key' : '99e0c2c2535b318f3e9c4b63462c5832',
-          'format' : 'iframe',
-          'height' : 90,
-          'width' : 728,
-          'params' : {}
-        };
-        var s = document.createElement('script');
-        s.src = 'https://www.highperformanceformat.com/99e0c2c2535b318f3e9c4b63462c5832/invoke.js';
-        document.getElementById('ad-post-3').appendChild(s);
-      }, 2000);
-    </script>
+  <!-- Ad 3: Bottom of post -->
+  <div id="ad-post-3" class="text-center my-3">
+    {% include ad-banner.html %}
   </div>
 </article>
