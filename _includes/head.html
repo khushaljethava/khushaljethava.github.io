@@ -20,8 +20,10 @@
     {% assign src = page.image.path | default: page.image %}
 
     {% unless src contains '://' %}
+      {%- comment -%} Percent-encode so filenames with spaces yield valid og:image/twitter:image URLs {%- endcomment -%}
+      {% assign src_enc = src | encode_url_path %}
       {%- capture img_url -%}
-        {% include media-url.html src=src subpath=page.media_subpath absolute=true %}
+        {% include media-url.html src=src_enc subpath=page.media_subpath absolute=true %}
       {%- endcapture -%}
 
       {%- capture old_url -%}{{ src | absolute_url }}{%- endcapture -%}
@@ -48,6 +50,9 @@
     {% assign new_meta_clip = og_image | append: twitter_image %}
     {% assign seo_tags = seo_tags | replace: old_meta_clip, new_meta_clip %}
   {% endif %}
+
+  <!-- Drop jekyll-seo-tag's JSON-LD; metadata-hook.html emits the richer, single-source schema -->
+  {%- assign seo_tags = seo_tags | split: '<script type="application/ld+json">' | first -%}
 
   {{ seo_tags }}
 
@@ -107,8 +112,10 @@
   <!-- Web Font -->
   <link rel="stylesheet" href="{{ site.data.origin[type].webfonts | relative_url }}">
 
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="{{ site.data.origin[type].fontawesome.css | relative_url }}">
+  <!-- Font Awesome Icons: loaded async so icon CSS never blocks first paint -->
+  {%- assign _fa_css = site.data.origin[type].fontawesome.css | relative_url -%}
+  <link rel="preload" as="style" href="{{ _fa_css }}" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ _fa_css }}"></noscript>
 
   <!-- 3rd-party Dependencies -->
 

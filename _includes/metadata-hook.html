@@ -34,7 +34,7 @@
 
 <!-- Preload hero image for LCP improvement -->
 {% if page.layout == 'post' and page.image %}
-  {% assign hero_src = page.image.path | default: page.image %}
+  {% assign hero_src = page.image.path | default: page.image | encode_url_path %}
   {% unless hero_src contains '://' %}
     {% assign hero_src = site.url | append: hero_src %}
   {% endunless %}
@@ -64,7 +64,6 @@
 {% endif %}
 
 {% include schema-breadcrumb.html %}
-{% include schema-howto.html %}
 
 {% if page.url == '/about/' or page.url == '/' %}
   {% include schema-person.html %}
@@ -189,7 +188,7 @@
   },
   {% if page.image %}"image": {
     "@type": "ImageObject",
-    "url": "{{ site.url }}{{ page.image.path | default: page.image }}",
+    "url": "{{ site.url }}{{ page.image.path | default: page.image | encode_url_path }}",
     "width": 1200,
     "height": 630
   },{% endif %}
