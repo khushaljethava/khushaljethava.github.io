@@ -48,6 +48,9 @@ script_includes:
         {% endif %}
 
         <div class="mt-3 mb-3">
+          <!-- refactor-content.html appends loading="lazy" to every image it touches and only
+               skips when lqip is set, so the hero ends up with two loading attributes. The first
+               one wins per the HTML parsing spec, which is why eager is declared here. -->
           <img {{ src }} {{ class }} {{ alt }} width="1200" height="630" {{ lqip }} loading="eager" fetchpriority="high">
           {%- if page.image.alt -%}
             <figcaption class="text-center pt-2 pb-2">{{ page.image.alt }}</figcaption>
