@@ -92,6 +92,8 @@ analytics:
     id: # fill in your Cloudflare Web Analytics token
   fathom:
     id: # fill in your Fathom Site ID
+  yandex:
+    id: 110976528 # Yandex.Metrika counter ID
 
 # Page views settings
 pageviews:
