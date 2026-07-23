@@ -5,6 +5,9 @@ date: 2026-03-27 09:20:00 +0530
 categories: [Python]
 tags: [python, mcp, ai, agents, developer-tools]
 translations: [hi, es, pt, fr, de, ja, ko, ar, zh]
+# 301 the old dated URL (indexed while the Hindi translation's YAML was broken)
+redirect_from:
+  - /posts/2026-03-27-model-context-protocol-python/
 image:
   path: /commons/model-context-protocol-python-hero.webp
   alt: Model Context Protocol Python tutorial hero image
