@@ -109,8 +109,11 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ '/assets/css/:THEME.css' | replace: ':THEME', site.theme | relative_url }}">
 
-  <!-- Web Font -->
-  <link rel="stylesheet" href="{{ site.data.origin[type].webfonts | relative_url }}">
+  <!-- Web Font: loaded async. The URL already carries display=swap, so text paints
+       immediately in the fallback face instead of waiting on this stylesheet. -->
+  {%- assign _webfonts = site.data.origin[type].webfonts | relative_url -%}
+  <link rel="preload" as="style" href="{{ _webfonts }}" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ _webfonts }}"></noscript>
 
   <!-- Font Awesome Icons: loaded async so icon CSS never blocks first paint -->
   {%- assign _fa_css = site.data.origin[type].fontawesome.css | relative_url -%}
