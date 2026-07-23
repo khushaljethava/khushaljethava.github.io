@@ -1,4 +1,4 @@
-<meta name="msvalidate.01" content="820A985B0C50C9563C5719E6D8121F1E" />
+<!-- msvalidate.01 comes from _config.yml webmaster_verifications.bing via jekyll-seo-tag -->
 
 <!-- Security meta tags (GitHub Pages cannot set response headers) -->
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -75,17 +75,12 @@
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": "{{ site.url }}/#website",
   "name": "{{ site.title }}",
   "url": "{{ site.url }}/",
   "description": "{{ site.description }}",
   "publisher": {
-    "@type": "Organization",
-    "name": "{{ site.title }}",
-    "url": "{{ site.url }}/",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "{{ site.url }}/commons/avatar.webp"
-    }
+    "@id": "{{ site.url }}/#organization"
   },
   "sameAs": [
     "https://x.com/d3evil4",
@@ -106,6 +101,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "{{ site.url }}/#organization",
   "name": "{{ site.title }}",
   "url": "{{ site.url }}/",
   "logo": {
@@ -167,23 +163,27 @@
   "inLanguage": "{{ il }}",
   "url": "{{ site.url }}{{ page.url }}",
   "datePublished": "{{ page.date | date_to_xmlschema }}",
-  {% if page.last_modified_at %}"dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",{% endif %}
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "{{ site.url }}{{ page.url }}"
   },
   "author": {
     "@type": "Person",
+    "@id": "{{ site.url }}/about/#person",
     "name": "Khushal Jethava",
     "url": "{{ site.url }}/about/"
   },
   "publisher": {
     "@type": "Organization",
+    "@id": "{{ site.url }}/#organization",
     "name": "{{ site.title }}",
     "url": "{{ site.url }}/",
     "logo": {
       "@type": "ImageObject",
-      "url": "{{ site.url }}/commons/avatar.webp"
+      "url": "{{ site.url }}/commons/avatar.webp",
+      "width": 512,
+      "height": 512
     }
   },
   {% if page.image %}"image": {

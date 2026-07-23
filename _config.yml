@@ -69,7 +69,10 @@ webmaster_verifications:
   google: googleb19aeb83100e0258 # fill in your Google verification code
   bing: 820A985B0C50C9563C5719E6D8121F1E
   alexa: # fill in your Alexa verification code
-  yandex: 9e1ef03779600996
+  # yandex verification is served by the hardcoded meta tag in _includes/head.html
+  # (fcf91aac6c3172fe, the code registered in Yandex Webmaster). Setting it here too
+  # would emit a second, conflicting yandex-verification tag via jekyll-seo-tag.
+  yandex:
   baidu: # fill in your Baidu verification code
   facebook: # fill in your Facebook verification code
 
@@ -92,6 +95,8 @@ analytics:
     id: # fill in your Cloudflare Web Analytics token
   fathom:
     id: # fill in your Fathom Site ID
+  yandex:
+    id: 110976528 # Yandex.Metrika counter ID
 
 # Page views settings
 pageviews:

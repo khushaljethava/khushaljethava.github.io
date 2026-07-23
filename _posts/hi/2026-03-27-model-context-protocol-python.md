@@ -1,6 +1,6 @@
 ---
 title: "Model Context Protocol Python ट्यूटोरियल: अपना पहला MCP सर्वर बनाएं"
-description: एक व्यावहारिक पहले-सर्वर ट्यूटोरियल, मुख्य MCP अवधारणाओं और कस्टम स्क्रिप्ट से पुन: प्रयोज्य AI टूलिंग तक के सबसे तेज़ रास्ते के साथ Model Context Protocol Python सीखें।
+description: "एक व्यावहारिक पहले-सर्वर ट्यूटोरियल, मुख्य MCP अवधारणाओं और कस्टम स्क्रिप्ट से पुन: प्रयोज्य AI टूलिंग तक के सबसे तेज़ रास्ते के साथ Model Context Protocol Python सीखें।"
 date: 2026-03-27 09:20:00 +0530
 categories: [Python]
 tags: [python, mcp, ai, agents, developer-tools]
