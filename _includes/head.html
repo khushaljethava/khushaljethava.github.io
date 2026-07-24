@@ -54,9 +54,24 @@
   <!-- Drop jekyll-seo-tag's JSON-LD; metadata-hook.html emits the richer, single-source schema -->
   {%- assign seo_tags = seo_tags | split: '<script type="application/ld+json">' | first -%}
 
+  {%- comment -%}
+    seo-tag derives twitter:creator from the author name (e.g. "@Khushal Jethava"),
+    which is not a valid handle. Rewrite it to the real Twitter username.
+  {%- endcomment -%}
+  {%- if site.social.name and site.twitter.username -%}
+    {%- assign _bad_creator = '<meta name="twitter:creator" content="@' | append: site.social.name | append: '" />' -%}
+    {%- assign _good_creator = '<meta name="twitter:creator" content="@' | append: site.twitter.username | append: '" />' -%}
+    {%- assign seo_tags = seo_tags | replace: _bad_creator, _good_creator -%}
+  {%- endif -%}
+
   {{ seo_tags }}
 
-  {% unless page.image %}
+  {%- comment -%}
+    Fallback OG/Twitter image only when neither a page image nor a site-wide
+    social_preview_image is set; otherwise the branches above already emit them
+    (avoids duplicate og:image / twitter:card tags).
+  {%- endcomment -%}
+  {% unless page.image or site.social_preview_image %}
     {%- assign _fallback_img = site.social_preview_image | default: site.logo -%}
     {%- if _fallback_img -%}
       {%- unless _fallback_img contains '://' -%}

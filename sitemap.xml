@@ -32,6 +32,15 @@ layout: null
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  {%- comment -%} Translated versions live at /<lang>{{ post.url }} (mirrors lang-switcher.html) {%- endcomment -%}
+  {% if post.translations and post.translations != empty %}{% for lang in post.translations %}{% unless lang == 'en' %}
+  <url>
+    <loc>{{ site.url }}/{{ lang }}{{ post.url }}</loc>
+    <lastmod>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  {% endunless %}{% endfor %}{% endif %}
   {% endfor %}
 
   <!-- Static tab pages (About, Contact, Archives, etc.) -->
