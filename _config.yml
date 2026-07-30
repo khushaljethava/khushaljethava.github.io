@@ -97,6 +97,8 @@ analytics:
     id: # fill in your Fathom Site ID
   yandex:
     id: 110976528 # Yandex.Metrika counter ID
+  clarity:
+    id: xuj0zmgspj # Microsoft Clarity project ID
 
 # Page views settings
 pageviews:
