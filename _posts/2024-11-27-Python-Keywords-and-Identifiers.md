@@ -106,6 +106,30 @@ FAQ
 **Question:**Is python case sensitive when dealing with identifiers?  
 **Answers:**Yes, Python is case-sensitive when we are dealing with identifiers.
 
+**Question:** Are Python keywords case sensitive, and which case are they in?  
+**Answers:** Yes. Every keyword is lowercase except the three literals `True`, `False`, and `None`, which are capitalised. Because the match is case-sensitive, `While` and `IF` are *not* keywords — they are perfectly legal identifiers, which is exactly why the capitalisation trips people up.
+
+**Question:** Is `break` a valid identifier in Python?  
+**Answers:** No. `break` is a reserved keyword, so `break = 5` raises a `SyntaxError`. The same applies to `class`, `continue`, `for`, `if`, `def`, `return`, `True`, `False`, and `None`. Names like `function`, `method`, `list`, `type`, and `id` are **not** keywords — they are ordinary names or built-ins, so Python lets you assign to them, though shadowing a built-in such as `list` is a bad idea.
+
+**Question:** How do I check whether a name is a reserved keyword?  
+**Answers:** Use the `keyword` module instead of memorising the list:
+
+```python
+import keyword
+
+print(keyword.iskeyword("break"))     # True
+print(keyword.iskeyword("function"))  # False
+print(keyword.kwlist)                 # every keyword in your Python version
+print(keyword.softkwlist)             # soft keywords: _, case, match, type
+```
+
+**Question:** Why can't Python keywords be used as identifiers?  
+**Answers:** Keywords are consumed by the parser before names are ever resolved. When the tokenizer sees `for`, it produces a grammar token rather than a name, so there is no point at which `for = 1` could be read as an assignment — it fails at compile time with a `SyntaxError`, before your program runs. Soft keywords (`match`, `case`, `type`, `_`) are the exception: they act as keywords only inside the syntax that uses them, so they remain valid variable names everywhere else.
+
+**Question:** Which identifiers are valid in Python?  
+**Answers:** A valid identifier starts with a letter or an underscore and continues with letters, digits, or underscores — no spaces, no punctuation, no leading digit, and not a keyword. So `top10`, `_10_top`, `_address`, `john_doe`, and `_` are all valid, while `10top`, `#address`, `$fruit`, `a+b`, `social security number`, and `for` are not. Test any string with `"top10".isidentifier()`, combined with `keyword.iskeyword()` for the complete check.
+
 ---
 
 ## Continue Learning

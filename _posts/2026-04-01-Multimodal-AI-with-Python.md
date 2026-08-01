@@ -4,7 +4,7 @@ description: Learn how to build multimodal AI applications with Python. This gui
 date: 2026-04-01 12:00:00 +0800
 categories: [Python]
 tags: [python, ai, multimodal]
-translations: [hi, es, pt]
+translations: [hi, es, pt, ru]
 image:
   path: "/commons/Multimodal AI with Python Working with Text Images and Audio.webp"
   alt: "Multimodal AI architecture combining text, image, and audio processing using GPT-4 Vision, transformers, and Whisper in Python"
@@ -40,6 +40,8 @@ For production use, store this in a `.env` file and load it with `python-dotenv`
 ## Image Understanding with GPT-4 Vision
 
 GPT-4 Vision (GPT-4V) accepts images alongside text prompts. You can pass images as URLs or base64-encoded strings.
+
+The code in this section targets `gpt-4o`, OpenAI's multimodal model handling text, image, and audio input. The same request shape works unchanged on newer models — swap the `model` string for `gpt-5` or whichever multimodal model you have access to and the message format, the `image_url` content blocks, and the response parsing all stay the same. That is the point of the Chat Completions interface: modality support is a property of the model you name, not of the code you write.
 
 ```python
 import openai

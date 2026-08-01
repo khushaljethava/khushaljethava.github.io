@@ -4,7 +4,7 @@ description: Python के साथ मल्टीमॉडल AI एप्ल
 date: 2026-04-01 12:00:00 +0800
 categories: [Python]
 tags: [python, ai, multimodal]
-translations: [hi, es, pt]
+translations: [hi, es, pt, ru]
 lang: hi
 image:
   path: "/commons/Multimodal AI with Python Working with Text Images and Audio.webp"

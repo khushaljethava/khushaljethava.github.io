@@ -4,7 +4,7 @@ description: Learn Model Context Protocol Python with a practical first-server t
 date: 2026-03-27 09:20:00 +0530
 categories: [Python]
 tags: [python, mcp, ai, agents, developer-tools]
-translations: [hi, es, pt, fr, de, ja, ko, ar, zh]
+translations: [hi, es, pt, fr, de, ja, ko, ar, zh, ru]
 image:
   path: /commons/model-context-protocol-python-hero.webp
   alt: Model Context Protocol Python tutorial hero image
@@ -52,7 +52,7 @@ In my experience deploying tool-calling patterns at Codiste, this distinction be
 
 ## Build a Small MCP Server First
 
-The official Python SDK quickstart uses `FastMCP`, which is the right place to begin. It keeps protocol details out of the way so you can focus on the actual capability you want to expose.
+The MCP server example below is the smallest thing worth running: one tool, one resource, and enough structure to extend later. The official Model Context Protocol Python SDK ([modelcontextprotocol/python-sdk on GitHub](https://github.com/modelcontextprotocol/python-sdk), with docs at [modelcontextprotocol.io](https://modelcontextprotocol.io)) ships a `FastMCP` quickstart, which is the right place to begin. It keeps protocol details out of the way so you can focus on the actual capability you want to expose.
 
 Install it with either `uv` or `pip`:
 

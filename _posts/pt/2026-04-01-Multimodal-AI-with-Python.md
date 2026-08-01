@@ -4,7 +4,7 @@ description: Aprenda a criar aplicações de IA multimodal com Python. Este guia
 date: 2026-04-01 12:00:00 +0800
 categories: [Python]
 tags: [python, ai, multimodal]
-translations: [hi, es, pt]
+translations: [hi, es, pt, ru]
 lang: pt
 image:
   path: "/commons/Multimodal AI with Python Working with Text Images and Audio.webp"

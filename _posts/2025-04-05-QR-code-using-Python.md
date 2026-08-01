@@ -4,6 +4,7 @@ description: In this blog, we will learn how to use QR code using Python and man
 date: 2025-04-05 12:26:03 +0800
 categories: [Python]
 tags: [python]
+translations: [ru]
 image:
   path: /commons/A Beginner's Guide to Generating QR Code using Python.webp
   alt: A Beginner's Guide to Generating QR Code using Python
@@ -96,6 +97,24 @@ In the code above, we first import the PyQRCode library. Next, we create a QR co
 
 The qrcode and PyQRCode libraries provide additional options for customising the QR code's appearance and behaviour, such as specifying the error correction level and adding a logo to the QR code. For more information on these options, check out the documentation for each library.
 
+### Generate a QR Code Without External Libraries
+
+Python's standard library has no QR code support, so there is no way to generate a QR code without *any* library at all short of implementing the ISO/IEC 18004 spec yourself — Reed-Solomon error correction, masking, and all. What people usually mean by "without external libraries" is *without compiled or system dependencies*, and that is achievable:
+
+- **PyQRCode** (plus `pypng` for PNG output) is pure Python with no C extensions, so `pip install pyqrcode pypng` works anywhere Python does. See the PyQRCode example below.
+- **qrcode** needs Pillow only if you want image output; `qrcode.make(data).get_matrix()` or the `qrcode.QRCode.print_ascii()` method gives you the code with no image dependency:
+
+```python
+import qrcode
+
+qr = qrcode.QRCode()
+qr.add_data("https://khushaljethava.work")
+qr.print_ascii()          # renders in the terminal, no Pillow needed
+matrix = qr.get_matrix()  # list of lists of booleans, render however you like
+```
+
+If your constraint is "no pip install," the honest answer is to shell out to a system tool or call a hosted QR API — writing the encoder by hand is a multi-day project, not a snippet.
+
 ### Python QR Code Generator Example to add QR code in Logo
 
 To further demonstrate how to generate QR codes using Python, let's walk through an example using the qrcode library.
@@ -129,9 +148,9 @@ Finally, we save the QR code as an image file. Running this code will generate a
 
 The following section will explore how to read QR codes using Python.
 
-## How to Scan QR Code using Python?
+## How to Scan QR Code using Python? (QR Code Reader and Decoder)
 
-Reading QR codes using Python is just as easy as generating them. This section will explore how to read QR codes using the pyzbar and zbarlight libraries.
+Reading QR codes using Python is just as easy as generating them. A Python QR code decoder takes an image or a video frame and returns the data that was encoded — the same job a phone camera does, minus the camera. This section will explore how to read QR codes using the pyzbar and zbarlight libraries.
 
 ### Reading QR codes using pyzbar
 
@@ -393,6 +412,12 @@ A: Tkinter is a popular Python library for creating graphical user interfaces (G
 
 Q: Is it possible to scan and decode QR codes using Python?  
 A: Yes, several Python libraries are available that allow you to scan and decode QR codes from images or video streams. Pyzbar is a popular library that can be used to decode QR codes, and OpenCV can be used for real-time video decoding.
+
+Q: What does `version` do in the Python qrcode library, and how does `fit=True` change its behavior?  
+A: `version` is the QR symbol size, an integer from 1 (21x21 modules) to 40 (177x177 modules). Each step up adds 4 modules per side and more data capacity. When you call `qr.make(fit=True)`, the library ignores a too-small `version` and grows it to the smallest size that actually fits your data — so `fit=True` is a floor, not a fixed size. With `fit=False` the version you set is used as-is, and encoding raises `DataOverflowError` if the payload does not fit. Setting `version=None` together with `fit=True` lets the library pick freely, which is the safest default for user-supplied data.
+
+Q: Which library should I use as a Python QR code reader or decoder?  
+A: `pyzbar` is the usual choice for decoding QR codes from image files, with `zbarlight` as an alternative — both are covered in the scanning section above. If you would rather avoid the ZBar system dependency, OpenCV ships a decoder of its own: `data, points, _ = cv2.QRCodeDetector().detectAndDecode(image)` returns the decoded string directly and works on webcam frames.
 
 Q: Are there any best practices to follow when working with QR codes in Python?  
 A: Yes, there are several best practices to follow when working with QR codes in Python, such as using reliable libraries, testing with multiple devices, and keeping the data simple. Additionally, using dynamic codes, adding a call to action, and analysing data can help make your QR codes more effective.

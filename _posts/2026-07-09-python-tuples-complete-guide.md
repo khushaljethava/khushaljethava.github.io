@@ -4,6 +4,7 @@ description: "Master Python tuples — immutability, packing and unpacking, name
 date: 2026-07-09 12:30:00 +0530
 categories: [Python]
 tags: [python, tuple, data-structures]
+translations: [ru]
 image:
   path: /commons/Python Tuple.webp
   alt: "Python tuples complete guide"
@@ -144,7 +145,9 @@ t.count(5)    # 0 — no error, just zero
 (1, True, 1.0).count(1)   # 3
 ```
 
-### tuple.index()
+### tuple.index() — Find the Index of an Element in a Tuple
+
+The tuple `index()` method is how you find the index of an element in a tuple. Indexing a tuple by position (`t[0]`) goes the other way — value from index; the `index()` method goes index from value.
 
 ```python
 tuple.index(value, start=0, end=len(tuple))
@@ -268,6 +271,10 @@ If a function is meant to return a single value, double-check there's no stray c
 **Can I sort a tuple?** Not in place — there's no `t.sort()`. Use the built-in `sorted()`, which returns a new list: `sorted(t)`. If you need the result back as a tuple, wrap it: `tuple(sorted(t))`.
 
 **Why does `(1, 2) == [1, 2]` return `False`?** Equality in Python considers the type as well as the contents. A tuple and a list with identical elements are never equal, even though both support indexing and iteration the same way.
+
+**How do I find the index of an element in a tuple?** Call the tuple `index()` method: `t.index(value)`. It returns the position of the first match and raises `ValueError` when the value isn't there, so guard with `in` first. Pass `start`/`end` to search a slice of the tuple: `t.index(value, 2)`.
+
+**What are valid tuple indices?** The same as for lists: `0` to `len(t) - 1`, plus negative indices counting from the end (`t[-1]` is the last item). Indexing a tuple outside that range raises `IndexError`.
 
 **Can tuples be nested inside sets?** Yes, as long as every element inside the tuple is itself hashable. A tuple containing a list, for example, is not hashable and can't go in a set or be a dict key.
 

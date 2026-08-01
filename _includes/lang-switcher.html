@@ -26,6 +26,7 @@
         {%- when 'ko' -%}{%- assign label = '한국어' -%}
         {%- when 'ar' -%}{%- assign label = 'العربية' -%}
         {%- when 'zh' -%}{%- assign label = '简体中文' -%}
+        {%- when 'ru' -%}{%- assign label = 'Русский' -%}
         {%- else -%}{%- assign label = lang -%}
       {%- endcase -%}
       {%- if lang == 'en' -%}{%- assign href = site.url | append: page.url -%}{%- else -%}{%- assign href = site.url | append: '/' | append: lang | append: page.url -%}{%- endif -%}

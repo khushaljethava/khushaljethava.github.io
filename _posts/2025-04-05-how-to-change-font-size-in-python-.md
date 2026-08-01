@@ -4,6 +4,7 @@ description: If you use Python to develop data visualisations and user interface
 date: 2025-04-05 12:21:06 +0800
 categories: [Python]
 tags: [python]
+translations: [ru]
 image:
   path: "/commons/Simple Guide How to Change Font Size in Python.webp"
   alt: "Simple Guide: How to Change Font Size in Python"
@@ -267,6 +268,25 @@ To change the font size in Visual Studio Code, go to File \> Preferences \> Sett
 
 Changing the font size in the Python interpreter and IDEs is essential for a comfortable and efficient coding experience. Whether you're working in the terminal or an IDE, there are always ways to customize the font size to your liking. By using the techniques outlined in this section, you can optimize your coding environment and work more efficiently.
 
+### How to increase font size in Python IDLE (make the text bigger)
+
+If you just want to make the text bigger in IDLE — the shell, the editor, or both — the setting lives in one place and applies everywhere:
+
+1. **Options > Configure IDLE > Fonts/Tabs**
+2. Pick a font family under **Font Face**, then a number under **Size**. Anything from 12 to 16 is comfortable on most laptop screens.
+3. **Apply** or **OK**. The change takes effect immediately in every open IDLE window — no restart needed.
+
+Two things people expect here and do not get:
+
+- **There is no Ctrl + Plus or Ctrl + Scroll zoom in IDLE.** Unlike VS Code or a browser, IDLE has no zoom shortcut for text size; the Fonts/Tabs dialog is the only way to increase the font size.
+- **Alt + F2 ("Zoom Height") does not change the font.** It stretches the window to full screen height. The text stays exactly the same size.
+
+**To reduce the font size instead**, use the identical route and pick a smaller number — the Size dropdown goes down as well as up, and 8 to 10 fits noticeably more code on screen. There is no separate "decrease font" command and no keyboard shortcut in either direction, so shrinking and enlarging IDLE text are the same two clicks.
+
+The same dialog is where you change the font itself and not just its size — the Font Face list controls the family, so "how to change the font in Python IDLE" and "how to increase font size in Python IDLE" are answered by the same two dropdowns.
+
+Note that this changes only how IDLE *displays* your code and output. It has no effect on the font size inside anything your program draws — for a Tkinter window or a Matplotlib chart, set the font size in code, as shown in the sections above.
+
 ## How to change font size in python idle in windows 
 
 To change the font size in Python IDLE in Windows, follow these steps:
@@ -307,6 +327,12 @@ By following these best practices, you can ensure that your Python code and data
 
 Q: Can I change the font size of text printed in the console?  
 A: Yes, you can change the font size of text printed in the console by adjusting the font size settings in your terminal emulator.  
+Q: How do I make the text bigger in a `print()` statement?  
+A: You cannot. `print()` writes plain characters to a stream, and the terminal decides how large they are rendered — there is no font size argument and no pure-Python way to change the size of one line of output. Your options are to change the terminal or IDLE font (which resizes everything), to use ANSI escape codes for bold and color, which some terminals render slightly heavier, or to draw oversized ASCII lettering with a package such as `pyfiglet`. For styling console output, see our guide on [how to print colored text in Python](/posts/how-to-print-colored-text-in-python/).
+
+Q: How do I set the font size in Matplotlib for one element instead of the whole chart?  
+A: Pass `fontsize` to the call that creates that element — `plt.title("Sales", fontsize=18)`, `plt.xlabel("Month", fontsize=14)`, `ax.tick_params(labelsize=12)`. Use `plt.rcParams` only when you want to set the font size globally for every chart in the script.
+
 Q: How do I change the font size in Matplotlib plots?  
 A: You can change the font size of text in Matplotlib plots by setting the font size parameter in the plot function, or by using the rcParams dictionary to set the font size globally.  
 Q: How can I change the font size of text in Seaborn data visualizations?  

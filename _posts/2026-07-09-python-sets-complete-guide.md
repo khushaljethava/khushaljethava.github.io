@@ -4,6 +4,7 @@ description: "Master Python sets — creation, uniqueness, set algebra, and ever
 date: 2026-07-09 12:00:00 +0530
 categories: [Python]
 tags: [python, set, data-structures]
+translations: [ru]
 image:
   path: /commons/Python Set.webp
   alt: "Python sets complete guide with all methods"
@@ -326,6 +327,24 @@ Sets in CPython are implemented as hash tables, the same underlying structure as
 - **Unhashable elements.** Trying to put a `list` or `dict` inside a set raises `TypeError: unhashable type`. Convert nested lists to tuples first if you need to store them.
 - **Assuming order.** Because sets are unordered, don't rely on iteration order or the value returned by `pop()` being predictable — if you need determinism, sort the set or use a list.
 - **Confusing `remove()` and `discard()`.** Use `discard()` when the element might not be present and you don't want an exception; use `remove()` when its absence indicates a bug you want surfaced.
+
+## Frequently Asked Questions
+
+**Which method removes and returns an arbitrary element from a set?** `pop()`. It takes no arguments — there is no "pop by name" and no pop by index, because a set has neither positions nor keys. To remove one *specific* element use `remove()` (raises `KeyError` if absent) or `discard()` (silent no-op if absent).
+
+**Is `set.pop()` random?** No — arbitrary is not the same as random. CPython returns the first element in the set's internal hash table, which is deterministic for a given set but depends on hash values and insertion history, so you must not rely on which element you get. If you need a genuinely random pick, use `random.choice(tuple(s))` instead.
+
+**What does `add()` do if the element already exists?** Nothing, and it does not raise. The set hashes the value, finds a slot already holding an equal element, and returns `None` without changing anything — the same `None` it returns on a successful insert. Comparing `len(s)` before and after is the only reliable way to tell whether an `add()` actually inserted something.
+
+**What is the purpose of `discard()`, and does it remove duplicates?** `discard(x)` removes `x` if present and does nothing if it isn't. It cannot remove "all copies" of an element, because a set never holds duplicates in the first place — there is at most one of anything in a set.
+
+**What happens if you try to add to or remove from a frozenset?** An `AttributeError`. A `frozenset` is immutable, so it simply has no `add`, `remove`, `discard`, `pop`, `clear`, or `*_update` methods. It is not converted to a regular set and it is not cleared — the call fails. Build a new frozenset instead: `fs | {new_item}`.
+
+**Sets are called unchangeable, so how can you add and remove items?** Two different things are being described. The *set* is mutable — you can add and remove items freely. The *elements* are not: they must be hashable, and a hashable object's value must not change while it sits in the set. That is why a list can never be a set element but a tuple of immutable values can.
+
+**Does `difference_update()` return the new set?** No, it returns `None` — like every `*_update` method (`intersection_update`, `symmetric_difference_update`, `update`), it mutates in place. `result = s.difference_update(t)` leaves `result` as `None`; use `s.difference(t)` when you want a value back.
+
+**How do I clear a set?** `s.clear()` empties it in place, so every other reference to that same set object sees it empty too. Rebinding with `s = set()` instead creates a *new* empty set and leaves any other reference pointing at the old, still-populated one.
 
 ## Where sets fit with the rest of Python
 

@@ -4,6 +4,7 @@ description: "Every Python built-in function explained with runnable examples, g
 date: 2026-07-09 10:00:00 +0530
 categories: [Python]
 tags: [python, built-in-functions, reference]
+translations: [ru]
 image:
   path: /commons/Python range().webp
   alt: "Python built-in functions complete reference"
@@ -64,7 +65,7 @@ redirect_from:
   - /posts/Page-69-Python-__import__()/
 ---
 
-Python ships with roughly seventy names you can call without ever writing an `import` line. They live in the `builtins` module, which the interpreter injects into every module's namespace automatically — that's why `len([1, 2, 3])` just works, everywhere, with no setup. This guide walks through all 54 of the most commonly-used built-in *functions* (constructors like `dict()`, `list()`, and `set()` included, since in CPython they behave exactly like functions even though they're technically type objects), with runnable examples, real output, and the gotcha that trips people up in practice.
+Python ships with roughly seventy names you can call without ever writing an `import` line. They live in the `builtins` module, which the interpreter injects into every module's namespace automatically — that's why `len([1, 2, 3])` just works, everywhere, with no setup. This guide walks through all 63 of the most commonly-used built-in *functions* (constructors like `dict()`, `list()`, and `set()` included, since in CPython they behave exactly like functions even though they're technically type objects), with runnable examples, real output, and the gotcha that trips people up in practice.
 
 If you ever want to see the full list yourself:
 
@@ -76,6 +77,26 @@ print(dir(builtins))
 And if you want to confirm a name really is a built-in rather than something defined in your own file, check `vars(builtins)` or simply `'sorted' in dir(builtins)`.
 
 ## Numeric & math
+
+### abs()
+Returns the magnitude of a number — the distance from zero, sign discarded.
+```python
+print(abs(-7), abs(3.5), abs(3 + 4j))
+```
+```
+7 3.5 5.0
+```
+For a complex number `abs()` returns the modulus as a float, which is why `abs(3 + 4j)` is `5.0` and not an integer.
+
+### bin()
+Converts an integer to its binary string representation, prefixed with `0b`.
+```python
+print(bin(10), bin(-10))
+```
+```
+0b1010 -0b1010
+```
+Gotcha: the result is a `str`, not a number, and negatives get a leading minus rather than a two's-complement form. Strip the prefix with `bin(10)[2:]`, or use `format(10, "08b")` when you want fixed-width output.
 
 ### divmod()
 Returns `(quotient, remainder)` in one call — handy for anything involving pagination, clock arithmetic, or unit conversion.
@@ -140,7 +161,45 @@ print(int(3.9), int("101", 2))
 ```
 Use `int(x, base)` for parsing hex/binary/octal strings without manual arithmetic.
 
+#### Type casting in Python: explicit vs implicit
+
+`int()`, `float()`, `str()`, `bool()`, `list()`, and `tuple()` are the type casting functions — explicit conversion, where you state the target type. Python also does *implicit* conversion, but only between numeric types, and only when no information is lost:
+
+```python
+print(3 + 2.0)          # int is widened to float -> 5.0
+print(True + 1)         # bool is a subclass of int -> 2
+print("2" + 2)          # TypeError: no implicit str/int conversion
+```
+
+Python never implicitly converts a string to a number or vice versa, which is why `input()` always needs an explicit cast: `age = int(input("Age: "))`. For your own classes there is no implicit casting either — define `__int__`, `__float__`, `__str__`, or `__bool__` and the matching built-in will use them when you call it explicitly.
+
 ## Iterables & sequences
+
+### any()
+The `any()` method in Python returns `True` if at least one element of an iterable is truthy, and `False` otherwise.
+```python
+print(any([0, "", None, 4]))
+print(any([]))
+```
+```
+True
+False
+```
+Two things worth knowing: `any([])` is `False` for an empty iterable, and `any()` short-circuits — it stops consuming the iterable at the first truthy item, so `any(is_valid(x) for x in huge_list)` never evaluates more than it has to. Pass a generator expression rather than a list comprehension to keep that benefit.
+
+### all()
+Returns `True` if every element of an iterable is truthy — the counterpart to `any()`.
+```python
+print(all([1, "text", [0]]))
+print(all([1, 0, 2]))
+print(all([]))
+```
+```
+True
+False
+True
+```
+Gotcha: `all([])` is `True`, not `False`. Vacuous truth catches people out in validation code — `all(rule(x) for x in items)` passes when `items` is empty, so check for emptiness separately if that matters.
 
 ### enumerate()
 Pairs each item in an iterable with its index, avoiding manual counters.
@@ -282,6 +341,43 @@ print([0, 1, 2, 3, 4, 5, 6][s])
 Use named `slice` objects to document intent when indexing logic gets complex (e.g., parsing fixed-width fields).
 
 ## Type constructors
+
+### bool()
+Converts any object to `True` or `False` using the same truthiness rules Python applies in an `if` statement.
+```python
+print(bool(0), bool(""), bool([]), bool("0"), bool([0]))
+```
+```
+False False False True True
+```
+Gotcha: `bool("0")` and `bool([0])` are both `True` — a non-empty string or list is truthy no matter what it contains. Only `None`, zero-valued numbers, and empty containers are falsy by default.
+
+### bytes()
+Creates an immutable sequence of bytes, most often by encoding a string.
+```python
+print(bytes("héllo", "utf-8"))
+print(bytes([72, 105]))
+print(bytes(3))
+```
+```
+b'h\xc3\xa9llo'
+b'Hi'
+b'\x00\x00\x00'
+```
+Three call shapes trip people up: from a string you *must* pass an encoding, from an iterable of ints you get those exact bytes, and from a bare integer `n` you get `n` zero bytes rather than the number itself.
+
+### bytearray()
+The mutable counterpart to `bytes()` — same constructors, but you can assign into it.
+```python
+buf = bytearray(5)
+buf[0] = 0xFF
+buf[1:3] = b"\xAA\xAA"
+print(buf)
+```
+```
+bytearray(b'\xff\xaa\xaa\x00\x00')
+```
+To fill a whole buffer with one repeated byte, skip the loop: `bytearray(b"\xff" * 1024)` is far faster than assigning element by element.
 
 ### str()
 Converts any object to its human-readable string form via `__str__`.
@@ -426,6 +522,19 @@ print(vars(P()))
 ```
 Fails on objects using `__slots__`, since they have no `__dict__`.
 
+### callable()
+Reports whether an object can be called with `()` — functions, classes, and any instance defining `__call__`.
+```python
+class Adder:
+    def __call__(self, x): return x + 1
+
+print(callable(len), callable(Adder), callable(Adder()), callable(42))
+```
+```
+True True True False
+```
+Note that `callable(SomeClass)` is `True` because calling a class constructs an instance.
+
 ### hasattr()
 Checks whether an attribute exists on an object without raising.
 ```python
@@ -502,14 +611,36 @@ print(oct(64))
 Common in file-permission handling, e.g. `oct(os.stat("f").st_mode)`.
 
 ### ord()
-Converts a single character into its Unicode code point.
+The Python `ord()` function converts a single character into its Unicode code point — the integer that identifies that character.
 ```python
 print(ord("A"), ord("€"))
 ```
 ```
 65 8364
 ```
-Gotcha: raises `TypeError` if given a string of length other than one.
+Gotcha: raises `TypeError` if given a string of length other than one — `ord("AB")` fails, so map over the string when you want every code point: `[ord(c) for c in "AB"]`.
+
+### chr()
+The inverse of `ord()`: turns a Unicode code point back into the one-character string.
+```python
+print(chr(65), chr(8364))
+print(int(chr(50)) + int(chr(50)))
+```
+```
+A €
+4
+```
+That second line is a classic exam question. `chr(50)` is the *character* `"2"`, not the number 2; `int()` then parses it back to `2`, so the sum is `4`. Skipping the `int()` would give `"22"` — string concatenation, not addition. Valid arguments run from `0` to `0x10FFFF`; anything outside raises `ValueError`.
+
+### ascii()
+Returns a printable representation of an object like `repr()`, but escapes every non-ASCII character.
+```python
+print(repr("café"), ascii("café"))
+```
+```
+'café' 'caf\xe9'
+```
+Useful for logging to terminals or files whose encoding you do not control.
 
 ## Execution & I/O
 
@@ -622,7 +753,7 @@ Use `importlib.import_module()` instead in real code — `__import__()` exists m
 ## OOP helpers
 
 ### property()
-Turns a method into a managed attribute, enabling computed values with attribute-style access.
+A property in Python is a managed attribute: `property()` turns a method into something you read with plain attribute syntax, enabling computed values with attribute-style access.
 ```python
 class Circle:
     def __init__(self, r):
@@ -675,10 +806,10 @@ Always prefer `super()` over hardcoding the parent class name — it correctly f
 
 | Category | Functions |
 |---|---|
-| Numeric & math | `divmod`, `pow`, `round`, `hex`, `oct`, `float`, `int` |
-| Iterables & sequences | `enumerate`, `zip`, `map`, `filter`, `sorted`, `reversed`, `range`, `len`, `sum`, `min`, `max`, `iter`, `next`, `slice` |
-| Type constructors | `str`, `list`, `dict`, `set`, `frozenset`, `tuple`, `memoryview`, `object` |
-| Introspection & attributes | `type`, `isinstance`, `issubclass`, `dir`, `vars`, `hasattr`, `getattr`, `setattr`, `id`, `hash`, `repr`, `oct`, `ord` |
+| Numeric & math | `abs`, `bin`, `divmod`, `pow`, `round`, `hex`, `oct`, `float`, `int` |
+| Iterables & sequences | `any`, `all`, `enumerate`, `zip`, `map`, `filter`, `sorted`, `reversed`, `range`, `len`, `sum`, `min`, `max`, `iter`, `next`, `slice` |
+| Type constructors | `bool`, `bytes`, `bytearray`, `str`, `list`, `dict`, `set`, `frozenset`, `tuple`, `memoryview`, `object` |
+| Introspection & attributes | `type`, `isinstance`, `issubclass`, `callable`, `dir`, `vars`, `hasattr`, `getattr`, `setattr`, `id`, `hash`, `repr`, `ascii`, `oct`, `ord`, `chr` |
 | Execution & I/O | `print`, `input`, `open`, `format`, `eval`, `exec`, `help`, `globals`, `locals`, `__import__` |
 | OOP helpers | `property`, `staticmethod`, `super` |
 

@@ -47,6 +47,65 @@
     </ul>
   </nav>
 
+  {%- if site.languages and site.languages.size > 1 -%}
+    {%- assign current_lang = site.active_lang | default: site.lang | default: 'en' -%}
+    {%- assign default_lang = site.default_lang | default: 'en' -%}
+
+    {%- comment -%} Strip the current language prefix from page.url to get the canonical (English) path {%- endcomment -%}
+    {%- assign canonical_path = page.url -%}
+    {%- if current_lang != default_lang -%}
+      {%- assign strip_prefix = '/' | append: current_lang | append: '/' -%}
+      {%- if canonical_path contains strip_prefix -%}
+        {%- assign canonical_path = canonical_path | remove_first: strip_prefix | prepend: '/' -%}
+      {%- endif -%}
+    {%- endif -%}
+
+    <div class="sidebar-lang w-100">
+      <select id="site-lang-select" class="form-select form-select-sm" aria-label="Select website language" onchange="if(this.value){location.href=this.value;}">
+        {%- for lang in site.languages -%}
+          {%- case lang -%}
+            {%- when 'en' -%}{%- assign label = 'English' -%}
+            {%- when 'hi' -%}{%- assign label = 'हिन्दी' -%}
+            {%- when 'es' -%}{%- assign label = 'Español' -%}
+            {%- when 'pt' -%}{%- assign label = 'Português' -%}
+            {%- when 'fr' -%}{%- assign label = 'Français' -%}
+            {%- when 'de' -%}{%- assign label = 'Deutsch' -%}
+            {%- when 'ja' -%}{%- assign label = '日本語' -%}
+            {%- when 'ko' -%}{%- assign label = '한국어' -%}
+            {%- when 'ar' -%}{%- assign label = 'العربية' -%}
+            {%- when 'zh' -%}{%- assign label = '简体中文' -%}
+            {%- when 'ru' -%}{%- assign label = 'Русский' -%}
+            {%- else -%}{%- assign label = lang -%}
+          {%- endcase -%}
+
+          {%- comment -%} Deep-link to the translated version of THIS page when it exists; otherwise fall back to that language's homepage {%- endcomment -%}
+          {%- assign has_deep_link = false -%}
+          {%- if lang == default_lang -%}
+            {%- assign has_deep_link = true -%}
+          {%- elsif page.translations and page.translations contains lang -%}
+            {%- assign has_deep_link = true -%}
+          {%- endif -%}
+
+          {%- if has_deep_link -%}
+            {%- if lang == default_lang -%}
+              {%- assign href = site.url | append: canonical_path -%}
+            {%- else -%}
+              {%- assign href = site.url | append: '/' | append: lang | append: canonical_path -%}
+            {%- endif -%}
+          {%- else -%}
+            {%- if lang == default_lang -%}
+              {%- assign href = site.url | append: '/' -%}
+            {%- else -%}
+              {%- assign href = site.url | append: '/' | append: lang | append: '/' -%}
+            {%- endif -%}
+          {%- endif -%}
+
+          <option value="{{ href }}" lang="{{ lang }}"{% if lang == current_lang %} selected{% endif %}>{{ label }}</option>
+        {%- endfor -%}
+      </select>
+    </div>
+  {%- endif -%}
+
   <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
     {% unless site.theme_mode %}
       <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
