@@ -136,6 +136,7 @@ body.story [lang='sa'] { font-family: var(--st-deva); font-style: normal; }
   transition: color 0.2s ease, background 0.2s ease;
 }
 .st-nav nav a:hover { color: var(--st-ink); background: rgb(255 255 255 / 6%); }
+.st-nav nav a[aria-current='page'] { color: var(--st-gold); }
 .st-nav nav a.st-nav-cta { color: #1a1206; background: var(--st-gold); font-weight: 600; }
 .st-nav nav a.st-nav-cta:hover { background: #ffd98c; }
 
@@ -294,6 +295,33 @@ body.story [lang='sa'] { font-family: var(--st-deva); font-style: normal; }
 .st-scroll-cue i { animation: st-bob 1.8s ease-in-out infinite; }
 @keyframes st-bob { 50% { transform: translateY(6px); } }
 
+/* Prologue symbol captions (one visible at a time; story.js advances them) */
+.st-symbols {
+  position: absolute;
+  right: clamp(16px, 9vw, 160px);
+  bottom: 10vh;
+  width: min(340px, 36vw);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  pointer-events: none;
+}
+.st-symbols li { display: none; }
+.st-symbols li:first-child,
+.st-symbols li.active { display: block; animation: st-cap 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.st-js .st-symbols li:first-child:not(.active) { display: none; }
+.st-symbols b {
+  display: block;
+  font-family: var(--st-deva);
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: var(--st-gold);
+  text-shadow: 0 0 18px rgb(245 193 92 / 45%);
+}
+.st-symbols span { display: block; margin-top: 0.2rem; color: var(--st-muted); font-size: 0.9rem; line-height: 1.5; }
+@keyframes st-cap { from { opacity: 0; transform: translateY(10px); filter: blur(4px); } }
+
 /* Stats */
 .st-stats {
   display: grid;
@@ -330,11 +358,24 @@ body.story [lang='sa'] { font-family: var(--st-deva); font-style: normal; }
 .st-skills li i { color: var(--st-peacock); }
 .st-skills li:hover { border-color: var(--st-peacock); background: rgb(25 195 180 / 14%); transform: translateY(-2px); }
 
+/* Plain lists, contact rows, meta line (About page) */
+.st-list { margin: 1rem 0 0; padding-left: 1.2rem; color: var(--st-muted); }
+.st-list li { margin: 0.3rem 0; }
+.st-list li::marker { color: var(--st-gold); }
+.st-timeline .st-list { margin-top: 0.5rem; font-size: 0.95rem; }
+.st-meta-line { margin-top: 1.25rem; color: var(--st-muted) !important; font-size: 0.92rem; }
+.st-meta-line i { color: var(--st-gold); margin-right: 0.35rem; }
+.st-contact { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 0.6rem; }
+.st-contact li { display: flex; align-items: center; gap: 0.75rem; font-size: 1.05rem; }
+.st-contact i { width: 1.2rem; color: var(--st-gold); text-align: center; }
+.st-contact a { display: inline-flex; align-items: center; min-height: 44px; color: var(--st-ink) !important; }
+.st-contact a:hover { color: var(--st-gold) !important; }
+
 /* Timeline */
 .st-timeline { list-style: none; margin: 2rem 0 0; padding: 0 0 0 1.6rem; border-left: 1px solid rgb(245 193 92 / 35%); }
-.st-timeline li { position: relative; padding-bottom: 1.6rem; }
-.st-timeline li:last-child { padding-bottom: 0; }
-.st-timeline li::before {
+.st-timeline > li { position: relative; padding-bottom: 1.6rem; }
+.st-timeline > li:last-child { padding-bottom: 0; }
+.st-timeline > li::before {
   content: '';
   position: absolute;
   left: calc(-1.6rem - 6px);
@@ -430,8 +471,6 @@ body.story [lang='sa'] { font-family: var(--st-deva); font-style: normal; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 899px) {
-  /* the 3D stage sits behind the text here, so keep it quieter (beats the inline fade-in) */
-  #st-canvas { opacity: 0.6 !important; }
   .st-chapters { display: none; }
   .st-chapter, .st-chapter[data-side='right'] { justify-content: center; padding-top: 6rem; }
   .st-chapter[data-side='right'] .st-panel { margin-right: 0; }
@@ -444,6 +483,11 @@ body.story [lang='sa'] { font-family: var(--st-deva); font-style: normal; }
     border: 1px solid var(--st-line);
   }
   .st-hero .st-panel { background: transparent; border: 0; backdrop-filter: none; padding: 0; }
+  .st-hero { align-items: flex-end; padding-top: 57svh; padding-bottom: 6.5rem; }
+  .st-symbols { left: 16px; right: 16px; width: auto; top: 45.5svh; bottom: auto; }
+  .st-symbols b { font-size: 1.3rem; }
+  .st-symbols span { font-size: 0.82rem; }
+  .st-hero .st-title { font-size: clamp(2.6rem, 12vw, 3.4rem); }
 }
 @media (max-width: 600px) {
   .st-brand span { display: none; }

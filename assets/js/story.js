@@ -34,7 +34,7 @@ const revealIO = new IntersectionObserver(
 reveals.forEach((el) => revealIO.observe(el));
 
 /* ---------- Chapter rail ---------- */
-const sections = [...document.querySelectorAll('[data-shape]')];
+const sections = [...document.querySelectorAll('.st-chapter[data-shape]')];
 const rail = document.querySelector('.st-chapters');
 const railLinks = sections.map((s) => {
   const a = document.createElement('a');
@@ -362,6 +362,221 @@ async function initStage() {
     g.globalCompositeOperation = 'source-over';
   };
 
+  /* ---------- Prologue sequence: Mahabharata symbols, drawn in code ---------- */
+  const strokePath = (g, pts, w, color) => {
+    g.strokeStyle = color; g.lineWidth = w; g.lineCap = 'round'; g.lineJoin = 'round';
+    g.beginPath(); g.moveTo(pts[0], pts[1]);
+    for (let i = 2; i < pts.length; i += 2) g.lineTo(pts[i], pts[i + 1]);
+    g.stroke();
+  };
+  const bez = (g, p, w, color) => {
+    g.strokeStyle = color; g.lineWidth = w; g.lineCap = 'round';
+    g.beginPath(); g.moveTo(p[0], p[1]); g.bezierCurveTo(p[2], p[3], p[4], p[5], p[6], p[7]); g.stroke();
+  };
+  const disc = (g, x, y, r, color) => { g.fillStyle = color; g.beginPath(); g.arc(x, y, r, 0, TAU); g.fill(); };
+  const poly = (g, pts, color) => {
+    g.fillStyle = color; g.beginPath(); g.moveTo(pts[0], pts[1]);
+    for (let i = 2; i < pts.length; i += 2) g.lineTo(pts[i], pts[i + 1]);
+    g.closePath(); g.fill();
+  };
+  const cut = (g, fn) => { g.globalCompositeOperation = 'destination-out'; fn(); g.globalCompositeOperation = 'source-over'; };
+
+  /* Panchajanya: Krishna's conch (Gita 1.15) */
+  function drawConch(g, S) {
+    g.save();
+    g.translate(S / 2, S / 2); g.rotate(-0.45); g.translate(-S / 2, -S / 2);
+    const pearl = g.createLinearGradient(0, 160, 0, 360);
+    pearl.addColorStop(0, '#fffaf0'); pearl.addColorStop(0.6, '#f3e3c3'); pearl.addColorStop(1, '#d9b98a');
+    /* body: wide whorl tapering to the siphonal canal */
+    g.fillStyle = pearl;
+    g.beginPath();
+    g.moveTo(130, 256);
+    g.bezierCurveTo(140, 150, 300, 150, 455, 248);
+    g.lineTo(458, 262);
+    g.bezierCurveTo(330, 345, 150, 360, 130, 256);
+    g.fill();
+    /* spire: stacked whorls */
+    [[118, 256, 46], [86, 256, 30], [64, 256, 19], [50, 256, 11]].forEach(([x, y, r]) => disc(g, x, y, r, '#fbf1dc'));
+    cut(g, () => {
+      [[100, 256, 46, 0.9], [74, 256, 30, 0.9], [57, 256, 19, 0.9]].forEach(([x, y, r]) => {
+        g.lineWidth = 4; g.beginPath(); g.arc(x, y, r, -0.9, 0.9); g.stroke();
+      });
+      /* spiral grooves across the body */
+      for (let i = 0; i < 4; i++) {
+        g.lineWidth = 4; g.beginPath();
+        const x = 175 + i * 38;
+        g.moveTo(x, 180 + i * 6); g.quadraticCurveTo(x + 26, 256, x - 4, 335 - i * 10); g.stroke();
+      }
+    });
+    /* flared outer lip of the aperture */
+    g.fillStyle = '#f7e6c4';
+    g.beginPath();
+    g.moveTo(190, 318); g.bezierCurveTo(260, 380, 360, 360, 430, 280);
+    g.bezierCurveTo(360, 320, 270, 330, 190, 318); g.fill();
+    /* gold caps */
+    disc(g, 40, 256, 9, '#f5c15c');
+    g.fillStyle = '#f5c15c'; g.beginPath(); g.ellipse(132, 256, 10, 50, 0, 0, TAU); g.fill();
+    poly(g, [452, 244, 478, 255, 452, 266], '#f5c15c');
+    g.restore();
+  }
+
+  /* Arjuna drawing the Gandiva, in profile facing right */
+  function drawArcher(g, S) {
+    const skin = '#ffd08a', gold = '#f5c15c', cloth = '#ff9a4d';
+    /* quiver on the back */
+    g.save(); g.translate(168, 200); g.rotate(-0.45);
+    g.fillStyle = '#c98a3a'; g.fillRect(-12, -70, 24, 95);
+    for (let i = 0; i < 4; i++) strokePath(g, [-8 + i * 5, -70, -12 + i * 7, -96], 3, '#ffe7a8');
+    g.restore();
+    /* back leg, straight */
+    strokePath(g, [205, 285, 165, 360, 138, 438], 24, skin);
+    strokePath(g, [138, 438, 118, 446], 12, skin);
+    /* front leg, lunging */
+    strokePath(g, [222, 285, 282, 345, 290, 438], 24, skin);
+    strokePath(g, [290, 438, 318, 444], 12, skin);
+    /* dhoti */
+    poly(g, [190, 250, 238, 250, 262, 318, 252, 330, 210, 312, 172, 330, 166, 316], cloth);
+    /* torso */
+    poly(g, [188, 176, 236, 176, 230, 258, 194, 258], skin);
+    /* head + crown (mukut) */
+    disc(g, 212, 150, 21, skin);
+    poly(g, [190, 140, 234, 140, 228, 118, 222, 126, 212, 88, 202, 126, 196, 118], gold);
+    disc(g, 212, 86, 5, gold);
+    /* uttariya scarf streaming behind */
+    bez(g, [196, 182, 150, 200, 120, 190, 92, 214], 6, cloth);
+    bez(g, [200, 190, 160, 226, 130, 224, 104, 250], 5, cloth);
+    /* draw arm: elbow pulled back, hand at the cheek */
+    strokePath(g, [196, 184, 140, 176, 224, 160], 15, skin);
+    /* bow arm, extended */
+    strokePath(g, [230, 184, 300, 180, 362, 176], 12, skin);
+    /* the Gandiva: stave bulging forward, recurved tips */
+    g.strokeStyle = gold; g.lineWidth = 9; g.lineCap = 'round';
+    g.beginPath(); g.moveTo(336, 42); g.quadraticCurveTo(430, 176, 336, 310); g.stroke();
+    bez(g, [336, 42, 326, 34, 318, 40, 322, 50], 6, gold);
+    bez(g, [336, 310, 326, 318, 318, 312, 322, 302], 6, gold);
+    /* string drawn back to the cheek */
+    strokePath(g, [336, 44, 226, 160, 336, 308], 2.5, '#fff3cf');
+    /* arrow with head and fletching */
+    strokePath(g, [214, 161, 452, 172], 4, '#fff3cf');
+    poly(g, [452, 162, 480, 173, 452, 183], gold);
+    poly(g, [214, 161, 196, 150, 204, 161, 196, 172], '#ff6b6b');
+  }
+
+  /* Krishna Murlidhar: tribhanga pose, flute at the lips, peacock-feather crown */
+  function drawMurlidhar(g, S) {
+    const blue = '#6f93f5', gold = '#f5c15c', pitambar = '#ffc94d';
+    /* halo (prabhamandal) */
+    g.strokeStyle = gold; g.lineWidth = 3; g.beginPath(); g.arc(250, 126, 46, 0, TAU); g.stroke();
+    /* crossed legs: right leg crosses in front, resting on the toes */
+    strokePath(g, [246, 340, 244, 396, 252, 448], 19, blue);
+    strokePath(g, [270, 340, 256, 398, 226, 446], 19, blue);
+    strokePath(g, [252, 448, 270, 452], 9, blue);
+    strokePath(g, [226, 446, 214, 456], 9, blue);
+    disc(g, 250, 432, 5, gold); disc(g, 230, 430, 5, gold);
+    /* pitambar: flared, hips swaying right */
+    g.fillStyle = pitambar;
+    g.beginPath(); g.moveTo(232, 258); g.lineTo(286, 254);
+    g.bezierCurveTo(300, 290, 308, 330, 302, 368);
+    g.bezierCurveTo(284, 360, 270, 376, 254, 366);
+    g.bezierCurveTo(240, 376, 222, 366, 214, 372);
+    g.bezierCurveTo(214, 330, 222, 290, 232, 258); g.fill();
+    cut(g, () => { [[246, 286, 238, 360], [266, 284, 272, 356], [284, 280, 292, 350]].forEach((p) => strokePath(g, p, 2.5, '#000')); });
+    /* waist sash ends */
+    bez(g, [278, 262, 300, 290, 296, 320, 310, 344], 6, '#ff8a3d');
+    /* torso: broad shoulders, narrow waist */
+    g.fillStyle = blue;
+    g.beginPath(); g.moveTo(220, 172); g.lineTo(290, 168);
+    g.bezierCurveTo(288, 210, 280, 240, 284, 262); g.lineTo(234, 264);
+    g.bezierCurveTo(236, 238, 228, 206, 220, 172); g.fill();
+    /* vaijayanti garland */
+    g.strokeStyle = '#ff8fb1'; g.lineWidth = 5; g.beginPath(); g.moveTo(230, 176); g.quadraticCurveTo(258, 280, 284, 172); g.stroke();
+    /* arms raised to the flute */
+    strokePath(g, [224, 178, 204, 210, 240, 152], 12, blue);
+    strokePath(g, [286, 176, 320, 200, 324, 156], 12, blue);
+    disc(g, 206, 206, 4, gold); disc(g, 318, 198, 4, gold);
+    /* flowing uttariya */
+    bez(g, [206, 206, 176, 258, 198, 316, 172, 376], 5, pitambar);
+    bez(g, [320, 200, 350, 252, 330, 316, 356, 370], 5, pitambar);
+    /* head tilted towards the flute, curls at the nape */
+    disc(g, 250, 130, 22, blue);
+    [[230, 140], [234, 150], [270, 144], [268, 152]].forEach(([x, y]) => disc(g, x, y, 6, '#3f5fc0'));
+    /* the bansuri at the lips, angled down to the right */
+    strokePath(g, [234, 146, 396, 166], 7, gold);
+    cut(g, () => { [300, 318, 336, 354, 372].forEach((x) => disc(g, x, 154 + (x - 300) * 0.123, 2.2, '#000')); });
+    /* mukut with peacock feather */
+    poly(g, [228, 118, 272, 114, 268, 96, 258, 102, 250, 78, 242, 102, 232, 98], gold);
+    g.save(); g.translate(264, 84); g.rotate(0.35);
+    g.fillStyle = '#21b37c'; g.beginPath(); g.ellipse(0, -34, 15, 34, 0, 0, TAU); g.fill();
+    g.fillStyle = '#e9cf55'; g.beginPath(); g.ellipse(0, -44, 10, 14, 0, 0, TAU); g.fill();
+    g.fillStyle = '#45e3d3'; g.beginPath(); g.ellipse(0, -43, 6.5, 9, 0, 0, TAU); g.fill();
+    g.fillStyle = '#5b86ff'; g.beginPath(); g.ellipse(0, -42, 3.5, 5, 0, 0, TAU); g.fill();
+    g.restore();
+  }
+
+  /* Gita Upadesh: Krishna as charioteer teaching Arjuna, under the Hanuman flag (Kapidhvaja) */
+  function drawChariot(g, S) {
+    const gold = '#f5c15c', blue = '#6f93f5', saffron = '#ff9a4d', silver = '#e8ecf8';
+    /* flag pole + pennant with Hanuman mark */
+    strokePath(g, [112, 318, 112, 64], 5, gold);
+    g.fillStyle = saffron; g.beginPath(); g.moveTo(114, 66); g.quadraticCurveTo(170, 70, 222, 92); g.quadraticCurveTo(170, 108, 114, 118); g.fill();
+    disc(g, 150, 92, 9, '#ffe7a8');
+    bez(g, [158, 96, 172, 110, 178, 92, 170, 86], 3, '#ffe7a8');
+    /* horses: two galloping, one offset behind */
+    const horse = (dx, dy, color) => {
+      g.save(); g.translate(dx, dy);
+      g.fillStyle = color; g.strokeStyle = color; g.lineCap = 'round'; g.lineJoin = 'round';
+      /* galloping body: chest, arched neck, head, back and croup in one silhouette */
+      g.beginPath();
+      g.moveTo(450, 304);
+      g.bezierCurveTo(458, 280, 462, 254, 470, 238);
+      g.lineTo(496, 254); g.lineTo(502, 245);
+      g.bezierCurveTo(494, 232, 486, 220, 478, 214);
+      g.lineTo(476, 196); g.lineTo(468, 210);
+      g.bezierCurveTo(446, 222, 428, 256, 410, 278);
+      g.bezierCurveTo(390, 284, 360, 284, 336, 290);
+      g.bezierCurveTo(326, 306, 330, 326, 344, 334);
+      g.bezierCurveTo(380, 342, 420, 340, 448, 324);
+      g.closePath(); g.fill();
+      /* legs: front pair reaching forward, hind pair pushing back */
+      strokePath(g, [438, 328, 462, 350, 486, 340], 10, color);
+      strokePath(g, [426, 334, 446, 368, 466, 376], 10, color);
+      strokePath(g, [348, 328, 326, 352, 300, 364], 10, color);
+      strokePath(g, [362, 334, 348, 370, 330, 388], 10, color);
+      /* tail and mane */
+      bez(g, [334, 294, 304, 284, 294, 310, 278, 324], 9, color);
+      for (let k = 0; k < 5; k++) strokePath(g, [470 - k * 12, 214 + k * 13, 452 - k * 12, 210 + k * 13], 4, color);
+      g.restore();
+    };
+    horse(-26, -16, '#8f9cc6');
+    horse(0, 0, silver);
+    /* chariot: yoke pole, body with rising prow, back rail */
+    strokePath(g, [318, 330, 398, 318], 6, gold);
+    poly(g, [98, 300, 330, 300, 346, 262, 340, 330, 98, 330], gold);
+    strokePath(g, [98, 300, 98, 250, 130, 250], 6, gold);
+    /* wheel */
+    g.strokeStyle = gold; g.lineWidth = 10; g.beginPath(); g.arc(168, 362, 62, 0, TAU); g.stroke();
+    for (let i = 0; i < 8; i++) { const a = (i / 8) * TAU; strokePath(g, [168, 362, 168 + Math.cos(a) * 60, 362 + Math.sin(a) * 60], 4, gold); }
+    disc(g, 168, 362, 12, '#ffe7a8');
+    /* Arjuna: kneeling, hands folded towards Krishna, Gandiva laid upright beside him */
+    g.strokeStyle = gold; g.lineWidth = 5; g.beginPath(); g.moveTo(150, 168); g.quadraticCurveTo(128, 236, 150, 300); g.stroke();
+    poly(g, [172, 232, 210, 232, 214, 296, 168, 296], saffron);
+    disc(g, 192, 214, 17, '#ffd08a');
+    poly(g, [176, 206, 208, 206, 204, 190, 198, 196, 192, 170, 186, 196, 180, 190], gold);
+    strokePath(g, [204, 246, 232, 242], 10, '#ffd08a');
+    /* Krishna: seated at the front, turned back, right hand raised in teaching */
+    g.strokeStyle = gold; g.lineWidth = 3; g.beginPath(); g.arc(290, 200, 30, 0, TAU); g.stroke();
+    poly(g, [274, 226, 306, 226, 312, 296, 270, 296], blue);
+    disc(g, 290, 206, 17, blue);
+    poly(g, [274, 196, 306, 196, 302, 180, 296, 186, 290, 160, 284, 186, 278, 180], gold);
+    g.fillStyle = '#21b37c'; g.beginPath(); g.ellipse(300, 150, 7, 17, 0.4, 0, TAU); g.fill();
+    disc(g, 303, 144, 4, '#45e3d3');
+    strokePath(g, [276, 236, 254, 224, 250, 204], 10, blue);
+    g.fillStyle = blue; g.beginPath(); g.ellipse(249, 196, 7, 11, -0.2, 0, TAU); g.fill();
+    strokePath(g, [306, 244, 332, 262], 10, blue);
+    strokePath(g, [332, 262, 486, 248], 2, '#ffe7a8');
+    poly(g, [272, 290, 330, 290, 336, 306, 268, 306], '#ffc94d');
+  }
+
   const shapes = {
     om: sample2D(drawOm),
     flute: sample2D(drawFlute, 2.1),
@@ -369,6 +584,10 @@ async function initStage() {
     chakra: sample2D(drawChakra, 2.2, 0.25),
     neural: neural(),
     palm: sample2D(drawPalm, 2.4, 0.12),
+    conch: sample2D(drawConch, 2.5),
+    archer: sample2D(drawArcher, 2.35, 0.2),
+    murlidhar: sample2D(drawMurlidhar, 2.45, 0.2),
+    chariot: sample2D(drawChariot, 2.35, 0.2),
     lotus: sample2D(drawLotus, 2.6),
   };
   const intro = cloud(9);
@@ -383,9 +602,10 @@ async function initStage() {
 
   const geo = new THREE.BufferGeometry();
   const aFrom = new THREE.BufferAttribute(intro.pos.slice(), 3);
-  const aTo = new THREE.BufferAttribute(shapes.om.pos.slice(), 3);
+  const first = shapes[sections[0].dataset.shape] || shapes.om; /* the intro gathers into this page's first shape */
+  const aTo = new THREE.BufferAttribute(first.pos.slice(), 3);
   const aColA = new THREE.BufferAttribute(intro.col.slice(), 3);
-  const aColB = new THREE.BufferAttribute(shapes.om.col.slice(), 3);
+  const aColB = new THREE.BufferAttribute(first.col.slice(), 3);
   const seeds = new Float32Array(N);
   for (let i = 0; i < N; i++) seeds[i] = rnd();
   geo.setAttribute('position', aFrom);
@@ -560,7 +780,7 @@ async function initStage() {
   }
 
   /* ---------- Layout ---------- */
-  let offsetX = 3.1;
+  let offsetX = 3.1, narrow = false;
   function resize() {
     renderer.setSize(innerWidth, innerHeight, false);
     camera.aspect = innerWidth / innerHeight;
@@ -569,7 +789,7 @@ async function initStage() {
     const wide = innerWidth >= 900;
     /* keep the object beside the text column on wide screens, centred behind it on narrow ones */
     offsetX = wide ? Math.min(3.4, 3.73 * camera.aspect * 0.48) : 0;
-    points.scale.setScalar(wide ? 1 : 0.78);
+    narrow = !wide;
   }
   resize();
   addEventListener('resize', resize);
@@ -591,13 +811,21 @@ async function initStage() {
 
   let pair = -1;
   function setPair(i) {
-    const a = shapes[sections[i].dataset.shape], b = shapes[sections[i + 1].dataset.shape];
+    loadPair(shapes[shapeAt(i)], shapes[shapeAt(i + 1)]);
+    pair = i;
+  }
+  /* Prologue cycles through its symbol list (captions in the markup); other chapters have one shape */
+  const captions = [...document.querySelectorAll('.st-symbols li')].filter((li) => shapes[li.dataset.symbol]);
+  const heroShapes = captions.length ? captions.map((li) => li.dataset.symbol) : [sections[0].dataset.shape];
+  let heroIdx = 0, heroNext = 0, heroT = 0, heroMorph = -1;
+  const HERO_HOLD = 4.2, HERO_MORPH = 2.4;
+  const showCaption = (k) => captions.forEach((li, j) => { li.classList.toggle('active', j === k); li.hidden = j !== k; });
+  const shapeAt = (i) => (i === 0 ? heroShapes[heroIdx] : sections[i].dataset.shape);
+  function loadPair(a, b) {
     aFrom.array.set(a.pos); aColA.array.set(a.col);
     aTo.array.set(b.pos); aColB.array.set(b.col);
     aFrom.needsUpdate = aTo.needsUpdate = aColA.needsUpdate = aColB.needsUpdate = true;
-    pair = i;
   }
-  const shapeAt = (i) => sections[i].dataset.shape;
   const sideX = (i) => (sections[i].dataset.side === 'right' ? -offsetX : offsetX);
 
   /* ---------- Pointer ---------- */
@@ -611,8 +839,10 @@ async function initStage() {
   /* ---------- Loop ---------- */
   const clock = new THREE.Clock();
   let introT = 0, prog = 0, spinZ = 0, time = 0;
+  let canvasShown = false, lastOpacity = 1;
   canvas.style.opacity = '0';
-  requestAnimationFrame(() => { canvas.style.opacity = '1'; });
+  requestAnimationFrame(() => { canvas.style.opacity = '1'; canvasShown = true; });
+  showCaption(0);
 
   renderer.setAnimationLoop(() => {
     const dt = Math.min(clock.getDelta(), 0.05);
@@ -628,19 +858,45 @@ async function initStage() {
       p = 1 - Math.pow(1 - introT, 3);
       if (introT >= 1 || target.i > 0 || target.t > 0.02) { setPair(target.i); prog = target.t; p = prog; }
     } else {
-      if (target.i !== pair) {
-        const delta = target.i - pair;
+      const atHero = pair === 0 && target.i === 0 && target.t === 0 && prog < 0.01;
+      if (heroMorph >= 0 && !atHero) {
+        /* reader scrolled mid-morph: settle on whichever symbol was closer, then follow the scroll */
+        if (heroMorph > 0.5) heroIdx = heroNext;
+        heroMorph = -1; heroT = 0;
+        showCaption(heroIdx);
         setPair(target.i);
-        prog = Math.abs(delta) === 1 ? clamp01(prog - delta) : target.t;
+        prog = 0;
       }
-      prog += (target.t - prog) * Math.min(1, dt * 5);
-      p = prog;
+      if (atHero && heroShapes.length > 1) {
+        heroT += dt;
+        if (heroMorph < 0 && heroT > HERO_HOLD) {
+          heroNext = (heroIdx + 1) % heroShapes.length;
+          loadPair(shapes[heroShapes[heroIdx]], shapes[heroShapes[heroNext]]);
+          heroMorph = 0;
+          showCaption(heroNext);
+        }
+        if (heroMorph >= 0) {
+          heroMorph = Math.min(1, heroMorph + dt / HERO_MORPH);
+          if (heroMorph >= 1) { heroIdx = heroNext; heroMorph = -1; heroT = 0; setPair(0); }
+        }
+        p = heroMorph >= 0 ? heroMorph : 0;
+      } else {
+        if (target.i !== pair) {
+          const delta = target.i - pair;
+          setPair(target.i);
+          prog = Math.abs(delta) === 1 ? clamp01(prog - delta) : target.t;
+        }
+        prog += (target.t - prog) * Math.min(1, dt * 5);
+        p = prog;
+      }
     }
     uniforms.uProgress.value = p;
 
     const cur = pair === -1 ? 0 : pair;
     const nxt = Math.min(cur + 1, sections.length - 1);
-    const wA = pair === -1 ? 1 : 1 - p, wB = pair === -1 ? 0 : p;
+    const heroing = pair === -1 || heroMorph >= 0;
+    const wA = heroing ? 1 : 1 - p, wB = heroing ? 0 : p;
+    const heroW = cur === 0 ? wA : 0;
     const weight = (name) => (shapeAt(cur) === name ? wA : 0) + (shapeAt(nxt) === name ? wB : 0);
 
     /* Sudarshan Chakra spins; when it leaves, the rotation settles back to upright */
@@ -653,8 +909,16 @@ async function initStage() {
 
     const x = sideX(cur) * wA + sideX(nxt) * wB;
     points.position.x += (x - points.position.x) * 0.06;
-    /* flat drawings (the palm) foreshorten badly when swayed, so calm the sway for them */
-    points.rotation.set(-tilt.y * 0.15, (Math.sin(time * 0.25) * 0.35 + tilt.x * 0.25) * (1 - 0.75 * wPalm), spinZ);
+    /* phones: the prologue figures get their own stage above the text instead of sitting behind it */
+    const y = narrow ? heroW * 1.75 : 0;
+    points.position.y += (y - points.position.y) * 0.06;
+    const sc = narrow ? 0.78 - 0.23 * heroW : 1;
+    points.scale.setScalar(sc);
+    const op = narrow ? 0.6 + 0.4 * heroW : 1;
+    if (canvasShown && Math.abs(op - lastOpacity) > 0.02) { canvas.style.opacity = op.toFixed(2); lastOpacity = op; }
+    /* flat drawings (palm, figures) foreshorten badly when swayed, so calm the sway for them */
+    const flat = Math.min(1, wPalm + heroW * 0.6);
+    points.rotation.set(-tilt.y * 0.15, (Math.sin(time * 0.25) * 0.35 + tilt.x * 0.25) * (1 - 0.75 * flat), spinZ);
     renderer.render(scene, camera);
   });
 }
