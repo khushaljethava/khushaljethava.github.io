@@ -54,7 +54,7 @@ personas = ["a frustrated first-time buyer", "a calm long-time customer",
 dataset = []
 for persona in personas:
     prompt = f"""Write 3 refund_request messages as {persona}.
-JSON list of {{"text", "intent"}}. Only JSON."""
+JSON list of {% raw %}{{"text", "intent"}}{% endraw %}. Only JSON."""
     out = client.chat.completions.create(
         model="gpt-4o-mini",
         messages=[{"role": "user", "content": prompt}],
