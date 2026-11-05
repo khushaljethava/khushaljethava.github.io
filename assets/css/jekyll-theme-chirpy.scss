@@ -99,10 +99,10 @@
   --button-bg: #121935;
   --btn-border-color: #232c52;
   --card-header-bg: #141b3a;
-  --card-bg: #10162f;
-  --card-hover-bg: #172046;
+  --card-bg: rgb(16 22 50 / 62%);
+  --card-hover-bg: rgb(23 32 70 / 72%);
   --menu-bg: #10162f;
-  --sidebar-bg: #070a17;
+  --sidebar-bg: rgb(6 9 22 / 80%);
   --sidebar-border-color: #161d3b;
   --sidebar-muted-color: #8d96b8;
   --sidebar-active-color: #f5c15c;
@@ -192,4 +192,95 @@ h1 { font-size: 2.6rem; line-height: 1.12; }
 @media (prefers-reduced-motion: reduce) {
   #post-list .card-wrapper .card { transition: none; }
   #post-list .card-wrapper:hover .card { transform: none; }
+}
+
+/* ---------- Cosmic chrome: makes every Chirpy page match the story pages ---------- */
+:root[data-bs-theme='dark'] {
+  body {
+    background:
+      radial-gradient(1px 1px at 12% 18%, #fff8 50%, transparent 51%) 0 0 / 420px 420px,
+      radial-gradient(1px 1px at 72% 12%, #fff6 50%, transparent 51%) 0 0 / 380px 380px,
+      radial-gradient(1.5px 1.5px at 38% 64%, #fff7 50%, transparent 51%) 0 0 / 520px 520px,
+      radial-gradient(1px 1px at 88% 78%, #fff5 50%, transparent 51%) 0 0 / 460px 460px,
+      radial-gradient(1px 1px at 22% 88%, #fff6 50%, transparent 51%) 0 0 / 340px 340px,
+      radial-gradient(ellipse 70% 55% at 85% 10%, rgb(77 124 247 / 16%), transparent 70%),
+      radial-gradient(ellipse 60% 50% at 5% 95%, rgb(25 195 180 / 10%), transparent 70%),
+      linear-gradient(180deg, #060914 0%, #0d1433 55%, #060914 100%);
+    background-attachment: fixed;
+  }
+
+  footer { background-color: transparent; }
+
+  #sidebar {
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-right: 1px solid rgb(245 193 92 / 12%);
+  }
+  /* faint ॐ glowing behind the avatar */
+  #sidebar::before {
+    content: 'ॐ';
+    position: absolute;
+    top: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Tiro Devanagari Sanskrit', serif;
+    font-size: 11rem;
+    line-height: 1;
+    color: #f5c15c;
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: 0;
+  }
+  #sidebar > * { position: relative; z-index: 1; }
+
+  #topbar-wrapper {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgb(255 255 255 / 6%);
+  }
+
+  .card {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgb(255 255 255 / 8%);
+    border-radius: 16px;
+  }
+
+  /* page and post titles: gold serif, like the story chapters */
+  #main-wrapper main h1 {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    background: linear-gradient(115deg, #fff4d6 0%, #f5c15c 45%, #19c3b4 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  #post-list .card-title {
+    -webkit-text-fill-color: currentcolor;
+    background: none;
+    color: #f0f2fa;
+  }
+
+  #panel-wrapper .panel-heading {
+    color: #f5c15c;
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .content blockquote {
+    border-left: 4px solid #f5c15c;
+    background: rgb(245 193 92 / 6%);
+    border-radius: 0 12px 12px 0;
+    padding: 0.75rem 1.1rem;
+  }
+
+  .post-tag {
+    border-radius: 999px;
+    border-color: rgb(25 195 180 / 32%);
+    background: rgb(25 195 180 / 7%);
+  }
+
+  .btn-box-shadow, #back-to-top {
+    border: 1px solid rgb(245 193 92 / 35%);
+  }
 }

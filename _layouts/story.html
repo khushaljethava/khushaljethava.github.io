@@ -24,9 +24,9 @@ layout: compress
         <span>Khushal Jethava</span>
       </a>
       <nav aria-label="Primary">
-        <a href="{{ '/blog/' | relative_url }}">Blog</a>
-        <a href="{{ '/categories/' | relative_url }}">Topics</a>
-        <a href="{{ '/about/' | relative_url }}">About</a>
+        <a href="{{ '/blog/' | relative_url }}"{% if page.url == '/blog/' %} aria-current="page"{% endif %}>Blog</a>
+        <a href="{{ '/categories/' | relative_url }}"{% if page.url == '/categories/' %} aria-current="page"{% endif %}>Topics</a>
+        <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
         <a class="st-nav-cta" href="#contact">Contact</a>
       </nav>
     </header>
