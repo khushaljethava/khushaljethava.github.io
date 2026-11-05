@@ -1,0 +1,56 @@
+---
+layout: compress
+---
+
+<!doctype html>
+
+{% include origin-type.html %}
+
+{% include lang.html %}
+
+<html lang="{{ page.lang | default: site.alt_lang | default: site.lang }}" data-bs-theme="dark">
+  {% include head.html lang=lang %}
+  <!-- blocking on purpose here: story.js rasterises the ॐ glyph and needs the font declared -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&family=Tiro+Devanagari+Sanskrit&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/css/story.css' | relative_url }}">
+
+  <body class="story">
+    <a class="st-skip" href="#story">Skip to content</a>
+    <div class="st-progress" aria-hidden="true"><span></span></div>
+
+    <header class="st-nav">
+      <a class="st-brand" href="{{ '/' | relative_url }}" aria-label="Khushal Jethava, home">
+        <img src="{{ site.avatar | relative_url }}" alt="" width="36" height="36">
+        <span>Khushal Jethava</span>
+      </a>
+      <nav aria-label="Primary">
+        <a href="{{ '/blog/' | relative_url }}">Blog</a>
+        <a href="{{ '/categories/' | relative_url }}">Topics</a>
+        <a href="{{ '/about/' | relative_url }}">About</a>
+        <a class="st-nav-cta" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Fixed 3D stage; story.js fills it. Pure decoration, so hidden from assistive tech. -->
+    <canvas id="st-canvas" aria-hidden="true"></canvas>
+    <div class="st-stars" aria-hidden="true"></div>
+
+    <nav class="st-chapters" aria-label="Story chapters"></nav>
+
+    <main id="story">
+      {{ content }}
+    </main>
+
+    <footer class="st-footer">
+      <p>© {{ 'now' | date: '%Y' }} Khushal Jethava · Made with <span lang="hi">श्रद्धा</span> and a lot of tensors.</p>
+      <p>
+        <a href="{{ '/blog/' | relative_url }}">Blog</a> ·
+        <a href="{{ '/about/' | relative_url }}">About</a> ·
+        <a href="{{ '/contact-us/' | relative_url }}">Contact</a> ·
+        <a href="{{ '/privacy-policy/' | relative_url }}">Privacy</a>
+      </p>
+    </footer>
+
+    <script type="module" src="{{ '/assets/js/story.js' | relative_url }}"></script>
+  </body>
+</html>

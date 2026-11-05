@@ -77,3 +77,119 @@
   }
 }
 
+
+/* =====================================================================
+   Site theme: "AI × Shri Krishna". Night-sky blue (श्याम), pitambar gold,
+   peacock teal. Overrides Chirpy's colour tokens for both modes so blog
+   pages match the story home page (assets/css/story.css).
+   ===================================================================== */
+@mixin kj-dark {
+  --main-bg: #0a0e1f;
+  --mask-bg: #1a2040;
+  --main-border-color: #1d2546;
+  --text-color: #c9cfe4;
+  --text-muted-color: #8d96b8;
+  --text-muted-highlight-color: #b4bcd8;
+  --heading-color: #f0f2fa;
+  --label-color: #a6afce;
+  --blockquote-border-color: #f5c15c;
+  --blockquote-text-color: #a6afce;
+  --link-color: #f5c15c;
+  --link-underline-color: rgb(245 193 92 / 40%);
+  --button-bg: #121935;
+  --btn-border-color: #232c52;
+  --card-header-bg: #141b3a;
+  --card-bg: #10162f;
+  --card-hover-bg: #172046;
+  --menu-bg: #10162f;
+  --sidebar-bg: #070a17;
+  --sidebar-border-color: #161d3b;
+  --sidebar-muted-color: #8d96b8;
+  --sidebar-active-color: #f5c15c;
+  --sidebar-hover-bg: #121935;
+  --sidebar-btn-bg: #10162f;
+  --sidebar-btn-color: #a6afce;
+  --avatar-border-color: rgb(245 193 92 / 70%);
+  --site-title-color: #f0f2fa;
+  --site-subtitle-color: #8d96b8;
+  --topbar-bg: rgb(10 14 31 / 72%);
+  --search-border-color: #232c52;
+  --post-list-text-color: #c9cfe4;
+  --btn-paginator-hover-color: #172046;
+  --toc-highlight: #19c3b4;
+  --tag-hover: #1b2550;
+  --tag-border: #2a3566;
+  --tb-odd-bg: #10162f;
+  --tb-even-bg: #0d1228;
+  --kj-accent: #19c3b4;
+}
+
+@mixin kj-light {
+  --main-bg: #fbf8f1;
+  --main-border-color: #ece4d2;
+  --text-color: #2a2f45;
+  --text-muted-color: #5f6680;
+  --heading-color: #141a33;
+  --blockquote-border-color: #d99a2b;
+  --link-color: #0b6b80;
+  --link-underline-color: rgb(11 107 128 / 35%);
+  --button-bg: #fffdf8;
+  --btn-border-color: #e5dcc6;
+  --card-header-bg: #f4eee0;
+  --card-bg: #fffdf8;
+  --card-hover-bg: #f6f0e2;
+  --sidebar-bg: #f4eee0;
+  --sidebar-border-color: #e5dcc6;
+  --sidebar-active-color: #1e2a78;
+  --sidebar-hover-bg: #ebe3cf;
+  --avatar-border-color: rgb(217 154 43 / 70%);
+  --site-title-color: #141a33;
+  --topbar-bg: rgb(251 248 241 / 78%);
+  --toc-highlight: #0b6b80;
+  --tb-odd-bg: #f6f0e2;
+  --tb-even-bg: #fffdf8;
+  --kj-accent: #b7791f;
+}
+
+:root[data-bs-theme='dark'] { @include kj-dark; }
+:root[data-bs-theme='light'] { @include kj-light; }
+@media (prefers-color-scheme: dark) { :root:not([data-bs-theme]) { @include kj-dark; } }
+@media (prefers-color-scheme: light) { :root:not([data-bs-theme]) { @include kj-light; } }
+
+/* Typography: Cormorant Garamond display headings + Inter body (fonts load in _includes/metadata-hook.html) */
+body { font-family: 'Inter', 'Source Sans Pro', system-ui, sans-serif; }
+h1, h2,
+#sidebar .site-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+h1 { font-size: 2.6rem; line-height: 1.12; }
+.content h2 { font-size: 1.9rem; }
+#sidebar .site-title { font-size: 1.7rem; }
+[lang='hi'], [lang='sa'] { font-family: 'Tiro Devanagari Sanskrit', 'Noto Serif Devanagari', serif; }
+
+/* Sidebar: soft peacock / gold glow behind the avatar */
+#sidebar {
+  background:
+    radial-gradient(ellipse 120% 40% at 50% 0%, rgb(25 195 180 / 10%), transparent 70%),
+    radial-gradient(ellipse 120% 30% at 50% 100%, rgb(245 193 92 / 8%), transparent 70%),
+    var(--sidebar-bg);
+}
+#sidebar .profile-wrapper img { box-shadow: 0 0 0 3px var(--avatar-border-color), 0 0 30px rgb(245 193 92 / 25%); }
+
+/* Post cards and tags: gentle lift with accent border */
+#post-list .card-wrapper .card { transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; }
+#post-list .card-wrapper:hover .card {
+  transform: translateY(-3px);
+  border-color: var(--kj-accent);
+  box-shadow: 0 14px 34px -22px var(--kj-accent);
+}
+.post-tag:hover { border-color: var(--kj-accent); }
+.content blockquote { border-left-width: 4px; }
+::selection { background: rgb(245 193 92 / 35%); }
+
+@media (prefers-reduced-motion: reduce) {
+  #post-list .card-wrapper .card { transition: none; }
+  #post-list .card-wrapper:hover .card { transform: none; }
+}
