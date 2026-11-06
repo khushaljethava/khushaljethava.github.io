@@ -50,46 +50,49 @@ ch2 = chapter_verses(2, CH2, CH2_FX, key_verses=(47,))
 SECTIONS = {
  1: dict(
   subtitle="The Yoga of Arjuna's Despair",
-  hero_shape='om',
+  hero_shape='divyaDrishti',
   summary=("On the eve of the great war, the blind king Dhritarashtra asks his charioteer Sanjaya what is happening at "
            "Kurukshetra. The armies are counted, the conches roar, and Arjuna asks Krishna to drive his chariot between the two "
            "sides. Seeing teachers, cousins and friends ready to die, the greatest archer of his age lays down his bow. "
            "Every journey into wisdom begins with an honest crisis."),
   sections=[
-   dict(id='armies', label='The Armies', shape='archer', side='right', frm=1, to=11, title='Two armies, one question',
+   dict(id='armies', label='The Armies', shape='armies', side='right', frm=1, to=11, title='Two armies, one question',
         intro="The blind king can't see the field, so he asks. Duryodhana, anxious beneath his confidence, names warrior after warrior on both sides.",
         gyan="Before you build anything, survey the field honestly: what you have, what you lack, and why you're really doing it."),
-   dict(id='conches', label='The Conches', shape='conch', side='left', frm=12, to=19, title='The conches roar',
+   dict(id='conches', label='The Conches', shape='conchChorus', side='left', frm=12, to=19, title='The conches roar',
         intro="Bhishma blows his conch and the whole battlefield answers. Krishna's Panchajanya and Arjuna's Devadatta ring out, each one named, and the sound shakes the hearts of the Kauravas.",
         gyan="Every great undertaking has a moment when you commit out loud. After that, there's no pretending it isn't happening."),
-   dict(id='chariot', label='The Chariot', shape='chariot', side='right', frm=20, to=27, title='Between the two armies',
+   dict(id='chariot', label='The Chariot', shape='fieldMap', side='right', frm=20, to=27, title='Between the two armies',
         intro="Arjuna, his banner bearing Hanuman, asks Krishna to place the chariot in the middle. Krishna does, and simply says: look.",
         gyan="Sometimes the most useful thing a mentor can do is put you where you can see clearly, and then stay quiet."),
-   dict(id='despair', label="Arjuna's Despair", shape='flute', side='left', frm=28, to=47, title='The bow falls',
-        intro="Facing his own family, Arjuna's body fails him and his reasoning spirals: kinship, sin, tradition, ruin. He sits down and lets the Gandiva drop. Krishna has not spoken yet. The flute is silent, waiting.",
+   dict(id='despair', label="Arjuna's Despair", shape='fallenBow', side='left', frm=28, to=47, title='The bow falls',
+        intro="Facing his own family, Arjuna's body fails him and his reasoning spirals: kinship, sin, tradition, ruin. He sits down, lets the Gandiva fall to the ground, and weeps. Krishna has not spoken yet.",
         gyan="Breakdowns often arrive dressed as good arguments. Naming the crisis is the first step; the answer begins in Chapter 2."),
   ]),
  2: dict(
   subtitle="The Yoga of Knowledge",
-  hero_shape='chariot',
+  hero_shape='jnanaMudra',
   summary=("Arjuna, in tears, asks to be taught. Krishna smiles and the Gita begins: the Self that is never born and never "
            "dies, the duty that is yours alone, the art of acting without clinging to results, and the portrait of a person "
            "whose wisdom stays steady. Chapter 2 holds the whole Gita in miniature."),
   sections=[
-   dict(id='disciple', label='The Disciple', shape='archer', side='right', frm=1, to=10, title='Teach me, I take refuge in you',
+   dict(id='disciple', label='The Disciple', shape='namaskar', side='right', frm=1, to=10, title='Teach me, I take refuge in you',
         intro="Krishna's first words are a challenge, not comfort. Arjuna argues back, then breaks open and becomes a student. \"I will not fight,\" he says, and falls silent.",
         gyan="Real learning starts the moment you admit you don't know. Verse 2.7 is that moment."),
-   dict(id='self', label='The Self', shape='om', side='left', frm=11, to=30, title='What never dies',
+   dict(id='self', label='The Self', shape='atmaFlame', side='left', frm=11, to=30, title='What never dies',
         intro="Krishna begins with the eternal Self: never born, never dying, untouched by weapons, fire, water or wind. Bodies change like clothes; the one who wears them does not.",
         gyan="Projects end, roles change, code gets rewritten. Who you are beneath the work is what lasts."),
-   dict(id='dharma', label='Svadharma', shape='chakra', side='right', frm=31, to=38, title='Your own duty',
+   dict(id='dharma', label='Svadharma', shape='scales', side='right', frm=31, to=38, title='Your own duty',
         intro="Then a practical turn: as a warrior, this fight is Arjuna's duty. Walking away would cost him his honour; meeting victory and defeat alike would free him from sin.",
         gyan="Know your craft and own it. Equanimity isn't indifference: it's showing up the same way whether you win or lose."),
-   dict(id='karma-yoga', label='Karma Yoga', shape='palm', side='left', frm=39, to=53, title='Skill in action',
-        intro="Now the heart of it: act, but let go of the fruits. Evenness of mind is yoga, and yoga is skill in action. Here is the verse this whole site is built on, 2.47.",
+   dict(id='karma-yoga', label='Karma Yoga', shape='fruitTree', side='left', frm=39, to=53, title='Skill in action',
+        intro="Now the heart of it: act, but let go of the fruits. Like a tree that gives its fruit away, do the work and release the result. Evenness of mind is yoga, and yoga is skill in action. Here is the verse this whole site is built on, 2.47.",
         gyan="Ship the work, learn, ship again. Do it well because it is yours to do, not for the metrics."),
-   dict(id='steady-wisdom', label='Steady Wisdom', shape='lotus', side='right', frm=54, to=72, title='The one whose mind is still',
-        intro="Arjuna asks what a person of steady wisdom looks like. Krishna answers: content within, unshaken by sorrow or pleasure, senses gathered in like a tortoise's limbs, still as an ocean that rivers keep filling.",
+   dict(id='steady-wisdom', label='Steady Wisdom', shape='tortoise', side='right', frm=54, to=61, title='The one whose mind is still',
+        intro="Arjuna asks what a person of steady wisdom looks like. Krishna answers: content within, unshaken by sorrow or pleasure, and able to gather the senses in, the way a tortoise draws in its limbs.",
+        gyan="Not every notification deserves your attention. Draw the senses in, like the tortoise, and the work gets your whole mind."),
+   dict(id='ocean', label='The Ocean', shape='ocean', side='left', frm=62, to=72, title='Full, and still',
+        intro="Krishna traces how a mind falls (attachment, desire, anger, delusion, ruin) and how it is saved: discipline, calm, peace. The wise are like the ocean: rivers keep pouring in, and it stays full and still.",
         gyan="Attachment, desire, anger, delusion, ruin (2.62–2.63) is a stack trace for the mind. Catch it at the first frame."),
   ]),
 }
