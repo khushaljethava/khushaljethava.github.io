@@ -620,3 +620,31 @@ CH15 = [
  'So this most secret teaching has been told by me, sinless one. Understanding it, one becomes wise and has done all there is to do, Bharata.',
 ]
 assert len(CH15) == 20
+
+CH16 = [
+ 'Fearlessness, purity of heart, steadfastness in knowledge and yoga, generosity, self-control, sacrifice, study of scripture, austerity, uprightness,',
+ 'non-violence, truthfulness, freedom from anger, renunciation, peace, not finding fault, compassion for all beings, freedom from greed, gentleness, modesty, steadiness,',
+ 'vigour, forgiveness, fortitude, purity, freedom from malice and from excessive pride: these belong to one born with the divine nature, Bharata.',
+ 'Hypocrisy, arrogance, self-conceit, anger, harshness and ignorance belong to one born with the demonic nature, Partha.',
+ 'The divine nature leads to freedom, the demonic to bondage. Do not grieve, Pandava: you were born with the divine nature.',
+ 'There are two kinds of beings in this world, the divine and the demonic. The divine has been described at length; now hear from me about the demonic, Partha.',
+ 'People of demonic nature know neither how to act nor how to refrain. Neither purity, nor good conduct, nor truth is found in them.',
+ 'They say the world is without truth, without foundation, without God, produced by mere union, with desire as its only cause.',
+ 'Holding this view, these lost souls of small understanding and cruel deeds rise up as enemies of the world, for its destruction.',
+ 'Clinging to desire that can never be filled, full of hypocrisy, pride and arrogance, holding wrong ideas through delusion, they act with impure resolves.',
+ 'Bound to endless worries that end only with death, making the gratification of desire their highest aim, convinced that this is all there is,',
+ 'bound by hundreds of ropes of hope, given over to desire and anger, they strive to pile up wealth by unjust means to feed their cravings.',
+ '"This I have gained today; this desire I will fulfil. This is mine, and this wealth too will be mine.',
+ 'That enemy I have slain, and I will slay others too. I am the lord, I am the enjoyer; I am successful, powerful and happy.',
+ 'I am rich and well-born. Who else is like me? I will sacrifice, I will give, I will rejoice." So they think, deluded by ignorance.',
+ 'Bewildered by many thoughts, caught in the net of delusion, addicted to the gratification of desire, they fall into a foul hell.',
+ 'Self-important, stubborn, drunk on the pride of wealth, they perform sacrifices in name only, out of show, ignoring the proper way.',
+ 'Given over to ego, force, arrogance, desire and anger, these envious people hate me, who dwell in their own bodies and in the bodies of others.',
+ 'These cruel haters, the worst of men, I hurl again and again into demonic wombs in the cycles of rebirth.',
+ 'Falling into demonic wombs, deluded birth after birth, never reaching me, son of Kunti, they sink to the lowest state.',
+ 'Three are the gates of this hell, destroying the self: desire, anger and greed. So one should give up these three.',
+ 'One who is freed from these three gates of darkness, son of Kunti, acts for their own good and so reaches the highest goal.',
+ 'Whoever sets aside the guidance of scripture and acts on the impulse of desire attains neither perfection, nor happiness, nor the highest goal.',
+ 'So let scripture be your authority in deciding what should and should not be done. Knowing what scripture prescribes, you should act in this world.',
+]
+assert len(CH16) == 24

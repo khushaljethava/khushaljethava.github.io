@@ -543,3 +543,30 @@ CH15_FX = spread(
     ([20], 'sparkle'),
 )
 assert sorted(CH15_FX) == list(range(1, 21))
+CH16_FX = spread(
+    ([1], 'sparkle'),                            # fearlessness, purity of heart
+    ([2], 'still'),                              # non-violence, truth, compassion
+    ([3], 'expand'),
+    ([4], 'clash'),                              # hypocrisy, arrogance, anger
+    ([5], 'rise'),                               # do not grieve: you were born divine
+    ([6], 'drift'),
+    ([7], 'turbulence'),
+    ([8], 'scatter'),                            # "the world is without truth"
+    ([9], 'clash'),
+    ([10], 'fire'),                              # desire that can never be filled
+    ([11], 'turbulence'),                        # endless worries
+    ([12], 'contract'),                          # hundreds of ropes of hope
+    ([13], 'march'),                             # "this I have gained today"
+    ([14], 'clash'),                             # "I am the lord"
+    ([15], 'expand'),                            # "who else is like me?"
+    ([16], 'sink'),                              # the net of delusion
+    ([17], 'veil'),                              # sacrifice for show
+    ([18], 'clash'),
+    ([19], 'vortex'),                            # hurled again and again
+    ([20], 'sink'),
+    ([21], 'fire'),                              # desire, anger, greed: three gates
+    ([22], 'rise'),                              # freed from the three gates
+    ([23], 'drift'),
+    ([24], 'still'),                             # let scripture be your guide
+)
+assert sorted(CH16_FX) == list(range(1, 25))

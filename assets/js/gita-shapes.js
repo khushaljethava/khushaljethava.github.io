@@ -1,4 +1,4 @@
-/* Gita Gyan scenes: one particle drawing per scene of Chapters 1 to 15.
+/* Gita Gyan scenes: one particle drawing per scene of Chapters 1 to 16.
    Loaded only on Gita chapter pages by story.js; each draw(g, S) paints a 512x512 canvas
    that story.js samples into particles (colour comes from the pixels). */
 const TAU = Math.PI * 2;
@@ -1608,6 +1608,78 @@ export function drawBeyondBoth(g, S) {
   g.setLineDash([4, 8]); line(g, [150, 260, 236, 160], 2, 'rgba(255, 231, 168, 0.7)'); line(g, [372, 260, 276, 160], 2, 'rgba(255, 231, 168, 0.7)'); g.setLineDash([]);
 }
 
+
+/* ---------- Chapter 16 ---------- */
+
+/* Chapter 16: two natures, a lotus in the light and a thorn bush in the dark */
+export function drawLotusThorn(g, S) {
+  g.setLineDash([4, 10]); line(g, [256, 30, 256, 480], 2, 'rgba(245, 193, 92, 0.6)'); g.setLineDash([]);
+  for (let i = 0; i < 12; i++) { const a = Math.PI + 0.2 + (i / 11) * (Math.PI - 0.4); line(g, [130 + cos(a) * 90, 240 + sin(a) * 90, 130 + cos(a) * 114, 240 + sin(a) * 114], 2.5, '#ffd166'); }
+  curve(g, [130, 470, 120, 400, 140, 320, 130, 270], 5, '#21b37c');
+  for (let k = 0; k < 9; k++) { const a = Math.PI + (k / 8) * Math.PI; g.fillStyle = k % 2 ? '#ff8fb1' : '#ffb3c8'; g.beginPath(); g.ellipse(130 + cos(a) * 34, 250 + sin(a) * 30, 32, 12, a, 0, TAU); g.fill(); }
+  dot(g, 130, 250, 12, '#ffd166');
+  const thorny = (x0, y0, x1, y1) => {
+    line(g, [x0, y0, x1, y1], 5, '#8a3a5a');
+    for (let t = 0.1; t < 1; t += 0.12) { const x = x0 + (x1 - x0) * t, y = y0 + (y1 - y0) * t, a = Math.atan2(y1 - y0, x1 - x0) + (t * 10 % 2 > 1 ? 1 : -1) * 1.1; fillPoly(g, [x - 4, y, x + 4, y, x + cos(a) * 18, y + sin(a) * 18], '#c0392b'); }
+  };
+  thorny(380, 470, 380, 160); thorny(380, 380, 300, 240); thorny(380, 330, 470, 210); thorny(380, 260, 330, 120); thorny(380, 230, 450, 110);
+}
+
+/* 16.1–16.5: fearlessness, purity, generosity, compassion, forgiveness: the divine nature (16.1–3) */
+export function drawVirtueGarden(g, S) {
+  dot(g, 256, 80, 34, '#ffb347'); for (let i = 0; i < 16; i++) { const a = (i / 16) * TAU; line(g, [256 + cos(a) * 42, 80 + sin(a) * 42, 256 + cos(a) * 58, 80 + sin(a) * 58], 3, '#ffd166'); }
+  line(g, [20, 460, 492, 460], 3, '#8a5a2b');
+  const cols = ['#ff8fb1', '#ffd166', '#ff9a4d', '#b178ff', '#45e3d3', '#ffffff', '#ff4d6d'];
+  for (let i = 0; i < 13; i++) {
+    const x = 44 + i * 35, h = 120 + ((i * 37) % 100), c = cols[i % cols.length];
+    line(g, [x, 460, x + (i % 2 ? 4 : -4), 460 - h], 3, '#21b37c');
+    g.fillStyle = '#9ad18b'; g.beginPath(); g.ellipse(x + 10, 460 - h * 0.4, 12, 5, 0.5, 0, TAU); g.fill();
+    for (let k = 0; k < 6; k++) { const a = (k / 6) * TAU; dot(g, x + cos(a) * 11, 460 - h + sin(a) * 11, 8, c); }
+    dot(g, x, 460 - h, 6, '#fff6dc');
+  }
+  const bfly = (x, y) => { g.fillStyle = '#ffe7a8'; g.beginPath(); g.ellipse(x - 8, y, 8, 12, -0.4, 0, TAU); g.ellipse(x + 8, y, 8, 12, 0.4, 0, TAU); g.fill(); };
+  bfly(150, 170); bfly(380, 200);
+}
+
+/* 16.6–16.12: bound by hundreds of ropes of hope (16.12) */
+export function drawHopeRopes(g, S) {
+  const x = 256, y = 300;
+  for (let i = 0; i < 36; i++) { const a = (i / 36) * TAU, r = 240; line(g, [x + cos(a) * 30, y + sin(a) * 30, x + cos(a) * r, y + sin(a) * r * 0.9], 1.8, i % 3 ? 'rgba(201, 138, 58, 0.85)' : 'rgba(255, 209, 102, 0.85)'); }
+  dot(g, x, y - 40, 16, '#ffd08a'); line(g, [x, y - 24, x, y + 30], 14, '#ff9a4d');
+  line(g, [x, y - 14, x - 30, y - 70], 6, '#ffd08a'); line(g, [x, y - 14, x + 30, y - 70], 6, '#ffd08a');
+  line(g, [x - 4, y + 30, x - 16, y + 80], 7, '#ffd08a'); line(g, [x + 4, y + 30, x + 16, y + 80], 7, '#ffd08a');
+  /* what they reach for, always just out of reach */
+  [[200, 120], [256, 90], [312, 120], [230, 60], [290, 56]].forEach(([cx, cy]) => { dot(g, cx, cy, 14, '#ffd166'); ring(g, cx, cy, 9, 2, '#c98a3a'); });
+}
+
+/* 16.13–16.20: "This is mine, that will be mine. Who else is like me?" (16.13–15), caught in the net of delusion (16.16) */
+export function drawGoldNet(g, S) {
+  for (let i = 0; i < 70; i++) { const row = Math.floor(i / 14), x = 120 + (i % 14) * 20 + row * 10 - row * 2, y = 460 - row * 22; dot(g, x, y, 11, '#ffd166'); ring(g, x, y, 7, 2, '#c98a3a'); }
+  const x = 256, y = 300;
+  dot(g, x, y - 60, 22, '#ffd08a');
+  fillPoly(g, [x - 24, y - 76, x + 24, y - 76, x + 30, y - 110, x + 12, y - 92, x, y - 120, x - 12, y - 92, x - 30, y - 110], '#ffd166');
+  fillPoly(g, [x - 26, y - 36, x + 26, y - 36, x + 40, y + 40, x - 40, y + 40], '#ff4d6d');
+  line(g, [x + 20, y - 30, x + 70, y - 60], 8, '#ffd08a'); dot(g, x + 76, y - 64, 12, '#ffd166');
+  /* the net over everything */
+  g.strokeStyle = 'rgba(177, 120, 255, 0.75)'; g.lineWidth = 1.6;
+  for (let k = -12; k <= 12; k++) { g.beginPath(); g.moveTo(256 + k * 34 - 260, 40); g.lineTo(256 + k * 34 + 260, 500); g.stroke(); g.beginPath(); g.moveTo(256 + k * 34 + 260, 40); g.lineTo(256 + k * 34 - 260, 500); g.stroke(); }
+}
+
+/* 16.21–16.24: three gates to hell, desire, anger and greed (16.21); let wise guidance be your measure (16.24) */
+export function drawThreeGates(g, S) {
+  const gate = (x, sym) => {
+    g.strokeStyle = '#8a3a5a'; g.lineWidth = 8; g.beginPath(); g.moveTo(x - 46, 380); g.lineTo(x - 46, 200); g.arc(x, 200, 46, Math.PI, 0); g.lineTo(x + 46, 380); g.stroke();
+    sym(x, 280);
+  };
+  gate(100, (x, y) => flame(g, x, y + 30, 18, 70, '#ff4d6d', '#ff9a4d'));
+  gate(230, (x, y) => fillPoly(g, [x + 6, y - 40, x - 16, y + 4, x, y + 4, x - 8, y + 40, x + 18, y - 6, x + 2, y - 6], '#ffd166'));
+  gate(360, (x, y) => { [[x - 12, y + 10], [x + 12, y + 10], [x, y - 10]].forEach(([cx, cy]) => { dot(g, cx, cy, 14, '#ffd166'); ring(g, cx, cy, 9, 2, '#c98a3a'); }); });
+  /* the path that turns away, toward the lamp of guidance */
+  g.setLineDash([10, 8]); curve(g, [60, 470, 200, 430, 380, 460, 450, 330], 4, '#9ef3ea'); g.setLineDash([]);
+  g.fillStyle = '#c98a3a'; g.beginPath(); g.moveTo(420, 300); g.quadraticCurveTo(450, 330, 480, 300); g.closePath(); g.fill();
+  flame(g, 450, 300, 12, 50, '#ff9a4d', '#ffffff');
+}
+
 /* story.js calls this with its sampler; returns lazily-sampled shapes keyed by name */
 export default function gitaShapes({ sample2D }) {
   return {
@@ -1709,5 +1781,11 @@ export default function gitaShapes({ sample2D }) {
     windScent: () => sample2D(drawWindScent, 2.6, 0.25),
     moonPlants: () => sample2D(drawMoonPlants, 2.55, 0.25),
     beyondBoth: () => sample2D(drawBeyondBoth, 2.55, 0.25),
+
+    lotusThorn: () => sample2D(drawLotusThorn, 2.55, 0.25),
+    virtueGarden: () => sample2D(drawVirtueGarden, 2.6, 0.3),
+    hopeRopes: () => sample2D(drawHopeRopes, 2.55, 0.25),
+    goldNet: () => sample2D(drawGoldNet, 2.55, 0.25),
+    threeGates: () => sample2D(drawThreeGates, 2.55, 0.25),
   };
 }

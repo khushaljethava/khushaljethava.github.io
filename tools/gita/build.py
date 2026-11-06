@@ -425,6 +425,29 @@ SECTIONS[15] = dict(
         gyan="Look past what changes and past what merely stays. Look for what holds both."),
   ])
 
+KEY_VERSES[16] = (1, 21)
+SECTIONS[16] = dict(
+  subtitle="The Yoga of the Divine and the Demonic",
+  hero_shape='lotusThorn',
+  summary=("Two natures run through the world: the divine (fearless, truthful, compassionate, forgiving) and the demonic "
+           "(arrogant, angry, insatiable). Krishna reassures Arjuna that he was born with the first, then paints an unsparing "
+           "portrait of the second: bound by a hundred ropes of hope, saying \"this is mine, and that will be mine too.\" "
+           "The way out is through avoiding three gates: desire, anger and greed."),
+  sections=[
+   dict(id='divine', label='The Divine Nature', shape='virtueGarden', side='right', frm=1, to=5, title='Fearlessness first',
+        intro="The list of divine qualities begins with fearlessness and runs through purity, generosity, self-control, non-violence, truth, compassion, gentleness, forgiveness and modesty (16.1–3). The divine nature frees; the demonic binds. \"Do not grieve,\" Krishna tells Arjuna. \"You were born with the divine nature\" (16.5).",
+        gyan="Character is a garden, not a trophy. Tend the qualities daily and they grow."),
+   dict(id='ropes', label='Ropes of Hope', shape='hopeRopes', side='left', frm=6, to=12, title='A hundred ropes of hope',
+        intro="The demonic see a world without truth or foundation, driven only by desire. Clinging to cravings that can never be filled, worried until death, they are bound by hundreds of ropes of hope (16.12), piling up wealth by any means to feed what they want.",
+        gyan="Unchecked wanting doesn't free you; it ties you to a hundred things at once."),
+   dict(id='mine', label='This Is Mine', shape='goldNet', side='right', frm=13, to=20, title='"Who else is like me?"',
+        intro="Their inner voice: \"This I gained today, that I'll get tomorrow. This is mine and that will be mine. I am the lord, I am powerful, who else is like me?\" (16.13–15). Caught in a net of delusion, they hate the very God who lives in every body, and sink lower birth after birth.",
+        gyan="Watch for that voice in your own head. It sounds like ambition; it is often just fear wearing a crown."),
+   dict(id='three-gates', label='Three Gates', shape='threeGates', side='left', frm=21, to=24, title='Desire, anger and greed',
+        intro="There are three gates to this hell, and they destroy the self: desire, anger and greed (16.21). Leave all three and you walk toward your highest good. And when unsure what to do, don't follow impulse; let wise guidance be your measure.",
+        gyan="Before a decision, check the three gates: am I acting from craving, from anger or from greed? If so, wait."),
+  ])
+
 # every chapter with scenes in SECTIONS gets built; its meanings and effects must exist too
 chs = {n: chapter_verses(n, getattr(meanings, f'CH{n}'), getattr(fx, f'CH{n}_FX'), KEY_VERSES.get(n, ())) for n in sorted(SECTIONS)}
 
