@@ -34,7 +34,8 @@ const revealIO = new IntersectionObserver(
 reveals.forEach((el) => revealIO.observe(el));
 
 /* ---------- Gita: the shloka in the middle of the screen is "active" ---------- */
-const FX = ['ripple', 'sink', 'contract', 'expand', 'turbulence', 'drift', 'fire', 'water', 'sparkle', 'still', 'march', 'clash'];
+const FX = ['ripple', 'sink', 'contract', 'expand', 'turbulence', 'drift', 'fire', 'water', 'sparkle', 'still', 'march', 'clash', 'spin', 'rise', 'descend', 'ash', 'breathe', 'scatter', 'gather', 'thread', 'daynight', 'veil', 'vortex', 'blaze', 'invert', 'gunas'];
+const SPIN = FX.indexOf('spin');
 let activeFx = '';
 const verseCards = document.querySelectorAll('.gv[data-fx]');
 if (verseCards.length) {
@@ -657,7 +658,7 @@ async function initStage() {
     uMouse: { value: new THREE.Vector2(9, 9) },
     uAspect: { value: 1 },
     uPulse: { value: 0 },
-    uFx: { value: new Float32Array(12) },
+    uFx: { value: new Float32Array(26) },
   };
 
   const material = new THREE.ShaderMaterial({
@@ -667,7 +668,7 @@ async function initStage() {
     blending: THREE.AdditiveBlending,
     vertexShader: /* glsl */ `
       uniform float uTime, uProgress, uSize, uPixelRatio, uAspect, uPulse;
-      uniform float uFx[12]; /* ripple sink contract expand turbulence drift fire water sparkle still march clash */
+      uniform float uFx[26]; /* ripple sink contract expand turbulence drift fire water sparkle still march clash spin rise descend ash breathe scatter gather thread daynight veil vortex blaze invert gunas */
       uniform vec2 uMouse;
       attribute vec3 aTo, aColA, aColB;
       attribute float aRand;
@@ -691,13 +692,41 @@ async function initStage() {
         pos.y += uFx[6] * 0.3 * fract(aRand * 7.0 + uTime * 0.7);                           /* fire: rising flicker */
         pos.y += uFx[7] * 0.13 * sin(pos.x * 3.0 + uTime * 2.2);                            /* water: waves */
         pos += dirC * uFx[11] * 0.32 * pow(abs(sin(uTime * 1.8)), 10.0);                    /* clash: sharp bursts */
+        /* spin turns the whole shape (JS, spinZ); here the rim lags a little, like a turning wheel */
+        pos.xy += uFx[12] * 0.06 * vec2(-pos.y, pos.x) * sin(rad * 3.0 - uTime * 2.0);
+        float hp = step(0.5, aRand);                                                       /* rise, descend, ash move half the particles */
+        float riseT = fract(aRand * 13.0 + uTime * 0.18);
+        pos.y += uFx[13] * hp * 1.3 * riseT;                                               /* rise: offering smoke */
+        pos.x += uFx[13] * hp * 0.16 * riseT * sin(uTime * 1.3 + pos.y * 4.0 + aRand * 6.0);
+        float fallT = 1.0 - smoothstep(0.0, 1.0, fract(aRand * 11.0 + uTime * 0.3));
+        pos.y += uFx[14] * hp * 1.8 * fallT;                                               /* descend: light pouring down */
+        float ashT = fract(aRand * 5.0 + uTime * 0.2);
+        pos += uFx[15] * hp * ashT * (dirC * 0.25 + vec3(0.0, 0.45, 0.0));                 /* ash: flakes lift off the burning shape */
+        float breath = sin(uTime * 0.9);
+        pos *= 1.0 + 0.09 * uFx[16] * breath;                                                 /* breathe: slow inhale, exhale */
+        float hop = floor(uTime * 2.5 + aRand * 9.0);                                         /* scatter: the restless mind darts, stops, darts */
+        pos += uFx[17] * hp * 0.4 * vec3(sin(hop * 12.9898 + aRand * 78.2), cos(hop * 4.1414 + aRand * 31.7), 0.0);
+        pos = mix(pos, vec3(0.0, 0.0, pos.z * 0.2), uFx[18] * hp * 0.9);                     /* gather: half the mind collapses to one point */
+        pos.y = mix(pos.y, floor(pos.y * 5.0 + 0.5) / 5.0, uFx[19] * 0.85);                 /* thread: strung like pearls on a thread */
+        pos.x += uFx[19] * 0.05 * sin(uTime * 1.2 + floor(pos.y * 5.0 + 0.5));
+        float day = 0.5 + 0.5 * sin(uTime * 0.6 - pos.x * 0.9);                              /* daynight: dawn sweeps across, night follows */
+        pos *= 1.0 + uFx[20] * 0.07 * (day - 0.5);
+        pos.x += uFx[21] * 0.12 * sin(pos.y * 6.0 + uTime * 1.5);                            /* veil: maya ripples like cloth */
+        float vt = fract(aRand * 7.0 + uTime * 0.3), va = vt * 5.0;                          /* vortex: Time draws everything into its mouth */
+        vec2 vr = vec2(pos.x * cos(va) - pos.y * sin(va), pos.x * sin(va) + pos.y * cos(va)) * (1.0 - vt);
+        pos.xy = mix(pos.xy, vr, uFx[22] * hp);
+        pos *= 1.0 + uFx[23] * 0.14;                                                          /* blaze: a thousand suns */
+        pos.y = mix(pos.y, -pos.y, uFx[24]);                                                  /* invert: roots above, branches below */
+        float gi = floor(aRand * 3.0);                                                        /* gunas: sattva rises, rajas churns, tamas sinks */
+        pos.y += uFx[25] * (gi < 0.5 ? 0.18 : (gi > 1.5 ? -0.22 : 0.0));
+        pos.x += uFx[25] * (gi > 0.5 && gi < 1.5 ? 0.08 * sin(uTime * 9.0 + aRand * 50.0) : 0.0);
         vec4 mv = modelViewMatrix * vec4(pos, 1.0);
         gl_Position = projectionMatrix * mv;
         vec2 ndc = gl_Position.xy / gl_Position.w;
         vec2 dir = (ndc - uMouse) * vec2(uAspect, 1.0);
         float f = smoothstep(0.3, 0.0, length(dir));
         gl_Position.xy += normalize(dir + 1e-5) / vec2(uAspect, 1.0) * f * 0.15 * gl_Position.w;
-        gl_PointSize = uSize * uPixelRatio * (0.35 + aRand * 0.9) / -mv.z;
+        gl_PointSize = uSize * uPixelRatio * (0.35 + aRand * 0.9) * (1.0 + uFx[23] * 0.6) / -mv.z;
         vec3 c = mix(aColA, aColB, p);
         float pulse = uPulse * pow(0.5 + 0.5 * sin(pos.x * 2.6 - uTime * 3.2), 10.0);
         c += vec3(0.6, 0.9, 1.0) * pulse;
@@ -706,9 +735,23 @@ async function initStage() {
         c = mix(c, vec3(dot(c, vec3(0.33))), uFx[1] * 0.6);                                 /* grief drains colour */
         c *= 1.0 + 0.35 * uFx[3];
         c += vec3(1.0, 0.95, 0.8) * uFx[8] * pow(aRand, 5.0) * (0.5 + 0.5 * sin(uTime * 6.0 + aRand * 40.0)); /* sparkle */
+        c = mix(c, vec3(0.88, 0.9, 0.95), uFx[13] * hp * 0.6);                           /* smoke whitens */
+        c = mix(c, vec3(1.0, 0.86, 0.45), uFx[14] * (0.25 + 0.5 * hp * fallT));           /* golden descent */
+        c = mix(c, vec3(dot(c, vec3(0.3))) * 0.8, uFx[15] * hp * ashT);                   /* burnt to grey ash */
+        c += vec3(1.0, 0.38, 0.08) * uFx[15] * pow(1.0 - ashT, 6.0) * 1.5;                  /* last embers */
+        c *= 1.0 + 0.25 * uFx[16] * breath;
+        c += vec3(1.0, 0.9, 0.6) * uFx[19] * 0.25;
+        c *= mix(1.0, 0.35 + 0.95 * day, uFx[20]);
+        c = mix(c, vec3(1.0, 0.25, 0.2), uFx[22] * hp * vt * 0.7);
+        c = mix(c, vec3(1.0, 0.97, 0.86), uFx[23] * 0.75);
+        vec3 gc = gi < 0.5 ? vec3(1.0, 0.97, 0.9) : (gi > 1.5 ? vec3(0.28, 0.38, 1.0) : vec3(1.0, 0.3, 0.25));
+        c = mix(c, gc, uFx[25] * 0.75);
+        float vp = uTime * 0.8 + pos.y * 3.0;                                                 /* the three gunas shimmer through the veil */
+        c = mix(c, 0.55 + 0.45 * vec3(sin(vp), sin(vp + 2.1), sin(vp + 4.2)), uFx[21] * 0.45);
+        c += vec3(1.0, 0.92, 0.75) * uFx[18] * hp * 0.6;                                      /* the gathered point glows */
         c = mix(c, vec3(1.0), pow(aRand, 14.0) + f * 0.4);
         vColor = c;
-        vAlpha = 0.5 + f * 0.4 + burst * 0.15;
+        vAlpha = (0.5 + f * 0.4 + burst * 0.15) * (1.0 - hp * riseT * uFx[13] * 0.8) * (1.0 - hp * ashT * uFx[15] * 0.7) * (1.0 - uFx[20] * hp * (1.0 - day) * 0.85);
       }`,
     fragmentShader: /* glsl */ `
       varying vec3 vColor;
@@ -953,13 +996,14 @@ async function initStage() {
     const weight = (name) => (shapeAt(cur) === name ? wA : 0) + (shapeAt(nxt) === name ? wB : 0);
 
     /* Sudarshan Chakra spins; when it leaves, the rotation settles back to upright */
-    const wc = weight('chakra');
-    const upright = Math.round(spinZ / TAU) * TAU;
-    spinZ += dt * 1.8 * wc + (upright - spinZ) * 0.04 * (1 - wc);
-    uniforms.uPulse.value = weight('neural');
     /* fade each shloka's effect in, and the previous one out */
     const fxv = uniforms.uFx.value;
     for (let k = 0; k < FX.length; k++) fxv[k] += ((FX[k] === activeFx ? 1 : 0) - fxv[k]) * Math.min(1, dt * 2.5);
+    /* Sudarshan Chakra (and the 'spin' shloka effect) turns; when it stops, the rotation settles back to upright */
+    const wc = Math.max(weight('chakra'), fxv[SPIN]);
+    const upright = Math.round(spinZ / TAU) * TAU;
+    spinZ += dt * 1.8 * wc + (upright - spinZ) * 0.04 * (1 - wc);
+    uniforms.uPulse.value = weight('neural');
     const wPalm = weight('palm');
     updateCosmos(wPalm);
 
