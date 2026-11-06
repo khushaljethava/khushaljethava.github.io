@@ -993,8 +993,57 @@
   "name": "Purushottama Yoga",
   "meaning": "The Yoga of the Supreme Divine Personality",
   "verses": 20,
-  "live": false,
-  "url": "/gita/chapter-15/"
+  "live": true,
+  "url": "/gita/chapter-15/",
+  "subtitle": "The Yoga of the Supreme Person",
+  "hero_shape": "ashvattha",
+  "summary": "A short, dense chapter, often chanted before meals. The world is an eternal tree with its roots above and its branches below; cut it with the axe of detachment and seek the place no sun lights. The soul is an eternal fragment of God, carrying the senses from body to body as the wind carries scent. And beyond both the perishable and the imperishable is the Supreme Person, Purushottama.",
+  "sections": [
+   {
+    "id": "tree",
+    "label": "The Upside-Down Tree",
+    "shape": "axeTree",
+    "side": "right",
+    "to": 6,
+    "title": "Roots above, branches below",
+    "intro": "The world is an ashvattha tree with its roots above in the source and its branches spreading below, its leaves the Vedic hymns (15.1). No one sees where it begins or ends. Cut it down with the strong axe of detachment, and seek the place that neither sun nor moon nor fire lights (15.6).",
+    "gyan": "Find where things are really rooted, not just where they branch out. Then cut the attachment, not the tree.",
+    "from": 1
+   },
+   {
+    "id": "traveller",
+    "label": "The Traveller",
+    "shape": "windScent",
+    "side": "left",
+    "to": 11,
+    "title": "As the wind carries scent",
+    "intro": "The living soul is an eternal fragment of Krishna (15.7). It gathers the senses and the mind, and when it leaves one body for another it carries them along, the way the wind carries scent from a flower (15.8). The deluded don't see it; those with the eye of knowledge do.",
+    "gyan": "You carry your habits of attention everywhere you go. Choose what you're carrying.",
+    "from": 7
+   },
+   {
+    "id": "light-and-life",
+    "label": "Light and Life",
+    "shape": "moonPlants",
+    "side": "right",
+    "to": 15,
+    "title": "I nourish the plants as the moon",
+    "intro": "The light of the sun, the moon and fire is his. Entering the earth he sustains all beings; as the nectar-filled moon he nourishes the plants (15.13); as the fire of life he digests food. He sits in every heart, the source of memory and knowledge, and of forgetting too.",
+    "gyan": "Your next meal took sun, soil, rain and a hundred hands. Eat it like you know that.",
+    "from": 12
+   },
+   {
+    "id": "supreme-person",
+    "label": "The Supreme Person",
+    "shape": "beyondBoth",
+    "side": "left",
+    "to": 20,
+    "title": "Beyond perishable and imperishable",
+    "intro": "There are two persons in the world: the perishable, which is all beings, and the imperishable, which never changes. Beyond both is the Supreme Person, who enters and sustains the three worlds (15.16–18). Whoever knows this knows all, and has done all there is to do.",
+    "gyan": "Look past what changes and past what merely stays. Look for what holds both.",
+    "from": 16
+   }
+  ]
  },
  {
   "n": 16,

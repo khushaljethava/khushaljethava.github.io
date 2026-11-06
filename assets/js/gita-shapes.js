@@ -1,4 +1,4 @@
-/* Gita Gyan scenes: one particle drawing per scene of Chapters 1 to 14.
+/* Gita Gyan scenes: one particle drawing per scene of Chapters 1 to 15.
    Loaded only on Gita chapter pages by story.js; each draw(g, S) paints a 512x512 canvas
    that story.js samples into particles (colour comes from the pixels). */
 const TAU = Math.PI * 2;
@@ -1537,6 +1537,77 @@ export function drawAboveWaves(g, S) {
   ring(g, 256, 150, 44, 3, '#ffd166'); ring(g, 256, 210, 110, 2, 'rgba(255, 209, 102, 0.6)');
 }
 
+
+/* ---------- Chapter 15 ---------- */
+
+/* Chapter 15 (15.1): the eternal ashvattha, roots above and branches below */
+export function drawAshvattha(g, S) {
+  const bark = '#c98a3a';
+  for (let i = -5; i <= 5; i++) curve(g, [256, 150, 256 + i * 10, 110, 256 + i * 30, 70, 256 + i * 44, 24], 4 - Math.abs(i) * 0.2, '#ffd166');
+  fillPoly(g, [240, 150, 272, 150, 266, 300, 246, 300], bark);
+  [[256, 280, 140, 380], [256, 286, 372, 380], [256, 296, 200, 440], [256, 296, 312, 440], [256, 300, 256, 470], [256, 284, 90, 320], [256, 284, 422, 320]].forEach(([x0, y0, x1, y1]) => line(g, [x0, y0, x1, y1], 7, bark));
+  const leaf = (x, y, a) => { g.save(); g.translate(x, y); g.rotate(a); g.fillStyle = '#21b37c'; g.beginPath(); g.moveTo(0, -14); g.bezierCurveTo(16, -12, 14, 8, 0, 22); g.bezierCurveTo(-14, 8, -16, -12, 0, -14); g.fill(); g.restore(); };
+  for (let i = 0; i < 80; i++) { const a = Math.PI * 0.1 + rnd() * Math.PI * 0.8, r = 80 + rnd() * 190; leaf(256 + cos(a) * r * 1.05, 290 + sin(a) * r * 0.75, a - Math.PI / 2 + (rnd() - 0.5)); }
+  dot(g, 256, 20, 10, '#fff6dc');
+}
+
+/* 15.1–15.6: cut this firmly rooted tree with the strong axe of detachment (15.3) */
+export function drawAxeTree(g, S) {
+  const bark = '#c98a3a';
+  for (let i = -4; i <= 4; i++) curve(g, [256, 420, 256 + i * 14, 440, 256 + i * 34, 460, 256 + i * 52, 490], 4, bark);
+  fillPoly(g, [236, 424, 276, 424, 268, 200, 244, 200], bark);
+  for (let i = 0; i < 60; i++) { const a = rnd() * TAU, r = Math.sqrt(rnd()) * 120; dot(g, 256 + cos(a) * r * 1.2, 150 + sin(a) * r * 0.7, 12 + rnd() * 10, `hsl(${130 + rnd() * 30}, 55%, ${30 + rnd() * 15}%)`); }
+  /* the axe, mid-swing */
+  g.save(); g.translate(330, 330); g.rotate(-0.5);
+  line(g, [0, 0, 110, 0], 9, '#f5c15c');
+  fillPoly(g, [-6, -30, 24, -24, 24, 24, -6, 30, -18, 0], '#e8ecf8');
+  g.restore();
+  for (let i = 0; i < 12; i++) { const a = Math.PI + (rnd() - 0.5) * 1.6; line(g, [282, 330, 282 + cos(a) * -(20 + rnd() * 30), 330 + sin(a) * (20 + rnd() * 30)], 2, '#ffd166'); }
+  /* the place no sun lights: a door of its own light */
+  g.strokeStyle = '#fff6dc'; g.lineWidth = 3; g.beginPath(); g.moveTo(420, 120); g.lineTo(420, 60); g.arc(450, 60, 30, Math.PI, 0); g.lineTo(480, 120); g.stroke();
+  dot(g, 450, 80, 10, '#ffffff');
+}
+
+/* 15.7–15.11: as the wind carries scents from their source, the soul carries the senses and mind (15.8) */
+export function drawWindScent(g, S) {
+  line(g, [80, 470, 80, 330], 4, '#21b37c');
+  for (let k = 0; k < 7; k++) { const a = (k / 7) * TAU; g.fillStyle = '#ff8fb1'; g.beginPath(); g.ellipse(80 + cos(a) * 22, 310 + sin(a) * 22, 22, 10, a, 0, TAU); g.fill(); }
+  dot(g, 80, 310, 10, '#ffd166');
+  for (let k = 0; k < 5; k++) curve(g, [100, 290 - k * 12, 200, 230 - k * 30, 320, 260 - k * 20, 470, 160 - k * 24], 2.5, 'rgba(69, 227, 211, 0.75)');
+  /* the soul and its six companions, travelling on the wind */
+  const cx = 330, cy = 210;
+  dot(g, cx, cy, 16, '#fff6dc'); ring(g, cx, cy, 26, 2, '#f5c15c');
+  ['#ff4d6d', '#ff9a4d', '#ffd166', '#21b37c', '#45e3d3', '#b178ff'].forEach((c, i) => { const a = (i / 6) * TAU; dot(g, cx + cos(a) * 44, cy + sin(a) * 44, 7, c); });
+  for (let i = 0; i < 40; i++) { const t = rnd(); dot(g, 110 + t * 380, 280 - t * 140 + (rnd() - 0.5) * 60, 1.5 + rnd() * 1.5, 'rgba(255, 179, 200, 0.85)'); }
+}
+
+/* 15.12–15.15: becoming the nectar-filled moon, I nourish all the plants (15.13) */
+export function drawMoonPlants(g, S) {
+  dot(g, 256, 110, 70, '#fff1c9'); erase(g, () => dot(g, 290, 90, 62, '#000'));
+  for (let i = 0; i < 14; i++) { const x = 140 + i * 18, y = 200 + (i % 4) * 40; drop(g, x, y, 6, 'rgba(158, 243, 234, 0.9)'); }
+  line(g, [30, 450, 482, 450], 3, '#8a5a2b');
+  for (let i = 0; i < 9; i++) {
+    const x = 60 + i * 50, h = 60 + (i % 3) * 30;
+    curve(g, [x, 450, x - 4, 450 - h * 0.5, x + 4, 450 - h * 0.8, x, 450 - h], 3, '#21b37c');
+    g.fillStyle = '#9ad18b'; g.beginPath(); g.ellipse(x - 12, 450 - h * 0.7, 12, 5, -0.5, 0, TAU); g.ellipse(x + 12, 450 - h * 0.85, 12, 5, 0.5, 0, TAU); g.fill();
+  }
+}
+
+/* 15.16–15.20: the perishable, the imperishable, and the Supreme Person beyond both (15.18) */
+export function drawBeyondBoth(g, S) {
+  for (let i = 0; i < 20; i++) { const a = (i / 20) * TAU; line(g, [256 + cos(a) * 50, 110 + sin(a) * 50, 256 + cos(a) * (i % 2 ? 76 : 100), 110 + sin(a) * (i % 2 ? 76 : 100)], 2.5, '#ffd166'); }
+  dot(g, 256, 110, 40, '#fff6dc');
+  fillPoly(g, [226, 82, 286, 82, 296, 46, 276, 62, 256, 30, 236, 62, 216, 46], '#ffd166');
+  /* the perishable: a figure crumbling into sand */
+  const sand = '#e0a458';
+  dot(g, 140, 300, 20, sand); fillPoly(g, [116, 324, 164, 324, 176, 440, 104, 440], sand);
+  erase(g, () => { for (let i = 0; i < 70; i++) dot(g, 150 + rnd() * 40, 290 + rnd() * 150, 2 + rnd() * 3, '#000'); });
+  for (let i = 0; i < 50; i++) dot(g, 180 + rnd() * 60, 290 + rnd() * 150, 1.5 + rnd() * 2, 'rgba(224, 164, 88, 0.8)');
+  /* the imperishable: a still, clear figure */
+  g.strokeStyle = '#9ef3ea'; g.lineWidth = 4; g.beginPath(); g.arc(372, 300, 20, 0, TAU); g.moveTo(348, 324); g.lineTo(396, 324); g.lineTo(408, 440); g.lineTo(336, 440); g.closePath(); g.stroke();
+  g.setLineDash([4, 8]); line(g, [150, 260, 236, 160], 2, 'rgba(255, 231, 168, 0.7)'); line(g, [372, 260, 276, 160], 2, 'rgba(255, 231, 168, 0.7)'); g.setLineDash([]);
+}
+
 /* story.js calls this with its sampler; returns lazily-sampled shapes keyed by name */
 export default function gitaShapes({ sample2D }) {
   return {
@@ -1632,5 +1703,11 @@ export default function gitaShapes({ sample2D }) {
     boundFigure: () => sample2D(drawBoundFigure, 2.5, 0.25),
     gunaTiers: () => sample2D(drawGunaTiers, 2.5, 0.2),
     aboveWaves: () => sample2D(drawAboveWaves, 2.55, 0.25),
+
+    ashvattha: () => sample2D(drawAshvattha, 2.6, 0.3),
+    axeTree: () => sample2D(drawAxeTree, 2.55, 0.3),
+    windScent: () => sample2D(drawWindScent, 2.6, 0.25),
+    moonPlants: () => sample2D(drawMoonPlants, 2.55, 0.25),
+    beyondBoth: () => sample2D(drawBeyondBoth, 2.55, 0.25),
   };
 }

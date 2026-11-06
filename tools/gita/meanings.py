@@ -596,3 +596,27 @@ CH14 = [
  'For I am the ground of Brahman, of the immortal and imperishable, of eternal dharma and of absolute bliss.',
 ]
 assert len(CH14) == 27
+
+CH15 = [
+ 'They speak of an imperishable ashvattha tree with its roots above and its branches below; its leaves are the Vedic hymns. Whoever knows it knows the Vedas.',
+ 'Its branches spread below and above, nourished by the qualities, its buds the objects of the senses; and below, its roots stretch out, binding to action in the world of men.',
+ 'Its real form is not seen here, nor its end, nor its beginning, nor its foundation. Cutting down this firmly rooted ashvattha with the strong axe of detachment,',
+ 'one should then seek that place from which, once reached, no one returns, thinking: "I take refuge in that primal Person from whom this ancient stream of activity flowed forth."',
+ 'Without pride or delusion, having conquered the fault of attachment, always dwelling in the Self, desires turned away, freed from the pairs of opposites known as pleasure and pain, the undeluded reach that eternal state.',
+ 'Neither the sun, nor the moon, nor fire lights it up. Having gone there, they do not return. That is my supreme abode.',
+ 'An eternal fragment of myself, becoming a living soul in the world of living beings, draws to itself the senses, with the mind as the sixth, which rest in nature.',
+ 'When the lord takes on a body and when it leaves it, it takes these along and goes, as the wind carries scents away from their source.',
+ 'Presiding over hearing, sight, touch, taste and smell, and over the mind, it enjoys the objects of the senses.',
+ 'The deluded do not see it departing, staying, or enjoying while joined with the qualities; those with the eye of knowledge see it.',
+ 'Striving yogis see it dwelling in themselves; but the unthinking, whose selves are unformed, do not see it even though they strive.',
+ 'The light in the sun that lights up the whole world, the light in the moon and the light in fire: know that light to be mine.',
+ 'Entering the earth, I sustain all beings with my energy; becoming the nectar-filled moon, I nourish all the plants.',
+ 'Becoming the fire of life in the bodies of living beings, joined with the in-breath and out-breath, I digest the four kinds of food.',
+ 'I am seated in the hearts of all; from me come memory, knowledge and their loss. I am what is to be known in all the Vedas; I am the author of Vedanta and the knower of the Vedas.',
+ 'There are two persons in this world, the perishable and the imperishable. All beings are the perishable; the unchanging is called the imperishable.',
+ 'But there is another, the highest Person, called the supreme Self, who, entering the three worlds as the undying Lord, sustains them.',
+ 'Since I am beyond the perishable and higher even than the imperishable, I am celebrated in the world and in the Veda as Purushottama, the Supreme Person.',
+ 'Whoever, undeluded, knows me in this way as the Supreme Person knows all, and worships me with their whole being, Bharata.',
+ 'So this most secret teaching has been told by me, sinless one. Understanding it, one becomes wise and has done all there is to do, Bharata.',
+]
+assert len(CH15) == 20

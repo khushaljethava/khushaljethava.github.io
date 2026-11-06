@@ -521,3 +521,25 @@ CH14_FX = spread(
     ([27], 'expand'),
 )
 assert sorted(CH14_FX) == list(range(1, 28))
+CH15_FX = spread(
+    ([1, 2], 'invert'),                          # roots above, branches below
+    ([3], 'clash'),                              # the axe of detachment
+    ([4], 'rise'),
+    ([5], 'still'),
+    ([6], 'sparkle'),                            # no sun, no moon, no fire lights it
+    ([7], 'gather'),                             # an eternal fragment of myself
+    ([8], 'drift'),                              # as the wind carries scent
+    ([9], 'ripple'),
+    ([10], 'veil'),                              # the deluded do not see it
+    ([11], 'breathe'),
+    ([12], 'blaze'),                             # the light in the sun is mine
+    ([13], 'descend'),                           # the nectar-filled moon nourishes the plants
+    ([14], 'fire'),                              # the fire of life
+    ([15], 'gather'),                            # seated in the hearts of all
+    ([16], 'drift'),                             # perishable and imperishable
+    ([17], 'expand'),
+    ([18], 'sparkle'),                           # Purushottama
+    ([19], 'still'),
+    ([20], 'sparkle'),
+)
+assert sorted(CH15_FX) == list(range(1, 21))
