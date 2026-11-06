@@ -155,7 +155,7 @@
   <script src="{{ '/assets/js/dist/theme.min.js' | relative_url }}"></script>
 
   {% comment %} The story home page has no sidebar/search/TOC, so Chirpy's page JS would only throw there. {% endcomment %}
-  {% unless page.layout == 'story' %}
+  {% unless page.layout == 'story' or page.layout == 'gita-chapter' %}
     {% include js-selector.html lang=lang %}
   {% endunless %}
 

@@ -1,0 +1,625 @@
+[
+ {
+  "n": 1,
+  "sa": [
+   "धर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः।",
+   "मामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय ॥"
+  ],
+  "tr": [
+   "dharmakṣetre kurukṣetre samavetā yuyutsavaḥ",
+   "māmakāḥ pāṇḍavāścaiva kimakurvata sañjaya"
+  ],
+  "en": "Sanjaya, on the sacred field of Kurukshetra, my sons and the sons of Pandu gathered, eager to fight. What did they do?",
+  "fx": "drift",
+  "speaker": "Dhritarashtra said",
+  "speaker_at": 0
+ },
+ {
+  "n": 2,
+  "sa": [
+   "दृष्ट्वा तु पाण्डवानीकं व्यूढं दुर्योधनस्तदा।",
+   "आचार्यमुपसङ्गम्य राजा वचनमब्रवीत् ॥"
+  ],
+  "tr": [
+   "dṛṣṭvā tu pāṇḍavānīkaṃ vyūḍhaṃ duryodhanastadā",
+   "ācāryamupasaṅgamya rājā vacanamabravīt"
+  ],
+  "en": "Seeing the Pandava army drawn up for battle, King Duryodhana went to his teacher Drona and spoke.",
+  "fx": "march",
+  "speaker": "Sanjaya said",
+  "speaker_at": 0
+ },
+ {
+  "n": 3,
+  "sa": [
+   "पश्यैतां पाण्डुपुत्राणामाचार्य महतीं चमूम्।",
+   "व्यूढां द्रुपदपुत्रेण तव शिष्येण धीमता ॥"
+  ],
+  "tr": [
+   "paśyaitāṃ pāṇḍuputrāṇāmācārya mahatīṃ camūm",
+   "vyūḍhāṃ drupadaputreṇa tava śiṣyeṇa dhīmatā"
+  ],
+  "en": "Look, teacher, at this mighty army of the sons of Pandu, arrayed by your own gifted student, the son of Drupada.",
+  "fx": "march"
+ },
+ {
+  "n": 4,
+  "sa": [
+   "अत्र शूरा महेष्वासा भीमार्जुनसमा युधि।",
+   "युयुधानो विराटश्च द्रुपदश्च महारथः ॥"
+  ],
+  "tr": [
+   "atra śūrā maheṣvāsā bhīmārjunasamā yudhi",
+   "yuyudhāno virāṭaśca drupadaśca mahārathaḥ"
+  ],
+  "en": "Here are heroes and great archers, equal to Bhima and Arjuna in battle: Yuyudhana, Virata and the great chariot-warrior Drupada;",
+  "fx": "march"
+ },
+ {
+  "n": 5,
+  "sa": [
+   "धृष्टकेतुश्चेकितानः काशिराजश्च वीर्यवान्।",
+   "पुरुजित्कुन्तिभोजश्च शैब्यश्च नरपुङ्गवः ॥"
+  ],
+  "tr": [
+   "dhṛṣṭaketuścekitānaḥ kāśirājaśca vīryavān",
+   "purujitkuntibhojaśca śaibyaśca narapuṅgavaḥ"
+  ],
+  "en": "Dhrishtaketu, Chekitana and the valiant king of Kashi; Purujit, Kuntibhoja and Shaibya, the best of men;",
+  "fx": "march"
+ },
+ {
+  "n": 6,
+  "sa": [
+   "युधामन्युश्च विक्रान्त उत्तमौजाश्च वीर्यवान्।",
+   "सौभद्रो द्रौपदेयाश्च सर्व एव महारथाः ॥"
+  ],
+  "tr": [
+   "yudhāmanyuśca vikrānta uttamaujāśca vīryavān",
+   "saubhadro draupadeyāśca sarva eva mahārathāḥ"
+  ],
+  "en": "the bold Yudhamanyu, the brave Uttamaujas, the son of Subhadra and the sons of Draupadi, all of them great chariot-warriors.",
+  "fx": "march"
+ },
+ {
+  "n": 7,
+  "sa": [
+   "अस्माकं तु विशिष्टा ये तान्निबोध द्विजोत्तम।",
+   "नायका मम सैन्यस्य संज्ञार्थं तान्ब्रवीमि ते ॥"
+  ],
+  "tr": [
+   "asmākaṃ tu viśiṣṭā ye tānnibodha dvijottama",
+   "nāyakā mama sainyasya saṃjñārthaṃ tānbravīmi te"
+  ],
+  "en": "Now hear, best of the twice-born, about the leading warriors on our side. I name the commanders of my army for you.",
+  "fx": "march"
+ },
+ {
+  "n": 8,
+  "sa": [
+   "भवान्भीष्मश्च कर्णश्च कृपश्च समितिञ्जयः।",
+   "अश्वत्थामा विकर्णश्च सौमदत्तिस्तथैव च ॥"
+  ],
+  "tr": [
+   "bhavānbhīṣmaśca karṇaśca kṛpaśca samitiñjayaḥ",
+   "aśvatthāmā vikarṇaśca saumadattistathaiva ca"
+  ],
+  "en": "Yourself, Bhishma, Karna and Kripa, victorious in battle; Ashvatthama, Vikarna and the son of Somadatta.",
+  "fx": "march"
+ },
+ {
+  "n": 9,
+  "sa": [
+   "अन्ये च बहवः शूरा मदर्थे त्यक्तजीविताः।",
+   "नानाशस्त्रप्रहरणाः सर्वे युद्धविशारदाः ॥"
+  ],
+  "tr": [
+   "anye ca bahavaḥ śūrā madarthe tyaktajīvitāḥ",
+   "nānāśastrapraharaṇāḥ sarve yuddhaviśāradāḥ"
+  ],
+  "en": "And many other heroes ready to give their lives for me, armed with many kinds of weapons, all skilled in war.",
+  "fx": "march"
+ },
+ {
+  "n": 10,
+  "sa": [
+   "अपर्याप्तं तदस्माकं बलं भीष्माभिरक्षितम्।",
+   "पर्याप्तं त्विदमेतेषां बलं भीमाभिरक्षितम् ॥"
+  ],
+  "tr": [
+   "aparyāptaṃ tadasmākaṃ balaṃ bhīṣmābhirakṣitam",
+   "paryāptaṃ tvidameteṣāṃ balaṃ bhīmābhirakṣitam"
+  ],
+  "en": "Our army, guarded by Bhishma, is beyond measure; theirs, guarded by Bhima, is limited. (Readings of this verse differ: some take it to mean the opposite.)",
+  "fx": "expand"
+ },
+ {
+  "n": 11,
+  "sa": [
+   "अयनेषु च सर्वेषु यथाभागमवस्थिताः।",
+   "भीष्ममेवाभिरक्षन्तु भवन्तः सर्व एव हि ॥"
+  ],
+  "tr": [
+   "ayaneṣu ca sarveṣu yathābhāgamavasthitāḥ",
+   "bhīṣmamevābhirakṣantu bhavantaḥ sarva eva hi"
+  ],
+  "en": "So all of you, holding your positions at every point of entry, must protect Bhishma above all.",
+  "fx": "contract"
+ },
+ {
+  "n": 12,
+  "sa": [
+   "तस्य संजनयन्हर्षं कुरुवृद्धः पितामहः।",
+   "सिंहनादं विनद्योच्चैः शङ्खं दध्मौ प्रतापवान् ॥"
+  ],
+  "tr": [
+   "tasya saṃjanayanharṣaṃ kuruvṛddhaḥ pitāmahaḥ",
+   "siṃhanādaṃ vinadyoccaiḥ śaṅkhaṃ dadhmau pratāpavān"
+  ],
+  "en": "Then Bhishma, the mighty grandsire and eldest of the Kurus, roared like a lion and blew his conch, filling Duryodhana with joy.",
+  "fx": "ripple"
+ },
+ {
+  "n": 13,
+  "sa": [
+   "ततः शङ्खाश्च भेर्यश्च पणवानकगोमुखाः।",
+   "सहसैवाभ्यहन्यन्त स शब्दस्तुमुलोऽभवत् ॥"
+  ],
+  "tr": [
+   "tataḥ śaṅkhāśca bheryaśca paṇavānakagomukhāḥ",
+   "sahasaivābhyahanyanta sa śabdastumulo'bhavat"
+  ],
+  "en": "At once conches and kettledrums, cymbals, drums and horns blared together, and the sound was tremendous.",
+  "fx": "turbulence"
+ },
+ {
+  "n": 14,
+  "sa": [
+   "ततः श्वेतैर्हयैर्युक्ते महति स्यन्दने स्थितौ।",
+   "माधवः पाण्डवश्चैव दिव्यौ शङ्खौ प्रदध्मतुः ॥"
+  ],
+  "tr": [
+   "tataḥ śvetairhayairyukte mahati syandane sthitau",
+   "mādhavaḥ pāṇḍavaścaiva divyau śaṅkhau pradadhmatuḥ"
+  ],
+  "en": "Then, standing in their great chariot yoked to white horses, Krishna and Arjuna blew their divine conches.",
+  "fx": "sparkle"
+ },
+ {
+  "n": 15,
+  "sa": [
+   "पाञ्चजन्यं हृषीकेशो देवदत्तं धनंजयः।",
+   "पौण्ड्रं दध्मौ महाशङ्खं भीमकर्मा वृकोदरः ॥"
+  ],
+  "tr": [
+   "pāñcajanyaṃ hṛṣīkeśo devadattaṃ dhanaṃjayaḥ",
+   "pauṇḍraṃ dadhmau mahāśaṅkhaṃ bhīmakarmā vṛkodaraḥ"
+  ],
+  "en": "Krishna blew Panchajanya, Arjuna blew Devadatta, and Bhima, doer of fearsome deeds, blew his great conch Paundra.",
+  "fx": "ripple"
+ },
+ {
+  "n": 16,
+  "sa": [
+   "अनन्तविजयं राजा कुन्तीपुत्रो युधिष्ठिरः।",
+   "नकुलः सहदेवश्च सुघोषमणिपुष्पकौ ॥"
+  ],
+  "tr": [
+   "anantavijayaṃ rājā kuntīputro yudhiṣṭhiraḥ",
+   "nakulaḥ sahadevaśca sughoṣamaṇipuṣpakau"
+  ],
+  "en": "King Yudhishthira, son of Kunti, blew Anantavijaya; Nakula and Sahadeva blew Sughosha and Manipushpaka.",
+  "fx": "ripple"
+ },
+ {
+  "n": 17,
+  "sa": [
+   "काश्यश्च परमेष्वासः शिखण्डी च महारथः।",
+   "धृष्टद्युम्नो विराटश्च सात्यकिश्चापराजितः ॥"
+  ],
+  "tr": [
+   "kāśyaśca parameṣvāsaḥ śikhaṇḍī ca mahārathaḥ",
+   "dhṛṣṭadyumno virāṭaśca sātyakiścāparājitaḥ"
+  ],
+  "en": "The king of Kashi, a supreme archer; Shikhandi, the great chariot-warrior; Dhrishtadyumna, Virata and the unconquered Satyaki;",
+  "fx": "ripple"
+ },
+ {
+  "n": 18,
+  "sa": [
+   "द्रुपदो द्रौपदेयाश्च सर्वशः पृथिवीपते।",
+   "सौभद्रश्च महाबाहुः शङ्खान्दध्मुः पृथक्पृथक् ॥"
+  ],
+  "tr": [
+   "drupado draupadeyāśca sarvaśaḥ pṛthivīpate",
+   "saubhadraśca mahābāhuḥ śaṅkhāndadhmuḥ pṛthakpṛthak"
+  ],
+  "en": "Drupada, the sons of Draupadi and the mighty-armed son of Subhadra each blew their own conch, O lord of the earth.",
+  "fx": "ripple"
+ },
+ {
+  "n": 19,
+  "sa": [
+   "स घोषो धार्तराष्ट्राणां हृदयानि व्यदारयत्।",
+   "नभश्च पृथिवीं चैव तुमुलो व्यनुनादयन् ॥"
+  ],
+  "tr": [
+   "sa ghoṣo dhārtarāṣṭrāṇāṃ hṛdayāni vyadārayat",
+   "nabhaśca pṛthivīṃ caiva tumulo vyanunādayan"
+  ],
+  "en": "That roar echoed through earth and sky and tore at the hearts of Dhritarashtra's sons.",
+  "fx": "turbulence"
+ },
+ {
+  "n": 20,
+  "sa": [
+   "अथ व्यवस्थितान् दृष्ट्वा धार्तराष्ट्रान्कपिध्वजः।",
+   "प्रवृत्ते शस्त्रसंपाते धनुरुद्यम्य पाण्डवः ॥"
+  ],
+  "tr": [
+   "atha vyavasthitān dṛṣṭvā dhārtarāṣṭrānkapidhvajaḥ",
+   "pravṛtte śastrasaṃpāte dhanurudyamya pāṇḍavaḥ"
+  ],
+  "en": "Then, seeing Dhritarashtra's sons arrayed for battle and the weapons about to fly, Arjuna, whose banner bore Hanuman, lifted his bow",
+  "fx": "clash"
+ },
+ {
+  "n": 21,
+  "sa": [
+   "हृषीकेशं तदा वाक्यमिदमाह महीपते।",
+   "सेनयोरुभयोर्मध्ये रथं स्थापय मेऽच्युत ॥"
+  ],
+  "tr": [
+   "hṛṣīkeśaṃ tadā vākyamidamāha mahīpate",
+   "senayorubhayormadhye rathaṃ sthāpaya me'cyuta"
+  ],
+  "en": "and spoke to Krishna. Arjuna said: Achyuta, draw my chariot up between the two armies,",
+  "fx": "drift",
+  "speaker": "Arjuna said",
+  "speaker_at": 1
+ },
+ {
+  "n": 22,
+  "sa": [
+   "यावदेतान्निरीक्षेऽहं योद्धुकामानवस्थितान्।",
+   "कैर्मया सह योद्धव्यमस्मिन्रणसमुद्यमे ॥"
+  ],
+  "tr": [
+   "yāvadetānnirīkṣe'haṃ yoddhukāmānavasthitān",
+   "kairmayā saha yoddhavyamasminraṇasamudyame"
+  ],
+  "en": "so that I can look at those who stand here eager to fight, and see whom I must face in this battle.",
+  "fx": "drift"
+ },
+ {
+  "n": 23,
+  "sa": [
+   "योत्स्यमानानवेक्षेऽहं य एतेऽत्र समागताः।",
+   "धार्तराष्ट्रस्य दुर्बुद्धेर्युद्धे प्रियचिकीर्षवः ॥"
+  ],
+  "tr": [
+   "yotsyamānānavekṣe'haṃ ya ete'tra samāgatāḥ",
+   "dhārtarāṣṭrasya durbuddheryuddhe priyacikīrṣavaḥ"
+  ],
+  "en": "Let me see the men gathered here to fight, wanting to please the ill-minded son of Dhritarashtra.",
+  "fx": "march"
+ },
+ {
+  "n": 24,
+  "sa": [
+   "एवमुक्तो हृषीकेशो गुडाकेशेन भारत।",
+   "सेनयोरुभयोर्मध्ये स्थापयित्वा रथोत्तमम् ॥"
+  ],
+  "tr": [
+   "evamukto hṛṣīkeśo guḍākeśena bhārata",
+   "senayorubhayormadhye sthāpayitvā rathottamam"
+  ],
+  "en": "Asked this by Arjuna, Krishna drove the finest of chariots between the two armies,",
+  "fx": "drift",
+  "speaker": "Sanjaya said",
+  "speaker_at": 0
+ },
+ {
+  "n": 25,
+  "sa": [
+   "भीष्मद्रोणप्रमुखतः सर्वेषां च महीक्षिताम्।",
+   "उवाच पार्थ पश्यैतान्समवेतान्कुरूनिति ॥"
+  ],
+  "tr": [
+   "bhīṣmadroṇapramukhataḥ sarveṣāṃ ca mahīkṣitām",
+   "uvāca pārtha paśyaitānsamavetānkurūniti"
+  ],
+  "en": "in front of Bhishma, Drona and all the kings of the earth, and said: Partha, see all these Kurus gathered here.",
+  "fx": "drift"
+ },
+ {
+  "n": 26,
+  "sa": [
+   "तत्रापश्यत्स्थितान्पार्थः पितॄनथ पितामहान्।",
+   "आचार्यान्मातुलान्भ्रातॄन्पुत्रान्पौत्रान्सखींस्तथा ॥"
+  ],
+  "tr": [
+   "tatrāpaśyatsthitānpārthaḥ pitṝnatha pitāmahān",
+   "ācāryānmātulānbhrātṝnputrānpautrānsakhīṃstathā"
+  ],
+  "en": "There Arjuna saw, standing in both armies, fathers and grandfathers, teachers, uncles, brothers, sons, grandsons and friends,",
+  "fx": "expand"
+ },
+ {
+  "n": 27,
+  "sa": [
+   "श्वशुरान्सुहृदश्चैव सेनयोरुभयोरपि।",
+   "तान्समीक्ष्य स कौन्तेयः सर्वान्बन्धूनवस्थितान् ॥"
+  ],
+  "tr": [
+   "śvaśurānsuhṛdaścaiva senayorubhayorapi",
+   "tānsamīkṣya sa kaunteyaḥ sarvānbandhūnavasthitān"
+  ],
+  "en": "fathers-in-law and well-wishers. Seeing all these kinsmen arrayed before him, Arjuna, son of Kunti,",
+  "fx": "expand"
+ },
+ {
+  "n": 28,
+  "sa": [
+   "कृपया परयाऽऽविष्टो विषीदन्निदमब्रवीत्।",
+   "दृष्ट्वेमं स्वजनं कृष्ण युयुत्सुं समुपस्थितम् ॥"
+  ],
+  "tr": [
+   "kṛpayā parayā''viṣṭo viṣīdannidamabravīt",
+   "dṛṣṭvemaṃ svajanaṃ kṛṣṇa yuyutsuṃ samupasthitam"
+  ],
+  "en": "was overcome by deep compassion and spoke in sorrow. Arjuna said: Krishna, seeing my own people eager to fight,",
+  "fx": "sink",
+  "speaker": "Arjuna said",
+  "speaker_at": 1
+ },
+ {
+  "n": 29,
+  "sa": [
+   "सीदन्ति मम गात्राणि मुखं च परिशुष्यति।",
+   "वेपथुश्च शरीरे मे रोमहर्षश्च जायते ॥"
+  ],
+  "tr": [
+   "sīdanti mama gātrāṇi mukhaṃ ca pariśuṣyati",
+   "vepathuśca śarīre me romaharṣaśca jāyate"
+  ],
+  "en": "my limbs give way, my mouth goes dry, my body trembles and my hair stands on end.",
+  "fx": "turbulence"
+ },
+ {
+  "n": 30,
+  "sa": [
+   "गाण्डीवं स्रंसते हस्तात्त्वक्चैव परिदह्यते।",
+   "न च शक्नोम्यवस्थातुं भ्रमतीव च मे मनः ॥"
+  ],
+  "tr": [
+   "gāṇḍīvaṃ sraṃsate hastāttvakcaiva paridahyate",
+   "na ca śaknomyavasthātuṃ bhramatīva ca me manaḥ"
+  ],
+  "en": "The Gandiva slips from my hand and my skin is burning. I cannot stand steady; my mind is reeling.",
+  "fx": "fire"
+ },
+ {
+  "n": 31,
+  "sa": [
+   "निमित्तानि च पश्यामि विपरीतानि केशव।",
+   "न च श्रेयोऽनुपश्यामि हत्वा स्वजनमाहवे ॥"
+  ],
+  "tr": [
+   "nimittāni ca paśyāmi viparītāni keśava",
+   "na ca śreyo'nupaśyāmi hatvā svajanamāhave"
+  ],
+  "en": "I see evil omens, Keshava, and I see no good in killing my own kin in battle.",
+  "fx": "sink"
+ },
+ {
+  "n": 32,
+  "sa": [
+   "न काङ्क्षे विजयं कृष्ण न च राज्यं सुखानि च।",
+   "किं नो राज्येन गोविन्द किं भोगैर्जीवितेन वा ॥"
+  ],
+  "tr": [
+   "na kāṅkṣe vijayaṃ kṛṣṇa na ca rājyaṃ sukhāni ca",
+   "kiṃ no rājyena govinda kiṃ bhogairjīvitena vā"
+  ],
+  "en": "I do not want victory, Krishna, nor a kingdom, nor pleasures. What use is a kingdom to us, Govinda, or pleasure, or even life itself?",
+  "fx": "sink"
+ },
+ {
+  "n": 33,
+  "sa": [
+   "येषामर्थे काङ्क्षितं नो राज्यं भोगाः सुखानि च।",
+   "त इमेऽवस्थिता युद्धे प्राणांस्त्यक्त्वा धनानि च ॥"
+  ],
+  "tr": [
+   "yeṣāmarthe kāṅkṣitaṃ no rājyaṃ bhogāḥ sukhāni ca",
+   "ta ime'vasthitā yuddhe prāṇāṃstyaktvā dhanāni ca"
+  ],
+  "en": "Those for whose sake we want a kingdom, enjoyment and pleasure stand here in battle, ready to give up their lives and their wealth:",
+  "fx": "sink"
+ },
+ {
+  "n": 34,
+  "sa": [
+   "आचार्याः पितरः पुत्रास्तथैव च पितामहाः।",
+   "मातुलाः श्चशुराः पौत्राः श्यालाः सम्बन्धिनस्तथा ॥"
+  ],
+  "tr": [
+   "ācāryāḥ pitaraḥ putrāstathaiva ca pitāmahāḥ",
+   "mātulāḥ ścaśurāḥ pautrāḥ śyālāḥ sambandhinastathā"
+  ],
+  "en": "teachers, fathers, sons and grandfathers, uncles, fathers-in-law, grandsons, brothers-in-law and other kinsmen.",
+  "fx": "sink"
+ },
+ {
+  "n": 35,
+  "sa": [
+   "एतान्न हन्तुमिच्छामि घ्नतोऽपि मधुसूदन।",
+   "अपि त्रैलोक्यराज्यस्य हेतोः किं नु महीकृते ॥"
+  ],
+  "tr": [
+   "etānna hantumicchāmi ghnato'pi madhusūdana",
+   "api trailokyarājyasya hetoḥ kiṃ nu mahīkṛte"
+  ],
+  "en": "I do not want to kill them, Madhusudana, even if they kill me; not for rule over the three worlds, let alone for this earth.",
+  "fx": "sink"
+ },
+ {
+  "n": 36,
+  "sa": [
+   "निहत्य धार्तराष्ट्रान्नः का प्रीतिः स्याज्जनार्दन।",
+   "पापमेवाश्रयेदस्मान्हत्वैतानाततायिनः ॥"
+  ],
+  "tr": [
+   "nihatya dhārtarāṣṭrānnaḥ kā prītiḥ syājjanārdana",
+   "pāpamevāśrayedasmānhatvaitānātatāyinaḥ"
+  ],
+  "en": "What joy could we have from killing the sons of Dhritarashtra, Janardana? Only sin would come to us from slaying these aggressors.",
+  "fx": "sink"
+ },
+ {
+  "n": 37,
+  "sa": [
+   "तस्मान्नार्हा वयं हन्तुं धार्तराष्ट्रान्स्वबान्धवान्।",
+   "स्वजनं हि कथं हत्वा सुखिनः स्याम माधव ॥"
+  ],
+  "tr": [
+   "tasmānnārhā vayaṃ hantuṃ dhārtarāṣṭrānsvabāndhavān",
+   "svajanaṃ hi kathaṃ hatvā sukhinaḥ syāma mādhava"
+  ],
+  "en": "So it is not right for us to kill the sons of Dhritarashtra, our own kinsmen. How could we be happy, Madhava, after killing our own people?",
+  "fx": "sink"
+ },
+ {
+  "n": 38,
+  "sa": [
+   "यद्यप्येते न पश्यन्ति लोभोपहतचेतसः।",
+   "कुलक्षयकृतं दोषं मित्रद्रोहे च पातकम् ॥"
+  ],
+  "tr": [
+   "yadyapyete na paśyanti lobhopahatacetasaḥ",
+   "kulakṣayakṛtaṃ doṣaṃ mitradrohe ca pātakam"
+  ],
+  "en": "Even if they, their minds overcome by greed, see no wrong in destroying a family or in betraying friends,",
+  "fx": "drift"
+ },
+ {
+  "n": 39,
+  "sa": [
+   "कथं न ज्ञेयमस्माभिः पापादस्मान्निवर्तितुम्।",
+   "कुलक्षयकृतं दोषं प्रपश्यद्भिर्जनार्दन ॥"
+  ],
+  "tr": [
+   "kathaṃ na jñeyamasmābhiḥ pāpādasmānnivartitum",
+   "kulakṣayakṛtaṃ doṣaṃ prapaśyadbhirjanārdana"
+  ],
+  "en": "why should we, who see clearly the evil of destroying a family, not learn to turn away from this sin, Janardana?",
+  "fx": "drift"
+ },
+ {
+  "n": 40,
+  "sa": [
+   "कुलक्षये प्रणश्यन्ति कुलधर्माः सनातनाः।",
+   "धर्मे नष्टे कुलं कृत्स्नमधर्मोऽभिभवत्युत ॥"
+  ],
+  "tr": [
+   "kulakṣaye praṇaśyanti kuladharmāḥ sanātanāḥ",
+   "dharme naṣṭe kulaṃ kṛtsnamadharmo'bhibhavatyuta"
+  ],
+  "en": "When a family is destroyed, its timeless traditions perish; and when tradition perishes, disorder overtakes the whole family.",
+  "fx": "turbulence"
+ },
+ {
+  "n": 41,
+  "sa": [
+   "अधर्माभिभवात्कृष्ण प्रदुष्यन्ति कुलस्त्रियः।",
+   "स्त्रीषु दुष्टासु वार्ष्णेय जायते वर्णसङ्करः ॥"
+  ],
+  "tr": [
+   "adharmābhibhavātkṛṣṇa praduṣyanti kulastriyaḥ",
+   "strīṣu duṣṭāsu vārṣṇeya jāyate varṇasaṅkaraḥ"
+  ],
+  "en": "When disorder prevails, Krishna, the women of the family are led astray, and from that comes the mixing of social orders.",
+  "fx": "turbulence"
+ },
+ {
+  "n": 42,
+  "sa": [
+   "सङ्करो नरकायैव कुलघ्नानां कुलस्य च।",
+   "पतन्ति पितरो ह्येषां लुप्तपिण्डोदकक्रियाः ॥"
+  ],
+  "tr": [
+   "saṅkaro narakāyaiva kulaghnānāṃ kulasya ca",
+   "patanti pitaro hyeṣāṃ luptapiṇḍodakakriyāḥ"
+  ],
+  "en": "That confusion drags the family and its destroyers down to hell, and their ancestors fall too, deprived of the offerings of food and water.",
+  "fx": "turbulence"
+ },
+ {
+  "n": 43,
+  "sa": [
+   "दोषैरेतैः कुलघ्नानां वर्णसङ्करकारकैः।",
+   "उत्साद्यन्ते जातिधर्माः कुलधर्माश्च शाश्वताः ॥"
+  ],
+  "tr": [
+   "doṣairetaiḥ kulaghnānāṃ varṇasaṅkarakārakaiḥ",
+   "utsādyante jātidharmāḥ kuladharmāśca śāśvatāḥ"
+  ],
+  "en": "Through these wrongs of those who destroy families and cause the mixing of orders, the age-old duties of community and family are lost.",
+  "fx": "turbulence"
+ },
+ {
+  "n": 44,
+  "sa": [
+   "उत्सन्नकुलधर्माणां मनुष्याणां जनार्दन।",
+   "नरकेऽनियतं वासो भवतीत्यनुशुश्रुम ॥"
+  ],
+  "tr": [
+   "utsannakuladharmāṇāṃ manuṣyāṇāṃ janārdana",
+   "narake'niyataṃ vāso bhavatītyanuśuśruma"
+  ],
+  "en": "We have heard, Janardana, that people whose family traditions are destroyed live in hell for a long time.",
+  "fx": "sink"
+ },
+ {
+  "n": 45,
+  "sa": [
+   "अहो बत महत्पापं कर्तुं व्यवसिता वयम्।",
+   "यद्राज्यसुखलोभेन हन्तुं स्वजनमुद्यताः ॥"
+  ],
+  "tr": [
+   "aho bata mahatpāpaṃ kartuṃ vyavasitā vayam",
+   "yadrājyasukhalobhena hantuṃ svajanamudyatāḥ"
+  ],
+  "en": "Alas, how strange that we are set on committing a great sin, ready to kill our own kin out of greed for the pleasures of a kingdom.",
+  "fx": "sink"
+ },
+ {
+  "n": 46,
+  "sa": [
+   "यदि मामप्रतीकारमशस्त्रं शस्त्रपाणयः।",
+   "धार्तराष्ट्रा रणे हन्युस्तन्मे क्षेमतरं भवेत् ॥"
+  ],
+  "tr": [
+   "yadi māmapratīkāramaśastraṃ śastrapāṇayaḥ",
+   "dhārtarāṣṭrā raṇe hanyustanme kṣemataraṃ bhavet"
+  ],
+  "en": "It would be better for me if the sons of Dhritarashtra, weapons in hand, killed me in battle, unarmed and not fighting back.",
+  "fx": "sink"
+ },
+ {
+  "n": 47,
+  "sa": [
+   "एवमुक्त्वाऽर्जुनः संख्ये रथोपस्थ उपाविशत्।",
+   "विसृज्य सशरं चापं शोकसंविग्नमानसः ॥"
+  ],
+  "tr": [
+   "evamuktvā'rjunaḥ saṃkhye rathopastha upāviśat",
+   "visṛjya saśaraṃ cāpaṃ śokasaṃvignamānasaḥ"
+  ],
+  "en": "Having spoken this on the battlefield, Arjuna put aside his bow and arrows and sank down on the seat of the chariot, his mind overwhelmed by grief.",
+  "fx": "sink",
+  "speaker": "Sanjaya said",
+  "speaker_at": 0
+ }
+]

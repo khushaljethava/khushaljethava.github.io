@@ -1,0 +1,273 @@
+[
+ {
+  "n": 1,
+  "sa": "अर्जुनविषादयोग",
+  "name": "Arjuna Visada Yoga",
+  "meaning": "Arjuna's Dilemma",
+  "verses": 47,
+  "live": true,
+  "url": "/gita/chapter-1/",
+  "subtitle": "The Yoga of Arjuna's Despair",
+  "hero_shape": "om",
+  "summary": "On the eve of the great war, the blind king Dhritarashtra asks his charioteer Sanjaya what is happening at Kurukshetra. The armies are counted, the conches roar, and Arjuna asks Krishna to drive his chariot between the two sides. Seeing teachers, cousins and friends ready to die, the greatest archer of his age lays down his bow. Every journey into wisdom begins with an honest crisis.",
+  "sections": [
+   {
+    "id": "armies",
+    "label": "The Armies",
+    "shape": "archer",
+    "side": "right",
+    "to": 11,
+    "title": "Two armies, one question",
+    "intro": "The blind king can't see the field, so he asks. Duryodhana, anxious beneath his confidence, names warrior after warrior on both sides.",
+    "gyan": "Before you build anything, survey the field honestly: what you have, what you lack, and why you're really doing it.",
+    "from": 1
+   },
+   {
+    "id": "conches",
+    "label": "The Conches",
+    "shape": "conch",
+    "side": "left",
+    "to": 19,
+    "title": "The conches roar",
+    "intro": "Bhishma blows his conch and the whole battlefield answers. Krishna's Panchajanya and Arjuna's Devadatta ring out, each one named, and the sound shakes the hearts of the Kauravas.",
+    "gyan": "Every great undertaking has a moment when you commit out loud. After that, there's no pretending it isn't happening.",
+    "from": 12
+   },
+   {
+    "id": "chariot",
+    "label": "The Chariot",
+    "shape": "chariot",
+    "side": "right",
+    "to": 27,
+    "title": "Between the two armies",
+    "intro": "Arjuna, his banner bearing Hanuman, asks Krishna to place the chariot in the middle. Krishna does, and simply says: look.",
+    "gyan": "Sometimes the most useful thing a mentor can do is put you where you can see clearly, and then stay quiet.",
+    "from": 20
+   },
+   {
+    "id": "despair",
+    "label": "Arjuna's Despair",
+    "shape": "flute",
+    "side": "left",
+    "to": 47,
+    "title": "The bow falls",
+    "intro": "Facing his own family, Arjuna's body fails him and his reasoning spirals: kinship, sin, tradition, ruin. He sits down and lets the Gandiva drop. Krishna has not spoken yet. The flute is silent, waiting.",
+    "gyan": "Breakdowns often arrive dressed as good arguments. Naming the crisis is the first step; the answer begins in Chapter 2.",
+    "from": 28
+   }
+  ]
+ },
+ {
+  "n": 2,
+  "sa": "सांख्ययोग",
+  "name": "Sankhya Yoga",
+  "meaning": "Transcendental Knowledge",
+  "verses": 72,
+  "live": true,
+  "url": "/gita/chapter-2/",
+  "subtitle": "The Yoga of Knowledge",
+  "hero_shape": "chariot",
+  "summary": "Arjuna, in tears, asks to be taught. Krishna smiles and the Gita begins: the Self that is never born and never dies, the duty that is yours alone, the art of acting without clinging to results, and the portrait of a person whose wisdom stays steady. Chapter 2 holds the whole Gita in miniature.",
+  "sections": [
+   {
+    "id": "disciple",
+    "label": "The Disciple",
+    "shape": "archer",
+    "side": "right",
+    "to": 10,
+    "title": "Teach me, I take refuge in you",
+    "intro": "Krishna's first words are a challenge, not comfort. Arjuna argues back, then breaks open and becomes a student. \"I will not fight,\" he says, and falls silent.",
+    "gyan": "Real learning starts the moment you admit you don't know. Verse 2.7 is that moment.",
+    "from": 1
+   },
+   {
+    "id": "self",
+    "label": "The Self",
+    "shape": "om",
+    "side": "left",
+    "to": 30,
+    "title": "What never dies",
+    "intro": "Krishna begins with the eternal Self: never born, never dying, untouched by weapons, fire, water or wind. Bodies change like clothes; the one who wears them does not.",
+    "gyan": "Projects end, roles change, code gets rewritten. Who you are beneath the work is what lasts.",
+    "from": 11
+   },
+   {
+    "id": "dharma",
+    "label": "Svadharma",
+    "shape": "chakra",
+    "side": "right",
+    "to": 38,
+    "title": "Your own duty",
+    "intro": "Then a practical turn: as a warrior, this fight is Arjuna's duty. Walking away would cost him his honour; meeting victory and defeat alike would free him from sin.",
+    "gyan": "Know your craft and own it. Equanimity isn't indifference: it's showing up the same way whether you win or lose.",
+    "from": 31
+   },
+   {
+    "id": "karma-yoga",
+    "label": "Karma Yoga",
+    "shape": "palm",
+    "side": "left",
+    "to": 53,
+    "title": "Skill in action",
+    "intro": "Now the heart of it: act, but let go of the fruits. Evenness of mind is yoga, and yoga is skill in action. Here is the verse this whole site is built on, 2.47.",
+    "gyan": "Ship the work, learn, ship again. Do it well because it is yours to do, not for the metrics.",
+    "from": 39
+   },
+   {
+    "id": "steady-wisdom",
+    "label": "Steady Wisdom",
+    "shape": "lotus",
+    "side": "right",
+    "to": 72,
+    "title": "The one whose mind is still",
+    "intro": "Arjuna asks what a person of steady wisdom looks like. Krishna answers: content within, unshaken by sorrow or pleasure, senses gathered in like a tortoise's limbs, still as an ocean that rivers keep filling.",
+    "gyan": "Attachment, desire, anger, delusion, ruin (2.62–2.63) is a stack trace for the mind. Catch it at the first frame.",
+    "from": 54
+   }
+  ]
+ },
+ {
+  "n": 3,
+  "sa": "कर्मयोग",
+  "name": "Karma Yoga",
+  "meaning": "Path of Selfless Service",
+  "verses": 43,
+  "live": false,
+  "url": "/gita/chapter-3/"
+ },
+ {
+  "n": 4,
+  "sa": "ज्ञानकर्मसंन्यासयोग",
+  "name": "Jnana Karma Sanyasa Yoga",
+  "meaning": "Path of Knowledge and the Disciplines of Action",
+  "verses": 42,
+  "live": false,
+  "url": "/gita/chapter-4/"
+ },
+ {
+  "n": 5,
+  "sa": "कर्मसंन्यासयोग",
+  "name": "Karma Sanyasa Yoga",
+  "meaning": "Path of Renunciation",
+  "verses": 29,
+  "live": false,
+  "url": "/gita/chapter-5/"
+ },
+ {
+  "n": 6,
+  "sa": "ध्यानयोग",
+  "name": "Dhyana Yoga",
+  "meaning": "Path of Meditation",
+  "verses": 47,
+  "live": false,
+  "url": "/gita/chapter-6/"
+ },
+ {
+  "n": 7,
+  "sa": "ज्ञानविज्ञानयोग",
+  "name": "Gyaan Vigyana Yoga",
+  "meaning": "Self-Knowledge and Enlightenment",
+  "verses": 30,
+  "live": false,
+  "url": "/gita/chapter-7/"
+ },
+ {
+  "n": 8,
+  "sa": "अक्षरब्रह्मयोग",
+  "name": "Akshara Brahma Yoga",
+  "meaning": "Path of the Eternal God",
+  "verses": 28,
+  "live": false,
+  "url": "/gita/chapter-8/"
+ },
+ {
+  "n": 9,
+  "sa": "राजविद्याराजगुह्ययोग",
+  "name": "Raja Vidya Yoga",
+  "meaning": "Yoga through the King of Sciences",
+  "verses": 34,
+  "live": false,
+  "url": "/gita/chapter-9/"
+ },
+ {
+  "n": 10,
+  "sa": "विभूतियोग",
+  "name": "Vibhooti Yoga",
+  "meaning": "Yoga through Appreciating the Infinite Opulences of God",
+  "verses": 42,
+  "live": false,
+  "url": "/gita/chapter-10/"
+ },
+ {
+  "n": 11,
+  "sa": "विश्वरूपदर्शनयोग",
+  "name": "Vishwaroopa Darshana Yoga",
+  "meaning": "Yoga through Beholding the Cosmic Form of God",
+  "verses": 55,
+  "live": false,
+  "url": "/gita/chapter-11/"
+ },
+ {
+  "n": 12,
+  "sa": "भक्तियोग",
+  "name": "Bhakti Yoga",
+  "meaning": "The Yoga of Devotion",
+  "verses": 20,
+  "live": false,
+  "url": "/gita/chapter-12/"
+ },
+ {
+  "n": 13,
+  "sa": "क्षेत्र-क्षेत्रज्ञविभागयोग",
+  "name": "Ksetra Ksetrajna Vibhaaga Yoga",
+  "meaning": "Yoga through Distinguishing the Field and the Knower of the Field",
+  "verses": 35,
+  "live": false,
+  "url": "/gita/chapter-13/"
+ },
+ {
+  "n": 14,
+  "sa": "गुणत्रयविभागयोग",
+  "name": "Gunatraya Vibhaga Yoga",
+  "meaning": "Yoga through Understanding the Three Modes of Material Nature",
+  "verses": 27,
+  "live": false,
+  "url": "/gita/chapter-14/"
+ },
+ {
+  "n": 15,
+  "sa": "पुरुषोत्तमयोग",
+  "name": "Purushottama Yoga",
+  "meaning": "The Yoga of the Supreme Divine Personality",
+  "verses": 20,
+  "live": false,
+  "url": "/gita/chapter-15/"
+ },
+ {
+  "n": 16,
+  "sa": "दैवासुरसम्पद्विभागयोग",
+  "name": "Daivasura Sampad Vibhaga Yoga",
+  "meaning": "Yoga through Discerning the Divine and Demoniac Natures",
+  "verses": 24,
+  "live": false,
+  "url": "/gita/chapter-16/"
+ },
+ {
+  "n": 17,
+  "sa": "श्रद्धात्रयविभागयोग",
+  "name": "Sraddhatraya Vibhaga Yoga",
+  "meaning": "Yoga through Discerning the Three Divisions of Faith",
+  "verses": 28,
+  "live": false,
+  "url": "/gita/chapter-17/"
+ },
+ {
+  "n": 18,
+  "sa": "मोक्षसंन्यासयोग",
+  "name": "Moksha Sanyaas Yoga",
+  "meaning": "Yoga through the Perfection of Renunciation and Surrender",
+  "verses": 78,
+  "live": false,
+  "url": "/gita/chapter-18/"
+ }
+]

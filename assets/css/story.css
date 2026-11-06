@@ -487,6 +487,104 @@ body.story [lang='sa'] { font-family: var(--st-deva); font-style: normal; }
 }
 .st-footer p { margin: 0.3rem 0; }
 
+/* ---------- Gita Gyan: verses, scenes, chapter grid ---------- */
+.st-hero .st-title.gv-title { font-size: clamp(2.6rem, 5.5vw, 4.4rem); }
+.gv-chapter-sa { margin: -0.4rem 0 1rem; font-family: var(--st-deva); font-size: clamp(1.5rem, 3vw, 2rem); color: var(--st-gold); }
+.gv-scene { align-items: flex-start; }
+.gv {
+  position: relative;
+  margin: 1.1rem 0;
+  padding: 1.25rem 1.4rem 1.2rem;
+  border-radius: 16px;
+  border: 1px solid var(--st-line);
+  background: rgb(10 14 36 / 80%); /* solid, not blurred: there are up to 72 of these on a page */
+  scroll-margin-top: 90px;
+}
+.gv:target { border-color: var(--st-gold); }
+.gv-key { border-color: rgb(245 193 92 / 60%); box-shadow: 0 0 46px -18px var(--st-gold); }
+.gv-num {
+  position: absolute;
+  top: 0.85rem;
+  right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 0.6rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--st-gold) !important;
+  border: 1px solid rgb(245 193 92 / 30%);
+}
+.gv-speaker {
+  display: block;
+  margin: 0 0 0.55rem;
+  font-family: var(--st-sans);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--st-peacock) !important;
+  text-shadow: none;
+}
+.gv-speaker-inline { margin: 0.5rem 0 0.35rem; }
+.gv-sa {
+  margin: 0 3.5rem 0.65rem 0;
+  overflow-wrap: anywhere; /* sandhi compounds have no spaces and overflow narrow screens */
+  font-family: var(--st-deva);
+  font-size: clamp(1.15rem, 2.1vw, 1.4rem);
+  line-height: 1.75;
+  color: var(--st-gold) !important;
+  text-shadow: 0 0 18px rgb(245 193 92 / 22%);
+}
+.gv-tr { overflow-wrap: anywhere; margin: 0 0 0.8rem; font-style: italic; font-size: 0.92rem; line-height: 1.6; color: var(--st-muted) !important; }
+.gv-en { margin: 0; color: var(--st-ink) !important; line-height: 1.65; }
+.gv-gyan {
+  margin: 1.75rem 0 0;
+  padding: 1.1rem 1.3rem;
+  border-left: 3px solid var(--st-peacock);
+  border-radius: 0 14px 14px 0;
+  background: rgb(25 195 180 / 9%);
+}
+.gv-gyan b { display: block; margin-bottom: 0.35rem; font-size: 0.76rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--st-peacock); }
+.gv-gyan p { margin: 0; color: var(--st-ink); }
+.gv-pager { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem; margin-top: 2.5rem; }
+.gv-soon { opacity: 0.55; cursor: default; }
+.gv-soon:hover { transform: none; border-color: rgb(255 255 255 / 16%); background: rgb(255 255 255 / 4%); }
+
+.gv-chapters { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.75rem 0 0; padding: 0; list-style: none; }
+.gv-ch {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  height: 100%;
+  padding: 1rem 1.15rem;
+  border-radius: 14px;
+  border: 1px solid var(--st-line);
+  background: rgb(10 14 36 / 72%);
+  color: var(--st-ink) !important;
+  box-sizing: border-box;
+}
+.gv-ch-live { border-color: rgb(245 193 92 / 45%); transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; }
+.gv-ch-live:hover { transform: translateY(-3px); border-color: var(--st-gold); box-shadow: 0 14px 34px -20px var(--st-gold); }
+.gv-ch-soon { opacity: 0.5; }
+.gv-ch-n { font-size: 0.74rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--st-gold); }
+.gv-ch-sa { font-family: var(--st-deva); font-size: 1.25rem; color: var(--st-gold); }
+.gv-ch-name { font-weight: 600; }
+.gv-ch small { color: var(--st-muted); font-size: 0.82rem; }
+.gv-source { margin-top: 1.5rem; font-size: 0.82rem; color: var(--st-muted) !important; }
+
+/* Shloka recitation: words light up one after another the first time a verse reaches the middle */
+.st-js .gv .gw { color: rgb(245 193 92 / 34%); transition: color 0.3s ease; }
+.st-js .gv.lit .gw { animation: gw-light 0.7s ease forwards; animation-delay: calc(var(--w) * 110ms); }
+@keyframes gw-light {
+  0% { color: rgb(245 193 92 / 34%); text-shadow: none; }
+  55% { color: #fff1c9; text-shadow: 0 0 16px rgb(255 214 130 / 90%); }
+  100% { color: var(--st-gold); text-shadow: 0 0 18px rgb(245 193 92 / 22%); }
+}
+.gv { transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease; }
+.gv.active { border-color: rgb(245 193 92 / 55%); box-shadow: 0 0 50px -24px var(--st-gold); }
+
 /* ---------- Reveal choreography (only when JS is running) ---------- */
 .st-js .reveal > * {
   opacity: 0;
@@ -522,6 +620,10 @@ body.story [lang='sa'] { font-family: var(--st-deva); font-style: normal; }
 }
 @media (max-width: 600px) {
   .st-brand span { display: none; }
+  .st-nav-optional { display: none !important; }
+  .gv-chapters { grid-template-columns: 1fr; }
+  .gv { padding: 1.1rem 1rem 1rem; }
+  .gv-sa { margin-right: 3rem; }
   .st-nav nav a { padding: 0 0.6rem; font-size: 0.9rem; }
   .st-stats { grid-template-columns: repeat(2, 1fr); }
   .st-cards { grid-template-columns: 1fr; }
@@ -532,4 +634,5 @@ body.story [lang='sa'] { font-family: var(--st-deva); font-style: normal; }
   body.story *::before,
   body.story *::after { animation: none !important; transition: none !important; }
   .st-js .reveal > * { opacity: 1; transform: none; filter: none; }
+  .st-js .gv .gw { color: var(--st-gold); }
 }
