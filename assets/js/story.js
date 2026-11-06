@@ -34,7 +34,8 @@ const revealIO = new IntersectionObserver(
 reveals.forEach((el) => revealIO.observe(el));
 
 /* ---------- Gita: the shloka in the middle of the screen is "active" ---------- */
-const FX = ['ripple', 'sink', 'contract', 'expand', 'turbulence', 'drift', 'fire', 'water', 'sparkle', 'still', 'march', 'clash'];
+const FX = ['ripple', 'sink', 'contract', 'expand', 'turbulence', 'drift', 'fire', 'water', 'sparkle', 'still', 'march', 'clash', 'spin', 'rise', 'descend', 'ash'];
+const SPIN = FX.indexOf('spin');
 let activeFx = '';
 const verseCards = document.querySelectorAll('.gv[data-fx]');
 if (verseCards.length) {
@@ -657,7 +658,7 @@ async function initStage() {
     uMouse: { value: new THREE.Vector2(9, 9) },
     uAspect: { value: 1 },
     uPulse: { value: 0 },
-    uFx: { value: new Float32Array(12) },
+    uFx: { value: new Float32Array(16) },
   };
 
   const material = new THREE.ShaderMaterial({
@@ -667,7 +668,7 @@ async function initStage() {
     blending: THREE.AdditiveBlending,
     vertexShader: /* glsl */ `
       uniform float uTime, uProgress, uSize, uPixelRatio, uAspect, uPulse;
-      uniform float uFx[12]; /* ripple sink contract expand turbulence drift fire water sparkle still march clash */
+      uniform float uFx[16]; /* ripple sink contract expand turbulence drift fire water sparkle still march clash spin rise descend ash */
       uniform vec2 uMouse;
       attribute vec3 aTo, aColA, aColB;
       attribute float aRand;
@@ -691,6 +692,16 @@ async function initStage() {
         pos.y += uFx[6] * 0.3 * fract(aRand * 7.0 + uTime * 0.7);                           /* fire: rising flicker */
         pos.y += uFx[7] * 0.13 * sin(pos.x * 3.0 + uTime * 2.2);                            /* water: waves */
         pos += dirC * uFx[11] * 0.32 * pow(abs(sin(uTime * 1.8)), 10.0);                    /* clash: sharp bursts */
+        /* spin turns the whole shape (JS, spinZ); here the rim lags a little, like a turning wheel */
+        pos.xy += uFx[12] * 0.06 * vec2(-pos.y, pos.x) * sin(rad * 3.0 - uTime * 2.0);
+        float hp = step(0.5, aRand);                                                       /* rise, descend, ash move half the particles */
+        float riseT = fract(aRand * 13.0 + uTime * 0.18);
+        pos.y += uFx[13] * hp * 1.3 * riseT;                                               /* rise: offering smoke */
+        pos.x += uFx[13] * hp * 0.16 * riseT * sin(uTime * 1.3 + pos.y * 4.0 + aRand * 6.0);
+        float fallT = 1.0 - smoothstep(0.0, 1.0, fract(aRand * 11.0 + uTime * 0.3));
+        pos.y += uFx[14] * hp * 1.8 * fallT;                                               /* descend: light pouring down */
+        float ashT = fract(aRand * 5.0 + uTime * 0.2);
+        pos += uFx[15] * hp * ashT * (dirC * 0.25 + vec3(0.0, 0.45, 0.0));                 /* ash: flakes lift off the burning shape */
         vec4 mv = modelViewMatrix * vec4(pos, 1.0);
         gl_Position = projectionMatrix * mv;
         vec2 ndc = gl_Position.xy / gl_Position.w;
@@ -706,9 +717,13 @@ async function initStage() {
         c = mix(c, vec3(dot(c, vec3(0.33))), uFx[1] * 0.6);                                 /* grief drains colour */
         c *= 1.0 + 0.35 * uFx[3];
         c += vec3(1.0, 0.95, 0.8) * uFx[8] * pow(aRand, 5.0) * (0.5 + 0.5 * sin(uTime * 6.0 + aRand * 40.0)); /* sparkle */
+        c = mix(c, vec3(0.88, 0.9, 0.95), uFx[13] * hp * 0.6);                           /* smoke whitens */
+        c = mix(c, vec3(1.0, 0.86, 0.45), uFx[14] * (0.25 + 0.5 * hp * fallT));           /* golden descent */
+        c = mix(c, vec3(dot(c, vec3(0.3))) * 0.8, uFx[15] * hp * ashT);                   /* burnt to grey ash */
+        c += vec3(1.0, 0.38, 0.08) * uFx[15] * pow(1.0 - ashT, 6.0) * 1.5;                  /* last embers */
         c = mix(c, vec3(1.0), pow(aRand, 14.0) + f * 0.4);
         vColor = c;
-        vAlpha = 0.5 + f * 0.4 + burst * 0.15;
+        vAlpha = (0.5 + f * 0.4 + burst * 0.15) * (1.0 - hp * riseT * uFx[13] * 0.8) * (1.0 - hp * ashT * uFx[15] * 0.7);
       }`,
     fragmentShader: /* glsl */ `
       varying vec3 vColor;
@@ -953,13 +968,14 @@ async function initStage() {
     const weight = (name) => (shapeAt(cur) === name ? wA : 0) + (shapeAt(nxt) === name ? wB : 0);
 
     /* Sudarshan Chakra spins; when it leaves, the rotation settles back to upright */
-    const wc = weight('chakra');
-    const upright = Math.round(spinZ / TAU) * TAU;
-    spinZ += dt * 1.8 * wc + (upright - spinZ) * 0.04 * (1 - wc);
-    uniforms.uPulse.value = weight('neural');
     /* fade each shloka's effect in, and the previous one out */
     const fxv = uniforms.uFx.value;
     for (let k = 0; k < FX.length; k++) fxv[k] += ((FX[k] === activeFx ? 1 : 0) - fxv[k]) * Math.min(1, dt * 2.5);
+    /* Sudarshan Chakra (and the 'spin' shloka effect) turns; when it stops, the rotation settles back to upright */
+    const wc = Math.max(weight('chakra'), fxv[SPIN]);
+    const upright = Math.round(spinZ / TAU) * TAU;
+    spinZ += dt * 1.8 * wc + (upright - spinZ) * 0.04 * (1 - wc);
+    uniforms.uPulse.value = weight('neural');
     const wPalm = weight('palm');
     updateCosmos(wPalm);
 

@@ -143,8 +143,68 @@
   "name": "Karma Yoga",
   "meaning": "Path of Selfless Service",
   "verses": 43,
-  "live": false,
-  "url": "/gita/chapter-3/"
+  "live": true,
+  "url": "/gita/chapter-3/",
+  "subtitle": "The Yoga of Action",
+  "hero_shape": "sunWheel",
+  "summary": "Arjuna, confused, asks why he must act at all if knowledge is higher. Krishna's answer is the yoga of action: no one can stop acting, so act as an offering, keep the great wheel of the world turning, lead by example, and know the real enemy, desire, which hides wisdom the way smoke hides fire. Like the sun, the wise never stop working.",
+  "sections": [
+   {
+    "id": "why-act",
+    "label": "Why Act?",
+    "shape": "gunaBraid",
+    "side": "right",
+    "to": 8,
+    "title": "No one is ever still",
+    "intro": "If knowledge is higher, Arjuna asks, why push me into this terrible war? Krishna answers that no one can stay without acting even for a moment: the three qualities of nature keep everyone moving. Better to act well than to pretend to renounce.",
+    "gyan": "Doing nothing is not an option, only a disguise. The real choice is how you act, not whether.",
+    "from": 1
+   },
+   {
+    "id": "yajna",
+    "label": "The Wheel of Yajna",
+    "shape": "yajnaChakra",
+    "side": "left",
+    "to": 16,
+    "title": "Work as an offering",
+    "intro": "Krishna describes the great cycle: action becomes offering, offering brings rain, rain brings grain, grain sustains beings, and beings act again (3.14). Whoever only takes from the wheel and gives nothing back, he says, is simply a thief.",
+    "gyan": "Everything you rely on was built by someone else's work. Give back to the wheel: docs, reviews, open source, mentoring.",
+    "from": 9
+   },
+   {
+    "id": "example",
+    "label": "Lead by Example",
+    "shape": "diyaChain",
+    "side": "right",
+    "to": 26,
+    "title": "Whatever the best do, others follow",
+    "intro": "Even one who needs nothing should keep working for the good of the world, as King Janaka did. Krishna himself, with nothing left to gain, never stops, because if he did, everyone would follow. One lamp lights the next.",
+    "gyan": "People copy what you do, not what you say. If you lead, work like the standard you want the team to keep.",
+    "from": 17
+   },
+   {
+    "id": "doer",
+    "label": "The Doer",
+    "shape": "puppet",
+    "side": "left",
+    "to": 35,
+    "title": "\"I am the doer\"",
+    "intro": "Nature's qualities do the work, yet the ego wears the crown and says \"I did this.\" Krishna asks Arjuna to offer every action to him, to watch the pull of liking and disliking, and to keep to his own dharma, even imperfectly, rather than live someone else's well.",
+    "gyan": "Your own path done imperfectly beats someone else's done well (3.35). Stop benchmarking against other people's lives.",
+    "from": 27
+   },
+   {
+    "id": "desire",
+    "label": "The Enemy",
+    "shape": "veiledFire",
+    "side": "right",
+    "to": 43,
+    "title": "Fire covered by smoke",
+    "intro": "What pushes people into wrong, Arjuna asks, even against their will? Desire, says Krishna, and its twin, anger. It covers wisdom as smoke covers fire, dust a mirror, the womb an unborn child. It lives in the senses, mind and intellect, but the Self is higher than all three.",
+    "gyan": "Senses, mind, intellect, Self (3.42): know the chain of command, and let the highest one decide.",
+    "from": 36
+   }
+  ]
  },
  {
   "n": 4,
@@ -152,8 +212,79 @@
   "name": "Jnana Karma Sanyasa Yoga",
   "meaning": "Path of Knowledge and the Disciplines of Action",
   "verses": 42,
-  "live": false,
-  "url": "/gita/chapter-4/"
+  "live": true,
+  "url": "/gita/chapter-4/",
+  "subtitle": "The Yoga of Knowledge and Renunciation of Action",
+  "hero_shape": "jnanaSword",
+  "summary": "Krishna reveals that this yoga is ancient, handed down from the sun, and that he himself comes into the world age after age whenever dharma falls. Then the deeper teaching: seeing inaction in action, treating every act as an offering, and the knowledge that burns karma to ash and cuts doubt like a sword.",
+  "sections": [
+   {
+    "id": "lineage",
+    "label": "The Lineage",
+    "shape": "lineage",
+    "side": "right",
+    "to": 3,
+    "title": "An ancient yoga, handed down",
+    "intro": "This teaching is not new. Krishna gave it to the sun, the sun to Manu, Manu to King Ikshvaku. Passed from teacher to student, it was lost over time, and now he gives it again, to Arjuna, his friend.",
+    "gyan": "Knowledge survives only when someone passes it on. Write it down, teach it, hand it forward.",
+    "from": 1
+   },
+   {
+    "id": "avatara",
+    "label": "The Avatar",
+    "shape": "avatara",
+    "side": "left",
+    "to": 10,
+    "title": "Age after age",
+    "intro": "How could Krishna, born so recently, have taught the ancient sun? He reveals that he has had many births, and that whenever dharma declines he comes forth, to protect the good, end wrongdoing and set dharma on its feet again (4.7–4.8).",
+    "gyan": "When things break down, someone has to step in. Sometimes that someone is you.",
+    "from": 4
+   },
+   {
+    "id": "paths",
+    "label": "All Paths",
+    "shape": "allPaths",
+    "side": "right",
+    "to": 15,
+    "title": "However you come, I receive you",
+    "intro": "Whichever way people approach him, Krishna meets them there. He acts in the world yet is never stained by it, and those who understand this act freely, as the seekers of old did.",
+    "gyan": "There's no single right way in. Begin from where you are.",
+    "from": 11
+   },
+   {
+    "id": "inaction",
+    "label": "Action in Inaction",
+    "shape": "stillHub",
+    "side": "left",
+    "to": 23,
+    "title": "The still centre of the wheel",
+    "intro": "What is action, and what is inaction? Even sages are confused. The wise see inaction in action and action in inaction: fully engaged, yet doing nothing, because the craving for results has been burned away in the fire of knowledge.",
+    "gyan": "The best engineers in a crisis are the busiest and the calmest at once. Do the work fully; let the centre stay still.",
+    "from": 16
+   },
+   {
+    "id": "offerings",
+    "label": "Many Offerings",
+    "shape": "yajnaLadle",
+    "side": "right",
+    "to": 33,
+    "title": "Everything is an offering",
+    "intro": "It opens with 4.24, recited before meals across India: the offering, the ladle, the fire and the one who offers are all Brahman. Then Krishna names the many forms of yajna: wealth, austerity, study, breath, the senses themselves. Greatest of all is the offering of knowledge.",
+    "gyan": "Time, attention, effort, breath: everything you put into the work is an offering. Choose where it goes.",
+    "from": 24
+   },
+   {
+    "id": "knowledge",
+    "label": "The Fire of Knowledge",
+    "shape": "jnanaBoat",
+    "side": "left",
+    "to": 42,
+    "title": "The boat and the sword",
+    "intro": "Learn from those who have seen the truth, with humility, questions and service. Knowledge is a boat across every wrong and a fire that turns action to ash. Doubt destroys, so cut it with the sword of knowledge, and stand up.",
+    "gyan": "Ask good questions of people who know (4.34). Then cut the doubt and get up. The answer was never to stay seated.",
+    "from": 34
+   }
+  ]
  },
  {
   "n": 5,

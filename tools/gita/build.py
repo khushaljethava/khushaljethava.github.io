@@ -2,8 +2,8 @@ import json, re, sys, os
 from indic_transliteration import sanscript
 from indic_transliteration.sanscript import transliterate
 sys.path.insert(0, os.path.dirname(__file__))
-from meanings import CH1, CH2
-from fx import CH1_FX, CH2_FX
+from meanings import CH1, CH2, CH3, CH4
+from fx import CH1_FX, CH2_FX, CH3_FX, CH4_FX
 data_dir, out_dir = sys.argv[1], sys.argv[2]
 verses = json.load(open(os.path.join(data_dir, 'verse.json')))
 chapters = json.load(open(os.path.join(data_dir, 'chapters.json')))
@@ -20,6 +20,8 @@ SPEAKER_AT = {(1, 21): 1, (1, 28): 1}
 def clean_sa(text):
     # dataset glitch: vowel sign ृ followed by a nukta stands for the long ॄ (e.g. पितॄन्)
     text = text.replace('ृ़', 'ॄ')
+    # dataset glitch: vowel sign typed before the conjunct's second consonant (निश्िचत -> निश्चित), stray nukta on ो
+    text = re.sub('्ि([क-ह])', '्\\1ि', text).replace('ो़', 'ो')
     lines = [l.strip() for l in text.split('\n')]
     lines = [re.sub(r'\s*।।\s*\d+\.\d+\s*।।\s*$', ' ॥', l) for l in lines if l]
     return lines
@@ -46,6 +48,8 @@ def chapter_verses(n, meanings, fx, key_verses=()):
 
 ch1 = chapter_verses(1, CH1, CH1_FX)
 ch2 = chapter_verses(2, CH2, CH2_FX, key_verses=(47,))
+ch3 = chapter_verses(3, CH3, CH3_FX, key_verses=(21, 35))
+ch4 = chapter_verses(4, CH4, CH4_FX, key_verses=(7, 8, 24))
 
 SECTIONS = {
  1: dict(
@@ -95,6 +99,55 @@ SECTIONS = {
         intro="Krishna traces how a mind falls (attachment, desire, anger, delusion, ruin) and how it is saved: discipline, calm, peace. The wise are like the ocean: rivers keep pouring in, and it stays full and still.",
         gyan="Attachment, desire, anger, delusion, ruin (2.62–2.63) is a stack trace for the mind. Catch it at the first frame."),
   ]),
+ 3: dict(
+  subtitle="The Yoga of Action",
+  hero_shape='sunWheel',
+  summary=("Arjuna, confused, asks why he must act at all if knowledge is higher. Krishna's answer is the yoga of action: "
+           "no one can stop acting, so act as an offering, keep the great wheel of the world turning, lead by example, and "
+           "know the real enemy, desire, which hides wisdom the way smoke hides fire. Like the sun, the wise never stop working."),
+  sections=[
+   dict(id='why-act', label='Why Act?', shape='gunaBraid', side='right', frm=1, to=8, title='No one is ever still',
+        intro="If knowledge is higher, Arjuna asks, why push me into this terrible war? Krishna answers that no one can stay without acting even for a moment: the three qualities of nature keep everyone moving. Better to act well than to pretend to renounce.",
+        gyan="Doing nothing is not an option, only a disguise. The real choice is how you act, not whether."),
+   dict(id='yajna', label='The Wheel of Yajna', shape='yajnaChakra', side='left', frm=9, to=16, title='Work as an offering',
+        intro="Krishna describes the great cycle: action becomes offering, offering brings rain, rain brings grain, grain sustains beings, and beings act again (3.14). Whoever only takes from the wheel and gives nothing back, he says, is simply a thief.",
+        gyan="Everything you rely on was built by someone else's work. Give back to the wheel: docs, reviews, open source, mentoring."),
+   dict(id='example', label='Lead by Example', shape='diyaChain', side='right', frm=17, to=26, title='Whatever the best do, others follow',
+        intro="Even one who needs nothing should keep working for the good of the world, as King Janaka did. Krishna himself, with nothing left to gain, never stops, because if he did, everyone would follow. One lamp lights the next.",
+        gyan="People copy what you do, not what you say. If you lead, work like the standard you want the team to keep."),
+   dict(id='doer', label='The Doer', shape='puppet', side='left', frm=27, to=35, title='"I am the doer"',
+        intro="Nature's qualities do the work, yet the ego wears the crown and says \"I did this.\" Krishna asks Arjuna to offer every action to him, to watch the pull of liking and disliking, and to keep to his own dharma, even imperfectly, rather than live someone else's well.",
+        gyan="Your own path done imperfectly beats someone else's done well (3.35). Stop benchmarking against other people's lives."),
+   dict(id='desire', label='The Enemy', shape='veiledFire', side='right', frm=36, to=43, title='Fire covered by smoke',
+        intro="What pushes people into wrong, Arjuna asks, even against their will? Desire, says Krishna, and its twin, anger. It covers wisdom as smoke covers fire, dust a mirror, the womb an unborn child. It lives in the senses, mind and intellect, but the Self is higher than all three.",
+        gyan="Senses, mind, intellect, Self (3.42): know the chain of command, and let the highest one decide."),
+  ]),
+ 4: dict(
+  subtitle="The Yoga of Knowledge and Renunciation of Action",
+  hero_shape='jnanaSword',
+  summary=("Krishna reveals that this yoga is ancient, handed down from the sun, and that he himself comes into the world age "
+           "after age whenever dharma falls. Then the deeper teaching: seeing inaction in action, treating every act as an "
+           "offering, and the knowledge that burns karma to ash and cuts doubt like a sword."),
+  sections=[
+   dict(id='lineage', label='The Lineage', shape='lineage', side='right', frm=1, to=3, title='An ancient yoga, handed down',
+        intro="This teaching is not new. Krishna gave it to the sun, the sun to Manu, Manu to King Ikshvaku. Passed from teacher to student, it was lost over time, and now he gives it again, to Arjuna, his friend.",
+        gyan="Knowledge survives only when someone passes it on. Write it down, teach it, hand it forward."),
+   dict(id='avatara', label='The Avatar', shape='avatara', side='left', frm=4, to=10, title='Age after age',
+        intro="How could Krishna, born so recently, have taught the ancient sun? He reveals that he has had many births, and that whenever dharma declines he comes forth, to protect the good, end wrongdoing and set dharma on its feet again (4.7–4.8).",
+        gyan="When things break down, someone has to step in. Sometimes that someone is you."),
+   dict(id='paths', label='All Paths', shape='allPaths', side='right', frm=11, to=15, title='However you come, I receive you',
+        intro="Whichever way people approach him, Krishna meets them there. He acts in the world yet is never stained by it, and those who understand this act freely, as the seekers of old did.",
+        gyan="There's no single right way in. Begin from where you are."),
+   dict(id='inaction', label='Action in Inaction', shape='stillHub', side='left', frm=16, to=23, title='The still centre of the wheel',
+        intro="What is action, and what is inaction? Even sages are confused. The wise see inaction in action and action in inaction: fully engaged, yet doing nothing, because the craving for results has been burned away in the fire of knowledge.",
+        gyan="The best engineers in a crisis are the busiest and the calmest at once. Do the work fully; let the centre stay still."),
+   dict(id='offerings', label='Many Offerings', shape='yajnaLadle', side='right', frm=24, to=33, title='Everything is an offering',
+        intro="It opens with 4.24, recited before meals across India: the offering, the ladle, the fire and the one who offers are all Brahman. Then Krishna names the many forms of yajna: wealth, austerity, study, breath, the senses themselves. Greatest of all is the offering of knowledge.",
+        gyan="Time, attention, effort, breath: everything you put into the work is an offering. Choose where it goes."),
+   dict(id='knowledge', label='The Fire of Knowledge', shape='jnanaBoat', side='left', frm=34, to=42, title='The boat and the sword',
+        intro="Learn from those who have seen the truth, with humility, questions and service. Knowledge is a boat across every wrong and a fire that turns action to ash. Doubt destroys, so cut it with the sword of knowledge, and stand up.",
+        gyan="Ask good questions of people who know (4.34). Then cut the doubt and get up. The answer was never to stay seated."),
+  ]),
 }
 
 meta = []
@@ -111,10 +164,11 @@ for c in sorted(chapters, key=lambda c: c['chapter_number']):
     meta.append(m)
 
 os.makedirs(out_dir, exist_ok=True)
-for name, obj in [('chapters', meta), ('chapter-1', ch1), ('chapter-2', ch2)]:
+for name, obj in [('chapters', meta), ('chapter-1', ch1), ('chapter-2', ch2), ('chapter-3', ch3), ('chapter-4', ch4)]:
     with open(os.path.join(out_dir, name + '.json'), 'w', encoding='utf-8') as f:
         json.dump(obj, f, ensure_ascii=False, indent=1)
-print('chapters', len(meta), '| ch1', len(ch1), '| ch2', len(ch2))
+print('chapters', len(meta), '| ch1', len(ch1), '| ch2', len(ch2), '| ch3', len(ch3), '| ch4', len(ch4))
+print('speakers ch3/4:', [(v['n'], v['speaker']) for v in ch3 + ch4 if 'speaker' in v])
 print('speakers ch1:', sorted({v['speaker'] for v in ch1 if 'speaker' in v}))
 print('sample 2.47:', ch2[46]['sa'], ch2[46]['tr'])
 print('sample 1.1 :', ch1[0].get('speaker'), ch1[0]['sa'])
