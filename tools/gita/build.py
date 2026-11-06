@@ -448,6 +448,32 @@ SECTIONS[16] = dict(
         gyan="Before a decision, check the three gates: am I acting from craving, from anger or from greed? If so, wait."),
   ])
 
+KEY_VERSES[17] = (3, 15, 20)
+SECTIONS[17] = dict(
+  subtitle="The Yoga of the Three Kinds of Faith",
+  hero_shape='faithFigure',
+  summary=("What about people who don't follow the rules but do have faith? Krishna answers that faith itself comes in "
+           "three kinds, because a person is made of their faith (17.3). Then he runs everything through the three qualities: "
+           "food, sacrifice, austerity of body, speech and mind, and giving. It ends with the threefold name Om Tat Sat, and "
+           "one warning: without faith, nothing counts."),
+  sections=[
+   dict(id='faith', label='Three Faiths', shape='threeShrines', side='right', frm=1, to=6, title='You are what you have faith in',
+        intro="Faith takes the shape of one's inner being: \"a person is made of their faith; as their faith is, so are they\" (17.3). People of goodness worship the divine, people of passion worship power, people of dullness worship ghosts. And some torture their own bodies for show, which is not faith at all.",
+        gyan="What you trust shapes who you become. Choose what you put your faith in as carefully as anything you build."),
+   dict(id='food', label='Food and Sacrifice', shape='threeBowls', side='left', frm=7, to=13, title='Three kinds of food',
+        intro="Even food comes in three kinds. Food that is fresh, nourishing and pleasing to the heart belongs to goodness; food that is too hot, sour, pungent and burning belongs to passion; stale, spoiled leftovers belong to dullness (17.8–10). Sacrifice too: done because it ought to be, done for reward or show, or done carelessly.",
+        gyan="You are partly made of what you eat and what you consume. That goes for feeds and news too."),
+   dict(id='austerity', label='Body, Speech, Mind', shape='triTapas', side='right', frm=14, to=19, title='Speech that causes no distress',
+        intro="Austerity has three places. Of the body: reverence, purity, honesty, non-violence. Of speech: words that cause no distress and are truthful, kind and useful (17.15). Of the mind: serenity, gentleness, silence, self-control. Done for show, it is fleeting; done to hurt, it is dull.",
+        gyan="True, kind and useful: if a sentence fails one of the three, rewrite it before you send it."),
+   dict(id='giving', label='Giving', shape='givingHand', side='left', frm=20, to=22, title='A gift that expects nothing',
+        intro="The best gift is given simply because it should be, to someone who can't repay it, at the right time and place (17.20). A gift given grudgingly or for a return belongs to passion; one given carelessly or with contempt belongs to dullness.",
+        gyan="Give to people who can't give back, and don't keep score."),
+   dict(id='om-tat-sat', label='Om Tat Sat', shape='omTatSat', side='right', frm=23, to=28, title='The threefold name',
+        intro="Om Tat Sat is the threefold name of Brahman (17.23). Begin with Om; act with Tat, without seeking reward; Sat means what is real and good. But whatever is done without faith, whether sacrifice, gift or austerity, is asat: of no use here or hereafter (17.28).",
+        gyan="Start with intent, act without grasping, aim at what's real. And mean it, because hollow effort counts for nothing."),
+  ])
+
 # every chapter with scenes in SECTIONS gets built; its meanings and effects must exist too
 chs = {n: chapter_verses(n, getattr(meanings, f'CH{n}'), getattr(fx, f'CH{n}_FX'), KEY_VERSES.get(n, ())) for n in sorted(SECTIONS)}
 

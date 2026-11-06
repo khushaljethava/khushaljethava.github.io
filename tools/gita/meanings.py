@@ -648,3 +648,35 @@ CH16 = [
  'So let scripture be your authority in deciding what should and should not be done. Knowing what scripture prescribes, you should act in this world.',
 ]
 assert len(CH16) == 24
+
+CH17 = [
+ 'Those who set aside the rules of scripture yet worship with faith, Krishna: what is their standing? Is it goodness, passion or dullness?',
+ 'The faith of embodied beings is of three kinds, born of their own nature: of goodness, of passion and of dullness. Hear about it.',
+ "Everyone's faith takes the shape of their inner being, Bharata. A person is made of their faith; as their faith is, so are they.",
+ 'People of goodness worship the gods; people of passion worship yakshas and rakshasas; and others, of dullness, worship ghosts and spirits.',
+ 'Those who practise terrible austerities not taught by scripture, given to hypocrisy and ego, driven by desire, attachment and force,',
+ 'senseless, tormenting the elements in the body and me who dwell within the body: know them to be of demonic resolve.',
+ 'Even the food that each person likes is of three kinds, and so are sacrifice, austerity and giving. Hear how they differ.',
+ 'Foods that increase life, vitality, strength, health, happiness and cheer, that are savoury, smooth, nourishing and pleasing to the heart, are dear to people of goodness.',
+ 'Foods that are bitter, sour, salty, too hot, pungent, dry and burning, bringing pain, grief and sickness, are liked by people of passion.',
+ 'Food that is stale, tasteless, putrid, spoiled, left over and impure is dear to people of dullness.',
+ 'The sacrifice offered as scripture directs by those who seek no reward, with the mind fixed on the thought "this ought to be done," is of goodness.',
+ 'But the sacrifice performed with an eye on its reward, or for show, know that to be of passion, best of the Bharatas.',
+ 'The sacrifice that ignores scripture, shares no food, has no mantras, no gifts to the priests and no faith, is called one of dullness.',
+ 'Reverence for the gods, the twice-born, teachers and the wise; purity, uprightness, celibacy and non-violence: this is called austerity of the body.',
+ 'Speech that causes no distress, that is truthful, pleasant and beneficial, and the regular study of sacred texts: this is called austerity of speech.',
+ 'Serenity of mind, gentleness, silence, self-control and purity of heart: this is called austerity of the mind.',
+ 'This threefold austerity, practised with supreme faith by disciplined people who seek no reward, is said to be of goodness.',
+ 'Austerity practised to gain respect, honour and reverence, or for show, is said to be of passion; it is unstable and fleeting.',
+ 'Austerity practised out of foolish obstinacy, by tormenting oneself, or to harm another, is said to be of dullness.',
+ 'A gift given because it ought to be given, to one who can give nothing in return, at the right place and time and to a worthy person, is held to be of goodness.',
+ 'A gift given grudgingly, expecting something in return or with an eye on the reward, is held to be of passion.',
+ 'A gift given at the wrong place and time to the unworthy, without respect or with contempt, is said to be of dullness.',
+ '"Om Tat Sat": this is said to be the threefold name of Brahman. By it, of old, the brahmins, the Vedas and the sacrifices were ordained.',
+ 'So those who follow Brahman always begin the acts of sacrifice, giving and austerity taught by scripture by uttering "Om".',
+ 'Uttering "Tat", seekers of freedom perform the various acts of sacrifice, austerity and giving without aiming at reward.',
+ '"Sat" is used in the sense of reality and of goodness; and the word "Sat" is also used for a praiseworthy act, Partha.',
+ 'Steadfastness in sacrifice, austerity and giving is also called "Sat", and so is any action done for that purpose.',
+ 'Whatever is offered, given or practised as austerity without faith is called "asat", Partha; it is of no use here or hereafter.',
+]
+assert len(CH17) == 28

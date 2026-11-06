@@ -570,3 +570,33 @@ CH16_FX = spread(
     ([24], 'still'),                             # let scripture be your guide
 )
 assert sorted(CH16_FX) == list(range(1, 25))
+CH17_FX = spread(
+    ([1], 'drift'),                              # what of faith without the rules?
+    ([2], 'gunas'),                              # three kinds of faith
+    ([3], 'gather'),                             # a person is made of their faith
+    ([4], 'gunas'),
+    ([5], 'clash'),                              # terrible austerities
+    ([6], 'turbulence'),
+    ([7], 'gunas'),                              # food, sacrifice, austerity, giving
+    ([8], 'sparkle'),                            # food that nourishes
+    ([9], 'fire'),                               # pungent, burning
+    ([10], 'sink'),                              # stale and spoiled
+    ([11], 'rise'),                              # "this ought to be done"
+    ([12], 'veil'),                              # for show
+    ([13], 'sink'),
+    ([14], 'still'),                             # austerity of the body
+    ([15], 'ripple'),                            # austerity of speech
+    ([16], 'breathe'),                           # austerity of the mind
+    ([17], 'sparkle'),
+    ([18], 'scatter'),                           # unstable and fleeting
+    ([19], 'clash'),                             # tormenting oneself
+    ([20], 'sparkle'),                           # the gift of goodness
+    ([21], 'drift'),                             # given grudgingly
+    ([22], 'sink'),
+    ([23], 'ripple'),                            # Om Tat Sat
+    ([24], 'rise'),                              # Om
+    ([25], 'still'),                             # Tat
+    ([26, 27], 'sparkle'),                       # Sat
+    ([28], 'ash'),                               # without faith, of no use
+)
+assert sorted(CH17_FX) == list(range(1, 29))

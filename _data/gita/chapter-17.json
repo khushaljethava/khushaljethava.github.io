@@ -1,0 +1,373 @@
+[
+ {
+  "n": 1,
+  "sa": [
+   "ये शास्त्रविधिमुत्सृज्य यजन्ते श्रद्धयाऽन्विताः।",
+   "तेषां निष्ठा तु का कृष्ण सत्त्वमाहो रजस्तमः ॥"
+  ],
+  "tr": [
+   "ye śāstravidhimutsṛjya yajante śraddhayā'nvitāḥ",
+   "teṣāṃ niṣṭhā tu kā kṛṣṇa sattvamāho rajastamaḥ"
+  ],
+  "en": "Those who set aside the rules of scripture yet worship with faith, Krishna: what is their standing? Is it goodness, passion or dullness?",
+  "fx": "drift",
+  "speaker": "Arjuna said",
+  "speaker_at": 0
+ },
+ {
+  "n": 2,
+  "sa": [
+   "त्रिविधा भवति श्रद्धा देहिनां सा स्वभावजा।",
+   "सात्त्विकी राजसी चैव तामसी चेति तां श्रृणु ॥"
+  ],
+  "tr": [
+   "trividhā bhavati śraddhā dehināṃ sā svabhāvajā",
+   "sāttvikī rājasī caiva tāmasī ceti tāṃ śrṛṇu"
+  ],
+  "en": "The faith of embodied beings is of three kinds, born of their own nature: of goodness, of passion and of dullness. Hear about it.",
+  "fx": "gunas",
+  "speaker": "Krishna said",
+  "speaker_at": 0
+ },
+ {
+  "n": 3,
+  "sa": [
+   "सत्त्वानुरूपा सर्वस्य श्रद्धा भवति भारत।",
+   "श्रद्धामयोऽयं पुरुषो यो यच्छ्रद्धः स एव सः ॥"
+  ],
+  "tr": [
+   "sattvānurūpā sarvasya śraddhā bhavati bhārata",
+   "śraddhāmayo'yaṃ puruṣo yo yacchraddhaḥ sa eva saḥ"
+  ],
+  "en": "Everyone's faith takes the shape of their inner being, Bharata. A person is made of their faith; as their faith is, so are they.",
+  "fx": "gather",
+  "key": true
+ },
+ {
+  "n": 4,
+  "sa": [
+   "यजन्ते सात्त्विका देवान्यक्षरक्षांसि राजसाः।",
+   "प्रेतान्भूतगणांश्चान्ये यजन्ते तामसा जनाः ॥"
+  ],
+  "tr": [
+   "yajante sāttvikā devānyakṣarakṣāṃsi rājasāḥ",
+   "pretānbhūtagaṇāṃścānye yajante tāmasā janāḥ"
+  ],
+  "en": "People of goodness worship the gods; people of passion worship yakshas and rakshasas; and others, of dullness, worship ghosts and spirits.",
+  "fx": "gunas"
+ },
+ {
+  "n": 5,
+  "sa": [
+   "अशास्त्रविहितं घोरं तप्यन्ते ये तपो जनाः।",
+   "दम्भाहङ्कारसंयुक्ताः कामरागबलान्विताः ॥"
+  ],
+  "tr": [
+   "aśāstravihitaṃ ghoraṃ tapyante ye tapo janāḥ",
+   "dambhāhaṅkārasaṃyuktāḥ kāmarāgabalānvitāḥ"
+  ],
+  "en": "Those who practise terrible austerities not taught by scripture, given to hypocrisy and ego, driven by desire, attachment and force,",
+  "fx": "clash"
+ },
+ {
+  "n": 6,
+  "sa": [
+   "कर्षयन्तः शरीरस्थं भूतग्राममचेतसः।",
+   "मां चैवान्तःशरीरस्थं तान्विद्ध्यासुरनिश्चयान् ॥"
+  ],
+  "tr": [
+   "karṣayantaḥ śarīrasthaṃ bhūtagrāmamacetasaḥ",
+   "māṃ caivāntaḥśarīrasthaṃ tānviddhyāsuraniścayān"
+  ],
+  "en": "senseless, tormenting the elements in the body and me who dwell within the body: know them to be of demonic resolve.",
+  "fx": "turbulence"
+ },
+ {
+  "n": 7,
+  "sa": [
+   "आहारस्त्वपि सर्वस्य त्रिविधो भवति प्रियः।",
+   "यज्ञस्तपस्तथा दानं तेषां भेदमिमं श्रृणु ॥"
+  ],
+  "tr": [
+   "āhārastvapi sarvasya trividho bhavati priyaḥ",
+   "yajñastapastathā dānaṃ teṣāṃ bhedamimaṃ śrṛṇu"
+  ],
+  "en": "Even the food that each person likes is of three kinds, and so are sacrifice, austerity and giving. Hear how they differ.",
+  "fx": "gunas"
+ },
+ {
+  "n": 8,
+  "sa": [
+   "आयुःसत्त्वबलारोग्यसुखप्रीतिविवर्धनाः।",
+   "रस्याः स्निग्धाः स्थिरा हृद्या आहाराः सात्त्विकप्रियाः ॥"
+  ],
+  "tr": [
+   "āyuḥsattvabalārogyasukhaprītivivardhanāḥ",
+   "rasyāḥ snigdhāḥ sthirā hṛdyā āhārāḥ sāttvikapriyāḥ"
+  ],
+  "en": "Foods that increase life, vitality, strength, health, happiness and cheer, that are savoury, smooth, nourishing and pleasing to the heart, are dear to people of goodness.",
+  "fx": "sparkle"
+ },
+ {
+  "n": 9,
+  "sa": [
+   "कट्वम्ललवणात्युष्णतीक्ष्णरूक्षविदाहिनः।",
+   "आहारा राजसस्येष्टा दुःखशोकामयप्रदाः ॥"
+  ],
+  "tr": [
+   "kaṭvamlalavaṇātyuṣṇatīkṣṇarūkṣavidāhinaḥ",
+   "āhārā rājasasyeṣṭā duḥkhaśokāmayapradāḥ"
+  ],
+  "en": "Foods that are bitter, sour, salty, too hot, pungent, dry and burning, bringing pain, grief and sickness, are liked by people of passion.",
+  "fx": "fire"
+ },
+ {
+  "n": 10,
+  "sa": [
+   "यातयामं गतरसं पूति पर्युषितं च यत्।",
+   "उच्छिष्टमपि चामेध्यं भोजनं तामसप्रियम् ॥"
+  ],
+  "tr": [
+   "yātayāmaṃ gatarasaṃ pūti paryuṣitaṃ ca yat",
+   "ucchiṣṭamapi cāmedhyaṃ bhojanaṃ tāmasapriyam"
+  ],
+  "en": "Food that is stale, tasteless, putrid, spoiled, left over and impure is dear to people of dullness.",
+  "fx": "sink"
+ },
+ {
+  "n": 11,
+  "sa": [
+   "अफलाकाङ्क्षिभिर्यज्ञो विधिदृष्टो य इज्यते।",
+   "यष्टव्यमेवेति मनः समाधाय स सात्त्विकः ॥"
+  ],
+  "tr": [
+   "aphalākāṅkṣibhiryajño vidhidṛṣṭo ya ijyate",
+   "yaṣṭavyameveti manaḥ samādhāya sa sāttvikaḥ"
+  ],
+  "en": "The sacrifice offered as scripture directs by those who seek no reward, with the mind fixed on the thought \"this ought to be done,\" is of goodness.",
+  "fx": "rise"
+ },
+ {
+  "n": 12,
+  "sa": [
+   "अभिसंधाय तु फलं दम्भार्थमपि चैव यत्।",
+   "इज्यते भरतश्रेष्ठ तं यज्ञं विद्धि राजसम् ॥"
+  ],
+  "tr": [
+   "abhisaṃdhāya tu phalaṃ dambhārthamapi caiva yat",
+   "ijyate bharataśreṣṭha taṃ yajñaṃ viddhi rājasam"
+  ],
+  "en": "But the sacrifice performed with an eye on its reward, or for show, know that to be of passion, best of the Bharatas.",
+  "fx": "veil"
+ },
+ {
+  "n": 13,
+  "sa": [
+   "विधिहीनमसृष्टान्नं मन्त्रहीनमदक्षिणम्।",
+   "श्रद्धाविरहितं यज्ञं तामसं परिचक्षते ॥"
+  ],
+  "tr": [
+   "vidhihīnamasṛṣṭānnaṃ mantrahīnamadakṣiṇam",
+   "śraddhāvirahitaṃ yajñaṃ tāmasaṃ paricakṣate"
+  ],
+  "en": "The sacrifice that ignores scripture, shares no food, has no mantras, no gifts to the priests and no faith, is called one of dullness.",
+  "fx": "sink"
+ },
+ {
+  "n": 14,
+  "sa": [
+   "देवद्विजगुरुप्राज्ञपूजनं शौचमार्जवम्।",
+   "ब्रह्मचर्यमहिंसा च शारीरं तप उच्यते ॥"
+  ],
+  "tr": [
+   "devadvijaguruprājñapūjanaṃ śaucamārjavam",
+   "brahmacaryamahiṃsā ca śārīraṃ tapa ucyate"
+  ],
+  "en": "Reverence for the gods, the twice-born, teachers and the wise; purity, uprightness, celibacy and non-violence: this is called austerity of the body.",
+  "fx": "still"
+ },
+ {
+  "n": 15,
+  "sa": [
+   "अनुद्वेगकरं वाक्यं सत्यं प्रियहितं च यत्।",
+   "स्वाध्यायाभ्यसनं चैव वाङ्मयं तप उच्यते ॥"
+  ],
+  "tr": [
+   "anudvegakaraṃ vākyaṃ satyaṃ priyahitaṃ ca yat",
+   "svādhyāyābhyasanaṃ caiva vāṅmayaṃ tapa ucyate"
+  ],
+  "en": "Speech that causes no distress, that is truthful, pleasant and beneficial, and the regular study of sacred texts: this is called austerity of speech.",
+  "fx": "ripple",
+  "key": true
+ },
+ {
+  "n": 16,
+  "sa": [
+   "मनःप्रसादः सौम्यत्वं मौनमात्मविनिग्रहः।",
+   "भावसंशुद्धिरित्येतत्तपो मानसमुच्यते ॥"
+  ],
+  "tr": [
+   "manaḥprasādaḥ saumyatvaṃ maunamātmavinigrahaḥ",
+   "bhāvasaṃśuddhirityetattapo mānasamucyate"
+  ],
+  "en": "Serenity of mind, gentleness, silence, self-control and purity of heart: this is called austerity of the mind.",
+  "fx": "breathe"
+ },
+ {
+  "n": 17,
+  "sa": [
+   "श्रद्धया परया तप्तं तपस्तत्ति्रविधं नरैः।",
+   "अफलाकाङ्क्षिभिर्युक्तैः सात्त्विकं परिचक्षते ॥"
+  ],
+  "tr": [
+   "śraddhayā parayā taptaṃ tapastattiravidhaṃ naraiḥ",
+   "aphalākāṅkṣibhiryuktaiḥ sāttvikaṃ paricakṣate"
+  ],
+  "en": "This threefold austerity, practised with supreme faith by disciplined people who seek no reward, is said to be of goodness.",
+  "fx": "sparkle"
+ },
+ {
+  "n": 18,
+  "sa": [
+   "सत्कारमानपूजार्थं तपो दम्भेन चैव यत्।",
+   "क्रियते तदिह प्रोक्तं राजसं चलमध्रुवम् ॥"
+  ],
+  "tr": [
+   "satkāramānapūjārthaṃ tapo dambhena caiva yat",
+   "kriyate tadiha proktaṃ rājasaṃ calamadhruvam"
+  ],
+  "en": "Austerity practised to gain respect, honour and reverence, or for show, is said to be of passion; it is unstable and fleeting.",
+  "fx": "scatter"
+ },
+ {
+  "n": 19,
+  "sa": [
+   "मूढग्राहेणात्मनो यत्पीडया क्रियते तपः।",
+   "परस्योत्सादनार्थं वा तत्तामसमुदाहृतम् ॥"
+  ],
+  "tr": [
+   "mūḍhagrāheṇātmano yatpīḍayā kriyate tapaḥ",
+   "parasyotsādanārthaṃ vā tattāmasamudāhṛtam"
+  ],
+  "en": "Austerity practised out of foolish obstinacy, by tormenting oneself, or to harm another, is said to be of dullness.",
+  "fx": "clash"
+ },
+ {
+  "n": 20,
+  "sa": [
+   "दातव्यमिति यद्दानं दीयतेऽनुपकारिणे।",
+   "देशे काले च पात्रे च तद्दानं सात्त्विकं स्मृतम् ॥"
+  ],
+  "tr": [
+   "dātavyamiti yaddānaṃ dīyate'nupakāriṇe",
+   "deśe kāle ca pātre ca taddānaṃ sāttvikaṃ smṛtam"
+  ],
+  "en": "A gift given because it ought to be given, to one who can give nothing in return, at the right place and time and to a worthy person, is held to be of goodness.",
+  "fx": "sparkle",
+  "key": true
+ },
+ {
+  "n": 21,
+  "sa": [
+   "यत्तु प्रत्युपकारार्थं फलमुद्दिश्य वा पुनः।",
+   "दीयते च परिक्लिष्टं तद्दानं राजसं स्मृतम् ॥"
+  ],
+  "tr": [
+   "yattu pratyupakārārthaṃ phalamuddiśya vā punaḥ",
+   "dīyate ca parikliṣṭaṃ taddānaṃ rājasaṃ smṛtam"
+  ],
+  "en": "A gift given grudgingly, expecting something in return or with an eye on the reward, is held to be of passion.",
+  "fx": "drift"
+ },
+ {
+  "n": 22,
+  "sa": [
+   "अदेशकाले यद्दानमपात्रेभ्यश्च दीयते।",
+   "असत्कृतमवज्ञातं तत्तामसमुदाहृतम् ॥"
+  ],
+  "tr": [
+   "adeśakāle yaddānamapātrebhyaśca dīyate",
+   "asatkṛtamavajñātaṃ tattāmasamudāhṛtam"
+  ],
+  "en": "A gift given at the wrong place and time to the unworthy, without respect or with contempt, is said to be of dullness.",
+  "fx": "sink"
+ },
+ {
+  "n": 23,
+  "sa": [
+   "तत्सदिति निर्देशो ब्रह्मणस्त्रिविधः स्मृतः।",
+   "ब्राह्मणास्तेन वेदाश्च यज्ञाश्च विहिताः पुरा ॥"
+  ],
+  "tr": [
+   "tatsaditi nirdeśo brahmaṇastrividhaḥ smṛtaḥ",
+   "brāhmaṇāstena vedāśca yajñāśca vihitāḥ purā"
+  ],
+  "en": "\"Om Tat Sat\": this is said to be the threefold name of Brahman. By it, of old, the brahmins, the Vedas and the sacrifices were ordained.",
+  "fx": "ripple"
+ },
+ {
+  "n": 24,
+  "sa": [
+   "तस्मादोमित्युदाहृत्य यज्ञदानतपःक्रियाः।",
+   "प्रवर्तन्ते विधानोक्ताः सततं ब्रह्मवादिनाम् ॥"
+  ],
+  "tr": [
+   "tasmādomityudāhṛtya yajñadānatapaḥkriyāḥ",
+   "pravartante vidhānoktāḥ satataṃ brahmavādinām"
+  ],
+  "en": "So those who follow Brahman always begin the acts of sacrifice, giving and austerity taught by scripture by uttering \"Om\".",
+  "fx": "rise"
+ },
+ {
+  "n": 25,
+  "sa": [
+   "तदित्यनभिसन्धाय फलं यज्ञतपःक्रियाः।",
+   "दानक्रियाश्च विविधाः क्रियन्ते मोक्षकाङ्क्षि ॥"
+  ],
+  "tr": [
+   "tadityanabhisandhāya phalaṃ yajñatapaḥkriyāḥ",
+   "dānakriyāśca vividhāḥ kriyante mokṣakāṅkṣi"
+  ],
+  "en": "Uttering \"Tat\", seekers of freedom perform the various acts of sacrifice, austerity and giving without aiming at reward.",
+  "fx": "still"
+ },
+ {
+  "n": 26,
+  "sa": [
+   "सद्भावे साधुभावे च सदित्येतत्प्रयुज्यते।",
+   "प्रशस्ते कर्मणि तथा सच्छब्दः पार्थ युज्यते ॥"
+  ],
+  "tr": [
+   "sadbhāve sādhubhāve ca sadityetatprayujyate",
+   "praśaste karmaṇi tathā sacchabdaḥ pārtha yujyate"
+  ],
+  "en": "\"Sat\" is used in the sense of reality and of goodness; and the word \"Sat\" is also used for a praiseworthy act, Partha.",
+  "fx": "sparkle"
+ },
+ {
+  "n": 27,
+  "sa": [
+   "यज्ञे तपसि दाने च स्थितिः सदिति चोच्यते।",
+   "कर्म चैव तदर्थीयं सदित्येवाभिधीयते ॥"
+  ],
+  "tr": [
+   "yajñe tapasi dāne ca sthitiḥ saditi cocyate",
+   "karma caiva tadarthīyaṃ sadityevābhidhīyate"
+  ],
+  "en": "Steadfastness in sacrifice, austerity and giving is also called \"Sat\", and so is any action done for that purpose.",
+  "fx": "sparkle"
+ },
+ {
+  "n": 28,
+  "sa": [
+   "अश्रद्धया हुतं दत्तं तपस्तप्तं कृतं च यत्।",
+   "असदित्युच्यते पार्थ न च तत्प्रेत्य नो इह ॥"
+  ],
+  "tr": [
+   "aśraddhayā hutaṃ dattaṃ tapastaptaṃ kṛtaṃ ca yat",
+   "asadityucyate pārtha na ca tatpretya no iha"
+  ],
+  "en": "Whatever is offered, given or practised as austerity without faith is called \"asat\", Partha; it is of no use here or hereafter.",
+  "fx": "ash"
+ }
+]

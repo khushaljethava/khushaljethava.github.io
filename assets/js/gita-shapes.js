@@ -1,4 +1,4 @@
-/* Gita Gyan scenes: one particle drawing per scene of Chapters 1 to 16.
+/* Gita Gyan scenes: one particle drawing per scene of Chapters 1 to 17.
    Loaded only on Gita chapter pages by story.js; each draw(g, S) paints a 512x512 canvas
    that story.js samples into particles (colour comes from the pixels). */
 const TAU = Math.PI * 2;
@@ -1680,6 +1680,84 @@ export function drawThreeGates(g, S) {
   flame(g, 450, 300, 12, 50, '#ff9a4d', '#ffffff');
 }
 
+
+/* ---------- Chapter 17 ---------- */
+
+/* Chapter 17 (17.3): a person is made of their faith; a figure whose body is a flame */
+export function drawFaithFigure(g, S) {
+  g.strokeStyle = '#f5c15c'; g.lineWidth = 4;
+  g.beginPath(); g.arc(256, 110, 40, 0, TAU); g.stroke();
+  g.beginPath(); g.moveTo(206, 170); g.lineTo(306, 170); g.bezierCurveTo(340, 250, 330, 360, 314, 470); g.lineTo(198, 470); g.bezierCurveTo(182, 360, 172, 250, 206, 170); g.stroke();
+  flame(g, 256, 460, 66, 290, '#ff6a2b', '#fff6dc');
+  flame(g, 256, 456, 30, 170, '#ffd27a', '#ffffff');
+  dot(g, 256, 250, 10, '#ffffff');
+  for (let i = 0; i < 16; i++) { const a = (i / 16) * TAU; line(g, [256 + cos(a) * 200, 280 + sin(a) * 210, 256 + cos(a) * 220, 280 + sin(a) * 230], 2, 'rgba(255, 209, 102, 0.7)'); }
+}
+
+/* 17.1–17.6: three kinds of faith, three kinds of shrine */
+export function drawThreeShrines(g, S) {
+  const shrine = (x, col) => {
+    fillPoly(g, [x - 60, 250, x + 60, 250, x, 150], col);
+    g.strokeStyle = col; g.lineWidth = 6; g.beginPath(); g.moveTo(x - 46, 420); g.lineTo(x - 46, 300); g.arc(x, 300, 46, Math.PI, 0); g.lineTo(x + 46, 420); g.stroke();
+    line(g, [x - 66, 420, x + 66, 420], 6, col);
+  };
+  shrine(96, '#fff6dc'); dot(g, 96, 340, 18, '#ffffff'); for (let i = 0; i < 10; i++) { const a = (i / 10) * TAU; line(g, [96 + cos(a) * 22, 340 + sin(a) * 22, 96 + cos(a) * 34, 340 + sin(a) * 34], 2, '#ffffff'); }
+  shrine(256, '#ff4d6d'); flame(g, 256, 380, 22, 70, '#ff2d55', '#ffb347');
+  shrine(416, '#5b7cff'); for (let i = 0; i < 4; i++) ring(g, 410 + (i % 2) * 14, 380 - i * 22, 12, 3, 'rgba(160, 170, 220, 0.8)', 0, Math.PI * 1.4);
+}
+
+/* 17.7–17.13: three kinds of food: fresh, burning, and stale (17.8–10) */
+export function drawThreeBowls(g, S) {
+  const bowl = (x) => { g.fillStyle = '#c98a3a'; g.beginPath(); g.moveTo(x - 70, 330); g.quadraticCurveTo(x, 430, x + 70, 330); g.closePath(); g.fill(); line(g, [x - 72, 330, x + 72, 330], 5, '#f5c15c'); };
+  bowl(96); [[76, 316, '#ff9a4d'], [100, 306, '#21b37c'], [122, 318, '#ff4d6d'], [92, 290, '#ffd166']].forEach(([x, y, c]) => dot(g, x, y, 16, c));
+  for (let k = 0; k < 3; k++) curve(g, [80 + k * 16, 270, 70 + k * 16, 240, 92 + k * 16, 220, 82 + k * 16, 196], 2.5, 'rgba(255, 246, 220, 0.75)');
+  bowl(256); for (let k = 0; k < 4; k++) { g.save(); g.translate(226 + k * 20, 312); g.rotate(-0.6 + k * 0.4); g.fillStyle = '#ff2d55'; g.beginPath(); g.ellipse(0, 0, 7, 24, 0, 0, TAU); g.fill(); g.restore(); }
+  flame(g, 256, 290, 20, 60, '#ff4d6d', '#ffb347');
+  bowl(416); [[396, 318], [420, 312], [440, 320]].forEach(([x, y]) => dot(g, x, y, 15, '#7a7f8f'));
+  for (let k = 0; k < 4; k++) { const x = 390 + k * 18, y = 260 - (k % 2) * 16; dot(g, x, y, 3, '#c9cfff'); g.fillStyle = 'rgba(200, 207, 255, 0.7)'; g.beginPath(); g.ellipse(x - 4, y - 4, 4, 2.5, -0.6, 0, TAU); g.ellipse(x + 4, y - 4, 4, 2.5, 0.6, 0, TAU); g.fill(); }
+}
+
+/* 17.14–17.19: austerity of body, of speech and of mind (17.14–16) */
+export function drawTriTapas(g, S) {
+  /* body: bowing with folded hands */
+  dot(g, 100, 210, 16, '#ffd08a'); line(g, [100, 228, 112, 330], 16, '#ff9a4d'); line(g, [104, 330, 92, 420], 9, '#ffd08a'); line(g, [112, 330, 126, 420], 9, '#ffd08a');
+  line(g, [104, 250, 130, 230, 132, 206], 6, '#ffd08a');
+  /* speech: lips and gentle waves */
+  g.fillStyle = '#ff8fb1'; g.beginPath(); g.moveTo(216, 300); g.quadraticCurveTo(256, 270, 296, 300); g.quadraticCurveTo(256, 336, 216, 300); g.fill();
+  line(g, [216, 300, 296, 300], 2.5, '#c0392b');
+  for (let r = 0; r < 3; r++) ring(g, 256, 300, 60 + r * 22, 3 - r * 0.6, '#45e3d3', -0.5, 0.5);
+  for (let r = 0; r < 3; r++) ring(g, 256, 300, 60 + r * 22, 3 - r * 0.6, '#45e3d3', Math.PI - 0.5, Math.PI + 0.5);
+  /* mind: a still lotus inside a calm circle */
+  ring(g, 412, 300, 70, 2.5, 'rgba(158, 243, 234, 0.8)');
+  for (let k = 0; k < 8; k++) { const a = Math.PI + (k / 7) * Math.PI; g.fillStyle = k % 2 ? '#ff8fb1' : '#ffb3c8'; g.beginPath(); g.ellipse(412 + cos(a) * 24, 310 + sin(a) * 20, 22, 8, a, 0, TAU); g.fill(); }
+  dot(g, 412, 304, 8, '#ffd166');
+}
+
+/* 17.20–17.22: a gift given because it ought to be given, to one who cannot give back (17.20) */
+export function drawGivingHand(g, S) {
+  const skin = '#ffd08a';
+  line(g, [470, 70, 330, 170], 40, skin);
+  g.fillStyle = skin; g.beginPath(); g.ellipse(300, 196, 44, 30, 0.6, 0, TAU); g.fill();
+  for (let i = 0; i < 18; i++) dot(g, 270 + (rnd() - 0.5) * 20, 230 + i * 8 + (rnd() - 0.5) * 6, 3, '#ffd166');
+  g.fillStyle = '#e0a458'; g.beginPath(); g.moveTo(160, 400); g.bezierCurveTo(170, 460, 340, 460, 352, 400); g.lineTo(330, 390); g.bezierCurveTo(300, 420, 200, 420, 180, 390); g.closePath(); g.fill();
+  line(g, [40, 480, 170, 420], 36, '#e0a458');
+  g.fillStyle = '#ffd166'; g.beginPath(); g.ellipse(256, 398, 60, 12, 0, 0, TAU); g.fill();
+  for (let i = 0; i < 12; i++) { const a = Math.PI + (i / 11) * Math.PI; line(g, [256 + cos(a) * 90, 300 + sin(a) * 90, 256 + cos(a) * 110, 300 + sin(a) * 110], 2, 'rgba(255, 231, 168, 0.7)'); }
+}
+
+/* 17.23–17.28: Om Tat Sat, the threefold name (17.23) */
+export function drawOmTatSat(g, S) {
+  line(g, [60, 300, 452, 300], 3, '#f5c15c');
+  /* Om: the crescent and the point */
+  dot(g, 110, 300, 44, '#fff6dc'); erase(g, () => dot(g, 110, 320, 40, '#000'));
+  dot(g, 110, 236, 10, '#ffffff');
+  /* Tat: "That", pointing beyond */
+  fillPoly(g, [256, 236, 306, 326, 206, 326], '#ffd166'); erase(g, () => fillPoly(g, [256, 262, 286, 314, 226, 314], '#000'));
+  /* Sat: what is real, set square on the ground */
+  g.fillStyle = '#ff9a4d'; g.fillRect(358, 256, 88, 88); erase(g, () => g.fillRect(372, 270, 60, 60));
+  [110, 256, 402].forEach((x, i) => { flame(g, x, 190 - (i === 1 ? 20 : 0), 12, 44, '#ff9a4d', '#fff6dc'); for (let k = 0; k < 8; k++) { const a = Math.PI + (k / 7) * Math.PI; line(g, [x + cos(a) * 60, 300 + sin(a) * 60 - 100, x + cos(a) * 72, 300 + sin(a) * 72 - 100], 1.5, 'rgba(255, 231, 168, 0.6)'); } });
+}
+
 /* story.js calls this with its sampler; returns lazily-sampled shapes keyed by name */
 export default function gitaShapes({ sample2D }) {
   return {
@@ -1787,5 +1865,12 @@ export default function gitaShapes({ sample2D }) {
     hopeRopes: () => sample2D(drawHopeRopes, 2.55, 0.25),
     goldNet: () => sample2D(drawGoldNet, 2.55, 0.25),
     threeGates: () => sample2D(drawThreeGates, 2.55, 0.25),
+
+    faithFigure: () => sample2D(drawFaithFigure, 2.5, 0.25),
+    threeShrines: () => sample2D(drawThreeShrines, 2.55, 0.25),
+    threeBowls: () => sample2D(drawThreeBowls, 2.6, 0.25),
+    triTapas: () => sample2D(drawTriTapas, 2.6, 0.25),
+    givingHand: () => sample2D(drawGivingHand, 2.55, 0.25),
+    omTatSat: () => sample2D(drawOmTatSat, 2.6, 0.2),
   };
 }
