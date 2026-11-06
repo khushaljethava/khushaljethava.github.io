@@ -382,3 +382,55 @@ CH10_FX = spread(
     ([42], 'still'),                             # holding up the universe with one fragment
 )
 assert sorted(CH10_FX) == list(range(1, 43))
+CH11_FX = spread(
+    ([1], 'still'),
+    ([2], 'ripple'),
+    ([3], 'rise'),                               # I long to see your divine form
+    ([4], 'gather'),
+    ([5], 'expand'),                             # my forms by the thousands
+    ([6], 'sparkle'),
+    ([7], 'expand'),                             # the whole universe in my body
+    ([8], 'sparkle'),                            # I give you divine sight
+    ([9], 'expand'),
+    ([10, 11], 'sparkle'),                       # countless mouths and eyes, ornaments
+    ([12], 'blaze'),                             # a thousand suns at once
+    ([13], 'expand'),
+    ([14], 'still'),                             # he bows, hair on end
+    ([15, 16], 'expand'),                        # no beginning, middle or end
+    ([17], 'blaze'),                             # blazing like fire and sun
+    ([18], 'still'),
+    ([19], 'blaze'),                             # sun and moon your eyes
+    ([20], 'turbulence'),                        # the three worlds tremble
+    ([21], 'rise'),
+    ([22], 'ripple'),
+    ([23, 24], 'turbulence'),                    # I tremble
+    ([25], 'vortex'),                            # tusks like the fires of the end of time
+    ([26], 'march'),                             # all the warriors
+    ([27], 'vortex'),                            # rushing into your mouths
+    ([28], 'water'),                             # rivers racing to the ocean
+    ([29], 'fire'),                              # moths into the flame
+    ([30], 'vortex'),                            # devouring all the worlds
+    ([31], 'drift'),                             # tell me who you are
+    ([32], 'vortex'),                            # I am Time
+    ([33, 34], 'clash'),                         # be merely the instrument
+    ([35], 'sink'),
+    ([36], 'sparkle'),
+    ([37, 38], 'expand'),
+    ([39, 40], 'ripple'),                        # salutations on every side
+    ([41], 'drift'),                             # "Krishna! Friend!"
+    ([42], 'sink'),                              # forgive me
+    ([43], 'expand'),
+    ([44], 'still'),                             # as a friend with a friend
+    ([45], 'drift'),
+    ([46], 'gather'),                            # the four-armed form
+    ([47], 'sparkle'),
+    ([48], 'contract'),
+    ([49], 'still'),                             # do not be afraid
+    ([50], 'descend'),                           # the gentle form returns
+    ([51], 'breathe'),                           # my mind is restored
+    ([52], 'sparkle'),
+    ([53], 'contract'),
+    ([54], 'gather'),                            # by undivided devotion
+    ([55], 'sparkle'),
+)
+assert sorted(CH11_FX) == list(range(1, 56))

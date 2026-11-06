@@ -1,4 +1,4 @@
-/* Gita Gyan scenes: one particle drawing per scene of Chapters 1 to 10.
+/* Gita Gyan scenes: one particle drawing per scene of Chapters 1 to 11.
    Loaded only on Gita chapter pages by story.js; each draw(g, S) paints a 512x512 canvas
    that story.js samples into particles (colour comes from the pixels). */
 const TAU = Math.PI * 2;
@@ -1212,6 +1212,118 @@ export function drawTejasAmsha(g, S) {
   line(g, [c, 386, c, 312], 3, 'rgba(255, 246, 220, 0.85)');
 }
 
+
+/* ---------- Chapter 11 ---------- */
+
+/* Chapter 11: the universal form, crowned, with arms beyond counting */
+export function drawVishvarupa(g, S) {
+  const c = 256, blue = '#6f93f5';
+  for (let r = 0; r < 4; r++) ring(g, c, 200, 150 + r * 26, 2.5, r % 2 ? 'rgba(255, 106, 43, 0.8)' : 'rgba(255, 209, 102, 0.85)');
+  const tips = [(x, y) => ring(g, x, y, 12, 4, '#ffd166'), (x, y) => dot(g, x, y, 10, '#fff6dc'), (x, y) => { g.fillStyle = '#ff8fb1'; g.beginPath(); g.ellipse(x, y, 12, 7, 0, 0, TAU); g.fill(); }, (x, y) => dot(g, x, y, 9, '#c98a3a')];
+  for (let i = 0; i < 18; i++) {
+    const a = Math.PI + 0.15 + (i / 17) * (Math.PI - 0.3), x = c + cos(a) * 190, y = 250 + sin(a) * 170;
+    line(g, [c + cos(a) * 40, 250 + sin(a) * 30, x, y], 9, blue);
+    tips[i % 4](x + cos(a) * 14, y + sin(a) * 14);
+  }
+  g.fillStyle = blue; g.beginPath(); g.moveTo(206, 250); g.lineTo(306, 250); g.lineTo(330, 480); g.lineTo(182, 480); g.closePath(); g.fill();
+  erase(g, () => { for (let i = 0; i < 80; i++) dot(g, 200 + rnd() * 112, 270 + rnd() * 200, 1.4 + rnd() * 1.4, '#000'); });
+  dot(g, c, 200, 44, blue);
+  fillPoly(g, [214, 176, 298, 176, 310, 120, 284, 146, 256, 100, 228, 146, 202, 120], '#ffd166');
+  dot(g, 240, 200, 6, '#fff6dc'); dot(g, 272, 200, 6, '#fff6dc'); dot(g, 256, 178, 5, '#ff4d6d');
+}
+
+/* 11.1–11.8: behold the whole universe gathered in my body (11.7) */
+export function drawUniverseBody(g, S) {
+  const blue = '#4d6cf7';
+  g.fillStyle = blue;
+  dot(g, 256, 96, 44, blue);
+  g.beginPath(); g.moveTo(196, 148); g.lineTo(316, 148); g.bezierCurveTo(350, 220, 340, 320, 320, 400); g.lineTo(300, 490); g.lineTo(212, 490); g.lineTo(192, 400); g.bezierCurveTo(172, 320, 162, 220, 196, 148); g.fill();
+  line(g, [200, 160, 140, 260, 130, 340], 22, blue); line(g, [312, 160, 372, 260, 382, 340], 22, blue);
+  erase(g, () => { for (let i = 0; i < 260; i++) { const x = 140 + rnd() * 240, y = 60 + rnd() * 430; dot(g, x, y, 0.8 + rnd() * 1.6, '#000'); } });
+  for (let arm = 0; arm < 2; arm++) for (let i = 0; i < 120; i++) { const t = i / 120, a = arm * Math.PI + t * 4.5, r = 6 + t * 56; dot(g, 256 + cos(a) * r, 300 + sin(a) * r * 0.6, 1.3, t < 0.3 ? '#ffffff' : '#ff8fb1'); }
+  dot(g, 256, 300, 7, '#ffffff');
+  dot(g, 220, 220, 9, '#ffb347'); dot(g, 296, 236, 6, '#e8ecf8'); dot(g, 236, 400, 5, '#9ef3ea');
+  ring(g, 256, 96, 58, 2, 'rgba(255, 209, 102, 0.8)');
+}
+
+/* 11.9–11.14: if the light of a thousand suns blazed forth at once (11.12) */
+export function drawThousandSuns(g, S) {
+  const suns = [];
+  for (let i = 0; i < 26; i++) { const a = rnd() * TAU, r = Math.sqrt(rnd()) * 170; suns.push([256 + cos(a) * r, 256 + sin(a) * r, 14 + rnd() * 26]); }
+  suns.forEach(([x, y, r]) => { for (let k = 0; k < 12; k++) { const a = (k / 12) * TAU; line(g, [x + cos(a) * (r + 4), y + sin(a) * (r + 4), x + cos(a) * (r + 18), y + sin(a) * (r + 18)], 2, 'rgba(255, 209, 102, 0.8)'); } });
+  suns.forEach(([x, y, r]) => { const gr = g.createRadialGradient(x, y, 1, x, y, r); gr.addColorStop(0, '#ffffff'); gr.addColorStop(1, '#ffb347'); g.fillStyle = gr; g.beginPath(); g.arc(x, y, r, 0, TAU); g.fill(); });
+  dot(g, 256, 256, 46, '#ffffff');
+}
+
+/* 11.15–11.25: the sun and moon your eyes, your mouth a blazing fire (11.19) */
+export function drawSunMoonEyes(g, S) {
+  ring(g, 256, 270, 190, 4, '#f5c15c');
+  fillPoly(g, [150, 110, 362, 110, 384, 40, 340, 80, 300, 20, 256, 70, 212, 20, 172, 80, 128, 40], '#ffd166');
+  dot(g, 180, 220, 46, '#ffb347'); for (let i = 0; i < 14; i++) { const a = (i / 14) * TAU; line(g, [180 + cos(a) * 52, 220 + sin(a) * 52, 180 + cos(a) * 66, 220 + sin(a) * 66], 3, '#ffd166'); }
+  dot(g, 332, 220, 46, '#e8ecf8'); erase(g, () => dot(g, 352, 206, 40, '#000'));
+  g.fillStyle = '#ff6a2b'; g.beginPath(); g.moveTo(150, 340); g.quadraticCurveTo(256, 470, 362, 340); g.quadraticCurveTo(256, 380, 150, 340); g.fill();
+  for (let i = 0; i < 7; i++) flame(g, 176 + i * 27, 372 + Math.abs(3 - i) * -6, 12, 40 + (3 - Math.abs(3 - i)) * 10, '#ff4d6d', '#ffd166');
+  for (let i = 0; i < 40; i++) { const a = rnd() * TAU, r = 205 + rnd() * 40; dot(g, 256 + cos(a) * r, 270 + sin(a) * r, 2 + rnd() * 3, i % 2 ? '#ffd166' : '#ff9a4d'); }
+}
+
+/* 11.26–11.31: as moths rush into a blazing flame to their destruction (11.29) */
+export function drawMothsFlame(g, S) {
+  flame(g, 256, 440, 90, 330, '#ff4d6d', '#fff6dc');
+  flame(g, 256, 436, 44, 190, '#ffd27a', '#ffffff');
+  for (let k = 0; k < 18; k++) {
+    const a = (k / 18) * TAU, r = 200 + (k % 3) * 22, x = 256 + cos(a) * r, y = 260 + sin(a) * r * 0.85, toward = Math.atan2(260 - y, 256 - x);
+    g.save(); g.translate(x, y); g.rotate(toward);
+    g.fillStyle = '#e8ecf8'; g.beginPath(); g.ellipse(-4, -9, 9, 13, -0.5, 0, TAU); g.ellipse(-4, 9, 9, 13, 0.5, 0, TAU); g.fill();
+    line(g, [-10, 0, 8, 0], 3, '#c9cfff');
+    g.restore();
+    g.setLineDash([3, 8]); line(g, [x, y, x + cos(toward) * 50, y + sin(toward) * 50], 1.5, 'rgba(255, 231, 168, 0.6)'); g.setLineDash([]);
+  }
+}
+
+/* 11.32–11.34: I am Time, the destroyer of worlds (11.32). A ring of tusks, everything spiralling in */
+export function drawKalaMouth(g, S) {
+  const c = 256;
+  for (let i = 0; i < 1200; i++) { const t = i / 1200, a = t * 2 * TAU + (i % 3) * (TAU / 3), r = 30 + t * 180 + (rnd() - 0.5) * 14; dot(g, c + cos(a) * r, c + sin(a) * r, 1.4 + t * 2.5, t < 0.4 ? '#ff4d6d' : '#ffd166'); }
+  ring(g, c, c, 232, 10, '#c0392b');
+  for (let i = 0; i < 22; i++) {
+    const a = (i / 22) * TAU, w = 0.12;
+    fillPoly(g, [c + cos(a - w) * 226, c + sin(a - w) * 226, c + cos(a + w) * 226, c + sin(a + w) * 226, c + cos(a) * (i % 2 ? 176 : 150), c + sin(a) * (i % 2 ? 176 : 150)], '#fff6dc');
+  }
+  dot(g, c, c, 22, '#ff4d6d');
+}
+
+/* 11.35–11.46: "Take that four-armed form, with crown, mace and discus" (11.46) */
+export function drawChaturbhuja(g, S) {
+  const blue = '#6f93f5';
+  for (let r = 0; r < 3; r++) ring(g, 256, 180, 90 + r * 22, 2, 'rgba(255, 209, 102, 0.75)');
+  g.fillStyle = blue; g.beginPath(); g.moveTo(216, 210); g.lineTo(296, 210); g.lineTo(320, 470); g.lineTo(192, 470); g.closePath(); g.fill();
+  g.fillStyle = '#ffd166'; g.fillRect(196, 360, 120, 110);
+  line(g, [214, 222, 150, 180, 120, 120], 16, blue); line(g, [298, 222, 362, 180, 392, 120], 16, blue);
+  line(g, [214, 240, 140, 300, 126, 360], 16, blue); line(g, [298, 240, 372, 300, 386, 360], 16, blue);
+  /* discus, conch, mace, lotus */
+  ring(g, 120, 96, 26, 6, '#ffd166'); for (let k = 0; k < 8; k++) { const a = (k / 8) * TAU; line(g, [120, 96, 120 + cos(a) * 22, 96 + sin(a) * 22], 2, '#ffe7a8'); }
+  g.fillStyle = '#fff6dc'; g.beginPath(); g.moveTo(374, 110); g.bezierCurveTo(380, 80, 410, 74, 420, 100); g.lineTo(404, 140); g.closePath(); g.fill();
+  line(g, [126, 370, 126, 430], 6, '#c98a3a'); dot(g, 126, 360, 18, '#e0a458');
+  for (let k = 0; k < 6; k++) { const a = Math.PI + (k / 5) * Math.PI; g.fillStyle = '#ff8fb1'; g.beginPath(); g.ellipse(386 + cos(a) * 14, 360 + sin(a) * 10, 14, 6, a, 0, TAU); g.fill(); }
+  dot(g, 256, 170, 40, blue);
+  fillPoly(g, [222, 148, 290, 148, 300, 100, 278, 120, 256, 82, 234, 120, 212, 100], '#ffd166');
+}
+
+/* 11.47–11.55: the gentle form again; a friend's hand in a friend's hand (11.44, 11.51) */
+export function drawClasp(g, S) {
+  const blue = '#6f93f5', skin = '#ffd08a';
+  for (let i = 0; i < 14; i++) { const a = Math.PI + (i / 13) * Math.PI; line(g, [256 + cos(a) * 140, 250 + sin(a) * 140, 256 + cos(a) * 170, 250 + sin(a) * 170], 2.5, 'rgba(255, 231, 168, 0.8)'); }
+  line(g, [20, 340, 200, 280], 54, blue);
+  line(g, [492, 340, 312, 280], 54, skin);
+  g.fillStyle = skin; g.beginPath(); g.ellipse(270, 270, 64, 40, -0.2, 0, TAU); g.fill();
+  g.fillStyle = blue; g.beginPath(); g.ellipse(240, 262, 58, 34, 0.25, 0, TAU); g.fill();
+  for (let k = 0; k < 4; k++) line(g, [214 + k * 16, 240, 230 + k * 16, 300], 12, blue);
+  line(g, [292, 244, 250, 232], 14, skin);
+  line(g, [180, 300, 220, 290], 6, '#ffd166');
+  g.fillStyle = '#21b37c'; g.beginPath(); g.ellipse(250, 120, 14, 34, 0.3, 0, TAU); g.fill();
+  dot(g, 252, 112, 8, '#45e3d3'); dot(g, 253, 112, 4, '#2f56e0');
+}
+
 /* story.js calls this with its sampler; returns lazily-sampled shapes keyed by name */
 export default function gitaShapes({ sample2D }) {
   return {
@@ -1280,5 +1392,14 @@ export default function gitaShapes({ sample2D }) {
     himalayas: () => sample2D(drawHimalayas, 2.6, 0.25),
     garuda: () => sample2D(drawGaruda, 2.6, 0.25),
     tejasAmsha: () => sample2D(drawTejasAmsha, 2.55, 0.3),
+
+    vishvarupa: () => sample2D(drawVishvarupa, 2.6, 0.3),
+    universeBody: () => sample2D(drawUniverseBody, 2.55, 0.25),
+    thousandSuns: () => sample2D(drawThousandSuns, 2.6, 0.35),
+    sunMoonEyes: () => sample2D(drawSunMoonEyes, 2.6, 0.25),
+    mothsFlame: () => sample2D(drawMothsFlame, 2.6, 0.3),
+    kalaMouth: () => sample2D(drawKalaMouth, 2.6, 0.3),
+    chaturbhuja: () => sample2D(drawChaturbhuja, 2.55, 0.2),
+    clasp: () => sample2D(drawClasp, 2.5, 0.2),
   };
 }

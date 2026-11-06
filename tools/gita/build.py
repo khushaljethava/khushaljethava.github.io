@@ -298,6 +298,38 @@ SECTIONS[10] = dict(
         gyan="Every brilliant thing you meet is a spark of something larger. Admire the spark; remember the fire."),
   ])
 
+KEY_VERSES[11] = (12, 32, 55)
+SECTIONS[11] = dict(
+  subtitle="The Yoga of the Vision of the Universal Form",
+  hero_shape='vishvarupa',
+  summary=("Arjuna asks to see Krishna as he truly is, and is given divine sight. What he sees is overwhelming: the whole "
+           "universe in one body, the light of a thousand suns, mouths like the fires at the end of time devouring the "
+           "warriors. \"I am Time,\" says Krishna, \"be merely my instrument.\" Shaken, Arjuna begs forgiveness for every "
+           "casual word between friends, and Krishna returns to his gentle form."),
+  sections=[
+   dict(id='show-me', label='Show Me', shape='universeBody', side='right', frm=1, to=8, title='The universe in one body',
+        intro="Arjuna's delusion is gone, but now he wants to see. Krishna agrees: behold the whole universe, moving and unmoving, gathered in my body (11.7). But these eyes can't see it, so I give you divine sight.",
+        gyan="Some things can't be seen with the tools you already have. Be willing to be given new eyes."),
+   dict(id='thousand-suns', label='A Thousand Suns', shape='thousandSuns', side='left', frm=9, to=14, title='If a thousand suns rose at once',
+        intro="Sanjaya describes it to the blind king: countless mouths and eyes, divine ornaments and weapons, facing every way. If a thousand suns blazed in the sky at once, that might be like the splendour of that great Self (11.12). Arjuna, hair on end, bows.",
+        gyan="Real awe is humbling, not entertaining. Let the big things be big."),
+   dict(id='cosmic-form', label='The Cosmic Form', shape='sunMoonEyes', side='right', frm=15, to=25, title='No beginning, no middle, no end',
+        intro="Arjuna tries to describe it: all the gods inside, arms and eyes without number, no beginning, middle or end, the sun and moon for eyes, a mouth of blazing fire (11.19). The three worlds tremble, and so does he.",
+        gyan="When reality is bigger than your map, say so honestly. Arjuna's fear is part of the vision, not a failure of it."),
+   dict(id='into-the-fire', label='Into the Fire', shape='mothsFlame', side='left', frm=26, to=31, title='Like moths into a flame',
+        intro="He sees the warriors of both armies, Bhishma, Drona, Karna and his own, rushing into those mouths like rivers into the ocean, like moths into a blazing flame (11.28–29). \"Who are you?\" he cries. \"I don't understand what you are doing.\"",
+        gyan="Everything that begins also ends. Seeing that clearly is frightening at first, and freeing afterwards."),
+   dict(id='time', label='I Am Time', shape='kalaMouth', side='right', frm=32, to=34, title='Be merely the instrument',
+        intro="\"I am Time, the destroyer of worlds\" (11.32). Even without Arjuna, none of these warriors will survive; they are already slain. So stand up, win glory, and be merely the instrument.",
+        gyan="You are not the author of every outcome. Do your part fully, as an instrument, and let go of the rest."),
+   dict(id='salutations', label='Salutations', shape='chaturbhuja', side='left', frm=35, to=46, title='Forgive me, I called you friend',
+        intro="Trembling, Arjuna bows again and again: salutations in front, behind, on every side. Then the tender part: forgive me for every time I called you \"Krishna, friend,\" joked with you, sat and ate with you. Bear with me as a friend bears with a friend. Show me your four-armed form again.",
+        gyan="Familiarity can hide greatness. Look again at the people you take for granted."),
+   dict(id='gentle-form', label='The Gentle Form', shape='clasp', side='right', frm=47, to=55, title='Seen only by devotion',
+        intro="No Veda, sacrifice or austerity could have shown this; only grace. Krishna takes his gentle human form again and Arjuna's mind returns to itself. What can't be bought can be reached by undivided devotion, by one who works for him without enmity toward any being (11.55).",
+        gyan="After the big vision comes the ordinary friend at your side. The work continues in human form."),
+  ])
+
 # every chapter with scenes in SECTIONS gets built; its meanings and effects must exist too
 chs = {n: chapter_verses(n, getattr(meanings, f'CH{n}'), getattr(fx, f'CH{n}_FX'), KEY_VERSES.get(n, ())) for n in sorted(SECTIONS)}
 
