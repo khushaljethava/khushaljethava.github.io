@@ -1,4 +1,4 @@
-/* Gita Gyan scenes: one particle drawing per scene of Chapters 1 to 11.
+/* Gita Gyan scenes: one particle drawing per scene of Chapters 1 to 12.
    Loaded only on Gita chapter pages by story.js; each draw(g, S) paints a 512x512 canvas
    that story.js samples into particles (colour comes from the pixels). */
 const TAU = Math.PI * 2;
@@ -1324,6 +1324,74 @@ export function drawClasp(g, S) {
   dot(g, 252, 112, 8, '#45e3d3'); dot(g, 253, 112, 4, '#2f56e0');
 }
 
+
+/* ---------- Chapter 12 ---------- */
+
+/* Chapter 12: devotion as a dance, the circle of the rasa around the flute-player */
+export function drawRasaCircle(g, S) {
+  const c = 256, R = 172, blue = '#6f93f5';
+  ring(g, c, c, R + 46, 2, 'rgba(255, 209, 102, 0.6)');
+  ring(g, c, c, R - 10, 2, 'rgba(255, 143, 177, 0.5)');
+  for (let i = 0; i < 12; i++) {
+    const a = (i / 12) * TAU - Math.PI / 2, x = c + cos(a) * R, y = c + sin(a) * R, col = i % 2 ? blue : '#ff8fb1';
+    g.save(); g.translate(x, y); g.rotate(a + Math.PI / 2);
+    dot(g, 0, -26, 9, '#ffd08a');
+    fillPoly(g, [-4, -16, 4, -16, 16, 20, -16, 20], col);
+    g.restore();
+    const a2 = ((i + 0.5) / 12) * TAU - Math.PI / 2;
+    ring(g, c + cos(a2) * (R + 4), c + sin(a2) * (R + 4), 16, 3, '#ffd08a', a2 - 2.2, a2 - 0.9);
+  }
+  dot(g, c, c - 30, 18, blue);
+  fillPoly(g, [c - 8, c - 12, c + 8, c - 12, c + 26, c + 60, c - 26, c + 60], '#ffd166');
+  line(g, [c - 40, c - 10, c + 30, c - 26], 4, '#ffd166');
+  g.fillStyle = '#21b37c'; g.beginPath(); g.ellipse(c + 8, c - 60, 6, 14, 0.4, 0, TAU); g.fill();
+}
+
+/* 12.1–12.7: for those whose minds enter into me, I become the one who lifts them out of the ocean (12.7) */
+export function drawRescueHand(g, S) {
+  for (let r = 0; r < 8; r++) { const p = []; for (let x = 0; x <= 512; x += 8) p.push(x, 320 + r * 24 + 10 * sin(x / 30 + r * 1.3)); line(g, p, 3.5, `rgba(${60 + r * 6}, ${90 + r * 8}, ${220 - r * 10}, ${0.95 - r * 0.07})`); }
+  const x = 236, y = 330;
+  dot(g, x, y - 10, 12, '#ffd08a'); line(g, [x, y, x + 8, y + 20], 10, '#ff9a4d'); line(g, [x + 4, y - 4, x + 20, y - 60], 5, '#ffd08a');
+  for (let i = 0; i < 14; i++) { const a = -Math.PI / 2 + (i - 6.5) * 0.18; line(g, [270 + cos(a) * 40, 120 + sin(a) * 40, 270 + cos(a) * 110, 120 + sin(a) * 110], 2, 'rgba(255, 231, 168, 0.7)'); }
+  const blue = '#6f93f5';
+  line(g, [330, 0, 290, 150], 46, blue);
+  g.fillStyle = blue; g.beginPath(); g.ellipse(276, 186, 34, 42, 0.3, 0, TAU); g.fill();
+  for (let k = 0; k < 4; k++) line(g, [252 + k * 12, 210, 246 + k * 10, 252 - (k === 0 ? 6 : 0)], 10, blue);
+  line(g, [296, 176, 272, 252], 11, blue);
+}
+
+/* 12.8–12.12: fix your mind on me; if not, practise; if not, work for me; if not, give up the fruits (12.8–11) */
+export function drawFourSteps(g, S) {
+  const steps = [[60, 450], [160, 370], [260, 290], [360, 210]];
+  steps.forEach(([x, y], i) => { fillPoly(g, [x, y, x + 120, y, x + 120, y + 18, x, y + 18], `rgba(245, 193, 92, ${0.55 + i * 0.12})`); line(g, [x + 120, y + 18, x + 120, 470], 2, 'rgba(245, 193, 92, 0.35)'); });
+  /* give up the fruit: an open hand, the fruit falling free */
+  line(g, [92, 430, 132, 420], 9, '#ffd08a'); dot(g, 150, 396, 11, '#ff9a4d'); dot(g, 162, 360, 7, 'rgba(255, 154, 77, 0.6)');
+  /* work for me: a hammer on the anvil */
+  line(g, [200, 350, 238, 312], 6, '#c98a3a'); fillPoly(g, [228, 300, 254, 322, 244, 332, 218, 310], '#e8ecf8');
+  /* practice: a string of beads */
+  for (let k = 0; k < 12; k++) { const a = (k / 12) * TAU; dot(g, 320 + cos(a) * 24, 254 + sin(a) * 24, 5, '#ff8fb1'); }
+  /* mind on me: the light at the top */
+  flame(g, 420, 196, 22, 80, '#ff9a4d', '#ffffff');
+  for (let i = 0; i < 16; i++) { const a = (i / 16) * TAU; line(g, [420 + cos(a) * 56, 150 + sin(a) * 56, 420 + cos(a) * 76, 150 + sin(a) * 76], 2, '#ffe7a8'); }
+}
+
+/* 12.13–12.20: by whom the world is not disturbed, and who is not disturbed by the world (12.15). A swan on still water */
+export function drawSwanLake(g, S) {
+  dot(g, 400, 90, 30, '#fff1c9');
+  for (let r = 0; r < 6; r++) line(g, [40 + r * 12, 300 + r * 26, 472 - r * 12, 300 + r * 26], 1.5, `rgba(69, 156, 255, ${0.6 - r * 0.07})`);
+  const swan = (sy) => {
+    g.save(); g.translate(0, 300); g.scale(1, sy); g.translate(0, -300);
+    g.fillStyle = sy > 0 ? '#ffffff' : 'rgba(232, 236, 248, 0.45)';
+    g.beginPath(); g.moveTo(170, 296); g.bezierCurveTo(180, 240, 290, 230, 330, 270); g.bezierCurveTo(340, 286, 330, 296, 300, 298); g.closePath(); g.fill();
+    g.strokeStyle = g.fillStyle; g.lineWidth = 12; g.lineCap = 'round'; g.beginPath(); g.moveTo(300, 270); g.bezierCurveTo(330, 230, 290, 180, 310, 150); g.stroke();
+    dot(g, 318, 146, 12, g.fillStyle);
+    fillPoly(g, [326, 142, 350, 150, 326, 154], sy > 0 ? '#ff9a4d' : 'rgba(255, 154, 77, 0.4)');
+    g.restore();
+  };
+  swan(1); swan(-1);
+  g.fillStyle = '#2f8f5a'; g.beginPath(); g.ellipse(100, 330, 40, 10, 0, 0, TAU); g.ellipse(420, 350, 34, 8, 0, 0, TAU); g.fill();
+}
+
 /* story.js calls this with its sampler; returns lazily-sampled shapes keyed by name */
 export default function gitaShapes({ sample2D }) {
   return {
@@ -1401,5 +1469,10 @@ export default function gitaShapes({ sample2D }) {
     kalaMouth: () => sample2D(drawKalaMouth, 2.6, 0.3),
     chaturbhuja: () => sample2D(drawChaturbhuja, 2.55, 0.2),
     clasp: () => sample2D(drawClasp, 2.5, 0.2),
+
+    rasaCircle: () => sample2D(drawRasaCircle, 2.55, 0.25),
+    rescueHand: () => sample2D(drawRescueHand, 2.6, 0.25),
+    fourSteps: () => sample2D(drawFourSteps, 2.55, 0.25),
+    swanLake: () => sample2D(drawSwanLake, 2.6, 0.25),
   };
 }

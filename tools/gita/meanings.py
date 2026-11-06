@@ -502,3 +502,27 @@ CH11 = [
  'Whoever works for me, makes me the goal, is devoted to me, free from attachment and without enmity toward any being, comes to me, Pandava.',
 ]
 assert len(CH11) == 55
+
+CH12 = [
+ 'Those devotees who, always united, worship you in this way, and those who worship the imperishable, the unmanifest: which of them know yoga better?',
+ 'Those who fix their minds on me and worship me, always united, with supreme faith: I consider them the most perfect in yoga.',
+ 'But those who worship the imperishable, the indefinable, the unmanifest, all-pervading and unthinkable, unchanging, immovable and eternal,',
+ 'restraining all the senses, even-minded everywhere, delighting in the good of all beings: they too come to me.',
+ 'The difficulty is greater for those whose minds are set on the unmanifest, for the path of the unmanifest is hard for embodied beings to reach.',
+ 'But those who offer all actions to me, intent on me, and worship me, meditating on me with undivided yoga,',
+ 'for them, whose minds have entered into me, I soon become the one who lifts them out of the ocean of death and rebirth, Partha.',
+ 'Fix your mind on me alone; let your understanding rest in me. Then, without doubt, you will live in me from now on.',
+ 'If you cannot keep your mind steadily on me, then seek to reach me through the yoga of practice, Dhananjaya.',
+ 'If you cannot even practise, be devoted to working for me; doing actions for my sake, you will still reach perfection.',
+ 'If you cannot do even this, then, taking refuge in my yoga and controlling yourself, give up the fruits of all your actions.',
+ 'Knowledge is better than mere practice; meditation is better than knowledge; giving up the fruits of action is better than meditation, for peace follows renunciation at once.',
+ 'One who hates no being, who is friendly and compassionate, free from "mine" and from ego, even in pain and pleasure, and forgiving,',
+ 'always content, a yogi, self-controlled, firm in resolve, with mind and understanding offered to me: such a devotee is dear to me.',
+ 'One by whom the world is not disturbed and who is not disturbed by the world, who is free from elation, impatience, fear and anxiety, is dear to me.',
+ 'One who expects nothing, is pure, capable, impartial and untroubled, who has given up every self-centred undertaking: such a devotee is dear to me.',
+ 'One who neither rejoices nor hates, neither grieves nor craves, who has let go of good and bad, and is full of devotion, is dear to me.',
+ 'Alike to enemy and friend, alike in honour and dishonour, in cold and heat, in pleasure and pain, free from attachment,',
+ 'the same in blame and praise, quiet, content with whatever comes, without a fixed home, steady in mind and full of devotion: that person is dear to me.',
+ 'But those who follow this nectar of dharma as I have taught it, with faith, making me their goal: those devotees are exceedingly dear to me.',
+]
+assert len(CH12) == 20

@@ -819,8 +819,46 @@
   "name": "Bhakti Yoga",
   "meaning": "The Yoga of Devotion",
   "verses": 20,
-  "live": false,
-  "url": "/gita/chapter-12/"
+  "live": true,
+  "url": "/gita/chapter-12/",
+  "subtitle": "The Yoga of Devotion",
+  "hero_shape": "rasaCircle",
+  "summary": "The shortest chapter, and one of the most loved. Arjuna asks whether it is better to worship God with form or the formless; Krishna says both arrive, but the path of loving devotion is easier for embodied beings. Then a gentle ladder for anyone who struggles, and a portrait of the devotee who is dear to him: friendly to all, disturbed by no one and disturbing no one.",
+  "sections": [
+   {
+    "id": "form-formless",
+    "label": "Form or Formless",
+    "shape": "rescueHand",
+    "side": "right",
+    "to": 7,
+    "title": "I lift them out of the ocean",
+    "intro": "Which is better: loving God in a form, or meditating on the formless? Both reach him, Krishna says, but the formless path is harder for beings with bodies. For those who give everything to him, he becomes the one who lifts them out of the ocean of death and rebirth (12.7).",
+    "gyan": "Choose the path you can actually walk. An easier path walked every day beats a perfect one never started.",
+    "from": 1
+   },
+   {
+    "id": "ladder",
+    "label": "The Ladder",
+    "shape": "fourSteps",
+    "side": "left",
+    "to": 12,
+    "title": "If you cannot, then this",
+    "intro": "Fix your mind on me. If you can't, practise. If you can't practise, work for me. If you can't even do that, simply give up the fruits of your actions (12.8–11). There is always a next step down, and every step leads home.",
+    "gyan": "Great teachers always offer a smaller step. If the ideal is out of reach today, do the version you can.",
+    "from": 8
+   },
+   {
+    "id": "dear-to-me",
+    "label": "Dear to Me",
+    "shape": "swanLake",
+    "side": "right",
+    "to": 20,
+    "title": "Not disturbing, not disturbed",
+    "intro": "Then the portrait of the devotee who is dear to him: hating no one, friendly and compassionate, forgiving, content. The world is not disturbed by them, and they are not disturbed by the world (12.15). The same in praise and blame, at home anywhere.",
+    "gyan": "Be the person who lowers the temperature in the room, and isn't thrown by it either.",
+    "from": 13
+   }
+  ]
  },
  {
   "n": 13,

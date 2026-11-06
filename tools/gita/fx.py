@@ -434,3 +434,26 @@ CH11_FX = spread(
     ([55], 'sparkle'),
 )
 assert sorted(CH11_FX) == list(range(1, 56))
+CH12_FX = spread(
+    ([1], 'drift'),                              # form or the formless?
+    ([2], 'gather'),
+    ([3], 'expand'),                             # the all-pervading, unthinkable
+    ([4], 'still'),
+    ([5], 'contract'),                           # the harder path
+    ([6], 'rise'),
+    ([7], 'rise'),                               # lifted out of the ocean of death
+    ([8], 'gather'),                             # fix your mind on me alone
+    ([9], 'breathe'),                            # the yoga of practice
+    ([10], 'march'),                             # work for me
+    ([11], 'drift'),                             # give up the fruits
+    ([12], 'still'),                             # peace follows at once
+    ([13], 'ripple'),                            # friendly and compassionate
+    ([14], 'still'),
+    ([15], 'breathe'),                           # not disturbed, not disturbing
+    ([16], 'sparkle'),
+    ([17], 'breathe'),
+    ([18], 'still'),                             # alike to enemy and friend
+    ([19], 'drift'),                             # without a fixed home
+    ([20], 'sparkle'),                           # the nectar of dharma
+)
+assert sorted(CH12_FX) == list(range(1, 21))

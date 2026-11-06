@@ -21,6 +21,9 @@ def clean_sa(text):
     text = text.replace('ृ़', 'ॄ')
     # dataset glitch: vowel sign typed before the conjunct's second consonant (निश्िचत -> निश्चित), stray nukta on ो
     text = re.sub('्ि([क-ह])', '्\\1ि', text).replace('ो़', 'ो')
+    # dataset glitch: some verses (from chapter 12 on) lose their line breaks after the speaker and the half-verse danda
+    text = re.sub(r'(उवाच|ुवाच)(?=\S)', r'\1\n', text)
+    text = re.sub(r'।(?=[^।\s\d])', '।\n', text)
     lines = [l.strip() for l in text.split('\n')]
     lines = [re.sub(r'\s*।।\s*\d+\.\d+\s*।।\s*$', ' ॥', l) for l in lines if l]
     return lines
@@ -328,6 +331,26 @@ SECTIONS[11] = dict(
    dict(id='gentle-form', label='The Gentle Form', shape='clasp', side='right', frm=47, to=55, title='Seen only by devotion',
         intro="No Veda, sacrifice or austerity could have shown this; only grace. Krishna takes his gentle human form again and Arjuna's mind returns to itself. What can't be bought can be reached by undivided devotion, by one who works for him without enmity toward any being (11.55).",
         gyan="After the big vision comes the ordinary friend at your side. The work continues in human form."),
+  ])
+
+KEY_VERSES[12] = (8, 13, 15)
+SECTIONS[12] = dict(
+  subtitle="The Yoga of Devotion",
+  hero_shape='rasaCircle',
+  summary=("The shortest chapter, and one of the most loved. Arjuna asks whether it is better to worship God with form or the "
+           "formless; Krishna says both arrive, but the path of loving devotion is easier for embodied beings. Then a gentle "
+           "ladder for anyone who struggles, and a portrait of the devotee who is dear to him: friendly to all, disturbed by "
+           "no one and disturbing no one."),
+  sections=[
+   dict(id='form-formless', label='Form or Formless', shape='rescueHand', side='right', frm=1, to=7, title='I lift them out of the ocean',
+        intro="Which is better: loving God in a form, or meditating on the formless? Both reach him, Krishna says, but the formless path is harder for beings with bodies. For those who give everything to him, he becomes the one who lifts them out of the ocean of death and rebirth (12.7).",
+        gyan="Choose the path you can actually walk. An easier path walked every day beats a perfect one never started."),
+   dict(id='ladder', label='The Ladder', shape='fourSteps', side='left', frm=8, to=12, title='If you cannot, then this',
+        intro="Fix your mind on me. If you can't, practise. If you can't practise, work for me. If you can't even do that, simply give up the fruits of your actions (12.8–11). There is always a next step down, and every step leads home.",
+        gyan="Great teachers always offer a smaller step. If the ideal is out of reach today, do the version you can."),
+   dict(id='dear-to-me', label='Dear to Me', shape='swanLake', side='right', frm=13, to=20, title='Not disturbing, not disturbed',
+        intro="Then the portrait of the devotee who is dear to him: hating no one, friendly and compassionate, forgiving, content. The world is not disturbed by them, and they are not disturbed by the world (12.15). The same in praise and blame, at home anywhere.",
+        gyan="Be the person who lowers the temperature in the room, and isn't thrown by it either."),
   ])
 
 # every chapter with scenes in SECTIONS gets built; its meanings and effects must exist too
