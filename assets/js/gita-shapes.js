@@ -1,4 +1,4 @@
-/* Gita Gyan scenes: one particle drawing per scene of Chapters 1 to 12.
+/* Gita Gyan scenes: one particle drawing per scene of Chapters 1 to 13.
    Loaded only on Gita chapter pages by story.js; each draw(g, S) paints a 512x512 canvas
    that story.js samples into particles (colour comes from the pixels). */
 const TAU = Math.PI * 2;
@@ -1392,6 +1392,90 @@ export function drawSwanLake(g, S) {
   g.fillStyle = '#2f8f5a'; g.beginPath(); g.ellipse(100, 330, 40, 10, 0, 0, TAU); g.ellipse(420, 350, 34, 8, 0, 0, TAU); g.fill();
 }
 
+
+/* ---------- Chapter 13 ---------- */
+
+/* Chapter 13 (13.34): as the one sun lights up the whole world */
+export function drawOneSunWorld(g, S) {
+  dot(g, 256, 90, 46, '#ffb347'); ring(g, 256, 90, 56, 3, '#ffd166');
+  for (let i = 0; i < 25; i++) { const a = Math.PI * 0.12 + (i / 24) * Math.PI * 0.76; line(g, [256 + cos(a) * 64, 90 + sin(a) * 64, 256 + cos(a) * 340, 90 + sin(a) * 340], i % 2 ? 1.2 : 2.2, 'rgba(255, 209, 102, 0.55)'); }
+  g.fillStyle = 'rgba(77, 124, 247, 0.85)'; g.beginPath(); g.arc(256, 900, 520, 0, TAU); g.fill();
+  const lit = '#ffe7a8';
+  [[110, 392], [170, 384], [230, 380], [300, 380], [360, 384], [420, 392]].forEach(([x, y], i) => {
+    if (i % 2) { line(g, [x, y, x, y - 30], 4, '#8a5a2b'); dot(g, x, y - 38, 16, '#21b37c'); }
+    else { fillPoly(g, [x - 16, y, x + 16, y, x + 16, y - 22, x, y - 36, x - 16, y - 22], lit); }
+  });
+}
+
+/* 13.1–13.7: this body is the field, and the one who knows it is the knower of the field (13.2) */
+export function drawFieldGrid(g, S) {
+  const rows = 7, cols = 8, top = 220, bot = 480;
+  for (let r = 0; r < rows; r++) for (let q = 0; q < cols; q++) {
+    const t0 = r / rows, t1 = (r + 1) / rows, w0 = 120 + 260 * t0, w1 = 120 + 260 * t1, y0 = top + (bot - top) * t0, y1 = top + (bot - top) * t1;
+    const x00 = 256 - w0 + (2 * w0 * q) / cols, x01 = 256 - w0 + (2 * w0 * (q + 1)) / cols, x10 = 256 - w1 + (2 * w1 * q) / cols, x11 = 256 - w1 + (2 * w1 * (q + 1)) / cols;
+    fillPoly(g, [x00 + 2, y0 + 2, x01 - 2, y0 + 2, x11 - 2, y1 - 2, x10 + 2, y1 - 2], ['#21b37c', '#9ad18b', '#ffd166', '#c98a3a', '#2f8f5a'][(r * 3 + q * 2) % 5]);
+  }
+  /* the knower: a still point of light above the field, watching */
+  dot(g, 256, 96, 18, '#fff6dc'); ring(g, 256, 96, 30, 3, '#f5c15c'); ring(g, 256, 96, 44, 1.5, 'rgba(245, 193, 92, 0.6)');
+  g.setLineDash([4, 8]); line(g, [256, 130, 256, 214], 2, 'rgba(255, 231, 168, 0.8)'); line(g, [240, 128, 160, 214], 1.5, 'rgba(255, 231, 168, 0.5)'); line(g, [272, 128, 352, 214], 1.5, 'rgba(255, 231, 168, 0.5)'); g.setLineDash([]);
+}
+
+/* 13.8–13.12: knowledge begins with humility (13.8). Reeds that bow and do not break */
+export function drawBowedReeds(g, S) {
+  for (let r = 0; r < 4; r++) { const p = []; for (let x = 0; x <= 512; x += 8) p.push(x, 430 + r * 18 + 4 * sin(x / 24 + r)); line(g, p, 2.5, `rgba(69, 156, 255, ${0.8 - r * 0.15})`); }
+  for (let i = 0; i < 18; i++) {
+    const x = 40 + i * 25 + (i % 3) * 4, h = 200 + (i % 4) * 40, bend = 60 + (i % 3) * 30;
+    curve(g, [x, 430, x, 430 - h * 0.5, x + bend * 0.6, 430 - h, x + bend, 430 - h + 30], 3, i % 2 ? '#9ad18b' : '#21b37c');
+    g.fillStyle = '#c98a3a'; g.beginPath(); g.ellipse(x + bend, 430 - h + 44, 6, 16, 0.3, 0, TAU); g.fill();
+  }
+  drop(g, 300, 210, 10, '#9ef3ea');
+}
+
+/* 13.13–13.19: with hands and feet everywhere, eyes, heads and faces everywhere (13.14) */
+export function drawEyesEverywhere(g, S) {
+  ring(g, 256, 256, 210, 3, '#f5c15c');
+  const eye = (x, y, s) => {
+    g.fillStyle = '#e8ecf8'; g.beginPath(); g.moveTo(x - 20 * s, y); g.quadraticCurveTo(x, y - 16 * s, x + 20 * s, y); g.quadraticCurveTo(x, y + 16 * s, x - 20 * s, y); g.fill();
+    dot(g, x, y, 7 * s, '#5b7cff'); erase(g, () => dot(g, x, y, 3 * s, '#000'));
+  };
+  for (let ring_ = 0; ring_ < 4; ring_++) {
+    const n = [1, 7, 13, 19][ring_], r = [0, 66, 128, 182][ring_], s = [1.6, 1.15, 0.95, 0.8][ring_];
+    for (let i = 0; i < n; i++) { const a = (i / n) * TAU + ring_ * 0.3; eye(256 + cos(a) * r, 256 + sin(a) * r * 0.9, s); }
+  }
+  for (let i = 0; i < 12; i++) { const a = (i / 12) * TAU; dot(g, 256 + cos(a) * 226, 256 + sin(a) * 226, 7, '#ffd08a'); }
+}
+
+/* 13.20–13.27: nature dances; the Person is the witness (13.23) */
+export function drawWitnessDance(g, S) {
+  /* the witness, still, in a circle of light */
+  ring(g, 150, 250, 100, 3, 'rgba(255, 246, 220, 0.85)');
+  dot(g, 150, 196, 20, '#fff6dc');
+  g.fillStyle = '#fff6dc'; g.beginPath(); g.moveTo(124, 220); g.lineTo(176, 220); g.lineTo(190, 300); g.lineTo(110, 300); g.closePath(); g.fill();
+  g.beginPath(); g.ellipse(150, 306, 60, 18, 0, 0, TAU); g.fill();
+  /* nature, dancing, trailing her three colours */
+  const cols = ['#fff6dc', '#ff4d6d', '#5b7cff'];
+  cols.forEach((c, k) => { const p = []; for (let t = 0; t <= 1; t += 0.02) p.push(380 + 90 * sin(t * 7 + k * 2) * t, 120 + t * 330 + 20 * cos(t * 9 + k)); line(g, p, 4, c); });
+  dot(g, 372, 160, 16, '#ffd08a');
+  fillPoly(g, [366, 176, 380, 176, 420, 290, 330, 290], '#ff8fb1');
+  line(g, [370, 190, 320, 150, 300, 120], 6, '#ffd08a'); line(g, [376, 190, 430, 220, 460, 200], 6, '#ffd08a');
+  line(g, [360, 290, 340, 350], 7, '#ffd08a'); line(g, [390, 290, 420, 340, 440, 330], 7, '#ffd08a');
+  g.setLineDash([4, 10]); line(g, [250, 250, 320, 230], 2, 'rgba(255, 231, 168, 0.7)'); g.setLineDash([]);
+}
+
+/* 13.28–13.35: as space everywhere is never stained, so the Self (13.33). The same sky inside every pot */
+export function drawSpaceInPots(g, S) {
+  for (let i = 0; i < 200; i++) dot(g, rnd() * 512, rnd() * 300, 0.8 + rnd() * 1.6, `rgba(255, 246, 220, ${0.4 + rnd() * 0.6})`);
+  line(g, [20, 450, 492, 450], 2, 'rgba(245, 193, 92, 0.5)');
+  const pot = (x, w, h, broken) => {
+    g.fillStyle = '#c98a3a'; g.beginPath(); g.moveTo(x - w * 0.35, 450 - h); g.quadraticCurveTo(x - w * 1.1, 450 - h * 0.45, x - w * 0.4, 450); g.lineTo(x + w * 0.4, 450); g.quadraticCurveTo(x + w * 1.1, 450 - h * 0.45, x + w * 0.35, 450 - h); g.closePath(); g.fill();
+    line(g, [x - w * 0.45, 450 - h, x + w * 0.45, 450 - h], 8, '#e0a458');
+    erase(g, () => { g.beginPath(); g.ellipse(x, 450 - h * 0.48, w * 0.48, h * 0.3, 0, 0, TAU); g.fill(); if (broken) fillPoly(g, [x + w * 0.1, 450 - h, x + w * 0.8, 450 - h * 0.7, x + w * 0.4, 450 - h * 0.4], '#000'); });
+    for (let i = 0; i < 18; i++) { const a = rnd() * TAU, r = Math.sqrt(rnd()); dot(g, x + cos(a) * r * w * 0.42, 450 - h * 0.48 + sin(a) * r * h * 0.26, 1.2, '#fff6dc'); }
+  };
+  pot(100, 70, 140, false); pot(240, 90, 190, false); pot(380, 66, 120, true);
+  dot(g, 460, 70, 16, '#fff1c9');
+}
+
 /* story.js calls this with its sampler; returns lazily-sampled shapes keyed by name */
 export default function gitaShapes({ sample2D }) {
   return {
@@ -1474,5 +1558,12 @@ export default function gitaShapes({ sample2D }) {
     rescueHand: () => sample2D(drawRescueHand, 2.6, 0.25),
     fourSteps: () => sample2D(drawFourSteps, 2.55, 0.25),
     swanLake: () => sample2D(drawSwanLake, 2.6, 0.25),
+
+    oneSunWorld: () => sample2D(drawOneSunWorld, 2.6, 0.25),
+    fieldGrid: () => sample2D(drawFieldGrid, 2.55, 0.25),
+    bowedReeds: () => sample2D(drawBowedReeds, 2.6, 0.3),
+    eyesEverywhere: () => sample2D(drawEyesEverywhere, 2.55, 0.3),
+    witnessDance: () => sample2D(drawWitnessDance, 2.55, 0.25),
+    spaceInPots: () => sample2D(drawSpaceInPots, 2.6, 0.25),
   };
 }

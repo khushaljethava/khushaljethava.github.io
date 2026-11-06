@@ -353,6 +353,32 @@ SECTIONS[12] = dict(
         gyan="Be the person who lowers the temperature in the room, and isn't thrown by it either."),
   ])
 
+KEY_VERSES[13] = (2, 28, 34)
+SECTIONS[13] = dict(
+  subtitle="The Yoga of the Field and Its Knower",
+  hero_shape='oneSunWorld',
+  summary=("The body is a field, and there is one who knows the field. Krishna maps both: what the field is made of, what "
+           "real knowledge looks like (humility first), and what is to be known, which has hands and eyes everywhere and is "
+           "the light of all lights. Nature acts; the Self only witnesses, untouched, like space in a pot, like the one sun "
+           "that lights the whole world."),
+  sections=[
+   dict(id='field', label='The Field', shape='fieldGrid', side='right', frm=1, to=7, title='This body is the field',
+        intro="Arjuna asks about nature and the Person, the field and its knower. Krishna answers: this body is the field, and the one who knows it is the knower of the field (13.2). I am the knower in every field. The field itself is the elements, the senses, the mind, desire and aversion, pleasure and pain.",
+        gyan="You are not your dashboard. The body and mind are the field; you are the one watching it."),
+   dict(id='knowledge', label='Knowledge', shape='bowedReeds', side='left', frm=8, to=12, title='Humility first',
+        intro="What is real knowledge? Not information, but character: humility, no pretence, non-violence, patience, honesty, service to the teacher, steadiness, detachment, seeing clearly that birth, age and sickness come to all (13.8–12). Everything else is ignorance.",
+        gyan="The list starts with humility. Expertise without it is just a louder kind of ignorance."),
+   dict(id='to-be-known', label='What Is to Be Known', shape='eyesEverywhere', side='right', frm=13, to=19, title='Eyes and hands everywhere',
+        intro="What is to be known has hands and feet everywhere, eyes and faces everywhere (13.14). It shines through the senses yet has none, is inside and outside, far and near, undivided yet seeming divided. It is the light of all lights, seated in every heart.",
+        gyan="The deepest things are both very far and very close. Look outward and inward at once."),
+   dict(id='nature-person', label='Nature and the Person', shape='witnessDance', side='left', frm=20, to=27, title='The dancer and the witness',
+        intro="Nature and the Person are both beginningless. Nature does all the doing; the Person experiences, and gets entangled by attachment to nature's qualities. Yet the supreme Person in the body is the witness, the one who consents (13.23). Some see this by meditation, some by knowledge, some by action, some simply by listening.",
+        gyan="Let the dance go on. Practise being the one who watches it, too."),
+   dict(id='unstained', label='Unstained', shape='spaceInPots', side='right', frm=28, to=35, title='Space in every pot',
+        intro="Whoever sees the imperishable Lord equally in all perishing beings truly sees (13.28). Nature acts; the Self does not. As space is in every pot yet never stained by any, so the Self in every body is never stained (13.33). As the one sun lights the whole world, the knower lights the whole field.",
+        gyan="The same awareness is in every person you meet. Treat them that way."),
+  ])
+
 # every chapter with scenes in SECTIONS gets built; its meanings and effects must exist too
 chs = {n: chapter_verses(n, getattr(meanings, f'CH{n}'), getattr(fx, f'CH{n}_FX'), KEY_VERSES.get(n, ())) for n in sorted(SECTIONS)}
 

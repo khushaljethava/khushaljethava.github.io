@@ -457,3 +457,39 @@ CH12_FX = spread(
     ([20], 'sparkle'),                           # the nectar of dharma
 )
 assert sorted(CH12_FX) == list(range(1, 21))
+CH13_FX = spread(
+    ([1], 'drift'),                              # nature and the Person, the field and its knower
+    ([2], 'still'),                              # this body is the field
+    ([3], 'gather'),                             # the knower in all fields
+    ([4, 5], 'ripple'),
+    ([6], 'expand'),                             # the elements, the senses, the mind
+    ([7], 'drift'),
+    ([8], 'still'),                              # humility, patience, uprightness
+    ([9], 'sink'),                               # birth, death, old age, sickness
+    ([10], 'still'),
+    ([11], 'contract'),                          # a liking for solitude
+    ([12], 'sparkle'),
+    ([13, 14], 'expand'),                        # hands and eyes everywhere
+    ([15], 'veil'),
+    ([16], 'breathe'),                           # far away, and near
+    ([17], 'spin'),                              # sustainer, devourer, creator
+    ([18], 'blaze'),                             # the light of all lights
+    ([19], 'gather'),
+    ([20], 'gunas'),                             # the qualities are born of nature
+    ([21], 'drift'),
+    ([22], 'gunas'),
+    ([23], 'still'),                             # the witness
+    ([24], 'sparkle'),
+    ([25], 'breathe'),                           # some see through meditation
+    ([26], 'ripple'),                            # hearing from others
+    ([27], 'gather'),                            # the union of field and knower
+    ([28], 'still'),                             # the imperishable in the perishing
+    ([29], 'expand'),
+    ([30], 'still'),                             # the Self is not the doer
+    ([31], 'expand'),                            # spreading out from the One
+    ([32], 'still'),
+    ([33], 'expand'),                            # space is never stained
+    ([34], 'sparkle'),                           # the one sun lights the world
+    ([35], 'sparkle'),
+)
+assert sorted(CH13_FX) == list(range(1, 36))
