@@ -33,6 +33,31 @@ const revealIO = new IntersectionObserver(
 );
 reveals.forEach((el) => revealIO.observe(el));
 
+/* ---------- Gita: the shloka in the middle of the screen is "active" ---------- */
+const FX = ['ripple', 'sink', 'contract', 'expand', 'turbulence', 'drift', 'fire', 'water', 'sparkle', 'still', 'march', 'clash'];
+let activeFx = '';
+const verseCards = document.querySelectorAll('.gv[data-fx]');
+if (verseCards.length) {
+  const verseIO = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        let before = true;
+        verseCards.forEach((c) => {
+          if (c === e.target) before = false;
+          else c.classList.remove('active');
+          if (before) c.classList.add('lit'); /* a fast scroll can skip a verse; never leave earlier ones dim */
+        });
+        e.target.classList.add('active', 'lit'); /* lit stays: each shloka is recited once */
+        activeFx = e.target.dataset.fx;
+      } else {
+        e.target.classList.remove('active');
+      }
+    });
+    if (!document.querySelector('.gv.active')) activeFx = '';
+  }, { rootMargin: '-42% 0px -42% 0px' });
+  verseCards.forEach((c) => verseIO.observe(c));
+}
+
 /* ---------- Chapter rail ---------- */
 const sections = [...document.querySelectorAll('.st-chapter[data-shape]')];
 const rail = document.querySelector('.st-chapters');
@@ -622,6 +647,7 @@ async function initStage() {
     uMouse: { value: new THREE.Vector2(9, 9) },
     uAspect: { value: 1 },
     uPulse: { value: 0 },
+    uFx: { value: new Float32Array(12) },
   };
 
   const material = new THREE.ShaderMaterial({
@@ -631,6 +657,7 @@ async function initStage() {
     blending: THREE.AdditiveBlending,
     vertexShader: /* glsl */ `
       uniform float uTime, uProgress, uSize, uPixelRatio, uAspect, uPulse;
+      uniform float uFx[12]; /* ripple sink contract expand turbulence drift fire water sparkle still march clash */
       uniform vec2 uMouse;
       attribute vec3 aTo, aColA, aColB;
       attribute float aRand;
@@ -642,7 +669,18 @@ async function initStage() {
         vec3 pos = mix(position, aTo, p);
         float burst = sin(p * 3.14159);
         pos += burst * 1.1 * vec3(sin(aRand * 91.0 + uTime), cos(aRand * 57.0 + uTime * 1.3), sin(aRand * 33.0 + uTime * 0.7));
-        pos += vec3(sin(uTime * 0.8 + pos.y * 2.0), cos(uTime * 0.6 + pos.x * 2.0), sin(uTime * 0.7 + pos.z * 2.0)) * 0.022;
+        pos += vec3(sin(uTime * 0.8 + pos.y * 2.0), cos(uTime * 0.6 + pos.x * 2.0), sin(uTime * 0.7 + pos.z * 2.0)) * 0.022 * (1.0 - uFx[9]);
+        /* per-shloka motion */
+        vec3 dirC = normalize(pos + 1e-5);
+        float rad = length(pos);
+        pos += dirC * sin(rad * 5.0 - uTime * 7.0) * 0.12 * uFx[0];                         /* ripple: sound */
+        pos.y -= 0.5 * uFx[1] * (0.55 + 0.45 * aRand);                                       /* sink: grief */
+        pos *= 1.0 - 0.32 * uFx[2] + 0.16 * uFx[3] + 0.045 * uFx[10] * sin(uTime * 7.0);    /* contract, expand, march */
+        pos += uFx[4] * 0.22 * vec3(sin(aRand * 71.0 + uTime * 3.1), cos(aRand * 43.0 + uTime * 2.7), sin(aRand * 29.0 + uTime * 3.7)); /* turbulence */
+        pos.x += uFx[5] * 0.32 * sin(uTime * 0.9 + pos.y * 1.5);                            /* drift: wind */
+        pos.y += uFx[6] * 0.3 * fract(aRand * 7.0 + uTime * 0.7);                           /* fire: rising flicker */
+        pos.y += uFx[7] * 0.13 * sin(pos.x * 3.0 + uTime * 2.2);                            /* water: waves */
+        pos += dirC * uFx[11] * 0.32 * pow(abs(sin(uTime * 1.8)), 10.0);                    /* clash: sharp bursts */
         vec4 mv = modelViewMatrix * vec4(pos, 1.0);
         gl_Position = projectionMatrix * mv;
         vec2 ndc = gl_Position.xy / gl_Position.w;
@@ -653,6 +691,11 @@ async function initStage() {
         vec3 c = mix(aColA, aColB, p);
         float pulse = uPulse * pow(0.5 + 0.5 * sin(pos.x * 2.6 - uTime * 3.2), 10.0);
         c += vec3(0.6, 0.9, 1.0) * pulse;
+        c = mix(c, vec3(1.0, 0.42, 0.12), uFx[6] * 0.65);                                   /* fire colour */
+        c = mix(c, vec3(0.25, 0.6, 1.0), uFx[7] * 0.55);                                    /* water colour */
+        c = mix(c, vec3(dot(c, vec3(0.33))), uFx[1] * 0.6);                                 /* grief drains colour */
+        c *= 1.0 + 0.35 * uFx[3];
+        c += vec3(1.0, 0.95, 0.8) * uFx[8] * pow(aRand, 5.0) * (0.5 + 0.5 * sin(uTime * 6.0 + aRand * 40.0)); /* sparkle */
         c = mix(c, vec3(1.0), pow(aRand, 14.0) + f * 0.4);
         vColor = c;
         vAlpha = 0.5 + f * 0.4 + burst * 0.15;
@@ -904,6 +947,9 @@ async function initStage() {
     const upright = Math.round(spinZ / TAU) * TAU;
     spinZ += dt * 1.8 * wc + (upright - spinZ) * 0.04 * (1 - wc);
     uniforms.uPulse.value = weight('neural');
+    /* fade each shloka's effect in, and the previous one out */
+    const fxv = uniforms.uFx.value;
+    for (let k = 0; k < FX.length; k++) fxv[k] += ((FX[k] === activeFx ? 1 : 0) - fxv[k]) * Math.min(1, dt * 2.5);
     const wPalm = weight('palm');
     updateCosmos(wPalm);
 

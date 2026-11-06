@@ -1,0 +1,76 @@
+---
+layout: story
+---
+{%- comment -%}
+  One Bhagavad Gita chapter, verse by verse. Data: _data/gita/chapters.json (chapter meta + scenes)
+  and _data/gita/chapter-N.json (verses). Each scene is a story chapter with its own particle shape;
+  each verse is a card that animates in on scroll (story.js .reveal).
+{%- endcomment -%}
+{%- assign meta = site.data.gita.chapters | where: 'n', page.chapter | first -%}
+{%- assign data_key = 'chapter-' | append: page.chapter -%}
+{%- assign verses = site.data.gita[data_key] -%}
+{%- assign first_scene = meta.sections | first -%}
+
+<section class="st-chapter st-hero" id="intro" data-shape="{{ meta.hero_shape }}" data-side="left" data-label="Chapter {{ meta.n }}">
+  <div class="st-panel reveal">
+    <p class="st-eyebrow"><a href="{{ '/gita/' | relative_url }}">Gita Gyan</a> · Chapter {{ meta.n }} of 18</p>
+    <h1 class="st-title gv-title">{{ meta.name }}</h1>
+    <p class="gv-chapter-sa" lang="sa">{{ meta.sa }}</p>
+    <p class="st-role">{{ meta.subtitle }} · {{ meta.verses }} verses</p>
+    <p class="st-lede">{{ meta.summary }}</p>
+    <div class="st-btns">
+      <a class="st-btn st-btn-primary" href="#{{ first_scene.id }}"><i class="fas fa-book-open" aria-hidden="true"></i>Begin reading</a>
+      <a class="st-btn" href="{{ '/gita/' | relative_url }}"><i class="fas fa-list" aria-hidden="true"></i>All chapters</a>
+    </div>
+  </div>
+  <a class="st-scroll-cue" href="#{{ first_scene.id }}"><span>Scroll to begin</span><i class="fas fa-angle-down" aria-hidden="true"></i></a>
+</section>
+
+{% for s in meta.sections %}
+<section class="st-chapter gv-scene" id="{{ s.id }}" data-shape="{{ s.shape }}" data-side="{{ s.side }}" data-label="{{ s.label }}">
+  <div class="st-panel st-panel-wide">
+    <header class="reveal">
+      <p class="st-num">Verses {{ meta.n }}.{{ s.from }}–{{ meta.n }}.{{ s.to }}</p>
+      <h2 class="st-title">{{ s.title }}</h2>
+      <p class="st-lede">{{ s.intro }}</p>
+    </header>
+
+    {% for v in verses %}{% if v.n >= s.from and v.n <= s.to %}
+    <article class="gv reveal{% if v.key %} gv-key{% endif %}" id="v{{ meta.n }}-{{ v.n }}" data-fx="{{ v.fx }}">
+      <a class="gv-num" href="#v{{ meta.n }}-{{ v.n }}" aria-label="Link to verse {{ meta.n }}.{{ v.n }}">{{ meta.n }}.{{ v.n }}</a>
+      {%- if v.speaker and v.speaker_at == 0 %}
+      <p class="gv-speaker">{{ v.speaker }}</p>
+      {%- endif %}
+      {%- comment -%} each word is its own span so the shloka can light up word by word, like a recitation {%- endcomment -%}
+      {%- assign wi = 0 -%}
+      <p class="gv-sa" lang="sa">
+        {%- for line in v.sa -%}
+          {%- if v.speaker and v.speaker_at > 0 and forloop.index0 == v.speaker_at -%}<span class="gv-speaker gv-speaker-inline">{{ v.speaker }}</span>{%- endif -%}
+          {%- assign words = line | split: ' ' -%}
+          {%- for w in words -%}<span class="gw" style="--w:{{ wi }}">{{ w }}</span>{% unless forloop.last %}&#32;{% endunless %}{% assign wi = wi | plus: 1 %}{%- endfor -%}
+          {%- unless forloop.last %}<br>{% endunless -%}
+        {%- endfor -%}
+      </p>
+      <p class="gv-tr" lang="sa-Latn">{{ v.tr | join: '<br>' }}</p>
+      <p class="gv-en">{{ v.en }}</p>
+    </article>
+    {% endif %}{% endfor %}
+
+    <aside class="gv-gyan reveal" aria-label="Gyan">
+      <b>Gyan</b>
+      <p>{{ s.gyan }}</p>
+    </aside>
+
+    {% if forloop.last %}
+    {%- assign prev_n = meta.n | minus: 1 -%}
+    {%- assign next_n = meta.n | plus: 1 -%}
+    {%- assign prev = site.data.gita.chapters | where: 'n', prev_n | first -%}
+    {%- assign next = site.data.gita.chapters | where: 'n', next_n | first -%}
+    <nav class="gv-pager" aria-label="Chapters">
+      {% if prev and prev.live %}<a class="st-btn" href="{{ prev.url | relative_url }}"><i class="fas fa-arrow-left" aria-hidden="true"></i>Chapter {{ prev.n }}: {{ prev.name }}</a>{% else %}<a class="st-btn" href="{{ '/gita/' | relative_url }}"><i class="fas fa-list" aria-hidden="true"></i>All chapters</a>{% endif %}
+      {% if next and next.live %}<a class="st-btn st-btn-primary" href="{{ next.url | relative_url }}">Chapter {{ next.n }}: {{ next.name }}<i class="fas fa-arrow-right" aria-hidden="true"></i></a>{% elsif next %}<span class="st-btn gv-soon" aria-disabled="true">Chapter {{ next.n }} coming soon</span>{% endif %}
+    </nav>
+    {% endif %}
+  </div>
+</section>
+{% endfor %}

@@ -1,0 +1,63 @@
+---
+layout: story
+permalink: /gita/
+title: "Gita Gyan: the Bhagavad Gita, Verse by Verse"
+description: >-
+  Read the Bhagavad Gita verse by verse: Sanskrit, IAST transliteration and a plain-English meaning
+  for every shloka, with the takeaway (gyan) for each passage. Chapters 1 and 2 are live.
+---
+
+<!-- Prologue · the conversation on the chariot -->
+<section class="st-chapter st-hero" id="gita" data-shape="chariot" data-side="left" data-label="Gita Gyan">
+  <div class="st-panel reveal">
+    <p class="st-eyebrow">Gita Gyan · <span lang="sa">गीता ज्ञान</span></p>
+    <h1 class="st-title gv-title">The Bhagavad Gita, verse by verse.</h1>
+    <p class="st-lede">
+      700 verses. 18 chapters. One conversation on a battlefield, between a warrior who has lost his
+      nerve and the friend driving his chariot.
+    </p>
+    <p>
+      Each verse appears in Sanskrit, with IAST transliteration and a plain-English meaning, and each passage
+      ends with its <em>gyan</em>, the takeaway. The particles move with the story as you read. New chapters
+      are added over time.
+    </p>
+    <div class="st-btns">
+      <a class="st-btn st-btn-primary" href="{{ '/gita/chapter-1/' | relative_url }}"><i class="fas fa-book-open" aria-hidden="true"></i>Start with Chapter 1</a>
+      <a class="st-btn" href="#chapters"><i class="fas fa-list" aria-hidden="true"></i>All chapters</a>
+    </div>
+  </div>
+  <a class="st-scroll-cue" href="#chapters"><span>See the chapters</span><i class="fas fa-angle-down" aria-hidden="true"></i></a>
+</section>
+
+<!-- The 18 chapters -->
+<section class="st-chapter" id="chapters" data-shape="om" data-side="right" data-label="Chapters">
+  <div class="st-panel st-panel-wide reveal">
+    <p class="st-num">18 chapters · <span lang="sa">अष्टादश अध्याय</span></p>
+    <h2 class="st-title">Choose a chapter.</h2>
+    <ol class="gv-chapters">
+      {% for c in site.data.gita.chapters %}
+      <li>
+        {% if c.live %}
+        <a class="gv-ch gv-ch-live" href="{{ c.url | relative_url }}">
+          <span class="gv-ch-n">Chapter {{ c.n }}</span>
+          <span class="gv-ch-sa" lang="sa">{{ c.sa }}</span>
+          <span class="gv-ch-name">{{ c.name }}</span>
+          <small>{{ c.meaning }} · {{ c.verses }} verses</small>
+        </a>
+        {% else %}
+        <div class="gv-ch gv-ch-soon" aria-disabled="true">
+          <span class="gv-ch-n">Chapter {{ c.n }} · coming soon</span>
+          <span class="gv-ch-sa" lang="sa">{{ c.sa }}</span>
+          <span class="gv-ch-name">{{ c.name }}</span>
+          <small>{{ c.meaning }} · {{ c.verses }} verses</small>
+        </div>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+    <p class="gv-source">
+      Sanskrit text from the public-domain <a href="https://github.com/gita/gita" target="_blank" rel="noopener">gita/gita</a> dataset;
+      transliteration generated in IAST; English meanings written for this site.
+    </p>
+  </div>
+</section>
