@@ -602,19 +602,29 @@ async function initStage() {
     poly(g, [272, 290, 330, 290, 336, 306, 268, 306], '#ffc94d');
   }
 
-  const shapes = {
-    om: sample2D(drawOm),
-    flute: sample2D(drawFlute, 2.1),
-    feather: sample2D(drawFeather, 2.6),
-    chakra: sample2D(drawChakra, 2.2, 0.25),
-    neural: neural(),
-    palm: sample2D(drawPalm, 2.4, 0.12),
-    conch: sample2D(drawConch, 2.5),
-    archer: sample2D(drawArcher, 2.35, 0.2),
-    murlidhar: sample2D(drawMurlidhar, 2.45, 0.2),
-    chariot: sample2D(drawChariot, 2.35, 0.2),
-    lotus: sample2D(drawLotus, 2.6),
+  /* Shapes are sampled on first use, so each page only pays for the shapes it actually shows */
+  const SHAPE_DEFS = {
+    om: () => sample2D(drawOm),
+    flute: () => sample2D(drawFlute, 2.1),
+    feather: () => sample2D(drawFeather, 2.6),
+    chakra: () => sample2D(drawChakra, 2.2, 0.25),
+    neural: () => neural(),
+    palm: () => sample2D(drawPalm, 2.4, 0.12),
+    conch: () => sample2D(drawConch, 2.5),
+    archer: () => sample2D(drawArcher, 2.35, 0.2),
+    murlidhar: () => sample2D(drawMurlidhar, 2.45, 0.2),
+    chariot: () => sample2D(drawChariot, 2.35, 0.2),
+    lotus: () => sample2D(drawLotus, 2.6),
   };
+  /* Gita chapter pages bring their own scenes; keep the same ?v= so a deploy busts both files */
+  if (document.querySelector('.gv-scene')) {
+    const mod = await import('./gita-shapes.js' + new URL(import.meta.url).search);
+    Object.assign(SHAPE_DEFS, mod.default({ sample2D }));
+  }
+  const shapeCache = {};
+  const shapes = new Proxy({}, {
+    get: (_, name) => (typeof name === 'string' && SHAPE_DEFS[name] ? (shapeCache[name] ||= SHAPE_DEFS[name]()) : undefined),
+  });
   const intro = cloud(9);
 
   /* ---------- Scene ---------- */
@@ -675,7 +685,7 @@ async function initStage() {
         float rad = length(pos);
         pos += dirC * sin(rad * 5.0 - uTime * 7.0) * 0.12 * uFx[0];                         /* ripple: sound */
         pos.y -= 0.5 * uFx[1] * (0.55 + 0.45 * aRand);                                       /* sink: grief */
-        pos *= 1.0 - 0.32 * uFx[2] + 0.16 * uFx[3] + 0.045 * uFx[10] * sin(uTime * 7.0);    /* contract, expand, march */
+        pos *= 1.0 - 0.22 * uFx[2] + 0.16 * uFx[3] + 0.045 * uFx[10] * sin(uTime * 7.0);    /* contract, expand, march */
         pos += uFx[4] * 0.22 * vec3(sin(aRand * 71.0 + uTime * 3.1), cos(aRand * 43.0 + uTime * 2.7), sin(aRand * 29.0 + uTime * 3.7)); /* turbulence */
         pos.x += uFx[5] * 0.32 * sin(uTime * 0.9 + pos.y * 1.5);                            /* drift: wind */
         pos.y += uFx[6] * 0.3 * fract(aRand * 7.0 + uTime * 0.7);                           /* fire: rising flicker */
