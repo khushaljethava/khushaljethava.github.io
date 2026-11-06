@@ -272,6 +272,32 @@ SECTIONS[9] = dict(
         gyan="Where you start doesn't decide where you end. Turn, and keep turning."),
   ])
 
+KEY_VERSES[10] = (8, 20, 41)
+SECTIONS[10] = dict(
+  subtitle="The Yoga of Divine Glories",
+  hero_shape='peacockFeather',
+  summary=("Arjuna asks where to look for Krishna, and Krishna gives him a list of the best of everything: the sun among "
+           "lights, the Himalaya among mountains, the Ganga among rivers, Garuda among birds, spring among seasons, silence "
+           "among secrets. Then the twist: all of it is only a spark of his splendour, and he holds up the whole universe "
+           "with a single fragment of himself."),
+  sections=[
+   dict(id='source', label='The Source', shape='heartLamp', side='right', frm=1, to=11, title='The lamp in the heart',
+        intro="Neither gods nor sages know his origin; he is theirs. Every quality, from patience and truth to fear and fearlessness, comes from him. For those who love him, he lives in the heart and burns away the dark with the shining lamp of knowledge (10.11).",
+        gyan="Understanding is a light you carry inside, not a thing you own. Keep it lit by talking about what matters with people who care."),
+   dict(id='request', label="Arjuna's Request", shape='stargazer', side='left', frm=12, to=18, title='How should I think of you?',
+        intro="Arjuna is moved: the sages called you supreme, and now you say it yourself. Only you know yourself. So tell me your glories, the forms in which I should think of you. I can never hear enough of your words.",
+        gyan="When something is too big to grasp, ask for examples. The concrete is the way into the infinite."),
+   dict(id='glories', label='Glories', shape='himalayas', side='right', frm=19, to=29, title='The Himalaya among mountains',
+        intro="Krishna begins: I am the Self in every heart, the beginning, middle and end. Among lights I am the sun, among stars the moon, among mountains Meru, among waters the ocean, among words Om, among immovable things the Himalaya.",
+        gyan="Look for the best example of anything and you're looking at something sacred. Excellence points beyond itself."),
+   dict(id='more-glories', label='More Glories', shape='garuda', side='left', frm=30, to=38, title='Garuda among birds, the Ganga among rivers',
+        intro="Among beasts the lion, among birds Garuda, among rivers the Ganga, among letters the first one, A. He is time without end, death that takes all, spring in flower, victory, determination, and among secrets, silence.",
+        gyan="Even time and death are on the list. The divine isn't only in the pleasant parts; it runs through all of it."),
+   dict(id='spark', label='A Single Spark', shape='tejasAmsha', side='right', frm=39, to=42, title='One fragment holds it all',
+        intro="There is no end to his glories; this was only a sample. Whatever is glorious, beautiful or powerful is a spark of his splendour (10.41). And then: why know all this? I hold up the whole universe with a single fragment of myself.",
+        gyan="Every brilliant thing you meet is a spark of something larger. Admire the spark; remember the fire."),
+  ])
+
 # every chapter with scenes in SECTIONS gets built; its meanings and effects must exist too
 chs = {n: chapter_verses(n, getattr(meanings, f'CH{n}'), getattr(fx, f'CH{n}_FX'), KEY_VERSES.get(n, ())) for n in sorted(SECTIONS)}
 

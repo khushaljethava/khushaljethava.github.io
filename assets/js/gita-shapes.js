@@ -1,4 +1,4 @@
-/* Gita Gyan scenes: one particle drawing per scene of Chapters 1 to 9.
+/* Gita Gyan scenes: one particle drawing per scene of Chapters 1 to 10.
    Loaded only on Gita chapter pages by story.js; each draw(g, S) paints a 512x512 canvas
    that story.js samples into particles (colour comes from the pixels). */
 const TAU = Math.PI * 2;
@@ -1128,6 +1128,90 @@ export function drawLotusMud(g, S) {
   for (let i = 0; i < 12; i++) { const a = Math.PI + (i / 11) * Math.PI; line(g, [256 + cos(a) * 110, 200 + sin(a) * 100, 256 + cos(a) * 128, 200 + sin(a) * 118], 2, '#fff6dc'); }
 }
 
+
+/* ---------- Chapter 10 ---------- */
+
+/* Chapter 10: Krishna's peacock feather, a single glory that holds every colour */
+export function drawPeacockFeather(g, S) {
+  curve(g, [180, 486, 220, 380, 250, 260, 290, 120], 4, '#f5c15c');
+  for (let i = 0; i < 70; i++) {
+    const t = i / 70, x = 180 + (290 - 180) * t + 30 * sin(t * Math.PI) * 0.6, y = 486 - (486 - 120) * t, len = 30 + 70 * sin(t * Math.PI * 0.9);
+    line(g, [x, y, x - len * 0.9, y - len * 0.5], 1.6, `hsl(${150 + t * 40}, 70%, ${45 + t * 15}%)`);
+    line(g, [x, y, x + len * 0.9, y - len * 0.6], 1.6, `hsl(${150 + t * 40}, 70%, ${45 + t * 15}%)`);
+  }
+  const ex = 296, ey = 120;
+  g.fillStyle = '#f5c15c'; g.beginPath(); g.ellipse(ex, ey, 66, 84, 0.25, 0, TAU); g.fill();
+  g.fillStyle = '#21b37c'; g.beginPath(); g.ellipse(ex, ey + 4, 52, 66, 0.25, 0, TAU); g.fill();
+  g.fillStyle = '#45e3d3'; g.beginPath(); g.ellipse(ex, ey + 10, 34, 44, 0.25, 0, TAU); g.fill();
+  g.fillStyle = '#2f56e0'; g.beginPath(); g.ellipse(ex + 2, ey + 14, 22, 28, 0.25, 0, TAU); g.fill();
+  dot(g, ex + 4, ey + 20, 9, '#0f2a80');
+}
+
+/* 10.1–10.11: dwelling in their hearts, I destroy the darkness with the shining lamp of knowledge (10.11) */
+export function drawHeartLamp(g, S) {
+  const heart = () => { g.beginPath(); g.moveTo(256, 452); g.bezierCurveTo(80, 330, 40, 180, 150, 120); g.bezierCurveTo(210, 90, 250, 130, 256, 170); g.bezierCurveTo(262, 130, 302, 90, 362, 120); g.bezierCurveTo(472, 180, 432, 330, 256, 452); g.closePath(); };
+  heart(); g.strokeStyle = '#ff6b8a'; g.lineWidth = 6; g.stroke();
+  for (let i = 0; i < 90; i++) { const a = rnd() * TAU, r = 230 + rnd() * 30; dot(g, 256 + cos(a) * r, 270 + sin(a) * r * 0.9, 2 + rnd() * 3, 'rgba(110, 80, 200, 0.8)'); }
+  for (let i = 0; i < 16; i++) { const a = (i / 16) * TAU; line(g, [256 + cos(a) * 60, 250 + sin(a) * 60, 256 + cos(a) * 120, 250 + sin(a) * 120], 2, 'rgba(255, 231, 168, 0.75)'); }
+  g.fillStyle = '#c98a3a'; g.beginPath(); g.moveTo(200, 330); g.quadraticCurveTo(256, 390, 312, 330); g.closePath(); g.fill();
+  flame(g, 256, 330, 30, 130, '#ff9a4d', '#ffffff');
+}
+
+/* 10.12–10.18: "How may I know you? In what forms should I think of you?" (10.17) */
+export function drawStargazer(g, S) {
+  for (let i = 0; i < 260; i++) dot(g, rnd() * 512, rnd() * 380, rnd() < 0.08 ? 3 : 1 + rnd() * 1.3, `rgba(255, ${230 + rnd() * 25}, ${200 + rnd() * 55}, ${0.5 + rnd() * 0.5})`);
+  const stars = [[300, 80], [350, 110], [390, 96], [420, 140], [380, 180], [330, 170]];
+  line(g, stars.flat(), 1.5, 'rgba(158, 243, 234, 0.7)'); stars.forEach(([x, y]) => dot(g, x, y, 5, '#9ef3ea'));
+  dot(g, 120, 110, 30, '#fff1c9');
+  g.fillStyle = 'rgba(111, 147, 245, 0.7)'; g.beginPath(); g.moveTo(0, 512); g.quadraticCurveTo(160, 400, 330, 460); g.quadraticCurveTo(420, 490, 512, 470); g.lineTo(512, 512); g.closePath(); g.fill();
+  const x = 170, y = 420;
+  dot(g, x, y - 46, 11, '#ffd08a'); line(g, [x, y - 34, x - 4, y], 10, '#ff9a4d');
+  line(g, [x - 4, y, x - 12, y + 24], 5, '#ffd08a'); line(g, [x - 4, y, x + 8, y + 24], 5, '#ffd08a');
+  line(g, [x, y - 26, x + 18, y - 52], 4, '#ffd08a');
+}
+
+/* 10.19–10.29: the sun among lights, the moon among stars, the Himalaya among immovable things (10.21, 10.25) */
+export function drawHimalayas(g, S) {
+  dot(g, 110, 110, 38, '#ffb347'); for (let i = 0; i < 16; i++) { const a = (i / 16) * TAU; line(g, [110 + cos(a) * 46, 110 + sin(a) * 46, 110 + cos(a) * 62, 110 + sin(a) * 62], 3, '#ffd166'); }
+  dot(g, 410, 100, 30, '#fff1c9'); erase(g, () => dot(g, 424, 90, 26, '#000'));
+  fillPoly(g, [0, 420, 120, 230, 190, 320, 290, 150, 380, 300, 430, 240, 512, 400, 512, 470, 0, 470], 'rgba(111, 147, 245, 0.8)');
+  fillPoly(g, [250, 210, 290, 150, 330, 214, 306, 200, 290, 222, 272, 200], '#ffffff');
+  fillPoly(g, [96, 270, 120, 230, 144, 268, 128, 258, 118, 274], '#ffffff');
+  fillPoly(g, [412, 266, 430, 240, 452, 270, 436, 262], '#ffffff');
+  fillPoly(g, [0, 470, 160, 360, 250, 420, 360, 340, 512, 450, 512, 512, 0, 512], 'rgba(69, 100, 200, 0.85)');
+}
+
+/* 10.30–10.38: among birds, Garuda; among rivers, the Ganga (10.30–31) */
+export function drawGaruda(g, S) {
+  curve(g, [0, 470, 160, 400, 330, 500, 512, 420], 18, 'rgba(69, 227, 211, 0.85)');
+  curve(g, [0, 490, 160, 420, 330, 520, 512, 440], 3, 'rgba(158, 243, 234, 0.7)');
+  const gold = '#ffb347';
+  for (const side of [-1, 1]) {
+    g.fillStyle = gold; g.beginPath(); g.moveTo(256, 230);
+    g.bezierCurveTo(256 + side * 80, 150, 256 + side * 170, 120, 256 + side * 236, 150);
+    for (let k = 0; k < 6; k++) { const x = 256 + side * (236 - k * 26), y = 150 + k * 22; g.lineTo(x, y + 30); g.lineTo(x - side * 14, y + 16); }
+    g.lineTo(256, 290); g.closePath(); g.fill();
+    for (let k = 0; k < 5; k++) curve(g, [256 + side * 30, 240 + k * 6, 256 + side * 90, 190 + k * 12, 256 + side * 150, 170 + k * 16, 256 + side * 200, 170 + k * 20], 1.5, '#ff9a4d');
+  }
+  g.fillStyle = '#ff9a4d'; g.beginPath(); g.ellipse(256, 280, 34, 70, 0, 0, TAU); g.fill();
+  fillPoly(g, [226, 340, 286, 340, 300, 400, 256, 384, 212, 400], '#ff6a2b');
+  dot(g, 256, 196, 26, gold); fillPoly(g, [256, 206, 286, 220, 258, 226], '#ffe7a8');
+  erase(g, () => dot(g, 264, 190, 4, '#000'));
+  fillPoly(g, [240, 176, 256, 140, 272, 176], '#ff4d6d');
+}
+
+/* 10.39–10.42: whatever is glorious is a spark of my splendour (10.41); one fragment holds up the universe (10.42) */
+export function drawTejasAmsha(g, S) {
+  const c = 256;
+  for (let i = 0; i < 90; i++) { const a = rnd() * TAU, r = 120 + rnd() * 130; const x = c + cos(a) * r, y = 210 + sin(a) * r * 0.9; dot(g, x, y, 1.5 + rnd() * 2.5, i % 3 ? '#ffd166' : '#ffffff'); }
+  g.fillStyle = 'rgba(77, 124, 247, 0.85)'; g.beginPath(); g.arc(c, 200, 110, 0, TAU); g.fill();
+  erase(g, () => { for (let i = 0; i < 70; i++) { const a = rnd() * TAU, r = rnd() * 100; dot(g, c + cos(a) * r, 200 + sin(a) * r, 1.6, '#000'); } });
+  g.strokeStyle = 'rgba(158, 243, 234, 0.8)'; g.lineWidth = 2; g.beginPath(); g.ellipse(c, 200, 150, 30, -0.3, 0, TAU); g.stroke();
+  for (let i = 0; i < 12; i++) { const a = (i / 12) * TAU; line(g, [c + cos(a) * 14, 400 + sin(a) * 14, c + cos(a) * (i % 2 ? 30 : 52), 400 + sin(a) * (i % 2 ? 30 : 52)], 2.5, '#fff6dc'); }
+  dot(g, c, 400, 12, '#ffffff');
+  line(g, [c, 386, c, 312], 3, 'rgba(255, 246, 220, 0.85)');
+}
+
 /* story.js calls this with its sampler; returns lazily-sampled shapes keyed by name */
 export default function gitaShapes({ sample2D }) {
   return {
@@ -1189,5 +1273,12 @@ export default function gitaShapes({ sample2D }) {
     returnStairs: () => sample2D(drawReturnStairs, 2.5, 0.25),
     offeringHands: () => sample2D(drawOfferingHands, 2.5, 0.2),
     lotusMud: () => sample2D(drawLotusMud, 2.55, 0.25),
+
+    peacockFeather: () => sample2D(drawPeacockFeather, 2.55, 0.25),
+    heartLamp: () => sample2D(drawHeartLamp, 2.5, 0.2),
+    stargazer: () => sample2D(drawStargazer, 2.65, 0.35),
+    himalayas: () => sample2D(drawHimalayas, 2.6, 0.25),
+    garuda: () => sample2D(drawGaruda, 2.6, 0.25),
+    tejasAmsha: () => sample2D(drawTejasAmsha, 2.55, 0.3),
   };
 }

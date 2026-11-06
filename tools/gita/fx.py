@@ -339,3 +339,46 @@ CH9_FX = spread(
     ([34], 'gather'),                            # fix your mind on me
 )
 assert sorted(CH9_FX) == list(range(1, 35))
+CH10_FX = spread(
+    ([1], 'still'),
+    ([2], 'expand'),                             # the source of gods and sages
+    ([3], 'sparkle'),
+    ([4, 5], 'ripple'),                          # all states of being arise from me
+    ([6], 'descend'),                            # the sages born of my mind
+    ([7], 'still'),
+    ([8], 'expand'),                             # I am the source of everything
+    ([9], 'ripple'),                             # always speaking of me
+    ([10], 'gather'),
+    ([11], 'sparkle'),                           # the lamp of knowledge in the heart
+    ([12], 'rise'),                              # Arjuna's praise
+    ([13], 'ripple'),
+    ([14], 'still'),
+    ([15], 'gather'),                            # you alone know yourself
+    ([16], 'expand'),
+    ([17], 'drift'),                             # how may I know you?
+    ([18], 'sparkle'),
+    ([19], 'expand'),                            # there is no end to my extent
+    ([20], 'gather'),                            # the Self in the heart of all
+    ([21], 'sparkle'),                           # the sun among lights, the moon among stars
+    ([22], 'ripple'),
+    ([23], 'rise'),                              # Meru among mountains
+    ([24], 'water'),                             # the ocean
+    ([25], 'still'),                             # the Himalaya
+    ([26], 'expand'),                            # the ashvattha
+    ([27], 'march'),                             # the horse and the elephant
+    ([28], 'clash'),                             # the thunderbolt
+    ([29], 'water'),                             # Varuna
+    ([30], 'rise'),                              # Garuda among birds
+    ([31], 'water'),                             # the Ganga among rivers
+    ([32, 33], 'spin'),                          # beginning, middle, end; unending time
+    ([34], 'sink'),                              # all-devouring death
+    ([35], 'sparkle'),                           # flower-bearing spring
+    ([36], 'clash'),                             # I am victory
+    ([37], 'still'),
+    ([38], 'still'),                             # among secrets, silence
+    ([39], 'gather'),                            # the seed of all beings
+    ([40], 'expand'),
+    ([41], 'sparkle'),                           # a spark of my splendour
+    ([42], 'still'),                             # holding up the universe with one fragment
+)
+assert sorted(CH10_FX) == list(range(1, 43))
