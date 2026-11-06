@@ -1,4 +1,4 @@
-/* Gita Gyan scenes: one particle drawing per scene of Chapters 1 to 13.
+/* Gita Gyan scenes: one particle drawing per scene of Chapters 1 to 14.
    Loaded only on Gita chapter pages by story.js; each draw(g, S) paints a 512x512 canvas
    that story.js samples into particles (colour comes from the pixels). */
 const TAU = Math.PI * 2;
@@ -1476,6 +1476,67 @@ export function drawSpaceInPots(g, S) {
   dot(g, 460, 70, 16, '#fff1c9');
 }
 
+
+/* ---------- Chapter 14 ---------- */
+
+/* Chapter 14: three flames for the three qualities: clear, restless and smoky */
+export function drawThreeFlames(g, S) {
+  const diya = (x) => { g.fillStyle = '#c98a3a'; g.beginPath(); g.moveTo(x - 52, 400); g.quadraticCurveTo(x, 452, x + 52, 400); g.closePath(); g.fill(); line(g, [x - 52, 400, x + 52, 400], 4, '#f5c15c'); };
+  /* sattva: tall, still, white */
+  diya(110); flame(g, 110, 400, 24, 210, '#fff6dc', '#ffffff');
+  /* rajas: wide, red, throwing sparks */
+  diya(256); flame(g, 256, 400, 44, 170, '#ff2d55', '#ffb347'); flame(g, 234, 396, 18, 90, '#ff4d6d', '#ffd166'); flame(g, 280, 396, 18, 96, '#ff4d6d', '#ffd166');
+  for (let i = 0; i < 24; i++) dot(g, 256 + (rnd() - 0.5) * 140, 160 + rnd() * 120, 2 + rnd() * 2, '#ff6a2b');
+  /* tamas: low, blue, smothered in smoke */
+  diya(402); flame(g, 402, 400, 16, 60, '#2f3fb0', '#5b7cff');
+  for (let i = 0; i < 6; i++) ring(g, 402 + (i % 2 ? 14 : -14), 320 - i * 34, 20 + i * 3, 5, 'rgba(110, 120, 170, 0.75)', 0, Math.PI * 1.4);
+}
+
+/* 14.1–14.4: the great Brahman is the womb; I place the seed (14.3). The golden egg on the cosmic waters */
+export function drawGoldenEgg(g, S) {
+  for (let i = 0; i < 120; i++) dot(g, rnd() * 512, rnd() * 300, 0.8 + rnd() * 1.4, `rgba(255, 246, 220, ${0.3 + rnd() * 0.6})`);
+  for (let r = 0; r < 5; r++) { const p = []; for (let x = 0; x <= 512; x += 8) p.push(x, 400 + r * 20 + 6 * sin(x / 30 + r)); line(g, p, 3, `rgba(69, 156, 255, ${0.85 - r * 0.13})`); }
+  const egg = g.createRadialGradient(236, 200, 10, 256, 250, 150); egg.addColorStop(0, '#fff6dc'); egg.addColorStop(0.5, '#ffd166'); egg.addColorStop(1, '#c98a3a');
+  g.fillStyle = egg; g.beginPath(); g.ellipse(256, 250, 116, 150, 0, 0, TAU); g.fill();
+  ring(g, 256, 260, 26, 3, '#ffffff'); dot(g, 256, 260, 10, '#ffffff');
+  for (let i = 0; i < 20; i++) { const a = (i / 20) * TAU; line(g, [256 + cos(a) * 130, 250 + sin(a) * 166, 256 + cos(a) * 156, 250 + sin(a) * 192], 2, 'rgba(255, 209, 102, 0.75)'); }
+}
+
+/* 14.5–14.13: goodness, passion and dullness bind the embodied one to the body (14.5). Three ropes */
+export function drawBoundFigure(g, S) {
+  const body = '#6f93f5';
+  dot(g, 256, 140, 30, body);
+  g.fillStyle = body; g.beginPath(); g.moveTo(222, 172); g.lineTo(290, 172); g.lineTo(306, 330); g.lineTo(206, 330); g.closePath(); g.fill();
+  g.beginPath(); g.ellipse(256, 350, 110, 34, 0, 0, TAU); g.fill();
+  ['#fff6dc', '#ff4d6d', '#5b7cff'].forEach((c, k) => {
+    const p = [];
+    for (let t = 0; t <= 1; t += 0.01) { const y = 120 + t * 260, a = t * TAU * 3 + (k * TAU) / 3, rx = 80 + 40 * sin(t * Math.PI); p.push(256 + cos(a) * rx, y + sin(a) * 18); }
+    line(g, p, 6, c);
+    line(g, [256 + cos((k * TAU) / 3) * 80, 120, 120 + k * 136, 40], 4, c);
+  });
+}
+
+/* 14.14–14.18: those in goodness go upward, those in passion stay in the middle, those in dullness go down (14.18) */
+export function drawGunaTiers(g, S) {
+  const band = (y, h, c) => { g.strokeStyle = c; g.lineWidth = 3; g.strokeRect(40, y, 432, h); for (let i = 0; i < 70; i++) dot(g, 46 + rnd() * 420, y + 6 + rnd() * (h - 12), 1.5, c); };
+  band(40, 130, '#fff6dc'); band(190, 130, '#ff4d6d'); band(340, 130, '#5b7cff');
+  const fig = (x, y, c) => { dot(g, x, y - 34, 11, c); line(g, [x, y - 22, x, y + 6], 9, c); line(g, [x, y + 6, x - 8, y + 30], 5, c); line(g, [x, y + 6, x + 8, y + 30], 5, c); };
+  fig(256, 110, '#ffffff'); for (let i = 0; i < 3; i++) fillPoly(g, [180 + i * 76, 80, 196 + i * 76, 56, 212 + i * 76, 80], '#ffffff');
+  fig(256, 260, '#ff6a8a'); for (let i = 0; i < 4; i++) ring(g, 120 + i * 90, 262, 16, 3, '#ff4d6d', 0, Math.PI * 1.5);
+  fig(256, 410, '#7b8cff'); for (let i = 0; i < 3; i++) fillPoly(g, [180 + i * 76, 440, 196 + i * 76, 464, 212 + i * 76, 440], '#7b8cff');
+}
+
+/* 14.19–14.27: seated as if indifferent, knowing "it is only the qualities moving" (14.23) */
+export function drawAboveWaves(g, S) {
+  ['#fff6dc', '#ff4d6d', '#5b7cff'].forEach((c, k) => { for (let r = 0; r < 2; r++) { const p = []; for (let x = 0; x <= 512; x += 8) p.push(x, 340 + k * 50 + r * 18 + 14 * sin(x / (22 + k * 6) + r + k)); line(g, p, 4, c); } });
+  for (let k = 0; k < 8; k++) { const a = Math.PI + (k / 7) * Math.PI; g.fillStyle = k % 2 ? '#ff8fb1' : '#ffb3c8'; g.beginPath(); g.ellipse(256 + cos(a) * 60, 300 + sin(a) * 26, 46, 14, a, 0, TAU); g.fill(); }
+  const blue = '#6f93f5';
+  g.fillStyle = blue; g.beginPath(); g.ellipse(256, 284, 80, 22, 0, 0, TAU); g.fill();
+  g.beginPath(); g.moveTo(226, 280); g.lineTo(286, 280); g.lineTo(276, 180); g.lineTo(236, 180); g.closePath(); g.fill();
+  dot(g, 256, 150, 28, blue);
+  ring(g, 256, 150, 44, 3, '#ffd166'); ring(g, 256, 210, 110, 2, 'rgba(255, 209, 102, 0.6)');
+}
+
 /* story.js calls this with its sampler; returns lazily-sampled shapes keyed by name */
 export default function gitaShapes({ sample2D }) {
   return {
@@ -1565,5 +1626,11 @@ export default function gitaShapes({ sample2D }) {
     eyesEverywhere: () => sample2D(drawEyesEverywhere, 2.55, 0.3),
     witnessDance: () => sample2D(drawWitnessDance, 2.55, 0.25),
     spaceInPots: () => sample2D(drawSpaceInPots, 2.6, 0.25),
+
+    threeFlames: () => sample2D(drawThreeFlames, 2.55, 0.25),
+    goldenEgg: () => sample2D(drawGoldenEgg, 2.55, 0.25),
+    boundFigure: () => sample2D(drawBoundFigure, 2.5, 0.25),
+    gunaTiers: () => sample2D(drawGunaTiers, 2.5, 0.2),
+    aboveWaves: () => sample2D(drawAboveWaves, 2.55, 0.25),
   };
 }

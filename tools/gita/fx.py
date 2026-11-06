@@ -493,3 +493,31 @@ CH13_FX = spread(
     ([35], 'sparkle'),
 )
 assert sorted(CH13_FX) == list(range(1, 36))
+CH14_FX = spread(
+    ([1], 'sparkle'),                            # the best of all knowledge
+    ([2], 'still'),                              # untroubled at dissolution
+    ([3], 'gather'),                             # I place the seed in the womb
+    ([4], 'expand'),
+    ([5], 'gunas'),                              # goodness, passion, dullness
+    ([6], 'sparkle'),                            # goodness illuminates
+    ([7], 'fire'),                               # passion, the nature of desire
+    ([8], 'sink'),                               # dullness: carelessness, sleep
+    ([9, 10], 'gunas'),                          # each overpowers the others
+    ([11], 'sparkle'),                           # light through all the gates
+    ([12], 'turbulence'),                        # greed, restlessness, craving
+    ([13], 'sink'),                              # darkness and inertia
+    ([14], 'rise'),                              # to the pure worlds
+    ([15], 'drift'),
+    ([16, 17], 'gunas'),
+    ([18], 'gunas'),                             # upward, middle, downward
+    ([19], 'still'),                             # no doer but the qualities
+    ([20], 'rise'),                              # beyond birth and death
+    ([21], 'drift'),                             # by what marks?
+    ([22], 'still'),
+    ([23], 'gunas'),                             # only the qualities moving
+    ([24], 'still'),                             # clod, stone and gold alike
+    ([25], 'breathe'),
+    ([26], 'sparkle'),                           # fit to become Brahman
+    ([27], 'expand'),
+)
+assert sorted(CH14_FX) == list(range(1, 28))

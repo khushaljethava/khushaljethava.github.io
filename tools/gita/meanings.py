@@ -565,3 +565,34 @@ CH13 = [
  'Those who, with the eye of knowledge, see the difference between the field and its knower, and the freeing of beings from nature, reach the Supreme.',
 ]
 assert len(CH13) == 35
+
+CH14 = [
+ 'Again I will teach you the supreme knowledge, the best of all knowledge, knowing which all the sages have passed from this world to the highest perfection.',
+ 'Taking refuge in this knowledge and reaching oneness with me, they are not born at the time of creation, nor troubled at the time of dissolution.',
+ 'My womb is the great Brahman, nature itself; in it I place the seed, and from it all beings are born, Bharata.',
+ 'Whatever forms are born in any womb, son of Kunti, the great Brahman is their womb, and I am the father who gives the seed.',
+ 'Goodness (sattva), passion (rajas) and dullness (tamas): these qualities born of nature bind the imperishable embodied one to the body, mighty-armed.',
+ 'Of these, goodness, being pure, is illuminating and free from harm; it binds by attachment to happiness and attachment to knowledge, sinless one.',
+ 'Know that passion is the nature of desire, arising from craving and attachment; it binds the embodied one by attachment to action, son of Kunti.',
+ 'And know that dullness, born of ignorance, deludes all embodied beings; it binds by carelessness, laziness and sleep, Bharata.',
+ 'Goodness attaches one to happiness, passion to action, Bharata; but dullness, veiling knowledge, attaches one to carelessness.',
+ 'Goodness prevails by overpowering passion and dullness, Bharata; passion by overpowering goodness and dullness; and dullness by overpowering goodness and passion.',
+ 'When the light of knowledge shines through all the gates of the body, then know that goodness has grown strong.',
+ 'Greed, busyness, the starting of ventures, restlessness and craving arise when passion grows strong, best of the Bharatas.',
+ 'Darkness, inertia, carelessness and delusion arise when dullness grows strong, joy of the Kurus.',
+ 'If the embodied one meets death when goodness prevails, it goes to the pure worlds of those who know the highest.',
+ 'Dying in passion, one is born among those attached to action; dying in dullness, one is born in the wombs of the deluded.',
+ 'The fruit of good action is said to be pure and of the nature of goodness; the fruit of passion is pain; the fruit of dullness is ignorance.',
+ 'From goodness arises knowledge, from passion greed, and from dullness carelessness, delusion and ignorance.',
+ 'Those established in goodness go upward; those in passion stay in the middle; those in dullness, abiding in the lowest quality, go downward.',
+ 'When the seer sees no doer other than the qualities, and knows what is beyond the qualities, they come to my state of being.',
+ 'Going beyond these three qualities from which the body arises, the embodied one is freed from birth, death, old age and sorrow, and attains immortality.',
+ 'By what marks is one known who has gone beyond these three qualities, Lord? How do they behave, and how do they go beyond them?',
+ 'Light, activity and delusion, Pandava: such a one neither hates them when they arise nor longs for them when they cease.',
+ 'Sitting as if indifferent, unshaken by the qualities, knowing "it is only the qualities moving," they stay firm and do not waver.',
+ 'The same in pleasure and pain, self-contained, seeing a clod, a stone and gold as equal, even toward the pleasant and the unpleasant, steady, the same in blame and praise,',
+ 'the same in honour and dishonour, the same toward friend and foe, having given up every self-centred undertaking: such a one is said to have gone beyond the qualities.',
+ 'And whoever serves me with the unwavering yoga of devotion, going beyond these qualities, is fit to become Brahman.',
+ 'For I am the ground of Brahman, of the immortal and imperishable, of eternal dharma and of absolute bliss.',
+]
+assert len(CH14) == 27

@@ -379,6 +379,29 @@ SECTIONS[13] = dict(
         gyan="The same awareness is in every person you meet. Treat them that way."),
   ])
 
+KEY_VERSES[14] = (5, 18, 23)
+SECTIONS[14] = dict(
+  subtitle="The Yoga of the Three Qualities",
+  hero_shape='threeFlames',
+  summary=("Everything in nature is woven from three qualities: goodness (sattva), which is clear and bright; passion "
+           "(rajas), which is restless and craving; and dullness (tamas), which is heavy and careless. Each binds in its own "
+           "way, each tries to overpower the others, and each leads somewhere different. Krishna shows how to recognise "
+           "them, and the person who has gone beyond all three."),
+  sections=[
+   dict(id='womb', label='The Great Womb', shape='goldenEgg', side='right', frm=1, to=4, title='I place the seed',
+        intro="Krishna offers the best of all knowledge once more. Nature is the great womb; he places the seed in it, and every being in every form is born from that union (14.3–4). He is the father who gives the seed.",
+        gyan="Every living thing has the same origin. Start every encounter from that."),
+   dict(id='three-ropes', label='Three Ropes', shape='boundFigure', side='left', frm=5, to=13, title='How each quality binds',
+        intro="Goodness binds with the pleasure of happiness and knowing; passion binds with the itch to act; dullness binds with carelessness, laziness and sleep (14.5–8). They take turns overpowering one another. You can tell which is winning: clarity, or restlessness, or fog.",
+        gyan="Notice which one is driving today: clear, restless or foggy. Naming it is half of getting free of it."),
+   dict(id='where-they-lead', label='Where They Lead', shape='gunaTiers', side='right', frm=14, to=18, title='Up, middle, down',
+        intro="Each quality bears its own fruit: goodness gives knowledge, passion gives greed and pain, dullness gives delusion. Those in goodness go upward, those in passion stay in the middle, those in dullness sink downward (14.18).",
+        gyan="Habits compound in a direction. Check which way yours are carrying you."),
+   dict(id='beyond', label='Beyond the Three', shape='aboveWaves', side='left', frm=19, to=27, title='Only the qualities moving',
+        intro="How do you recognise someone who has gone beyond? They don't hate light, activity or delusion when it comes, or crave it when it goes. They sit as if indifferent, knowing \"it's only the qualities moving\" (14.23): the same in pleasure and pain, praise and blame, toward friend and foe.",
+        gyan="Moods are weather. Be the sky they pass through."),
+  ])
+
 # every chapter with scenes in SECTIONS gets built; its meanings and effects must exist too
 chs = {n: chapter_verses(n, getattr(meanings, f'CH{n}'), getattr(fx, f'CH{n}_FX'), KEY_VERSES.get(n, ())) for n in sorted(SECTIONS)}
 
