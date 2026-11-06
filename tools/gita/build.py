@@ -2,8 +2,8 @@ import json, re, sys, os
 from indic_transliteration import sanscript
 from indic_transliteration.sanscript import transliterate
 sys.path.insert(0, os.path.dirname(__file__))
-from meanings import CH1, CH2, CH3, CH4, CH5, CH6
-from fx import CH1_FX, CH2_FX, CH3_FX, CH4_FX, CH5_FX, CH6_FX
+from meanings import CH1, CH2, CH3, CH4, CH5, CH6, CH7, CH8
+from fx import CH1_FX, CH2_FX, CH3_FX, CH4_FX, CH5_FX, CH6_FX, CH7_FX, CH8_FX
 data_dir, out_dir = sys.argv[1], sys.argv[2]
 verses = json.load(open(os.path.join(data_dir, 'verse.json')))
 chapters = json.load(open(os.path.join(data_dir, 'chapters.json')))
@@ -52,6 +52,8 @@ ch3 = chapter_verses(3, CH3, CH3_FX, key_verses=(21, 35))
 ch4 = chapter_verses(4, CH4, CH4_FX, key_verses=(7, 8, 24))
 ch5 = chapter_verses(5, CH5, CH5_FX, key_verses=(10, 18))
 ch6 = chapter_verses(6, CH6, CH6_FX, key_verses=(5, 19, 35))
+ch7 = chapter_verses(7, CH7, CH7_FX, key_verses=(7, 14, 19))
+ch8 = chapter_verses(8, CH8, CH8_FX, key_verses=(6, 13))
 
 SECTIONS = {
  1: dict(
@@ -200,6 +202,53 @@ SECTIONS = {
         intro="And if someone tries and falls short, do they vanish like a torn cloud? Never, says Krishna. No one who does good comes to a bad end. The practice carries over, life after life, until it reaches the goal. So be a yogi, Arjuna.",
         gyan="Every honest attempt compounds. The practice you start today is never wasted, even if it takes far longer than you hoped."),
   ]),
+ 7: dict(
+  subtitle="The Yoga of Knowledge and Realisation",
+  hero_shape='pearlThread',
+  summary=("Krishna now speaks of himself: the eightfold nature of matter and mind, and the higher nature that is life itself. "
+           "He is the taste in water and the light of sun and moon, the thread on which everything is strung like pearls. "
+           "His maya of the three qualities hides him, and only those who turn to him cross it. Rarest of all is the one who "
+           "sees, \"Vasudeva is everything.\""),
+  sections=[
+   dict(id='two-natures', label='Two Natures', shape='ashtaPrakriti', side='right', frm=1, to=7, title='The eightfold and the living',
+        intro="Earth, water, fire, air, space, mind, intellect, ego: that is Krishna's lower nature (7.4). Beyond it is the higher, the life that holds the world together. Both come from him, and all of it hangs on him like pearls on a thread (7.7).",
+        gyan="Every system has its parts and the thing that makes them alive. Learn both the components and what runs through them."),
+   dict(id='essence', label='The Essence', shape='essences', side='left', frm=8, to=12, title='The taste in water',
+        intro="Where is God in the everyday? Krishna answers: the taste in water, the light of the sun and moon, the fragrance of the earth, the brilliance of fire, the strength of the strong, the seed of every being.",
+        gyan="Look for the essence, not the surface. In code, in people, in work: find the one thing that makes it what it is."),
+   dict(id='maya', label='Maya', shape='mayaVeil', side='right', frm=13, to=15, title='The veil of the three qualities',
+        intro="Woven of the three qualities, his divine maya is hard to cross (7.14). The whole world is dazzled by it and misses what lies behind. But those who turn to him walk straight through the veil.",
+        gyan="Most of what distracts us is beautifully made. Notice the weave, and keep walking toward the light behind it."),
+   dict(id='devotees', label='Four Devotees', shape='fourDevotees', side='left', frm=16, to=19, title='Four kinds of seekers',
+        intro="Four kinds of people turn to him: the distressed, the curious, the ones who want something, and the wise (7.16). All are noble, but the wise, who ask for nothing, are his very Self. After many lives they see that Vasudeva is everything.",
+        gyan="People come to good things for pain, for curiosity, for gain. All are welcome; the deepest ones stay for the thing itself."),
+   dict(id='veiled', label='Veiled', shape='hourglass', side='right', frm=20, to=30, title='Knowing past, present and future',
+        intro="People pray to many gods for many things, and Krishna gives even that faith its strength. But he himself stays veiled by yogamaya: he knows every being that was, is and will be, and no one knows him (7.26).",
+        gyan="Respect every path, but don't confuse the gift with the giver. Results end; what's behind them doesn't."),
+  ]),
+ 8: dict(
+  subtitle="The Yoga of the Imperishable Brahman",
+  hero_shape='yantra',
+  summary=("Arjuna asks seven questions, and the last is the hardest: how is God known at the hour of death? Whatever you "
+           "remember at the end, Krishna says, is where you go, so remember him always. He describes the imperishable, the "
+           "day and night of Brahma in which worlds appear and dissolve, and the two paths of light and smoke."),
+  sections=[
+   dict(id='seven-questions', label='Seven Questions', shape='sevenPetals', side='right', frm=1, to=4, title='What is Brahman?',
+        intro="Arjuna asks: what is Brahman, the Self within, action, the realm of beings, the realm of the gods, the lord of sacrifice, and how are you known at death? Krishna answers each in a line: the imperishable is Brahman, and he himself is the lord of sacrifice in this body.",
+        gyan="Good questions are short and come in lists. Ask them all; the answers often turn out to share one centre."),
+   dict(id='last-thought', label='The Last Thought', shape='birdCage', side='left', frm=5, to=8, title='Whatever you remember at the end',
+        intro="Whatever state one remembers when leaving the body, to that one goes (8.6), because it is what one has been absorbed in all along. So remember me at all times, Krishna says, and fight.",
+        gyan="You become what you practise thinking about. Choose it now, not at the end."),
+   dict(id='om', label='Om', shape='atomSun', side='right', frm=9, to=14, title='Smaller than the atom, bright as the sun',
+        intro="Meditate on the one who is smaller than the atom, the sustainer of all, coloured like the sun, beyond all darkness (8.9). Closing the gates, the breath gathered at the crown, uttering Om, one reaches the highest. For one who remembers always, he is easy to reach.",
+        gyan="The smallest steady point of light outshines a lot of darkness. Keep one clear thing in focus."),
+   dict(id='brahma-day', label='Day of Brahma', shape='brahmaDay', side='left', frm=15, to=22, title='A thousand ages, then night',
+        intro="A day of Brahma lasts a thousand ages, and so does his night. At dawn all beings emerge from the unmanifest; at nightfall they dissolve again, over and over (8.17–19). Beyond even that is an unmanifest that never perishes.",
+        gyan="Everything you build has a day and a night. Build anyway, and know what lasts beyond the cycle."),
+   dict(id='two-paths', label='Two Paths', shape='lightSmoke', side='right', frm=23, to=28, title='The bright path and the dark',
+        intro="There are two paths of departure: fire, light, day and the northern sun, which do not return; smoke, night and the moon, which return (8.24–26). The yogi who knows both is never confused, and goes beyond even the merit of the Vedas.",
+        gyan="Some roads lead somewhere; some lead round again. Know which one you're on."),
+  ]),
 }
 
 meta = []
@@ -216,11 +265,11 @@ for c in sorted(chapters, key=lambda c: c['chapter_number']):
     meta.append(m)
 
 os.makedirs(out_dir, exist_ok=True)
-for name, obj in [('chapters', meta), ('chapter-1', ch1), ('chapter-2', ch2), ('chapter-3', ch3), ('chapter-4', ch4), ('chapter-5', ch5), ('chapter-6', ch6)]:
+for name, obj in [('chapters', meta), ('chapter-1', ch1), ('chapter-2', ch2), ('chapter-3', ch3), ('chapter-4', ch4), ('chapter-5', ch5), ('chapter-6', ch6), ('chapter-7', ch7), ('chapter-8', ch8)]:
     with open(os.path.join(out_dir, name + '.json'), 'w', encoding='utf-8') as f:
         json.dump(obj, f, ensure_ascii=False, indent=1)
-print('chapters', len(meta), '| ch1', len(ch1), '| ch2', len(ch2), '| ch3', len(ch3), '| ch4', len(ch4), '| ch5', len(ch5), '| ch6', len(ch6))
-print('speakers ch5/6:', [(v['n'], v['speaker']) for v in ch5 + ch6 if 'speaker' in v])
+print('chapters', len(meta), '| ch1', len(ch1), '| ch2', len(ch2), '| ch3', len(ch3), '| ch4', len(ch4), '| ch5', len(ch5), '| ch6', len(ch6), '| ch7', len(ch7), '| ch8', len(ch8))
+print('speakers ch7/8:', [(v['n'], v['speaker']) for v in ch7 + ch8 if 'speaker' in v])
 print('speakers ch1:', sorted({v['speaker'] for v in ch1 if 'speaker' in v}))
 print('sample 2.47:', ch2[46]['sa'], ch2[46]['tr'])
 print('sample 1.1 :', ch1[0].get('speaker'), ch1[0]['sa'])

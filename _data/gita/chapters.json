@@ -441,8 +441,68 @@
   "name": "Gyaan Vigyana Yoga",
   "meaning": "Self-Knowledge and Enlightenment",
   "verses": 30,
-  "live": false,
-  "url": "/gita/chapter-7/"
+  "live": true,
+  "url": "/gita/chapter-7/",
+  "subtitle": "The Yoga of Knowledge and Realisation",
+  "hero_shape": "pearlThread",
+  "summary": "Krishna now speaks of himself: the eightfold nature of matter and mind, and the higher nature that is life itself. He is the taste in water and the light of sun and moon, the thread on which everything is strung like pearls. His maya of the three qualities hides him, and only those who turn to him cross it. Rarest of all is the one who sees, \"Vasudeva is everything.\"",
+  "sections": [
+   {
+    "id": "two-natures",
+    "label": "Two Natures",
+    "shape": "ashtaPrakriti",
+    "side": "right",
+    "to": 7,
+    "title": "The eightfold and the living",
+    "intro": "Earth, water, fire, air, space, mind, intellect, ego: that is Krishna's lower nature (7.4). Beyond it is the higher, the life that holds the world together. Both come from him, and all of it hangs on him like pearls on a thread (7.7).",
+    "gyan": "Every system has its parts and the thing that makes them alive. Learn both the components and what runs through them.",
+    "from": 1
+   },
+   {
+    "id": "essence",
+    "label": "The Essence",
+    "shape": "essences",
+    "side": "left",
+    "to": 12,
+    "title": "The taste in water",
+    "intro": "Where is God in the everyday? Krishna answers: the taste in water, the light of the sun and moon, the fragrance of the earth, the brilliance of fire, the strength of the strong, the seed of every being.",
+    "gyan": "Look for the essence, not the surface. In code, in people, in work: find the one thing that makes it what it is.",
+    "from": 8
+   },
+   {
+    "id": "maya",
+    "label": "Maya",
+    "shape": "mayaVeil",
+    "side": "right",
+    "to": 15,
+    "title": "The veil of the three qualities",
+    "intro": "Woven of the three qualities, his divine maya is hard to cross (7.14). The whole world is dazzled by it and misses what lies behind. But those who turn to him walk straight through the veil.",
+    "gyan": "Most of what distracts us is beautifully made. Notice the weave, and keep walking toward the light behind it.",
+    "from": 13
+   },
+   {
+    "id": "devotees",
+    "label": "Four Devotees",
+    "shape": "fourDevotees",
+    "side": "left",
+    "to": 19,
+    "title": "Four kinds of seekers",
+    "intro": "Four kinds of people turn to him: the distressed, the curious, the ones who want something, and the wise (7.16). All are noble, but the wise, who ask for nothing, are his very Self. After many lives they see that Vasudeva is everything.",
+    "gyan": "People come to good things for pain, for curiosity, for gain. All are welcome; the deepest ones stay for the thing itself.",
+    "from": 16
+   },
+   {
+    "id": "veiled",
+    "label": "Veiled",
+    "shape": "hourglass",
+    "side": "right",
+    "to": 30,
+    "title": "Knowing past, present and future",
+    "intro": "People pray to many gods for many things, and Krishna gives even that faith its strength. But he himself stays veiled by yogamaya: he knows every being that was, is and will be, and no one knows him (7.26).",
+    "gyan": "Respect every path, but don't confuse the gift with the giver. Results end; what's behind them doesn't.",
+    "from": 20
+   }
+  ]
  },
  {
   "n": 8,
@@ -450,8 +510,68 @@
   "name": "Akshara Brahma Yoga",
   "meaning": "Path of the Eternal God",
   "verses": 28,
-  "live": false,
-  "url": "/gita/chapter-8/"
+  "live": true,
+  "url": "/gita/chapter-8/",
+  "subtitle": "The Yoga of the Imperishable Brahman",
+  "hero_shape": "yantra",
+  "summary": "Arjuna asks seven questions, and the last is the hardest: how is God known at the hour of death? Whatever you remember at the end, Krishna says, is where you go, so remember him always. He describes the imperishable, the day and night of Brahma in which worlds appear and dissolve, and the two paths of light and smoke.",
+  "sections": [
+   {
+    "id": "seven-questions",
+    "label": "Seven Questions",
+    "shape": "sevenPetals",
+    "side": "right",
+    "to": 4,
+    "title": "What is Brahman?",
+    "intro": "Arjuna asks: what is Brahman, the Self within, action, the realm of beings, the realm of the gods, the lord of sacrifice, and how are you known at death? Krishna answers each in a line: the imperishable is Brahman, and he himself is the lord of sacrifice in this body.",
+    "gyan": "Good questions are short and come in lists. Ask them all; the answers often turn out to share one centre.",
+    "from": 1
+   },
+   {
+    "id": "last-thought",
+    "label": "The Last Thought",
+    "shape": "birdCage",
+    "side": "left",
+    "to": 8,
+    "title": "Whatever you remember at the end",
+    "intro": "Whatever state one remembers when leaving the body, to that one goes (8.6), because it is what one has been absorbed in all along. So remember me at all times, Krishna says, and fight.",
+    "gyan": "You become what you practise thinking about. Choose it now, not at the end.",
+    "from": 5
+   },
+   {
+    "id": "om",
+    "label": "Om",
+    "shape": "atomSun",
+    "side": "right",
+    "to": 14,
+    "title": "Smaller than the atom, bright as the sun",
+    "intro": "Meditate on the one who is smaller than the atom, the sustainer of all, coloured like the sun, beyond all darkness (8.9). Closing the gates, the breath gathered at the crown, uttering Om, one reaches the highest. For one who remembers always, he is easy to reach.",
+    "gyan": "The smallest steady point of light outshines a lot of darkness. Keep one clear thing in focus.",
+    "from": 9
+   },
+   {
+    "id": "brahma-day",
+    "label": "Day of Brahma",
+    "shape": "brahmaDay",
+    "side": "left",
+    "to": 22,
+    "title": "A thousand ages, then night",
+    "intro": "A day of Brahma lasts a thousand ages, and so does his night. At dawn all beings emerge from the unmanifest; at nightfall they dissolve again, over and over (8.17–19). Beyond even that is an unmanifest that never perishes.",
+    "gyan": "Everything you build has a day and a night. Build anyway, and know what lasts beyond the cycle.",
+    "from": 15
+   },
+   {
+    "id": "two-paths",
+    "label": "Two Paths",
+    "shape": "lightSmoke",
+    "side": "right",
+    "to": 28,
+    "title": "The bright path and the dark",
+    "intro": "There are two paths of departure: fire, light, day and the northern sun, which do not return; smoke, night and the moon, which return (8.24–26). The yogi who knows both is never confused, and goes beyond even the merit of the Vedas.",
+    "gyan": "Some roads lead somewhere; some lead round again. Know which one you're on.",
+    "from": 23
+   }
+  ]
  },
  {
   "n": 9,

@@ -1,7 +1,8 @@
 # One particle effect per shloka, chosen from what the verse describes.
 # Vocabulary: ripple, sink, contract, expand, turbulence, drift, fire, water, sparkle, still, march, clash,
 #             spin (a wheel turns), rise (offering smoke), descend (light pours down), ash (burnt away),
-#             breathe (slow inhale/exhale), scatter (the restless mind darts), gather (one-pointed mind)
+#             breathe (slow inhale/exhale), scatter (the restless mind darts), gather (one-pointed mind),
+#             thread (pearls on a thread), daynight (Brahma's day and night), veil (maya shimmering)
 def spread(*pairs):
     out = {}
     for verses, fx in pairs:
@@ -247,3 +248,60 @@ CH6_FX = spread(
     ([47], 'sparkle'),
 )
 assert sorted(CH5_FX) == list(range(1, 30)) and sorted(CH6_FX) == list(range(1, 48))
+CH7_FX = spread(
+    ([1], 'still'),
+    ([2], 'expand'),
+    ([3], 'contract'),                              # hardly one in thousands
+    ([4], 'expand'),                                # the eightfold nature
+    ([5], 'sparkle'),                               # the higher nature, life itself
+    ([6], 'spin'),                                  # origin and dissolution
+    ([7], 'thread'),                                # pearls on a thread
+    ([8], 'water'),                                 # the taste in water
+    ([9], 'rise'),                                  # fragrance of earth, brilliance in fire
+    ([10], 'gather'),                               # the eternal seed
+    ([11], 'march'),                                # the strength of the strong
+    ([12, 13], 'veil'),                             # the three qualities delude the world
+    ([14], 'veil'),                                 # my maya, hard to cross
+    ([15], 'sink'),
+    ([16], 'rise'),                                 # four kinds of devotees
+    ([17], 'sparkle'),
+    ([18], 'gather'),
+    ([19], 'expand'),                               # Vasudeva is everything
+    ([20], 'drift'),
+    ([21], 'still'),
+    ([22], 'ripple'),
+    ([23], 'sink'),
+    ([24, 25], 'veil'),                             # veiled by yogamaya
+    ([26], 'spin'),                                 # past, present, to come
+    ([27], 'turbulence'),                           # the delusion of opposites
+    ([28], 'still'),
+    ([29], 'rise'),
+    ([30], 'sparkle'),
+)
+CH8_FX = spread(
+    ([1, 2], 'drift'),                              # seven questions
+    ([3], 'expand'),                                # the imperishable
+    ([4], 'gather'),                                # the lord of sacrifice, in the body
+    ([5, 6], 'rise'),                               # what one remembers at the end
+    ([7], 'clash'),                                 # remember me, and fight
+    ([8], 'gather'),
+    ([9], 'sparkle'),                               # smaller than the atom, sun-coloured
+    ([10], 'gather'),                               # life-breath between the brows
+    ([11], 'still'),
+    ([12], 'contract'),                             # closing the gates
+    ([13], 'ripple'),                               # Om
+    ([14], 'still'),
+    ([15], 'expand'),
+    ([16], 'spin'),                                 # all worlds return
+    ([17, 18, 19], 'daynight'),                     # the day and night of Brahma
+    ([20], 'still'),                                # beyond the unmanifest
+    ([21], 'sparkle'),
+    ([22], 'expand'),
+    ([23], 'drift'),
+    ([24], 'rise'),                                 # the path of light
+    ([25], 'sink'),                                 # the path of smoke, and return
+    ([26], 'daynight'),                             # bright and dark, both eternal
+    ([27], 'still'),
+    ([28], 'sparkle'),
+)
+assert sorted(CH7_FX) == list(range(1, 31)) and sorted(CH8_FX) == list(range(1, 29))

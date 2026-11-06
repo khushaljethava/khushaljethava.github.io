@@ -34,7 +34,7 @@ const revealIO = new IntersectionObserver(
 reveals.forEach((el) => revealIO.observe(el));
 
 /* ---------- Gita: the shloka in the middle of the screen is "active" ---------- */
-const FX = ['ripple', 'sink', 'contract', 'expand', 'turbulence', 'drift', 'fire', 'water', 'sparkle', 'still', 'march', 'clash', 'spin', 'rise', 'descend', 'ash', 'breathe', 'scatter', 'gather'];
+const FX = ['ripple', 'sink', 'contract', 'expand', 'turbulence', 'drift', 'fire', 'water', 'sparkle', 'still', 'march', 'clash', 'spin', 'rise', 'descend', 'ash', 'breathe', 'scatter', 'gather', 'thread', 'daynight', 'veil'];
 const SPIN = FX.indexOf('spin');
 let activeFx = '';
 const verseCards = document.querySelectorAll('.gv[data-fx]');
@@ -658,7 +658,7 @@ async function initStage() {
     uMouse: { value: new THREE.Vector2(9, 9) },
     uAspect: { value: 1 },
     uPulse: { value: 0 },
-    uFx: { value: new Float32Array(19) },
+    uFx: { value: new Float32Array(22) },
   };
 
   const material = new THREE.ShaderMaterial({
@@ -668,7 +668,7 @@ async function initStage() {
     blending: THREE.AdditiveBlending,
     vertexShader: /* glsl */ `
       uniform float uTime, uProgress, uSize, uPixelRatio, uAspect, uPulse;
-      uniform float uFx[19]; /* ripple sink contract expand turbulence drift fire water sparkle still march clash spin rise descend ash breathe scatter gather */
+      uniform float uFx[22]; /* ripple sink contract expand turbulence drift fire water sparkle still march clash spin rise descend ash breathe scatter gather thread daynight veil */
       uniform vec2 uMouse;
       attribute vec3 aTo, aColA, aColB;
       attribute float aRand;
@@ -707,6 +707,11 @@ async function initStage() {
         float hop = floor(uTime * 2.5 + aRand * 9.0);                                         /* scatter: the restless mind darts, stops, darts */
         pos += uFx[17] * hp * 0.4 * vec3(sin(hop * 12.9898 + aRand * 78.2), cos(hop * 4.1414 + aRand * 31.7), 0.0);
         pos = mix(pos, vec3(0.0, 0.0, pos.z * 0.2), uFx[18] * hp * 0.9);                     /* gather: half the mind collapses to one point */
+        pos.y = mix(pos.y, floor(pos.y * 5.0 + 0.5) / 5.0, uFx[19] * 0.85);                 /* thread: strung like pearls on a thread */
+        pos.x += uFx[19] * 0.05 * sin(uTime * 1.2 + floor(pos.y * 5.0 + 0.5));
+        float day = 0.5 + 0.5 * sin(uTime * 0.6 - pos.x * 0.9);                              /* daynight: dawn sweeps across, night follows */
+        pos *= 1.0 + uFx[20] * 0.07 * (day - 0.5);
+        pos.x += uFx[21] * 0.12 * sin(pos.y * 6.0 + uTime * 1.5);                            /* veil: maya ripples like cloth */
         vec4 mv = modelViewMatrix * vec4(pos, 1.0);
         gl_Position = projectionMatrix * mv;
         vec2 ndc = gl_Position.xy / gl_Position.w;
@@ -727,10 +732,14 @@ async function initStage() {
         c = mix(c, vec3(dot(c, vec3(0.3))) * 0.8, uFx[15] * hp * ashT);                   /* burnt to grey ash */
         c += vec3(1.0, 0.38, 0.08) * uFx[15] * pow(1.0 - ashT, 6.0) * 1.5;                  /* last embers */
         c *= 1.0 + 0.25 * uFx[16] * breath;
+        c += vec3(1.0, 0.9, 0.6) * uFx[19] * 0.25;
+        c *= mix(1.0, 0.35 + 0.95 * day, uFx[20]);
+        float vp = uTime * 0.8 + pos.y * 3.0;                                                 /* the three gunas shimmer through the veil */
+        c = mix(c, 0.55 + 0.45 * vec3(sin(vp), sin(vp + 2.1), sin(vp + 4.2)), uFx[21] * 0.45);
         c += vec3(1.0, 0.92, 0.75) * uFx[18] * hp * 0.6;                                      /* the gathered point glows */
         c = mix(c, vec3(1.0), pow(aRand, 14.0) + f * 0.4);
         vColor = c;
-        vAlpha = (0.5 + f * 0.4 + burst * 0.15) * (1.0 - hp * riseT * uFx[13] * 0.8) * (1.0 - hp * ashT * uFx[15] * 0.7);
+        vAlpha = (0.5 + f * 0.4 + burst * 0.15) * (1.0 - hp * riseT * uFx[13] * 0.8) * (1.0 - hp * ashT * uFx[15] * 0.7) * (1.0 - uFx[20] * hp * (1.0 - day) * 0.85);
       }`,
     fragmentShader: /* glsl */ `
       varying vec3 vColor;
