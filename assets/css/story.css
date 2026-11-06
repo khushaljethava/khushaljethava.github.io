@@ -406,6 +406,37 @@ body.story [lang='sa'] { font-family: var(--st-deva); font-style: normal; }
 .st-card h3 { margin: 0.7rem 0 0.35rem; font-family: var(--st-sans); font-size: 1.02rem; font-weight: 600; color: var(--st-ink); }
 .st-card p { margin: 0; color: var(--st-muted); font-size: 0.9rem; line-height: 1.55; }
 
+/* Featured (live product) cards and the hackathon award */
+.st-card-featured {
+  border-color: rgb(245 193 92 / 40%);
+  background: linear-gradient(160deg, rgb(245 193 92 / 9%), rgb(10 14 36 / 58%) 55%);
+}
+.st-card-featured i { color: var(--st-gold); }
+.st-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  margin-top: 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.st-card-link i { font-size: 0.75rem; }
+.st-award {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 1.5rem;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgb(245 193 92 / 45%);
+  background: rgb(245 193 92 / 10%);
+  color: var(--st-ink) !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.st-award i { color: var(--st-gold); }
+
 /* Shloka */
 .st-shloka { margin: 0 0 1.75rem; padding: 0; border: 0; }
 .st-shloka p {
