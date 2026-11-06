@@ -1,4 +1,4 @@
-/* Gita Gyan scenes: one particle drawing per scene of Chapters 1 to 4.
+/* Gita Gyan scenes: one particle drawing per scene of Chapters 1 to 6.
    Loaded only on Gita chapter pages by story.js; each draw(g, S) paints a 512x512 canvas
    that story.js samples into particles (colour comes from the pixels). */
 const TAU = Math.PI * 2;
@@ -565,6 +565,244 @@ export function drawJnanaBoat(g, S) {
   for (let i = 0; i < 4; i++) { const a = (i / 4) * TAU; line(g, [430 + cos(a) * 10, 80 + sin(a) * 10, 430 + cos(a) * 24, 80 + sin(a) * 24], 2, '#fff6dc'); }
 }
 
+/* ---------- Chapter 5 ---------- */
+
+/* Chapter 5 (5.10): like a lotus leaf, water beads on it and rolls off; it never gets wet */
+export function drawLotusLeaf(g, S) {
+  for (let r = 0; r < 4; r++) { g.strokeStyle = `rgba(69, 227, 211, ${0.75 - r * 0.15})`; g.lineWidth = 2.5; g.beginPath(); g.ellipse(256, 372, 180 + r * 36, 44 + r * 12, 0, 0, TAU); g.stroke(); }
+  const leaf = g.createRadialGradient(256, 250, 10, 256, 260, 200); leaf.addColorStop(0, '#9ad18b'); leaf.addColorStop(1, '#2f8f5a');
+  g.fillStyle = leaf; g.beginPath(); g.ellipse(256, 260, 204, 122, 0, 0, TAU); g.fill();
+  erase(g, () => {
+    fillPoly(g, [256, 260, 462, 242, 462, 280], '#000');
+    for (let i = 0; i < 14; i++) { const a = (i / 14) * TAU + 0.2; line(g, [256, 260, 256 + cos(a) * 196, 260 + sin(a) * 116], 2, '#000'); }
+  });
+  /* drops bead up and never soak in */
+  [[196, 228, 17], [304, 286, 23], [236, 306, 12], [334, 216, 11], [166, 292, 9], [282, 196, 8]].forEach(([x, y, r]) => { dot(g, x, y, r, '#4d9cff'); dot(g, x - r * 0.35, y - r * 0.35, r * 0.3, '#ffffff'); });
+  drop(g, 452, 330, 15, '#45e3d3');  /* one rolling off the edge */
+  drop(g, 470, 380, 8, 'rgba(69, 227, 211, 0.7)');
+  line(g, [104, 400, 92, 236], 4, '#2f8f5a');
+  g.fillStyle = '#ff8fb1'; g.beginPath(); g.moveTo(92, 168); g.quadraticCurveTo(128, 214, 92, 242); g.quadraticCurveTo(56, 214, 92, 168); g.fill();
+}
+
+/* 5.1–5.6: renunciation and the yoga of action are one; whoever sees this, sees (5.5). Two rivers, one water */
+export function drawTwoRivers(g, S) {
+  fillPoly(g, [16, 160, 100, 40, 184, 160], 'rgba(188, 210, 255, 0.8)');
+  fillPoly(g, [328, 160, 412, 40, 496, 160], 'rgba(255, 209, 102, 0.75)');
+  curve(g, [100, 80, 110, 210, 200, 236, 252, 300], 14, '#5b9cff');
+  curve(g, [412, 80, 402, 210, 312, 236, 260, 300], 14, '#ffd166');
+  curve(g, [256, 300, 226, 350, 286, 400, 256, 448], 28, '#9ef3ea');
+  for (let i = 0; i < 5; i++) curve(g, [246 + i * 5, 310, 222 + i * 5, 352, 280 + i * 3, 398, 252 + i * 2, 440], 1.5, '#ffffff');
+  dot(g, 256, 470, 22, '#fff6dc');
+  for (let i = 0; i < 12; i++) { const a = Math.PI + (i / 11) * Math.PI; line(g, [256 + cos(a) * 30, 470 + sin(a) * 30, 256 + cos(a) * 48, 470 + sin(a) * 48], 3, '#ffe7a8'); }
+}
+
+/* 5.7–5.13: the embodied one rests in the city of nine gates, neither acting nor causing action (5.13) */
+export function drawNineGates(g, S) {
+  const c = 256, R = 184;
+  for (let i = 0; i < 9; i++) {
+    const ag = -Math.PI / 2 + (i / 9) * TAU, a0 = ag + 0.17, a1 = ag + TAU / 9 - 0.17;
+    ring(g, c, c, R, 24, '#c98a3a', a0, a1);
+    ring(g, c, c, R + 16, 3, '#f5c15c', a0, a1);
+    const am = (a0 + a1) / 2; dot(g, c + cos(am) * (R + 22), c + sin(am) * (R + 22), 7, '#f5c15c'); /* turret */
+    /* the senses flow in and out through each gate */
+    for (let k = 0; k < 4; k++) dot(g, c + cos(ag) * (R - 40 + k * 26), c + sin(ag) * (R - 40 + k * 26), 4 - k * 0.6, 'rgba(255, 231, 168, 0.9)');
+  }
+  /* the dweller, at peace in the middle */
+  g.setLineDash([5, 9]); ring(g, c, c, 84, 2, 'rgba(158, 243, 234, 0.8)'); g.setLineDash([]);
+  g.fillStyle = '#c98a3a'; g.beginPath(); g.moveTo(206, 284); g.quadraticCurveTo(256, 330, 306, 284); g.closePath(); g.fill();
+  flame(g, c, 284, 26, 104, '#ff9a4d', '#fff6dc');
+}
+
+/* 5.14–5.17: knowledge covered by ignorance; when ignorance goes, it shines like the sun (5.15–16) */
+export function drawEclipse(g, S) {
+  const c = 256;
+  for (let i = 0; i < 90; i++) { const a = (i / 90) * TAU, r1 = 150 + rnd() * 80; line(g, [c + cos(a) * 118, c + sin(a) * 118, c + cos(a) * r1, c + sin(a) * r1], 1.5 + rnd() * 2, i % 3 ? 'rgba(255, 209, 102, 0.8)' : 'rgba(255, 246, 220, 0.9)'); }
+  dot(g, c, c, 118, '#ffd166');
+  erase(g, () => dot(g, c - 14, c + 6, 112, '#000'));  /* the veil slides away */
+  /* the diamond: the first point of light breaking through */
+  const x = c + 100, y = c - 52;
+  dot(g, x, y, 14, '#ffffff');
+  for (let i = 0; i < 8; i++) { const a = (i / 8) * TAU, r = i % 2 ? 26 : 56; line(g, [x, y, x + cos(a) * r, y + sin(a) * r], i % 2 ? 2 : 3.5, '#fff6dc'); }
+}
+
+/* 5.18–5.23: the wise see with an equal eye the learned, a cow, an elephant, a dog and an outcaste (5.18) */
+export function drawSamaDarshi(g, S) {
+  const col = '#ffd08a', ground = 410;
+  line(g, [20, ground, 492, ground], 2, 'rgba(245, 193, 92, 0.5)');
+  /* one light, equal rays to all */
+  dot(g, 256, 70, 24, '#fff6dc'); ring(g, 256, 70, 36, 2, '#f5c15c');
+  const tops = [[66, 270], [158, 314], [272, 250], [386, 344], [458, 280]];
+  tops.forEach(([x, y]) => { g.setLineDash([6, 8]); line(g, [256, 100, x, y - 20], 1.5, 'rgba(255, 231, 168, 0.75)'); g.setLineDash([]); });
+  const person = (x, top, extra) => { dot(g, x, top + 14, 13, col); line(g, [x, top + 30, x, ground - 54], 14, col); line(g, [x - 5, ground - 54, x - 12, ground], 7, col); line(g, [x + 5, ground - 54, x + 12, ground], 7, col); extra(x, top); };
+  person(66, 270, (x, t) => { dot(g, x, t - 2, 5, col); g.fillStyle = '#ff9a4d'; g.fillRect(x + 8, t + 46, 22, 16); }); /* scholar with topknot and book */
+  /* cow */
+  g.fillStyle = col; g.beginPath(); g.ellipse(158, 350, 46, 24, 0, 0, TAU); g.fill();
+  [134, 146, 170, 182].forEach((x) => line(g, [x, 368, x, ground], 6, col));
+  dot(g, 112, 330, 14, col); line(g, [104, 318, 96, 304], 3, col); line(g, [120, 318, 128, 304], 3, col);
+  curve(g, [204, 344, 216, 360, 212, 380, 218, 392], 3, col);
+  /* elephant */
+  g.beginPath(); g.ellipse(276, 316, 66, 50, 0, 0, TAU); g.fill();
+  [236, 258, 294, 316].forEach((x) => line(g, [x, 350, x, ground], 16, col));
+  dot(g, 212, 300, 34, col);
+  curve(g, [186, 314, 170, 350, 176, 380, 192, 392], 11, col);
+  g.fillStyle = '#e8b56a'; g.beginPath(); g.ellipse(226, 300, 16, 26, 0.2, 0, TAU); g.fill();
+  /* dog */
+  g.fillStyle = col; g.beginPath(); g.ellipse(388, 376, 28, 12, 0, 0, TAU); g.fill();
+  [370, 380, 398, 406].forEach((x) => line(g, [x, 384, x, ground], 4, col));
+  dot(g, 360, 362, 9, col); fillPoly(g, [354, 356, 358, 344, 364, 356], col); curve(g, [414, 372, 424, 362, 428, 352, 424, 344], 3, col);
+  person(458, 280, () => {});
+}
+
+/* 5.24–5.29: gaze between the brows, the in- and out-breath made even (5.27); lit from within (5.24) */
+export function drawBhrumadhya(g, S) {
+  const skin = '#6f93f5';
+  g.fillStyle = skin; g.beginPath(); g.ellipse(256, 256, 118, 150, 0, 0, TAU); g.fill();
+  erase(g, () => {
+    curve(g, [190, 220, 204, 236, 226, 236, 240, 220], 4, '#000');  /* closed eyes */
+    curve(g, [272, 220, 286, 236, 308, 236, 322, 220], 4, '#000');
+    line(g, [256, 228, 250, 290, 262, 296], 3, '#000');
+    curve(g, [228, 336, 244, 346, 268, 346, 284, 336], 4, '#000');  /* a slight smile */
+  });
+  /* the light between the brows */
+  dot(g, 256, 186, 12, '#ffd166');
+  for (let i = 0; i < 16; i++) { const a = (i / 16) * TAU; line(g, [256 + cos(a) * 18, 186 + sin(a) * 18, 256 + cos(a) * (i % 2 ? 30 : 44), 186 + sin(a) * (i % 2 ? 30 : 44)], 2, '#fff6dc'); }
+  /* two breaths, perfectly even */
+  curve(g, [244, 300, 200, 330, 160, 300, 120, 336], 4, '#45e3d3');
+  curve(g, [268, 300, 312, 330, 352, 300, 392, 336], 4, '#45e3d3');
+  /* outer contacts, left outside */
+  for (let i = 0; i < 40; i++) { const a = rnd() * TAU, r = 200 + rnd() * 50; dot(g, 256 + cos(a) * r, 256 + sin(a) * r, 1.5 + rnd() * 2, 'rgba(255, 154, 77, 0.8)'); }
+}
+
+/* ---------- Chapter 6 ---------- */
+
+/* Chapter 6: the yogi seated in meditation, spine straight, aura still */
+export function drawDhyani(g, S) {
+  const blue = '#6f93f5', gold = '#f5c15c';
+  for (let r = 0; r < 4; r++) ring(g, 256, 236, 120 + r * 34, 3 - r * 0.5, r % 2 ? 'rgba(25, 195, 180, 0.8)' : 'rgba(245, 193, 92, 0.85)');
+  g.fillStyle = blue;
+  g.beginPath(); g.ellipse(256, 392, 150, 46, 0, 0, TAU); g.fill();      /* crossed legs */
+  g.beginPath(); g.moveTo(206, 380); g.lineTo(306, 380); g.bezierCurveTo(316, 300, 300, 220, 286, 200); g.lineTo(226, 200); g.bezierCurveTo(212, 220, 196, 300, 206, 380); g.fill(); /* torso */
+  line(g, [226, 214, 172, 300, 150, 372], 20, blue);  /* arms resting on the knees */
+  line(g, [286, 214, 340, 300, 362, 372], 20, blue);
+  ring(g, 146, 378, 9, 4, '#ffe7a8'); ring(g, 366, 378, 9, 4, '#ffe7a8');  /* jnana mudra */
+  line(g, [256, 192, 256, 176], 24, blue);
+  dot(g, 256, 140, 40, blue);
+  g.fillStyle = blue; g.beginPath(); g.ellipse(256, 98, 22, 16, 0, 0, TAU); g.fill();  /* hair knot */
+  dot(g, 256, 128, 5, '#ffd166');
+  ring(g, 256, 140, 56, 3, gold);
+}
+
+/* 6.1–6.9: lift yourself by yourself (6.5). Climbing to yoga: action is the means for the climb, calm for the summit (6.3) */
+export function drawAscent(g, S) {
+  fillPoly(g, [10, 470, 256, 90, 502, 470], 'rgba(111, 147, 245, 0.55)');
+  fillPoly(g, [200, 176, 256, 90, 312, 176, 280, 160, 256, 180, 230, 160], 'rgba(232, 236, 248, 0.9)');
+  /* the zig-zag path up */
+  const path = [80, 460, 330, 400, 150, 330, 300, 270, 200, 210, 256, 120];
+  g.setLineDash([10, 8]); line(g, path, 4, '#f5c15c'); g.setLineDash([]);
+  /* the climber, reaching for the next step */
+  const x = 250, y = 296;
+  dot(g, x, y - 34, 9, '#ffd08a'); line(g, [x, y - 24, x - 4, y + 6], 7, '#ff9a4d');
+  line(g, [x - 4, y + 6, x - 16, y + 30], 5, '#ffd08a'); line(g, [x - 4, y + 6, x + 12, y + 22], 5, '#ffd08a');
+  line(g, [x, y - 18, x + 20, y - 44], 4, '#ffd08a'); line(g, [x, y - 18, x - 18, y - 4], 4, '#ffd08a');
+  /* the summit: the one who has climbed sits in calm */
+  dot(g, 256, 74, 10, '#fff6dc'); g.fillStyle = '#fff6dc'; g.beginPath(); g.ellipse(256, 98, 18, 9, 0, 0, TAU); g.fill();
+  for (let i = 0; i < 12; i++) { const a = (i / 12) * TAU; line(g, [256 + cos(a) * 26, 84 + sin(a) * 26, 256 + cos(a) * 42, 84 + sin(a) * 42], 2.5, '#ffd166'); }
+  /* clod, stone and gold, all the same to him (6.8) */
+  dot(g, 400, 444, 10, '#8a5a2b'); dot(g, 430, 446, 10, '#9aa3b5'); dot(g, 460, 444, 10, '#ffd166');
+}
+
+/* 6.10–6.17: the seat of kusha grass, deerskin and cloth (6.11); body, head and neck held straight (6.13) */
+export function drawSpine(g, S) {
+  for (let i = 0; i < 40; i++) { const x = 120 + i * 7; line(g, [x, 440, x + (rnd() - 0.5) * 16, 404 - rnd() * 14], 2, '#9ad18b'); }  /* kusha grass */
+  g.fillStyle = '#c98a3a'; g.beginPath(); g.ellipse(256, 410, 128, 22, 0, 0, TAU); g.fill();  /* deerskin */
+  for (let i = 0; i < 14; i++) dot(g, 160 + rnd() * 190, 402 + rnd() * 16, 3, '#ffe7a8');
+  fillPoly(g, [150, 392, 362, 392, 352, 378, 160, 378], '#ff4d6d');  /* cloth */
+  /* the seated outline, very faint */
+  g.setLineDash([4, 8]);
+  g.strokeStyle = 'rgba(188, 210, 255, 0.6)'; g.lineWidth = 2;
+  g.beginPath(); g.ellipse(256, 360, 120, 26, 0, 0, TAU); g.stroke();
+  g.beginPath(); g.moveTo(206, 350); g.bezierCurveTo(200, 260, 220, 200, 230, 184); g.moveTo(306, 350); g.bezierCurveTo(312, 260, 292, 200, 282, 184); g.stroke();
+  ring(g, 256, 138, 40, 2, 'rgba(188, 210, 255, 0.6)');
+  g.setLineDash([]);
+  /* the straight spine and its seven centres */
+  line(g, [256, 360, 256, 92], 3, '#fff6dc');
+  ['#ff4d6d', '#ff9a4d', '#ffd166', '#21b37c', '#45e3d3', '#5b7cff', '#b178ff'].forEach((c, i) => { dot(g, 256, 352 - i * 42, 9, c); ring(g, 256, 352 - i * 42, 15, 1.5, c); });
+  dot(g, 256, 70, 10, '#ffffff');
+}
+
+/* 6.18–6.28: like a lamp in a windless place, which does not flicker (6.19) */
+export function drawWindlessLamp(g, S) {
+  /* wind swirls everywhere, stopping at the edge of the still circle */
+  for (let i = 0; i < 16; i++) {
+    const a = (i / 16) * TAU, r = 200 + (i % 3) * 18, x = 256 + cos(a) * r, y = 256 + sin(a) * r;
+    ring(g, x, y, 16 + (i % 2) * 8, 3, 'rgba(25, 195, 180, 0.85)', a, a + Math.PI * 1.3);
+  }
+  ring(g, 256, 256, 160, 2, 'rgba(245, 193, 92, 0.7)');
+  /* the diya and its perfectly upright flame */
+  g.fillStyle = '#c98a3a'; g.beginPath(); g.moveTo(186, 330); g.quadraticCurveTo(256, 392, 326, 330); g.closePath(); g.fill();
+  line(g, [186, 330, 326, 330], 5, '#f5c15c');
+  flame(g, 256, 330, 26, 210, '#ff9a4d', '#ffffff');
+  flame(g, 256, 326, 11, 110, '#ffd27a', '#ffffff');
+  line(g, [256, 330, 256, 316], 3, '#5a3a1a');
+}
+
+/* 6.29–6.32: the Self in all beings, and all beings in the Self (6.29). A net of jewels, each holding the others */
+export function drawJewelNet(g, S) {
+  const nodes = [];
+  for (let r = 0; r < 7; r++) for (let q = 0; q < 7; q++) { const x = 76 + q * 60 + (r % 2) * 30, y = 76 + r * 60; if (x < 470) nodes.push([x, y]); }
+  nodes.forEach(([x, y], i) => nodes.forEach(([x2, y2], j) => { if (j > i && Math.hypot(x2 - x, y2 - y) < 70) line(g, [x, y, x2, y2], 1.2, 'rgba(188, 210, 255, 0.55)'); }));
+  const dist = ([x, y]) => Math.hypot(x - 256, y - 256);
+  const mid = nodes.reduce((b, n) => (dist(n) < dist(b) ? n : b));
+  nodes.forEach(([x, y]) => {
+    const centre = x === mid[0] && y === mid[1], r = centre ? 20 : 10;
+    dot(g, x, y, r, centre ? '#fff6dc' : '#45e3d3');
+    ring(g, x, y, r + 4, 1.5, '#f5c15c');
+    dot(g, x - r * 0.3, y - r * 0.3, r * 0.3, '#ffffff');  /* each jewel reflects the light of the others */
+  });
+}
+
+/* 6.33–6.36: the mind is as hard to hold as the wind (6.34); held by practice and detachment (6.35). A kite on its string */
+export function drawKite(g, S) {
+  for (let i = 0; i < 7; i++) curve(g, [180 + i * 40, 60 + (i % 3) * 30, 230 + i * 40, 30 + (i % 3) * 30, 260 + i * 40, 90 + (i % 3) * 30, 300 + i * 40, 60 + (i % 3) * 30], 2.5, 'rgba(25, 195, 180, 0.8)');
+  const kx = 360, ky = 170;
+  fillPoly(g, [kx, ky - 80, kx + 58, ky, kx, ky + 90, kx - 58, ky], '#ff9a4d');
+  fillPoly(g, [kx, ky - 80, kx + 58, ky, kx, ky], '#ff4d6d');
+  line(g, [kx, ky - 80, kx, ky + 90], 3, '#ffe7a8'); line(g, [kx - 58, ky, kx + 58, ky], 3, '#ffe7a8');
+  /* the tail, whipping in the wind */
+  const tail = []; for (let t = 0; t <= 1; t += 0.05) tail.push(kx + t * 40 + sin(t * 12) * 18, ky + 90 + t * 150);
+  line(g, tail, 2, '#ffe7a8');
+  for (let t = 0.15; t < 1; t += 0.2) fillPoly(g, [kx + t * 40 + sin(t * 12) * 18 - 9, ky + 90 + t * 150, kx + t * 40 + sin(t * 12) * 18 + 9, ky + 90 + t * 150 - 6, kx + t * 40 + sin(t * 12) * 18 + 9, ky + 90 + t * 150 + 6], '#ffd166');
+  /* the string, held steady from below: practice (abhyasa) */
+  curve(g, [kx, ky + 10, 270, 300, 170, 360, 104, 430], 2, '#fff6dc');
+  /* the one holding it, seated and calm */
+  dot(g, 92, 400, 12, '#ffd08a'); g.fillStyle = '#6f93f5'; g.beginPath(); g.ellipse(92, 448, 34, 22, 0, Math.PI, TAU); g.fill();
+  line(g, [92, 420, 92, 446], 14, '#6f93f5'); line(g, [96, 426, 104, 430], 6, '#ffd08a');
+}
+
+/* 6.37–6.47: no effort is ever lost (6.40). A torn cloud above, and practice that grows again, birth after birth (6.43–45) */
+export function drawSeedSpiral(g, S) {
+  /* the torn cloud of 6.38 */
+  [[74, 70, 18], [100, 60, 24], [128, 72, 16]].forEach(([x, y, r]) => dot(g, x, y, r, 'rgba(188, 210, 255, 0.8)'));
+  [[160, 64, 10], [182, 80, 7], [200, 60, 5]].forEach(([x, y, r]) => dot(g, x, y, r, 'rgba(188, 210, 255, 0.55)'));
+  /* the spiral of lives */
+  const pts = [], sprouts = [];
+  for (let t = 0; t <= 1; t += 0.005) {
+    const a = t * TAU * 2.4, r = 200 * (1 - t) + 20;
+    pts.push(256 + cos(a) * r, 270 + sin(a) * r * 0.8);
+  }
+  line(g, pts, 3, 'rgba(245, 193, 92, 0.75)');
+  for (let k = 0; k < 9; k++) { const t = 0.04 + k * 0.1, a = t * TAU * 2.4, r = 200 * (1 - t) + 20; sprouts.push([256 + cos(a) * r, 270 + sin(a) * r * 0.8, 0.4 + k * 0.1]); }
+  /* each sprout taller than the last: the practice carries over */
+  sprouts.forEach(([x, y, k]) => {
+    line(g, [x, y, x, y - 40 * k], 3, '#21b37c');
+    g.fillStyle = '#9ad18b'; g.beginPath(); g.ellipse(x - 9 * k, y - 26 * k, 10 * k, 5 * k, -0.5, 0, TAU); g.ellipse(x + 9 * k, y - 32 * k, 10 * k, 5 * k, 0.5, 0, TAU); g.fill();
+    dot(g, x, y, 4, '#c98a3a');
+  });
+  /* at the centre, the highest goal (6.45): a lotus in bloom */
+  for (let k = 0; k < 8; k++) { const a = Math.PI + (k / 7) * Math.PI; g.fillStyle = k % 2 ? '#ff8fb1' : '#ffb3c8'; g.beginPath(); g.ellipse(256 + cos(a) * 26, 262 + sin(a) * 16, 22, 8, a, 0, TAU); g.fill(); }
+  dot(g, 256, 252, 10, '#fff6dc');
+}
+
 /* story.js calls this with its sampler; returns lazily-sampled shapes keyed by name */
 export default function gitaShapes({ sample2D }) {
   return {
@@ -593,5 +831,18 @@ export default function gitaShapes({ sample2D }) {
     stillHub: () => sample2D(drawStillHub, 2.5, 0.2),
     yajnaLadle: () => sample2D(drawYajnaLadle, 2.55, 0.25),
     jnanaBoat: () => sample2D(drawJnanaBoat, 2.6, 0.3),
+    lotusLeaf: () => sample2D(drawLotusLeaf, 2.6, 0.25),
+    twoRivers: () => sample2D(drawTwoRivers, 2.5, 0.25),
+    nineGates: () => sample2D(drawNineGates, 2.5, 0.25),
+    eclipse: () => sample2D(drawEclipse, 2.5, 0.2),
+    samaDarshi: () => sample2D(drawSamaDarshi, 2.6, 0.25),
+    bhrumadhya: () => sample2D(drawBhrumadhya, 2.45, 0.2),
+    dhyani: () => sample2D(drawDhyani, 2.45, 0.2),
+    ascent: () => sample2D(drawAscent, 2.6, 0.3),
+    spine: () => sample2D(drawSpine, 2.45, 0.2),
+    windlessLamp: () => sample2D(drawWindlessLamp, 2.5, 0.2),
+    jewelNet: () => sample2D(drawJewelNet, 2.5, 0.3),
+    kite: () => sample2D(drawKite, 2.55, 0.25),
+    seedSpiral: () => sample2D(drawSeedSpiral, 2.55, 0.3),
   };
 }

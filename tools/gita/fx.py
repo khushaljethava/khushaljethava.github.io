@@ -1,6 +1,7 @@
 # One particle effect per shloka, chosen from what the verse describes.
 # Vocabulary: ripple, sink, contract, expand, turbulence, drift, fire, water, sparkle, still, march, clash,
-#             spin (a wheel turns), rise (offering smoke), descend (light pours down), ash (burnt away)
+#             spin (a wheel turns), rise (offering smoke), descend (light pours down), ash (burnt away),
+#             breathe (slow inhale/exhale), scatter (the restless mind darts), gather (one-pointed mind)
 def spread(*pairs):
     out = {}
     for verses, fx in pairs:
@@ -175,3 +176,74 @@ CH4_FX = spread(
     ([42], 'clash'),                                # cut doubt with the sword
 )
 assert sorted(CH3_FX) == list(range(1, 44)) and sorted(CH4_FX) == list(range(1, 43))
+CH5_FX = spread(
+    ([1], 'drift'),                                 # which of the two is better?
+    ([2, 3], 'still'),
+    ([4], 'ripple'),
+    ([5], 'gather'),                                # sees the two as one
+    ([6], 'march'),
+    ([7], 'expand'),                                # the self of all beings
+    ([8, 9], 'breathe'),                            # seeing, hearing, breathing... "I do nothing"
+    ([10], 'water'),                                # the lotus leaf
+    ([11], 'rise'),
+    ([12], 'still'),
+    ([13], 'contract'),                             # the city of nine gates
+    ([14], 'drift'),
+    ([15], 'sink'),                                 # knowledge covered by ignorance
+    ([16], 'expand'),                               # like the sun
+    ([17], 'rise'),
+    ([18], 'sparkle'),                              # the equal eye
+    ([19, 20], 'still'),
+    ([21], 'breathe'),
+    ([22], 'sink'),                                 # wombs of sorrow
+    ([23], 'turbulence'),                           # the surge of desire and anger
+    ([24], 'gather'),                               # lit from within
+    ([25], 'sparkle'),
+    ([26], 'expand'),
+    ([27], 'breathe'),                              # in-breath and out-breath made even
+    ([28], 'gather'),
+    ([29], 'sparkle'),                              # the friend of all beings
+)
+CH6_FX = spread(
+    ([1], 'march'),
+    ([2], 'still'),
+    ([3, 4, 5], 'rise'),                            # climbing to yoga; lift yourself
+    ([6], 'clash'),                                 # the self as enemy
+    ([7, 8], 'still'),
+    ([9], 'expand'),
+    ([10], 'contract'),                             # seclusion
+    ([11], 'still'),                                # the seat
+    ([12, 13], 'gather'),                           # one-pointed; gaze at the nose tip
+    ([14], 'still'),
+    ([15], 'breathe'),
+    ([16], 'drift'),                                # not too much, not too little
+    ([17], 'breathe'),
+    ([18, 19], 'still'),                            # the lamp in a windless place
+    ([20], 'breathe'),
+    ([21], 'expand'),
+    ([22], 'still'),
+    ([23], 'sparkle'),
+    ([24], 'contract'),
+    ([25], 'gather'),                               # little by little
+    ([26], 'scatter'),                              # wherever the restless mind wanders
+    ([27], 'sparkle'),
+    ([28], 'breathe'),
+    ([29], 'expand'),                               # the Self in all beings
+    ([30], 'sparkle'),
+    ([31, 32], 'ripple'),
+    ([33, 34], 'scatter'),                          # restless as the wind
+    ([35], 'gather'),                               # practice and detachment
+    ([36], 'march'),
+    ([37], 'drift'),
+    ([38], 'sink'),                                 # like a torn cloud
+    ([39], 'drift'),
+    ([40], 'sparkle'),                              # no one who does good comes to a bad end
+    ([41], 'rise'),
+    ([42], 'descend'),                              # born again into a family of yogis
+    ([43], 'spin'),                                 # striving again
+    ([44], 'march'),
+    ([45], 'rise'),
+    ([46], 'expand'),                               # be a yogi
+    ([47], 'sparkle'),
+)
+assert sorted(CH5_FX) == list(range(1, 30)) and sorted(CH6_FX) == list(range(1, 48))

@@ -2,8 +2,8 @@ import json, re, sys, os
 from indic_transliteration import sanscript
 from indic_transliteration.sanscript import transliterate
 sys.path.insert(0, os.path.dirname(__file__))
-from meanings import CH1, CH2, CH3, CH4
-from fx import CH1_FX, CH2_FX, CH3_FX, CH4_FX
+from meanings import CH1, CH2, CH3, CH4, CH5, CH6
+from fx import CH1_FX, CH2_FX, CH3_FX, CH4_FX, CH5_FX, CH6_FX
 data_dir, out_dir = sys.argv[1], sys.argv[2]
 verses = json.load(open(os.path.join(data_dir, 'verse.json')))
 chapters = json.load(open(os.path.join(data_dir, 'chapters.json')))
@@ -50,6 +50,8 @@ ch1 = chapter_verses(1, CH1, CH1_FX)
 ch2 = chapter_verses(2, CH2, CH2_FX, key_verses=(47,))
 ch3 = chapter_verses(3, CH3, CH3_FX, key_verses=(21, 35))
 ch4 = chapter_verses(4, CH4, CH4_FX, key_verses=(7, 8, 24))
+ch5 = chapter_verses(5, CH5, CH5_FX, key_verses=(10, 18))
+ch6 = chapter_verses(6, CH6, CH6_FX, key_verses=(5, 19, 35))
 
 SECTIONS = {
  1: dict(
@@ -148,6 +150,56 @@ SECTIONS = {
         intro="Learn from those who have seen the truth, with humility, questions and service. Knowledge is a boat across every wrong and a fire that turns action to ash. Doubt destroys, so cut it with the sword of knowledge, and stand up.",
         gyan="Ask good questions of people who know (4.34). Then cut the doubt and get up. The answer was never to stay seated."),
   ]),
+ 5: dict(
+  subtitle="The Yoga of Renunciation",
+  hero_shape='lotusLeaf',
+  summary=("Arjuna asks again: renounce action, or act? Krishna says both lead to freedom, but acting without attachment "
+           "is better, and in truth they are one. The one who acts this way lives in the body like a calm resident of a city "
+           "of nine gates, sees all beings with an equal eye, and stays untouched, like a lotus leaf that water cannot wet."),
+  sections=[
+   dict(id='two-paths', label='Two Paths', shape='twoRivers', side='right', frm=1, to=6, title='Two rivers, one water',
+        intro="Arjuna wants one clear answer: renounce, or act? Krishna says both lead to the highest good, but acting without attachment is better, and only children call the two different. Whoever sees them as one, sees (5.5).",
+        gyan="Thinking and doing aren't rival camps. The best work has both, flowing into the same river."),
+   dict(id='nine-gates', label='Untouched', shape='nineGates', side='left', frm=7, to=13, title='The city of nine gates',
+        intro="The yogi sees, hears, eats, walks and breathes, and knows it is only the senses moving among their objects. Offering everything, they stay unstained like a lotus leaf on water, and rest in the body like a calm resident of a city with nine gates.",
+        gyan="Let inputs come and go through the gates. Stay the resident, not the traffic."),
+   dict(id='sun-of-knowledge', label='The Sun of Knowledge', shape='eclipse', side='right', frm=14, to=17, title='Ignorance slides away',
+        intro="The Lord does not hand out credit or blame; nature does the acting. Knowledge is only covered by ignorance, like a sun in eclipse, and when ignorance is removed, knowledge shines like the sun and lights up the Supreme.",
+        gyan="Clarity isn't added, it's uncovered. Most bugs in thinking are just something blocking the light."),
+   dict(id='equal-eye', label='The Equal Eye', shape='samaDarshi', side='left', frm=18, to=23, title='One light on all',
+        intro="The wise see the same in a learned brahmin, a cow, an elephant, a dog and an outcaste (5.18). Unmoved by pleasant and unpleasant, they find a happiness within that outer pleasures, which begin and end, can never give.",
+        gyan="Treat the intern and the CEO with the same respect. Equal vision is wisdom, not politeness."),
+   dict(id='inner-light', label='The Inner Light', shape='bhrumadhya', side='right', frm=24, to=29, title='Lit from within',
+        intro="Happy within, delighting within, lit from within: such a one reaches the peace of Brahman. Krishna gives a first glimpse of meditation, shutting out outer contacts, gaze between the brows, the breath made even, and the next chapter takes it further.",
+        gyan="Before a hard decision, close the tabs and even out the breath. Five quiet minutes is a real tool."),
+  ]),
+ 6: dict(
+  subtitle="The Yoga of Meditation",
+  hero_shape='dhyani',
+  summary=("Krishna turns to meditation: lift yourself by your own self, sit on a steady seat with spine straight, eat and "
+           "sleep in moderation, and let the mind become like a lamp in a windless place. Arjuna objects that the mind is "
+           "as hard to hold as the wind. Krishna agrees, and gives the answer: practice and detachment. And no sincere "
+           "effort is ever lost."),
+  sections=[
+   dict(id='climb', label='The Climb', shape='ascent', side='right', frm=1, to=9, title='Lift yourself by yourself',
+        intro="The true renunciate is the one who does the work without leaning on its fruit. For one climbing to yoga, action is the means; for one who has arrived, calm is the means. You are your own friend and your own enemy (6.5).",
+        gyan="No one can climb for you. Be the friend who pulls you up, not the voice that drags you down."),
+   dict(id='seat', label='The Seat', shape='spine', side='left', frm=10, to=17, title='A steady seat, a straight spine',
+        intro="Krishna gives practical instructions: a clean, quiet place; a seat neither too high nor too low, of kusha grass, deerskin and cloth; body, head and neck straight; the gaze resting. And balance: neither too much food nor too little, neither too much sleep nor too little.",
+        gyan="Set up the environment and the habit wins. Sleep, food and a clean desk are part of the practice."),
+   dict(id='lamp', label='The Windless Lamp', shape='windlessLamp', side='right', frm=18, to=28, title='A flame that does not flicker',
+        intro="The settled mind is like a lamp in a windless place (6.19). There, beyond the senses, is a happiness nothing can shake. And when the restless mind wanders off, simply bring it back, gently, again and again.",
+        gyan="Focus isn't never drifting. It's noticing the drift and coming back, every time (6.26)."),
+   dict(id='all-beings', label='In All Beings', shape='jewelNet', side='left', frm=29, to=32, title='The Self in all, all in the Self',
+        intro="The yogi sees the Self in every being and every being in the Self, like a net of jewels where each one reflects all the others. Whoever sees Krishna everywhere is never lost to him, and feels another's joy and pain as their own.",
+        gyan="Empathy is just accurate seeing: the person across the table is running on the same stuff you are."),
+   dict(id='restless-mind', label='The Restless Mind', shape='kite', side='right', frm=33, to=36, title='As hard to hold as the wind',
+        intro="Arjuna is honest: the mind is restless, stubborn and strong, as hard to hold as the wind. Krishna doesn't argue. Yes, he says, but it can be held, by practice (abhyasa) and detachment (vairagya), the way a string holds a kite in the wind.",
+        gyan="You won't stop the wind. Practice is the string and detachment is letting the kite fly. Hold both."),
+   dict(id='no-loss', label='No Effort Lost', shape='seedSpiral', side='left', frm=37, to=47, title='Nothing good is ever wasted',
+        intro="And if someone tries and falls short, do they vanish like a torn cloud? Never, says Krishna. No one who does good comes to a bad end. The practice carries over, life after life, until it reaches the goal. So be a yogi, Arjuna.",
+        gyan="Every honest attempt compounds. The practice you start today is never wasted, even if it takes far longer than you hoped."),
+  ]),
 }
 
 meta = []
@@ -164,11 +216,11 @@ for c in sorted(chapters, key=lambda c: c['chapter_number']):
     meta.append(m)
 
 os.makedirs(out_dir, exist_ok=True)
-for name, obj in [('chapters', meta), ('chapter-1', ch1), ('chapter-2', ch2), ('chapter-3', ch3), ('chapter-4', ch4)]:
+for name, obj in [('chapters', meta), ('chapter-1', ch1), ('chapter-2', ch2), ('chapter-3', ch3), ('chapter-4', ch4), ('chapter-5', ch5), ('chapter-6', ch6)]:
     with open(os.path.join(out_dir, name + '.json'), 'w', encoding='utf-8') as f:
         json.dump(obj, f, ensure_ascii=False, indent=1)
-print('chapters', len(meta), '| ch1', len(ch1), '| ch2', len(ch2), '| ch3', len(ch3), '| ch4', len(ch4))
-print('speakers ch3/4:', [(v['n'], v['speaker']) for v in ch3 + ch4 if 'speaker' in v])
+print('chapters', len(meta), '| ch1', len(ch1), '| ch2', len(ch2), '| ch3', len(ch3), '| ch4', len(ch4), '| ch5', len(ch5), '| ch6', len(ch6))
+print('speakers ch5/6:', [(v['n'], v['speaker']) for v in ch5 + ch6 if 'speaker' in v])
 print('speakers ch1:', sorted({v['speaker'] for v in ch1 if 'speaker' in v}))
 print('sample 2.47:', ch2[46]['sa'], ch2[46]['tr'])
 print('sample 1.1 :', ch1[0].get('speaker'), ch1[0]['sa'])

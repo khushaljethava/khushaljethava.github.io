@@ -34,7 +34,7 @@ const revealIO = new IntersectionObserver(
 reveals.forEach((el) => revealIO.observe(el));
 
 /* ---------- Gita: the shloka in the middle of the screen is "active" ---------- */
-const FX = ['ripple', 'sink', 'contract', 'expand', 'turbulence', 'drift', 'fire', 'water', 'sparkle', 'still', 'march', 'clash', 'spin', 'rise', 'descend', 'ash'];
+const FX = ['ripple', 'sink', 'contract', 'expand', 'turbulence', 'drift', 'fire', 'water', 'sparkle', 'still', 'march', 'clash', 'spin', 'rise', 'descend', 'ash', 'breathe', 'scatter', 'gather'];
 const SPIN = FX.indexOf('spin');
 let activeFx = '';
 const verseCards = document.querySelectorAll('.gv[data-fx]');
@@ -658,7 +658,7 @@ async function initStage() {
     uMouse: { value: new THREE.Vector2(9, 9) },
     uAspect: { value: 1 },
     uPulse: { value: 0 },
-    uFx: { value: new Float32Array(16) },
+    uFx: { value: new Float32Array(19) },
   };
 
   const material = new THREE.ShaderMaterial({
@@ -668,7 +668,7 @@ async function initStage() {
     blending: THREE.AdditiveBlending,
     vertexShader: /* glsl */ `
       uniform float uTime, uProgress, uSize, uPixelRatio, uAspect, uPulse;
-      uniform float uFx[16]; /* ripple sink contract expand turbulence drift fire water sparkle still march clash spin rise descend ash */
+      uniform float uFx[19]; /* ripple sink contract expand turbulence drift fire water sparkle still march clash spin rise descend ash breathe scatter gather */
       uniform vec2 uMouse;
       attribute vec3 aTo, aColA, aColB;
       attribute float aRand;
@@ -702,6 +702,11 @@ async function initStage() {
         pos.y += uFx[14] * hp * 1.8 * fallT;                                               /* descend: light pouring down */
         float ashT = fract(aRand * 5.0 + uTime * 0.2);
         pos += uFx[15] * hp * ashT * (dirC * 0.25 + vec3(0.0, 0.45, 0.0));                 /* ash: flakes lift off the burning shape */
+        float breath = sin(uTime * 0.9);
+        pos *= 1.0 + 0.09 * uFx[16] * breath;                                                 /* breathe: slow inhale, exhale */
+        float hop = floor(uTime * 2.5 + aRand * 9.0);                                         /* scatter: the restless mind darts, stops, darts */
+        pos += uFx[17] * hp * 0.4 * vec3(sin(hop * 12.9898 + aRand * 78.2), cos(hop * 4.1414 + aRand * 31.7), 0.0);
+        pos = mix(pos, vec3(0.0, 0.0, pos.z * 0.2), uFx[18] * hp * 0.9);                     /* gather: half the mind collapses to one point */
         vec4 mv = modelViewMatrix * vec4(pos, 1.0);
         gl_Position = projectionMatrix * mv;
         vec2 ndc = gl_Position.xy / gl_Position.w;
@@ -721,6 +726,8 @@ async function initStage() {
         c = mix(c, vec3(1.0, 0.86, 0.45), uFx[14] * (0.25 + 0.5 * hp * fallT));           /* golden descent */
         c = mix(c, vec3(dot(c, vec3(0.3))) * 0.8, uFx[15] * hp * ashT);                   /* burnt to grey ash */
         c += vec3(1.0, 0.38, 0.08) * uFx[15] * pow(1.0 - ashT, 6.0) * 1.5;                  /* last embers */
+        c *= 1.0 + 0.25 * uFx[16] * breath;
+        c += vec3(1.0, 0.92, 0.75) * uFx[18] * hp * 0.6;                                      /* the gathered point glows */
         c = mix(c, vec3(1.0), pow(aRand, 14.0) + f * 0.4);
         vColor = c;
         vAlpha = (0.5 + f * 0.4 + burst * 0.15) * (1.0 - hp * riseT * uFx[13] * 0.8) * (1.0 - hp * ashT * uFx[15] * 0.7);
