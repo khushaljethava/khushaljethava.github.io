@@ -78,7 +78,7 @@ onScroll();
 /* ---------- Typed roles ---------- */
 const typed = document.getElementById('typed-role');
 if (typed && !reduceMotion) {
-  const roles = ['Machine Learning Engineer', 'Generative AI Specialist', 'LLM & RAG Developer', 'Computer Vision Engineer', 'AI Agent Builder'];
+  const roles = ['Machine Learning Engineer', 'Generative AI Specialist', 'Multi-Agent Systems Builder', 'Real-Time Voice AI Engineer', 'LLM & RAG Developer', 'Computer Vision Engineer'];
   let r = 0, n = roles[0].length, del = true;
   const loop = () => {
     const cur = roles[r];

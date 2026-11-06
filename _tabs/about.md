@@ -11,7 +11,7 @@ description: "Khushal Jethava is a Machine Learning Engineer specializing in Gen
   <div class="st-panel reveal">
     <p class="st-eyebrow">About</p>
     <h1 class="st-title">Khushal Jethava</h1>
-    <p class="st-role">Machine Learning Engineer · GenAI &amp; Applied Computer Vision</p>
+    <p class="st-role">Machine Learning Engineer · GenAI, Voice AI &amp; Multi-Agent Systems</p>
     <p class="st-lede">
       At Drona's test, every student saw the tree, the branches, the leaves. Arjuna saw only
       the bird's eye. That's how I like to build AI: find the one thing that matters, and hit it.
@@ -21,6 +21,9 @@ description: "Khushal Jethava is a Machine Learning Engineer specializing in Gen
       <li><i class="fas fa-comments" aria-hidden="true"></i>Chatbot development</li>
       <li><i class="fas fa-language" aria-hidden="true"></i>Natural Language Processing</li>
       <li><i class="fas fa-eye" aria-hidden="true"></i>Computer vision</li>
+      <li><i class="fas fa-sitemap" aria-hidden="true"></i>Multi-agent orchestration</li>
+      <li><i class="fas fa-microphone-lines" aria-hidden="true"></i>Real-time voice AI</li>
+      <li><i class="fas fa-diagram-project" aria-hidden="true"></i>RAG pipelines</li>
     </ul>
     <p class="st-meta-line"><i class="fas fa-location-dot" aria-hidden="true"></i> Ahmedabad, Gujarat, India</p>
   </div>
@@ -37,8 +40,16 @@ description: "Khushal Jethava is a Machine Learning Engineer specializing in Gen
       Project planning, programming and hands-on technical projects there laid the foundation for my
       career in AI and machine learning.
     </p>
-    <p>Since then I've developed and deployed AI solutions across several industries. Some of the work I'm proudest of:</p>
+    <p>
+      Four-plus years on, I design and deploy production-grade Generative AI: LLM-powered applications,
+      multi-agent orchestration, RAG pipelines, real-time voice AI and low-latency AI infrastructure,
+      owning the full lifecycle from research and modeling to deployment, monitoring and optimization,
+      and working closely with product, engineering and business teams.
+    </p>
+    <p>Some of the work I'm proudest of:</p>
     <ul class="st-list">
+      <li>A production multi-agent orchestration platform on LangGraph, with deterministic execution and strict phase isolation.</li>
+      <li>Real-time voice AI with sub-800ms end-to-end latency, handling 1K+ daily calls at 99.5% uptime.</li>
       <li>Image segmentation for room transformation using ControlNet.</li>
       <li>Fine-tuning segmentation models for optimized accuracy.</li>
       <li>Building backend APIs to support complex AI functionality.</li>
@@ -57,9 +68,25 @@ description: "Khushal Jethava is a Machine Learning Engineer specializing in Gen
     <h2 class="st-title">The field of work.</h2>
     <ol class="st-timeline">
       <li>
-        <h3>Artificial Intelligence Engineer · Codiste</h3>
-        <p class="st-meta">April 2024 – Present · Ahmedabad, Gujarat, India</p>
-        <p>Advanced GenAI projects centred on deepfake technology and image-to-avatar transformation.</p>
+        <h3>Senior Machine Learning Engineer · Bytes Technolab</h3>
+        <p class="st-meta">April 2026 – Present · Ahmedabad, Gujarat, India · <a href="https://www.bytestechnolab.com/" target="_blank" rel="noopener">bytestechnolab.com</a></p>
+        <p>Building computer vision, Generative AI, AI automation and multi-agent workflow solutions.</p>
+      </li>
+      <li>
+        <h3>Machine Learning Engineer · Codiste Private Limited</h3>
+        <p class="st-meta">April 2024 – March 2026 · Ahmedabad, Gujarat, India</p>
+        <ul class="st-list">
+          <li>Architected a production-grade multi-agent orchestration platform using LangGraph, with deterministic execution and strict phase isolation.</li>
+          <li>Designed orchestrator-driven agent routing across onboarding, planning, execution and tool-invocation stages for complex, multi-step workflows.</li>
+          <li>Implemented persistent shared state and unified confirmation logic, reducing redundant user interactions by 35% and lowering API costs.</li>
+          <li>Built real-time AI voice pipelines integrating STT, LLM reasoning and TTS with sub-800ms end-to-end latency.</li>
+          <li>Integrated OpenAI, ElevenLabs and telephony (SIP, Twilio, PSTN) to handle 1K+ daily calls at 99.5% uptime.</li>
+          <li>Designed fallback strategies, interruption handling and partial-response streaming for uninterrupted conversations.</li>
+          <li>Containerized and deployed AI services with Docker; used Redis for runtime performance and session consistency.</li>
+          <li>Delivered image segmentation pipelines for object and room-component detection in live production.</li>
+          <li>Advanced GenAI projects centred on deepfake technology and image-to-avatar transformation.</li>
+          <li>Worked with product, frontend and infra teams on scalable agent workflows and production-ready APIs.</li>
+        </ul>
       </li>
       <li>
         <h3>Machine Learning Engineer · Maknon Private Ltd.</h3>
@@ -69,13 +96,17 @@ description: "Khushal Jethava is a Machine Learning Engineer specializing in Gen
           <li>Fine-tuned segmentation models to improve accuracy and performance.</li>
           <li>Room transformations with ControlNet for high-quality visual modifications.</li>
           <li>Backend APIs to integrate the AI functionality.</li>
+          <li>Fine-tuned QLoRA-based transformer models to improve inference efficiency and reduce GPU memory use.</li>
+          <li>Optimized preprocessing and postprocessing to improve segmentation accuracy and runtime.</li>
         </ul>
       </li>
       <li>
-        <h3>Artificial Intelligence Engineer · SoluSoft Corporation</h3>
+        <h3>AI Software Developer · SoluSoft Technologies</h3>
         <p class="st-meta">October 2021 – October 2023 (2 years, 1 month) · Ahmedabad, Gujarat, India</p>
         <ul class="st-list">
-          <li>Document AI product for classification and information extraction, using fine-tuned transformers with Django and FastAPI.</li>
+          <li>Led development of Document AI, computer vision systems and LLM-powered chatbot solutions.</li>
+          <li>Document AI platform for enterprise clients, for classification and information extraction, using fine-tuned transformers with Django and FastAPI.</li>
+          <li>Built and fine-tuned transformer models for document classification, information extraction, sentiment analysis and dialogue summarization.</li>
           <li>Barcode detection in documents with YOLO and OpenCV.</li>
           <li>Car damage detection system with Detectron2 and CNNs.</li>
           <li>Prototyped generative chatbots with LSTM sentiment analysis and BART dialogue summarization.</li>
@@ -88,13 +119,33 @@ description: "Khushal Jethava is a Machine Learning Engineer specializing in Gen
 
 <!-- Chapter III · Now -->
 <section class="st-chapter" id="now" data-shape="neural" data-side="right" data-label="Now">
-  <div class="st-panel reveal">
+  <div class="st-panel st-panel-wide reveal">
     <p class="st-num">Chapter III · <span lang="hi">वर्तमान</span></p>
     <h2 class="st-title">Pushing what generative AI can do.</h2>
     <p class="st-lede">
-      Today I focus on advanced GenAI: deepfake technology and image-to-avatar transformation,
-      using state-of-the-art generative techniques to push the limits of AI-driven image synthesis.
+      Today, as a Senior Machine Learning Engineer at Bytes Technolab, I work on computer vision,
+      Generative AI, AI automation and multi-agent workflows. Before that I built multi-agent LLM systems,
+      real-time voice AI and image-to-avatar GenAI. These are the products I've shipped recently:
     </p>
+    <div class="st-cards">
+      <article class="st-card st-card-featured">
+        <i class="fas fa-sitemap" aria-hidden="true"></i>
+        <h3>NoaAI</h3>
+        <p>Multi-agent conversational and voice AI platform with centralized orchestration, strict phase isolation, RAG-based knowledge grounding, persistent conversation state, tool-based agent routing and low-latency streaming voice with interruption handling.</p>
+      </article>
+      <article class="st-card st-card-featured">
+        <i class="fas fa-phone-volume" aria-hidden="true"></i>
+        <h3>Dialora.ai</h3>
+        <p>Real-time AI calling agent integrating STT, LLM reasoning and TTS over SIP, Twilio and PSTN, with fallback logic, cost-aware routing and conversation recovery.</p>
+        <a class="st-card-link" href="https://www.dialora.ai/" target="_blank" rel="noopener">dialora.ai <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+      </article>
+      <article class="st-card st-card-featured">
+        <i class="fas fa-file-video" aria-hidden="true"></i>
+        <h3>Ndeck.io</h3>
+        <p>AI proposal and video generation: an LLM engine that turns structured inputs into complete technical proposals, with AI-generated diagrams, voice narration, visuals and lip-synced video.</p>
+        <a class="st-card-link" href="https://www.ndeck.io/" target="_blank" rel="noopener">ndeck.io <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+      </article>
+    </div>
     <p>
       Looking ahead, I want to pioneer generative AI solutions for hard industry problems.
       If that's what you're working on, let's talk.
@@ -120,6 +171,7 @@ description: "Khushal Jethava is a Machine Learning Engineer specializing in Gen
         <p>Nanodegree in Deep Learning.</p>
       </li>
     </ol>
+    <p class="st-award"><i class="fas fa-trophy" aria-hidden="true"></i> Winner, Codiste Hackathon 2025</p>
   </div>
 </section>
 
