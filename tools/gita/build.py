@@ -474,6 +474,44 @@ SECTIONS[17] = dict(
         gyan="Start with intent, act without grasping, aim at what's real. And mean it, because hollow effort counts for nothing."),
   ])
 
+KEY_VERSES[18] = (47, 61, 65, 66, 73, 78)
+SECTIONS[18] = dict(
+  subtitle="The Yoga of Liberation through Renunciation",
+  hero_shape='bowRaised',
+  summary=("The longest chapter gathers everything together. True renunciation is not giving up action but giving up its "
+           "fruits. Everything (knowledge, action, the doer, understanding, firmness, happiness) comes in three kinds. Do "
+           "your own work as worship. Then the most secret word of all: let go of everything and take refuge in me; do not "
+           "grieve. Arjuna's delusion is gone. \"I will do as you say,\" he says, and lifts the bow he dropped in Chapter 1."),
+  sections=[
+   dict(id='relinquishment', label='Relinquishment', shape='letGoHand', side='right', frm=1, to=12, title='Let go of the fruit, not the work',
+        intro="What is the difference between renunciation and relinquishment? Krishna's settled view: don't give up good action; give up attachment to its fruit (18.6). Dropping a duty because it's hard is passion; dropping it out of confusion is dullness; doing it because it should be done, and letting go of the result, is true relinquishment.",
+        gyan="Quitting isn't letting go. Keep doing the work; stop gripping the outcome."),
+   dict(id='five-causes', label='Five Causes', shape='fivePillars', side='left', frm=13, to=18, title='Five things make every action',
+        intro="Every action rests on five causes: the body, the doer, the instruments, the many efforts, and providence (18.14). Whoever thinks the Self alone is the doer doesn't see clearly. Free of \"I am the doer,\" one is not bound.",
+        gyan="No outcome is yours alone. Your effort is one pillar of five, so hold credit and blame lightly."),
+   dict(id='three-of-everything', label='Three of Everything', shape='gunaPrism', side='right', frm=19, to=40, title='One light, three colours',
+        intro="Knowledge, action, the doer, understanding, firmness and happiness each come in three kinds. The best knowledge sees the one undivided in all (18.20); the worst sees everything upside down. The best happiness is like poison at first and nectar in the end (18.37); the passionate kind is the reverse.",
+        gyan="If it's sweet now and bitter later, be careful. If it's hard now and sweet later, that's usually the one."),
+   dict(id='own-work', label='Your Own Work', shape='workTools', side='left', frm=41, to=48, title='Worship through your work',
+        intro="Each person's work flows from their nature, and each can reach perfection through it, by worshipping through that work the One who pervades all (18.46). Better your own path done imperfectly than another's done well. All work has flaws, as all fire has smoke.",
+        gyan="Your craft is your practice. Do it well, as an offering, and don't envy someone else's job."),
+   dict(id='brahman', label='Becoming Brahman', shape='dropOcean', side='right', frm=49, to=56, title='The drop enters the ocean',
+        intro="With a pure understanding, simple living and ego let go, one becomes serene, grieving for nothing and craving nothing, the same to all. From that comes supreme devotion; through devotion one knows him, and knowing him, enters into him at once (18.55).",
+        gyan="Peace isn't the absence of work. It's the absence of the one who needs to own it."),
+   dict(id='machine', label='The Machine', shape='heartWheel', side='left', frm=57, to=63, title='Reflect, then do as you wish',
+        intro="Keep your mind on me and by my grace you'll cross every obstacle. If ego says \"I won't fight,\" your own nature will make you anyway. The Lord sits in every heart, turning all beings as if on a machine (18.61). Then, remarkably, Krishna steps back: \"Reflect on all of it, and do as you wish\" (18.63).",
+        gyan="The best teachers give you everything, then let you choose. Freedom is part of the teaching."),
+   dict(id='surrender', label='Surrender', shape='refugeHands', side='right', frm=64, to=66, title='Do not grieve',
+        intro="And then the most secret word, because Arjuna is dear to him: fix your mind on me, and you will come to me, I promise (18.65). Letting go of all dharmas, take refuge in me alone. I will free you from every sin. Do not grieve (18.66).",
+        gyan="Sometimes the last step isn't another effort but letting yourself be held."),
+   dict(id='passing-on', label='Passing It On', shape='gitaBook', side='left', frm=67, to=72, title='Whoever teaches this',
+        intro="Whoever shares this teaching with those who are ready is dearest to him; whoever studies it worships with knowledge; whoever simply hears it with faith is freed. And then Krishna asks, like any teacher: \"Did you hear it with full attention? Is your confusion gone?\" (18.72).",
+        gyan="Teaching is the last step of learning. Pass on what helped you, gently, to those who want it."),
+   dict(id='doubts-gone', label='Doubts Gone', shape='victoryBanner', side='right', frm=73, to=78, title='I will do as you say',
+        intro="\"My delusion is destroyed. I remember who I am. My doubts are gone. I will do as you say\" (18.73). Sanjaya, still describing it to the blind king, trembles with joy at the memory. Wherever there is Krishna, the lord of yoga, and Arjuna, the archer, there is fortune, victory and right action (18.78).",
+        gyan="The Gita began with a man sitting down in despair. It ends with him standing up. Every crisis can end that way."),
+  ])
+
 # every chapter with scenes in SECTIONS gets built; its meanings and effects must exist too
 chs = {n: chapter_verses(n, getattr(meanings, f'CH{n}'), getattr(fx, f'CH{n}_FX'), KEY_VERSES.get(n, ())) for n in sorted(SECTIONS)}
 

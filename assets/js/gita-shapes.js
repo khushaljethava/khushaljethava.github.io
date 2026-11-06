@@ -1,4 +1,4 @@
-/* Gita Gyan scenes: one particle drawing per scene of Chapters 1 to 17.
+/* Gita Gyan scenes: one particle drawing per scene of Chapters 1 to 18.
    Loaded only on Gita chapter pages by story.js; each draw(g, S) paints a 512x512 canvas
    that story.js samples into particles (colour comes from the pixels). */
 const TAU = Math.PI * 2;
@@ -1758,6 +1758,146 @@ export function drawOmTatSat(g, S) {
   [110, 256, 402].forEach((x, i) => { flame(g, x, 190 - (i === 1 ? 20 : 0), 12, 44, '#ff9a4d', '#fff6dc'); for (let k = 0; k < 8; k++) { const a = Math.PI + (k / 7) * Math.PI; line(g, [x + cos(a) * 60, 300 + sin(a) * 60 - 100, x + cos(a) * 72, 300 + sin(a) * 72 - 100], 1.5, 'rgba(255, 231, 168, 0.6)'); } });
 }
 
+
+/* ---------- Chapter 18 ---------- */
+
+/* Chapter 18 (18.73): "My doubts are gone; I will do as you say." Arjuna stands and lifts the bow he dropped in Chapter 1 */
+export function drawBowRaised(g, S) {
+  for (let i = 0; i < 28; i++) { const a = Math.PI + (i / 27) * Math.PI; line(g, [256 + cos(a) * 150, 470 + sin(a) * 150, 256 + cos(a) * (i % 2 ? 210 : 250), 470 + sin(a) * (i % 2 ? 210 : 250)], 2.5, i % 2 ? '#ffd166' : '#ff9a4d'); }
+  dot(g, 256, 470, 120, 'rgba(255, 179, 71, 0.55)');
+  line(g, [30, 470, 482, 470], 3, '#f5c15c');
+  const skin = '#ffd08a';
+  line(g, [244, 360, 230, 466], 14, skin); line(g, [268, 360, 290, 466], 14, skin);
+  fillPoly(g, [230, 330, 282, 330, 290, 380, 222, 380], '#ff9a4d');
+  g.fillStyle = skin; g.beginPath(); g.moveTo(232, 230); g.lineTo(280, 230); g.lineTo(284, 334); g.lineTo(228, 334); g.closePath(); g.fill();
+  dot(g, 256, 200, 24, skin);
+  fillPoly(g, [234, 192, 278, 192, 284, 160, 268, 172, 256, 140, 244, 172, 228, 160], '#ffd166');
+  line(g, [236, 240, 196, 170, 186, 110], 11, skin); line(g, [276, 240, 316, 170, 326, 110], 11, skin);
+  /* the Gandiva, raised high */
+  g.strokeStyle = '#ffd166'; g.lineWidth = 9; g.lineCap = 'round'; g.beginPath(); g.moveTo(110, 120); g.quadraticCurveTo(256, 20, 402, 120); g.stroke();
+  line(g, [110, 120, 402, 120], 2, '#fff6dc');
+}
+
+/* 18.1–18.12: give up the fruits, not the work (18.6, 18.11). An open hand */
+export function drawLetGoHand(g, S) {
+  const skin = '#ffd08a';
+  line(g, [40, 420, 200, 330], 46, skin);
+  g.fillStyle = skin; g.beginPath(); g.ellipse(250, 300, 70, 42, -0.3, 0, TAU); g.fill();
+  [[300, 250, -0.6], [318, 270, -0.4], [326, 296, -0.2], [320, 322, 0]].forEach(([x, y, a]) => { g.save(); g.translate(x, y); g.rotate(a); g.fillStyle = skin; g.beginPath(); g.ellipse(30, 0, 34, 11, 0, 0, TAU); g.fill(); g.restore(); });
+  g.save(); g.translate(206, 262); g.rotate(-1.2); g.fillStyle = skin; g.beginPath(); g.ellipse(-24, 0, 28, 11, 0, 0, TAU); g.fill(); g.restore();
+  [[380, 240, 16, '#ff9a4d'], [410, 300, 13, '#ff4d6d'], [430, 370, 11, '#ffd166'], [446, 440, 9, '#ff9a4d']].forEach(([x, y, r, c]) => { dot(g, x, y, r, c); line(g, [x - 10, y - r - 18, x - 4, y - r - 4], 2, 'rgba(255, 231, 168, 0.6)'); });
+  for (let k = 0; k < 3; k++) curve(g, [446, 490, 440, 470, 452 + k * 6, 462, 446 + k * 8, 452], 2, '#21b37c');
+}
+
+/* 18.13–18.18: the body, the doer, the instruments, the efforts, and providence (18.14) */
+export function drawFivePillars(g, S) {
+  line(g, [50, 140, 462, 140], 12, '#f5c15c');
+  fillPoly(g, [40, 140, 472, 140, 256, 70], 'rgba(245, 193, 92, 0.55)');
+  line(g, [40, 450, 472, 450], 8, '#c98a3a');
+  [90, 173, 256, 339].forEach((x) => { g.fillStyle = '#e0a458'; g.fillRect(x - 18, 160, 36, 280); line(g, [x - 26, 156, x + 26, 156], 8, '#f5c15c'); });
+  const x5 = 422;
+  for (let i = 0; i < 40; i++) dot(g, x5 + (rnd() - 0.5) * 34, 160 + rnd() * 280, 2 + rnd() * 2, '#fff6dc');
+  line(g, [x5 - 26, 156, x5 + 26, 156], 8, '#f5c15c');
+  dot(g, x5, 300, 14, '#ffffff');
+  /* marks on each: the body, the doer, the instruments, the effort, and providence */
+  fillPoly(g, [80, 290, 100, 290, 100, 310, 80, 310], '#c98a3a');
+  dot(g, 173, 282, 8, '#ffd08a'); line(g, [173, 292, 173, 316], 6, '#ffd08a');
+  line(g, [244, 312, 268, 288], 4, '#8a5a2b'); fillPoly(g, [262, 280, 276, 294, 270, 300, 256, 286], '#e8ecf8');
+  for (let k = 0; k < 3; k++) line(g, [328 + k * 6, 316, 344 + k * 6, 286], 3, '#ff9a4d');
+}
+
+/* 18.19–18.40: everything comes in three kinds, like one light through a prism */
+export function drawGunaPrism(g, S) {
+  line(g, [20, 300, 196, 250], 10, '#ffffff');
+  fillPoly(g, [256, 120, 340, 380, 172, 380], 'rgba(188, 210, 255, 0.35)');
+  g.strokeStyle = '#e8ecf8'; g.lineWidth = 4; g.beginPath(); g.moveTo(256, 120); g.lineTo(340, 380); g.lineTo(172, 380); g.closePath(); g.stroke();
+  [['#fff6dc', -0.32], ['#ff4d6d', -0.08], ['#5b7cff', 0.16]].forEach(([c, a]) => { line(g, [300, 270, 300 + cos(a) * 220, 270 + sin(a) * 220], 12, c); });
+  for (let i = 0; i < 30; i++) { const t = rnd(); dot(g, 20 + t * 170, 300 - t * 50 + (rnd() - 0.5) * 14, 1.5, '#ffffff'); }
+}
+
+/* 18.41–18.48: worship the One through your own work (18.46) */
+export function drawWorkTools(g, S) {
+  const c = 256;
+  g.fillStyle = '#c98a3a'; g.beginPath(); g.moveTo(c - 40, 270); g.quadraticCurveTo(c, 310, c + 40, 270); g.closePath(); g.fill();
+  flame(g, c, 270, 22, 90, '#ff9a4d', '#ffffff');
+  const spots = [[c, 76], [c + 180, 256], [c, 440], [c - 180, 256]];
+  spots.forEach(([x, y]) => { g.setLineDash([5, 9]); line(g, [x, y, c, 236], 1.8, 'rgba(255, 231, 168, 0.7)'); g.setLineDash([]); });
+  /* the scholar's manuscript */
+  g.fillStyle = '#e0c48c'; g.fillRect(c - 50, 60, 100, 32); for (let i = 0; i < 3; i++) line(g, [c - 42, 68 + i * 8, c + 42, 68 + i * 8], 1.5, '#8a5a2b');
+  /* the warrior's sword */
+  fillPoly(g, [c + 176, 190, c + 184, 190, c + 184, 300, c + 180, 310, c + 176, 300], '#e8ecf8'); line(g, [c + 160, 300, c + 200, 300], 6, '#f5c15c');
+  /* the farmer's grain */
+  for (let k = -1; k <= 1; k++) { line(g, [c + k * 14, 480, c + k * 18, 410], 3, '#9ad18b'); for (let j = 0; j < 4; j++) { g.fillStyle = '#ffd166'; g.beginPath(); g.ellipse(c + k * 18 - 5, 416 + j * 10, 5, 3, -0.6, 0, TAU); g.ellipse(c + k * 18 + 5, 416 + j * 10, 5, 3, 0.6, 0, TAU); g.fill(); } }
+  /* the craftsman's hammer */
+  line(g, [c - 210, 290, c - 160, 230], 6, '#c98a3a'); fillPoly(g, [c - 172, 214, c - 146, 236, c - 158, 248, c - 184, 226], '#e8ecf8');
+}
+
+/* 18.49–18.56: knowing me in truth, one enters into me at once (18.55). A drop into the ocean */
+export function drawDropOcean(g, S) {
+  for (let i = 0; i < 16; i++) { const a = Math.PI + (i / 15) * Math.PI; line(g, [256 + cos(a) * 60, 110 + sin(a) * 60, 256 + cos(a) * 84, 110 + sin(a) * 84], 2, 'rgba(255, 231, 168, 0.75)'); }
+  dot(g, 256, 110, 26, '#fff6dc');
+  drop(g, 256, 230, 26, '#45e3d3');
+  for (let r = 0; r < 5; r++) { g.strokeStyle = `rgba(158, 243, 234, ${0.9 - r * 0.15})`; g.lineWidth = 3; g.beginPath(); g.ellipse(256, 340, 30 + r * 40, 8 + r * 10, 0, 0, TAU); g.stroke(); }
+  for (let r = 0; r < 6; r++) { const p = []; for (let x = 0; x <= 512; x += 8) p.push(x, 380 + r * 20 + 4 * sin(x / 30 + r)); line(g, p, 3, `rgba(69, 120, 247, ${0.85 - r * 0.12})`); }
+}
+
+/* 18.57–18.63: the Lord in the heart of all beings turns them as if on a machine (18.61) */
+export function drawHeartWheel(g, S) {
+  g.beginPath(); g.moveTo(256, 470); g.bezierCurveTo(70, 340, 30, 170, 150, 110); g.bezierCurveTo(210, 80, 250, 120, 256, 160); g.bezierCurveTo(262, 120, 302, 80, 362, 110); g.bezierCurveTo(482, 170, 442, 340, 256, 470); g.closePath();
+  g.strokeStyle = '#ff6b8a'; g.lineWidth = 6; g.stroke();
+  const c = 256, cy = 280;
+  ring(g, c, cy, 110, 6, '#f5c15c');
+  for (let i = 0; i < 8; i++) {
+    const a = (i / 8) * TAU, x = c + cos(a) * 110, y = cy + sin(a) * 110;
+    line(g, [c, cy, x, y], 3, '#ffe7a8');
+    dot(g, x, y - 18, 7, '#ffd08a'); line(g, [x, y - 10, x, y + 8], 5, '#ff9a4d');
+  }
+  dot(g, c, cy, 18, '#ffffff'); ring(g, c, cy, 26, 2, '#ffd166');
+}
+
+/* 18.64–18.66: let go of everything and take refuge in me alone; do not grieve (18.66) */
+export function drawRefugeHands(g, S) {
+  const blue = '#6f93f5';
+  for (let i = 0; i < 20; i++) { const a = Math.PI + (i / 19) * Math.PI; line(g, [256 + cos(a) * 180, 330 + sin(a) * 160, 256 + cos(a) * 210, 330 + sin(a) * 190], 2.5, 'rgba(255, 231, 168, 0.75)'); }
+  g.fillStyle = blue; g.beginPath(); g.moveTo(80, 300); g.bezierCurveTo(90, 420, 200, 460, 256, 460); g.bezierCurveTo(312, 460, 422, 420, 432, 300); g.bezierCurveTo(400, 380, 330, 400, 256, 400); g.bezierCurveTo(182, 400, 112, 380, 80, 300); g.fill();
+  for (let k = 0; k < 4; k++) { dot(g, 92 + k * 6, 300 - k * 22, 14, blue); dot(g, 420 - k * 6, 300 - k * 22, 14, blue); }
+  /* the small one, curled up and at rest */
+  dot(g, 220, 352, 18, '#ffd08a');
+  g.fillStyle = '#ff9a4d'; g.beginPath(); g.ellipse(270, 372, 52, 22, 0.1, 0, TAU); g.fill();
+  line(g, [236, 372, 210, 384], 7, '#ffd08a');
+}
+
+/* 18.67–18.72: whoever teaches this to those who are ready is dearest to me (18.68–69) */
+export function drawGitaBook(g, S) {
+  for (let i = 0; i < 18; i++) { const a = Math.PI + 0.2 + (i / 17) * (Math.PI - 0.4); line(g, [256 + cos(a) * 90, 240 + sin(a) * 90, 256 + cos(a) * 170, 240 + sin(a) * 170], 2, 'rgba(255, 231, 168, 0.7)'); }
+  fillPoly(g, [256, 260, 150, 236, 140, 300, 256, 320], '#e0c48c');
+  fillPoly(g, [256, 260, 362, 236, 372, 300, 256, 320], '#f0d9a4');
+  for (let i = 0; i < 4; i++) { line(g, [160, 252 + i * 12, 246, 270 + i * 12], 1.5, '#8a5a2b'); line(g, [266, 270 + i * 12, 352, 252 + i * 12], 1.5, '#8a5a2b'); }
+  line(g, [256, 260, 256, 320], 2, '#c98a3a');
+  for (let k = 0; k < 7; k++) {
+    const a = Math.PI * 0.15 + (k / 6) * Math.PI * 0.7, x = 256 + cos(a) * 190, y = 300 + sin(a) * 140;
+    dot(g, x, y - 14, 10, '#ffd08a'); g.fillStyle = ['#ff9a4d', '#45e3d3', '#ff8fb1', '#b178ff'][k % 4]; g.beginPath(); g.ellipse(x, y + 10, 16, 14, 0, Math.PI, TAU); g.fill();
+  }
+}
+
+/* 18.73–18.78: wherever there is Krishna and Arjuna, there is fortune and victory (18.78). The banner in the dawn */
+export function drawVictoryBanner(g, S) {
+  for (let i = 0; i < 20; i++) { const a = Math.PI + (i / 19) * Math.PI; line(g, [256 + cos(a) * 130, 460 + sin(a) * 130, 256 + cos(a) * 240, 460 + sin(a) * 240], 2, 'rgba(255, 209, 102, 0.65)'); }
+  line(g, [20, 460, 492, 460], 3, '#f5c15c');
+  fillPoly(g, [170, 400, 360, 400, 380, 340, 160, 340], '#ffd166');
+  ring(g, 210, 420, 40, 6, '#f5c15c'); for (let k = 0; k < 8; k++) { const a = (k / 8) * TAU; line(g, [210, 420, 210 + cos(a) * 38, 420 + sin(a) * 38], 2, '#ffe7a8'); }
+  ring(g, 330, 420, 40, 6, '#f5c15c'); for (let k = 0; k < 8; k++) { const a = (k / 8) * TAU; line(g, [330, 420, 330 + cos(a) * 38, 420 + sin(a) * 38], 2, '#ffe7a8'); }
+  /* the banner of Hanuman, flying */
+  line(g, [360, 340, 360, 70], 5, '#c98a3a');
+  g.fillStyle = '#ff6a2b'; g.beginPath(); g.moveTo(360, 76); g.quadraticCurveTo(420, 70, 470, 96); g.quadraticCurveTo(420, 120, 360, 130); g.closePath(); g.fill();
+  dot(g, 404, 100, 10, '#ffd166'); curve(g, [412, 108, 430, 116, 436, 100, 444, 92], 3, '#ffd166');
+  /* Krishna at the reins, Arjuna standing with his bow */
+  dot(g, 210, 300, 16, '#6f93f5'); fillPoly(g, [196, 316, 224, 316, 232, 340, 188, 340], '#ffd166');
+  dot(g, 300, 276, 18, '#ffd08a'); fillPoly(g, [284, 294, 316, 294, 320, 340, 280, 340], '#ff9a4d');
+  g.strokeStyle = '#ffd166'; g.lineWidth = 5; g.beginPath(); g.moveTo(330, 230); g.quadraticCurveTo(360, 290, 330, 350); g.stroke();
+  line(g, [190, 330, 90, 360], 2, '#ffe7a8');
+}
+
 /* story.js calls this with its sampler; returns lazily-sampled shapes keyed by name */
 export default function gitaShapes({ sample2D }) {
   return {
@@ -1872,5 +2012,16 @@ export default function gitaShapes({ sample2D }) {
     triTapas: () => sample2D(drawTriTapas, 2.6, 0.25),
     givingHand: () => sample2D(drawGivingHand, 2.55, 0.25),
     omTatSat: () => sample2D(drawOmTatSat, 2.6, 0.2),
+
+    bowRaised: () => sample2D(drawBowRaised, 2.55, 0.25),
+    letGoHand: () => sample2D(drawLetGoHand, 2.55, 0.2),
+    fivePillars: () => sample2D(drawFivePillars, 2.55, 0.2),
+    gunaPrism: () => sample2D(drawGunaPrism, 2.55, 0.25),
+    workTools: () => sample2D(drawWorkTools, 2.55, 0.25),
+    dropOcean: () => sample2D(drawDropOcean, 2.6, 0.25),
+    heartWheel: () => sample2D(drawHeartWheel, 2.5, 0.2),
+    refugeHands: () => sample2D(drawRefugeHands, 2.55, 0.2),
+    gitaBook: () => sample2D(drawGitaBook, 2.55, 0.25),
+    victoryBanner: () => sample2D(drawVictoryBanner, 2.6, 0.25),
   };
 }

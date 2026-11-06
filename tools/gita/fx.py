@@ -600,3 +600,83 @@ CH17_FX = spread(
     ([28], 'ash'),                               # without faith, of no use
 )
 assert sorted(CH17_FX) == list(range(1, 29))
+CH18_FX = spread(
+    ([1], 'drift'),                              # renunciation or relinquishment?
+    ([2], 'still'),
+    ([3], 'drift'),
+    ([4], 'gunas'),                              # three kinds of relinquishment
+    ([5], 'rise'),                               # sacrifice, giving, austerity purify
+    ([6], 'still'),
+    ([7], 'sink'),
+    ([8], 'drift'),                              # giving up because it is hard
+    ([9], 'sparkle'),                            # because it ought to be done
+    ([10], 'still'),
+    ([11], 'drift'),                             # give up the fruits
+    ([12], 'still'),
+    ([13], 'ripple'),
+    ([14], 'expand'),                            # the five causes
+    ([15], 'still'),
+    ([16], 'veil'),
+    ([17], 'clash'),                             # free of "I am the doer"
+    ([18], 'gather'),
+    ([19], 'gunas'),
+    ([20], 'thread'),                            # the one in all, undivided in the divided
+    ([21], 'scatter'),                           # seeing only the separate
+    ([22], 'contract'),                          # one thing taken for the whole
+    ([23], 'still'),
+    ([24], 'turbulence'),                        # with great strain
+    ([25], 'sink'),
+    ([26], 'march'),                             # resolve and enthusiasm
+    ([27], 'fire'),
+    ([28], 'sink'),
+    ([29], 'gunas'),
+    ([30], 'sparkle'),                           # knowing what binds and what frees
+    ([31], 'drift'),
+    ([32], 'invert'),                            # sees all things upside down
+    ([33], 'still'),                             # firmness through yoga
+    ([34], 'fire'),
+    ([35], 'sink'),
+    ([36], 'breathe'),
+    ([37], 'sparkle'),                           # poison first, nectar in the end
+    ([38], 'fire'),                              # nectar first, poison in the end
+    ([39], 'sink'),
+    ([40, 41], 'gunas'),                         # no one is free of the qualities
+    ([42], 'still'),
+    ([43], 'march'),
+    ([44], 'rise'),
+    ([45], 'march'),
+    ([46], 'rise'),                              # worship through your own work
+    ([47], 'sparkle'),                           # better your own dharma
+    ([48], 'rise'),                              # fire covered by smoke
+    ([49], 'still'),
+    ([50], 'drift'),
+    ([51], 'contract'),
+    ([52], 'breathe'),
+    ([53], 'ash'),                               # ego, force, arrogance given up
+    ([54], 'still'),
+    ([55], 'gather'),                            # enters into me at once
+    ([56], 'sparkle'),
+    ([57], 'gather'),
+    ([58], 'rise'),                              # by my grace you will cross every obstacle
+    ([59], 'clash'),                             # "I will not fight"
+    ([60], 'turbulence'),
+    ([61], 'spin'),                              # beings turning as on a machine
+    ([62], 'still'),
+    ([63], 'drift'),                             # reflect, then do as you wish
+    ([64], 'sparkle'),
+    ([65], 'gather'),                            # fix your mind on me
+    ([66], 'descend'),                           # take refuge in me alone
+    ([67], 'contract'),
+    ([68], 'ripple'),                            # passing it on
+    ([69], 'sparkle'),
+    ([70], 'ripple'),
+    ([71], 'rise'),
+    ([72], 'drift'),                             # has your delusion gone?
+    ([73], 'blaze'),                             # my delusion is destroyed
+    ([74], 'ripple'),
+    ([75], 'sparkle'),
+    ([76], 'ripple'),                            # I rejoice again and again
+    ([77], 'sparkle'),
+    ([78], 'expand'),                            # fortune, victory, prosperity
+)
+assert sorted(CH18_FX) == list(range(1, 79))

@@ -12,4 +12,4 @@ mkdir -p /tmp/gita && for f in verse chapters; do gh api repos/gita/gita/content
 .venv/bin/python tools/gita/build.py /tmp/gita _data/gita
 ```
 
-To add a chapter: add its meanings list to `meanings.py`, its effect map to `fx.py`, its scenes to `SECTIONS`, and a `gita/chapter-N.md` page. The build asserts that every verse has a meaning and an effect and that scenes cover every verse exactly once.
+All 18 chapters are built. To change one: edit its meanings (`CHn` in `meanings.py`), its per-verse effects (`CHn_FX` in `fx.py`) or its scenes (`SECTIONS[n]` and `KEY_VERSES` in `build.py`); scene drawings live in `assets/js/gita-shapes.js`. The build asserts that every verse has a meaning and an effect and that scenes cover every verse exactly once.
