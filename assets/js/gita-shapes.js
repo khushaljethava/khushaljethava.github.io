@@ -1,4 +1,4 @@
-/* Gita Gyan scenes: one particle drawing per scene of Chapters 1 to 8.
+/* Gita Gyan scenes: one particle drawing per scene of Chapters 1 to 9.
    Loaded only on Gita chapter pages by story.js; each draw(g, S) paints a 512x512 canvas
    that story.js samples into particles (colour comes from the pixels). */
 const TAU = Math.PI * 2;
@@ -1031,6 +1031,103 @@ export function drawLightSmoke(g, S) {
   dot(g, 100, 78, 28, '#e8ecf8'); erase(g, () => dot(g, 114, 68, 24, '#000'));
 }
 
+
+/* ---------- Chapter 9 ---------- */
+
+/* Chapter 9 (9.26): a leaf, a flower, a fruit, a little water, offered with love */
+export function drawLeafFlowerFruit(g, S) {
+  ring(g, 256, 256, 210, 2, 'rgba(245, 193, 92, 0.6)');
+  /* leaf */
+  g.fillStyle = '#21b37c'; g.beginPath(); g.moveTo(110, 200); g.quadraticCurveTo(150, 100, 236, 120); g.quadraticCurveTo(200, 210, 110, 200); g.fill();
+  line(g, [116, 196, 226, 126], 2, '#9ad18b');
+  /* flower */
+  for (let k = 0; k < 6; k++) { const a = (k / 6) * TAU; g.fillStyle = '#ff8fb1'; g.beginPath(); g.ellipse(360 + cos(a) * 30, 160 + sin(a) * 30, 28, 14, a, 0, TAU); g.fill(); }
+  dot(g, 360, 160, 14, '#ffd166');
+  /* fruit */
+  dot(g, 160, 352, 52, '#ff9a4d'); dot(g, 142, 334, 14, 'rgba(255, 231, 168, 0.8)');
+  line(g, [160, 300, 168, 276], 4, '#8a5a2b'); g.fillStyle = '#21b37c'; g.beginPath(); g.ellipse(184, 280, 16, 7, -0.4, 0, TAU); g.fill();
+  /* a little water */
+  g.fillStyle = '#c98a3a'; g.beginPath(); g.moveTo(306, 330); g.quadraticCurveTo(360, 420, 414, 330); g.closePath(); g.fill();
+  g.fillStyle = '#4d9cff'; g.beginPath(); g.ellipse(360, 332, 52, 10, 0, 0, TAU); g.fill();
+  drop(g, 360, 286, 16, '#45e3d3');
+  dot(g, 256, 256, 8, '#fff6dc');
+}
+
+/* 9.1–9.6: as the mighty wind moves everywhere yet rests in space, all beings rest in me (9.6) */
+export function drawSkyWind(g, S) {
+  const c = 256;
+  ring(g, c, c, 220, 3, '#f5c15c'); ring(g, c, c, 230, 1.5, 'rgba(245, 193, 92, 0.5)');
+  for (let i = 0; i < 60; i++) { const a = rnd() * TAU, r = rnd() * 210; dot(g, c + cos(a) * r, c + sin(a) * r, 1 + rnd() * 1.6, 'rgba(188, 210, 255, 0.7)'); }
+  for (let k = 0; k < 9; k++) {
+    const p = [], y0 = 110 + k * 34, ph = k * 0.9;
+    for (let x = 70; x <= 442; x += 6) { const r = Math.hypot(x - c, y0 - c); if (r > 205) continue; p.push(x, y0 + 16 * sin(x / 40 + ph)); }
+    if (p.length > 4) line(g, p, 3, k % 2 ? '#45e3d3' : '#9ef3ea');
+    const x = 120 + ((k * 53) % 260), y = y0 + 16 * sin(x / 40 + ph);
+    ring(g, x, y - 10, 10, 2.5, '#e8ecf8', 0, Math.PI * 1.5);
+  }
+}
+
+/* 9.7–9.10: at the end of a cycle beings return to my nature, and are sent forth again (9.7) */
+export function drawGalaxy(g, S) {
+  const c = 256;
+  for (let arm = 0; arm < 3; arm++) {
+    for (let i = 0; i < 700; i++) {
+      const t = i / 700, a = arm * (TAU / 3) + t * 5.2, r = 14 + t * 220, j = (rnd() - 0.5) * 34 * t;
+      dot(g, c + cos(a) * r + j, c + sin(a) * r * 0.82 + j, 2 + (1 - t) * 3 * rnd(), t < 0.3 ? '#fff6dc' : `hsl(${200 + arm * 60 + t * 40}, 85%, ${70 - t * 20}%)`);
+    }
+  }
+  const core = g.createRadialGradient(c, c, 2, c, c, 46); core.addColorStop(0, '#ffffff'); core.addColorStop(1, 'rgba(255, 209, 102, 0)');
+  g.fillStyle = core; g.beginPath(); g.arc(c, c, 46, 0, TAU); g.fill();
+}
+
+/* 9.11–9.19: I give heat; I hold back the rain and send it forth (9.19) */
+export function drawHeatRain(g, S) {
+  dot(g, 160, 160, 62, '#ffb347');
+  for (let i = 0; i < 20; i++) { const a = (i / 20) * TAU; line(g, [160 + cos(a) * 72, 160 + sin(a) * 72, 160 + cos(a) * (i % 2 ? 92 : 108), 160 + sin(a) * (i % 2 ? 92 : 108)], 3, '#ffd166'); }
+  [[300, 190, 40], [350, 168, 52], [404, 192, 40], [352, 214, 40]].forEach(([x, y, r]) => dot(g, x, y, r, '#bcd2ff'));
+  for (let i = 0; i < 14; i++) { const x = 300 + i * 9; line(g, [x, 252, x - 8, 290 + (i % 3) * 12], 2.5, '#45e3d3'); }
+  /* the fields that both feed */
+  for (let r = 0; r < 4; r++) curve(g, [30, 370 + r * 30, 180, 350 + r * 30, 330, 390 + r * 30, 482, 366 + r * 30], 4, r % 2 ? '#21b37c' : '#9ad18b');
+  for (let i = 0; i < 18; i++) { const x = 50 + i * 24; line(g, [x, 360 + (i % 3) * 10, x, 336 + (i % 3) * 10], 2.5, '#9ad18b'); }
+}
+
+/* 9.20–9.25: heaven won by ritual, and when the merit is spent, back down again (9.21) */
+export function drawReturnStairs(g, S) {
+  [[256, 92, 54], [196, 108, 40], [318, 108, 40]].forEach(([x, y, r]) => dot(g, x, y, r, 'rgba(232, 236, 248, 0.85)'));
+  dot(g, 256, 70, 14, '#ffd166');
+  for (let i = 0; i < 10; i++) { const x = 60 + i * 18, y = 470 - i * 30; line(g, [x, y, x + 18, y], 6, '#f5c15c'); line(g, [x + 18, y, x + 18, y - 30], 3, 'rgba(245, 193, 92, 0.6)'); }
+  for (let i = 0; i < 10; i++) { const x = 270 + i * 18, y = 170 + i * 30; line(g, [x, y, x + 18, y], 6, 'rgba(188, 210, 255, 0.85)'); line(g, [x + 18, y, x + 18, y + 30], 3, 'rgba(188, 210, 255, 0.5)'); }
+  const fig = (x, y, col) => { dot(g, x, y - 30, 7, col); line(g, [x, y - 22, x, y - 4], 5, col); line(g, [x, y - 4, x - 6, y + 8], 3, col); line(g, [x, y - 4, x + 6, y + 8], 3, col); };
+  fig(150, 290, '#ffd08a'); fig(390, 380, 'rgba(255, 208, 138, 0.6)');
+}
+
+/* 9.26–9.29: cupped hands holding water, a leaf floating on it */
+export function drawOfferingHands(g, S) {
+  const skin = '#ffd08a';
+  g.fillStyle = skin;
+  g.beginPath(); g.moveTo(96, 250); g.bezierCurveTo(110, 370, 200, 400, 256, 400); g.lineTo(256, 360); g.bezierCurveTo(200, 356, 150, 320, 136, 250); g.closePath(); g.fill();
+  g.beginPath(); g.moveTo(416, 250); g.bezierCurveTo(402, 370, 312, 400, 256, 400); g.lineTo(256, 360); g.bezierCurveTo(312, 356, 362, 320, 376, 250); g.closePath(); g.fill();
+  for (let k = 0; k < 4; k++) { dot(g, 104 + k * 8, 250 - k * 10, 10, skin); dot(g, 408 - k * 8, 250 - k * 10, 10, skin); }
+  g.fillStyle = '#4d9cff'; g.beginPath(); g.ellipse(256, 300, 118, 34, 0, 0, TAU); g.fill();
+  for (let r = 0; r < 3; r++) { g.strokeStyle = 'rgba(158, 243, 234, 0.8)'; g.lineWidth = 2; g.beginPath(); g.ellipse(256, 300, 30 + r * 26, 8 + r * 7, 0, 0, TAU); g.stroke(); }
+  g.fillStyle = '#21b37c'; g.beginPath(); g.moveTo(220, 296); g.quadraticCurveTo(256, 262, 300, 290); g.quadraticCurveTo(256, 314, 220, 296); g.fill();
+  for (let i = 0; i < 30; i++) dot(g, 160 + rnd() * 190, 80 + rnd() * 150, 1.2 + rnd() * 2, 'rgba(255, 231, 168, 0.85)');
+}
+
+/* 9.30–9.34: even the worst who turns to me soon becomes good (9.30–31). The lotus rises out of the mud */
+export function drawLotusMud(g, S) {
+  for (let i = 0; i < 160; i++) dot(g, 30 + rnd() * 452, 420 + rnd() * 70, 3 + rnd() * 5, `rgba(${110 + rnd() * 30}, ${80 + rnd() * 20}, 50, 0.9)`);
+  for (let r = 0; r < 4; r++) { const p = []; for (let x = 20; x <= 492; x += 8) p.push(x, 300 + r * 22 + 4 * sin(x / 26 + r)); line(g, p, 2.5, `rgba(69, 156, 255, ${0.8 - r * 0.15})`); }
+  curve(g, [256, 440, 246, 380, 266, 320, 256, 250], 6, '#21b37c');
+  g.fillStyle = '#2f8f5a'; g.beginPath(); g.ellipse(150, 300, 70, 16, 0, 0, TAU); g.fill();
+  for (let k = 0; k < 9; k++) {
+    const a = Math.PI + (k / 8) * Math.PI;
+    g.fillStyle = k % 2 ? '#ff8fb1' : '#ffb3c8'; g.beginPath(); g.ellipse(256 + cos(a) * 46, 214 + sin(a) * 40, 42, 15, a, 0, TAU); g.fill();
+  }
+  dot(g, 256, 214, 16, '#ffd166');
+  for (let i = 0; i < 12; i++) { const a = Math.PI + (i / 11) * Math.PI; line(g, [256 + cos(a) * 110, 200 + sin(a) * 100, 256 + cos(a) * 128, 200 + sin(a) * 118], 2, '#fff6dc'); }
+}
+
 /* story.js calls this with its sampler; returns lazily-sampled shapes keyed by name */
 export default function gitaShapes({ sample2D }) {
   return {
@@ -1084,5 +1181,13 @@ export default function gitaShapes({ sample2D }) {
     atomSun: () => sample2D(drawAtomSun, 2.6, 0.3),
     brahmaDay: () => sample2D(drawBrahmaDay, 2.5, 0.25),
     lightSmoke: () => sample2D(drawLightSmoke, 2.55, 0.25),
+
+    leafFlowerFruit: () => sample2D(drawLeafFlowerFruit, 2.5, 0.25),
+    skyWind: () => sample2D(drawSkyWind, 2.55, 0.25),
+    galaxy: () => sample2D(drawGalaxy, 2.6, 0.35),
+    heatRain: () => sample2D(drawHeatRain, 2.55, 0.25),
+    returnStairs: () => sample2D(drawReturnStairs, 2.5, 0.25),
+    offeringHands: () => sample2D(drawOfferingHands, 2.5, 0.2),
+    lotusMud: () => sample2D(drawLotusMud, 2.55, 0.25),
   };
 }

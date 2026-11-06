@@ -305,3 +305,37 @@ CH8_FX = spread(
     ([28], 'sparkle'),
 )
 assert sorted(CH7_FX) == list(range(1, 31)) and sorted(CH8_FX) == list(range(1, 29))
+CH9_FX = spread(
+    ([1], 'still'),
+    ([2], 'sparkle'),                            # the king of sciences
+    ([3], 'sink'),
+    ([4], 'expand'),                             # all this pervaded by me
+    ([5], 'veil'),                               # behold my divine yoga
+    ([6], 'drift'),                              # the wind that rests in space
+    ([7], 'gather'),                             # beings return at the end of a cycle
+    ([8], 'expand'),                             # and are sent forth again
+    ([9], 'still'),                              # sitting as one indifferent
+    ([10], 'spin'),                              # the world turns round and round
+    ([11, 12], 'sink'),
+    ([13], 'sparkle'),
+    ([14], 'ripple'),                            # always singing my praise
+    ([15], 'expand'),                            # one, distinct, manifold
+    ([16], 'rise'),                              # I am the ritual, the ghee, the fire
+    ([17], 'ripple'),                            # father, mother, Om
+    ([18], 'gather'),                            # the imperishable seed
+    ([19], 'water'),                             # I hold back the rain and send it forth
+    ([20], 'rise'),                              # the way to heaven
+    ([21], 'descend'),                           # merit spent, back to the mortal world
+    ([22], 'still'),                             # I carry what they lack
+    ([23, 24], 'drift'),
+    ([25], 'ripple'),
+    ([26], 'sparkle'),                           # a leaf, a flower, a fruit, water
+    ([27], 'rise'),                              # do it as an offering
+    ([28], 'still'),
+    ([29], 'expand'),                            # the same to all
+    ([30], 'rise'),                              # even the worst who turns to me
+    ([31], 'sparkle'),                           # my devotee never perishes
+    ([32, 33], 'expand'),
+    ([34], 'gather'),                            # fix your mind on me
+)
+assert sorted(CH9_FX) == list(range(1, 35))

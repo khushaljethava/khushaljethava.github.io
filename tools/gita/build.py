@@ -2,8 +2,7 @@ import json, re, sys, os
 from indic_transliteration import sanscript
 from indic_transliteration.sanscript import transliterate
 sys.path.insert(0, os.path.dirname(__file__))
-from meanings import CH1, CH2, CH3, CH4, CH5, CH6, CH7, CH8
-from fx import CH1_FX, CH2_FX, CH3_FX, CH4_FX, CH5_FX, CH6_FX, CH7_FX, CH8_FX
+import meanings, fx
 data_dir, out_dir = sys.argv[1], sys.argv[2]
 verses = json.load(open(os.path.join(data_dir, 'verse.json')))
 chapters = json.load(open(os.path.join(data_dir, 'chapters.json')))
@@ -46,14 +45,8 @@ def chapter_verses(n, meanings, fx, key_verses=()):
         out.append(item)
     return out
 
-ch1 = chapter_verses(1, CH1, CH1_FX)
-ch2 = chapter_verses(2, CH2, CH2_FX, key_verses=(47,))
-ch3 = chapter_verses(3, CH3, CH3_FX, key_verses=(21, 35))
-ch4 = chapter_verses(4, CH4, CH4_FX, key_verses=(7, 8, 24))
-ch5 = chapter_verses(5, CH5, CH5_FX, key_verses=(10, 18))
-ch6 = chapter_verses(6, CH6, CH6_FX, key_verses=(5, 19, 35))
-ch7 = chapter_verses(7, CH7, CH7_FX, key_verses=(7, 14, 19))
-ch8 = chapter_verses(8, CH8, CH8_FX, key_verses=(6, 13))
+# key verses get a highlighted card
+KEY_VERSES = {2: (47,), 3: (21, 35), 4: (7, 8, 24), 5: (10, 18), 6: (5, 19, 35), 7: (7, 14, 19), 8: (6, 13)}
 
 SECTIONS = {
  1: dict(
@@ -251,6 +244,37 @@ SECTIONS = {
   ]),
 }
 
+KEY_VERSES[9] = (22, 26, 34)
+SECTIONS[9] = dict(
+  subtitle="The Yoga of the Royal Knowledge and the Royal Secret",
+  hero_shape='leafFlowerFruit',
+  summary=("Krishna calls this the king of sciences and the king of secrets, and it turns out to be simple. He is the space "
+           "in which the whole world moves like wind. He is the ritual, the fire, the father and the friend. And he asks for "
+           "nothing grand: a leaf, a flower, a fruit, a little water, offered with love. No one who turns to him is ever lost."),
+  sections=[
+   dict(id='royal-secret', label='The Royal Secret', shape='skyWind', side='right', frm=1, to=6, title='Like wind in the sky',
+        intro="The king of sciences is easy to practise and known directly (9.2). Everything rests in Krishna, yet he is not caught in anything, just as the mighty wind moves everywhere and still rests in space (9.6).",
+        gyan="The biggest ideas often need the least equipment. Start practising before you've finished understanding."),
+   dict(id='cycles', label='Cycles', shape='galaxy', side='left', frm=7, to=10, title='Sent forth again and again',
+        intro="At the end of each cosmic cycle all beings return to his nature; at the start of the next he sends them forth again. He watches, untouched, as nature does the work and the world turns round and round.",
+        gyan="Systems run in cycles: launch, grow, wind down, begin again. Watch the cycle without getting caught in it."),
+   dict(id='i-am', label='I Am the Ritual', shape='heatRain', side='right', frm=11, to=19, title='The ghee, the fire and the offering',
+        intro="Some mistake him for a mere human; the great-souled worship him as the source. He is the ritual and the ghee and the fire, father and mother, goal and friend. He gives the heat, holds back the rain and sends it forth (9.19).",
+        gyan="Everything in the process (the tools, the people, the work itself) can be treated as sacred. It changes how you do it."),
+   dict(id='heaven', label='Heaven and Back', shape='returnStairs', side='left', frm=20, to=25, title='When the merit runs out',
+        intro="Ritual can buy heaven, but heaven runs out: when the merit is spent, people come back down (9.21). Those who think only of him are different: he carries what they lack and protects what they have (9.22).",
+        gyan="Rewards that can be spent will be spent. Build on the thing that doesn't run out."),
+   dict(id='offering', label='A Leaf, a Flower', shape='offeringHands', side='right', frm=26, to=29, title='Offered with love',
+        intro="A leaf, a flower, a fruit, a little water: if it is offered with love, he accepts it (9.26). So whatever you do, eat, give or endure, make it an offering, and be free.",
+        gyan="It's not the size of the contribution. A small thing done with care beats a big thing done for show."),
+   dict(id='never-lost', label='Never Lost', shape='lotusMud', side='left', frm=30, to=34, title='The lotus rises from the mud',
+        intro="Even someone of very bad conduct who turns to him wholeheartedly should be counted as good, and soon becomes so. Whatever one's birth, the way is open. \"My devotee never perishes\" (9.31). Fix your mind on me, and you will come to me (9.34).",
+        gyan="Where you start doesn't decide where you end. Turn, and keep turning."),
+  ])
+
+# every chapter with scenes in SECTIONS gets built; its meanings and effects must exist too
+chs = {n: chapter_verses(n, getattr(meanings, f'CH{n}'), getattr(fx, f'CH{n}_FX'), KEY_VERSES.get(n, ())) for n in sorted(SECTIONS)}
+
 meta = []
 for c in sorted(chapters, key=lambda c: c['chapter_number']):
     n = c['chapter_number']
@@ -265,11 +289,9 @@ for c in sorted(chapters, key=lambda c: c['chapter_number']):
     meta.append(m)
 
 os.makedirs(out_dir, exist_ok=True)
-for name, obj in [('chapters', meta), ('chapter-1', ch1), ('chapter-2', ch2), ('chapter-3', ch3), ('chapter-4', ch4), ('chapter-5', ch5), ('chapter-6', ch6), ('chapter-7', ch7), ('chapter-8', ch8)]:
+for name, obj in [('chapters', meta)] + [(f'chapter-{n}', v) for n, v in chs.items()]:
     with open(os.path.join(out_dir, name + '.json'), 'w', encoding='utf-8') as f:
         json.dump(obj, f, ensure_ascii=False, indent=1)
-print('chapters', len(meta), '| ch1', len(ch1), '| ch2', len(ch2), '| ch3', len(ch3), '| ch4', len(ch4), '| ch5', len(ch5), '| ch6', len(ch6), '| ch7', len(ch7), '| ch8', len(ch8))
-print('speakers ch7/8:', [(v['n'], v['speaker']) for v in ch7 + ch8 if 'speaker' in v])
-print('speakers ch1:', sorted({v['speaker'] for v in ch1 if 'speaker' in v}))
-print('sample 2.47:', ch2[46]['sa'], ch2[46]['tr'])
-print('sample 1.1 :', ch1[0].get('speaker'), ch1[0]['sa'])
+print('chapters', len(meta), '|', ' '.join(f'ch{n}:{len(v)}' for n, v in chs.items()))
+last = max(chs)
+print(f'speakers ch{last}:', [(v['n'], v['speaker'], v['speaker_at']) for v in chs[last] if 'speaker' in v])

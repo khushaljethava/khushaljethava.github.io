@@ -579,8 +579,79 @@
   "name": "Raja Vidya Yoga",
   "meaning": "Yoga through the King of Sciences",
   "verses": 34,
-  "live": false,
-  "url": "/gita/chapter-9/"
+  "live": true,
+  "url": "/gita/chapter-9/",
+  "subtitle": "The Yoga of the Royal Knowledge and the Royal Secret",
+  "hero_shape": "leafFlowerFruit",
+  "summary": "Krishna calls this the king of sciences and the king of secrets, and it turns out to be simple. He is the space in which the whole world moves like wind. He is the ritual, the fire, the father and the friend. And he asks for nothing grand: a leaf, a flower, a fruit, a little water, offered with love. No one who turns to him is ever lost.",
+  "sections": [
+   {
+    "id": "royal-secret",
+    "label": "The Royal Secret",
+    "shape": "skyWind",
+    "side": "right",
+    "to": 6,
+    "title": "Like wind in the sky",
+    "intro": "The king of sciences is easy to practise and known directly (9.2). Everything rests in Krishna, yet he is not caught in anything, just as the mighty wind moves everywhere and still rests in space (9.6).",
+    "gyan": "The biggest ideas often need the least equipment. Start practising before you've finished understanding.",
+    "from": 1
+   },
+   {
+    "id": "cycles",
+    "label": "Cycles",
+    "shape": "galaxy",
+    "side": "left",
+    "to": 10,
+    "title": "Sent forth again and again",
+    "intro": "At the end of each cosmic cycle all beings return to his nature; at the start of the next he sends them forth again. He watches, untouched, as nature does the work and the world turns round and round.",
+    "gyan": "Systems run in cycles: launch, grow, wind down, begin again. Watch the cycle without getting caught in it.",
+    "from": 7
+   },
+   {
+    "id": "i-am",
+    "label": "I Am the Ritual",
+    "shape": "heatRain",
+    "side": "right",
+    "to": 19,
+    "title": "The ghee, the fire and the offering",
+    "intro": "Some mistake him for a mere human; the great-souled worship him as the source. He is the ritual and the ghee and the fire, father and mother, goal and friend. He gives the heat, holds back the rain and sends it forth (9.19).",
+    "gyan": "Everything in the process (the tools, the people, the work itself) can be treated as sacred. It changes how you do it.",
+    "from": 11
+   },
+   {
+    "id": "heaven",
+    "label": "Heaven and Back",
+    "shape": "returnStairs",
+    "side": "left",
+    "to": 25,
+    "title": "When the merit runs out",
+    "intro": "Ritual can buy heaven, but heaven runs out: when the merit is spent, people come back down (9.21). Those who think only of him are different: he carries what they lack and protects what they have (9.22).",
+    "gyan": "Rewards that can be spent will be spent. Build on the thing that doesn't run out.",
+    "from": 20
+   },
+   {
+    "id": "offering",
+    "label": "A Leaf, a Flower",
+    "shape": "offeringHands",
+    "side": "right",
+    "to": 29,
+    "title": "Offered with love",
+    "intro": "A leaf, a flower, a fruit, a little water: if it is offered with love, he accepts it (9.26). So whatever you do, eat, give or endure, make it an offering, and be free.",
+    "gyan": "It's not the size of the contribution. A small thing done with care beats a big thing done for show.",
+    "from": 26
+   },
+   {
+    "id": "never-lost",
+    "label": "Never Lost",
+    "shape": "lotusMud",
+    "side": "left",
+    "to": 34,
+    "title": "The lotus rises from the mud",
+    "intro": "Even someone of very bad conduct who turns to him wholeheartedly should be counted as good, and soon becomes so. Whatever one's birth, the way is open. \"My devotee never perishes\" (9.31). Fix your mind on me, and you will come to me (9.34).",
+    "gyan": "Where you start doesn't decide where you end. Turn, and keep turning.",
+    "from": 30
+   }
+  ]
  },
  {
   "n": 10,
